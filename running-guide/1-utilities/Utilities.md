@@ -6,7 +6,7 @@ GRSISort contains many different utilities stored in the **util** directory. The
 
 1. [Analysis Scripts](Analysis-Scripts)
 2. [Compiled Utilities][BROKEN]
-3. [Extra Macros][Extra-Macros]
+3. [[Extra Macros|Extra-Macros]]
 
 -----------------------------------------
 Compiled Utilities
@@ -22,7 +22,3 @@ Utilities, such as analysis scripts, asre kept in the **util** directory. Below 
    ./Root2Rad NAME_OF_ROOT_FILE.root
 ```
         
------------------------------------------
-Utility Macros
------------------------------------------
-  * **html_generator.C** <br> Creates root-like HTML documentation for each of the defined classes in the script.
