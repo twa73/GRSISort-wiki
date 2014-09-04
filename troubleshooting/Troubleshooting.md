@@ -7,7 +7,7 @@
 
 <a name="unfixable" />
 ------------------
-#UnFixable Problems(#unfixable)
+#UnFixable Problems
 <a name="unfixableOS" />
 ###Operating System 
 - MacOSX is currently not supported as the current version of ROOT (v5.34) uses the wrong libraries (Clang Based). This problem will hopefully be resolved in ROOT v6.00.
