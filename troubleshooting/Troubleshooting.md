@@ -11,6 +11,7 @@
 <a name="unfixableOS" />
 ###Operating System 
 - MacOSX is currently not supported as the current version of ROOT (v5.34) uses the wrong libraries (Clang Based). This problem will hopefully be resolved in ROOT v6.00.
+
 <a name="unfiaxableArch" />
 ###Architecture
 - Only 64-bit architectures are currently supported. The analysis side of GRSISort may eventually be expanded to 32-bit machines...but why not have an excuse to upgrade?
