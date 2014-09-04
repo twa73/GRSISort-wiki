@@ -8,7 +8,7 @@
 - [Step 4: Setup Environment Variables](#step4)
 - [Step 5: Compile GRSISort](#step5)
 
-**Quick Navigation **
+**Quick Navigation**
 
 - [[Setup Guide|Setting-up-GRSISort]]  
 - [[Running GRSISort|Running-GRSISort]]  
