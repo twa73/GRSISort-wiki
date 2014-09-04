@@ -19,7 +19,7 @@
 **Useful resources**  
 
 - [[Troubleshooting]]  
-- [[Running GRSISort]]
-- [[Technical Docs]]
+- [[Running GRSISort|Running-GRSISort]]
+- [[Technical Docs|Technical-Documentation]]
 - [ROOT User Guide](http://root.cern.ch/drupal/content/root-users-guide-534)
 - [Root Class Index](http://root.cern.ch/root/html534/ClassIndex.html)
