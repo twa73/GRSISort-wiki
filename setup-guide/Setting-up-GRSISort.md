@@ -1,4 +1,4 @@
-[**HOME**](Home) > [**GRSISort SETUP GUIDE**](Setting-up-GRSISort)
+[**HOME**](Home) > [**GRSISORT SETUP GUIDE**](Setting-up-GRSISort)
 
 Setting up GRSISort is a five step process:
 
@@ -63,9 +63,6 @@ setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$GRSISYS/libraries
 
 <a name="step5" />
 ## Step 5: Compile GRSISort
-To Compile GRSISort type:
-`````
-make
-`````
+To Compile GRSISort type `make`
 If you recieve an error, please consult the [Troubleshooting](BROKEN) page.
 
