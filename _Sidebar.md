@@ -9,7 +9,7 @@
 - [Step 5: Compile GRSISort](Setting-up-GRSISort#step5)
 
 
-[[**Running GRSISort**|Running-GRSISort]  
+[**Running GRSISort**](Running-GRSISort)  
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
