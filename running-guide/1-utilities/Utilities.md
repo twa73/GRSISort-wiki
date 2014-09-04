@@ -5,7 +5,7 @@
 GRSISort contains many different utilities stored in the **util** directory. These utilities include:
 
 1. [Analysis Scripts](Analysis-Scripts)
-2. [Compiled Utilities][BROKEN]
+2. [[Compiled Utilities|BROKEN]]
 3. [[Extra Macros|Extra-Macros]]
 
 -----------------------------------------
