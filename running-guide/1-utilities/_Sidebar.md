@@ -1,12 +1,14 @@
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort)) > [**Utilities**](Utilities) 
 
-[**Running GRSISort**](Running-GRSISort)    
+[**Running GRSISort**](Running-GRSISort) 
 
-**Quick Navigation **
+- [Utilities](Utilities)   
 
-[[Setup Guide|Setting-up-GRSISort]]  
-[[Running GRSISort|Running-GRSISort]]  
-[[Technical Documentation|Technical-Documentation]]
+**Quick Navigation**
+
+- [[Setup Guide|Setting-up-GRSISort]]  
+- [[Running GRSISort|Running-GRSISort]]  
+- [[Technical Documentation|Technical-Documentation]]
 
 **Useful resources**  
 

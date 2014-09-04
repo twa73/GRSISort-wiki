@@ -10,9 +10,9 @@
 
 **Quick Navigation **
 
-[[Setup Guide|Setting-up-GRSISort]]  
-[[Running GRSISort|Running-GRSISort]]  
-[[Technical Documentation|Technical-Documentation]]
+- [[Setup Guide|Setting-up-GRSISort]]  
+- [[Running GRSISort|Running-GRSISort]]  
+- [[Technical Documentation|Technical-Documentation]]
 
 **Useful resources**  
 
