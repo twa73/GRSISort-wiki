@@ -64,5 +64,5 @@ setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$GRSISYS/libraries
 <a name="step5" />
 ## Step 5: Compile GRSISort
 To Compile GRSISort type `make`
-If you recieve an error, please consult the [Troubleshooting](BROKEN) page.
+If you recieve an error, please consult the [Troubleshooting](troubleshooting) page.
 
