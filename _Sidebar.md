@@ -10,7 +10,7 @@
 
 
 [**Running GRSISort**](Running-GRSISort)  
-- [Utilities|Utilities]
+- [[Utilities|Utilities]]
  
 
 [[**Technical Documentation**|Technical-Documentation]]
