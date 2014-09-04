@@ -7,7 +7,7 @@ A lean, mean, sorting machine.
 
 | Setup Guide             |  How to Run          | Technical Documentation                  |
 |----------------------------|-------------------------------|---------------------------|
-| \centerline{\includegraphics[height=256px]{/images/tools.png}} | [[/images/running.png]] | [[/images/blueprint.png =256x]] |
+| [[/images/toolssm.png]] | [[/images/running.png]] | [[/images/blueprint.png]] |
 | [[Setup Guide|Setting-up-GRSISort]] | [[Running GRSISort|broken]] | [[Technical Documentation|broken]]|
 | A step-by-step guide to install GRSISort  | Instructions for running GRSISort | Detailed technical documentation on GRSISort |
 
