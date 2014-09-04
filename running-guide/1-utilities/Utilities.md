@@ -1,6 +1,6 @@
 <a name="top" />
 
-[**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort)) > [**Utilities**](Utilities)
+[**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**UTILITIES**](Utilities)
 
 -----------------------------------------
 Compiled Utilities
@@ -16,11 +16,6 @@ Utilities, such as analysis scripts, asre kept in the **util** directory. Below 
    ./Root2Rad NAME_OF_ROOT_FILE.root
 ```
         
------------------------------------------
-Analysis Macros
------------------------------------------
-  * **auto_eff.C** <br>Reads in a root file and calculates the efficiency of each HPGe Crystal based on a specific source and activity
-
 -----------------------------------------
 Utility Macros
 -----------------------------------------
