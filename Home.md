@@ -5,11 +5,11 @@ A lean, mean, sorting machine.
 
 ## Quick navigation
 
-| About GRSISort             |  Setup Guide          | Technical Documentation                  |
+| Setup Guide             |  How to Run          | Technical Documentation                  |
 |----------------------------|-------------------------------|---------------------------|
-| [[/images/about.png]] | [[/images/tools.png]] | [[/images/blueprint.png]] |
-| [[About GRSISort|Snowplow-overview]] | [[Setup Guide|Setting-up-GRSISort]] | [[Technical Documentation|Snowplow-technical-documentation]]|
-| Introducing GRSISort and what it can do | A step-by-step guide to running GRSISort | Detailed technical documentation on GRSISort |
+| [[/images/tools.png]] | [[/images/running.png]] | [[/images/blueprint.png]] |
+| [[Setup Guide|Setting-up-GRSISort]] | [[Running GRSISort|broken]] | [[Technical Documentation|broken]]|
+| A step-by-step guide to install GRSISort  | Instructions for running GRSISort | Detailed technical documentation on GRSISort |
 
     
 
