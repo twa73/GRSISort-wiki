@@ -13,4 +13,6 @@ Utilities, such as analysis scripts, asre kept in the **util** directory. Below 
 ```
 
 **Scripts**
-  * **auto_eff.C**, Reads in a root file and calculates the efficiency of each HPGe Crystal based on a specfic source and activity
+  * **auto_eff.C**, Reads in a root file and calculates the efficiency of each HPGe Crystal based on a specific source and activity
+
+  * **html_generator.C**, Creates root-like HTML documentation for each of the defined classes in the script.
