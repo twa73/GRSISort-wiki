@@ -2,6 +2,11 @@
 
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**UTILITIES**](Utilities)
 
+GRSISort contains many different utilities stored in the **util** directory. These utilities include:
+
+1. [Analysis Scripts](Analysis-Scripts)
+
+
 -----------------------------------------
 Compiled Utilities
 -----------------------------------------
