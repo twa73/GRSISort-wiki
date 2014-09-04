@@ -5,10 +5,10 @@ A lean, mean, sorting machine.
 
 ## Quick navigation
 
-| About Snowplow             |  Setup Guide          | Technical Documentation                  |
+| About GRSISort             |  Setup Guide          | Technical Documentation                  |
 |----------------------------|-------------------------------|---------------------------|
 | [[/images/about.png]] | [[/images/tools.png]] | [[/images/blueprint.png]] |
-| [[About GRSISort|Snowplow-overview]] | [[Setup Guide|Setting-up-Snowplow]] | [[Technical Documentation|Snowplow-technical-documentation]]|
+| [[About GRSISort|Snowplow-overview]] | [[Setup Guide|Setting-up-GRSISort]] | [[Technical Documentation|Snowplow-technical-documentation]]|
 | Introducing GRSISort and what it can do | A step-by-step guide to running GRSISort | Detailed technical documentation on GRSISort |
 
     
