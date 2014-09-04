@@ -1,6 +1,6 @@
-[**HOME**](Home) > [**TECHNICAL DOCUMENTATION**](Technical-Documentation
+[**HOME**](Home) > [**TECHNICAL DOCUMENTATION**](Technical-Documentation)
 
-1. [ROOT Class Documentation](index.html)
+1. [ROOT Class Documentation](ROOT-Gen-Html/htmldoc/index.html)
 
 
 
