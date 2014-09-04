@@ -10,10 +10,10 @@
 
 
 [**Running GRSISort**](Running-GRSISort)  
-  
+- [Utilities|Utilities]
  
 
-[[Technical Documentation|Technical-Documentation]]
+[[**Technical Documentation**|Technical-Documentation]]
 
 **Useful resources**  
 
