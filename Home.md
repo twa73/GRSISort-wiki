@@ -2,6 +2,33 @@
 
 A lean, mean, sorting machine. 
 
+
+## Quick navigation
+
+| About Snowplow             |  Setup Guide          | Technical Documentation                  |
+|----------------------------|-------------------------------|---------------------------|
+| [[/images/about.png]] | [[/images/tools.png]] | [[/images/blueprint.png]] |
+| [[About GRSISort|Snowplow-overview]] | [[Setup Guide|Setting-up-Snowplow]] | [[Technical Documentation|Snowplow-technical-documentation]]|
+| Introducing GRSISort and what it can do | A step-by-step guide to running GRSISort | Detailed technical documentation on GRSISort |
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 To compile for a .sh shell execute `source SOURCEME.sh` in your terminal from the GRSISort Directory
 
 To avoid running this script every session, add the following to your **~/.bashrc**
