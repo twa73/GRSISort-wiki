@@ -1,5 +1,6 @@
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort)
 
+#The Sorting Model
 [[/images/GRSIFlow.png]]
 
 grsisort will open up a root session in the grsi environment
