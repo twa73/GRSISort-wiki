@@ -1,11 +1,16 @@
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort)
 
 #The Sorting Model
+The steps involved in using GRSISort are:
 [[/images/GRSIFlow.png]]
+
+1. [Unpacking the Midas File](#rununpack)
+2. [Analyzing the Fragment Tree](#runfragtree)
+3. [Histogramming the Final Results](#runhistos)
 
 grsisort will open up a root session in the grsi environment
 Commands:
-
+<a name="rununpack" />
 **grsisort NAMEOFMIDASFILE.mid**  -> Converts the midas file into a fragment tree
 
 Currently accepted flags for the midas sort:
@@ -14,8 +19,9 @@ Currently accepted flags for the midas sort:
   * __-no_waveforms__,     does not add the wave form stored for each event in the mid file to the fragment tree
   * __-s__,                quits the program after it finishs turing the input midas files into trees.
 
+<a name="runfragtree" />
 **grsisort -s NAME_OF_FRAGMENT_TREE.root**   -> Starts sorting the fragment tree into user defined hists.
   * Histograms are defined in **users/UserInitObj.h**
-  * How to fill the histogram is defined in **usrer/UserFillObj.h** 
+  * How to fill the histogram is defined in **users/UserFillObj.h** 
 
 
