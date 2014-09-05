@@ -1,4 +1,4 @@
-[**HOME**](Home)
+[**Home**](Home)
 
 [**Setup GRSISort**](Setting-up-GRSISort)    
 
