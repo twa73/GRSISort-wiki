@@ -1,2 +1,2 @@
 [[Home]] *|* [[Setup Guide|Setting-up-GRSISort]] *|* [[Running GRSISort|Running-GRSISort]] *|*
-[[Technical Docs|Technical-Documentation]] *|* [[Commands|BROKEN]] *|* [[Contact|BROKEN]]
+[[Technical Docs|Technical-Documentation]] *|* [[Commands|Commands]] *|* [[Contact|BROKEN]]

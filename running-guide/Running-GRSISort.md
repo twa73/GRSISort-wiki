@@ -8,8 +8,7 @@ The steps involved in using GRSISort are:
 2. [Analyzing the Fragment Tree](#runfragtree)
 3. [Histogramming the Final Results](#runhistos)
 
-grsisort will open up a root session in the grsi environment
-Commands:
+By default GRSIsort will open up a root session in the GRSI environment.
 <a name="rununpack" />
 #Unpacking the MIDAS File
 The strategy used by GRSISort is to unpack the MIDAS file and convert the information into a ROOT Tree format. This tree contains <a href="https://rawgit.com/wiki/r3dunlop/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/TFragment.html#TFragment:Data_Members" target="_blank">TFragments</a> and is essentially all of the information from the MIDAS File with higher compression and accessibility.
