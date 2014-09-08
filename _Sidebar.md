@@ -13,6 +13,7 @@
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
+-[[Commands|Commands]]
 
 [**Technical Documentation**](Technical-Documentation)
 - <a href="https://rawgit.com/wiki/r3dunlop/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/ClassIndex.html" target="_blank">GRSISort Classes</a>
