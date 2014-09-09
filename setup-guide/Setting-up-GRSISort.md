@@ -36,6 +36,7 @@ git clone https://github.com/pcbend/GRSISort.git
 
 GRSISort should now download to **./GRSISort**
 
+*The newest version can also be downloaded from [[here|https://github.com/pcbend/GRSISort/tarball/master]]*
 
 <a name="step4" />
 ## Step 4: Setup Environment Variables
