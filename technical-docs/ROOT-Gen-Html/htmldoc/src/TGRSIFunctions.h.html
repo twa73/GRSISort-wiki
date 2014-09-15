@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Sep 15 12:38:02 2014            -->
+<!--   Date: Mon Sep 15 12:50:56 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -31,12 +31,12 @@
 
 <span class="keyword">namespace</span> <a href="../TGRSIFunctions.html">TGRSIFunctions</a> {
 
-   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:PolyBg" title="Double_t TGRSIFunctions::PolyBg(Double_t* ,Double_t* ,Int_t )">PolyBg</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a>*, <a href="../ListOfTypes.html#Double_t">Double_t</a>*,<a href="../ListOfTypes.html#Int_t">Int_t</a>);
-   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:StepFunction" title="Double_t TGRSIFunctions::StepFunction(Double_t* ,Double_t* )">StepFunction</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a>*, <a href="../ListOfTypes.html#Double_t">Double_t</a>*);
-   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:PhotoPeak" title="Double_t TGRSIFunctions::PhotoPeak(Double_t* ,Double_t* )">PhotoPeak</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a>*, <a href="../ListOfTypes.html#Double_t">Double_t</a>*);
-   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:Gaus" title="Double_t TGRSIFunctions::Gaus(Double_t* ,Double_t* )">Gaus</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a>*, <a href="../ListOfTypes.html#Double_t">Double_t</a>*);
-   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:SkewedGaus" title="Double_t TGRSIFunctions::SkewedGaus(Double_t* ,Double_t* )">SkewedGaus</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a>*, <a href="../ListOfTypes.html#Double_t">Double_t</a>*);
-   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:Bateman" title="Double_t TGRSIFunctions::Bateman(Double_t* ,Double_t* ,Int_t ,Double_t SecondsPerBin=1.0)">Bateman</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a>*, <a href="../ListOfTypes.html#Double_t">Double_t</a>*, <a href="../ListOfTypes.html#Int_t">Int_t</a>, <a href="../ListOfTypes.html#Double_t">Double_t</a> SecondsPerBin = 1.0);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:PolyBg" title="Double_t TGRSIFunctions::PolyBg(Double_t* dim,Double_t* par,Int_t order)">PolyBg</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> *dim, <a href="../ListOfTypes.html#Double_t">Double_t</a> *par,<a href="../ListOfTypes.html#Int_t">Int_t</a> order);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:StepFunction" title="Double_t TGRSIFunctions::StepFunction(Double_t* dim,Double_t* par)">StepFunction</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> *dim, <a href="../ListOfTypes.html#Double_t">Double_t</a> *par);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:PhotoPeak" title="Double_t TGRSIFunctions::PhotoPeak(Double_t* dim,Double_t* par)">PhotoPeak</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> *dim, <a href="../ListOfTypes.html#Double_t">Double_t</a> *par);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:Gaus" title="Double_t TGRSIFunctions::Gaus(Double_t* dim,Double_t* par)">Gaus</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> *dim, <a href="../ListOfTypes.html#Double_t">Double_t</a> *par);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:SkewedGaus" title="Double_t TGRSIFunctions::SkewedGaus(Double_t* dim,Double_t* par)">SkewedGaus</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> *dim, <a href="../ListOfTypes.html#Double_t">Double_t</a> *par);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html#TGRSIFunctions:Bateman" title="Double_t TGRSIFunctions::Bateman(Double_t* dim,Double_t* par,Int_t nChain=1,Double_t SecondsPerBin=1.0)">Bateman</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> *dim, <a href="../ListOfTypes.html#Double_t">Double_t</a> *par, <a href="../ListOfTypes.html#Int_t">Int_t</a> nChain = 1, <a href="../ListOfTypes.html#Double_t">Double_t</a> SecondsPerBin = 1.0);
 }
 
 
@@ -51,7 +51,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-09-15 12:38 </em><em>&raquo; Last generated: 2014-09-15 12:38</em><br />
+<em>&raquo; Last changed: 2014-09-15 12:50 </em><em>&raquo; Last generated: 2014-09-15 12:50</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
