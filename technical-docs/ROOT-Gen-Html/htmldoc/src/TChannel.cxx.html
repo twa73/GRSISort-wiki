@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Sep 15 12:38:00 2014            -->
+<!--   Date: Tue Sep 16 12:48:36 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -53,7 +53,7 @@ ClassImp(<a href="../TChannel.html">TChannel</a>)
 std::map&lt;<span class="keyword">int</span>,<a href="../TChannel.html">TChannel</a>*&gt; *<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:fChannelMap" title="map&lt;int,TChannel*&gt;* TChannel::fChannelMap">fChannelMap</a> = <span class="keyword">new</span> std::map&lt;<span class="keyword">int</span>,<a href="../TChannel.html">TChannel</a>*&gt;;
 std::map&lt;<span class="keyword">int</span>,<a href="../TChannel.html">TChannel</a>*&gt; *<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:fChannelNumberMap" title="map&lt;int,TChannel*&gt;* TChannel::fChannelNumberMap">fChannelNumberMap</a> = <span class="keyword">new</span> std::map&lt;<span class="keyword">int</span>,<a href="../TChannel.html">TChannel</a>*&gt;;
 
-<a name="JdwgxE"></a><a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:TChannel" title="TChannel TChannel::TChannel() or overloads">TChannel</a>() {}  <span class="comment">//default constructor need to write to root file.</span>
+<a name="we503E"></a><a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:TChannel" title="TChannel TChannel::TChannel() or overloads">TChannel</a>() { <a href="../TChannel.html#TChannel:Clear" title="void TChannel::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); }  <span class="comment">//default constructor need to write to root file.</span>
 
 <a name="PT0hh"></a><a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:_TChannel" title="void TChannel::~TChannel()">~TChannel</a>(){}
 
@@ -280,14 +280,14 @@ std::map&lt;<span class="keyword">int</span>,<a href="../TChannel.html">TChannel
 };
 
 <a name="M1DwnD"></a><span class="keyword">double</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:CalibrateENG" title="double TChannel::CalibrateENG(double ) or overloads">CalibrateENG</a>(<span class="keyword">int</span> charge) {
-   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateENG" title="double TChannel::CalibrateENG(double ) or overloads">CalibrateENG</a>((<span class="keyword">double</span>)charge + gRandom-&gt;Uniform());
+   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateENG" title="double TChannel::CalibrateENG(double ) or overloads">CalibrateENG</a>((<span class="keyword">double</span>)charge) + gRandom-&gt;Uniform();
 };
 
 <a name="GKDhGC"></a><span class="keyword">double</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:CalibrateENG" title="double TChannel::CalibrateENG(double ) or overloads">CalibrateENG</a>(<span class="keyword">double</span> charge) {
    <span class="keyword">if</span>(<a href="../TChannel.html#TChannel:ENGCoefficients" title="vector&lt;double&gt; TChannel::ENGCoefficients">ENGCoefficients</a>.size()==0)
       <span class="keyword">return</span> charge;
 
-   <span class="keyword">double</span> temp_int = 125.0;
+   <span class="keyword">double</span> temp_int = 1.0; <span class="comment">//125.0;</span>
    <span class="keyword">if</span>(<a href="../TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a> != 0)
       temp_int = (<span class="keyword">double</span>)<a href="../TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a>;  <span class="comment">//the 4 is the dis. </span>
 
@@ -592,7 +592,7 @@ std::map&lt;<span class="keyword">int</span>,<a href="../TChannel.html">TChannel
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-09-15 12:38 </em><em>&raquo; Last generated: 2014-09-15 12:38</em><br />
+<em>&raquo; Last changed: 2014-09-16 12:48 </em><em>&raquo; Last generated: 2014-09-16 12:48</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

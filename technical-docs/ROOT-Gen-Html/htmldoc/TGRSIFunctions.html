@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Sep 15 12:50:56 2014            -->
+<!--   Date: Tue Sep 16 12:48:37 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -74,6 +74,8 @@ return false;}
 <div class="access" id="funcpubl"><b>public:</b>
 <table class="func" id="tabfuncpubl" cellspacing="0">
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:Bateman">Bateman</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par, <a href="./ListOfTypes.html#Int_t">Int_t</a> nChain = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> SecondsPerBin = 1.0)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:DeadTimeAffect">DeadTimeAffect</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> function, <a href="./ListOfTypes.html#Double_t">Double_t</a> deadtime, <a href="./ListOfTypes.html#Double_t">Double_t</a> binWidth = 1.0)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:DeadTimeCorrect">DeadTimeCorrect</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a> deadtime, <a href="./ListOfTypes.html#Double_t">Double_t</a> binWidth = 1.0)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:Gaus">Gaus</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:PhotoPeak">PhotoPeak</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:PolyBg">PolyBg</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par, <a href="./ListOfTypes.html#Int_t">Int_t</a> order)</td></tr>
@@ -89,7 +91,8 @@ return false;}
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TGRSIFunctions:StepFunction" href="src/TGRSIFunctions.cxx.html#lL31yE">StepFunction</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</span><br />
-<div class="funccomm"><pre>This function uses the same parameters as the photopeak and gaussian. This is because in the photopeak, the shapes are correlated.
+<div class="funccomm"><pre>This function uses the same parameters as the photopeak and gaussian. This is because in the photopeak,
+the shapes are correlated.
 Requires the following parameters:
    - dim[0]:  channels being fit
    - par[0]:  height of photopeak
@@ -103,8 +106,9 @@ Requires the following parameters:
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TGRSIFunctions:Gaus" href="src/TGRSIFunctions.cxx.html#pyxHh">Gaus</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</span><br />
-<div class="funccomm"><pre>This is a gaussian that has been scaled to match up with Radware photopeak results. It contains a scaling factor for the relative
-height of the skewed gaussian to the normal gaussian. Requires the following parameters:
+<div class="funccomm"><pre>This is a gaussian that has been scaled to match up with Radware photopeak results.
+It contains a scaling factor for the relative height of the skewed gaussian to the
+normal gaussian. Requires the following parameters:
    - dim[0]:  channels being fit
    - par[0]:  height of photopeak
    - par[1]:  centroid of gaussian
@@ -113,7 +117,8 @@ height of the skewed gaussian to the normal gaussian. Requires the following par
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TGRSIFunctions:SkewedGaus" href="src/TGRSIFunctions.cxx.html#Oe9TRD">SkewedGaus</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</span><br />
-<div class="funccomm"><pre>This function uses the same parameters as the photopeak and gaussian. This is because in the photopeak, the shapes are correlated.
+<div class="funccomm"><pre>This function uses the same parameters as the photopeak and gaussian. This is because in the photopeak,
+the shapes are correlated.
 Requires the following parameters:
    - dim[0]:  channels being fit
    - par[0]:  height of photopeak
@@ -134,12 +139,24 @@ Requires the following parameters:
  NOTE: The lowest paramters correspond to the most 'senior' nuclei
 </pre></div>
 </div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TGRSIFunctions:DeadTimeCorrect" href="src/TGRSIFunctions.cxx.html#vqJSjD">DeadTimeCorrect</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a> deadtime, <a href="./ListOfTypes.html#Double_t">Double_t</a> binWidth = 1.0)</span><br />
+<div class="funccomm"><pre>This function deadtime corrects data. Not to be confused with dead time affecting of fit functions
+Dead time is in us.
+binWidth is in s/bin.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TGRSIFunctions:DeadTimeAffect" href="src/TGRSIFunctions.cxx.html#KIUryB">DeadTimeAffect</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> function, <a href="./ListOfTypes.html#Double_t">Double_t</a> deadtime, <a href="./ListOfTypes.html#Double_t">Double_t</a> binWidth = 1.0)</span><br />
+<div class="funccomm"><pre>This function deadtime affects fitting functions. This is useful for counting the number of decays.
+Dead time is in us.
+binWidth is in s/bin.
+</pre></div>
+</div>
 
 <br />
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Sep 15 12:50:56 2014 </em><em>&raquo; Last generated: 2014-09-15 12:50</em><br />
+<em>&raquo; Last changed: Tue Sep 16 12:48:38 2014 </em><em>&raquo; Last generated: 2014-09-16 12:48</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Sep 15 12:38:04 2014            -->
+<!--   Date: Tue Sep 16 12:48:40 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -49,10 +49,10 @@ ClassImp(<a href="../TSharcHit.html">TSharcHit</a>)
 	<a href="../TSharcHit.html#TSharcHit:p_energy" title="Double_t TSharcHit::p_energy">p_energy</a>			=	0;	<span class="comment">//          pad only;</span>
 	<a href="../TSharcHit.html#TSharcHit:p_time" title="Double_t TSharcHit::p_time">p_time</a>			=	0;	<span class="comment">//          pad only;</span>
 	<span class="comment">//p_cfd				=	0;	//</span>
-	<a href="../TSharcHit.html#TSharcHit:p_channelId" title="UShort_t TSharcHit::p_channelId">p_channelId</a>    =  0;
+	<a href="../TSharcHit.html#TSharcHit:p_address" title="Int_t TSharcHit::p_address">p_address</a>      = 0xffffffff;
 
-	<a href="../TSharcHit.html#TSharcHit:front_channelId" title="UShort_t TSharcHit::front_channelId">front_channelId</a> = 0;
-	<a href="../TSharcHit.html#TSharcHit:back_channelId" title="UShort_t TSharcHit::back_channelId">back_channelId</a>  = 0;
+	<a href="../TSharcHit.html#TSharcHit:front_address" title="Int_t TSharcHit::front_address">front_address</a>  = 0xffffffff;
+	<a href="../TSharcHit.html#TSharcHit:back_address" title="Int_t TSharcHit::back_address">back_address</a>   = 0xffffffff;
 
 	<a href="../TSharcHit.html#TSharcHit:detectornumber" title="UShort_t TSharcHit::detectornumber">detectornumber</a>	=	0;	<span class="comment">//</span>
 	<a href="../TSharcHit.html#TSharcHit:position" title="TVector3 TSharcHit::position">position</a>.SetXYZ(0,0,1); <span class="comment">// </span>
@@ -99,7 +99,7 @@ ClassImp(<a href="../TSharcHit.html">TSharcHit</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-09-15 12:38 </em><em>&raquo; Last generated: 2014-09-15 12:38</em><br />
+<em>&raquo; Last changed: 2014-09-16 12:48 </em><em>&raquo; Last generated: 2014-09-16 12:48</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

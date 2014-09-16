@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Sep 15 12:50:54 2014            -->
+<!--   Date: Tue Sep 16 12:48:35 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -58,7 +58,15 @@ return false;}
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="TBetaDecay:description"></a>class TBetaDecay: public TNamed</h1>
 <div class="classdescr">
-</div>
+<pre>
+
+ <a href="./TBetaDecay.html">TBetaDecay</a>
+
+ This class contains information about beta decays to be used
+ in analyses.
+
+
+</pre></div>
 </div></div>
 
 <div id="functions">
@@ -66,8 +74,10 @@ return false;}
 <div class="access" id="funcpubl"><b>public:</b>
 <table class="func" id="tabfuncpubl" cellspacing="0">
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TBetaDecay:TBetaDecay">TBetaDecay</a>()</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TBetaDecay:TBetaDecay@1">TBetaDecay</a>(<a href="./TNucleus.html">TNucleus</a>*)</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TBetaDecay:TBetaDecay@2">TBetaDecay</a>(<span class="keyword">const</span> <a href="./TBetaDecay.html">TBetaDecay</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TBetaDecay:TBetaDecay@1">TBetaDecay</a>(<a href="./TNucleus.html">TNucleus</a>* parent)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TBetaDecay:TBetaDecay@2">TBetaDecay</a>(<span class="keyword">char</span>* name)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TBetaDecay:TBetaDecay@4">TBetaDecay</a>(<span class="keyword">const</span> <a href="./TBetaDecay.html">TBetaDecay</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TBetaDecay:TBetaDecay@3">TBetaDecay</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> Z, <a href="./ListOfTypes.html#Int_t">Int_t</a> N)</td></tr>
 <tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TBetaDecay:_TBetaDecay">~TBetaDecay</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
@@ -197,7 +207,8 @@ return false;}
 </table></div>
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
-<tr class="data"><td class="datatype"><a href="./TNucleus.html">TNucleus</a>*</td><td class="dataname"><a name="TBetaDecay:parent"></a>parent</td><td class="datadesc">The parent nucleus beta decaying</td></tr>
+<tr class="data"><td class="datatype"><a href="./TNucleus.html">TNucleus</a>*</td><td class="dataname"><a name="TBetaDecay:fparent"></a>fparent</td><td class="datadesc">The parent nucleus beta decaying</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a name="TBetaDecay:fparent_allocated"></a>fparent_allocated</td><td class="datadesc">true if TNucleus was instantiated in TBetaDecay</td></tr>
 
 </table></div>
 </div>
@@ -218,18 +229,19 @@ return false;}
 <div class="code"><code class="inlinecode">{}</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TBetaDecay:TBetaDecay@1" href="src/TBetaDecay.cxx.html#JpCdVB">TBetaDecay</a>(<a href="./TNucleus.html">TNucleus</a>* )</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TBetaDecay:TBetaDecay@1" href="src/TBetaDecay.cxx.html#d8SEBB">TBetaDecay</a>(<a href="./TNucleus.html">TNucleus</a>* parent)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TBetaDecay:TBetaDecay@2" href="src/TBetaDecay.cxx.html#Q12nmC">TBetaDecay</a>(<span class="keyword">char</span>* name)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TBetaDecay:TBetaDecay@3" href="src/TBetaDecay.cxx.html#Edciu">TBetaDecay</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> Z, <a href="./ListOfTypes.html#Int_t">Int_t</a> N)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TBetaDecay:_TBetaDecay" href="src/TBetaDecay.cxx.html#wUHSaC">~TBetaDecay</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TBetaDecay:TBetaDecay" href="src/TBetaDecay.h.html#BIaBW">TBetaDecay</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TBetaDecay:_TBetaDecay" href="src/TBetaDecay.h.html#czSXS">~TBetaDecay</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./TNucleus.html">TNucleus</a> * <a class="funcname" name="TBetaDecay:GetParent" href="src/TBetaDecay.h.html#wnz1ME">GetParent</a>() const</span><br />
 
-<div class="code"><code class="inlinecode">{}</code></div>
-<div style="clear:both;"></div>
-</div>
-<div class="funcdoc"><span class="funcname"><a href="./TNucleus.html">TNucleus</a> * <a class="funcname" name="TBetaDecay:GetParent" href="src/TBetaDecay.h.html#aeo1RD">GetParent</a>() const</span><br />
-
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./TBetaDecay.html#TBetaDecay:parent" title="TNucleus* TBetaDecay::parent">parent</a>;}</code></div>
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./TBetaDecay.html#TBetaDecay:fparent" title="TNucleus* TBetaDecay::fparent">fparent</a>;}</code></div>
 <div style="clear:both;"></div>
 </div>
 
@@ -237,7 +249,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Sep 15 12:50:54 2014 </em><em>&raquo; Last generated: 2014-09-15 12:50</em><br />
+<em>&raquo; Last changed: Tue Sep 16 12:48:35 2014 </em><em>&raquo; Last generated: 2014-09-16 12:48</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
