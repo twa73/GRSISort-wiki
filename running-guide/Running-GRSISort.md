@@ -17,13 +17,16 @@ The strategy used by GRSISort is to unpack the MIDAS file and convert the inform
 
 Currently accepted flags for the midas sort:
   * __-suppress_error__,   suppresses errors from failed data parsing appearing in stdout
-  * __-log_error__, sends errors from failed data parsing to file, will not send errors if supress error option is also used!
+  * __-log_error__,        sends errors from failed data parsing to file, will not send errors if supress error option is also used!
   * __-no_waveforms__,     does not add the wave form stored for each event in the mid file to the fragment tree
-  * __-s__,                quits the program after it finishs turing the input midas files into trees.
+  * __-s__,                quits the program after it finishes turning the input midas files into trees.
 
 <a name="runfragtree" />
-**grsisort -s NAME_OF_FRAGMENT_TREE.root**   -> Starts sorting the fragment tree into user defined hists.
+**grsisort NAME_OF_FRAGMENT_TREE.root**   -> Starts sorting the fragment tree into user defined hists.
   * Histograms are defined in **users/UserInitObj.h**
   * How to fill the histogram is defined in **users/UserFillObj.h** 
-
+  
+Currently accepted flags for the fragment tree sort:
+  * __-a__,                creates an analysis tree to be used for doing a full analysis of the data
+  * __-s__,                quits the program after it finishes sorting through the fragment tree
 
