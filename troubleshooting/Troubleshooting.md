@@ -4,6 +4,7 @@
   - [Operating Systems](#unfixableOS)
   - [Architecture](#unfixableArch)
 2. [Fixable Problems](#fixable)  
+  - [Symbolic Links](#fixablesymboliclinks)
 
 <a name="unfixable" />
 ------------------
@@ -19,6 +20,9 @@
 ------------------
 <a name="fixable" />
 #Fixable Problems
+<a name="fixablesymboliclinks" />
+###Symbolic Links
+- During compilation, symbolic links are created in the **include** directory that point to the **UserInitObj.h** and **UserFillObj.h** files used for the user defined histograms. On some operating systems, the creation of these symbolic links fail. To overcome this issue, simply create the symbolic links manually. 
 
 
 -------------------
