@@ -13,7 +13,7 @@ By default GRSIsort will open up a root session in the GRSI environment.
 #Unpacking the MIDAS File
 The strategy used by GRSISort is to unpack the MIDAS file and convert the information into a ROOT Tree format. This tree contains <a href="https://rawgit.com/wiki/r3dunlop/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/TFragment.html#TFragment:Data_Members" target="_blank">TFragments</a> and is essentially all of the information from the MIDAS File with higher compression and accessibility.
   
-**grsisort NAMEOFMIDASFILE.mid**  -> Converts the midas file into a fragment tree
+**grsisort NAME_OF_MIDAS_FILE.mid**  -> Converts the midas file into a fragment tree
 
 Currently accepted flags for the midas sort:
   * __-suppress_error__,   suppresses errors from failed data parsing appearing in stdout
