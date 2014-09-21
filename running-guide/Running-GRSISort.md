@@ -29,4 +29,4 @@ Currently accepted flags for the midas sort:
 Currently accepted flags for the fragment tree sort:
   * __-a__,                creates an analysis tree to be used for doing a full analysis of the data
   * __-s__,                quits the program after it finishes sorting through the fragment tree
-
+  * __-no_speed__,         suppresses the output from the PROOF spedometer
