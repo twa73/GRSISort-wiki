@@ -1,6 +1,6 @@
 [**HOME**](Home) > [**GRSISORT SETUP GUIDE**](Setting-up-GRSISort)
 
-Setting up GRSISort is a five step process:
+Setting up GRSISort is a seven step process:
 
 1. [Install git](#step1)
 2. [Install Root](#step2)
