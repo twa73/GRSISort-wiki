@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep 16 12:48:36 2014            -->
+<!--   Date: Sun Sep 21 20:47:21 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -84,8 +84,8 @@ be implemented.
 <tr class="func"><td class="funcret">static <a href="./TDataParser.html">TDataParser</a>*</td><td class="funcname"><a class="funcname" href="#TDataParser:instance">instance</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#TDataParser:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TDataParser.html">TDataParser</a>&amp;</td><td class="funcname"><a class="funcname" href="#TDataParser:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TDataParser.html">TDataParser</a>&amp;)</td></tr>
-<tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetNoWaveForms">SetNoWaveForms</a>(<span class="keyword">bool</span> temp = <span class="keyword">true</span>)</td></tr>
-<tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetRecordStats">SetRecordStats</a>(<span class="keyword">bool</span> temp = <span class="keyword">true</span>)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetNoWaveForms">SetNoWaveForms</a>(<span class="keyword">bool</span> temp = <span class="keyword">true</span>)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetRecordStats">SetRecordStats</a>(<span class="keyword">bool</span> temp = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataParser:ShowMembers">ShowMembers</a>(TMemberInspector&amp;)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataParser:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataParser:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
@@ -205,7 +205,7 @@ be implemented.
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TDataParser:SetGRIFMasterFilterId" href="src/TDataParser.cxx.html#VH97lB">SetGRIFMasterFilterId</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a> , <a href="./TFragment.html">TFragment</a>* )</span><br />
-<div class="funccomm"><pre>Sets the Griffin master filter ID
+<div class="funccomm"><pre>Sets the Griffin master filter ID and PPG
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TDataParser:SetGRIFMasterFilterPattern" href="src/TDataParser.cxx.html#piuDLC">SetGRIFMasterFilterPattern</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a> , <a href="./TFragment.html">TFragment</a>* )</span><br />
@@ -238,12 +238,12 @@ The statistics recorded currently include:
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDataParser:TDataParser" href="src/TDataParser.h.html#jl1az">TDataParser</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TDataParser:SetNoWaveForms" href="src/TDataParser.h.html#qsblxC">SetNoWaveForms</a>(<span class="keyword">bool</span> temp = <span class="keyword">true</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDataParser:SetNoWaveForms" href="src/TDataParser.h.html#yqgC0C">SetNoWaveForms</a>(<span class="keyword">bool</span> temp = <span class="keyword">true</span>)</span><br />
 
 <div class="code"><code class="inlinecode">{<a href="./TDataParser.html#TDataParser:no_waveforms" title="bool TDataParser::no_waveforms">no_waveforms</a> = temp;}</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TDataParser:SetRecordStats" href="src/TDataParser.h.html#ckXmfC">SetRecordStats</a>(<span class="keyword">bool</span> temp = <span class="keyword">true</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDataParser:SetRecordStats" href="src/TDataParser.h.html#E6DEiC">SetRecordStats</a>(<span class="keyword">bool</span> temp = <span class="keyword">true</span>)</span><br />
 
 <div class="code"><code class="inlinecode">{<a href="./TDataParser.html#TDataParser:record_stats" title="bool TDataParser::record_stats">record_stats</a> = temp;}</code></div>
 <div style="clear:both;"></div>
@@ -253,7 +253,7 @@ The statistics recorded currently include:
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Tue Sep 16 12:48:36 2014 </em><em>&raquo; Last generated: 2014-09-16 12:48</em><br />
+<em>&raquo; Last changed: Sun Sep 21 20:47:21 2014 </em><em>&raquo; Last generated: 2014-09-21 20:47</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

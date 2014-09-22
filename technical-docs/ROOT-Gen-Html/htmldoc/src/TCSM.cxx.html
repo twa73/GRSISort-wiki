@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep 16 12:48:35 2014            -->
+<!--   Date: Fri Sep 19 16:12:04 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -46,6 +46,7 @@ ClassImp(<a href="../TCSM.html">TCSM</a>)
 <span class="keyword">int</span> <a href="../TCSM.html">TCSM</a>::<a href="../TCSM.html#TCSM:fCfdBuildDiff" title="int TCSM::fCfdBuildDiff">fCfdBuildDiff</a> = 5;
 
 <a name="G.zuME"></a><a href="../TCSM.html">TCSM</a>::<a href="../TCSM.html#TCSM:TCSM" title="TCSM TCSM::TCSM() or overloads">TCSM</a>() : <a href="../TCSM.html#TCSM:data" title="TCSMData* TCSM::data">data</a>(0)	{
+   <a href="../TCSM.html#TCSM:Class" title="TClass* TCSM::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<span class="keyword">true</span>);
   <span class="comment">//InitializeSRIMInputs();	</span>
 }
 
@@ -515,7 +516,6 @@ ClassImp(<a href="../TCSM.html">TCSM</a>)
 }
 
 
-<span class="comment">// The dimensions are described for a single detector of each type UQ,UB,DB,DQ, and all other detectors can be calculated by rotating this</span>
 <a name="QCbcVE"></a>TVector3 <a href="../TCSM.html">TCSM</a>::<a href="../TCSM.html#TCSM:GetPosition" title="TVector3 TCSM::GetPosition(int detector,char pos,int horizontalstrip,int verticalstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>(<span class="keyword">int</span> detector,<span class="keyword">char</span> pos, <span class="keyword">int</span> horizontalstrip, <span class="keyword">int</span> verticalstrip, <span class="keyword">double</span> X, <span class="keyword">double</span> Y, <span class="keyword">double</span> Z)	{
 
 
@@ -601,7 +601,7 @@ ClassImp(<a href="../TCSM.html">TCSM</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-09-16 12:48 </em><em>&raquo; Last generated: 2014-09-16 12:48</em><br />
+<em>&raquo; Last changed: 2014-09-19 16:12 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
