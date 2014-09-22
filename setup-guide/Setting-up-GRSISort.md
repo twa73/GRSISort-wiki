@@ -71,7 +71,7 @@ If you recieve an error, please consult the [Troubleshooting](troubleshooting) p
 
 <a name="step6" />
 ## Step 6: ???
-Instructions unclear, lost in terminolotgy.
+Instructions unclear, lost in terminology.
 
 <a name"step7" />
 ## Step 7: Profit
