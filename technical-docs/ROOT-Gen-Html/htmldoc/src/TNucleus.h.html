@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Fri Sep 19 16:12:07 2014            -->
+<!--   Date: Mon Sep 22 12:05:26 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -40,26 +40,26 @@
   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a>;
 
  <span class="keyword">public</span>:
-<a name="R2UD9B"></a>  <a href="../TNucleus.html">TNucleus</a>(<span class="keyword">char</span>*);
-  <a href="../TNucleus.html">TNucleus</a>(<span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">double</span>, <span class="keyword">const</span> <span class="keyword">char</span>*);
-  <a href="../TNucleus.html">TNucleus</a>(<span class="keyword">int</span> Z, <span class="keyword">int</span> N, <span class="keyword">const</span> <span class="keyword">char</span>* MassFile = <a href="../TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a>);                   <span class="comment">//MassFile = <span class="string">"mass.dat"</span>);</span>
+<a name="uk1vsB"></a>  <a href="../TNucleus.html">TNucleus</a>(<span class="keyword">char</span>*);					<span class="comment">// Creates a nucleus based on symbol and sets all parameters from mass.dat</span>
+  <a href="../TNucleus.html">TNucleus</a>(<span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">double</span>, <span class="keyword">const</span> <span class="keyword">char</span>*);		<span class="comment">// Creates a nucleus with Z, N, mass, and symbol</span>
+  <a href="../TNucleus.html">TNucleus</a>(<span class="keyword">int</span> Z, <span class="keyword">int</span> N, <span class="keyword">const</span> <span class="keyword">char</span>* MassFile = <a href="../TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a>); <span class="comment">// Creates a nucleus with Z, N using mass table (default MassFile = <span class="string">"mass.dat"</span>)</span>
 	
-<a name="rs6IYB"></a>  <span class="keyword">static</span> <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetMassFile" title="void TNucleus::SetMassFile(const char* tmp)">SetMassFile</a>(<span class="keyword">const</span> <span class="keyword">char</span> *tmp) {<a href="../TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a> = tmp;}
+<a name="wKCB5B"></a>  <span class="keyword">static</span> <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetMassFile" title="void TNucleus::SetMassFile(const char* tmp)">SetMassFile</a>(<span class="keyword">const</span> <span class="keyword">char</span> *tmp) {<a href="../TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a> = tmp;} <span class="comment">//Sets the mass file to be used</span>
 
-  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetZ" title="void TNucleus::SetZ(int )">SetZ</a>(<span class="keyword">int</span>);
-  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetN" title="void TNucleus::SetN(int )">SetN</a>(<span class="keyword">int</span>);
-  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetMassExcess" title="void TNucleus::SetMassExcess(double )">SetMassExcess</a>(<span class="keyword">double</span>);  
-  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetMass" title="void TNucleus::SetMass(double ) or overloads">SetMass</a>(<span class="keyword">double</span>);  
-  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetMass" title="void TNucleus::SetMass(double ) or overloads">SetMass</a>();  
-  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetSymbol" title="void TNucleus::SetSymbol(const char* )">SetSymbol</a>(<span class="keyword">const</span> <span class="keyword">char</span>*);  
-<a name="FPbYe"></a>  <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:GetZ" title="int TNucleus::GetZ()">GetZ</a>()              {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fZ" title="int TNucleus::fZ">fZ</a>;}  
-<a name="hshTjD"></a>  <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:GetN" title="int TNucleus::GetN()">GetN</a>()              {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fN" title="int TNucleus::fN">fN</a>;}
-<a name="SBdWTC"></a>  <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:GetA" title="int TNucleus::GetA()">GetA</a>()              {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fN" title="int TNucleus::fN">fN</a>+<a href="../TNucleus.html#TNucleus:fZ" title="int TNucleus::fZ">fZ</a>;}
-<a name="UrUOTC"></a>  <span class="keyword">double</span> <a href="../TNucleus.html#TNucleus:GetMassExcess" title="double TNucleus::GetMassExcess()">GetMassExcess</a>()  {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fMassExcess" title="double TNucleus::fMassExcess">fMassExcess</a>;}
-<a name="k_446B"></a>  <span class="keyword">double</span> <a href="../TNucleus.html#TNucleus:GetMass" title="double TNucleus::GetMass()">GetMass</a>()        {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fMass" title="double TNucleus::fMass">fMass</a>;}
-<a name="fYA1fD"></a>  <span class="keyword">const</span> <span class="keyword">char</span>* <a href="../TNucleus.html#TNucleus:GetSymbol" title="const char* TNucleus::GetSymbol()">GetSymbol</a>() {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fSymbol" title="string TNucleus::fSymbol">fSymbol</a>.c_str();}
-  <span class="keyword">double</span> <a href="../TNucleus.html#TNucleus:GetRadius" title="double TNucleus::GetRadius()">GetRadius</a>();
-  <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:GetZfromSymbol" title="int TNucleus::GetZfromSymbol(char* )">GetZfromSymbol</a>(<span class="keyword">char</span>*);
+  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetZ" title="void TNucleus::SetZ(int )">SetZ</a>(<span class="keyword">int</span>);					<span class="comment">// Sets the Z (# of protons) of the nucleus</span>
+  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetN" title="void TNucleus::SetN(int )">SetN</a>(<span class="keyword">int</span>);					<span class="comment">// Sets the N (# of neutrons) of the nucleus</span>
+  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetMassExcess" title="void TNucleus::SetMassExcess(double )">SetMassExcess</a>(<span class="keyword">double</span>);  				<span class="comment">// Sets the mass excess of the nucleus (in MeV)</span>
+  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetMass" title="void TNucleus::SetMass(double ) or overloads">SetMass</a>(<span class="keyword">double</span>);  				<span class="comment">// Sets the mass manually (in MeV)</span>
+  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetMass" title="void TNucleus::SetMass(double ) or overloads">SetMass</a>();  					<span class="comment">// Sets the mass based on the A and mass excess of nucleus (in MeV)</span>
+  <span class="keyword">void</span> <a href="../TNucleus.html#TNucleus:SetSymbol" title="void TNucleus::SetSymbol(const char* )">SetSymbol</a>(<span class="keyword">const</span> <span class="keyword">char</span>*);  			<span class="comment">// Sets the atomic symbol for the nucleus</span>
+<a name="Q6B2wC"></a>  <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:GetZ" title="int TNucleus::GetZ()">GetZ</a>()              {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fZ" title="int TNucleus::fZ">fZ</a>;}  		<span class="comment">// Gets the Z (# of protons) of the nucleus</span>
+<a name="NHQ4eE"></a>  <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:GetN" title="int TNucleus::GetN()">GetN</a>()              {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fN" title="int TNucleus::fN">fN</a>;}			<span class="comment">// Gets the N (# of neutrons) of the nucleus</span>
+<a name="WL5PMC"></a>  <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:GetA" title="int TNucleus::GetA()">GetA</a>()              {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fN" title="int TNucleus::fN">fN</a>+<a href="../TNucleus.html#TNucleus:fZ" title="int TNucleus::fZ">fZ</a>;}		<span class="comment">// Gets the A (Z + N) of the nucleus</span>
+<a name="ma5ZqB"></a>  <span class="keyword">double</span> <a href="../TNucleus.html#TNucleus:GetMassExcess" title="double TNucleus::GetMassExcess()">GetMassExcess</a>()  {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fMassExcess" title="double TNucleus::fMassExcess">fMassExcess</a>;}		<span class="comment">// Gets the mass excess of the nucleus (in MeV)</span>
+<a name="cyt1IB"></a>  <span class="keyword">double</span> <a href="../TNucleus.html#TNucleus:GetMass" title="double TNucleus::GetMass()">GetMass</a>()        {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fMass" title="double TNucleus::fMass">fMass</a>;}		<span class="comment">// Gets the mass of the nucleus (in MeV)</span>
+<a name="OAi4HB"></a>  <span class="keyword">const</span> <span class="keyword">char</span>* <a href="../TNucleus.html#TNucleus:GetSymbol" title="const char* TNucleus::GetSymbol()">GetSymbol</a>() {<span class="keyword">return</span> <a href="../TNucleus.html#TNucleus:fSymbol" title="string TNucleus::fSymbol">fSymbol</a>.c_str();}	<span class="comment">// Gets the atomic symbol of the nucleus</span>
+  <span class="keyword">double</span> <a href="../TNucleus.html#TNucleus:GetRadius" title="double TNucleus::GetRadius()">GetRadius</a>();					<span class="comment">// Gets the radius of the nucleus (in fm)</span>
+  <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:GetZfromSymbol" title="int TNucleus::GetZfromSymbol(char* )">GetZfromSymbol</a>(<span class="keyword">char</span>*);				<span class="comment">// Figures out the Z of the nucleus based on the atomic symbol</span>
  <span class="keyword">private</span>:
   <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:fA" title="int TNucleus::fA">fA</a>, <a href="../TNucleus.html#TNucleus:fZ" title="int TNucleus::fZ">fZ</a>, <a href="../TNucleus.html#TNucleus:fN" title="int TNucleus::fN">fN</a>;
   <span class="keyword">double</span> <a href="../TNucleus.html#TNucleus:fMass" title="double TNucleus::fMass">fMass</a>, <a href="../TNucleus.html#TNucleus:fMassExcess" title="double TNucleus::fMassExcess">fMassExcess</a>;
@@ -76,7 +76,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-09-19 16:12 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
+<em>&raquo; Last changed: 2014-09-22 12:05 </em><em>&raquo; Last generated: 2014-09-22 12:05</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
