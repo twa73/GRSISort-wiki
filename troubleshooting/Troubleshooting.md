@@ -22,8 +22,6 @@
 #Fixable Problems
 
 <a name="fixablehtml" />
-###HTML Documentation
-- If you recieve lots of errors during compiling during the building of HTML, this step can be skipped by compiling the program without the HTML documentation generation. To do this, compile using: `make simple`.
 - If you recieve the error `sh: 1: dot: not found` it is because you do not have a **dot** writing program. This is not really an issue, but to avoid this, install a dot program like **graphviz**. (On Ubuntu `sudo apt-get install graphviz`) 
 
 -------------------
