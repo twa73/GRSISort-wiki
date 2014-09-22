@@ -24,6 +24,7 @@
 <a name="fixablesymboliclinks" />
 ###Symbolic Links
 - During compilation, symbolic links are created in the **include** directory that point to the **UserInitObj.h** and **UserFillObj.h** files used for the user defined histograms. On some operating systems, the creation of these symbolic links fail. To overcome this issue, simply create the symbolic links manually. 
+
 <a name="fixablehtml" />
 ###HTML Documentation
 - If you recieve lots of errors during compiling during the building of HTML, this step can be skipped by compiling the program without the HTML documentation generation. To do this, compile using: `make simple`.
