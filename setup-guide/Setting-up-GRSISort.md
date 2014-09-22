@@ -7,6 +7,8 @@ Setting up GRSISort is a five step process:
 3. [Download GRSISort](#step3)
 4. [Setup Environment Variables](#step4)
 5. [Compile GRSISort](#step5)
+6. [???](#step6)
+7. [Profit](#step7)
 
 <a name="step1" />
 ## Step 1: Install git
