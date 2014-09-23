@@ -1,6 +1,6 @@
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort)
 
-#The Sorting Model
+#The Sorting Model (#sortingmodel)
 The steps involved in using GRSISort are:
 [[/images/GRSIFlow.png]]
 
