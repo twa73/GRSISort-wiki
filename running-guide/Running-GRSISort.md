@@ -34,5 +34,5 @@ Currently accepted flags for the fragment tree sort:
   * __-q__,                quits the grsi environment after completeing the fragment sort
   * __-no_speed__,         suppresses the output from the PROOF spedometer
 
-If the __-a__ or __-s__ flags are used during the MIDAS sorting phase, GRSISort will complete sorting the MIDAS file and then complete an *autosort* by applying the flags and sorting the fragment tree.
+If the __-a__ or __-s__ flags are used during the MIDAS sorting phase, GRSISort will complete sorting the MIDAS file and then complete a fragment sort by applying the flags and sorting the fragment tree.
 
