@@ -41,12 +41,17 @@ CODE: SELECT ALL
 ```
 
 ####stdlibc
-- If you recieve the error
+- If you recieve the errors:
 ```bash
 Error: cannot open file "gnu/stubs.h" /usr/include/features.h:399:
 Error: cannot open file "bits/wchar.h" /usr/include/stdint.h:27:
 Error: cannot open file "bits/wordsize.h" /usr/include/stdint.h:28:
 ```
+Install the `stdlibc-dev` package (`sudo apt-get install stdlibc-dev-i386` on Ubuntu).
+
+####XML
+- If you have any problems with XML, etc. Please make sure you followed the ROOT download instructions very carefully including the installation of packages such as `libxml2-dev`.
+
 -------------------
 
 If you have an issue that is currently not on the above list please post it to the [Issue Tracker](https://github.com/pcbend/GRSISort/issues).
