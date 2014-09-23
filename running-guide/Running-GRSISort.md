@@ -22,10 +22,12 @@ Currently accepted flags for the midas sort:
   * __-q__,                quits the grsi environment after completing the midas sort
 
 <a name="runfragtree" />
-**grsisort NAME_OF_FRAGMENT_TREE.root**   -> Starts sorting the fragment tree into user defined hists.
+**grsisort [-a -s] NAME_OF_FRAGMENT_TREE.root**   -> Starts sorting the fragment tree into (-s) user defined hists and/or (-a) analysis trees.
   * Histograms are defined in **users/UserInitObj.h**
   * How to fill the histogram is defined in **users/UserFillObj.h** 
   
+If **-a** or **-s** are left off of the command, the fragment tree will be loaded into the grsi environment for the user to enjoy.
+
 Currently accepted flags for the fragment tree sort:
   * __-a__,                creates an analysis tree to be used for doing a full analysis of the data
   * __-s__,                sorts the fragment tree into user defined hits. 
