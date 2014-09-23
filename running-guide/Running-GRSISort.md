@@ -39,6 +39,8 @@ Currently accepted flags for the fragment tree sort:
   * __-q__,                quits the grsi environment after completeing the fragment sort
   * __-no_speed__,         suppresses the output from the PROOF speedometer
 
+If multiple fragment trees are included at the time of the sort, or are created from multiple MIDAS files during the **autosort**, they will be sorted sequentially. However, it should be noted that although different fragment trees will be sorted into different analysis trees, if a **-s** sort is called, all the fragment trees will be histogrammed into a single **hists.root**. If you would like to output multiple **hists.root** files, please run an external script to call grsisort multiple times.
+
 ####The Autosort Feature
 If the __-a__ or __-s__ flags are used on the MIDAS file, GRSISort will sort the MIDAS file and then complete a fragment sort by applying the flags and sorting the fragment tree.
 
