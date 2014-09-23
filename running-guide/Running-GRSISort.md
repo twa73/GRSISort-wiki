@@ -23,7 +23,7 @@ Currently accepted flags for the midas sort:
   * __-no_waveforms__,     does not add the wave form stored for each event in the mid file to the fragment tree
   * __-q__,                quits the grsi environment after completing the midas sort
 
-If multiple **.mid** files are included at the time of sort, this can even include the wildcard character** \* **
+If multiple **.mid** files are included at the time of sort, this can even include the wildcard character `*`, grsisort will sequentially sort all of these MIDAS files and write them to their own fragment trees.
 
 
 <a name="runfragtree" />
