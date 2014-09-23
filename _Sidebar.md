@@ -12,7 +12,7 @@
 
 [**Running GRSISort**](Running-GRSISort)  
 
--[[Sorting|Running-GRSISort]]
+- [[Sorting|Running-GRSISort]]
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
