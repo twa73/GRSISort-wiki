@@ -41,8 +41,12 @@ CODE: SELECT ALL
 ```
 
 ####stdlibc
-- If you recieve the
-
+- If you recieve the error
+```bash
+Error: cannot open file "gnu/stubs.h" /usr/include/features.h:399:
+Error: cannot open file "bits/wchar.h" /usr/include/stdint.h:27:
+Error: cannot open file "bits/wordsize.h" /usr/include/stdint.h:28:
+```
 -------------------
 
 If you have an issue that is currently not on the above list please post it to the [Issue Tracker](https://github.com/pcbend/GRSISort/issues).
