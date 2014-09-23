@@ -11,6 +11,7 @@
 - [Step 7: Profit](Setting-up-GRSISort#step7)
 
 [**Running GRSISort**](Running-GRSISort)  
+
 -[[Sorting|Running-GRSISort]]
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
