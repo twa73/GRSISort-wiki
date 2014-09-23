@@ -28,6 +28,7 @@ If multiple **.mid** files are included at the time of sort, this can even inclu
 
 
 <a name="sortfrags" />
+#Sorting the Fragment Tree
 **grsisort [-a -s] NAME_OF_FRAGMENT_TREE.root**   -> Starts sorting the fragment tree into (-s) user defined hists and/or (-a) analysis trees.
   * Histograms are defined in **users/UserInitObj.h**
   * How to fill the histogram is defined in **users/UserFillObj.h** 
