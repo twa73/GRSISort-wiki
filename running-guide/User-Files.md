@@ -9,10 +9,10 @@ The two files used for creating user defined histograms from the fragment tree a
 #UserInitObj.h
 The **UserInitObj.h** file is where we *initialize* the histograms to be created during the fragment sort. A sample of initializing histograms is as follows:
 ```c++
-  GetOutputList()->Add(new TH1D("Charge_0x0000","Charge_0x0000",8000,0,4000));
-  GetOutputList()->Add(new TH1D("Charge_0x0001","Charge_0x0001",8000,0,4000));
+GetOutputList()->Add(new TH1D("Charge_0x0000","Charge_0x0000",8000,0,4000));
+GetOutputList()->Add(new TH1D("Charge_0x0001","Charge_0x0001",8000,0,4000));
 
-  GetOutputList()->Add(new TH2D("hp_charge","Channel vs Charge",64,0,64,4000,0,4000));
+GetOutputList()->Add(new TH2D("hp_charge","Channel vs Charge",64,0,64,4000,0,4000));
 
 ```
 
