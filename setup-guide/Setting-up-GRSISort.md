@@ -22,7 +22,7 @@ sudo apt-get install git
 
 <a name="step2" />
 ##Step 2: Install ROOT
-To download and install root follow the directions on the [ROOT](http://root.cern.ch/drupal/content/installing-root-source) website. The current supported version of root is v5.34.
+To download and install root follow the directions on the [ROOT](http://root.cern.ch/drupal/content/installing-root-source) website. The current supported version of root is v5.34. Here are some [Problems](Troubleshooting#rootproblems) that we have found at this stage.
 
 *Already have ROOT? Proceed to [Download GRSISort](#step3)*
 

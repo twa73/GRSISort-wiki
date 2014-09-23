@@ -5,6 +5,7 @@
   - [Architecture](#unfixableArch)
 2. [Fixable Problems](#fixable)  
   - [HTML Documentation](#fixablehtml)
+  - [ROOT Installation](#rootproblems)
 
 <a name="unfixable" />
 ------------------
@@ -22,7 +23,25 @@
 #Fixable Problems
 
 <a name="fixablehtml" />
+###HTML
 - If you recieve the error `sh: 1: dot: not found` it is because you do not have a **dot** writing program. This is not really an issue, but to avoid this, install a dot program like **graphviz**. (On Ubuntu `sudo apt-get install graphviz`) 
+
+##ROOT
+<a name="rootproblems" />
+####freetype
+- You may recieve the error in **asfont.c** that **freetype/freetype.h** does not exist. This can be solved by changing *line 67* in **asfont.c** from
+````c++
+CODE: SELECT ALL
+#include <freetype/freetype.h>
+````
+to
+````c++
+CODE: SELECT ALL
+#include <freetype.h>
+```
+
+####stdlibc
+- If you recieve the
 
 -------------------
 
