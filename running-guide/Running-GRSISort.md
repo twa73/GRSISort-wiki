@@ -7,12 +7,12 @@ The steps involved in using GRSISort are:
 
 We are running a multistage sorting model with GRSISort. This has one main advantage: It allows us to sort the very large MIDAS files non-locally and then download the heavily compressed fragment tree data.
 
-1. [Unpacking the Midas File](#rununpack)
-2. [Analyzing the Fragment Tree](#runfragtree)
+1. [Unpacking the Midas File](#unpackmid)
+2. [Analyzing the Fragment Tree](#sortfrags)
 3. [Histogramming the Final Results](#runhistos)
 
 By default GRSIsort will open up a root session in the GRSI environment.
-<a name="rununpack" />
+<a name="unpackmid" />
 #Unpacking the MIDAS File
 The strategy used by GRSISort is to unpack the MIDAS file and convert the information into a ROOT Tree format. This tree contains <a href="https://rawgit.com/wiki/r3dunlop/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/TFragment.html#TFragment:Data_Members" target="_blank">TFragments</a> and is essentially all of the information from the MIDAS File with higher compression and accessibility.
   
@@ -27,7 +27,7 @@ Currently accepted flags for the midas sort:
 If multiple **.mid** files are included at the time of sort, this can even include the wildcard character `*`, grsisort will sequentially sort all of these MIDAS files and write them to their own fragment trees.
 
 
-<a name="runfragtree" />
+<a name="sortfrags" />
 **grsisort [-a -s] NAME_OF_FRAGMENT_TREE.root**   -> Starts sorting the fragment tree into (-s) user defined hists and/or (-a) analysis trees.
   * Histograms are defined in **users/UserInitObj.h**
   * How to fill the histogram is defined in **users/UserFillObj.h** 
