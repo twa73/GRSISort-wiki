@@ -13,8 +13,8 @@
 [**Running GRSISort**](Running-GRSISort)  
 
 - [[Sorting|Running-GRSISort#sortingmodel]]
-  -[[Unpacking MIDAS Files|Running-GRSISort#unpackmid]]
-  -[[Sorting Fragment Trees|Running-GRSISort#sortfrags]]
+  - [[Unpacking MIDAS Files|Running-GRSISort#unpackmid]]
+  - [[Sorting Fragment Trees|Running-GRSISort#sortfrags]]
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
