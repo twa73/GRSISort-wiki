@@ -4,6 +4,8 @@
 The steps involved in using GRSISort are:
 [[/images/GRSIFlow.png]]
 
+We are running a multistage sorting model with GRSISort. This has one main advantage: It allows us to sort the very large MIDAS files non-locally and then download the heavily compressed fragment tree data.
+
 1. [Unpacking the Midas File](#rununpack)
 2. [Analyzing the Fragment Tree](#runfragtree)
 3. [Histogramming the Final Results](#runhistos)
@@ -21,6 +23,9 @@ Currently accepted flags for the midas sort:
   * __-no_waveforms__,     does not add the wave form stored for each event in the mid file to the fragment tree
   * __-q__,                quits the grsi environment after completing the midas sort
 
+If multiple **.mid** files are included at the time of sort, this can even include the wildcard character \*
+
+
 <a name="runfragtree" />
 **grsisort [-a -s] NAME_OF_FRAGMENT_TREE.root**   -> Starts sorting the fragment tree into (-s) user defined hists and/or (-a) analysis trees.
   * Histograms are defined in **users/UserInitObj.h**
@@ -32,7 +37,7 @@ Currently accepted flags for the fragment tree sort:
   * __-a__,                creates an analysis tree to be used for doing a full analysis of the data
   * __-s__,                sorts the fragment tree into user defined hits. 
   * __-q__,                quits the grsi environment after completeing the fragment sort
-  * __-no_speed__,         suppresses the output from the PROOF spedometer
+  * __-no_speed__,         suppresses the output from the PROOF speedometer
 
 ####The Autosort Feature
 If the __-a__ or __-s__ flags are used on the MIDAS file, GRSISort will sort the MIDAS file and then complete a fragment sort by applying the flags and sorting the fragment tree.
