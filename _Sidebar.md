@@ -19,6 +19,9 @@
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
 - [[Commands|Commands]]
+- [[User Files|User-Files]]
+  - [[UserInitObj.h|User-Files#userint]]
+  - [[UserFillObj.h|User-Files#userfill]]
 
 [**Technical Documentation**](Technical-Documentation)
 - <a href="https://rawgit.com/wiki/r3dunlop/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/ClassIndex.html" target="_blank">GRSISort Classes</a>
