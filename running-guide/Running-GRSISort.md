@@ -43,11 +43,21 @@ Currently accepted flags for the fragment tree sort:
 
 If multiple fragment trees are included at the time of the sort, or are created from multiple MIDAS files during the **autosort**, they will be sorted sequentially. However, it should be noted that although different fragment trees will be sorted into different analysis trees, if a **-s** sort is called, all the fragment trees will be histogrammed into a single **hists.root**. If you would like to output multiple **hists.root** files, please run an external script to call grsisort multiple times.
 
-##Viewing the calibrated gamma energies
-When sorting the fragment tree, you can read in a calibration file at the same time and it will perform the calibrations while sorting. This can be done with the command
+##Calibrating the gamma spectra
+When sorting the fragment tree, you can read in a calibration file at the same time and it will perform the calibrations while sorting. This can be done with the command:
 ```c++
 grsisort -flags <midasfile>.mid <calibrationfile>.cal
 ```
+A sample calibration file can be found on __grsmid01__ and is called __NewGrifCal.cal__ in __/data4/griffin/Sept2014/FragmentTrees/Na26__.
+
+If __grsisort__ is not quit after the sorting is complete (and the user remains in the __GRSI>__ root environment) then the calibrated energy can be accessed by using the __GetEnergy()__ command.
+
+If, however, __grsisort__ is closed after sorting the data and creating the fragment tree, then the calibration file can be re-accessed by typing the command __TChannel::RealCalFromTree()__ and it will reload the information that is was sorted with.
+
+But, if not calibration file was used when the data was sorted, it can easily be added in by running the command __TChannel::ReadCalFile("<calibrationfile>.cal")__ within the __grsisort__ environment.
+
+##Viewing histograms within __grsisort__
+
 
 ####The Autosort Feature (NOT IMPLEMENTED)
 If the __-a__ or __-s__ flags are used on the MIDAS file, GRSISort will sort the MIDAS file and then complete a fragment sort by applying the flags and sorting the fragment tree.
