@@ -21,8 +21,8 @@ GetOutputList() allows the user to select one of the data members from the *TFra
 
 The URLS for those are found here:
 
-1. http://root.cern.ch/root/htmldoc/TH1D.html
-2. http://root.cern.ch/root/htmldoc/TH2D.html
+1. http://root.cern.ch/root/htmldoc/TH1.html
+2. http://root.cern.ch/root/htmldoc/TH2.html
 
 If you want to initialize your own *new* histogram in this class you can try the following:
 
