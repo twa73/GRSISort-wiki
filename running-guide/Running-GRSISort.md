@@ -48,7 +48,7 @@ When sorting the fragment tree, you can read in a calibration file at the same t
 ```c++
 grsisort -flags <midasfile>.mid <calibrationfile>.cal
 ```
-A sample calibration file can be found on __grsmid01__ and is called __NewGrifCal.cal__ in __/data4/griffin/Sept2014/FragmentTrees/Na26__.
+A sample calibration file can be found on __grsmid01__ and is called __NewGrifCal.cal__ in `/data4/griffin/Sept2014/FragmentTrees/Na26`.
 
 If __grsisort__ is not quit after the sorting is complete (and the user remains in the __GRSI>__ root environment) then the calibrated energy can be accessed by using the __GetEnergy()__ command.
 
