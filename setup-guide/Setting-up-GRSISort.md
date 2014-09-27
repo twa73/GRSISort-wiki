@@ -22,6 +22,8 @@ sudo apt-get install git
 
 <a name="step2" />
 ##Step 2: Install ROOT
+Before installing root make sure you have the [required and optional packages](http://root.cern.ch/drupal/content/build-prerequisites) installed.
+
 To download and install root follow the directions on the [ROOT](http://root.cern.ch/drupal/content/installing-root-source) website. The current supported version of root is v5.34. Here are some [Problems](Troubleshooting#rootproblems) that we have found at this stage.
 
 *Already have ROOT? Proceed to [Download GRSISort](#step3)*
@@ -37,6 +39,17 @@ git clone https://github.com/pcbend/GRSISort.git
 ``````````
 
 GRSISort should now download to **./GRSISort**
+
+Enter into the **GRSISort** directory with `cd GRSISort`.
+
+To see a list of GRSISort versions available for download, use `git tag -l`. The current release will be tagged under `current`.
+
+To download a the version named <version>:
+```
+git checkout <version>
+```
+
+
 
 *Don't like git? (You should) The newest version can also be downloaded from [[here|https://github.com/pcbend/GRSISort/tarball/master]]*.
 
@@ -67,7 +80,10 @@ setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$GRSISYS/libraries
 <a name="step5" />
 ## Step 5: Compile GRSISort
 To Compile GRSISort type `make`. Please be patient as compilation will take a few moments.
-To create the HTML documentation, you can compile with `make docs`.
+
+- To create the HTML documentation, you can compile with `make docs`.
+- To compile the utilities type `make util`.
+
 If you recieve an error, please consult the [Troubleshooting](troubleshooting) page.
 
 <a name="step6" />
