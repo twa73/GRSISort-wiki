@@ -44,7 +44,7 @@ Enter into the **GRSISort** directory with `cd GRSISort`.
 
 To see a list of GRSISort versions available for download, use `git tag -l`. The current release will be tagged under `current`.
 
-To download a the version named <version>:
+To download a the version named \<version\>:
 ```
 git checkout <version>
 ```
