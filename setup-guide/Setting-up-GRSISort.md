@@ -49,8 +49,6 @@ To download a the version named \<version\>:
 git checkout <version>
 ```
 
-
-
 *Don't like git? (You should) The newest version can also be downloaded from [[here|https://github.com/pcbend/GRSISort/tarball/master]]*.
 
 <a name="step4" />
