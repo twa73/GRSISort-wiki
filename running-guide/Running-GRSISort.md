@@ -41,22 +41,15 @@ Currently accepted flags for the fragment tree sort:
   * __-q__,                quits the grsi environment after completeing the fragment sort
   * __-no_speed__,         suppresses the output from the PROOF speedometer
 
-If multiple fragment trees are included at the time of the sort, or are created from multiple MIDAS files during the **autosort**, they will be sorted sequentially. However, it should be noted that although different fragment trees will be sorted into different analysis trees, if a **-s** sort is called, all the fragment trees will be histogrammed into a single **hists.root**. If you would like to output multiple **hists.root** files, please run an external script to call grsisort multiple times.
+If multiple fragment trees are included at the time of the sort, or are created from multiple MIDAS files during the **autosort**, they will be sorted sequentially. However, it should be noted that although different fragment trees will be sorted into different analysis trees, if a **-s** sort is called, all of the fragment trees will be histogrammed into a single **hists.root**. If you would like to output multiple **hists.root** files, please run an external script to call grsisort multiple times.
 
 ##Calibrating the gamma spectra
-When sorting the fragment tree, you can read in a calibration file at the same time and it will perform the calibrations while sorting. This can be done with the command:
+When sorting the fragment tree, you can read in a [calibration file](CalFile) at the same time and it will perform the calibrations while sorting. This can be done with the command:
 ```c++
 grsisort -flags <midasfile>.mid <calibrationfile>.cal
 ```
-A sample calibration file can be found on `grsmid01` and is called `NewGrifCal.cal` in `/data4/griffin/Sept2014/FragmentTrees/Na26`.
-
-If `grsisort` is not quit after the sorting is complete (and the user remains in the `GRSI>` root environment) then the calibrated energy can be accessed by using the `GetEnergy()` command.
-
-If, however, `grsisort` is closed after sorting the data and creating the fragment tree, then the calibration file can be re-accessed by typing the command `TChannel::RealCalFromTree(FragmentTree)` and it will reload the information that is was sorted with.
-
-But, if not calibration file was used when the data was sorted, it can easily be added in by running the command `TChannel::ReadCalFile("<calibrationfile>.cal")` within the `grsisort` environment.
-
-Finally, if you would like to create a new calibration file from a fragment tree you can run the command `TChannel::WriteCalFile("<calibrationfile>.cal")`.
+A sample calibration file can be found in the users director and is called __NewGrifCal.cal
+__
 
 ##Viewing histograms within `grsisort`
 After sorting the data and creating a fragment tree, you can view histograms by running the command:
