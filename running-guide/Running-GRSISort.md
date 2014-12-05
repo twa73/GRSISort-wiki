@@ -23,6 +23,7 @@ Currently accepted flags for the midas sort:
   * __-log_error__,        sends errors from failed data parsing to file, will not send errors if supress error option is also used!
   * __-no_waveforms__,     does not add the wave form stored for each event in the mid file to the fragment tree
   * __-q__,                quits the grsi environment after completing the midas sort
+  * __-work_harder__,      inputting a `<macro>.C file, runs that macro on the sorted file
 
 If multiple **.mid** files are included at the time of sort, this can even include the wildcard character `*`, grsisort will sequentially sort all of these MIDAS files and write them to their own fragment trees.
 
@@ -40,6 +41,7 @@ Currently accepted flags for the fragment tree sort:
   * __-s__,                sorts the fragment tree into user defined hits. 
   * __-q__,                quits the grsi environment after completeing the fragment sort
   * __-no_speed__,         suppresses the output from the PROOF speedometer
+  * __-work_harder__,      inputting a `<macro>.C file, runs that macro on the sorted file
 
 If multiple fragment trees are included at the time of the sort, or are created from multiple MIDAS files during the **autosort**, they will be sorted sequentially. However, it should be noted that although different fragment trees will be sorted into different analysis trees, if a **-s** sort is called, all of the fragment trees will be histogrammed into a single **hists.root**. If you would like to output multiple **hists.root** files, please run an external script to call grsisort multiple times.
 
@@ -69,4 +71,3 @@ FragmentTree->Draw("ChannelNumber:GetEnergy() >> h(16000,0,16000,64,0,64)", "Cha
 
 ####The Autosort Feature (NOT IMPLEMENTED)
 If the __-a__ or __-s__ flags are used on the MIDAS file, GRSISort will sort the MIDAS file and then complete a fragment sort by applying the flags and sorting the fragment tree.
-
