@@ -80,7 +80,7 @@ setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$GRSISYS/libraries
 To Compile GRSISort type `make`. Please be patient as compilation will take a few moments.
 
 - To create the HTML documentation, you can compile with `make docs`.
-- To compile the utilities type `make util`.
+- To compile the utilities type `make util`. This is important for the fragment tree and analysis tree macros `MakeTimeDiffSpec` and `MakeMatrices`.
 
 If you recieve an error, please consult the [Troubleshooting](troubleshooting) page.
 
@@ -91,5 +91,4 @@ Instructions unclear, lost in terminology.
 <a name"step7" />
 ## Step 7: Profit
 If you ever figure this out, please share the wealth.
-
 
