@@ -14,8 +14,6 @@
 //#include "Globals.h"
 //#endif
 
-//using namespace std;
-
 ////////////////////////////////////////////////////////////////
 //                                                            //
 // TFragment                                                  //
@@ -34,13 +32,15 @@ public:
    Int_t    MidasId;              //->  MIDAS ID
    Long_t   TriggerId;            //->  MasterFilterID in Griffin DAQ  
    Int_t    FragmentId;           //->  Channel Trigger ID
-   Int_t    TriggerBitPattern;	  //->  MasterFilterPattern in Griffin DAQ
+   Int_t    TriggerBitPattern;	 //->  MasterFilterPattern in Griffin DAQ
+
+   Int_t    NetworkPacketNumber;  //->  Network packet number
 
    Short_t ChannelNumber;         //->
-   UInt_t ChannelAddress;          //->
+   UInt_t ChannelAddress;         //->
    std::vector<Int_t> Cfd;        //-> 
    std::vector<Int_t> Led;        //->
-   std::vector<Int_t> Charge;	  //->  The Integrated Charge 
+   std::vector<Int_t> Charge;	    //->  The Integrated Charge 
 
    //unsigned long TimeStamp;     //->
    Int_t TimeStampLow;            //->  Timestamp low bits
@@ -63,8 +63,10 @@ public:
 
    std::vector<Short_t>  wavebuffer;//-> waveform words
   
+   long GetTimeStamp(); //!
+   const char *GetName(); //!
+   double GetEnergy(); //!
    virtual void	Clear(Option_t *opt = ""); //!
-   
    using TObject::Print; 
    virtual void Print(Option_t *opt = ""); //!
     

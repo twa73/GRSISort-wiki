@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Sep 21 20:47:21 2014            -->
+<!--   Date: Sun Dec 14 18:23:27 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -101,6 +101,7 @@ be implemented.
 <tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetGRIFHeader">SetGRIFHeader</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>, <a href="./TFragment.html">TFragment</a>*)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetGRIFMasterFilterId">SetGRIFMasterFilterId</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>, <a href="./TFragment.html">TFragment</a>*)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetGRIFMasterFilterPattern">SetGRIFMasterFilterPattern</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>, <a href="./TFragment.html">TFragment</a>*)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetGRIFNetworkPacket">SetGRIFNetworkPacket</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>, <a href="./TFragment.html">TFragment</a>*)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetGRIFPPG">SetGRIFPPG</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>, <a href="./TFragment.html">TFragment</a>*)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetGRIFTimeStampLow">SetGRIFTimeStampLow</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>, <a href="./TFragment.html">TFragment</a>*)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataParser:SetGRIFWaveForm">SetGRIFWaveForm</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>, <a href="./TFragment.html">TFragment</a>*)</td></tr>
@@ -121,9 +122,11 @@ be implemented.
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype">static <a href="./TDataParser.html">TDataParser</a>*</td><td class="dataname"><a name="TDataParser:fDataParser"></a>fDataParser</td><td class="datadesc">A pointer to the global DataParser Class</td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">unsigned</span> <span class="keyword">long</span></td><td class="dataname"><a name="TDataParser:fgLastMidasId"></a>fgLastMidasId</td><td class="datadesc">The last MIDAS ID in the midas file</td></tr>
+<tr class="data"><td class="datatype">static <span class="keyword">unsigned</span> <span class="keyword">long</span></td><td class="dataname"><a name="TDataParser:fgLastNetworkPacket"></a>fgLastNetworkPacket</td><td class="datadesc">The last network packet recieved.</td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">unsigned</span> <span class="keyword">long</span></td><td class="dataname"><a name="TDataParser:fgLastTriggerId"></a>fgLastTriggerId</td><td class="datadesc">The last Trigged ID in the MIDAS File</td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">long</span></td><td class="dataname"><a name="TDataParser:fgMaxTriggerId"></a>fgMaxTriggerId</td><td class="datadesc">The last trigger ID Called</td></tr>
 <tr class="data"><td class="datatype">static map&lt;<span class="keyword">int</span>,<span class="keyword">int</span>,less&lt;<span class="keyword">int</span>&gt;,allocator&lt;pair&lt;<span class="keyword">const</span> <span class="keyword">int</span>,<span class="keyword">int</span>&gt; &gt; &gt;</td><td class="dataname"><a name="TDataParser:fragment_id_map"></a>fragment_id_map</td><td></td></tr>
+<tr class="data"><td class="datatype">static <a href="./TChannel.html">TChannel</a>*</td><td class="dataname"><a name="TDataParser:gChannel"></a>gChannel</td><td></td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">bool</span></td><td class="dataname"><a name="TDataParser:no_waveforms"></a>no_waveforms</td><td class="datadesc">The flag to turn wave_forms on or off</td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">bool</span></td><td class="dataname"><a name="TDataParser:record_stats"></a>record_stats</td><td class="datadesc">The flag to turn on stats recording</td></tr>
 
@@ -131,7 +134,7 @@ be implemented.
 </div>
 <h2><a id="TDataParser:Class_Charts"></a>Class Charts</h2>
 <map name="MapTDataParser_Lib" id="MapTDataParser_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="125,237,240,285"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
 </map>
 <div class="tabs">
 <a id="imgTDataParser_Inh" class="tabsel" href="inh/TDataParser_Inh.png" onclick="javascript:return SetImg('Charts','inh/TDataParser_Inh.png');">Inheritance</a>
@@ -216,6 +219,11 @@ be implemented.
 <div class="funccomm"><pre>Sets the Griffin Channel Trigger ID
 </pre></div>
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TDataParser:SetGRIFNetworkPacket" href="src/TDataParser.cxx.html#TGb63E">SetGRIFNetworkPacket</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a> , <a href="./TFragment.html">TFragment</a>* )</span><br />
+<div class="funccomm"><pre>Ignores the network packet number (for now)
+   printf(<span class="string">"value = 0x%08x    |   frag-&gt;NetworkPacketNumber = %i   \n"</span>,value,frag-&gt;NetworkPacketNumber);
+</pre></div>
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TDataParser:SetGRIFTimeStampLow" href="src/TDataParser.cxx.html#bKp1p">SetGRIFTimeStampLow</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a> , <a href="./TFragment.html">TFragment</a>* )</span><br />
 <div class="funccomm"><pre>Sets the lower 28 bits of the griffin time stamp
 </pre></div>
@@ -253,7 +261,7 @@ The statistics recorded currently include:
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun Sep 21 20:47:21 2014 </em><em>&raquo; Last generated: 2014-09-21 20:47</em><br />
+<em>&raquo; Last changed: Sun Dec 14 18:23:28 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

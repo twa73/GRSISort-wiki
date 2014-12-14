@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Fri Sep 19 16:12:06 2014            -->
+<!--   Date: Sun Dec 14 18:23:29 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -26,25 +26,29 @@
 ClassImp(<a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>)
 
 <a name="pT2jPE"></a><a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>::<a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:TGRSIDetectorHit" title="TGRSIDetectorHit TGRSIDetectorHit::TGRSIDetectorHit() or overloads">TGRSIDetectorHit</a>()	{ 
-   <a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:Class" title="TClass* TGRSIDetectorHit::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<span class="keyword">true</span>);
+  <span class="comment">// <a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:Class" title="TClass* TGRSIDetectorHit::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<a href="../ListOfTypes.html#bool">true</a>);</span>
 }
 
 <a name="L5nOaC"></a><a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>::<a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:_TGRSIDetectorHit" title="void TGRSIDetectorHit::~TGRSIDetectorHit()">~TGRSIDetectorHit</a>()	{	}
 
+<a name="lP1kkB"></a><a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>::<a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:BremSuppressed" title="Bool_t TGRSIDetectorHit::BremSuppressed(TGRSIDetectorHit* )">BremSuppressed</a>(<a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a> *bremorigin){
+   
+   <span class="keyword">return</span> <span class="keyword">false</span>;
+}
 
 <a name="ajc.r"></a><span class="keyword">void</span> <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>::<a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:Print" title="void TGRSIDetectorHit::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) { }
 
 <a name="Oo5xh"></a><span class="keyword">void</span> <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>::<a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:Clear" title="void TGRSIDetectorHit::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) { }
 
 </pre>
-<div id="linenums"><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="1" href="#1" class="ln">1</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="2" href="#2" class="ln">2</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="3" href="#3" class="ln">3</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="4" href="#4" class="ln">4</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="5" href="#5" class="ln">5</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="6" href="#6" class="ln">6</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="7" href="#7" class="ln">7</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="8" href="#8" class="ln">8</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="9" href="#9" class="ln">9</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="10" href="#10" class="ln">10</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="11" href="#11" class="ln">11</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="12" href="#12" class="ln">12</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="13" href="#13" class="ln">13</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="14" href="#14" class="ln">14</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="15" href="#15" class="ln">15</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="16" href="#16" class="ln">16</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="17" href="#17" class="ln">17</a></div></div>
+<div id="linenums"><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="1" href="#1" class="ln">1</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="2" href="#2" class="ln">2</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="3" href="#3" class="ln">3</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="4" href="#4" class="ln">4</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="5" href="#5" class="ln">5</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="6" href="#6" class="ln">6</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="7" href="#7" class="ln">7</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="8" href="#8" class="ln">8</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="9" href="#9" class="ln">9</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="10" href="#10" class="ln">10</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="11" href="#11" class="ln">11</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="12" href="#12" class="ln">12</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="13" href="#13" class="ln">13</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="14" href="#14" class="ln">14</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="15" href="#15" class="ln">15</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="16" href="#16" class="ln">16</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="17" href="#17" class="ln">17</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="18" href="#18" class="ln">18</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="19" href="#19" class="ln">19</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="20" href="#20" class="ln">20</a></div><div class="ln">&nbsp;<span class="lnfile">TGRSIDetectorHit.cxx:</span><a name="21" href="#21" class="ln">21</a></div></div>
 </div>
 
 <br />
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-09-19 16:12 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
+<em>&raquo; Last changed: 2014-12-14 18:23 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

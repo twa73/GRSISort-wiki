@@ -7,7 +7,8 @@
 #include <vector>
 #include <map>
 
-#include "TFragment.h"
+#include <TChannel.h>
+#include <TFragment.h>
 //#include <TObject.h>
 
 class TDataParser { //: public TObject { 
@@ -16,11 +17,12 @@ class TDataParser { //: public TObject {
     static TDataParser *fDataParser;  //A pointer to the global DataParser Class
     static bool no_waveforms;         //The flag to turn wave_forms on or off
     static bool record_stats;         //The flag to turn on stats recording
+	 static TChannel *gChannel;
     TDataParser();
 	
   public:
     ~TDataParser();
-    static TDataParser *instance();
+    static TDataParser *instance();    //returns the global TDataParser Object
     static void SetNoWaveForms(bool temp = true) {no_waveforms = temp;}
     static void SetRecordStats(bool temp = true) {record_stats = temp;}      
 
@@ -28,6 +30,8 @@ class TDataParser { //: public TObject {
     static const unsigned long fgMaxTriggerId; //The last trigger ID Called
     static unsigned long fgLastMidasId;        //The last MIDAS ID in the midas file
     static unsigned long fgLastTriggerId;      //The last Trigged ID in the MIDAS File
+    static unsigned long fgLastNetworkPacket;  //The last network packet recieved.
+
     static std::map<int,int> fragment_id_map;
 
 
@@ -52,6 +56,7 @@ class TDataParser { //: public TObject {
     static bool SetGRIFMasterFilterPattern(uint32_t,TFragment*);
     static bool SetGRIFChannelTriggerId(uint32_t,TFragment*);  
     static bool SetGRIFTimeStampLow(uint32_t,TFragment*);
+    static bool SetGRIFNetworkPacket(uint32_t,TFragment*);
 
     static bool SetGRIFWaveForm(uint32_t,TFragment*);
     static bool SetGRIFDeadTime(uint32_t,TFragment*);

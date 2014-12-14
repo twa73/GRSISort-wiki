@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Sep 22 12:05:25 2014            -->
+<!--   Date: Sun Dec 14 18:23:33 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -62,9 +62,8 @@ return false;}
 
  <a href="./TNucleus.html">TNucleus</a>
 
- This class interprets the nucleus in question and provides
- basic information (mass, Z, symbol, radius, etc.) about said
- nucleus.
+ This class builds a nucleus and sets all the basic information
+ (mass, Z, symbol, radius, etc.)
 
 
 </pre></div>
@@ -74,10 +73,10 @@ return false;}
 <h2><a id="TNucleus:Function_Members"></a>Function Members (Methods)</h2>
 <div class="access" id="funcpubl"><b>public:</b>
 <table class="func" id="tabfuncpubl" cellspacing="0">
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TNucleus:TNucleus">TNucleus</a>(<span class="keyword">char</span>*)</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TNucleus:TNucleus@3">TNucleus</a>(<span class="keyword">const</span> <a href="./TNucleus.html">TNucleus</a>&amp;)</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TNucleus:TNucleus@2">TNucleus</a>(<span class="keyword">int</span> Z, <span class="keyword">int</span> N, <span class="keyword">const</span> <span class="keyword">char</span>* MassFile = <a href="./TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a>)</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TNucleus:TNucleus@1">TNucleus</a>(<span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">double</span>, <span class="keyword">const</span> <span class="keyword">char</span>*)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TNucleus:TNucleus">TNucleus</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TNucleus:TNucleus@1">TNucleus</a>(<span class="keyword">const</span> <span class="keyword">char</span>* symbol)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TNucleus:TNucleus@3">TNucleus</a>(<span class="keyword">int</span> Z, <span class="keyword">int</span> N, <span class="keyword">const</span> <span class="keyword">char</span>* MassFile = 0)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TNucleus:TNucleus@2">TNucleus</a>(<span class="keyword">int</span> Z, <span class="keyword">int</span> N, <span class="keyword">double</span> mass, <span class="keyword">const</span> <span class="keyword">char</span>* symbol)</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TNucleus:_TNucleus">~TNucleus</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
@@ -144,7 +143,7 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
-<tr class="func"><td class="funcret"><a href="./TNucleus.html">TNucleus</a>&amp;</td><td class="funcname"><a class="funcname" href="#TNucleus:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TNucleus.html">TNucleus</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>&amp;</td><td class="funcname"><a class="funcname" href="#TNamed:operator_"><span class="baseclass">TNamed::</span>operator=</a>(<span class="keyword">const</span> <a href="./#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>&amp; rhs)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:Print"><span class="baseclass">TNamed::</span>Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
@@ -160,17 +159,18 @@ return false;}
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:SetMass@1">SetMass</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:SetMass">SetMass</a>(<span class="keyword">double</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:SetMassExcess">SetMassExcess</a>(<span class="keyword">double</span>)</td></tr>
-<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:SetMassFile">SetMassFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* tmp)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:SetN">SetN</a>(<span class="keyword">int</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:SetName"><span class="baseclass">TNamed::</span>SetName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:SetNameTitle"><span class="baseclass">TNamed::</span>SetNameTitle</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* title)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TNucleus:SetSourceData">SetSourceData</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:SetSymbol">SetSymbol</a>(<span class="keyword">const</span> <span class="keyword">char</span>*)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:SetTitle"><span class="baseclass">TNamed::</span>SetTitle</a>(<span class="keyword">const</span> <span class="keyword">char</span>* title = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:SetZ">SetZ</a>(<span class="keyword">int</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:ShowMembers">ShowMembers</a>(TMemberInspector&amp;)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TNamed:Sizeof"><span class="baseclass">TNamed::</span>Sizeof</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TNucleus:SortName">SortName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNucleus:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SysError"><span class="baseclass">TObject::</span>SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
@@ -213,6 +213,11 @@ return false;}
 <tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
 
 </table></div>
+<div class="access" id="datapubl"><b>public:</b>
+<table class="data" id="tabdatapubl" cellspacing="0">
+<tr class="data"><td class="datatype">TList</td><td class="dataname"><a name="TNucleus:TransitionList"></a>TransitionList</td><td></td></tr>
+
+</table></div>
 <div class="access" id="dataprot"><b>protected:</b>
 <table class="data" id="tabdataprot" cellspacing="0">
 <tr class="datainh"><td class="datatype">TString</td><td class="dataname"><a href="#TNamed:fName"><span class="baseclass">TNamed::</span>fName</a></td><td class="datadesc">object identifier</td></tr>
@@ -221,19 +226,20 @@ return false;}
 </table></div>
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
-<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TNucleus:fA"></a>fA</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TNucleus:fMass"></a>fMass</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TNucleus:fMassExcess"></a>fMassExcess</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TNucleus:fN"></a>fN</td><td></td></tr>
-<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TNucleus:fSymbol"></a>fSymbol</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TNucleus:fZ"></a>fZ</td><td></td></tr>
-<tr class="data"><td class="datatype">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="dataname"><a name="TNucleus:massfile"></a>massfile</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TNucleus:fA"></a>fA</td><td class="datadesc">Number of nucleons (Z + N) </td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TNucleus:fMass"></a>fMass</td><td class="datadesc">Mass (in MeV)</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TNucleus:fMassExcess"></a>fMassExcess</td><td class="datadesc">Mass excess (in MeV)</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TNucleus:fN"></a>fN</td><td class="datadesc">Number of neutrons (N)</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TNucleus:fSymbol"></a>fSymbol</td><td class="datadesc">Atomic symbol (ex. Ba, C, O, N)</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TNucleus:fZ"></a>fZ</td><td class="datadesc">Number of protons (Z)</td></tr>
+<tr class="data"><td class="datatype">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="dataname"><a name="TNucleus:grsipath"></a>grsipath</td><td></td></tr>
+<tr class="data"><td class="datatype">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="dataname"><a name="TNucleus:massfile"></a>massfile</td><td class="datadesc">The massfile to be used, which includes Z, N, atomic symbol, and mass excess</td></tr>
 
 </table></div>
 </div>
 <h2><a id="TNucleus:Class_Charts"></a>Class Charts</h2>
 <map name="MapTNucleus_Lib" id="MapTNucleus_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="125,237,240,285"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
 </map>
 <div class="tabs">
 <a id="imgTNucleus_Inh" class="tabsel" href="inh/TNucleus_Inh.png" onclick="javascript:return SetImg('Charts','inh/TNucleus_Inh.png');">Inheritance</a>
@@ -243,35 +249,64 @@ return false;}
 </div><div class="classcharts"><div class="classchartswidth"></div>
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTNucleus_Inh" src="inh/TNucleus_Inh.png"/></div>
 <h2>Function documentation</h2>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TNucleus:TNucleus" href="src/TNucleus.cxx.html#Vprge">TNucleus</a>(<span class="keyword">char</span>* )</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TNucleus:TNucleus@1" href="src/TNucleus.cxx.html#No.G1C">TNucleus</a>(<span class="keyword">int</span> , <span class="keyword">int</span> , <span class="keyword">double</span> , <span class="keyword">const</span> <span class="keyword">char</span>* )</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TNucleus:TNucleus@2" href="src/TNucleus.cxx.html#SWScZ">TNucleus</a>(<span class="keyword">int</span> Z, <span class="keyword">int</span> N, <span class="keyword">const</span> <span class="keyword">char</span>* MassFile = <a href="./TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a>)</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetZ" href="src/TNucleus.cxx.html#VkDlhC">SetZ</a>(<span class="keyword">int</span> )</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetN" href="src/TNucleus.cxx.html#yAaW9">SetN</a>(<span class="keyword">int</span> )</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetMassExcess" href="src/TNucleus.cxx.html#xSikPD">SetMassExcess</a>(<span class="keyword">double</span> )</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetMass" href="src/TNucleus.cxx.html#ilpssB">SetMass</a>(<span class="keyword">double</span> )</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetMass@1" href="src/TNucleus.cxx.html#dEPUW">SetMass</a>()</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetSymbol" href="src/TNucleus.cxx.html#sl8MDE">SetSymbol</a>(<span class="keyword">const</span> <span class="keyword">char</span>* )</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TNucleus:GetZfromSymbol" href="src/TNucleus.cxx.html#c9heXE">GetZfromSymbol</a>(<span class="keyword">char</span>* )</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TNucleus:GetRadius" href="src/TNucleus.cxx.html#swi1NE">GetRadius</a>()</span><br />
-<div class="funccomm"><pre> The radius is calculated using 1.12*A^1/3 - 0.94*A^-1/3
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TNucleus:TNucleus@1" href="src/TNucleus.cxx.html#w4gXgB">TNucleus</a>(<span class="keyword">const</span> <span class="keyword">char</span>* symbol)</span><br />
+<div class="funccomm"><pre>Creates a nucleus based on symbol (ex. 26Na OR Na26) and sets all parameters from mass.dat
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TNucleus:TNucleus" href="src/TNucleus.h.html#uk1vsB">TNucleus</a>(<span class="keyword">char</span>* )</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TNucleus:TNucleus@2" href="src/TNucleus.cxx.html#No.G1C">TNucleus</a>(<span class="keyword">int</span> Z, <span class="keyword">int</span> N, <span class="keyword">double</span> mass, <span class="keyword">const</span> <span class="keyword">char</span>* symbol)</span><br />
+<div class="funccomm"><pre> Creates a nucleus with Z, N, mass, and symbol
+SetMassFile();
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetMassFile" href="src/TNucleus.h.html#wKCB5B">SetMassFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* tmp)</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TNucleus:TNucleus@3" href="src/TNucleus.cxx.html#SWScZ">TNucleus</a>(<span class="keyword">int</span> Z, <span class="keyword">int</span> N, <span class="keyword">const</span> <span class="keyword">char</span>* MassFile = 0)</span><br />
+<div class="funccomm"><pre> Creates a nucleus with Z, N using mass table (default MassFile = <span class="string">"mass.dat"</span>)
+SetMassFile();
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TNucleus:SortName" href="src/TNucleus.cxx.html#RwwVwB">SortName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</span><br />
+<div class="funccomm"><pre>Names a nucleus based on symbol (ex. 26Na OR Na26). This is to get a nice naming convention.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetZ" href="src/TNucleus.cxx.html#VkDlhC">SetZ</a>(<span class="keyword">int</span> )</span><br />
+<div class="funccomm"><pre> Sets the Z (# of protons) of the nucleus
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetN" href="src/TNucleus.cxx.html#yAaW9">SetN</a>(<span class="keyword">int</span> )</span><br />
+<div class="funccomm"><pre> Sets the N (# of neutrons) of the nucleus
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetMassExcess" href="src/TNucleus.cxx.html#xSikPD">SetMassExcess</a>(<span class="keyword">double</span> )</span><br />
+<div class="funccomm"><pre> Sets the mass excess of the nucleus (in MeV)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetMass" href="src/TNucleus.cxx.html#ilpssB">SetMass</a>(<span class="keyword">double</span> )</span><br />
+<div class="funccomm"><pre> Sets the mass manually (in MeV)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetMass@1" href="src/TNucleus.cxx.html#dEPUW">SetMass</a>()</span><br />
+<div class="funccomm"><pre> Sets the mass based on the A and mass excess of nucleus (in MeV)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TNucleus:SetSymbol" href="src/TNucleus.cxx.html#sl8MDE">SetSymbol</a>(<span class="keyword">const</span> <span class="keyword">char</span>* )</span><br />
+<div class="funccomm"><pre> Sets the atomic symbol for the nucleus
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TNucleus:GetZfromSymbol" href="src/TNucleus.cxx.html#c9heXE">GetZfromSymbol</a>(<span class="keyword">char</span>* )</span><br />
+<div class="funccomm"><pre> Figures out the Z of the nucleus based on the atomic symbol
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TNucleus:GetRadius" href="src/TNucleus.cxx.html#swi1NE">GetRadius</a>()</span><br />
+<div class="funccomm"><pre> Gets the radius of the nucleus (in fm).
+ The radius is calculated using 1.12*A^1/3 - 0.94*A^-1/3
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TNucleus:SetSourceData" href="src/TNucleus.cxx.html#kJfnaC">SetSourceData</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TNucleus:TNucleus" href="src/TNucleus.h.html#IxOdnD">TNucleus</a>()</span><br />
+<div class="funccomm"><pre>static std::string masspath;
+</pre></div>
 
-<div class="code"><code class="inlinecode">{<a href="./TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a> = tmp;}</code></div>
+<div class="code"><code class="inlinecode">{ }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TNucleus:GetZ" href="src/TNucleus.h.html#Q6B2wC">GetZ</a>()</span><br />
@@ -309,7 +344,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Sep 22 12:05:26 2014 </em><em>&raquo; Last generated: 2014-09-22 12:05</em><br />
+<em>&raquo; Last changed: Sun Dec 14 18:23:33 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

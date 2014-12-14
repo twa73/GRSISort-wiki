@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Fri Sep 19 16:12:05 2014            -->
+<!--   Date: Sun Dec 14 18:23:28 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -58,7 +58,16 @@ return false;}
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="TFragmentQueue:description"></a>class TFragmentQueue: public TObject</h1>
 <div class="classdescr">
-</div>
+<pre>
+
+<a href="./TFragmentQueue.html">TFragmentQueue</a>
+
+This class is where we store fragments that are being
+built into events by the TAnalysisTree. It is thread-safe
+and returns it's status in order to monitor progress.
+
+
+</pre></div>
 </div></div>
 
 <div id="functions">
@@ -203,23 +212,23 @@ return false;}
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype">static map&lt;std::string,<a href="./TFragmentQueue.html">TFragmentQueue</a>*&gt;*</td><td class="dataname"><a name="TFragmentQueue:fFragmentMap"></a>fFragmentMap</td><td></td></tr>
-<tr class="data"><td class="datatype">queue&lt;<a href="./TFragment.html">TFragment</a>*&gt;</td><td class="dataname"><a name="TFragmentQueue:fFragmentQueue"></a>fFragmentQueue</td><td></td></tr>
-<tr class="data"><td class="datatype">static <a href="./TFragmentQueue.html">TFragmentQueue</a>*</td><td class="dataname"><a name="TFragmentQueue:fFragmentQueueClassPointer"></a>fFragmentQueueClassPointer</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TFragmentQueue:fFragsInQueue"></a>fFragsInQueue</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TFragmentQueue:fStatusUpdateOn"></a>fStatusUpdateOn</td><td></td></tr>
+<tr class="data"><td class="datatype">queue&lt;<a href="./TFragment.html">TFragment</a>*&gt;</td><td class="dataname"><a name="TFragmentQueue:fFragmentQueue"></a>fFragmentQueue</td><td class="datadesc">The fragment Queue</td></tr>
+<tr class="data"><td class="datatype">static <a href="./TFragmentQueue.html">TFragmentQueue</a>*</td><td class="dataname"><a name="TFragmentQueue:fFragmentQueueClassPointer"></a>fFragmentQueueClassPointer</td><td class="datadesc">Pointer to the fragment Q multiton</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TFragmentQueue:fFragsInQueue"></a>fFragsInQueue</td><td class="datadesc">The current number of fragments in the Q</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TFragmentQueue:fStatusUpdateOn"></a>fStatusUpdateOn</td><td class="datadesc">flag that determines whether the Q status should be read out</td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TFragmentQueue:fStop"></a>fStop</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="dataname"><a name="TFragmentQueue:fTotalFragsIn"></a>fTotalFragsIn</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="dataname"><a name="TFragmentQueue:fTotalFragsOut"></a>fTotalFragsOut</td><td></td></tr>
 <tr class="data"><td class="datatype">static map&lt;<span class="keyword">int</span>,<span class="keyword">int</span>,less&lt;<span class="keyword">int</span>&gt;,allocator&lt;pair&lt;<span class="keyword">const</span> <span class="keyword">int</span>,<span class="keyword">int</span>&gt; &gt; &gt;</td><td class="dataname"><a name="TFragmentQueue:fragment_id_map"></a>fragment_id_map</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TFragmentQueue:fragments_in"></a>fragments_in</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TFragmentQueue:fragments_out"></a>fragments_out</td><td></td></tr>
-<tr class="data"><td class="datatype">TStopwatch*</td><td class="dataname"><a name="TFragmentQueue:sw"></a>sw</td><td></td></tr>
+<tr class="data"><td class="datatype">TStopwatch*</td><td class="dataname"><a name="TFragmentQueue:sw"></a>sw</td><td class="datadesc">The stop watch used for timing in the status</td></tr>
 
 </table></div>
 </div>
 <h2><a id="TFragmentQueue:Class_Charts"></a>Class Charts</h2>
 <map name="MapTFragmentQueue_Lib" id="MapTFragmentQueue_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="125,237,240,285"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
 </map>
 <div class="tabs">
 <a id="imgTFragmentQueue_Inh" class="tabsel" href="inh/TFragmentQueue_Inh.png" onclick="javascript:return SetImg('Charts','inh/TFragmentQueue_Inh.png');">Inheritance</a>
@@ -230,10 +239,10 @@ return false;}
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTFragmentQueue_Inh" src="inh/TFragmentQueue_Inh.png"/></div>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"><a href="./TFragmentQueue.html">TFragmentQueue</a> * <a class="funcname" name="TFragmentQueue:GetQueue" href="src/TFragmentQueue.cxx.html#qQSUpE">GetQueue</a>(string quename = <span class="string">"GOOD"</span>)</span><br />
+<div class="funccomm"><pre>Get a pointer to the global event Q with the name quename.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragmentQueue:TFragmentQueue" href="src/TFragmentQueue.cxx.html#cRecCE">TFragmentQueue</a>()</span><br />
-<div class="funccomm"><pre>printf(DRED <span class="string">"\n\tFragment Queue Created."</span> RESET_COLOR <span class="string">"\n"</span>);
-</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragmentQueue:_TFragmentQueue" href="src/TFragmentQueue.cxx.html#dW0QvD">~TFragmentQueue</a>()</span><br />
 
@@ -241,33 +250,53 @@ return false;}
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:Print" href="src/TFragmentQueue.cxx.html#FguELB">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre><a href="./TFragmentQueue.html#TFragmentQueue:Print" title="void TFragmentQueue::Print(Option_t* opt=&quot;&quot;)">Print</a> the status of the Fragment Queue
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:Clear" href="src/TFragmentQueue.cxx.html#T07VxB">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre><a href="./TFragmentQueue.html#TFragmentQueue:Clear" title="void TFragmentQueue::Clear(Option_t* opt=&quot;&quot;)">Clear</a> the entire Queue, Queue counters, and timer.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:StartStatusUpdate" href="src/TFragmentQueue.cxx.html#SYqnHE">StartStatusUpdate</a>()</span><br />
+<div class="funccomm"><pre>The status thread runs the status update at various intervals to show the progress of the analysis tree.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:StopStatusUpdate" href="src/TFragmentQueue.cxx.html#Pdf6cD">StopStatusUpdate</a>()</span><br />
+<div class="funccomm"><pre>Stops the status update
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:Add" href="src/TFragmentQueue.cxx.html#AnMUE">Add</a>(<a href="./TFragment.html">TFragment</a>* )</span><br />
+<div class="funccomm"><pre><a href="./TFragmentQueue.html#TFragmentQueue:Add" title="void TFragmentQueue::Add(TFragment* )">Add</a> a Fragment to the fragment Queue.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:Pop" href="src/TFragmentQueue.cxx.html#oL74vE">Pop</a>()</span><br />
+<div class="funccomm"><pre>Tage a fragment out of the Queue
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./TFragment.html">TFragment</a> * <a class="funcname" name="TFragmentQueue:PopFragment" href="src/TFragmentQueue.cxx.html#U9DCg">PopFragment</a>()</span><br />
-<div class="funccomm"><pre>std::unique_lock&lt;std::mutex&gt; sorted(Sorted,std::defer_lock);
+<div class="funcdoc"><span class="funcname"><a href="./TFragment.html">TFragment</a> * <a class="funcname" name="TFragmentQueue:PopFragment" href="src/TFragmentQueue.cxx.html#Y40LPB">PopFragment</a>()</span><br />
+<div class="funccomm"><pre>Take a fragment out of the Queue and return a pointer to it.
+std::unique_lock&lt;std::mutex&gt; sorted(Sorted,std::defer_lock);
 sorted.lock();
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TFragmentQueue:Size" href="src/TFragmentQueue.cxx.html#KXYjJD">Size</a>()</span><br />
+<div class="funccomm"><pre>Returns the number of fragments in the Queue
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:CheckStatus" href="src/TFragmentQueue.cxx.html#ba35jB">CheckStatus</a>()</span><br />
-<div class="funccomm"><pre>std::unique_lock&lt;std::mutex&gt; all(All,std::defer_lock);
+<div class="funccomm"><pre>Checks the status of the Queue. This is called by the <a href="./TFragmentQueue.html#TFragmentQueue:Print" title="void TFragmentQueue::Print(Option_t* opt=&quot;&quot;)">Print</a>() function.
+std::unique_lock&lt;std::mutex&gt; all(All,std::defer_lock);
 all.lock();
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:StatusUpdate" href="src/TFragmentQueue.cxx.html#u1_SNB">StatusUpdate</a>()</span><br />
+<div class="funccomm"><pre>Updates the status of the fragment Queue
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:ResetRateCounter" href="src/TFragmentQueue.cxx.html#fUrwCD">ResetRateCounter</a>()</span><br />
-<div class="funccomm"><pre>std::unique_lock&lt;std::mutex&gt; all(All,std::defer_lock);
+<div class="funccomm"><pre>Resets the number of fragments in and fragments out counter. This is useful for checking to see if the rate
+of fragment parsing is changing.
+std::unique_lock&lt;std::mutex&gt; all(All,std::defer_lock);
 all.lock();
 </pre></div>
 </div>
@@ -303,7 +332,7 @@ all.lock();
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Fri Sep 19 16:12:05 2014 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
+<em>&raquo; Last changed: Sun Dec 14 18:23:28 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

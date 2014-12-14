@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Fri Sep 19 16:12:07 2014            -->
+<!--   Date: Sun Dec 14 18:23:32 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -58,22 +58,31 @@ return false;}
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="TKinematics:description"></a>class TKinematics: public TNamed</h1>
 <div class="classdescr">
-</div>
+<pre>
+
+ <a href="./TKinematics.html">TKinematics</a>
+
+ This class calculates 2 body kinematics from a beam, target,
+ recoil, ejectile, and beam energy
+
+
+</pre></div>
 </div></div>
 
 <div id="functions">
 <h2><a id="TKinematics:Function_Members"></a>Function Members (Methods)</h2>
 <div class="access" id="funcpubl"><b>public:</b>
 <table class="func" id="tabfuncpubl" cellspacing="0">
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:TKinematics@3">TKinematics</a>(<span class="keyword">const</span> <a href="./TKinematics.html">TKinematics</a>&amp;)</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:TKinematics">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:TKinematics@1">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <a href="./TNucleus.html">TNucleus</a>* recoil, <a href="./TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:TKinematics@2">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <a href="./TNucleus.html">TNucleus</a>* recoil, <a href="./TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">double</span> ex3, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:TKinematics@4">TKinematics</a>(<span class="keyword">const</span> <a href="./TKinematics.html">TKinematics</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:TKinematics@1">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:TKinematics">TKinematics</a>(<span class="keyword">double</span> beame, <span class="keyword">const</span> <span class="keyword">char</span>* projectile, <span class="keyword">const</span> <span class="keyword">char</span>* target, <span class="keyword">const</span> <span class="keyword">char</span>* ejectile = NULL, <span class="keyword">const</span> <span class="keyword">char</span>* recoil = NULL, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:TKinematics@2">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <a href="./TNucleus.html">TNucleus</a>* recoil, <a href="./TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:TKinematics@3">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <a href="./TNucleus.html">TNucleus</a>* recoil, <a href="./TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">double</span> ex3, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TKinematics:_TKinematics">~TKinematics</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:Angle_cm2lab">Angle_cm2lab</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_cm)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:Angle_lab2cm">Angle_lab2cm</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_lab)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:Angle_lab2cminverse">Angle_lab2cminverse</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_lab, <span class="keyword">bool</span> upper)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:Angle_lab2cminverse">Angle_lab2cminverse</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_lab, <span class="keyword">bool</span> upper = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TKinematics:AngleErr_lab2cm">AngleErr_lab2cm</a>(<span class="keyword">double</span> angle, <span class="keyword">double</span>&amp; err)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
@@ -115,6 +124,7 @@ return false;}
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:GetElab">GetElab</a>(<span class="keyword">int</span> i)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:GetExcEnergy">GetExcEnergy</a>(TLorentzVector recoil)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:GetExcEnergy@1">GetExcEnergy</a>(TVector3 position, <span class="keyword">double</span> KinE)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:GetExcEnergy@2">GetExcEnergy</a>(<span class="keyword">double</span> theta, <span class="keyword">double</span> KinE)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:GetGammacm">GetGammacm</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:GetM">GetM</a>(<span class="keyword">int</span> i)</td></tr>
@@ -188,6 +198,9 @@ return false;}
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:Sigma_lab2cm">Sigma_lab2cm</a>(<span class="keyword">double</span> angle_cm, <span class="keyword">double</span> sigma_lab)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TKinematics:SigmaErr_lab2cm">SigmaErr_lab2cm</a>(<span class="keyword">double</span> angle, <span class="keyword">double</span> err, <span class="keyword">double</span>&amp; sigma, <span class="keyword">double</span>&amp; errsigma)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TNamed:Sizeof"><span class="baseclass">TNamed::</span>Sizeof</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:Steffen_cm2labinverse">Steffen_cm2labinverse</a>(<span class="keyword">double</span> theta_lab, <span class="keyword">int</span> part = 2)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TKinematics:Steffen_lab2cminverse">Steffen_lab2cminverse</a>(<span class="keyword">double</span> theta_lab)</td></tr>
+<tr class="func"><td class="funcret">TSpline3*</td><td class="funcname"><a class="funcname" href="#TKinematics:Steffen_labvscminverse">Steffen_labvscminverse</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TKinematics:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TKinematics:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SysError"><span class="baseclass">TObject::</span>SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
@@ -252,6 +265,7 @@ return false;}
 </table></div>
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype">TSpline3*</td><td class="dataname"><a name="TKinematics:Cm2LabSpline"></a>Cm2LabSpline</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TKinematics:fBeta_cm"></a>fBeta_cm</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TKinematics:fBetacm"></a>fBetacm[4]</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TKinematics:fE"></a>fE[4]</td><td></td></tr>
@@ -276,7 +290,7 @@ return false;}
 </div>
 <h2><a id="TKinematics:Class_Charts"></a>Class Charts</h2>
 <map name="MapTKinematics_Lib" id="MapTKinematics_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="125,237,240,285"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
 </map>
 <div class="tabs">
 <a id="imgTKinematics_Inh" class="tabsel" href="inh/TKinematics_Inh.png" onclick="javascript:return SetImg('Charts','inh/TKinematics_Inh.png');">Inheritance</a>
@@ -286,11 +300,19 @@ return false;}
 </div><div class="classcharts"><div class="classchartswidth"></div>
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTKinematics_Inh" src="inh/TKinematics_Inh.png"/></div>
 <h2>Function documentation</h2>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TKinematics:TKinematics" href="src/TKinematics.cxx.html#dfkBhB">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TKinematics:TKinematics" href="src/TKinematics.cxx.html#q1VubB">TKinematics</a>(<span class="keyword">double</span> beame, <span class="keyword">const</span> <span class="keyword">char</span>* projectile, <span class="keyword">const</span> <span class="keyword">char</span>* target, <span class="keyword">const</span> <span class="keyword">char</span>* ejectile = NULL, <span class="keyword">const</span> <span class="keyword">char</span>* recoil = NULL, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TKinematics:TKinematics@1" href="src/TKinematics.cxx.html#Xz.5YB">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <a href="./TNucleus.html">TNucleus</a>* recoil, <a href="./TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TKinematics:TKinematics@1" href="src/TKinematics.cxx.html#tMBh3">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> By not providing the ejectile (only prociding projectile, target, and beam energy) elestic scattering is assumed
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TKinematics:TKinematics@2" href="src/TKinematics.cxx.html#BTabED">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <a href="./TNucleus.html">TNucleus</a>* recoil, <a href="./TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">double</span> ex3, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TKinematics:TKinematics@2" href="src/TKinematics.cxx.html#Xz.5YB">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <a href="./TNucleus.html">TNucleus</a>* recoil, <a href="./TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Kinematics using the provided projectile, target, recoil, and ejectile, as well as beam energy
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TKinematics:TKinematics@3" href="src/TKinematics.cxx.html#BTabED">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <a href="./TNucleus.html">TNucleus</a>* recoil, <a href="./TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">double</span> ex3, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Kinematics using the provided projectile, target, recoil, ejectile, beam energy, and excited state of the recoil
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname">TSpline3* <a class="funcname" name="TKinematics:Evslab" href="src/TKinematics.cxx.html#AwRYCE">Evslab</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2)</span><br />
 <div class="funccomm"><pre><a href="./ListOfTypes.html#ostream">cout</a> &lt;&lt; <span class="string">"maximum scattering angle: "</span> &lt;&lt; <a href="./TKinematics.html#TKinematics:GetMaxAngle" title="double TKinematics::GetMaxAngle(double vcm) or overloads">GetMaxAngle</a>(<a href="./TKinematics.html#TKinematics:fVcm" title="double TKinematics::fVcm">fVcm</a>[part])*180./PI  &lt;&lt; endl;
@@ -300,44 +322,92 @@ return false;}
 <div class="funcdoc"><span class="funcname">TSpline3* <a class="funcname" name="TKinematics:Evscm" href="src/TKinematics.cxx.html#ha67j">Evscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetExcEnergy" href="src/TKinematics.cxx.html#KMMlzD">GetExcEnergy</a>(TLorentzVector recoil)</span><br />
+<div class="funccomm"><pre>Gets the excitation energy of the recoil in the CM frame using a 4-vector
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetExcEnergy@1" href="src/TKinematics.cxx.html#qrd5mD">GetExcEnergy</a>(TVector3 position, <span class="keyword">double</span> KinE)</span><br />
+<div class="funccomm"><pre>Gets the excitation energy of the recoil in the CM frame using a vector &amp; energy
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetExcEnergy@2" href="src/TKinematics.cxx.html#AgVxBC">GetExcEnergy</a>(<span class="keyword">double</span> theta, <span class="keyword">double</span> KinE)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetBeamEnergy" href="src/TKinematics.cxx.html#WCqs6">GetBeamEnergy</a>(<span class="keyword">double</span> LabAngle, <span class="keyword">double</span> LabEnergy)</span><br />
+<div class="funccomm"><pre> Returns the beam energy given the lab angle and energy of the ejectile
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TKinematics:Initial" href="src/TKinematics.cxx.html#rYNcaB">Initial</a>()</span><br />
+<div class="funccomm"><pre> An initializing function that sets the energies and momenta of the beam and target in the lab and CM frame,
+ as well as a few basic calculations.
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TKinematics:FinalCm" href="src/TKinematics.cxx.html#L4gwTE">FinalCm</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TKinematics:FinalCm" href="src/TKinematics.cxx.html#GnjRCB">FinalCm</a>()</span><br />
+<div class="funccomm"><pre> Calculates the recoil and ejectile energies and momenta in the CM frame
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TKinematics:Final" href="src/TKinematics.cxx.html#SHKDWD">Final</a>(<span class="keyword">double</span> angle, <span class="keyword">int</span> part)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TKinematics:Final" href="src/TKinematics.cxx.html#WkCziD">Final</a>(<span class="keyword">double</span> angle, <span class="keyword">int</span> part)</span><br />
+<div class="funccomm"><pre> Calculates the recoil and ejectile energies and momenta in the lab frame
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:ELab" href="src/TKinematics.cxx.html#SQP.ED">ELab</a>(<span class="keyword">double</span> angle_lab, <span class="keyword">int</span> part)</span><br />
+<div class="funccomm"><pre> Calculates the energy of a particle <span class="string">"part"</span> in the lab given the ejectile lab angle
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TKinematics:SetAngles" href="src/TKinematics.cxx.html#U2bPFD">SetAngles</a>(<span class="keyword">double</span> angle, <span class="keyword">int</span> part, <span class="keyword">bool</span> upper = <span class="keyword">false</span>)</span><br />
+<div class="funccomm"><pre> Set the angle for a particle <span class="string">"part"</span>
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetCmEnergy" href="src/TKinematics.cxx.html#xsvA0">GetCmEnergy</a>(<span class="keyword">double</span> ebeam)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetCmEnergy" href="src/TKinematics.cxx.html#sU.yYB">GetCmEnergy</a>(<span class="keyword">double</span> ebeam)</span><br />
+<div class="funccomm"><pre> Returns the total energy of the CM system, given the beam energy
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetCmEnergy@1" href="src/TKinematics.cxx.html#eK3p8B">GetCmEnergy</a>()</span><br />
+<div class="funccomm"><pre> Returns the total energy of the CM system
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:NormalkinEnergy" href="src/TKinematics.cxx.html#s_LV_D">NormalkinEnergy</a>()</span><br />
+<div class="funccomm"><pre> Returns the total kinetic energy of the system, assuming normal kinematics
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetMaxAngle" href="src/TKinematics.cxx.html#kiLi7C">GetMaxAngle</a>(<span class="keyword">double</span> vcm)</span><br />
+<div class="funccomm"><pre> Returns the maximum angle of the ejectile in the CM frame
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetMaxAngle@1" href="src/TKinematics.cxx.html#kWgZWD">GetMaxAngle</a>(<span class="keyword">int</span> part)</span><br />
+<div class="funccomm"><pre> Returns the maximum angle of a given particle <span class="string">"part"</span>
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TKinematics:CheckMaxAngle" href="src/TKinematics.cxx.html#z508s">CheckMaxAngle</a>(<span class="keyword">double</span> angle, <span class="keyword">int</span> part)</span><br />
+<div class="funccomm"><pre> A check to ensure the angle for a given particle is allowed (i.e. less than the max angle)
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:Angle_lab2cm" href="src/TKinematics.cxx.html#ZV0_EE">Angle_lab2cm</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_lab)</span><br />
+<div class="funccomm"><pre> Converts the lab angle to the CM angle given the velocity in the CM frame
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:Angle_lab2cminverse" href="src/TKinematics.cxx.html#Km.RkD">Angle_lab2cminverse</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_lab, <span class="keyword">bool</span> upper)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:Angle_lab2cminverse" href="src/TKinematics.cxx.html#Km.RkD">Angle_lab2cminverse</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_lab, <span class="keyword">bool</span> upper = <span class="keyword">true</span>)</span><br />
+<div class="funccomm"><pre> Converts the lab angle to the CM angle given the velocity in the CM frame under inverse kinematics
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:Steffen_cm2labinverse" href="src/TKinematics.cxx.html#ZlFL9B">Steffen_cm2labinverse</a>(<span class="keyword">double</span> theta_lab, <span class="keyword">int</span> part = 2)</span><br />
+<div class="funccomm"><pre><a href="./TKinematics.html#TKinematics:Final" title="void TKinematics::Final(double angle,int part)">Final</a>(theta_lab,part);
+<a href="./TKinematics.html#TKinematics:FinalCm" title="void TKinematics::FinalCm()">FinalCm</a>();
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:Steffen_lab2cminverse" href="src/TKinematics.cxx.html#obJAsB">Steffen_lab2cminverse</a>(<span class="keyword">double</span> theta_lab)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TKinematics:AngleErr_lab2cm" href="src/TKinematics.cxx.html#QPfatD">AngleErr_lab2cm</a>(<span class="keyword">double</span> angle, <span class="keyword">double</span>&amp; err)</span><br />
+<div class="funccomm"><pre> Calculates the uncertainty associated with converting the angle from the lab to CM frame
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:Angle_cm2lab" href="src/TKinematics.cxx.html#qSOPiD">Angle_cm2lab</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_cm)</span><br />
+<div class="funccomm"><pre> Converts the CM angle to the lab angle given the velocity in the CM frame
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname">TSpline3* <a class="funcname" name="TKinematics:labvscm" href="src/TKinematics.cxx.html#cjFzyD">labvscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname">TSpline3* <a class="funcname" name="TKinematics:cmvslab" href="src/TKinematics.cxx.html#joB8E">cmvslab</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">TSpline3* <a class="funcname" name="TKinematics:Steffen_labvscminverse" href="src/TKinematics.cxx.html#sEtWOD">Steffen_labvscminverse</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:Sigma_cm2lab" href="src/TKinematics.cxx.html#Qulkw">Sigma_cm2lab</a>(<span class="keyword">double</span> angle_cm, <span class="keyword">double</span> sigma_cm)</span><br />
 </div>
@@ -352,6 +422,8 @@ return false;}
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TKinematics:Transform2cm@1" href="src/TKinematics.cxx.html#B7T_9C">Transform2cm</a>(<span class="keyword">double</span>&amp; angle, <span class="keyword">double</span>&amp; errangle, <span class="keyword">double</span>&amp; sigma, <span class="keyword">double</span>&amp; errsigma)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:Rutherford" href="src/TKinematics.cxx.html#KJgcLC">Rutherford</a>(<span class="keyword">double</span> angle_cm)</span><br />
+<div class="funccomm"><pre> Returns the <a href="./TKinematics.html#TKinematics:Rutherford" title="double TKinematics::Rutherford(double angle_cm)">Rutherford</a> scattering impact parameter, b, given the angle of the ejectile in the CM frame
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname">TSpline3* <a class="funcname" name="TKinematics:Ruthvscm" href="src/TKinematics.cxx.html#VYpwGD">Ruthvscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size)</span><br />
 </div>
@@ -376,7 +448,7 @@ return false;}
 <a href="./ListOfTypes.html#ostream">cout</a> &lt;&lt;<a href="./TKinematics.html#TKinematics:fGamma_cm" title="double TKinematics::fGamma_cm">fGamma_cm</a>&lt;&lt;<span class="string">"*"</span>&lt;&lt;<a href="./TKinematics.html#TKinematics:fBeta_cm" title="double TKinematics::fBeta_cm">fBeta_cm</a>&lt;&lt;<span class="string">"*"</span>&lt;&lt;<a href="./TKinematics.html#TKinematics:fPcm" title="double TKinematics::fPcm">fPcm</a>[i]&lt;&lt;<span class="string">"*"</span>&lt;&lt;cos(<a href="./TKinematics.html#TKinematics:fThetacm" title="double TKinematics::fThetacm">fThetacm</a>[i])
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TKinematics:TKinematics" href="src/TKinematics.h.html#c6iGeE">TKinematics</a>(<a href="./TNucleus.html">TNucleus</a>* projectile, <a href="./TNucleus.html">TNucleus</a>* target, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TKinematics:TKinematics" href="src/TKinematics.h.html#vDjoXB">TKinematics</a>(<span class="keyword">double</span> beame, <span class="keyword">const</span> <span class="keyword">char</span>* projectile, <span class="keyword">const</span> <span class="keyword">char</span>* target, <span class="keyword">const</span> <span class="keyword">char</span>* ejectile = NULL, <span class="keyword">const</span> <span class="keyword">char</span>* recoil = NULL, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TKinematics:GetQValue" href="src/TKinematics.h.html#QZy00D">GetQValue</a>()</span><br />
 
@@ -452,7 +524,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Fri Sep 19 16:12:07 2014 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
+<em>&raquo; Last changed: Sun Dec 14 18:23:32 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

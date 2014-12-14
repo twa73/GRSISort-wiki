@@ -50,8 +50,6 @@ class TSharcHit : public TGRSIDetectorHit 	{
 		//Double_t		energy;		//
 		//Double_t		time;			//
 
-		TVector3 	position;  	//
-
 	public:
 
 		virtual void Clear(Option_t* = "");	//!
@@ -78,11 +76,14 @@ class TSharcHit : public TGRSIDetectorHit 	{
 		inline Int_t GetDetectorNumber()	{ return detectornumber;	} //!
 		//std::pair<int,int>	GetPixel()	{ return std::make_pair(front_strip,back_strip);	}	//!
 
-		inline Int_t    GetFrontCharge() 	{	return	front_charge;	}	//!
-		inline Double_t GetFrontChgDbl() 	{	return	(Double_t)front_charge + gRandom->Uniform();	}	//!
-		inline Int_t    GetBackCharge()		{	return	back_charge;	}	//!
-		inline Double_t GetBackChgDbl()		{	return	(Double_t)back_charge + gRandom->Uniform();	}	//!
-		inline Int_t    GetPadCharge()		{	return	pad_charge;		}	//!
+		inline Int_t    GetFrontCharge() 	  {	return	front_charge;	}	//!
+		       Double_t GetFrontChgHeight() ;	//!
+		inline Double_t GetFrontChgDbl() 	  {	return	(Double_t)front_charge + gRandom->Uniform();	}	//!
+		inline Int_t    GetBackCharge()		  {	return	back_charge;	}	//!
+		       Double_t GetBackChgHeight()  ;	//!
+		inline Double_t GetBackChgDbl()		  {	return	(Double_t)back_charge + gRandom->Uniform();	}	//!
+		inline Int_t    GetPadCharge()		  {	return	pad_charge;		}	//!
+		       Double_t GetPadChgHeight()		;	//!
 		
 		inline UShort_t GetFrontStrip()	{	return	front_strip;	}	//!
 		inline UShort_t GetBackStrip()	{	return	back_strip;		}	//!
@@ -93,9 +94,11 @@ class TSharcHit : public TGRSIDetectorHit 	{
 		//inline Double_t GetFrontCFD()		{	return front_cfd;	}	//!
 		//inline Double_t GetBackCFD()		{	return back_cfd;	}	//!
 
-		TVector3 GetPosition()	{	return position;	}	//!
-		inline Double_t GetThetaDeg() {return position.Theta()*TMath::RadToDeg(); } //!
-		inline Double_t GetThetaRad() {return position.Theta(); } //!
+    Double_t PadEnergyCal(); //!
+    Double_t FrontEnergyCal(); //!
+
+		Double_t GetThetaDeg(double Xoff = 0.0, double Yoff = 0.0, double Zoff = 0.0) { return GetTheta(Xoff,Yoff,Zoff)*TMath::RadToDeg(); } ; //! 
+		Double_t GetTheta(double Xoff = 0.0, double Yoff = 0.0, double Zoff = 0.0); //! 
 
 		inline void SetDeltaFrontE(const Double_t &tenergy)	{	d_energy_front = tenergy;	}	//!
 		inline void SetDeltaFrontT(const Double_t &ttime)		{	d_time_front   = ttime;	}		//!

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Fri Sep 19 16:12:04 2014            -->
+<!--   Date: Sun Dec 14 18:23:26 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -58,7 +58,7 @@ return false;}
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="TCSMHit:description"></a>class TCSMHit: public <a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a></h1>
 <div class="classdescr">
-</div>
+<h4>This class is also known as (typedefs to this class)</h4>vector&lt;<a href="./TCSMHit.html">TCSMHit</a>,allocator&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt; &gt;::value_type</div>
 </div></div>
 
 <div id="functions">
@@ -70,6 +70,7 @@ return false;}
 <tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TCSMHit:_TCSMHit">~TCSMHit</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:BremSuppressed"><span class="baseclass">TGRSIDetectorHit::</span>BremSuppressed</a>(<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>*)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
 <tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TCSMHit:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
@@ -235,6 +236,11 @@ return false;}
 <tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
 
 </table></div>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="datainh"><td class="datatype">TVector3</td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:position"><span class="baseclass">TGRSIDetectorHit::</span>position</a></td><td></td></tr>
+
+</table></div>
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype">TVector3</td><td class="dataname"><a name="TCSMHit:d_position"></a>d_position</td><td></td></tr>
@@ -243,17 +249,17 @@ return false;}
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TCSMHit:hor_d_cfd"></a>hor_d_cfd</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TCSMHit:hor_d_charge"></a>hor_d_charge</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="TCSMHit:hor_d_energy"></a>hor_d_energy</td><td></td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="dataname"><a name="TCSMHit:hor_d_strip"></a>hor_d_strip</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="dataname"><a name="TCSMHit:hor_d_strip"></a>hor_d_strip</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="TCSMHit:hor_d_time"></a>hor_d_time</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TCSMHit:hor_e_cfd"></a>hor_e_cfd</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TCSMHit:hor_e_charge"></a>hor_e_charge</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="TCSMHit:hor_e_energy"></a>hor_e_energy</td><td></td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="dataname"><a name="TCSMHit:hor_e_strip"></a>hor_e_strip</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="dataname"><a name="TCSMHit:hor_e_strip"></a>hor_e_strip</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="TCSMHit:hor_e_time"></a>hor_e_time</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TCSMHit:ver_d_cfd"></a>ver_d_cfd</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TCSMHit:ver_d_charge"></a>ver_d_charge</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="TCSMHit:ver_d_energy"></a>ver_d_energy</td><td></td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="dataname"><a name="TCSMHit:ver_d_strip"></a>ver_d_strip</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="dataname"><a name="TCSMHit:ver_d_strip"></a>ver_d_strip</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="TCSMHit:ver_d_time"></a>ver_d_time</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TCSMHit:ver_e_cfd"></a>ver_e_cfd</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TCSMHit:ver_e_charge"></a>ver_e_charge</td><td></td></tr>
@@ -265,17 +271,17 @@ return false;}
 </div>
 <h2><a id="TCSMHit:Class_Charts"></a>Class Charts</h2>
 <map name="MapTCSMHit_Inh" id="MapTCSMHit_Inh">
-<area shape="rect" id="node2" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="280,8,488,43"/>
+<area shape="rect" id="node3" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="280,10,488,46"/>
 </map>
 <map name="MapTCSMHit_InhMem" id="MapTCSMHit_InhMem">
-<area shape="rect" id="clust12" href="./TGRSIDetectorHit.html" alt="" coords="403,48,469,128"/>
-<area shape="rect" id="clust11" href="./TGRSIDetectorHit.html" alt="" coords="280,144,392,161"/>
-<area shape="rect" id="clust13" href="./TGRSIDetectorHit.html" alt="" coords="325,48,392,141"/>
-<area shape="rect" id="clust14" href="./TGRSIDetectorHit.html" alt="" coords="248,48,315,141"/>
-<area shape="rect" id="clust10" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="248,16,469,161"/>
+<area shape="rect" id="graph12" href="./TGRSIDetectorHit.html" alt="" coords="376,63,629,99"/>
+<area shape="rect" id="graph13" href="./TGRSIDetectorHit.html" alt="" coords="541,109,629,203"/>
+<area shape="rect" id="graph14" href="./TGRSIDetectorHit.html" alt="" coords="443,109,531,232"/>
+<area shape="rect" id="graph15" href="./TGRSIDetectorHit.html" alt="" coords="344,109,432,232"/>
+<area shape="rect" id="graph11" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="333,16,640,243"/>
 </map>
 <map name="MapTCSMHit_Lib" id="MapTCSMHit_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="125,237,240,285"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
 </map>
 <div class="tabs">
 <a id="imgTCSMHit_Inh" class="tabsel" href="inh/TCSMHit_Inh.png" onclick="javascript:return SetImg('Charts','inh/TCSMHit_Inh.png');">Inheritance</a>
@@ -295,12 +301,6 @@ return false;}
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSMHit:Clear" href="src/TCSMHit.cxx.html#a50Su">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSMHit:Print" href="src/TCSMHit.cxx.html#MNlgHB">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
-<div class="funccomm"><pre>printf(DGREEN <span class="string">"[D/F/B] = %02i\t/%02i\t/%02i "</span> RESET_COLOR <span class="string">"\n"</span>,<a href="./TCSMHit.html#TCSMHit:GetDetectorNumber" title="UShort_t TCSMHit::GetDetectorNumber()">GetDetectorNumber</a>(),GetHorizontalStrip(),GetVerticalStrip());
-printf(<span class="string">"CSM hit charge: %f\t0x%08x\n"</span>,(<a href="./ListOfTypes.html#double">double</a>)hor_charge/125.0,hor_charge);
-printf(<span class="string">"CSM hit energy: %f\n"</span>,d_energy);
-printf(<span class="string">"CSM hit time:   %f\n"</span>,d_time);
-printf( DGREEN <span class="string">"=	=	=	=	=	=	=	"</span> RESET_COLOR <span class="string">"\n"</span>);
-</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TCSMHit:TCSMHit" href="src/TCSMHit.h.html#XxjGTB">TCSMHit</a>()</span><br />
 </div>
@@ -393,7 +393,7 @@ printf( DGREEN <span class="string">"=	=	=	=	=	=	=	"</span> RESET_COLOR <span cl
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TCSMHit:GetEHorizontalStrip" href="src/TCSMHit.h.html#s7gBUD">GetEHorizontalStrip</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{	<span class="keyword">return</span>	<a href="./TCSMHit.html#TCSMHit:hor_e_strip" title="UShort_t TCSMHit::hor_e_strip">hor_e_strip</a>;	}</code></div>
+<div class="code"><code class="inlinecode">{	<span class="keyword">return</span>	<a href="./TCSMHit.html#TCSMHit:hor_e_strip" title="Short_t TCSMHit::hor_e_strip">hor_e_strip</a>;	}</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TCSMHit:GetEVerticalStrip" href="src/TCSMHit.h.html#RVYjSD">GetEVerticalStrip</a>()</span><br />
@@ -403,12 +403,12 @@ printf( DGREEN <span class="string">"=	=	=	=	=	=	=	"</span> RESET_COLOR <span cl
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TCSMHit:GetDHorizontalStrip" href="src/TCSMHit.h.html#Mj5e2">GetDHorizontalStrip</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{	<span class="keyword">return</span>	<a href="./TCSMHit.html#TCSMHit:hor_d_strip" title="UShort_t TCSMHit::hor_d_strip">hor_d_strip</a>;	}</code></div>
+<div class="code"><code class="inlinecode">{	<span class="keyword">return</span>	<a href="./TCSMHit.html#TCSMHit:hor_d_strip" title="Short_t TCSMHit::hor_d_strip">hor_d_strip</a>;	}</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TCSMHit:GetDVerticalStrip" href="src/TCSMHit.h.html#Fk5A1">GetDVerticalStrip</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{	<span class="keyword">return</span>	<a href="./TCSMHit.html#TCSMHit:ver_d_strip" title="UShort_t TCSMHit::ver_d_strip">ver_d_strip</a>;	}</code></div>
+<div class="code"><code class="inlinecode">{	<span class="keyword">return</span>	<a href="./TCSMHit.html#TCSMHit:ver_d_strip" title="Short_t TCSMHit::ver_d_strip">ver_d_strip</a>;	}</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TCSMHit:GetEHorizontalCFD" href="src/TCSMHit.h.html#NVqg_C">GetEHorizontalCFD</a>()</span><br />
@@ -487,7 +487,7 @@ printf( DGREEN <span class="string">"=	=	=	=	=	=	=	"</span> RESET_COLOR <span cl
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSMHit:SetEHorizontalStrip" href="src/TCSMHit.h.html#FxZqBC">SetEHorizontalStrip</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a> temp)</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./TCSMHit.html#TCSMHit:hor_e_strip" title="UShort_t TCSMHit::hor_e_strip">hor_e_strip</a>  = temp;}</code></div>
+<div class="code"><code class="inlinecode">{<a href="./TCSMHit.html#TCSMHit:hor_e_strip" title="Short_t TCSMHit::hor_e_strip">hor_e_strip</a>  = temp;}</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSMHit:SetEVerticalStrip" href="src/TCSMHit.h.html#Q2oe4D">SetEVerticalStrip</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a> temp)</span><br />
@@ -497,12 +497,12 @@ printf( DGREEN <span class="string">"=	=	=	=	=	=	=	"</span> RESET_COLOR <span cl
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSMHit:SetDHorizontalStrip" href="src/TCSMHit.h.html#dJBrBC">SetDHorizontalStrip</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a> temp)</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./TCSMHit.html#TCSMHit:hor_d_strip" title="UShort_t TCSMHit::hor_d_strip">hor_d_strip</a>  = temp;}</code></div>
+<div class="code"><code class="inlinecode">{<a href="./TCSMHit.html#TCSMHit:hor_d_strip" title="Short_t TCSMHit::hor_d_strip">hor_d_strip</a>  = temp;}</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSMHit:SetDVerticalStrip" href="src/TCSMHit.h.html#Qsoe4D">SetDVerticalStrip</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a> temp)</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./TCSMHit.html#TCSMHit:ver_d_strip" title="UShort_t TCSMHit::ver_d_strip">ver_d_strip</a>   = temp;}</code></div>
+<div class="code"><code class="inlinecode">{<a href="./TCSMHit.html#TCSMHit:ver_d_strip" title="Short_t TCSMHit::ver_d_strip">ver_d_strip</a>   = temp;}</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSMHit:SetEHorizontalCFD" href="src/TCSMHit.h.html#pSpp5E">SetEHorizontalCFD</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a> tempd)</span><br />
@@ -580,7 +580,7 @@ printf( DGREEN <span class="string">"=	=	=	=	=	=	=	"</span> RESET_COLOR <span cl
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Fri Sep 19 16:12:05 2014 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
+<em>&raquo; Last changed: Sun Dec 14 18:23:27 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

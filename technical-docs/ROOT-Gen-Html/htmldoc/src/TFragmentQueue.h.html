@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Fri Sep 19 16:12:05 2014            -->
+<!--   Date: Sun Dec 14 18:23:28 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -40,29 +40,29 @@
 <span class="keyword">class</span> <a href="../TFragmentQueue.html">TFragmentQueue</a> : <span class="keyword">public</span> <a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> {
 	
 	<span class="keyword">public</span>:
-		<span class="keyword">static</span> <a href="../TFragmentQueue.html">TFragmentQueue</a> *<a href="../TFragmentQueue.html#TFragmentQueue:GetQueue" title="TFragmentQueue* TFragmentQueue::GetQueue(string quename=&quot;GOOD&quot;)">GetQueue</a>(std::string quename = <span class="string">"GOOD"</span>);
+		<span class="keyword">static</span> <a href="../TFragmentQueue.html">TFragmentQueue</a> *<a href="../TFragmentQueue.html#TFragmentQueue:GetQueue" title="TFragmentQueue* TFragmentQueue::GetQueue(string quename=&quot;GOOD&quot;)">GetQueue</a>(std::string quename = <span class="string">"GOOD"</span>); <span class="comment">//Returns the Queue with the name <span class="string">"quename"</span></span>
 		<span class="keyword">virtual</span> <a href="../TFragmentQueue.html#TFragmentQueue:_TFragmentQueue" title="void TFragmentQueue::~TFragmentQueue()">~TFragmentQueue</a>();
 
 <a name="T6BTuD"></a>      <span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:FragsInQueue" title="int TFragmentQueue::FragsInQueue()">FragsInQueue</a>() { <span class="keyword">return</span> <a href="../TFragmentQueue.html#TFragmentQueue:fFragsInQueue" title="int TFragmentQueue::fFragsInQueue">fFragsInQueue</a>;   }
 
 	<span class="keyword">private</span>:
-		<span class="keyword">static</span> <a href="../TFragmentQueue.html">TFragmentQueue</a> *<a href="../TFragmentQueue.html#TFragmentQueue:fFragmentQueueClassPointer" title="TFragmentQueue* TFragmentQueue::fFragmentQueueClassPointer">fFragmentQueueClassPointer</a>;
+		<span class="keyword">static</span> <a href="../TFragmentQueue.html">TFragmentQueue</a> *<a href="../TFragmentQueue.html#TFragmentQueue:fFragmentQueueClassPointer" title="TFragmentQueue* TFragmentQueue::fFragmentQueueClassPointer">fFragmentQueueClassPointer</a>; <span class="comment">//Pointer to the fragment Q multiton</span>
       <span class="keyword">static</span> std::map&lt;std::string,<a href="../TFragmentQueue.html">TFragmentQueue</a>*&gt; *<a href="../TFragmentQueue.html#TFragmentQueue:fFragmentMap" title="map&lt;std::string,TFragmentQueue*&gt;* TFragmentQueue::fFragmentMap">fFragmentMap</a>;
 <a name="Bj4IC"></a>      <a href="../TFragmentQueue.html">TFragmentQueue</a>();
 	
 
-		std::queue&lt;<a href="../TFragment.html">TFragment</a>*&gt; <a href="../TFragmentQueue.html#TFragmentQueue:fFragmentQueue" title="queue&lt;TFragment*&gt; TFragmentQueue::fFragmentQueue">fFragmentQueue</a>;
-		<span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:fFragsInQueue" title="int TFragmentQueue::fFragsInQueue">fFragsInQueue</a>;
+		std::queue&lt;<a href="../TFragment.html">TFragment</a>*&gt; <a href="../TFragmentQueue.html#TFragmentQueue:fFragmentQueue" title="queue&lt;TFragment*&gt; TFragmentQueue::fFragmentQueue">fFragmentQueue</a>; <span class="comment">//The fragment Queue</span>
+		<span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:fFragsInQueue" title="int TFragmentQueue::fFragsInQueue">fFragsInQueue</a>;	<span class="comment">//The current number of fragments in the Q</span>
 
 		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:StatusUpdate" title="void TFragmentQueue::StatusUpdate()">StatusUpdate</a>();
-		<span class="keyword">bool</span> <a href="../TFragmentQueue.html#TFragmentQueue:fStatusUpdateOn" title="bool TFragmentQueue::fStatusUpdateOn">fStatusUpdateOn</a>;
+		<span class="keyword">bool</span> <a href="../TFragmentQueue.html#TFragmentQueue:fStatusUpdateOn" title="bool TFragmentQueue::fStatusUpdateOn">fStatusUpdateOn</a>; <span class="comment">//flag that determines whether the Q status should be read out</span>
 
 		<span class="keyword">bool</span> <a href="../TFragmentQueue.html#TFragmentQueue:fStop" title="bool TFragmentQueue::fStop">fStop</a>;
 		
-		<span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:fragments_in" title="int TFragmentQueue::fragments_in">fragments_in</a>;		
+		<span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:fragments_in" title="int TFragmentQueue::fragments_in">fragments_in</a>; 		
 		<span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:fragments_out" title="int TFragmentQueue::fragments_out">fragments_out</a>;
 
-		TStopwatch *<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>;
+		TStopwatch *<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>; <span class="comment">//The stop watch used for timing in the status</span>
 		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:ResetRateCounter" title="void TFragmentQueue::ResetRateCounter()">ResetRateCounter</a>();
 
 		<span class="keyword">unsigned</span> <span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:fTotalFragsIn" title="unsigned int TFragmentQueue::fTotalFragsIn">fTotalFragsIn</a>;
@@ -104,7 +104,7 @@
       <span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:Print" title="void TFragmentQueue::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
 		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:Clear" title="void TFragmentQueue::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
 		
-		ClassDef(<a href="../TFragmentQueue.html">TFragmentQueue</a>,0);
+		ClassDef(<a href="../TFragmentQueue.html">TFragmentQueue</a>,0); <span class="comment">//The <a href="../TFragmentQueue.html#TFragmentQueue:Class" title="TClass* TFragmentQueue::Class()">Class</a> used to hold fragments when building events</span>
 };
 
 
@@ -121,7 +121,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-09-19 16:12 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
+<em>&raquo; Last changed: 2014-12-14 18:23 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

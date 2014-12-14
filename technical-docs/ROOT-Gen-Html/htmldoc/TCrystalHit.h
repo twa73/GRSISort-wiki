@@ -11,7 +11,7 @@ class TCrystalHit : public TGRSIDetectorHit	{
 
 	public:
 		TCrystalHit();
-		~TCrystalHit();
+		virtual ~TCrystalHit();
 
 	private: 
 		int segment;		//
@@ -21,7 +21,7 @@ class TCrystalHit : public TGRSIDetectorHit	{
 		double time;		//
 		double cfd;		  //
 
-		std::vector<int> wave;	//
+		std::vector<int> wave;	//!
 
 	public:
 		

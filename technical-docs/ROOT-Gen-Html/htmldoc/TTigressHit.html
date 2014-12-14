@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Fri Sep 19 16:12:09 2014            -->
+<!--   Date: Sun Dec 14 18:23:34 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -58,7 +58,7 @@ return false;}
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="TTigressHit:description"></a>class TTigressHit: public <a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a></h1>
 <div class="classdescr">
-</div>
+<h4>This class is also known as (typedefs to this class)</h4>vector&lt;<a href="./TTigressHit.html">TTigressHit</a>,allocator&lt;<a href="./TTigressHit.html">TTigressHit</a>&gt; &gt;::value_type</div>
 </div></div>
 
 <div id="functions">
@@ -71,6 +71,7 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTigressHit:Add">Add</a>(<a href="./TTigressHit.html">TTigressHit</a>*)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:BremSuppressed"><span class="baseclass">TGRSIDetectorHit::</span>BremSuppressed</a>(<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>*)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTigressHit:CheckFirstHit">CheckFirstHit</a>(<span class="keyword">int</span> charge, <span class="keyword">int</span> <a href="./TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>)</td></tr>
 <tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TTigressHit:Class">Class</a>()</td></tr>
@@ -110,7 +111,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret">TVector3</td><td class="funcname"><a class="funcname" href="#TTigressHit:GetPosition">GetPosition</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual TVector3</td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetPosition"><span class="baseclass">TGRSIDetectorHit::</span>GetPosition</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TCrystalHit.html">TCrystalHit</a>*</td><td class="funcname"><a class="funcname" href="#TTigressHit:GetSegment">GetSegment</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TTigressHit:GetSegmentMultiplicity">GetSegmentMultiplicity</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TTigressHit:GetTime">GetTime</a>()</td></tr>
@@ -207,6 +208,11 @@ return false;}
 <tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
 
 </table></div>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="datainh"><td class="datatype">TVector3</td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:position"><span class="baseclass">TGRSIDetectorHit::</span>position</a></td><td></td></tr>
+
+</table></div>
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype">vector&lt;<a href="./TCrystalHit.html">TCrystalHit</a>&gt;</td><td class="dataname"><a name="TTigressHit:bgo"></a>bgo</td><td></td></tr>
@@ -216,24 +222,23 @@ return false;}
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="dataname"><a name="TTigressHit:first_segment"></a>first_segment</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TTigressHit:first_segment_charge"></a>first_segment_charge</td><td></td></tr>
 <tr class="data"><td class="datatype">TVector3</td><td class="dataname"><a name="TTigressHit:lasthit"></a>lasthit</td><td class="datadesc">!</td></tr>
-<tr class="data"><td class="datatype">TVector3</td><td class="dataname"><a name="TTigressHit:position"></a>position</td><td></td></tr>
 <tr class="data"><td class="datatype">vector&lt;<a href="./TCrystalHit.html">TCrystalHit</a>&gt;</td><td class="dataname"><a name="TTigressHit:segment"></a>segment</td><td></td></tr>
 
 </table></div>
 </div>
 <h2><a id="TTigressHit:Class_Charts"></a>Class Charts</h2>
 <map name="MapTTigressHit_Inh" id="MapTTigressHit_Inh">
-<area shape="rect" id="node2" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="277,8,483,43"/>
+<area shape="rect" id="node3" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="277,10,483,46"/>
 </map>
 <map name="MapTTigressHit_InhMem" id="MapTTigressHit_InhMem">
-<area shape="rect" id="clust12" href="./TGRSIDetectorHit.html" alt="" coords="403,48,469,128"/>
-<area shape="rect" id="clust11" href="./TGRSIDetectorHit.html" alt="" coords="280,144,392,161"/>
-<area shape="rect" id="clust13" href="./TGRSIDetectorHit.html" alt="" coords="325,48,392,141"/>
-<area shape="rect" id="clust14" href="./TGRSIDetectorHit.html" alt="" coords="248,48,315,141"/>
-<area shape="rect" id="clust10" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="248,16,469,161"/>
+<area shape="rect" id="graph12" href="./TGRSIDetectorHit.html" alt="" coords="376,63,629,99"/>
+<area shape="rect" id="graph13" href="./TGRSIDetectorHit.html" alt="" coords="541,109,629,203"/>
+<area shape="rect" id="graph14" href="./TGRSIDetectorHit.html" alt="" coords="443,109,531,232"/>
+<area shape="rect" id="graph15" href="./TGRSIDetectorHit.html" alt="" coords="344,109,432,232"/>
+<area shape="rect" id="graph11" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="333,16,640,243"/>
 </map>
 <map name="MapTTigressHit_Lib" id="MapTTigressHit_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="125,237,240,285"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
 </map>
 <div class="tabs">
 <a id="imgTTigressHit_Inh" class="tabsel" href="inh/TTigressHit_Inh.png" onclick="javascript:return SetImg('Charts','inh/TTigressHit_Inh.png');">Inheritance</a>
@@ -300,7 +305,7 @@ return false;}
 <div class="funccomm"><pre><a href="./ListOfTypes.html#void">void</a> SetDoppler(const <a href="./ListOfTypes.html#double">double</a> &amp;d)	   { doppler = d;	}					//!
 </pre></div>
 
-<div class="code"><code class="inlinecode">{ <a href="./TTigressHit.html#TTigressHit:position" title="TVector3 TTigressHit::position">position</a> = p;	}</code></div>
+<div class="code"><code class="inlinecode">{ position = p;	}</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TTigressHit:GetDetectorNumber" href="src/TTigressHit.h.html#h8Ta6B">GetDetectorNumber</a>()</span><br />
@@ -336,15 +341,10 @@ return false;}
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TTigressHit:GetTimeCFD" href="src/TTigressHit.h.html#zYbUB">GetTimeCFD</a>()</span><br />
-
-<div class="code"><code class="inlinecode">{  <span class="keyword">return</span> <a href="./TTigressHit.html#TTigressHit:core" title="TCrystalHit TTigressHit::core">core</a>.<a href="./TCrystalHit.html#TCrystalHit:GetCfd" title="double TCrystalHit::GetCfd()">GetCfd</a>(); }</code></div>
-<div style="clear:both;"></div>
-</div>
-<div class="funcdoc"><span class="funcname">TVector3 <a class="funcname" name="TTigressHit:GetPosition" href="src/TTigressHit.h.html#PHBZsE">GetPosition</a>()</span><br />
 <div class="funccomm"><pre>inline <a href="./ListOfTypes.html#double">double</a>   <a href="./TTigressHit.html#TTigressHit:GetDoppler" title="double TTigressHit::GetDoppler(double beta,TVector3* vec=0)">GetDoppler</a>()	       {	return doppler;				}		//!
 </pre></div>
 
-<div class="code"><code class="inlinecode">{	<span class="keyword">return</span> <a href="./TTigressHit.html#TTigressHit:position" title="TVector3 TTigressHit::position">position</a>;			}</code></div>
+<div class="code"><code class="inlinecode">{  <span class="keyword">return</span> <a href="./TTigressHit.html#TTigressHit:core" title="TCrystalHit TTigressHit::core">core</a>.<a href="./TCrystalHit.html#TCrystalHit:GetCfd" title="double TCrystalHit::GetCfd()">GetCfd</a>(); }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TTigressHit:GetDoppler" href="src/TTigressHit.h.html#jmXlNB">GetDoppler</a>(<span class="keyword">double</span> beta, TVector3* vec = 0)</span><br />
@@ -384,7 +384,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Fri Sep 19 16:12:09 2014 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
+<em>&raquo; Last changed: Sun Dec 14 18:23:35 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -21,6 +21,7 @@ using namespace std;
 
 class TKinematics : public TNamed {
 public:
+  TKinematics(double beame, const char* projectile, const char* target,const char* ejectile = NULL, const char* recoil = NULL, const char *name = "");
   TKinematics(TNucleus* projectile, TNucleus* target, double ebeam, const char *name = "");
   TKinematics(TNucleus* projectile, TNucleus* target, TNucleus* recoil, TNucleus* ejectile, double ebeam, const char *name = "");
   TKinematics(TNucleus* projectile, TNucleus* target, TNucleus* recoil, TNucleus* ejectile, double ebeam, double ex3, const char *name = "");
@@ -35,7 +36,7 @@ public:
   TSpline3* Evscm(double thmin, double thmax, double size, int part = 2);
   TSpline3* labvscm(double thmin, double thmax, double size, int part = 2);
   TSpline3* cmvslab(double thmin, double thmax, double size, int part = 2);
- 
+  TSpline3* Steffen_labvscminverse(double thmin, double thmax, double size, int part = 2);
  
   double GetCmEnergy(double ebeam);
   double GetCmEnergy();
@@ -46,6 +47,7 @@ public:
   bool   CheckMaxAngle(double angle, int part);
   double GetExcEnergy(TLorentzVector recoil);
   double GetExcEnergy(TVector3 position, double KinE);
+  double GetExcEnergy(double theta, double KinE);
   double ELab(double angle_lab, int part);
 
   double GetQValue()     { return fQValue;   }
@@ -78,7 +80,9 @@ public:
   TSpline3* Ruthvscm(double thmin, double thmax, double size); 
   TSpline3* Ruthvslab(double thmin, double thmax, double size, int part); 
   double Angle_lab2cm(double vcm, double angle_lab);
-  double Angle_lab2cminverse(double vcm, double angle_lab, bool upper);
+  double Angle_lab2cminverse(double vcm, double angle_lab, bool upper = true);
+  double Steffen_cm2labinverse(double theta_lab, int part=2); // NEW FUNCTIN+
+  double Steffen_lab2cminverse(double theta_lab); // assumes part = 2;
   double Angle_cm2lab(double vcm, double angle_cm);
   double Sigma_cm2lab(double angle_cm, double sigma_cm);
   double Sigma_lab2cm(double angle_cm, double sigma_lab);
@@ -125,8 +129,10 @@ private:
   double V_pe(double, double);
   double E_final(int);
   double T_final(int);
+  
+  TSpline3 *Cm2LabSpline;
  
-  ClassDef(TKinematics,1);
+  ClassDef(TKinematics,1); // Calculates kinematics parameters (both normal and inverse) for scattering experiments
  
 };
 #endif

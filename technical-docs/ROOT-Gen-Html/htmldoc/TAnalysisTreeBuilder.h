@@ -8,8 +8,16 @@
 #include <string>
 #include <queue>
 #include <stdint.h>
+#ifndef __CINT__
+#define _GLIBCXX_USE_NANOSLEEP 1
+   #include <thread>
+   #include <mutex>
+   #include <chrono>
+#endif
 
+#include <TObject.h>
 #include <TFile.h>
+#include <TMemFile.h>
 #include <TTree.h>
 #include <TChain.h>
 #include <TList.h>
@@ -20,26 +28,36 @@
 
 #include <TTigress.h> 
 #include <TSharc.h>     
-//#include <TTriFoil.h>   
+#include <TTriFoil.h>   
 //#include <TRf.h>        
 #include <TCSM.h>       
 //#include <TSpice.h>     
 //#include <TS3.h>        
 //#include <TTip.h>       
    
-//#include <TGriffin.h>   
-//#include <TSceptar.h>   
-//#include <TPaces.h>     
+#include <TGriffin.h>   
+#include <TSceptar.h>   
+#include <TPaces.h>   
 //#include <TDante.h>     
 //#include <TZeroDegree.h>
-//#include <TDescant.h>   
+#include <TDescant.h>   
 
+////////////////////////////////////////////////////////////////
+//                                                            //
+// TAnalysisTreeBuilder                                       //
+//                                                            //
+// This Class builds events out of TGRSIDetectorHits. These   //
+// events then get written out to the analysis tree for post  //
+// processing. When a new detector class is added to the code //
+// it must also be added here for coincidence building        //
+//                                                            //
+////////////////////////////////////////////////////////////////
 
-class TEventQueue {
+class TEventQueue : public TObject {
    public:
       static TEventQueue *Get();
       static void Add(std::vector<TFragment> *event); 
-      static std::vector<TFragment> *Pop();
+      static std::vector<TFragment> *PopEntry();
       static int Size();
       virtual ~TEventQueue();
 
@@ -47,76 +65,132 @@ class TEventQueue {
       TEventQueue();
       static TEventQueue *fPtrToQue;
       static std::queue<std::vector<TFragment>*> fEventQueue;
-      static bool lock;
-      static void SetLock() {lock = true;}
-      static void UnsetLock() {lock = false;}
+      #ifndef __CINT__
+      static std::mutex m_event;
+      #endif 
+      static bool elock;
+      static void SetLock() {  printf(BLUE "settting event lock" RESET_COLOR  "\n");  elock = true;}
+      static void UnsetLock() {  printf(RED "unsettting event lock" RESET_COLOR  "\n");  elock = false;}
+
+   //ClassDef(TEventQueue,0)
 
 };
 
-class TAnalysisTreeBuilder {
+class TWriteQueue : public TObject {
+   public:
+      static TWriteQueue *Get();
+      static void Add(std::map<const char*, TGRSIDetector*> *event); 
+      static std::map<const char*, TGRSIDetector*> *PopEntry();
+      static int Size();
+      virtual ~TWriteQueue();
+
+   private:
+      TWriteQueue();
+      static TWriteQueue *fPtrToQue;
+      static std::queue<std::map<const char*, TGRSIDetector*>*> fWriteQueue;
+      #ifndef __CINT__
+      static std::mutex m_write;
+      #endif
+      static bool wlock;         
+      static void SetLock()   {  wlock = true; }  // printf(BLUE "settting write lock" RESET_COLOR  "\n");    }
+      static void UnsetLock() {  wlock = false;}  // printf(RED "unsettting write lock" RESET_COLOR  "\n");   }
+
+	//ClassDef(TWriteQueue,0)
+
+};
+
+class TAnalysisTreeBuilder : public TObject {
 
    public:
       virtual ~TAnalysisTreeBuilder();
 
-      static void ProcessEvent(std::vector<TFragment>*); 
 
-      static void SetUpFragmentChain(TChain *chain);
-      static void SetUpFragmentChain(std::vector<std::string>);
-      static void SetupFragmentTree();
+      static TAnalysisTreeBuilder* Get();
+      void ProcessEvent();
 
-      static void SortFragmentChain();
-      static void SortFragmentTree();
+      void SetUpFragmentChain(TChain *chain);
+      void SetUpFragmentChain(std::vector<std::string>);
+      void SetupFragmentTree();
 
-      static void InitChannels();
+      void SortFragmentChain();
+      void SortFragmentTree();
+      void SortFragmentTreeByTimeStamp();
 
-      static void SetupOutFile();
-      static void SetupAnalysisTree();
+      void InitChannels();
 
-      static void FillAnalysisTree();
-      static void CloseAnalysisFile();
+      void SetupOutFile();
+      void SetupAnalysisTree();
 
-      static void StartMakeAnalysisTree(int argc=1, char **argv=0);
+      void FillWriteQueue(std::map<const char*, TGRSIDetector*>*);
 
-      static void ClearActiveAnalysisTreeBranches();
-		static void BuildActiveAnalysisTreeBranches();
+      void FillAnalysisTree(std::map<const char*, TGRSIDetector*>*);
+      void WriteAnalysisTree();
+      void CloseAnalysisFile();
 
+      void StartMakeAnalysisTree(int argc=1, char **argv=0);
+
+      void ClearActiveAnalysisTreeBranches();
+		void BuildActiveAnalysisTreeBranches(std::map<const char*, TGRSIDetector*>*);
+
+      void Print(Option_t *opt ="");
+
+      void Status();
 
    private:
       TAnalysisTreeBuilder(); 
 
-      static const size_t MEM_SIZE;
+      static const size_t MEM_SIZE;                      //Sets the minimum amount of memory used to hold the frament tree
 
-      static TChain *fFragmentChain;
-      static TTree  *fCurrentFragTree;
-      static TFile  *fCurrentFragFile;
-      static TTree  *fCurrentAnalysisTree;
-      static TFile  *fCurrentAnalysisFile;
-      static TGRSIRunInfo *fCurrentRunInfo;
+      static TAnalysisTreeBuilder* fAnalysisTreeBuilder; //Pointer to the AnalysisTreeBuilder
 
+      TChain *fFragmentChain;
+      TTree  *fCurrentFragTree;
+      TFile  *fCurrentFragFile;
+      TTree  *fCurrentAnalysisTree;
+      TFile  *fCurrentAnalysisFile;
+      TGRSIRunInfo *fCurrentRunInfo;
+
+      static long fEntries;
+      static int fFragmentsIn;
+      static int fAnalysisIn;
+      static int fAnalysisOut;
+
+#ifndef __CINT__
+      bool fSortFragmentDone;
+      bool fPrintStatus;
+      std::thread *fReadThread;                             //The thread used to read fragments out of the fragment tree
+      std::thread *fProcessThread;                          //The thread used to process and build events
+      std::thread *fWriteThread;                            //The thread used to process the write Queue
+      std::thread *fStatusThread;                           //The thread used to display the status during sorting
+#endif
 
    private:
      
-      static TFragment *fCurrentFragPtr;
+      TFragment *fCurrentFragPtr;
 
-      static TTigress    *tigress;  
-      static TSharc      *sharc;   
-      //static TTriFoil    *triFoil;
-      //static TRf         *rf;     
-      static TCSM        *csm;    
-      //static TSpice      *spice;  
-      //static TS3         *s3;
-      //static TTip        *tip;    
+      //TigAux detectors
+      TTigress    *tigress;                                 //A pointer to the Tigress Mother Class
+      TSharc      *sharc;                                   //A pointer to the Sharc Mother Class
+      TTriFoil    *triFoil;                                 //A pointer to the TriFoil Mother Class
+      //TRf         *rf;      
+      TCSM        *csm;                                     //A pointer to the CSM Mother Class
+      //TSpice      *spice;  
+      //TS3         *s3;
+      //TTip        *tip;    
        
-      //static TGriffin    *Griffin;
-      //static TSceptar    *Sceptar;
-      //static TPaces      *Paces;  
-      //static TDante      *Dante;  
-      //static TZeroDegree *ZeroDegree;
-      //static TDescant    *Descant;
+      //GrifAux detectors
+      TGriffin    *griffin;                                 //A pointer to the Griffin Mother Class
+      TSceptar    *sceptar;                                 //A pointer to the Sceptar Mother Class
+      TPaces      *paces;                                   //A pointer to the Paces Mother Class
+      //TDante      *dante;  
+      //TZeroDegree *zeroDegree;
+      
+      //Aux Detectors
+      TDescant    *descant;                                 //A pointer to the Descant Mother Class
+
+	ClassDef(TAnalysisTreeBuilder,0) //Builds the Analysis Tree out of TFragments
 
 };
-
-
 
 #endif
 

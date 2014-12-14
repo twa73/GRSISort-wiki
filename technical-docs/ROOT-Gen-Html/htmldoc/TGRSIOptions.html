@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Sep 22 01:48:16 2014            -->
+<!--   Date: Sun Dec 14 18:23:29 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -69,6 +69,7 @@ return false;}
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddInputMidasFile">AddInputMidasFile</a>(string&amp; input)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddInputOdbFile">AddInputOdbFile</a>(string&amp; input)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddInputRootFile">AddInputRootFile</a>(string&amp; input)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddMacroFile">AddMacroFile</a>(string&amp; input)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:CloseAfterSort">CloseAfterSort</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetCalFile">GetCalFile</a>(<span class="keyword">int</span> runnumber = 0, <span class="keyword">int</span> subrunnumber = -1)</td></tr>
@@ -78,19 +79,24 @@ return false;}
 <tr class="func"><td class="funcret">vector&lt;std::string&gt;</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetInputMidas">GetInputMidas</a>()</td></tr>
 <tr class="func"><td class="funcret">vector&lt;std::string&gt;</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetInputOdb">GetInputOdb</a>()</td></tr>
 <tr class="func"><td class="funcret">vector&lt;std::string&gt;</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetInputRoot">GetInputRoot</a>()</td></tr>
+<tr class="func"><td class="funcret">vector&lt;std::string&gt;</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetMacroFile">GetMacroFile</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetXMLODBFile">GetXMLODBFile</a>(<span class="keyword">int</span> runnumber = 0, <span class="keyword">int</span> subrunnumber = -1)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:LogErrors">LogErrors</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:MakeAnalysisTree">MakeAnalysisTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:ProgressDialog">ProgressDialog</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:ReadingMaterial">ReadingMaterial</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetCloseAfterSort">SetCloseAfterSort</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetExptName">SetExptName</a>(string&amp; expt)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetHostName">SetHostName</a>(string&amp; host)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetLogErrors">SetLogErrors</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetMakeAnalysisTree">SetMakeAnalysisTree</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetProgressDialog">SetProgressDialog</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetReadingMaterial">SetReadingMaterial</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetUseMidFileOdb">SetUseMidFileOdb</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetWorkHarder">SetWorkHarder</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:UseMidFileOdb">UseMidFileOdb</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:WorkHarder">WorkHarder</a>()</td></tr>
 
 </table></div>
 </div>
@@ -107,6 +113,8 @@ return false;}
 <div class="funcdoc"><span class="funcname">std::vector&lt;std::string&gt; <a class="funcname" name="TGRSIOptions:GetInputCal" href="src/TGRSIOptions.h.html#Dk_JlD">GetInputCal</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname">std::vector&lt;std::string&gt; <a class="funcname" name="TGRSIOptions:GetInputOdb" href="src/TGRSIOptions.h.html#qyv2WC">GetInputOdb</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::vector&lt;std::string&gt; <a class="funcname" name="TGRSIOptions:GetMacroFile" href="src/TGRSIOptions.h.html#BMRU7D">GetMacroFile</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TGRSIOptions:GetXMLODBFile" href="src/TGRSIOptions.h.html#MhNXN">GetXMLODBFile</a>(<span class="keyword">int</span> runnumber = 0, <span class="keyword">int</span> subrunnumber = -1)</span><br />
 </div>
@@ -132,6 +140,14 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:MakeAnalysisTree" href="src/TGRSIOptions.h.html#rX3gIC">MakeAnalysisTree</a>()</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetWorkHarder" href="src/TGRSIOptions.h.html#F1XJlD">SetWorkHarder</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:WorkHarder" href="src/TGRSIOptions.h.html#aDz5qE">WorkHarder</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetReadingMaterial" href="src/TGRSIOptions.h.html#v60mED">SetReadingMaterial</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:ReadingMaterial" href="src/TGRSIOptions.h.html#GJoXiB">ReadingMaterial</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetHostName" href="src/TGRSIOptions.h.html#urqtrC">SetHostName</a>(string&amp; host)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetExptName" href="src/TGRSIOptions.h.html#kFm3z">SetExptName</a>(string&amp; expt)</span><br />
@@ -144,6 +160,8 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:AddInputOdbFile" href="src/TGRSIOptions.h.html#jysb5C">AddInputOdbFile</a>(string&amp; input)</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:AddMacroFile" href="src/TGRSIOptions.h.html#v4lcvD">AddMacroFile</a>(string&amp; input)</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:Print" href="src/TGRSIOptions.h.html#Y2znK">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:Clear" href="src/TGRSIOptions.h.html#ohgpa">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
@@ -153,7 +171,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Sep 22 01:48:16 2014 </em><em>&raquo; Last generated: 2014-09-22 01:48</em><br />
+<em>&raquo; Last changed: Sun Dec 14 18:23:29 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

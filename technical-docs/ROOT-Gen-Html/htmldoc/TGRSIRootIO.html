@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Sep 22 01:26:01 2014            -->
+<!--   Date: Sun Dec 14 18:23:29 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -119,6 +119,7 @@ return false;}
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsOnHeap"><span class="baseclass">TObject::</span>IsOnHeap</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsSortable"><span class="baseclass">TObject::</span>IsSortable</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsZombie"><span class="baseclass">TObject::</span>IsZombie</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:LoadRootFile">LoadRootFile</a>(TFile*)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ls"><span class="baseclass">TObject::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:MakeUserHistsFromFragmentTree">MakeUserHistsFromFragmentTree</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
@@ -159,6 +160,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:WriteRunStats">WriteRunStats</a>()</td></tr>
 
 </table></div>
 <div class="access" id="funcprot"><b>protected:</b>
@@ -205,13 +207,14 @@ return false;}
 <tr class="data"><td class="datatype">TTree*</td><td class="dataname"><a name="TGRSIRootIO:fTChannelTree"></a>fTChannelTree</td><td></td></tr>
 <tr class="data"><td class="datatype">static <a href="./TGRSIRootIO.html">TGRSIRootIO</a>*</td><td class="dataname"><a name="TGRSIRootIO:fTGRSIRootIO"></a>fTGRSIRootIO</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRootIO:fTimesFillCalled"></a>fTimesFillCalled</td><td></td></tr>
+<tr class="data"><td class="datatype">vector&lt;TFile*&gt;</td><td class="dataname"><a name="TGRSIRootIO:finfiles"></a>finfiles</td><td></td></tr>
 <tr class="data"><td class="datatype">TFile*</td><td class="dataname"><a name="TGRSIRootIO:foutfile"></a>foutfile</td><td></td></tr>
 
 </table></div>
 </div>
 <h2><a id="TGRSIRootIO:Class_Charts"></a>Class Charts</h2>
 <map name="MapTGRSIRootIO_Lib" id="MapTGRSIRootIO_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="125,237,240,285"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
 </map>
 <div class="tabs">
 <a id="imgTGRSIRootIO_Inh" class="tabsel" href="inh/TGRSIRootIO_Inh.png" onclick="javascript:return SetImg('Charts','inh/TGRSIRootIO_Inh.png');">Inheritance</a>
@@ -224,11 +227,15 @@ return false;}
 <div class="funcdoc"><span class="funcname"><a href="./TGRSIRootIO.html">TGRSIRootIO</a> * <a class="funcname" name="TGRSIRootIO:Get" href="src/TGRSIRootIO.cxx.html#vO8xSB">Get</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIRootIO:TGRSIRootIO" href="src/TGRSIRootIO.cxx.html#mZ_w2B">TGRSIRootIO</a>()</span><br />
+<div class="funccomm"><pre>printf(<span class="string">"TGRSIRootIO has been created.\n"</span>);
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIRootIO:_TGRSIRootIO" href="src/TGRSIRootIO.cxx.html#vfaR5D">~TGRSIRootIO</a>()</span><br />
 
 <div class="code"><code class="inlinecode">{  }</code></div>
 <div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:LoadRootFile" href="src/TGRSIRootIO.cxx.html#wZqHJB">LoadRootFile</a>(TFile* )</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:SetUpFragmentTree" href="src/TGRSIRootIO.cxx.html#u1BEuC">SetUpFragmentTree</a>()</span><br />
 </div>
@@ -249,6 +256,8 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TGRSIRootIO:GetSubRunNumber" href="src/TGRSIRootIO.cxx.html#GwRWuC">GetSubRunNumber</a>(string )</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:WriteRunStats" href="src/TGRSIRootIO.cxx.html#c2gTKD">WriteRunStats</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIRootIO:TGRSIRootIO" href="src/TGRSIRootIO.h.html#evK_6C">TGRSIRootIO</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname">TFile * <a class="funcname" name="TGRSIRootIO:GetRootOutFile" href="src/TGRSIRootIO.h.html#GzVeyE">GetRootOutFile</a>()</span><br />
@@ -266,7 +275,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Sep 22 01:26:01 2014 </em><em>&raquo; Last generated: 2014-09-22 01:26</em><br />
+<em>&raquo; Last changed: Sun Dec 14 18:23:30 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

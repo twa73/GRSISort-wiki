@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Fri Sep 19 16:12:09 2014            -->
+<!--   Date: Sun Dec 14 18:23:34 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -57,7 +57,7 @@ ClassImp(<a href="../TTigressHit.html">TTigressHit</a>)
 <a name="shIsCD"></a><span class="keyword">void</span> <a href="../TTigressHit.html">TTigressHit</a>::<a href="../TTigressHit.html#TTigressHit:Print" title="void TTigressHit::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt)	{
 	printf(<span class="string">"Tigress hit energy: %.2f\n"</span>,<a href="../TTigressHit.html#TTigressHit:GetCore" title="TCrystalHit* TTigressHit::GetCore()">GetCore</a>()-><a href="../TCrystalHit.html#TCrystalHit:GetEnergy" title="double TCrystalHit::GetEnergy()">GetEnergy</a>());
 	printf(<span class="string">"Tigress hit time:   %.2f\n"</span>,<a href="../TTigressHit.html#TTigressHit:GetCore" title="TCrystalHit* TTigressHit::GetCore()">GetCore</a>()-><a href="../TCrystalHit.html#TCrystalHit:GetTime" title="double TCrystalHit::GetTime()">GetTime</a>());
-	<span class="comment">//printf(<span class="string">"Tigress hit TV3 theta: %.2f\tphi%.2f\n"</span>,<a href="../TTigressHit.html#TTigressHit:position" title="TVector3 TTigressHit::position">position</a>.Theta() *180/(3.141597),<a href="../TTigressHit.html#TTigressHit:position" title="TVector3 TTigressHit::position">position</a>.Phi() *180/(3.141597));</span>
+	<span class="comment">//printf(<span class="string">"Tigress hit TV3 theta: %.2f\tphi%.2f\n"</span>,position.Theta() *180/(3.141597),position.Phi() *180/(3.141597));</span>
 }
 
 
@@ -85,12 +85,12 @@ ClassImp(<a href="../TTigressHit.html">TTigressHit</a>)
 
 <a name="JmCTSC"></a><span class="keyword">void</span> <a href="../TTigressHit.html">TTigressHit</a>::<a href="../TTigressHit.html#TTigressHit:Add" title="void TTigressHit::Add(TTigressHit* )">Add</a>(<a href="../TTigressHit.html">TTigressHit</a> *hit)	{
 	<span class="keyword">if</span>(<span class="keyword">this</span> == hit)	{
-		<a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a> = <a href="../TTigressHit.html#TTigressHit:position" title="TVector3 TTigressHit::position">position</a>;
+		<a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a> = position;
 		lastpos = std::make_tuple(<a href="../TTigressHit.html#TTigressHit:GetDetectorNumber" title="int TTigressHit::GetDetectorNumber()">GetDetectorNumber</a>(),<a href="../TTigressHit.html#TTigressHit:GetCrystalNumber" title="int TTigressHit::GetCrystalNumber()">GetCrystalNumber</a>(),<a href="../TTigressHit.html#TTigressHit:GetInitialHit" title="int TTigressHit::GetInitialHit()">GetInitialHit</a>());
 		<span class="keyword">return</span>;
 	}
 	<span class="keyword">this</span>-&gt;<a href="../TTigressHit.html#TTigressHit:core" title="TCrystalHit TTigressHit::core">core</a>.<a href="../TCrystalHit.html#TCrystalHit:SetEnergy" title="void TCrystalHit::SetEnergy(const double&amp; e)">SetEnergy</a>(<span class="keyword">this</span>-&gt;<a href="../TTigressHit.html#TTigressHit:GetEnergy" title="double TTigressHit::GetEnergy()">GetEnergy</a>() + hit-&gt;<a href="../TTigressHit.html#TTigressHit:GetEnergy" title="double TTigressHit::GetEnergy()">GetEnergy</a>());
-	<span class="keyword">this</span>-&gt;<a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a> = hit-&gt;<a href="../TTigressHit.html#TTigressHit:GetPosition" title="TVector3 TTigressHit::GetPosition()">GetPosition</a>();
+	<span class="keyword">this</span>-&gt;<a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a> = hit-&gt;<a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:GetPosition" title="TVector3 TGRSIDetectorHit::GetPosition()">GetPosition</a>();
 	<span class="keyword">this</span>-&gt;lastpos = std::make_tuple(hit-&gt;<a href="../TTigressHit.html#TTigressHit:GetDetectorNumber" title="int TTigressHit::GetDetectorNumber()">GetDetectorNumber</a>(),hit-&gt;<a href="../TTigressHit.html#TTigressHit:GetCrystalNumber" title="int TTigressHit::GetCrystalNumber()">GetCrystalNumber</a>(),hit-&gt;<a href="../TTigressHit.html#TTigressHit:GetInitialHit" title="int TTigressHit::GetInitialHit()">GetInitialHit</a>());
 }
 
@@ -104,7 +104,7 @@ ClassImp(<a href="../TTigressHit.html">TTigressHit</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-09-19 16:12 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
+<em>&raquo; Last changed: 2014-12-14 18:23 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

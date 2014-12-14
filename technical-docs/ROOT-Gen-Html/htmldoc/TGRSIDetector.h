@@ -4,13 +4,19 @@
 #include "Globals.h"
 
 #include <cstdio>
+#include <vector>
+#include "TVector3.h"
 
 #ifndef __CINT__
 #endif
 
 #include "TObject.h"
-
+#ifndef __CINT__
 #include "TGRSIDetectorData.h"
+#else
+class TGRSIDetectorData;
+#endif
+
 #include "TFragment.h"
 #include "TChannel.h"
 
@@ -25,14 +31,12 @@ class TGRSIDetector : public TObject	{
 		virtual void BuildHits(TGRSIDetectorData *data=0,Option_t * = "") = 0;			   //!
 		virtual void FillData(TFragment*,TChannel*,MNEMONIC*) = 0; //!
 
-      virtual void Clear(Option_t *opt = "") = 0;		//!
-		virtual void Print(Option_t *opt = "") = 0;		//!
+      virtual void Clear(Option_t *opt = "");		//!
+		virtual void Print(Option_t *opt = "");		//!
 
-      TGRSIDetectorData *GetData() { return data;}
+      //virtual TGRSIDetectorData *GetData() //{ //return data;}
 
-	private: 
-
-      TGRSIDetectorData *data;    //!
+      //TGRSIDetectorData *data;    //!
 
    ClassDef(TGRSIDetector,0)  
 };

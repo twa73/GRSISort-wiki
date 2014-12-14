@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Fri Sep 19 16:12:06 2014            -->
+<!--   Date: Sun Dec 14 18:23:29 2014            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -71,7 +71,7 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:BuildHits">BuildHits</a>(<a href="./TGRSIDetectorData.html">TGRSIDetectorData</a>* <a href="./TGRSIDetector.html#TGRSIDetector:data" title="TGRSIDetectorData* TGRSIDetector::data">data</a> = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:BuildHits">BuildHits</a>(TGRSIDetectorData* data = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TGRSIDetector:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
@@ -92,7 +92,6 @@ return false;}
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:FillData">FillData</a>(<a href="./TFragment.html">TFragment</a>*, <a href="./TChannel.html">TChannel</a>*, MNEMONIC*)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret"><a href="./TGRSIDetectorData.html">TGRSIDetectorData</a>*</td><td class="funcname"><a class="funcname" href="#TGRSIDetector:GetData">GetData</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
@@ -185,21 +184,16 @@ return false;}
 <tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
 
 </table></div>
-<div class="access" id="datapriv"><b>private:</b>
-<table class="data" id="tabdatapriv" cellspacing="0">
-<tr class="data"><td class="datatype"><a href="./TGRSIDetectorData.html">TGRSIDetectorData</a>*</td><td class="dataname"><a name="TGRSIDetector:data"></a>data</td><td class="datadesc">!</td></tr>
-
-</table></div>
 </div>
 <h2><a id="TGRSIDetector:Class_Charts"></a>Class Charts</h2>
 <map name="MapTGRSIDetector_Inh" id="MapTGRSIDetector_Inh">
-<area shape="rect" id="node3" href="./TCSM.html" title="TCSM" alt="" coords="590,2,766,35"/>
-<area shape="rect" id="node4" href="./TGriffin.html" title="TGriffin" alt="" coords="590,36,766,69"/>
-<area shape="rect" id="node5" href="./TSharc.html" title="TSharc" alt="" coords="590,70,766,103"/>
-<area shape="rect" id="node6" href="./TTigress.html" title="TTigress" alt="" coords="590,103,766,136"/>
+<area shape="rect" id="node5" href="./TCSM.html" title="TCSM" alt="" coords="590,2,766,37"/>
+<area shape="rect" id="node6" href="./TGriffin.html" title="TGriffin" alt="" coords="590,37,766,72"/>
+<area shape="rect" id="node7" href="./TSharc.html" title="TSharc" alt="" coords="590,72,766,107"/>
+<area shape="rect" id="node8" href="./TTigress.html" title="TTigress" alt="" coords="590,107,766,141"/>
 </map>
 <map name="MapTGRSIDetector_Lib" id="MapTGRSIDetector_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="125,237,240,285"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
 </map>
 <div class="tabs">
 <a id="imgTGRSIDetector_Inh" class="tabsel" href="inh/TGRSIDetector_Inh.png" onclick="javascript:return SetImg('Charts','inh/TGRSIDetector_Inh.png');">Inheritance</a>
@@ -221,21 +215,16 @@ return false;}
 <div class="code"><code class="inlinecode">{ }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetector:BuildHits" href="src/TGRSIDetector.h.html#c9BsYC">BuildHits</a>(<a href="./TGRSIDetectorData.html">TGRSIDetectorData</a>* <a href="./TGRSIDetector.html#TGRSIDetector:data" title="TGRSIDetectorData* TGRSIDetector::data">data</a> = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetector:BuildHits" href="src/TGRSIDetector.h.html#c9BsYC">BuildHits</a>(TGRSIDetectorData* data = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetector:FillData" href="src/TGRSIDetector.h.html#fE3MDC">FillData</a>(<a href="./TFragment.html">TFragment</a>* , <a href="./TChannel.html">TChannel</a>* , MNEMONIC* )</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><a href="./TGRSIDetectorData.html">TGRSIDetectorData</a> * <a class="funcname" name="TGRSIDetector:GetData" href="src/TGRSIDetector.h.html#OorBQB">GetData</a>()</span><br />
-
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGRSIDetector.html#TGRSIDetector:data" title="TGRSIDetectorData* TGRSIDetector::data">data</a>;}</code></div>
-<div style="clear:both;"></div>
 </div>
 
 <br />
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Fri Sep 19 16:12:06 2014 </em><em>&raquo; Last generated: 2014-09-19 16:12</em><br />
+<em>&raquo; Last changed: Sun Dec 14 18:23:29 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
