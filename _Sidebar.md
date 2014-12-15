@@ -31,7 +31,7 @@
 
 **Useful resources**  
 
-- [[TGRSIViewer | BROKEN]]
+- [[TGRSIViewer]]
 - [[Troubleshooting]]  
 - [[Running GRSISort|Running-GRSISort]]
 - [[Technical Docs|Technical-Documentation]]
