@@ -18,3 +18,6 @@ __NOTE:__ This data is not written to the tree unless the midas file is sorted w
 Once a calibration from a cal file is active, access to the various calibrations is straight forward. For example, one can access the calibrated energy for a fragment using the `GetEnergy()` command.
 
 Finally, if you would like to create a new calibration file from a fragment tree you can run the command `TChannel::WriteCalFile("<calibrationfile>.cal")`.
+
+##ODB
+Using **odbgains.C** on a cal file writes a bash script that will allows easy setting of the odb gains parameters for GRIFFIN.
