@@ -15,6 +15,8 @@
 - [[Sorting|Running-GRSISort#sortingmodel]]
   - [[Unpacking MIDAS Files|Running-GRSISort#unpackmid]]
   - [[Sorting Fragment Trees|Running-GRSISort#sortfrags]]
+- [[Analysis|Analysis]]
+  - [[Gain Matching|Gain Matching]]
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
