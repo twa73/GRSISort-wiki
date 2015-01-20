@@ -17,6 +17,7 @@
   - [[Sorting Fragment Trees|Running-GRSISort#sortfrags]]
 - [[Analysis|Analysis]]
   - [[Gain Matching|Gain Matching]]
+  - [[Fitting | Fitting ]]
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
