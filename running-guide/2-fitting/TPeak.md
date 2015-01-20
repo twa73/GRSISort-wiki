@@ -28,7 +28,7 @@ To see the basic properties of the TPeak
    Centroid:    1173.172270 +/- 0.005742
    Area:          1885626.302501 +/- 1409.848616
 ```
-Or, to see more properties, such as the value and uncertainty in each parameter, use the option "+".
+Or, to see more properties, such as the value and uncertainty in each parameter, use the option `Print("+")`.
 
 ##Parameters
 The first time a TPeak is fit, the parameters are initialized based on the histogram passed to the `TPeak::Fit` function. 
