@@ -21,7 +21,8 @@ where `histogram` is the TH1 attempting to be fit. You can also use the same opt
 ```c++
 peak->Fit(histogram,"+");
 ```
-To add the TPeak to the histogram.
+to add the TPeak to the histogram.
+
 Once the TPeak is fitted, you can call 
 ```c++
 peak->Print();
