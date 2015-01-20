@@ -10,7 +10,11 @@ A Calibration Manager is used to make doing multiple channel calibrations easier
 ```c++
 TCalManager *myCalManager = new TCalManager;
 ```
-You can then put a calibration in the cal manager by using
+You can get the type of TCal in the TCalManager using 
+```c++
+myCalManager->GetClass();
+```
+Note: you can not put two different types of TCal's in the TCalManager at the same time. To put a different type of TCal in the TCalManager you must first `Clear()` the TCalManager. You can put a calibration in the cal manager by using
 ```c++
 myCalManager->AddToManager(myCal);
 ```
