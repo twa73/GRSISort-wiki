@@ -7,6 +7,11 @@ To easily gain-match, you can use the `TGainMatch` class. A separate TGainMatch 
 ```c++
 TGainMatch *myGain = new TGainMatch; 
 ```
+You can specifically set the channel of the `TGainMatch` using
+```c++
+myGain->SetChannel(channel_number);
+```
+
 #Coarse Gains
 To effectively use `TGainMatch`, we need to make sure the gains for each channel are set roughly to the correct value. If this isn't already the case, you can use the `CoarseMatch` method of TGainMatch. This method works best on sources with two very strong transitions such as 60Co. To gain match a specific channel, use:
 ```c++
