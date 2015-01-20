@@ -7,7 +7,7 @@ To easily gain-match, you can use the `TGainMatch` class. A separate TGainMatch 
 ```c++
 TGainMatch *myGain = new TGainMatch; 
 ```
-##Coarse Gains
+#Coarse Gains
 To effectively use `TGainMatch`, we need to make sure the gains for each channel are set roughly to the correct value. If this isn't already the case, you can use the `CoarseMatch` method of TGainMatch. This method works best on sources with two very strong transitions such as 60Co. To gain match a specific channel, use:
 ```c++
    myGain->CoarseMatch(histogram,channel_number,low_energy,high_energy);
@@ -20,7 +20,7 @@ myGain->WriteToChannel();
 ```
 and the TChannels can all be written to a cal file using the normal `TChannel::WriteCalFile("name_of_cal.cal")`
 
-#Using CalManager
+###Using CalManager
 
 
 
