@@ -17,7 +17,7 @@ To fit the TPeak, call:
 ```c++
 peak->Fit(histogram);
 ```
-where `histogram` is the TH1 attempting to be fit. You can also use the same options as when fitting a TF1. For example,
+where `histogram` is the `TH1*` attempting to be fit. You can also use the same options as when fitting a TF1. For example,
 ```c++
 peak->Fit(histogram,"+");
 ```
