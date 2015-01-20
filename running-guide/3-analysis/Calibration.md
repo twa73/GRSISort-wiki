@@ -2,11 +2,11 @@
 
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**ANALYSIS**](Analysis) > [**CALIBRATION**](Calibration)
 
-GRSISort calibrations are read from *cal files*. These are the files with the **.cal** extension. Various calibration classes are used to set calibration parameters. These classes currently include:
+GRSISort calibrations are read from *cal files*. These are the files with the **.cal** extension. Various calibration classes are used to set calibration parameters. These classes are called `TCal`s and currently include:
 - [[TGainMatch | Gain-Matching]] for gainmatching
 
 #TCalManager
-A Calibration Manager is used to make doing multiple channel calibrations easier. A `TCalManager` can be filled with one type of calibration class at any time. To create a calibration manager use:
+A Calibration Manager is used to make doing multiple channel calibrations easier. A `TCalManager` can be filled with one type of calibration class (TCal) at any time. To create a calibration manager use:
 ```c++
 TCalManager *myCalManager = new TCalManager;
 ```
@@ -18,11 +18,11 @@ where `myCal` is a pointer to the calibration being added to the manager. It sho
 ```c++
 myCalManager->AddToManager(myCal,channel_number);
 ```
-and to overwrite the cal at a given channel, you must use the option `"overwrite"`. Fore example,
+and to overwrite the TCal at a given channel, you must use the option `"overwrite"`. Fore example,
 ```c++
 myCalManager->AddToManager(myCal,channel_number,"overwrite");
 ```
-To access the calibration for a specific channel in the cal manager you can use
+To access the calibration for a specific channel in the TCalManager you can use
 ```c++
 myCalManager->GetCal(channel_number);
 ```
