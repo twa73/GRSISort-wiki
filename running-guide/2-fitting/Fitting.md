@@ -1,6 +1,6 @@
 <a name="top" />
 
-[**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**FITTING**](Fitting)
+[**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**ANALYSIS**](Analysis) > [**FITTING**](Fitting)
 
 As part of the GRSISort analysis package, there are a number of fitting classes available:
 
