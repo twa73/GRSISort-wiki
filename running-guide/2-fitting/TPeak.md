@@ -17,7 +17,11 @@ To fit the TPeak, call:
 ```c++
 peak->Fit(histogram);
 ```
-where `histogram` is the TH1 attempting to be fit.
+where `histogram` is the TH1 attempting to be fit. You can also use the same options as when fitting a TF1. For example,
+```c++
+peak->Fit(histogram,"+");
+```
+To add the TPeak to the histogram.
 Once the TPeak is fitted, you can call 
 ```c++
 peak->Print();
@@ -47,15 +51,11 @@ When a TPeak is created, the parameters are uninitialized. The names of the para
 
 To fix a particular component of the TPeak, for example, the width to 1.0, use:
 ```c++
-peak->FixParameter("sigma",1.00);
+peak->FixParameter(GetParNumber("sigma"),1.00);
 ```
-or to fix it to its current value
+To Release the paramater use:
 ```c++
-peak->FixParamter("sigma");
-```
-To Release the paramter use:
-```c++
-peak->ReleaseParameter("sigma");
+peak->ReleaseParameter(GetParNumber("sigma"));
 ```
 and to set the paramater to an initial value use:
 ```c++
