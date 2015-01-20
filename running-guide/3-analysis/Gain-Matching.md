@@ -14,3 +14,13 @@ To effectively use `TGainMatch`, we need to make sure the gains for each channel
 ```
 where `histogram` is the `TH1*` to gain match, `channel_number` is used if you want to gain match a specific channel, `low_energy` is the lowest energy peak to gain match, and `high_energy` is the highest energy peak to gain match. `low_energy` and `high_energy` are defaulted to the 60Co values.
 
+Once the gain-matching is complete, the energy coefficients can be written to the TChannel,
+```c++
+myGain->WriteToChannel();
+```
+and the TChannels can all be written to a cal file using the normal `TChannel::WriteCalFile("name_of_cal.cal")`
+
+#Using CalManager
+
+
+
