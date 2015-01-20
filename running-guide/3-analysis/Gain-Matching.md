@@ -26,7 +26,7 @@ myGain->WriteToChannel();
 and the TChannels can all be written to a cal file using the normal `TChannel::WriteCalFile("name_of_cal.cal")`
 
 ###Using CalManager
-You can add TGainMatch instances to a [[TCalManager | TCalManager]]. This can be done using:
+You can add TGainMatch instances to a [[TCalManager | Calibration]]. This can be done using:
 ```c++
 myCalManager->AddToManager(myGain);
 ```

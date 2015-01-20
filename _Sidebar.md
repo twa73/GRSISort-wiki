@@ -18,7 +18,7 @@
 - [[Analysis|Analysis]]
   - [[Fitting | Fitting ]]
   - [[Calibration | Calibration]]
-  - [[Utilities|Utilities]]
+- [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
 - [[Commands|Commands]]
