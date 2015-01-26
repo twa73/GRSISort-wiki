@@ -46,6 +46,24 @@ myCalManager->WriteToChannel();
 This calls the `WriteToChannel()` function for each `TGainMatch` contained in the `TCalManager`.
 
 #Fine Gain Matching
-
-
-
+Fine gain matching is what we normally think of gain matching as. The fine gain matching class will accept two charge histograms, and two peak energies, and attempt to calibrate these spectra accordingly. To fine gain match using one source, use:
+```c++
+   myGain->FineMatch(histogram,low_energy,high_energy);
+```
+If there are two different sources contained in two different spectra, use:
+```c++
+   myGain->FineMatch(low_histogram,low_energy, high_histogram, high_energy);
+```
+You may also pass a `TPeak*` instead of an energy to these functions. To fine gain match all of the channels, you can use the `FineMatchAll` function. It works just like the `FineMatch` function, except a `TH2*` is passed instead of a `TH1*`, and a `TCalManager` is required. You must pass the hit-pattern vs. charge as the `TH2*`. For example,
+```c++
+TGainMatch::FineMatchAll(myCalManager,hp_vs_charge, low_energy, high_energy); //One source
+TGainMatch::FineMatchAll(myCalManager,hp_vs_charge_low, low_energy, hp_vs_charge_high, high_energy); //Two Sources
+```
+To write the fine gains to the channel, you do it the same as with course gains. 
+```c++
+myGain->WriteToChannel();
+```
+Or with a `TCalManager` full of gains
+```c++
+myCalManager->WriteToChannel();
+```
