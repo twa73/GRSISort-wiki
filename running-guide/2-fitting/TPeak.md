@@ -44,7 +44,7 @@ When a TPeak is created, the parameters are uninitialized. The names of the para
 - "sigma": The width of the unskewed gaussian
 - "beta": The "skewedness" of the skewed gaussian
 - "R": The relative height of the skewed gaussian
-- "step": The size of the step function in the baskground
+- "step": The size of the step function in the background
 - "A": The constant part of the background
 - "B": The linear part of the background
 - "C": The quadratic part of the background
