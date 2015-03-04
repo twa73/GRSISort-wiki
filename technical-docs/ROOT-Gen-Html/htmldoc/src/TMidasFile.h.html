@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:33 2014            -->
+<!--   Date: Wed Mar  4 12:44:20 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -28,7 +28,7 @@
 
 <span class="cpp">#include &lt;string&gt;</span>
 
-<span class="cpp">#include &lt;TObject.h&gt;</span>
+<span class="cpp">#include "TObject.h"</span>
 
 <span class="keyword">class</span> <a href="../TMidasEvent.html">TMidasEvent</a>;
 
@@ -47,7 +47,7 @@
   <span class="keyword">void</span> <a href="../TMidasFile.html#TMidasFile:OutClose" title="void TMidasFile::OutClose()">OutClose</a>(); <span class="comment">///&lt; <a href="../TMidasFile.html#TMidasFile:Close" title="void TMidasFile::Close()">Close</a> output file</span>
 
   <span class="keyword">int</span>  <a href="../TMidasFile.html#TMidasFile:Read" title="int TMidasFile::Read(TMidasEvent* event)">Read</a>(<a href="../TMidasEvent.html">TMidasEvent</a> *event); <span class="comment">///&lt; <a href="../TMidasFile.html#TMidasFile:Read" title="int TMidasFile::Read(TMidasEvent* event)">Read</a> one event from the file</span>
-  <span class="keyword">bool</span> <a href="../TMidasFile.html#TMidasFile:Write" title="bool TMidasFile::Write(TMidasEvent* event)">Write</a>(<a href="../TMidasEvent.html">TMidasEvent</a> *event); <span class="comment">///&lt; <a href="../TMidasFile.html#TMidasFile:Write" title="bool TMidasFile::Write(TMidasEvent* event)">Write</a> one event to the output file</span>
+  <span class="keyword">bool</span> <a href="../TMidasFile.html#TMidasFile:Write" title="bool TMidasFile::Write(TMidasEvent* event,Option_t* opt=&quot;&quot;)">Write</a>(<a href="../TMidasEvent.html">TMidasEvent</a> *event,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt =<span class="string">""</span>); <span class="comment">///&lt; <a href="../TMidasFile.html#TMidasFile:Write" title="bool TMidasFile::Write(TMidasEvent* event,Option_t* opt=&quot;&quot;)">Write</a> one event to the output file</span>
 
 <a name="dWGaFE"></a>  <span class="keyword">const</span> <span class="keyword">char</span>* <a href="../TMidasFile.html#TMidasFile:GetFilename" title="const char* TMidasFile::GetFilename()">GetFilename</a>()  <span class="keyword">const</span> { <span class="keyword">return</span> <a href="../TMidasFile.html#TMidasFile:fFilename" title="string TMidasFile::fFilename">fFilename</a>.c_str();  } <span class="comment">///&lt; Get the name of this file</span>
 <a name="gQ._dD"></a>  <span class="keyword">int</span>         <a href="../TMidasFile.html#TMidasFile:GetLastErrno" title="int TMidasFile::GetLastErrno()">GetLastErrno</a>() <span class="keyword">const</span> { <span class="keyword">return</span> <a href="../TMidasFile.html#TMidasFile:fLastErrno" title="int TMidasFile::fLastErrno">fLastErrno</a>; }         <span class="comment">///&lt; Get error value for the last file error</span>
@@ -84,7 +84,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-12-14 18:23 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: 2015-03-04 12:44 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

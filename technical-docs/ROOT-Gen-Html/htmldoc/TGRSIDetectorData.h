@@ -1,5 +1,5 @@
-#ifndef __GRSIDetectorDATA__
-#define __GRSIDetectorDATA__
+#ifndef TGRSIDetectorDATA_H
+#define TGRSIDetectorDATA_H
 
 #ifndef __CINT__
 
@@ -11,20 +11,21 @@
 
 #include <cstdlib>
 
-#include <TObject.h>
+#include "TObject.h"
 
-class TGRSIDetectorData {//: public TObject  {
+class TGRSIDetectorData {
 
 
    public:
       TGRSIDetectorData();															//!
       virtual ~TGRSIDetectorData(); //!
   
+      //There should be a commone function that we can use to abstractify
       virtual void Clear(Option_t *opt=""); //!
       virtual void Print(Option_t *opt=""); //!
   
-
-  //ClassDef(TGRSIDetectorData,0)  //!  // SharcData structure 
+   //We might want to keep the classDef anyway? Not sure if we can write HTML without it but I'm also not sure if we can do it without inheriting from TObject
+  //ClassDef(TGRSIDetectorData,0)  //!  // TGRSIData structure 
 };
 
 #endif

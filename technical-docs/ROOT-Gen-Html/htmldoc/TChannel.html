@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:27 2014            -->
+<!--   Date: Wed Mar  4 12:44:14 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -132,6 +132,7 @@ read out of the ODB information in the MIDAS file.
 <tr class="func"><td class="funcret">static <a href="./TChannel.html">TChannel</a>*</td><td class="funcname"><a class="funcname" href="#TChannel:GetChannelByNumber">GetChannelByNumber</a>(<span class="keyword">int</span> temp_numebr)</td></tr>
 <tr class="func"><td class="funcret">static map&lt;<span class="keyword">unsigned</span> <span class="keyword">int</span>,<a href="./TChannel.html">TChannel</a>*&gt;*</td><td class="funcname"><a class="funcname" href="#TChannel:GetChannelMap">GetChannelMap</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TChannel:GetChannelName">GetChannelName</a>()</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TChannel.html">TChannel</a>*</td><td class="funcname"><a class="funcname" href="#TChannel:GetDefaultChannel">GetDefaultChannel</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TChannel:GetDigitizerType">GetDigitizerType</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
@@ -182,11 +183,12 @@ read out of the ODB information in the MIDAS file.
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
 <tr class="func"><td class="funcret"><a href="./TChannel.html">TChannel</a>&amp;</td><td class="funcname"><a class="funcname" href="#TChannel:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TChannel.html">TChannel</a>&amp;)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TChannel:ParseInputData">ParseInputData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* inputdata = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
-<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:ReadCalFile">ReadCalFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>)</td></tr>
-<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:ReadCalFromTree">ReadCalFromTree</a>(TTree*, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"overwrite"</span>)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TChannel:ReadCalFile">ReadCalFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TChannel:ReadCalFromTree">ReadCalFromTree</a>(TTree*, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"overwrite"</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -226,6 +228,7 @@ read out of the ODB information in the MIDAS file.
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:WriteCalFile">WriteCalFile</a>(string outfilename = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:WriteToRoot">WriteToRoot</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
 
 </table></div>
 <div class="access" id="funcprot"><b>protected:</b>
@@ -237,7 +240,9 @@ read out of the ODB information in the MIDAS file.
 <div class="access" id="funcpriv"><b>private:</b>
 <table class="func" id="tabfuncpriv" cellspacing="0">
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:AppendChannel">AppendChannel</a>(<a href="./TChannel.html">TChannel</a>*)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:InitChannelInput">InitChannelInput</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:OverWriteChannel">OverWriteChannel</a>(<a href="./TChannel.html">TChannel</a>*)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SaveToSelf">SaveToSelf</a>(<span class="keyword">const</span> <span class="keyword">char</span>*)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SetCFDCoefficients">SetCFDCoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SetEFFCoefficients">SetEFFCoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SetENGCoefficients">SetENGCoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</td></tr>
@@ -295,6 +300,8 @@ read out of the ODB information in the MIDAS file.
 <tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TChannel:digitizertype"></a>digitizertype</td><td></td></tr>
 <tr class="data"><td class="datatype">static map&lt;<span class="keyword">unsigned</span> <span class="keyword">int</span>,<a href="./TChannel.html">TChannel</a>*&gt;*</td><td class="dataname"><a name="TChannel:fChannelMap"></a>fChannelMap</td><td class="datadesc">A map to all of the channels based on address</td></tr>
 <tr class="data"><td class="datatype">static map&lt;<span class="keyword">int</span>,<a href="./TChannel.html">TChannel</a>*&gt;*</td><td class="dataname"><a name="TChannel:fChannelNumberMap"></a>fChannelNumberMap</td><td class="datadesc">A map of TChannels based on channel number</td></tr>
+<tr class="data"><td class="datatype">static string</td><td class="dataname"><a name="TChannel:fFileData"></a>fFileData</td><td></td></tr>
+<tr class="data"><td class="datatype">static string</td><td class="dataname"><a name="TChannel:fFileName"></a>fFileName</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TChannel:integration"></a>integration</td><td class="datadesc">The charge integration setting</td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TChannel:number"></a>number</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TChannel:stream"></a>stream</td><td></td></tr>
@@ -331,6 +338,8 @@ read out of the ODB information in the MIDAS file.
 <div class="funccomm"><pre>Makes a copy of a the <a href="./TChannel.html">TChannel</a>.
 </pre></div>
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:InitChannelInput" href="src/TChannel.cxx.html#JBPOx">InitChannelInput</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TChannel:Compare" href="src/TChannel.cxx.html#PF7ZCD">Compare</a>(<span class="keyword">const</span> <a href="./TChannel.html">TChannel</a>&amp; , <span class="keyword">const</span> <a href="./TChannel.html">TChannel</a>&amp; )</span><br />
 <div class="funccomm"><pre>Compares the names of the two TChannels. Returns <a href="./ListOfTypes.html#bool">true</a> if the names are the
 same, <a href="./ListOfTypes.html#bool">false</a> if different.
@@ -360,6 +369,8 @@ Options:
 <div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TChannel:UpdateChannel" href="src/TChannel.cxx.html#gd3B.">UpdateChannel</a>(<a href="./TChannel.html">TChannel</a>* , <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
 <div class="funccomm"><pre>If there is information in the chan, the current <a href="./TChannel.html">TChannel</a> with the same <a href="./TChannel.html#TChannel:address" title="unsigned int TChannel::address">address</a> is updated with that information.
 </pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TChannel.html">TChannel</a> * <a class="funcname" name="TChannel:GetDefaultChannel" href="src/TChannel.cxx.html#fl.r.">GetDefaultChannel</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:Clear" href="src/TChannel.cxx.html#dKdY2E">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
 <div class="funccomm"><pre>Clears all fields of a <a href="./TChannel.html">TChannel</a>. There are currently no options to be specified.
@@ -462,18 +473,41 @@ prints the context of addresschannelmap formatted correctly to a file with the g
 name.  This will earse and rewrite the file if the file already exisits!
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:ReadCalFromTree" href="src/TChannel.cxx.html#YvEwoD">ReadCalFromTree</a>(TTree* , <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"overwrite"</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TChannel:ReadCalFromTree" href="src/TChannel.cxx.html#oOjxIC">ReadCalFromTree</a>(TTree* , <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"overwrite"</span>)</span><br />
 <div class="funccomm"><pre>Reads the <a href="./TChannel.html">TChannel</a> information from a Tree if it has already been written to that Tree.
+
+   if(!tree)
+	return 0;
+    TList *list = tree-&gt;GetUserInfo();	
+    TIter iter(list);
+    <a href="./ListOfTypes.html#int">int</a> channelsfound = 0;
+    while(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj = iter.Next()) {
+	if(!obj-&gt;<a href="./#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TChannel"</span>))
+            continue;
+	<a href="./TChannel.html">TChannel</a> *chan = new <a href="./TChannel.html">TChannel</a>((<a href="./TChannel.html">TChannel</a>*)obj);
+ 	<a href="./TChannel.html#TChannel:AddChannel" title="void TChannel::AddChannel(TChannel* ,Option_t* opt=&quot;&quot;)">AddChannel</a>(chan,opt);// if we read from the tree we want to overwrite any channels found
+	channelsfound ++;
+    }
+    return channelsfound;
+
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:ReadCalFile" href="src/TChannel.cxx.html#Ab4C2E">ReadCalFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TChannel:ReadCalFile" href="src/TChannel.cxx.html#GESL.C">ReadCalFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>)</span><br />
 <div class="funccomm"><pre>Makes TChannels from a cal file to be used as the current calibration until grsisort
-is closed
+is closed. Returns the <a href="./TChannel.html#TChannel:number" title="int TChannel::number">number</a> of channels properly read in.
 </pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:SaveToSelf" href="src/TChannel.cxx.html#LfFsbC">SaveToSelf</a>(<span class="keyword">const</span> <span class="keyword">char</span>* )</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TChannel:ParseInputData" href="src/TChannel.cxx.html#Jl_f2D">ParseInputData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* inputdata = <span class="string">""</span>)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:trim" href="src/TChannel.cxx.html#JFYMYE">trim</a>(string* , <span class="keyword">const</span> string&amp; trimChars = <span class="string">" \f\n\r\t\v"</span>)</span><br />
 <div class="funccomm"><pre>Removes the the string <span class="string">"trimCars"</span> from  the string 'line'
 </pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:Streamer" href="src/TChannel.cxx.html#lgkPd">Streamer</a>(TBuffer&amp; )</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:WriteToRoot" href="src/TChannel.cxx.html#YM56QB">WriteToRoot</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TChannel:TChannel" href="src/TChannel.h.html#HHEE4">TChannel</a>()</span><br />
 </div>
@@ -694,7 +728,7 @@ is closed
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun Dec 14 18:23:27 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: Wed Mar  4 12:44:14 2015 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

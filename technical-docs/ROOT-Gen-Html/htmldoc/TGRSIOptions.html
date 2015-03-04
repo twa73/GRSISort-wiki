@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:29 2014            -->
+<!--   Date: Wed Mar  4 12:44:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -81,6 +81,8 @@ return false;}
 <tr class="func"><td class="funcret">vector&lt;std::string&gt;</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetInputRoot">GetInputRoot</a>()</td></tr>
 <tr class="func"><td class="funcret">vector&lt;std::string&gt;</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetMacroFile">GetMacroFile</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetXMLODBFile">GetXMLODBFile</a>(<span class="keyword">int</span> runnumber = 0, <span class="keyword">int</span> subrunnumber = -1)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:IgnoreEpics">IgnoreEpics</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:IgnoreFileOdb">IgnoreFileOdb</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:LogErrors">LogErrors</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:MakeAnalysisTree">MakeAnalysisTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
@@ -89,6 +91,8 @@ return false;}
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetCloseAfterSort">SetCloseAfterSort</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetExptName">SetExptName</a>(string&amp; expt)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetHostName">SetHostName</a>(string&amp; host)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetIgnoreEpics">SetIgnoreEpics</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetIgnoreFileOdb">SetIgnoreFileOdb</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetLogErrors">SetLogErrors</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetMakeAnalysisTree">SetMakeAnalysisTree</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetProgressDialog">SetProgressDialog</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
@@ -123,6 +127,14 @@ return false;}
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetCloseAfterSort" href="src/TGRSIOptions.h.html#mwE4m">SetCloseAfterSort</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:CloseAfterSort" href="src/TGRSIOptions.h.html#MIhSE">CloseAfterSort</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetIgnoreFileOdb" href="src/TGRSIOptions.h.html#ApnBrE">SetIgnoreFileOdb</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:IgnoreFileOdb" href="src/TGRSIOptions.h.html#aF1jm">IgnoreFileOdb</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetIgnoreEpics" href="src/TGRSIOptions.h.html#kLPn7">SetIgnoreEpics</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:IgnoreEpics" href="src/TGRSIOptions.h.html#xhZ0tC">IgnoreEpics</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetLogErrors" href="src/TGRSIOptions.h.html#cFTppD">SetLogErrors</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
 </div>
@@ -171,7 +183,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun Dec 14 18:23:29 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: Wed Mar  4 12:44:17 2015 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -20,7 +20,7 @@ using namespace std ;
 #include "TFragment.h"
 #include "TChannel.h"
 
-#include <TGRSIDetectorData.h>
+#include "TGRSIDetectorData.h"
 
 class TCSMData : public TGRSIDetectorData  {
 private:
@@ -56,6 +56,8 @@ public:
   void Clear(Option_t *opt = ""); //!
   //void Clear(const Option_t*) {};
   void Print(Option_t *opt = ""); //!
+  void Print(int addr,bool horizontal); //!
+  
   
   static void Set(bool flag=true) { fIsSet=flag; } //!
   static bool IsSet() { return fIsSet; }           //!
@@ -91,7 +93,7 @@ public:
 	 SetHorizontal_Energy(channel->CalibrateENG(frag->Charge.at(0)));
 	 SetHorizontal_TimeCFD(frag->Cfd.at(0));
 	 SetHorizontal_TimeLED(frag->Led.at(0));
-	 SetHorizontal_Time(frag->TimeToTrig);
+	 SetHorizontal_Time(frag->Zc.at(0));
  	 SetHorizontal_Charge(frag->Charge.at(0));
   };	//! 
 	
@@ -102,7 +104,7 @@ public:
 		SetVertical_Energy(channel->CalibrateENG(frag->Charge.at(0)));
 		SetVertical_TimeCFD(frag->Cfd.at(0));
 		SetVertical_TimeLED(frag->Led.at(0));
-		SetVertical_Time(frag->TimeToTrig);
+		SetVertical_Time(frag->Zc.at(0));
  		SetVertical_Charge(frag->Charge.at(0));
 	};	//!
 	

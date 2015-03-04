@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:26 2014            -->
+<!--   Date: Wed Mar  4 12:44:13 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -36,32 +36,32 @@
    <span class="cpp">#include &lt;chrono&gt;</span>
 <span class="cpp">#endif</span>
 
-<span class="cpp">#include &lt;TObject.h&gt;</span>
-<span class="cpp">#include &lt;TFile.h&gt;</span>
-<span class="cpp">#include &lt;TMemFile.h&gt;</span>
-<span class="cpp">#include &lt;TTree.h&gt;</span>
-<span class="cpp">#include &lt;TChain.h&gt;</span>
-<span class="cpp">#include &lt;TList.h&gt;</span>
+<span class="cpp">#include "TObject.h"</span>
+<span class="cpp">#include "TFile.h"</span>
+<span class="cpp">#include "TMemFile.h"</span>
+<span class="cpp">#include "TTree.h"</span>
+<span class="cpp">#include "TChain.h"</span>
+<span class="cpp">#include "TList.h"</span>
 
-<span class="cpp">#include &lt;<a href="../TFragment.h">TFragment.h</a>&gt;</span>
-<span class="cpp">#include &lt;<a href="../TChannel.h">TChannel.h</a>&gt;</span>
-<span class="cpp">#include &lt;<a href="../TGRSIRunInfo.h">TGRSIRunInfo.h</a>&gt;</span>
+<span class="cpp">#include "<a href="../TFragment.h">TFragment.h</a>"</span>
+<span class="cpp">#include "<a href="../TChannel.h">TChannel.h</a>"</span>
+<span class="cpp">#include "<a href="../TGRSIRunInfo.h">TGRSIRunInfo.h</a>"</span>
 
-<span class="cpp">#include &lt;<a href="../TTigress.h">TTigress.h</a>&gt;</span> 
-<span class="cpp">#include &lt;<a href="../TSharc.h">TSharc.h</a>&gt;</span>     
-<span class="cpp">#include &lt;<a href="../TTriFoil.h">TTriFoil.h</a>&gt;</span>   
-<span class="comment">//#include &lt;TRf.h&gt;        </span>
-<span class="cpp">#include &lt;<a href="../TCSM.h">TCSM.h</a>&gt;</span>       
-<span class="comment">//#include &lt;TSpice.h&gt;     </span>
-<span class="comment">//#include &lt;TS3.h&gt;        </span>
-<span class="comment">//#include &lt;TTip.h&gt;       </span>
+<span class="cpp">#include "<a href="../TTigress.h">TTigress.h</a>"</span> 
+<span class="cpp">#include "<a href="../TSharc.h">TSharc.h</a>"</span>     
+<span class="cpp">#include "<a href="../TTriFoil.h">TTriFoil.h</a>"</span>   
+<span class="comment">//#include <span class="string">"TRf.h"</span>        </span>
+<span class="cpp">#include "<a href="../TCSM.h">TCSM.h</a>"</span>       
+<span class="comment">//#include <span class="string">"TSpice.h"</span>     </span>
+<span class="comment">//#include <span class="string">"TS3.h"</span>        </span>
+<span class="comment">//#include <span class="string">"TTip.h"</span>       </span>
    
-<span class="cpp">#include &lt;<a href="../TGriffin.h">TGriffin.h</a>&gt;</span>   
-<span class="cpp">#include &lt;<a href="../TSceptar.h">TSceptar.h</a>&gt;</span>   
-<span class="cpp">#include &lt;<a href="../TPaces.h">TPaces.h</a>&gt;</span>   
-<span class="comment">//#include &lt;TDante.h&gt;     </span>
-<span class="comment">//#include &lt;TZeroDegree.h&gt;</span>
-<span class="cpp">#include &lt;<a href="../TDescant.h">TDescant.h</a>&gt;</span>   
+<span class="cpp">#include "<a href="../TGriffin.h">TGriffin.h</a>"</span>   
+<span class="cpp">#include "<a href="../TSceptar.h">TSceptar.h</a>"</span>   
+<span class="cpp">#include "<a href="../TPaces.h">TPaces.h</a>"</span>   
+<span class="comment">//#include <span class="string">"TDante.h"</span>     </span>
+<span class="comment">//#include <span class="string">"TZeroDegree.h"</span></span>
+<span class="cpp">#include "<a href="../TDescant.h">TDescant.h</a>"</span>
 
 <span class="comment">////////////////////////////////////////////////////////////////</span>
 <span class="comment">//                                                            //</span>
@@ -125,7 +125,6 @@
    <span class="keyword">public</span>:
       <span class="keyword">virtual</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:_TAnalysisTreeBuilder" title="void TAnalysisTreeBuilder::~TAnalysisTreeBuilder()">~TAnalysisTreeBuilder</a>();
 
-
       <span class="keyword">static</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>* <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:Get" title="TAnalysisTreeBuilder* TAnalysisTreeBuilder::Get()">Get</a>();
       <span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:ProcessEvent" title="void TAnalysisTreeBuilder::ProcessEvent()">ProcessEvent</a>();
 
@@ -151,7 +150,8 @@
       <span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:StartMakeAnalysisTree" title="void TAnalysisTreeBuilder::StartMakeAnalysisTree(int argc=1,char** argv=0)">StartMakeAnalysisTree</a>(<span class="keyword">int</span> argc=1, <span class="keyword">char</span> **argv=0);
 
       <span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:ClearActiveAnalysisTreeBranches" title="void TAnalysisTreeBuilder::ClearActiveAnalysisTreeBranches()">ClearActiveAnalysisTreeBranches</a>();
-		<span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:BuildActiveAnalysisTreeBranches" title="void TAnalysisTreeBuilder::BuildActiveAnalysisTreeBranches(map&lt;const char*,TGRSIDetector*&gt;* )">BuildActiveAnalysisTreeBranches</a>(std::map&lt;<span class="keyword">const</span> <span class="keyword">char</span>*, <a href="../TGRSIDetector.html">TGRSIDetector</a>*&gt;*);
+      <span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:ResetActiveAnalysisTreeBranches" title="void TAnalysisTreeBuilder::ResetActiveAnalysisTreeBranches()">ResetActiveAnalysisTreeBranches</a>();
+		  <span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:BuildActiveAnalysisTreeBranches" title="void TAnalysisTreeBuilder::BuildActiveAnalysisTreeBranches(map&lt;const char*,TGRSIDetector*&gt;* )">BuildActiveAnalysisTreeBranches</a>(std::map&lt;<span class="keyword">const</span> <span class="keyword">char</span>*, <a href="../TGRSIDetector.html">TGRSIDetector</a>*&gt;*);
 
       <span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:Print" title="void TAnalysisTreeBuilder::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt =<span class="string">""</span>);
 
@@ -224,7 +224,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-12-14 18:23 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: 2015-03-04 12:44 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

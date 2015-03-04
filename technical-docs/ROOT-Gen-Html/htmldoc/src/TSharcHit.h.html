@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:34 2014            -->
+<!--   Date: Wed Mar  4 12:44:21 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -29,12 +29,12 @@
 <span class="cpp">#include &lt;utility&gt;</span>
 
 <span class="comment">//#include <span class="string">"TChannel.h"</span></span>
-<span class="cpp">#include &lt;TVector3.h&gt; </span>
-<span class="cpp">#include &lt;TObject.h&gt; </span>
-<span class="cpp">#include &lt;TRandom.h&gt;</span>
-<span class="cpp">#include &lt;Rtypes.h&gt;</span>
-<span class="cpp">#include &lt;TMath.h&gt;</span>
-<span class="cpp">#include &lt;<a href="../TGRSIDetectorHit.h">TGRSIDetectorHit.h</a>&gt;</span>
+<span class="cpp">#include "TVector3.h" </span>
+<span class="cpp">#include "TObject.h" </span>
+<span class="cpp">#include "TRandom.h"</span>
+<span class="cpp">#include "Rtypes.h"</span>
+<span class="cpp">#include "TMath.h"</span>
+<span class="cpp">#include "<a href="../TGRSIDetectorHit.h">TGRSIDetectorHit.h</a>"</span>
 
 
 <span class="keyword">class</span> <a href="../TSharcHit.html">TSharcHit</a> : <span class="keyword">public</span> <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a> 	{
@@ -46,24 +46,24 @@
 
 		<a href="../ListOfTypes.html#UShort_t">UShort_t</a>		<a href="../TSharcHit.html#TSharcHit:front_strip" title="UShort_t TSharcHit::front_strip">front_strip</a>;	  <span class="comment">//</span>
 		<a href="../ListOfTypes.html#Int_t">Int_t</a>	    	<a href="../TSharcHit.html#TSharcHit:front_address" title="Int_t TSharcHit::front_address">front_address</a>; <span class="comment">//   Should be Address.</span>
-		<a href="../ListOfTypes.html#Int_t">Int_t</a>			<a href="../TSharcHit.html#TSharcHit:front_charge" title="Int_t TSharcHit::front_charge">front_charge</a>;	  <span class="comment">//	</span>
-		<span class="comment">//<a href="../ListOfTypes.html#double">double</a> 	front_cfd;		  //	</span>
+		<a href="../ListOfTypes.html#Int_t">Int_t</a>			 <a href="../TSharcHit.html#TSharcHit:front_charge" title="Int_t TSharcHit::front_charge">front_charge</a>;	  <span class="comment">//	</span>
+		<span class="comment">//<a href="../ListOfTypes.html#double">double</a> 	 front_cfd;		  //	</span>
 		
 		<a href="../ListOfTypes.html#UShort_t">UShort_t</a>		<a href="../TSharcHit.html#TSharcHit:back_strip" title="UShort_t TSharcHit::back_strip">back_strip</a>;		  <span class="comment">//</span>
-		<a href="../ListOfTypes.html#Int_t">Int_t</a>	   	<a href="../TSharcHit.html#TSharcHit:back_address" title="Int_t TSharcHit::back_address">back_address</a>;  <span class="comment">//   Should be Address.</span>
-		<a href="../ListOfTypes.html#Int_t">Int_t</a>			<a href="../TSharcHit.html#TSharcHit:back_charge" title="Int_t TSharcHit::back_charge">back_charge</a>;	  <span class="comment">//</span>
-		<span class="comment">//<a href="../ListOfTypes.html#double">double</a>			back_cfd;	  // 		</span>
+		<a href="../ListOfTypes.html#Int_t">Int_t</a>	   	  <a href="../TSharcHit.html#TSharcHit:back_address" title="Int_t TSharcHit::back_address">back_address</a>;  <span class="comment">//   Should be Address.</span>
+		<a href="../ListOfTypes.html#Int_t">Int_t</a>			  <a href="../TSharcHit.html#TSharcHit:back_charge" title="Int_t TSharcHit::back_charge">back_charge</a>;	  <span class="comment">//</span>
+		<span class="comment">//<a href="../ListOfTypes.html#double">double</a>		back_cfd;	  // 		</span>
 
 		<a href="../ListOfTypes.html#UShort_t">UShort_t</a>		<a href="../TSharcHit.html#TSharcHit:detectornumber" title="UShort_t TSharcHit::detectornumber">detectornumber</a>;  <span class="comment">//</span>
-		<a href="../ListOfTypes.html#Int_t">Int_t</a>			<a href="../TSharcHit.html#TSharcHit:pad_charge" title="Int_t TSharcHit::pad_charge">pad_charge</a>;		  <span class="comment">//</span>
+		<a href="../ListOfTypes.html#Int_t">Int_t</a>			  <a href="../TSharcHit.html#TSharcHit:pad_charge" title="Int_t TSharcHit::pad_charge">pad_charge</a>;		  <span class="comment">//</span>
 
-	  	<a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:d_energy_front" title="Double_t TSharcHit::d_energy_front">d_energy_front</a>;  <span class="comment">//		</span>
-  		<a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:d_time_front" title="Double_t TSharcHit::d_time_front">d_time_front</a>;	  <span class="comment">//		</span>
-	  	<a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:d_energy_back" title="Double_t TSharcHit::d_energy_back">d_energy_back</a>;  <span class="comment">//		</span>
-  		<a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:d_time_back" title="Double_t TSharcHit::d_time_back">d_time_back</a>;	  <span class="comment">//		</span>
-	  	<span class="comment">//<a href="../ListOfTypes.html#Double_t">Double_t</a>		d_cfd;		  //		</span>
+	  <a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:d_energy_front" title="Double_t TSharcHit::d_energy_front">d_energy_front</a>;  <span class="comment">//		</span>
+  	<a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:d_time_front" title="Double_t TSharcHit::d_time_front">d_time_front</a>;	  <span class="comment">//		</span>
+	  <a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:d_energy_back" title="Double_t TSharcHit::d_energy_back">d_energy_back</a>;  <span class="comment">//		</span>
+  	<a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:d_time_back" title="Double_t TSharcHit::d_time_back">d_time_back</a>;	  <span class="comment">//		</span>
+	  <span class="comment">//<a href="../ListOfTypes.html#Double_t">Double_t</a>		d_cfd;		  //		</span>
 
-  		<a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:p_energy" title="Double_t TSharcHit::p_energy">p_energy</a>;	<span class="comment">//			pad only;</span>
+  	<a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:p_energy" title="Double_t TSharcHit::p_energy">p_energy</a>;	<span class="comment">//			pad only;</span>
  		<a href="../ListOfTypes.html#Double_t">Double_t</a>		<a href="../TSharcHit.html#TSharcHit:p_time" title="Double_t TSharcHit::p_time">p_time</a>;		<span class="comment">//			pad only;</span>
 		<a href="../ListOfTypes.html#Int_t">Int_t</a>       <a href="../TSharcHit.html#TSharcHit:p_address" title="Int_t TSharcHit::p_address">p_address</a>;  <span class="comment">//</span>
  		<span class="comment">//<a href="../ListOfTypes.html#Double_t">Double_t</a>		p_cfd;		//</span>
@@ -173,7 +173,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-12-14 18:23 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: 2015-03-04 12:44 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:30 2014            -->
+<!--   Date: Wed Mar  4 12:44:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -74,6 +74,7 @@ return false;}
 <tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:ClearGRSIVersion">ClearGRSIVersion</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:Clone"><span class="baseclass">TObject::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Compare"><span class="baseclass">TObject::</span>Compare</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Copy"><span class="baseclass">TObject::</span>Copy</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>&amp; object) <span class="keyword">const</span></td></tr>
@@ -98,6 +99,7 @@ return false;}
 <tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:GetCalFileName">GetCalFileName</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:GetGRSIVersion">GetGRSIVersion</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetName"><span class="baseclass">TObject::</span>GetName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:GetNumberOfSystems">GetNumberOfSystems</a>()</td></tr>
@@ -161,6 +163,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:SetGriffin">SetGriffin</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:SetGRSIVersion">SetGRSIVersion</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:SetInfoFromFile">SetInfoFromFile</a>(<a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>* temp)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:SetMajorIndex">SetMajorIndex</a>(<span class="keyword">const</span> <span class="keyword">char</span>* tmpstr)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:SetMinorIndex">SetMinorIndex</a>(<span class="keyword">const</span> <span class="keyword">char</span>* tmpstr)</td></tr>
@@ -239,6 +242,7 @@ return false;}
 <tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fDante"></a>fDante</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fDescant"></a>fDescant</td><td></td></tr>
 <tr class="data"><td class="datatype">static <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>*</td><td class="dataname"><a name="TGRSIRunInfo:fGRSIRunInfo"></a>fGRSIRunInfo</td><td></td></tr>
+<tr class="data"><td class="datatype">static string</td><td class="dataname"><a name="TGRSIRunInfo:fGRSIVersion"></a>fGRSIVersion</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fGriffin"></a>fGriffin</td><td></td></tr>
 <tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fMajorIndex"></a>fMajorIndex</td><td></td></tr>
 <tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fMinorIndex"></a>fMinorIndex</td><td></td></tr>
@@ -272,11 +276,13 @@ return false;}
 </div><div class="classcharts"><div class="classchartswidth"></div>
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTGRSIRunInfo_Inh" src="inh/TGRSIRunInfo_Inh.png"/></div>
 <h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:Streamer" href="src/TGRSIRunInfo.cxx.html#GcSXu">Streamer</a>(TBuffer&amp; )</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><a href="./TGRSIRunInfo.html">TGRSIRunInfo</a> * <a class="funcname" name="TGRSIRunInfo:Get" href="src/TGRSIRunInfo.cxx.html#psB01B">Get</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:SetInfoFromFile" href="src/TGRSIRunInfo.cxx.html#O4iBMC">SetInfoFromFile</a>(<a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>* temp)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIRunInfo:TGRSIRunInfo" href="src/TGRSIRunInfo.cxx.html#AvwCuB">TGRSIRunInfo</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIRunInfo:TGRSIRunInfo" href="src/TGRSIRunInfo.cxx.html#RITvv">TGRSIRunInfo</a>()</span><br />
 <div class="funccomm"><pre>if(<a href="./TGRSIRunInfo.html#TGRSIRunInfo:fNumberOfTrueSystems" title="int TGRSIRunInfo::fNumberOfTrueSystems">fNumberOfTrueSystems</a>&gt;0)
    <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="./TGRSIRunInfo.html#TGRSIRunInfo:Get" title="TGRSIRunInfo* TGRSIRunInfo::Get()">Get</a>() = this;
 else
@@ -301,6 +307,18 @@ else
  order to write this class to a tree.
  pcb.
 </pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TGRSIRunInfo:GetGRSIVersion" href="src/TGRSIRunInfo.h.html#ThZZDB">GetGRSIVersion</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGRSIRunInfo.html#TGRSIRunInfo:fGRSIVersion" title="string TGRSIRunInfo::fGRSIVersion">fGRSIVersion</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:ClearGRSIVersion" href="src/TGRSIRunInfo.h.html#dbaMSD">ClearGRSIVersion</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TGRSIRunInfo.html#TGRSIRunInfo:fGRSIVersion" title="string TGRSIRunInfo::fGRSIVersion">fGRSIVersion</a>.clear(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:SetGRSIVersion" href="src/TGRSIRunInfo.h.html#Eb7LSE">SetGRSIVersion</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:SetRunNumber" href="src/TGRSIRunInfo.h.html#s3GQXB">SetRunNumber</a>(<span class="keyword">int</span> tmp)</span><br />
 
@@ -532,7 +550,7 @@ else
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun Dec 14 18:23:30 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: Wed Mar  4 12:44:17 2015 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

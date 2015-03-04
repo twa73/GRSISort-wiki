@@ -15,32 +15,32 @@
    #include <chrono>
 #endif
 
-#include <TObject.h>
-#include <TFile.h>
-#include <TMemFile.h>
-#include <TTree.h>
-#include <TChain.h>
-#include <TList.h>
+#include "TObject.h"
+#include "TFile.h"
+#include "TMemFile.h"
+#include "TTree.h"
+#include "TChain.h"
+#include "TList.h"
 
-#include <TFragment.h>
-#include <TChannel.h>
-#include <TGRSIRunInfo.h>
+#include "TFragment.h"
+#include "TChannel.h"
+#include "TGRSIRunInfo.h"
 
-#include <TTigress.h> 
-#include <TSharc.h>     
-#include <TTriFoil.h>   
-//#include <TRf.h>        
-#include <TCSM.h>       
-//#include <TSpice.h>     
-//#include <TS3.h>        
-//#include <TTip.h>       
+#include "TTigress.h" 
+#include "TSharc.h"     
+#include "TTriFoil.h"   
+//#include "TRf.h"        
+#include "TCSM.h"       
+//#include "TSpice.h"     
+//#include "TS3.h"        
+//#include "TTip.h"       
    
-#include <TGriffin.h>   
-#include <TSceptar.h>   
-#include <TPaces.h>   
-//#include <TDante.h>     
-//#include <TZeroDegree.h>
-#include <TDescant.h>   
+#include "TGriffin.h"   
+#include "TSceptar.h"   
+#include "TPaces.h"   
+//#include "TDante.h"     
+//#include "TZeroDegree.h"
+#include "TDescant.h"
 
 ////////////////////////////////////////////////////////////////
 //                                                            //
@@ -104,7 +104,6 @@ class TAnalysisTreeBuilder : public TObject {
    public:
       virtual ~TAnalysisTreeBuilder();
 
-
       static TAnalysisTreeBuilder* Get();
       void ProcessEvent();
 
@@ -130,7 +129,8 @@ class TAnalysisTreeBuilder : public TObject {
       void StartMakeAnalysisTree(int argc=1, char **argv=0);
 
       void ClearActiveAnalysisTreeBranches();
-		void BuildActiveAnalysisTreeBranches(std::map<const char*, TGRSIDetector*>*);
+      void ResetActiveAnalysisTreeBranches();
+		  void BuildActiveAnalysisTreeBranches(std::map<const char*, TGRSIDetector*>*);
 
       void Print(Option_t *opt ="");
 

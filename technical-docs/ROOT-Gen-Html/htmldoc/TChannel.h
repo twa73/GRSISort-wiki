@@ -25,18 +25,18 @@
  /////////////////////////////////////////////////////////////////////////
 
 
-#include<string>
-#include<cmath>
-#include<utility>
-#include<map>
+#include <string>
+#include <cmath>
+#include <utility>
+#include <map>
 
-#include<TNamed.h>
-#include<TRandom.h>
-#include<TList.h>
-#include<TTree.h>
+#include "TNamed.h"
+#include "TRandom.h"
+#include "TList.h"
+#include "TTree.h"
 
-#include"TFragment.h"
-#include"Globals.h"
+#include "TFragment.h"
+#include "Globals.h"
 
 class TChannel : public TNamed	{
 
@@ -59,6 +59,8 @@ class TChannel : public TNamed	{
     static void DeleteAllChannels();
 
     static bool Compare(const TChannel&,const TChannel&);
+
+    static TChannel *GetDefaultChannel();
 
   private:
     unsigned int	   address;                                 //The address of the digitizer
@@ -159,14 +161,26 @@ class TChannel : public TNamed	{
     void DestroyTIMECal();
     void DestroyEFFCal();
 
-    static void ReadCalFromTree(TTree*,Option_t *opt="overwrite");
-    static void ReadCalFile(const char *filename = "");
+    static Int_t ReadCalFromTree(TTree*,Option_t *opt="overwrite");
+    static Int_t ReadCalFile(const char *filename = "");
+    static Int_t ParseInputData(const char *inputdata = "");
     static void WriteCalFile(std::string outfilename = "");
 
     virtual void Print(Option_t *opt = "");
     virtual void Clear(Option_t *opt = "");
     //static  void PrintAll(Option_t *opt = "");      
 
-    ClassDef(TChannel,3) //Contains the Digitizer Information
+    static void WriteToRoot(const char *name ="");
+
+  
+  private:
+     // the follow is to make the custum streamer 
+     // stuff play nice.  pcb.
+     static std::string fFileName;
+     static std::string fFileData;
+     static void InitChannelInput();
+     static void SaveToSelf(const char*);
+
+    ClassDef(TChannel,4) //Contains the Digitizer Information
 };
 #endif

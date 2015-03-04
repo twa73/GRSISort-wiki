@@ -1,6 +1,8 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+//#define GRSI_RELEASE "2.3.22 stable"
+
 #define RESET_COLOR "\e[m"
 #define BLUE "\e[1;34m"
 #define YELLOW "\e[1;33m"
@@ -83,15 +85,11 @@ static void ParseMNEMONIC(std::string *name,MNEMONIC *mnemonic) {
    return;
 }
 
-
 static void ParseMNEMONIC(const char *name,MNEMONIC *mnemonic) {
    std::string sname = name;
    ParseMNEMONIC(&sname,mnemonic);
    return;
 }
-
-
-
 
 static void PrintMNEMONIC(MNEMONIC *mnemonic) {
 	if(!mnemonic)

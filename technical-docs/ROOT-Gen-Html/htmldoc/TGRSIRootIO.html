@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:29 2014            -->
+<!--   Date: Wed Mar  4 12:44:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -88,13 +88,16 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(TMethod* method, TObjArray* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ExecuteEvent"><span class="baseclass">TObject::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FillEpicsTree">FillEpicsTree</a>(<a href="./TEpicsFrag.html">TEpicsFrag</a>*)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FillFragmentTree">FillFragmentTree</a>(<a href="./TFragment.html">TFragment</a>*)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FinalizeEpicsTree">FinalizeEpicsTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FinalizeFragmentTree">FinalizeFragmentTree</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <a href="./TGRSIRootIO.html">TGRSIRootIO</a>*</td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:Get">Get</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
+<tr class="func"><td class="funcret">TTree*</td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:GetEpicsTree">GetEpicsTree</a>()</td></tr>
 <tr class="func"><td class="funcret">TTree*</td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:GetFragmentTree">GetFragmentTree</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetName"><span class="baseclass">TObject::</span>GetName</a>() <span class="keyword">const</span></td></tr>
@@ -148,6 +151,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:SetUpEpicsTree">SetUpEpicsTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:SetUpFragmentTree">SetUpFragmentTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:SetUpRootOutFile">SetUpRootOutFile</a>(<span class="keyword">int</span>, <span class="keyword">int</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:ShowMembers">ShowMembers</a>(TMemberInspector&amp;)</td></tr>
@@ -203,8 +207,10 @@ return false;}
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype"><a href="./TChannel.html">TChannel</a>*</td><td class="dataname"><a name="TGRSIRootIO:fBufferChannel"></a>fBufferChannel</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TFragment.html">TFragment</a>*</td><td class="dataname"><a name="TGRSIRootIO:fBufferFrag"></a>fBufferFrag</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRootIO:fEPICSTimesFillCalled"></a>fEPICSTimesFillCalled</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TEpicsFrag.html">TEpicsFrag</a>*</td><td class="dataname"><a name="TGRSIRootIO:fEXBufferFrag"></a>fEXBufferFrag</td><td></td></tr>
+<tr class="data"><td class="datatype">TTree*</td><td class="dataname"><a name="TGRSIRootIO:fEpicsTree"></a>fEpicsTree</td><td></td></tr>
 <tr class="data"><td class="datatype">TTree*</td><td class="dataname"><a name="TGRSIRootIO:fFragmentTree"></a>fFragmentTree</td><td></td></tr>
-<tr class="data"><td class="datatype">TTree*</td><td class="dataname"><a name="TGRSIRootIO:fTChannelTree"></a>fTChannelTree</td><td></td></tr>
 <tr class="data"><td class="datatype">static <a href="./TGRSIRootIO.html">TGRSIRootIO</a>*</td><td class="dataname"><a name="TGRSIRootIO:fTGRSIRootIO"></a>fTGRSIRootIO</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRootIO:fTimesFillCalled"></a>fTimesFillCalled</td><td></td></tr>
 <tr class="data"><td class="datatype">vector&lt;TFile*&gt;</td><td class="dataname"><a name="TGRSIRootIO:finfiles"></a>finfiles</td><td></td></tr>
@@ -239,12 +245,18 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:SetUpFragmentTree" href="src/TGRSIRootIO.cxx.html#u1BEuC">SetUpFragmentTree</a>()</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:SetUpEpicsTree" href="src/TGRSIRootIO.cxx.html#M3Tm3">SetUpEpicsTree</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FillFragmentTree" href="src/TGRSIRootIO.cxx.html#tXAzvD">FillFragmentTree</a>(<a href="./TFragment.html">TFragment</a>* )</span><br />
 <div class="funccomm"><pre> if(!<a href="./TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>)
     return;
 </pre></div>
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FillEpicsTree" href="src/TGRSIRootIO.cxx.html#eXJO6">FillEpicsTree</a>(<a href="./TEpicsFrag.html">TEpicsFrag</a>* )</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FinalizeFragmentTree" href="src/TGRSIRootIO.cxx.html#XzkfnD">FinalizeFragmentTree</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FinalizeEpicsTree" href="src/TGRSIRootIO.cxx.html#ED6kDE">FinalizeEpicsTree</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:SetUpRootOutFile" href="src/TGRSIRootIO.cxx.html#i5.WqC">SetUpRootOutFile</a>(<span class="keyword">int</span> , <span class="keyword">int</span> )</span><br />
 </div>
@@ -270,12 +282,17 @@ return false;}
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>;  }</code></div>
 <div style="clear:both;"></div>
 </div>
+<div class="funcdoc"><span class="funcname">TTree * <a class="funcname" name="TGRSIRootIO:GetEpicsTree" href="src/TGRSIRootIO.h.html#MYEG7C">GetEpicsTree</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>;  }</code></div>
+<div style="clear:both;"></div>
+</div>
 
 <br />
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun Dec 14 18:23:30 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: Wed Mar  4 12:44:17 2015 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

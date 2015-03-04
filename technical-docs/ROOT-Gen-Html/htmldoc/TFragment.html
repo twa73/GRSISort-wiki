@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:28 2014            -->
+<!--   Date: Wed Mar  4 12:44:15 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -98,6 +98,7 @@ fragment
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:Get4GCfd">Get4GCfd</a>(<span class="keyword">int</span> i = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetEnergy">GetEnergy</a>()</td></tr>
@@ -106,7 +107,8 @@ fragment
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">long</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTimeStamp">GetTimeStamp</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">long</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTimeStamp">GetTimeStamp</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">long</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTimeStamp_ns">GetTimeStamp_ns</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
@@ -134,7 +136,9 @@ fragment
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TFragment:operator__">operator&lt;</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp; rhs) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TFragment.html">TFragment</a>&amp;</td><td class="funcname"><a class="funcname" href="#TFragment:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TFragment:operator_">operator&gt;</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp; rhs) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragment:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
@@ -194,17 +198,17 @@ fragment
 </table></div>
 <div class="access" id="datapubl"><b>public:</b>
 <table class="data" id="tabdatapubl" cellspacing="0">
-<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:Cfd"></a>Cfd</td><td class="datadesc">-&gt; </td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a name="TFragment:ChannelAddress"></a>ChannelAddress</td><td class="datadesc">-&gt;</td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a name="TFragment:ChannelId"></a>ChannelId</td><td class="datadesc">-&gt;</td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="dataname"><a name="TFragment:ChannelNumber"></a>ChannelNumber</td><td class="datadesc">-&gt;</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:Cfd"></a>Cfd</td><td class="datadesc">-&gt;  CFD of each pileup hit</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a name="TFragment:ChannelAddress"></a>ChannelAddress</td><td class="datadesc">-&gt;  Address of the channel</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a name="TFragment:ChannelId"></a>ChannelId</td><td class="datadesc">-&gt; Threshold crossing counter for a channel</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="dataname"><a name="TFragment:ChannelNumber"></a>ChannelNumber</td><td class="datadesc">-&gt;  Channel Number</td></tr>
 <tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:Charge"></a>Charge</td><td class="datadesc">-&gt;  The Integrated Charge </td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="dataname"><a name="TFragment:DataType"></a>DataType</td><td class="datadesc">-&gt; </td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="dataname"><a name="TFragment:DeadTime"></a>DeadTime</td><td class="datadesc">-&gt; Deadtime from trigger</td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="dataname"><a name="TFragment:DetectorType"></a>DetectorType</td><td class="datadesc">-&gt;</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="dataname"><a name="TFragment:DetectorType"></a>DetectorType</td><td class="datadesc">-&gt; Detector Type (PACES,HPGe, etc)</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TFragment:FragmentId"></a>FragmentId</td><td class="datadesc">-&gt;  Channel Trigger ID</td></tr>
-<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;</td><td class="dataname"><a name="TFragment:KValue"></a>KValue</td><td class="datadesc">-&gt;</td></tr>
-<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:Led"></a>Led</td><td class="datadesc">-&gt;</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;</td><td class="dataname"><a name="TFragment:KValue"></a>KValue</td><td class="datadesc">-&gt; KValue for each pileup hit</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:Led"></a>Led</td><td class="datadesc">-&gt;  LED of each pileup hit</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TFragment:MidasId"></a>MidasId</td><td class="datadesc">-&gt;  MIDAS ID</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#time_t">time_t</a></td><td class="dataname"><a name="TFragment:MidasTimeStamp"></a>MidasTimeStamp</td><td class="datadesc">-&gt;  Timestamp of the MIDAS event  </td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TFragment:NetworkPacketNumber"></a>NetworkPacketNumber</td><td class="datadesc">-&gt;  Network packet number</td></tr>
@@ -213,9 +217,11 @@ fragment
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a name="TFragment:PPG"></a>PPG</td><td class="datadesc">-&gt; Programmable pattern generator value</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TFragment:TimeStampHigh"></a>TimeStampHigh</td><td class="datadesc">-&gt;  Timestamp high bits</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TFragment:TimeStampLow"></a>TimeStampLow</td><td class="datadesc">-&gt;  Timestamp low bits</td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TFragment:TimeToTrig"></a>TimeToTrig</td><td class="datadesc">-&gt;</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TFragment:TriggerBitPattern"></a>TriggerBitPattern</td><td class="datadesc">-&gt;  MasterFilterPattern in Griffin DAQ</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="dataname"><a name="TFragment:TriggerId"></a>TriggerId</td><td class="datadesc">-&gt;  MasterFilterID in Griffin DAQ  </td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:Zc"></a>Zc</td><td class="datadesc">-&gt;  ZC of each pileup hit</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:ccLong"></a>ccLong</td><td class="datadesc">-&gt;  Integration over the wavefrom fall (Descant only?)</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:ccShort"></a>ccShort</td><td class="datadesc">-&gt;  Integration over the waveform rise (Descant only?)</td></tr>
 <tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="dataname"><a name="TFragment:wavebuffer"></a>wavebuffer</td><td class="datadesc">-&gt; waveform words</td></tr>
 
 </table></div>
@@ -245,7 +251,11 @@ fragment
 <div class="funccomm"><pre> Clears all fields of the <a href="./TFragment.html">TFragment</a>
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">long</span> <a class="funcname" name="TFragment:GetTimeStamp" href="src/TFragment.cxx.html#zI2sMC">GetTimeStamp</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">long</span> <a class="funcname" name="TFragment:GetTimeStamp" href="src/TFragment.cxx.html#IBg02D">GetTimeStamp</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">long</span> <a class="funcname" name="TFragment:GetTimeStamp_ns" href="src/TFragment.cxx.html#TnB9n">GetTimeStamp_ns</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TFragment:Get4GCfd" href="src/TFragment.cxx.html#pqJ9iB">Get4GCfd</a>(<span class="keyword">int</span> i = 0)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TFragment:GetName" href="src/TFragment.cxx.html#k8dWe">GetName</a>()</span><br />
 </div>
@@ -257,12 +267,22 @@ fragment
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragment:TFragment" href="src/TFragment.h.html#cApDNB">TFragment</a>()</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TFragment:operator__" href="src/TFragment.h.html#hHdtHE">operator&lt;</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp; rhs) const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./TFragment.html#TFragment:GetTimeStamp" title="long TFragment::GetTimeStamp()">GetTimeStamp</a>() &lt; rhs.<a href="./TFragment.html#TFragment:GetTimeStamp" title="long TFragment::GetTimeStamp()">GetTimeStamp</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TFragment:operator_" href="src/TFragment.h.html#ZRYyCE">operator&gt;</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp; rhs) const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./TFragment.html#TFragment:GetTimeStamp" title="long TFragment::GetTimeStamp()">GetTimeStamp</a>() &gt; rhs.<a href="./TFragment.html#TFragment:GetTimeStamp" title="long TFragment::GetTimeStamp()">GetTimeStamp</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
 
 <br />
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun Dec 14 18:23:28 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: Wed Mar  4 12:44:15 2015 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:31 2014            -->
+<!--   Date: Wed Mar  4 12:44:18 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -270,8 +270,10 @@ return false;}
 <table class="func" id="tabfuncpriv" cellspacing="0">
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TGRSIint:TGRSIint">TGRSIint</a>(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv, <span class="keyword">void</span>* options = 0, <span class="keyword">int</span> numOptions = 0, <span class="keyword">bool</span> noLogo = <span class="keyword">false</span>, <span class="keyword">const</span> <span class="keyword">char</span>* appClassName = <span class="string">"grsisort"</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIint:ApplyOptions">ApplyOptions</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIint:DrawLogo">DrawLogo</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIint:FileAutoDetect">FileAutoDetect</a>(string filename, <span class="keyword">long</span> filesize)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIint:InitFlags">InitFlags</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIint:LoadGROOTGraphics">LoadGROOTGraphics</a>()</td></tr>
 
 </table></div>
 </div>
@@ -358,11 +360,15 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIint:HandleTermInput" href="src/TGRSIint.cxx.html#p7JVl">HandleTermInput</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TGRSIint:TabCompletionHook" href="src/TGRSIint.cxx.html#Ww2.JB">TabCompletionHook</a>(<span class="keyword">char</span>* , <span class="keyword">int</span>* , <a href="./ListOfTypes.html#ostream">ostream</a>&amp; )</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TGRSIint:TabCompletionHook" href="src/TGRSIint.cxx.html#b650jD">TabCompletionHook</a>(<span class="keyword">char</span>* , <span class="keyword">int</span>* , <a href="./ListOfTypes.html#ostream">ostream</a>&amp; )</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIint:PrintLogo" href="src/TGRSIint.cxx.html#FugnRB">PrintLogo</a>(<span class="keyword">bool</span> )</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIint:DrawLogo" href="src/TGRSIint.cxx.html#n9t7fC">DrawLogo</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIint:GetOptions" href="src/TGRSIint.cxx.html#ZM0JHB">GetOptions</a>(<span class="keyword">int</span>* argc, <span class="keyword">char</span>** argv)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIint:LoadGROOTGraphics" href="src/TGRSIint.cxx.html#w0S5hE">LoadGROOTGraphics</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIint:PrintHelp" href="src/TGRSIint.cxx.html#twQPWE">PrintHelp</a>(<span class="keyword">bool</span> )</span><br />
 </div>
@@ -382,7 +388,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun Dec 14 18:23:31 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: Wed Mar  4 12:44:18 2015 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

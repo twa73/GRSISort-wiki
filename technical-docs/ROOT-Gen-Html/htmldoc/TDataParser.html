@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:27 2014            -->
+<!--   Date: Wed Mar  4 12:44:14 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -80,6 +80,9 @@ be implemented.
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TDataParser:TDataParser@1">TDataParser</a>(<span class="keyword">const</span> <a href="./TDataParser.html">TDataParser</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TDataParser:_TDataParser">~TDataParser</a>()</td></tr>
 <tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TDataParser:Class">Class</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TDataParser:EightPIDataToFragment">EightPIDataToFragment</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a> stream, <a href="./ListOfTypes.html#uint32_t">uint32_t</a>* data, <span class="keyword">int</span> size, <span class="keyword">unsigned</span> <span class="keyword">int</span> midasserialnumber = 0, <a href="./ListOfTypes.html#time_t">time_t</a> midastime = 0)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TDataParser:EPIXToScalar">EPIXToScalar</a>(<span class="keyword">float</span>* data, <span class="keyword">int</span> size, <span class="keyword">unsigned</span> <span class="keyword">int</span> midasserialnumber = 0, <a href="./ListOfTypes.html#time_t">time_t</a> midastime = 0)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TDataParser:FifoToFragment">FifoToFragment</a>(<span class="keyword">unsigned</span> <span class="keyword">short</span>* data, <span class="keyword">int</span> size, <span class="keyword">bool</span> zerobuffer = <span class="keyword">false</span>, <span class="keyword">unsigned</span> <span class="keyword">int</span> midasserialnumber = 0, <a href="./ListOfTypes.html#time_t">time_t</a> midastime = 0)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TDataParser:GriffinDataToFragment">GriffinDataToFragment</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>* data, <span class="keyword">int</span> size, <span class="keyword">unsigned</span> <span class="keyword">int</span> midasserialnumber = 0, <a href="./ListOfTypes.html#time_t">time_t</a> midastime = 0)</td></tr>
 <tr class="func"><td class="funcret">static <a href="./TDataParser.html">TDataParser</a>*</td><td class="funcname"><a class="funcname" href="#TDataParser:instance">instance</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#TDataParser:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
@@ -244,6 +247,16 @@ The statistics recorded currently include:
           The highest MIDAS Time stamp
 </pre></div>
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TDataParser:EightPIDataToFragment" href="src/TDataParser.cxx.html#l1htED">EightPIDataToFragment</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a> stream, <a href="./ListOfTypes.html#uint32_t">uint32_t</a>* data, <span class="keyword">int</span> size, <span class="keyword">unsigned</span> <span class="keyword">int</span> midasserialnumber = 0, <a href="./ListOfTypes.html#time_t">time_t</a> midastime = 0)</span><br />
+<div class="funccomm"><pre><a href="./TFragment.html">TFragment</a> *EventFrag = new <a href="./TFragment.html">TFragment</a>();
+EventFrag-&gt;MidasTimeStamp = midastime;
+EventFrag-&gt;MidasId = midasserialnumber;
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TDataParser:FifoToFragment" href="src/TDataParser.cxx.html#ZZJShE">FifoToFragment</a>(<span class="keyword">unsigned</span> <span class="keyword">short</span>* data, <span class="keyword">int</span> size, <span class="keyword">bool</span> zerobuffer = <span class="keyword">false</span>, <span class="keyword">unsigned</span> <span class="keyword">int</span> midasserialnumber = 0, <a href="./ListOfTypes.html#time_t">time_t</a> midastime = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TDataParser:EPIXToScalar" href="src/TDataParser.cxx.html#NRQS4D">EPIXToScalar</a>(<span class="keyword">float</span>* data, <span class="keyword">int</span> size, <span class="keyword">unsigned</span> <span class="keyword">int</span> midasserialnumber = 0, <a href="./ListOfTypes.html#time_t">time_t</a> midastime = 0)</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDataParser:TDataParser" href="src/TDataParser.h.html#jl1az">TDataParser</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDataParser:SetNoWaveForms" href="src/TDataParser.h.html#yqgC0C">SetNoWaveForms</a>(<span class="keyword">bool</span> temp = <span class="keyword">true</span>)</span><br />
@@ -261,7 +274,7 @@ The statistics recorded currently include:
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun Dec 14 18:23:28 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: Wed Mar  4 12:44:15 2015 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

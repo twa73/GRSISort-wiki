@@ -18,7 +18,7 @@
 #include "TFragment.h"
 #include "TChannel.h"
 
-#include <TGRSIDetectorData.h>
+#include "TGRSIDetectorData.h"
 
 class TSharcData : public TGRSIDetectorData  {
 private:
@@ -120,7 +120,7 @@ public:
 			SetFront_Energy(0.0);
 		SetFront_TimeCFD(frag->Cfd.at(0));
 		SetFront_TimeLED(frag->Led.at(0));
-		SetFront_Time(frag->TimeToTrig);
+		SetFront_Time(frag->Zc.at(0));
  		SetFront_Charge(frag->Charge.at(0));
 		SetFront_EngChi2(channel->GetENGChi2());
 	}
@@ -139,7 +139,7 @@ public:
 
 		SetBack_TimeCFD(frag->Cfd.at(0));
 		SetBack_TimeLED(frag->Led.at(0));
-		SetBack_Time(frag->TimeToTrig);
+		SetBack_Time(frag->Zc.at(0));
  		SetBack_Charge(frag->Charge.at(0));
 		SetBack_EngChi2(channel->GetENGChi2());
 	}
@@ -158,7 +158,7 @@ public:
 
 		SetPAD_TimeCFD(frag->Cfd.at(0));
 		SetPAD_TimeLED(frag->Led.at(0));
-		SetPAD_Time(frag->TimeToTrig);
+		SetPAD_Time(frag->Zc.at(0));
  		SetPAD_Charge(frag->Charge.at(0));
 		SetPAD_EngChi2(channel->GetENGChi2());
 	}
@@ -171,7 +171,7 @@ public:
 	
   ///////////i//////////           GETTERS           ////////////////////////
   inline UShort_t GetFront_DetectorNbr(const unsigned int &i) const {return fSharc_StripFront_DetectorNbr[i];}	//!
-  inline UShort_t GetFront_ChannelAddress(const unsigned int &i)    const {return fSharc_StripFront_ChannelAddress[i];}		//!
+  inline Int_t    GetFront_ChannelAddress(const unsigned int &i)    const {return fSharc_StripFront_ChannelAddress[i];}		//!
   inline UShort_t GetFront_StripNbr(const unsigned int &i)    const {return fSharc_StripFront_StripNbr[i];}		//!
   inline Double_t GetFront_Energy(const unsigned int &i)      const {return fSharc_StripFront_Energy[i];}		//!
   inline Double_t GetFront_EngChi2(const unsigned int &i)      const {return fSharc_StripFront_EngChi2[i];}		//!
@@ -183,7 +183,7 @@ public:
   inline std::vector<Int_t> GetFront_Wave(const unsigned int &i)	const {return fSharc_StripFront_Wave.at(i);}		//!
 
   inline UShort_t GetBack_DetectorNbr(const unsigned int &i) const {return fSharc_StripBack_DetectorNbr[i];}	//!
-  inline UShort_t GetBack_ChannelAddress(const unsigned int &i)    const {return fSharc_StripBack_ChannelAddress[i];}		//!
+  inline Int_t    GetBack_ChannelAddress(const unsigned int &i)    const {return fSharc_StripBack_ChannelAddress[i];}		//!
   inline UShort_t GetBack_StripNbr(const unsigned int &i)    const {return fSharc_StripBack_StripNbr[i];}		//!
   inline Double_t GetBack_Energy(const unsigned int &i)      const {return fSharc_StripBack_Energy[i];}			//!
   inline Double_t GetBack_EngChi2(const unsigned int &i)      const {return fSharc_StripBack_EngChi2[i];}		//!

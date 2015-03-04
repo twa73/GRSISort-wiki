@@ -74,6 +74,14 @@ class TGRSIRunInfo : public TObject {
       
       static void SetInfoFromFile(TGRSIRunInfo *temp);
 
+      static const char* GetGRSIVersion() { return fGRSIVersion.c_str(); } 
+      static void ClearGRSIVersion() { fGRSIVersion.clear(); } 
+      static void SetGRSIVersion(const char *ver) { if(fGRSIVersion.length()!=0)
+                                                    printf( ALERTTEXT "WARNING; VERSION ALREADY SET TO %s!!" RESET_COLOR "\n",fGRSIVersion.c_str());
+                                                    else fGRSIVersion.assign(ver); }
+
+
+
       static void SetRunInfo(int runnum=0,int subrunnum=-1);
       static void SetAnalysisTreeBranches(TTree*);
 
@@ -145,6 +153,8 @@ class TGRSIRunInfo : public TObject {
       int fSubRunNumber;
 
       int fNumberOfTrueSystems;
+
+      static std::string fGRSIVersion;
 
       //  detector types to switch over in SetRunInfo()
       //  for more info, see: https://www.triumf.info/wiki/tigwiki/index.php/Detector_Nomenclature

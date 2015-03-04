@@ -5,11 +5,12 @@
 
 #include <stdio.h>
 #include <utility>
+#include <iostream>
 
 #include "TChannel.h"
 #include "TVector3.h" 
 
-#include <TGRSIDetectorHit.h>
+#include "TGRSIDetectorHit.h"
 
 class TCSMHit : public TGRSIDetectorHit 	{
 	public:
@@ -55,6 +56,7 @@ class TCSMHit : public TGRSIDetectorHit 	{
 		//TVector3 position;  //
 
 	public:
+	  bool IsEmpty();
 
 		virtual void Clear(Option_t* = "");	//!
 		virtual void Print(Option_t* = "");	//!

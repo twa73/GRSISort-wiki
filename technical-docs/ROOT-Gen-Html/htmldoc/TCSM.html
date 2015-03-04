@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:26 2014            -->
+<!--   Date: Wed Mar  4 12:44:13 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -162,6 +162,18 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
 
 </table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TCSM:AlmostEqual">AlmostEqual</a>(<span class="keyword">int</span>, <span class="keyword">int</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TCSM:AlmostEqual@1">AlmostEqual</a>(<span class="keyword">double</span>, <span class="keyword">double</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCSM:BuilddEE">BuilddEE</a>(vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp;, vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp;, vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCSM:BuildVH">BuildVH</a>(vector&lt;<span class="keyword">int</span>&gt;&amp;, vector&lt;<span class="keyword">int</span>&gt;&amp;, vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp;, TCSMData*)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TCSMHit.html">TCSMHit</a></td><td class="funcname"><a class="funcname" href="#TCSM:CombineHits">CombineHits</a>(<a href="./TCSMHit.html">TCSMHit</a> d_hit, <a href="./TCSMHit.html">TCSMHit</a> e_hit)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TCSMHit.html">TCSMHit</a></td><td class="funcname"><a class="funcname" href="#TCSM:MakeHit">MakeHit</a>(<span class="keyword">int</span>, <span class="keyword">int</span>, TCSMData*)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TCSMHit.html">TCSMHit</a></td><td class="funcname"><a class="funcname" href="#TCSM:MakeHit@1">MakeHit</a>(vector&lt;<span class="keyword">int</span>&gt;&amp;, vector&lt;<span class="keyword">int</span>&gt;&amp;, TCSMData*)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCSM:RecoverHit">RecoverHit</a>(<span class="keyword">char</span>, <span class="keyword">int</span>, TCSMData*, vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp;)</td></tr>
+
+</table></div>
 </div>
 
 <div id="datamembers">
@@ -189,6 +201,7 @@ return false;}
 </table></div>
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TCSM:AlmostEqualWindow"></a>AlmostEqualWindow</td><td></td></tr>
 <tr class="data"><td class="datatype">vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;</td><td class="dataname"><a name="TCSM:csm_hits"></a>csm_hits</td><td></td></tr>
 <tr class="data"><td class="datatype">TCSMData*</td><td class="dataname"><a name="TCSM:data"></a>data</td><td class="datadesc">!</td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">int</span></td><td class="dataname"><a name="TCSM:fCfdBuildDiff"></a>fCfdBuildDiff</td><td class="datadesc">!   // largest acceptable time difference between events (clock ticks)  (50 ns)</td></tr>
@@ -200,11 +213,11 @@ return false;}
 <area shape="rect" id="node3" href="./TGRSIDetector.html" title="TGRSIDetector" alt="" coords="289,10,479,48"/>
 </map>
 <map name="MapTCSM_InhMem" id="MapTCSM_InhMem">
-<area shape="rect" id="graph11" href="./TGRSIDetector.html" alt="" coords="376,63,629,99"/>
-<area shape="rect" id="graph12" href="./TGRSIDetector.html" alt="" coords="541,109,629,217"/>
-<area shape="rect" id="graph13" href="./TGRSIDetector.html" alt="" coords="443,109,531,217"/>
-<area shape="rect" id="graph14" href="./TGRSIDetector.html" alt="" coords="344,109,432,217"/>
-<area shape="rect" id="graph10" href="./TGRSIDetector.html" title="TGRSIDetector" alt="" coords="333,16,640,228"/>
+<area shape="rect" id="graph12" href="./TGRSIDetector.html" alt="" coords="376,63,629,99"/>
+<area shape="rect" id="graph13" href="./TGRSIDetector.html" alt="" coords="541,109,629,217"/>
+<area shape="rect" id="graph14" href="./TGRSIDetector.html" alt="" coords="443,109,531,217"/>
+<area shape="rect" id="graph15" href="./TGRSIDetector.html" alt="" coords="344,109,432,217"/>
+<area shape="rect" id="graph11" href="./TGRSIDetector.html" title="TGRSIDetector" alt="" coords="333,16,640,228"/>
 </map>
 <map name="MapTCSM_Lib" id="MapTCSM_Lib">
 <area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
@@ -217,19 +230,48 @@ return false;}
 </div><div class="classcharts"><div class="classchartswidth"></div>
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTCSM_Inh" src="inh/TCSM_Inh.png"/></div>
 <h2>Function documentation</h2>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TCSM:TCSM" href="src/TCSM.cxx.html#G.zuME">TCSM</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TCSM:TCSM" href="src/TCSM.cxx.html#kNYAp">TCSM</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TCSM:_TCSM" href="src/TCSM.cxx.html#i10siB">~TCSM</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TCSM:_TCSM" href="src/TCSM.cxx.html#UI_uiB">~TCSM</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:FillData" href="src/TCSM.cxx.html#qnE4BB">FillData</a>(<a href="./TFragment.html">TFragment</a>* , <a href="./TChannel.html">TChannel</a>* , MNEMONIC* )</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:FillData" href="src/TCSM.cxx.html#pjpECB">FillData</a>(<a href="./TFragment.html">TFragment</a>* , <a href="./TChannel.html">TChannel</a>* , MNEMONIC* )</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:BuildHits" href="src/TCSM.cxx.html#Hz_snD">BuildHits</a>(TGRSIDetectorData* cd = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:BuildHits" href="src/TCSM.cxx.html#Ze.4nD">BuildHits</a>(TGRSIDetectorData* cd = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:Clear" href="src/TCSM.cxx.html#LaAieC">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:Clear" href="src/TCSM.cxx.html#c2T41E">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre><a href="./ListOfTypes.html#ostream">cout</a> &lt;&lt; <span class="string">"clearing "</span> &lt;&lt; endl;
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:Print" href="src/TCSM.cxx.html#jyVeiD">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:Print" href="src/TCSM.cxx.html#YxaDwD">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname">TVector3 <a class="funcname" name="TCSM:GetPosition" href="src/TCSM.cxx.html#QCbcVE">GetPosition</a>(<span class="keyword">int</span> detector, <span class="keyword">char</span> pos, <span class="keyword">int</span> horizontalstrip, <span class="keyword">int</span> verticalstrip, <span class="keyword">double</span> X = 0.00, <span class="keyword">double</span> Y = 0.00, <span class="keyword">double</span> Z = 0.00)</span><br />
+<div class="funcdoc"><span class="funcname">TVector3 <a class="funcname" name="TCSM:GetPosition" href="src/TCSM.cxx.html#NdRea">GetPosition</a>(<span class="keyword">int</span> detector, <span class="keyword">char</span> pos, <span class="keyword">int</span> horizontalstrip, <span class="keyword">int</span> verticalstrip, <span class="keyword">double</span> X = 0.00, <span class="keyword">double</span> Y = 0.00, <span class="keyword">double</span> Z = 0.00)</span><br />
+<div class="funccomm"><pre>horizontal strips collect N charge!
+vertical strips collect P charge!
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:BuildVH" href="src/TCSM.cxx.html#nD8lbB">BuildVH</a>(vector&lt;<span class="keyword">int</span>&gt;&amp; , vector&lt;<span class="keyword">int</span>&gt;&amp; , vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp; , TCSMData* )</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TCSMHit.html">TCSMHit</a> <a class="funcname" name="TCSM:MakeHit" href="src/TCSM.cxx.html#xuWbMD">MakeHit</a>(<span class="keyword">int</span> , <span class="keyword">int</span> , TCSMData* )</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TCSMHit.html">TCSMHit</a> <a class="funcname" name="TCSM:MakeHit@1" href="src/TCSM.cxx.html#tZOEHC">MakeHit</a>(vector&lt;<span class="keyword">int</span>&gt;&amp; , vector&lt;<span class="keyword">int</span>&gt;&amp; , TCSMData* )</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:BuilddEE" href="src/TCSM.cxx.html#N5TK9C">BuilddEE</a>(vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp; , vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp; , vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp; )</span><br />
+<div class="funccomm"><pre><a href="./ListOfTypes.html#ostream">cout</a>&lt;&lt;<span class="string">"DHitVec size: "</span>&lt;&lt;DHitVec.size()&lt;&lt;<span class="string">" EHitVec size: "</span>&lt;&lt;EHitVec.size()&lt;&lt;endl;
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCSM:RecoverHit" href="src/TCSM.cxx.html#UGDfw">RecoverHit</a>(<span class="keyword">char</span> , <span class="keyword">int</span> , TCSMData* , vector&lt;<a href="./TCSMHit.html">TCSMHit</a>&gt;&amp; )</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TCSMHit.html">TCSMHit</a> <a class="funcname" name="TCSM:CombineHits" href="src/TCSM.cxx.html#A.U72E">CombineHits</a>(<a href="./TCSMHit.html">TCSMHit</a> d_hit, <a href="./TCSMHit.html">TCSMHit</a> e_hit)</span><br />
+<div class="funccomm"><pre><a href="./ListOfTypes.html#ostream">cout</a>&lt;&lt;<span class="string">"I'm combining hits!!"</span>&lt;&lt;endl;
+d_hit.<a href="./TCSM.html#TCSM:Print" title="void TCSM::Print(Option_t* =&quot;&quot;)">Print</a>();
+e_hit.<a href="./TCSM.html#TCSM:Print" title="void TCSM::Print(Option_t* =&quot;&quot;)">Print</a>();
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TCSM:AlmostEqual" href="src/TCSM.cxx.html#cbCsVC">AlmostEqual</a>(<span class="keyword">int</span> , <span class="keyword">int</span> )</span><br />
+<div class="funccomm"><pre><a href="./ListOfTypes.html#ostream">cout</a>&lt;&lt;<span class="string">"int AlmostEqual Called."</span>&lt;&lt;endl;
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TCSM:AlmostEqual@1" href="src/TCSM.cxx.html#qluzwD">AlmostEqual</a>(<span class="keyword">double</span> , <span class="keyword">double</span> )</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TCSM:TCSM" href="src/TCSM.h.html#e5kiRD">TCSM</a>()</span><br />
 </div>
@@ -248,7 +290,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun Dec 14 18:23:26 2014 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: Wed Mar  4 12:44:13 2015 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

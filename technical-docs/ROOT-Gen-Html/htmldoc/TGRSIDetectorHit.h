@@ -9,9 +9,9 @@
 #include <vector>
 
 //#include "TChannel.h"
-#include <TVector3.h> 
-#include <TObject.h> 
-#include <Rtypes.h>
+#include "TVector3.h" 
+#include "TObject.h" 
+#include "Rtypes.h"
 
 
 class TGRSIDetectorHit : public TObject 	{
@@ -23,7 +23,7 @@ class TGRSIDetectorHit : public TObject 	{
 
 		virtual void Clear(Option_t* opt = "");	//!
 		virtual void Print(Option_t* opt = "");	//!
-
+      //We need a common function for all detectors in here
 		//static bool Compare(TGRSIDetectorHit *lhs,TGRSIDetectorHit *rhs); //!
 
 		//virtual TVector3 GetPosition() = 0;	//!

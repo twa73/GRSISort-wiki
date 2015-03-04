@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun Dec 14 18:23:29 2014            -->
+<!--   Date: Wed Mar  4 12:44:16 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -30,9 +30,9 @@
 <span class="cpp">#include &lt;vector&gt;</span>
 
 <span class="comment">//#include <span class="string">"TChannel.h"</span></span>
-<span class="cpp">#include &lt;TVector3.h&gt; </span>
-<span class="cpp">#include &lt;TObject.h&gt; </span>
-<span class="cpp">#include &lt;Rtypes.h&gt;</span>
+<span class="cpp">#include "TVector3.h" </span>
+<span class="cpp">#include "TObject.h" </span>
+<span class="cpp">#include "Rtypes.h"</span>
 
 
 <span class="keyword">class</span> <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a> : <span class="keyword">public</span> <a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> 	{
@@ -44,7 +44,7 @@
 
 		<span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:Clear" title="void TGRSIDetectorHit::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>);	<span class="comment">//!</span>
 		<span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:Print" title="void TGRSIDetectorHit::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>);	<span class="comment">//!</span>
-
+      <span class="comment">//We need a common function for all detectors in here</span>
 		<span class="comment">//static <a href="../ListOfTypes.html#bool">bool</a> <a href="../#TObject:Compare" title="Int_t TObject::Compare(const TObject* obj)">Compare</a>(<a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a> *lhs,<a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a> *rhs); //!</span>
 
 		<span class="comment">//virtual TVector3 <a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:GetPosition" title="TVector3 TGRSIDetectorHit::GetPosition()">GetPosition</a>() = 0;	//!</span>
@@ -71,7 +71,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2014-12-14 18:23 </em><em>&raquo; Last generated: 2014-12-14 18:23</em><br />
+<em>&raquo; Last changed: 2015-03-04 12:44 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

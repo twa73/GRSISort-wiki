@@ -7,12 +7,12 @@
 #include <cstdio>
 #include <vector>
 
-#include <Globals.h>
-#include <TFragment.h>
-#include <TChannel.h>
+#include "Globals.h"
+#include "TFragment.h"
+#include "TChannel.h"
 
-#include <TGRSIDetectorData.h>
-//#include <TGriffinCoreData.h>
+#include "TGRSIDetectorData.h"
+//#include "TGriffinCoreData.h"
 
 class TGriffinData : public TGRSIDetectorData {
 
@@ -87,7 +87,7 @@ class TGriffinData : public TGRSIDetectorData {
                SetCoreEnergy(channel->CalibrateENG(frag->Charge.at(x)));		
                SetCoreCharge(frag->Charge.at(x));
      	         SetCoreCFD(frag->Cfd.at(x));		
-             //SetCoreTime(frag->TimeToTrig);		
+             //SetCoreTime(frag->Zc.at(0));		
                SetCoreTime(frag->GetTimeStamp());		
             }
    
