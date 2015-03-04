@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 12:44:12 2015            -->
+<!--   Date: Wed Mar  4 13:15:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -167,16 +167,16 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:tigress" title="TTigress* TAnalysisTreeBuilder::tigress">tigress</a> = 0;<span class="comment">//new <a href="../TTigress.html">TTigress</a>;</span>
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sharc" title="TSharc* TAnalysisTreeBuilder::sharc">sharc</a> = 0;<span class="comment">//new <a href="../TSharc.html">TSharc</a>;</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a> = 0;<span class="comment">//new TTriFoil;</span>
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a> = 0;<span class="comment">//new <a href="../TTriFoil.html">TTriFoil</a>;</span>
    <span class="comment">//rf-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:csm" title="TCSM* TAnalysisTreeBuilder::csm">csm</a> = 0;<span class="comment">//new <a href="../TCSM.html">TCSM</a>;</span>
    <span class="comment">//spice-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); s3-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
    <span class="comment">//tip-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
 
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a> = 0;<span class="comment">//new <a href="../TGriffin.html">TGriffin</a>;</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a> = 0;<span class="comment">//new TSceptar;</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a>   = 0;<span class="comment">//new TPaces;</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a> = 0;<span class="comment">//new TDescant;</span>
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a> = 0;<span class="comment">//new <a href="../TSceptar.html">TSceptar</a>;</span>
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a>   = 0;<span class="comment">//new <a href="../TPaces.html">TPaces</a>;</span>
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a> = 0;<span class="comment">//new <a href="../TDescant.html">TDescant</a>;</span>
    <span class="comment">//dante-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
    <span class="comment">//zerodegree-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
 
@@ -586,7 +586,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 
    <span class="keyword">if</span>(info-&gt;Tigress())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:tigress" title="TTigress* TAnalysisTreeBuilder::tigress">tigress</a>-><a href="../TTigress.html#TTigress:Clear" title="void TTigress::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); }
    <span class="keyword">if</span>(info-&gt;Sharc())     { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sharc" title="TSharc* TAnalysisTreeBuilder::sharc">sharc</a>-><a href="../TSharc.html#TSharc:Clear" title="void TSharc::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }
-   <span class="keyword">if</span>(info-&gt;TriFoil())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a>-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }
+   <span class="keyword">if</span>(info-&gt;TriFoil())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a>-><a href="../TTriFoil.html#TTriFoil:Clear" title="void TTriFoil::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); }
    <span class="comment">//if(info-&gt;Rf())        { rf-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
    <span class="keyword">if</span>(info-&gt;CSM())       { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:csm" title="TCSM* TAnalysisTreeBuilder::csm">csm</a>-><a href="../TCSM.html#TCSM:Clear" title="void TCSM::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }
    <span class="comment">//if(info-&gt;Spice())     { spice-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); s3-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
@@ -594,11 +594,11 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 <span class="comment">//printf(<span class="string">"clearing griffin 0x08%x\n"</span>,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>);</span>
 <span class="comment">//<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>-><a href="../TGriffin.html#TGriffin:Print" title="void TGriffin::Print(Option_t* opt=&quot;&quot;)">Print</a>();</span>
    <span class="keyword">if</span>(info-&gt;Griffin())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>-><a href="../TGriffin.html#TGriffin:Clear" title="void TGriffin::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); }
-   <span class="keyword">if</span>(info-&gt;Sceptar())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a>-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }
-   <span class="keyword">if</span>(info-&gt;Paces())     { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a>-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } 
+   <span class="keyword">if</span>(info-&gt;Sceptar())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a>-><a href="../TSceptar.html#TSceptar:Clear" title="void TSceptar::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); }
+   <span class="keyword">if</span>(info-&gt;Paces())     { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a>-><a href="../TPaces.html#TPaces:Clear" title="void TPaces::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); } 
    <span class="comment">//if(info-&gt;Dante())     { dante-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
    <span class="comment">//if(info-&gt;ZeroDegree()){ zerodegree-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
-   <span class="keyword">if</span>(info-&gt;Descant())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a>-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();}
+   <span class="keyword">if</span>(info-&gt;Descant())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a>-><a href="../TDescant.html#TDescant:Clear" title="void TDescant::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();}
    <span class="comment">//printf(<span class="string">"ClearActiveAnalysisTreeBranches done\n"</span>);</span>
 }
 
@@ -689,7 +689,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
       } <span class="keyword">else</span> <span class="keyword">if</span>(strcmp(det-&gt;first,<span class="string">"SH"</span>) == 0) {
          <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sharc" title="TSharc* TAnalysisTreeBuilder::sharc">sharc</a> = (<a href="../TSharc.html">TSharc</a>*) det-&gt;second;
       } <span class="keyword">else</span> <span class="keyword">if</span>(strcmp(det-&gt;first,<span class="string">"Tr"</span>) == 0) {
-         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a> = (TTriFoil*) det-&gt;second;
+         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a> = (<a href="../TTriFoil.html">TTriFoil</a>*) det-&gt;second;
          <span class="comment">//*rf = *((TRf*) det-&gt;second);</span>
       } <span class="keyword">else</span> <span class="keyword">if</span>(strcmp(det-&gt;first,<span class="string">"CS"</span>) == 0) {
          <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:csm" title="TCSM* TAnalysisTreeBuilder::csm">csm</a> = (<a href="../TCSM.html">TCSM</a>*) det-&gt;second;
@@ -700,11 +700,11 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
       } <span class="keyword">else</span> <span class="keyword">if</span>(strcmp(det-&gt;first,<span class="string">"GR"</span>) == 0) {
          <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a> = (<a href="../TGriffin.html">TGriffin</a>*) det-&gt;second;
       } <span class="keyword">else</span> <span class="keyword">if</span>(strcmp(det-&gt;first,<span class="string">"SE"</span>) == 0) {
-         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a> = (TSceptar*) det-&gt;second;
+         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a> = (<a href="../TSceptar.html">TSceptar</a>*) det-&gt;second;
       } <span class="keyword">else</span> <span class="keyword">if</span>(strcmp(det-&gt;first,<span class="string">"DS"</span>) == 0) {
-         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a> = (TDescant*) det-&gt;second;
+         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a> = (<a href="../TDescant.html">TDescant</a>*) det-&gt;second;
       } <span class="keyword">else</span> <span class="keyword">if</span>(strcmp(det-&gt;first,<span class="string">"PA"</span>) == 0) {
-         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a> = (TPaces*) det-&gt;second;
+         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a> = (<a href="../TPaces.html">TPaces</a>*) det-&gt;second;
       } 
    }
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>-&gt;Fill();
@@ -786,7 +786,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
             (*detectors)[<span class="string">"SH"</span>]-&gt;FillData(&amp;(event-&gt;at(i)),channel,&amp;mnemonic);
          } <span class="keyword">else</span> <span class="keyword">if</span>(mnemonic.system.compare(<span class="string">"Tr"</span>)==0) {	
             <span class="keyword">if</span>(detectors-&gt;find(<span class="string">"Tr"</span>) == detectors-&gt;end()) {
-               (*detectors)[<span class="string">"Tr"</span>] = <span class="keyword">new</span> TTriFoil;
+               (*detectors)[<span class="string">"Tr"</span>] = <span class="keyword">new</span> <a href="../TTriFoil.html">TTriFoil</a>;
             }
             (*detectors)[<span class="string">"Tr"</span>]-&gt;FillData(&amp;(event-&gt;at(i)),channel,&amp;mnemonic);
          } <span class="keyword">else</span> <span class="keyword">if</span>(mnemonic.system.compare(<span class="string">"CS"</span>)==0) {	
@@ -801,17 +801,17 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
             (*detectors)[<span class="string">"GR"</span>]-&gt;FillData(&amp;(event-&gt;at(i)),channel,&amp;mnemonic);
          } <span class="keyword">else</span> <span class="keyword">if</span>(mnemonic.system.compare(<span class="string">"SE"</span>)==0) {	
             <span class="keyword">if</span>(detectors-&gt;find(<span class="string">"SE"</span>) == detectors-&gt;end()) {
-               (*detectors)[<span class="string">"SE"</span>] = <span class="keyword">new</span> TSceptar;
+               (*detectors)[<span class="string">"SE"</span>] = <span class="keyword">new</span> <a href="../TSceptar.html">TSceptar</a>;
             }
             (*detectors)[<span class="string">"SE"</span>]-&gt;FillData(&amp;(event-&gt;at(i)),channel,&amp;mnemonic);
          } <span class="keyword">else</span> <span class="keyword">if</span>(mnemonic.system.compare(<span class="string">"PA"</span>)==0) {	
             <span class="keyword">if</span>(detectors-&gt;find(<span class="string">"PA"</span>) == detectors-&gt;end()) {
-               (*detectors)[<span class="string">"PA"</span>] = <span class="keyword">new</span> TPaces;
+               (*detectors)[<span class="string">"PA"</span>] = <span class="keyword">new</span> <a href="../TPaces.html">TPaces</a>;
             }
             (*detectors)[<span class="string">"PA"</span>]-&gt;FillData(&amp;(event-&gt;at(i)),channel,&amp;mnemonic);
          } <span class="keyword">else</span> <span class="keyword">if</span>(mnemonic.system.compare(<span class="string">"DS"</span>)==0) {	
             <span class="keyword">if</span>(detectors-&gt;find(<span class="string">"DS"</span>) == detectors-&gt;end()) {
-               (*detectors)[<span class="string">"DS"</span>] = <span class="keyword">new</span> TDescant;
+               (*detectors)[<span class="string">"DS"</span>] = <span class="keyword">new</span> <a href="../TDescant.html">TDescant</a>;
             }
             (*detectors)[<span class="string">"DS"</span>]-&gt;FillData(&amp;(event-&gt;at(i)),channel,&amp;mnemonic);
          <span class="comment">//else if(mnemonic.system.compare(<span class="string">"PA"</span>)==0) {	</span>
@@ -910,7 +910,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 12:44 </em><em>&raquo; Last generated: 2015-03-04 12:44</em><br />
+<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
