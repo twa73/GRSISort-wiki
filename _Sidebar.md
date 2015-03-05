@@ -35,7 +35,7 @@
 **Useful resources**  
 
 - [[TGRSIViewer|TGRSIViewer]]
-- [[Troubleshooting]]  
+- [[Troubleshooting | Troubleshooting ]]  
 - [[Running GRSISort|Running-GRSISort]]
 - [[Technical Docs|Technical-Documentation]]
 - [ROOT User Guide](http://root.cern.ch/drupal/content/root-users-guide-534)
