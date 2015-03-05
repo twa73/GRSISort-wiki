@@ -46,7 +46,7 @@ Currently accepted flags for the fragment tree sort:
 If multiple fragment trees are included at the time of the sort, or are created from multiple MIDAS files during the **autosort**, they will be sorted sequentially. However, it should be noted that although different fragment trees will be sorted into different analysis trees, if a **-s** sort is called, all of the fragment trees will be histogrammed into a single **hists.root**. If you would like to output multiple **hists.root** files, please run an external script to call grsisort multiple times.
 
 ##Calibrating the gamma spectra
-When sorting the fragment tree, you can read in a [calibration file](CalFile) at the same time and it will perform the calibrations while sorting. This can be done with the command:
+When sorting the fragment tree, you can read in a [calibration file](CalFiles) at the same time and it will perform the calibrations while sorting. This can be done with the command:
 ```c++
 grsisort -flags <midasfile>.mid <calibrationfile>.cal
 ```
