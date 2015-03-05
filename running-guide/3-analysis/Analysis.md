@@ -8,4 +8,4 @@ GRSISort contains an analysis package with the following
 - [[Calibration | Calibration]]
    - [[Gain-Matching|Gain-Matching]]
 - [[Kinematics | Kinematics]]
-   - [[Kinematics | Kinematics]]
+
