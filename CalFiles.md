@@ -9,7 +9,7 @@ Calibration files (Cal Files) are the files ending in a __.cal__ extension. They
 - Calibrate CFD, LED and Time
 - Calibrate Efficiency
 
-Some of this information is contained in the ODB which is read out by __grsisort__ from the start of the __.mid__ file. 
+Some of this information is contained in the ODB which is read out by __grsisort__ from the start of the __.mid__ file. The [[Calibration | Calibration ]] classes can be used to set these variables in TChannel and create cal files as well.
 
 ## Using Cal Files #
 When a cal file is input during the MIDAS sorting stage, the calibration data is saved to the fragment tree. After this, `grsisort` defaults to reading the cal file from the fragment tree. If a different calibration is desired, `TChannel::ReadCalFile("*name_of_cal_file*")` can be called to read in a different cal file. 
