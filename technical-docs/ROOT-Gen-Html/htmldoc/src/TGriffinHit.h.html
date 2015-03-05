@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:28 2015            -->
+<!--   Date: Wed Mar  4 20:39:35 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -29,7 +29,7 @@
 <span class="cpp">#include "<a href="../TChannel.h">TChannel.h</a>"</span>
 <span class="cpp">#include "<a href="../TCrystalHit.h">TCrystalHit.h</a>"</span>
 
-<span class="cpp">#include "TVector3.h"</span>
+<span class="cpp">#include "<a href="../TVector3.h">TVector3.h</a>"</span>
 
 <span class="cpp">#include "<a href="../TSceptarHit.h">TSceptarHit.h</a>"</span>
 
@@ -66,7 +66,7 @@
 
     <span class="comment">//  static <a href="../ListOfTypes.html#unsigned">unsigned</a> <a href="../ListOfTypes.html#int">int</a> GriffinSceptarSuppressors_det[16][4];</span>
 		<span class="comment">/////////////////////////		/////////////////////////////////////</span>
-<a name="Bu_QKB"></a>		<span class="keyword">void</span> <a href="../TGriffinHit.html#TGriffinHit:SetBGO" title="void TGriffinHit::SetBGO(TCrystalHit&amp; temp)">SetBGO</a>(<a href="../TCrystalHit.html">TCrystalHit</a> &amp;temp)		 { <a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.push_back(temp);	}    <span class="comment">//!</span>
+<a name="Bu_QKB"></a>		<span class="keyword">void</span> <a href="../TGriffinHit.html#TGriffinHit:SetBGO" title="void TGriffinHit::SetBGO(TCrystalHit&amp; temp)">SetBGO</a>(<a href="../TCrystalHit.html">TCrystalHit</a> &amp;temp)		 { <a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:push_back" title="void vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::push_back(const TCrystalHit&amp; x)">push_back</a>(temp);	}    <span class="comment">//!</span>
 
 <a name="WglywD"></a>		<span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TGriffinHit.html#TGriffinHit:SetDetectorNumber" title="void TGriffinHit::SetDetectorNumber(const int&amp; x)">SetDetectorNumber</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;x)  { <a href="../TGriffinHit.html#TGriffinHit:detector" title="UShort_t TGriffinHit::detector">detector</a> = x; }   <span class="comment">//!</span>
 <a name="FxGBjD"></a>		<span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TGriffinHit.html#TGriffinHit:SetCrystalNumber" title="void TGriffinHit::SetCrystalNumber(const int&amp; x)">SetCrystalNumber</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;x)   { <a href="../TGriffinHit.html#TGriffinHit:crystal" title="UShort_t TGriffinHit::crystal">crystal</a> = x;  }   <span class="comment">//!</span>
@@ -110,8 +110,8 @@
 <a name="mMc83B"></a>      <span class="keyword">inline</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TGriffinHit.html#TGriffinHit:GetFilterPatter" title="Int_t TGriffinHit::GetFilterPatter()">GetFilterPatter</a>() <span class="keyword">const</span>         {   <span class="keyword">return</span> <a href="../TGriffinHit.html#TGriffinHit:filter" title="Int_t TGriffinHit::filter">filter</a>;   }  <span class="comment">//!</span>
 <a name="WLBwTE"></a>      <span class="keyword">inline</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TGriffinHit.html#TGriffinHit:GetPPG" title="Int_t TGriffinHit::GetPPG()">GetPPG</a>() <span class="keyword">const</span>                  {   <span class="keyword">return</span> <a href="../TGriffinHit.html#TGriffinHit:ppg" title="Int_t TGriffinHit::ppg">ppg</a>;   }  <span class="comment">//!</span>
 <a name="hKJoSC"></a>      <span class="keyword">inline</span> std::vector&lt;<a href="../ListOfTypes.html#Short_t">Short_t</a>&gt; <a href="../TGriffinHit.html#TGriffinHit:GetWaveForm" title="vector&lt;Short_t&gt; TGriffinHit::GetWaveForm()">GetWaveForm</a>() <span class="keyword">const</span>{   <span class="keyword">return</span> <a href="../TGriffinHit.html#TGriffinHit:waveform" title="vector&lt;Short_t&gt; TGriffinHit::waveform">waveform</a>;} <span class="comment">//!</span>
-<a name="Z4pjfD"></a>		<span class="keyword">inline</span> <span class="keyword">int</span> <a href="../TGriffinHit.html#TGriffinHit:GetBGOMultiplicity" title="int TGriffinHit::GetBGOMultiplicity()">GetBGOMultiplicity</a>() <span class="keyword">const</span>  		  {	<span class="keyword">return</span> <a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.size();	}		      <span class="comment">//!</span>
-<a name="MehnXD"></a>		<span class="keyword">inline</span> <a href="../TCrystalHit.html">TCrystalHit</a> *<a href="../TGriffinHit.html#TGriffinHit:GetBGO" title="TCrystalHit* TGriffinHit::GetBGO(const int&amp; i)">GetBGO</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;i)       {	<span class="keyword">return</span> &amp;<a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.at(i);	}	        <span class="comment">//!</span>
+<a name="Z4pjfD"></a>		<span class="keyword">inline</span> <span class="keyword">int</span> <a href="../TGriffinHit.html#TGriffinHit:GetBGOMultiplicity" title="int TGriffinHit::GetBGOMultiplicity()">GetBGOMultiplicity</a>() <span class="keyword">const</span>  		  {	<span class="keyword">return</span> <a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:size" title="vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size_type vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size()">size</a>();	}		      <span class="comment">//!</span>
+<a name="MehnXD"></a>		<span class="keyword">inline</span> <a href="../TCrystalHit.html">TCrystalHit</a> *<a href="../TGriffinHit.html#TGriffinHit:GetBGO" title="TCrystalHit* TGriffinHit::GetBGO(const int&amp; i)">GetBGO</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;i)       {	<span class="keyword">return</span> &amp;<a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:at" title="vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::reference vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::at(vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size_type n) or overloads">at</a>(i);	}	        <span class="comment">//!</span>
 
       <span class="keyword">bool</span>   <a href="../TGriffinHit.html#TGriffinHit:InFilter" title="bool TGriffinHit::InFilter(Int_t )">InFilter</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a>);  <span class="comment">//!</span>
 
@@ -140,7 +140,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

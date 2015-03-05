@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:19 2015            -->
+<!--   Date: Wed Mar  4 20:39:16 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -29,8 +29,8 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 
 <a href="../TCal.html">TCal</a>::TCal(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* title) {
    <a href="../TCal.html#TCal:InitTCal" title="void TCal::InitTCal()">InitTCal</a>();
-   <a href="../#TNamed:SetNameTitle" title="void TNamed::SetNameTitle(const char* name,const char* title)">SetNameTitle</a>(name,title);
-   <a href="../TCal.html#TCal:fgraph" title="TGraphErrors* TCal::fgraph">fgraph</a>-&gt;<a href="../#TNamed:SetNameTitle" title="void TNamed::SetNameTitle(const char* name,const char* title)">SetNameTitle</a>(name,title);
+   <a href="../TNamed.html#TNamed:SetNameTitle" title="void TNamed::SetNameTitle(const char* name,const char* title)">SetNameTitle</a>(name,title);
+   <a href="../TCal.html#TCal:fgraph" title="TGraphErrors* TCal::fgraph">fgraph</a>-><a href="../TNamed.html#TNamed:SetNameTitle" title="void TNamed::SetNameTitle(const char* name,const char* title)">SetNameTitle</a>(name,title);
 }
 
 <a name="HWCnnB"></a><a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:_TCal" title="void TCal::~TCal()">~TCal</a>(){
@@ -40,25 +40,25 @@ ClassImp(<a href="../TCal.html">TCal</a>)
    <a href="../TCal.html#TCal:fhist" title="TH1* TCal::fhist">fhist</a> = 0;
 }
 
-<a href="../TCal.html">TCal</a>::TCal(<span class="keyword">const</span> <a href="../TCal.html">TCal</a> &amp;copy) : <a href="../#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>(copy){
+<a href="../TCal.html">TCal</a>::TCal(<span class="keyword">const</span> <a href="../TCal.html">TCal</a> &amp;copy) : <a href="../TNamed.html">TNamed</a>(copy){
    <a href="../TCal.html#TCal:InitTCal" title="void TCal::InitTCal()">InitTCal</a>();
    ((<a href="../TCal.html">TCal</a>&amp;)copy).<a href="../TCal.html#TCal:Copy" title="void TCal::Copy(TObject&amp; obj)">Copy</a>(*<span class="keyword">this</span>);
 }
 
-<span class="comment">/*TGraphErrors <a href="../TCal.html">TCal</a>::MergeGraphs(<a href="../TCal.html">TCal</a> *cal,...){
+<span class="comment">/*<a href="../TGraphErrors.html">TGraphErrors</a> <a href="../TCal.html">TCal</a>::MergeGraphs(<a href="../TCal.html">TCal</a> *cal,...){
    //Probably does not work properly yet
-   TGraphErrors ge;
-   TList* glist;
-   TClass *cl = cal-&gt;<a href="../TCal.html#TCal:Class" title="TClass* TCal::Class()">Class</a>();
+   <a href="../TGraphErrors.html">TGraphErrors</a> ge;
+   <a href="../TList.html">TList</a>* glist;
+   <a href="../TClass.html">TClass</a> *cl = cal-&gt;<a href="../TCal.html#TCal:Class" title="TClass* TCal::Class()">Class</a>();
    if(!(cal-&gt;<a href="../TCal.html#TCal:IsGroupable" title="Bool_t TCal::IsGroupable()">IsGroupable</a>())){
-      cal-&gt;<a href="../#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"MergeGraphs"</span>,<span class="string">"%s is not groupable"</span>,cal-&gt;<a href="../#TObject:ClassName" title="const char* TObject::ClassName()">ClassName</a>());
+      cal-&gt;<a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"MergeGraphs"</span>,<span class="string">"%s is not groupable"</span>,cal-&gt;<a href="../TObject.html#TObject:ClassName" title="const char* TObject::ClassName()">ClassName</a>());
       return ge;
    }
    va_list ap;
    va_start(ap, cal);
    while(cal){
       if(cal-&gt;<a href="../TCal.html#TCal:Class" title="TClass* TCal::Class()">Class</a>() != cl){
-         cal-&gt;<a href="../#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"MergeGraphs"</span>,<span class="string">"Trying to merge a %s to a %s"</span>,cal-&gt;<a href="../#TObject:ClassName" title="const char* TObject::ClassName()">ClassName</a>(),cl-&gt;<a href="../#TObject:ClassName" title="const char* TObject::ClassName()">ClassName</a>());
+         cal-&gt;<a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"MergeGraphs"</span>,<span class="string">"Trying to merge a %s to a %s"</span>,cal-&gt;<a href="../TObject.html#TObject:ClassName" title="const char* TObject::ClassName()">ClassName</a>(),cl-&gt;<a href="../TObject.html#TObject:ClassName" title="const char* TObject::ClassName()">ClassName</a>());
          return ge;
       }
       glist.Add(cal-&gt;<a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>());
@@ -71,19 +71,19 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 
 <a name="JbFc1B"></a><span class="keyword">void</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:SetNucleus" title="void TCal::SetNucleus(TNucleus* nuc)">SetNucleus</a>(<a href="../TNucleus.html">TNucleus</a>* nuc){
    <span class="keyword">if</span>(!nuc){
-      <a href="../#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetNucleus"</span>,<span class="string">"Nucleus does not exist"</span>);
+      <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetNucleus"</span>,<span class="string">"Nucleus does not exist"</span>);
       <span class="keyword">return</span>;
    }
    <span class="keyword">if</span>(<a href="../TCal.html#TCal:fnuc" title="TNucleus* TCal::fnuc">fnuc</a>)
-      <a href="../#TObject:Warning" title="void TObject::Warning(const char* method,const char* msgfmt)">Warning</a>(<span class="string">"SetNucleus"</span>,<span class="string">"Overwriting nucleus: %s"</span>,<a href="../TCal.html#TCal:fnuc" title="TNucleus* TCal::fnuc">fnuc</a>-><a href="../#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
+      <a href="../TObject.html#TObject:Warning" title="void TObject::Warning(const char* method,const char* msgfmt)">Warning</a>(<span class="string">"SetNucleus"</span>,<span class="string">"Overwriting nucleus: %s"</span>,<a href="../TCal.html#TCal:fnuc" title="TNucleus* TCal::fnuc">fnuc</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
    <span class="keyword">if</span>(!(nuc-&gt;SetSourceData())){
-      <a href="../#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetNucleus"</span>,<span class="string">"Source Data not found for %s"</span>,nuc-&gt;<a href="../#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
+      <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetNucleus"</span>,<span class="string">"Source Data not found for %s"</span>,nuc-&gt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
       <span class="keyword">return</span>;
    }
    <a href="../TCal.html#TCal:fnuc" title="TNucleus* TCal::fnuc">fnuc</a> = nuc;
 }
 
-<a name="k1IWTC"></a><span class="keyword">void</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:Copy" title="void TCal::Copy(TObject&amp; obj)">Copy</a>(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> &amp;obj) <span class="keyword">const</span>{
+<a name="k1IWTC"></a><span class="keyword">void</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:Copy" title="void TCal::Copy(TObject&amp; obj)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;obj) <span class="keyword">const</span>{
    ((<a href="../TCal.html">TCal</a>&amp;)obj).<a href="../TCal.html#TCal:fchan" title="TRef TCal::fchan">fchan</a> = <a href="../TCal.html#TCal:fchan" title="TRef TCal::fchan">fchan</a>;
    <span class="comment">//Things to make deep copies of</span>
    <span class="keyword">if</span>(<a href="../TCal.html#TCal:fgraph" title="TGraphErrors* TCal::fgraph">fgraph</a>)     *(((<a href="../TCal.html">TCal</a>&amp;)obj).<a href="../TCal.html#TCal:fgraph" title="TGraphErrors* TCal::fgraph">fgraph</a>)     =  *<a href="../TCal.html#TCal:fgraph" title="TGraphErrors* TCal::fgraph">fgraph</a>;
@@ -91,15 +91,15 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 
    <span class="comment">//Members to make shallow copies of</span>
                     ((<a href="../TCal.html">TCal</a>&amp;)obj).<a href="../TCal.html#TCal:fnuc" title="TNucleus* TCal::fnuc">fnuc</a>        =  <a href="../TCal.html#TCal:fnuc" title="TNucleus* TCal::fnuc">fnuc</a>;
-   <a href="../#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>::<a href="../TCal.html#TCal:Copy" title="void TCal::Copy(TObject&amp; obj)">Copy</a>((<a href="../TCal.html">TCal</a>&amp;)obj);
+   <a href="../TNamed.html">TNamed</a>::<a href="../TNamed.html#TNamed:Copy" title="void TNamed::Copy(TObject&amp; named)">Copy</a>((<a href="../TCal.html">TCal</a>&amp;)obj);
 }
 
 <a name="oatbZ"></a><a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:SetChannel" title="Bool_t TCal::SetChannel(const TChannel* chan) or overloads">SetChannel</a>(<span class="keyword">const</span> <a href="../TChannel.html">TChannel</a>* chan){
    <span class="keyword">if</span>(!chan){
-      <a href="../#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetChannel"</span>,<span class="string">"TChannel does not exist"</span>);
+      <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetChannel"</span>,<span class="string">"TChannel does not exist"</span>);
       <span class="keyword">return</span> <span class="keyword">false</span>;
    }
-   <span class="comment">//Set our TRef to point at the <a href="../TChannel.html">TChannel</a></span>
+   <span class="comment">//Set our <a href="../TRef.html">TRef</a> to point at the <a href="../TChannel.html">TChannel</a></span>
    <a href="../TCal.html#TCal:fchan" title="TRef TCal::fchan">fchan</a> = (<a href="../TChannel.html">TChannel</a>*)chan;
    <span class="keyword">return</span> <span class="keyword">true</span>;
 }
@@ -107,7 +107,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 <a name="fTS.kE"></a>std::vector&lt;<a href="../ListOfTypes.html#Double_t">Double_t</a>&gt; <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:GetParameters" title="vector&lt;Double_t&gt; TCal::GetParameters()">GetParameters</a>() <span class="keyword">const</span>{
    std::vector&lt;<a href="../ListOfTypes.html#Double_t">Double_t</a>&gt; paramlist;
    <span class="keyword">if</span>(!<a href="../TCal.html#TCal:GetFitFunction" title="TF1* TCal::GetFitFunction()">GetFitFunction</a>()){
-      <a href="../#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"GetParameters"</span>,<span class="string">"Function has not been fitted yet"</span>);
+      <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"GetParameters"</span>,<span class="string">"Function has not been fitted yet"</span>);
       <span class="keyword">return</span> paramlist;
    }
    
@@ -121,7 +121,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 
 <a name="KJB_hD"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:GetParameter" title="Double_t TCal::GetParameter(Int_t parameter)">GetParameter</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> parameter) <span class="keyword">const</span>{
    <span class="keyword">if</span>(!<a href="../TCal.html#TCal:GetFitFunction" title="TF1* TCal::GetFitFunction()">GetFitFunction</a>()){
-      <a href="../#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"GetParameter"</span>,<span class="string">"Function have not been fitted yet"</span>);
+      <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"GetParameter"</span>,<span class="string">"Function have not been fitted yet"</span>);
       <span class="keyword">return</span> 0;
    }
    <span class="keyword">return</span> <a href="../TCal.html#TCal:GetFitFunction" title="TF1* TCal::GetFitFunction()">GetFitFunction</a>()-&gt;<a href="../TCal.html#TCal:GetParameter" title="Double_t TCal::GetParameter(Int_t parameter)">GetParameter</a>(parameter); <span class="comment">//Root does all of the checking for us.</span>
@@ -130,7 +130,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 <a name="LEL4PB"></a><a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:SetChannel" title="Bool_t TCal::SetChannel(const TChannel* chan) or overloads">SetChannel</a>(<a href="../ListOfTypes.html#UInt_t">UInt_t</a> channum){
    <a href="../TChannel.html">TChannel</a> *chan = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannelByNumber" title="TChannel* TChannel::GetChannelByNumber(int temp_numebr)">GetChannelByNumber</a>(channum);
    <span class="keyword">if</span>(!chan){
-      <a href="../#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetChannel"</span>,<span class="string">"Channel Number %d does not exist in current memory."</span>,channum);
+      <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetChannel"</span>,<span class="string">"Channel Number %d does not exist in current memory."</span>,channum);
       <span class="keyword">return</span> <span class="keyword">false</span>;
    }
    <span class="keyword">else</span>
@@ -138,10 +138,10 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 }
 
 <a name="VyFkAB"></a><a href="../TChannel.html">TChannel</a>* <span class="keyword">const</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>() <span class="keyword">const</span> {
-   <span class="keyword">return</span> (<a href="../TChannel.html">TChannel</a>*)(<a href="../TCal.html#TCal:fchan" title="TRef TCal::fchan">fchan</a>.GetObject()); <span class="comment">//Gets the object pointed at by the TRef and casts it to a <a href="../TChannel.html">TChannel</a></span>
+   <span class="keyword">return</span> (<a href="../TChannel.html">TChannel</a>*)(<a href="../TCal.html#TCal:fchan" title="TRef TCal::fchan">fchan</a>.<a href="../TRef.html#TRef:GetObject" title="TObject* TRef::GetObject()">GetObject</a>()); <span class="comment">//Gets the object pointed at by the <a href="../TRef.html">TRef</a> and casts it to a <a href="../TChannel.html">TChannel</a></span>
 }
 
-<a name="hqGGkD"></a><span class="keyword">void</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:SetHist" title="void TCal::SetHist(TH1* hist)">SetHist</a>(TH1* hist) {
+<a name="hqGGkD"></a><span class="keyword">void</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:SetHist" title="void TCal::SetHist(TH1* hist)">SetHist</a>(<a href="../TH1.html">TH1</a>* hist) {
 <span class="comment">//Sets this histogram pointed to. <a href="../TCal.html">TCal</a> does NOT take ownership so you cannot delete this</span>
 <span class="comment">//histogram as <a href="../ListOfTypes.html#long">long</a> as you want to access the hist in the <a href="../TCal.html">TCal</a>/write it out. I will add this</span>
 <span class="comment">//functionality if I get annoyed enough with the way it is.</span>
@@ -151,7 +151,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 
 <a name="itP9wD"></a><span class="keyword">void</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:Clear" title="void TCal::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) {
    <a href="../TCal.html#TCal:fchan" title="TRef TCal::fchan">fchan</a> = 0;
-   <a href="../TCal.html#TCal:fgraph" title="TGraphErrors* TCal::fgraph">fgraph</a>-&gt;<a href="../TCal.html#TCal:Clear" title="void TCal::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
+   <a href="../TCal.html#TCal:fgraph" title="TGraphErrors* TCal::fgraph">fgraph</a>-><a href="../TNamed.html#TNamed:Clear" title="void TNamed::Clear(Option_t* option=&quot;&quot;)">Clear</a>();
 }
 
 <a name="iqkoP"></a><span class="keyword">void</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:Print" title="void TCal::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) <span class="keyword">const</span>{
@@ -164,7 +164,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
    <span class="keyword">if</span>(<a href="../TCal.html#TCal:ffitfunc" title="TF1* TCal::ffitfunc">ffitfunc</a>){
    printf(<span class="string">"\n*******************************\n"</span>);
    printf(<span class="string">" Fit:\n"</span>);      
-      <a href="../TCal.html#TCal:ffitfunc" title="TF1* TCal::ffitfunc">ffitfunc</a>-&gt;<a href="../TCal.html#TCal:Print" title="void TCal::Print(Option_t* opt=&quot;&quot;)">Print</a>();
+      <a href="../TCal.html#TCal:ffitfunc" title="TF1* TCal::ffitfunc">ffitfunc</a>-><a href="../TF1.html#TF1:Print" title="void TF1::Print(Option_t* option=&quot;&quot;)">Print</a>();
    printf(<span class="string">"\n*******************************\n"</span>);   
    }
    <span class="keyword">else</span>
@@ -173,7 +173,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 }
 
 <a name="keBlYD"></a><span class="keyword">void</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:InitTCal" title="void TCal::InitTCal()">InitTCal</a>() {
-   <a href="../TCal.html#TCal:fgraph" title="TGraphErrors* TCal::fgraph">fgraph</a> = <span class="keyword">new</span> TGraphErrors;
+   <a href="../TCal.html#TCal:fgraph" title="TGraphErrors* TCal::fgraph">fgraph</a> = <span class="keyword">new</span> <a href="../TGraphErrors.html">TGraphErrors</a>;
    <a href="../TCal.html#TCal:ffitfunc" title="TF1* TCal::ffitfunc">ffitfunc</a> = 0;
    <a href="../TCal.html#TCal:fchan" title="TRef TCal::fchan">fchan</a> = 0;
    <a href="../TCal.html#TCal:fnuc" title="TNucleus* TCal::fnuc">fnuc</a> = 0;
@@ -188,7 +188,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

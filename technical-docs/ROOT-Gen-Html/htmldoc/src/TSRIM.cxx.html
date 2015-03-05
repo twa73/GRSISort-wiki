@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:31 2015            -->
+<!--   Date: Wed Mar  4 20:40:10 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,12 +22,12 @@
 <span class="cpp">#include "<a href="../TSRIM.h">TSRIM.h</a>"</span>
 <span class="cpp">#include "<a href="../Globals.h">Globals.h</a>"</span>
 
-<span class="cpp">#include &lt;TVector3.h&gt;</span>
-<span class="cpp">#include &lt;TMath.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TVector3.h">TVector3.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TMath.h">TMath.h</a>&gt;</span>
 
 <span class="cpp">#include &lt;cmath&gt;</span>
 
-<span class="cpp">#include &lt;TStopwatch.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TStopwatch.h">TStopwatch.h</a>&gt;</span>
 
 <span class="cpp">#include &lt;cstdio&gt;</span>
 
@@ -121,13 +121,13 @@ ClassImp(<a href="../TSRIM.html">TSRIM</a>)
 			<a href="../TSRIM.html#TSRIM:dEdX" title="vector&lt;double&gt; TSRIM::dEdX">dEdX</a>.push_back(dEdX_temp[i]*density_scale);
 		}
 
-		<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a> = <span class="keyword">new</span> TGraph(<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>[0],&amp;<a href="../TSRIM.html#TSRIM:dEdX" title="vector&lt;double&gt; TSRIM::dEdX">dEdX</a>[0]);
-		<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>-&gt;GetXaxis()-&gt;SetTitle(<span class="string">"Energy (keV)"</span>);
-		<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>-&gt;GetYaxis()-&gt;SetTitle(<span class="string">"dE/dx (keV/um)"</span>);		
-    <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a> = <span class="keyword">new</span> TSpline3(<span class="string">"dEdX_vs_E"</span>,<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>);
+		<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a> = <span class="keyword">new</span> <a href="../TGraph.html">TGraph</a>(<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>[0],&amp;<a href="../TSRIM.html#TSRIM:dEdX" title="vector&lt;double&gt; TSRIM::dEdX">dEdX</a>[0]);
+		<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>-><a href="../TGraph.html#TGraph:GetXaxis" title="TAxis* TGraph::GetXaxis()">GetXaxis</a>()-><a href="../TNamed.html#TNamed:SetTitle" title="void TNamed::SetTitle(const char* title=&quot;&quot;)">SetTitle</a>(<span class="string">"Energy (keV)"</span>);
+		<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>-><a href="../TGraph.html#TGraph:GetYaxis" title="TAxis* TGraph::GetYaxis()">GetYaxis</a>()-><a href="../TNamed.html#TNamed:SetTitle" title="void TNamed::SetTitle(const char* title=&quot;&quot;)">SetTitle</a>(<span class="string">"dE/dx (keV/um)"</span>);		
+    <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a> = <span class="keyword">new</span> <a href="../TSpline3.html">TSpline3</a>(<span class="string">"dEdX_vs_E"</span>,<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>);
 
-    <span class="keyword">double</span> dataEmax = TMath::MaxElement(<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>[0]);
-    <span class="keyword">double</span> dataEmin = TMath::MinElement(<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>[0]);     
+    <span class="keyword">double</span> dataEmax = <a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:MaxElement" title="short TMath::MaxElement(Long64_t n,const short* a) or overloads">MaxElement</a>(<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>[0]);
+    <span class="keyword">double</span> dataEmin = <a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:MinElement" title="short TMath::MinElement(Long64_t n,const short* a) or overloads">MinElement</a>(<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>[0]);     
 
    <span class="keyword">if</span>( emax == -1.0 )
       emax = dataEmax; <span class="comment">// default to highest available energy in data table</span>
@@ -155,10 +155,10 @@ ClassImp(<a href="../TSRIM.html">TSRIM</a>)
     <span class="keyword">for</span> (<span class="keyword">int</span> i=0; i&lt;3; i++){ <span class="comment">// start by using euler step on first few points</span>
 			<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.push_back(xtemp);	
 			<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.push_back(etemp);
-      k[i] = <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-&gt;Eval(etemp); <span class="comment">// contains gradient at previous steps</span>
+      k[i] = <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-><a href="../TSpline3.html#TSpline3:Eval" title="Double_t TSpline3::Eval(Double_t x)">Eval</a>(etemp); <span class="comment">// contains gradient at previous steps</span>
 
  			xtemp += xstep;     
-      etemp -= xstep*<a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-&gt;Eval(etemp);	
+      etemp -= xstep*<a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-><a href="../TSpline3.html#TSpline3:Eval" title="Double_t TSpline3::Eval(Double_t x)">Eval</a>(etemp);	
     }
 
     <span class="keyword">while</span>(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.back()&gt;0){ <span class="comment">// keep going until <a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a> goes negative</span>
@@ -169,7 +169,7 @@ ClassImp(<a href="../TSRIM.html">TSRIM</a>)
       k[3] = k[2];
       k[2] = k[1];
       k[1] = k[0];
-      k[0] = <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-&gt;Eval(etemp);
+      k[0] = <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-><a href="../TSpline3.html#TSpline3:Eval" title="Double_t TSpline3::Eval(Double_t x)">Eval</a>(etemp);
       <span class="comment">// extrapolate to new energy using weighted average of gradients at previous points</span>
       etemp -= xstep*(55/24*k[0]-59/24*k[1]+37/24*k[2]-8/24*k[3]);
 		}
@@ -177,29 +177,29 @@ ClassImp(<a href="../TSRIM.html">TSRIM</a>)
     <a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.back() = <a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>[<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.size()-2]+(<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.back()-<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>[<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.size()-2])*(emin-<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>[<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size()-2])/(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.back()-<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>[<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size()-2]);
     <a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.back() = emin;
 
-    <a href="../TSRIM.html#TSRIM:Emin" title="double TSRIM::Emin">Emin</a> = TMath::MinElement(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>[0]);
-    <a href="../TSRIM.html#TSRIM:Emax" title="double TSRIM::Emax">Emax</a> = TMath::MaxElement(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>[0]);
-    <a href="../TSRIM.html#TSRIM:Xmin" title="double TSRIM::Xmin">Xmin</a> = TMath::MinElement(<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>[0]);
-    <a href="../TSRIM.html#TSRIM:Xmax" title="double TSRIM::Xmax">Xmax</a> = TMath::MaxElement(<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>[0]);
+    <a href="../TSRIM.html#TSRIM:Emin" title="double TSRIM::Emin">Emin</a> = <a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:MinElement" title="short TMath::MinElement(Long64_t n,const short* a) or overloads">MinElement</a>(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>[0]);
+    <a href="../TSRIM.html#TSRIM:Emax" title="double TSRIM::Emax">Emax</a> = <a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:MaxElement" title="short TMath::MaxElement(Long64_t n,const short* a) or overloads">MaxElement</a>(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>[0]);
+    <a href="../TSRIM.html#TSRIM:Xmin" title="double TSRIM::Xmin">Xmin</a> = <a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:MinElement" title="short TMath::MinElement(Long64_t n,const short* a) or overloads">MinElement</a>(<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>[0]);
+    <a href="../TSRIM.html#TSRIM:Xmax" title="double TSRIM::Xmax">Xmax</a> = <a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:MaxElement" title="short TMath::MaxElement(Long64_t n,const short* a) or overloads">MaxElement</a>(<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>[0]);
 
-   	<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a> = <span class="keyword">new</span> TGraph(<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>[0],&amp;<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>[0]);	
-		<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>-&gt;SetName(<span class="string">"XgetE"</span>);
-		<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>-&gt;SetTitle(filename);
-		<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>-&gt;GetXaxis()-&gt;SetTitle(<span class="string">"Distance (um)"</span>);
-		<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>-&gt;GetYaxis()-&gt;SetTitle(<span class="string">"Energy (keV)"</span>);
-		<a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a> = <span class="keyword">new</span> TSpline3(Form(<span class="string">"%s_Xspline"</span>,filename),<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>);	
-		<a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a>-&gt;SetName(Form(<span class="string">"%s_Xspline"</span>,filename));	
+   	<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a> = <span class="keyword">new</span> <a href="../TGraph.html">TGraph</a>(<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.size(),&amp;<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>[0],&amp;<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>[0]);	
+		<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>-><a href="../TNamed.html#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(<span class="string">"XgetE"</span>);
+		<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>-><a href="../TGraph.html#TGraph:SetTitle" title="void TGraph::SetTitle(const char* title=&quot;&quot;)">SetTitle</a>(filename);
+		<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>-><a href="../TGraph.html#TGraph:GetXaxis" title="TAxis* TGraph::GetXaxis()">GetXaxis</a>()-><a href="../TNamed.html#TNamed:SetTitle" title="void TNamed::SetTitle(const char* title=&quot;&quot;)">SetTitle</a>(<span class="string">"Distance (um)"</span>);
+		<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>-><a href="../TGraph.html#TGraph:GetYaxis" title="TAxis* TGraph::GetYaxis()">GetYaxis</a>()-><a href="../TNamed.html#TNamed:SetTitle" title="void TNamed::SetTitle(const char* title=&quot;&quot;)">SetTitle</a>(<span class="string">"Energy (keV)"</span>);
+		<a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a> = <span class="keyword">new</span> <a href="../TSpline3.html">TSpline3</a>(Form(<span class="string">"%s_Xspline"</span>,filename),<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>);	
+		<a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a>-><a href="../TNamed.html#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(Form(<span class="string">"%s_Xspline"</span>,filename));	
 
-    <a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a> = <span class="keyword">new</span> TGraph(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size());
+    <a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a> = <span class="keyword">new</span> <a href="../TGraph.html">TGraph</a>(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size());
     <span class="keyword">for</span>(<span class="keyword">int</span> x=<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size()-1;x&gt;=0;x--) { <span class="comment">// make sure x data is increasing</span>
-      <a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-&gt;SetPoint(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size()-x-1,<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.at(x),<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.at(x));
+      <a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-><a href="../TGraph.html#TGraph:SetPoint" title="void TGraph::SetPoint(Int_t i,Double_t x,Double_t y)">SetPoint</a>(<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.size()-x-1,<a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>.at(x),<a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>.at(x));
 		}
-		<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-&gt;SetName(<span class="string">"EgetX"</span>);
-		<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-&gt;SetTitle(filename);
-		<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-&gt;GetYaxis()-&gt;SetTitle(<span class="string">"Distance (um)"</span>);
-		<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-&gt;GetXaxis()-&gt;SetTitle(<span class="string">"Energy (keV)"</span>);
-		<a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a> = <span class="keyword">new</span> TSpline3(Form(<span class="string">"%s_Espline"</span>,filename),<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>);
-    <a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a>-&gt;SetName(Form(<span class="string">"%s_Espline"</span>,filename));
+		<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-><a href="../TNamed.html#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(<span class="string">"EgetX"</span>);
+		<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-><a href="../TGraph.html#TGraph:SetTitle" title="void TGraph::SetTitle(const char* title=&quot;&quot;)">SetTitle</a>(filename);
+		<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-><a href="../TGraph.html#TGraph:GetYaxis" title="TAxis* TGraph::GetYaxis()">GetYaxis</a>()-><a href="../TNamed.html#TNamed:SetTitle" title="void TNamed::SetTitle(const char* title=&quot;&quot;)">SetTitle</a>(<span class="string">"Distance (um)"</span>);
+		<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>-><a href="../TGraph.html#TGraph:GetXaxis" title="TAxis* TGraph::GetXaxis()">GetXaxis</a>()-><a href="../TNamed.html#TNamed:SetTitle" title="void TNamed::SetTitle(const char* title=&quot;&quot;)">SetTitle</a>(<span class="string">"Energy (keV)"</span>);
+		<a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a> = <span class="keyword">new</span> <a href="../TSpline3.html">TSpline3</a>(Form(<span class="string">"%s_Espline"</span>,filename),<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>);
+    <a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a>-><a href="../TNamed.html#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(Form(<span class="string">"%s_Espline"</span>,filename));
     
 	}
 
@@ -211,7 +211,7 @@ ClassImp(<a href="../TSRIM.html">TSRIM</a>)
 
 <a name="l_jMoB"></a><span class="keyword">double</span> <a href="../TSRIM.html">TSRIM</a>::<a href="../TSRIM.html#TSRIM:GetEnergy" title="double TSRIM::GetEnergy(double energy,double dist)">GetEnergy</a>(<span class="keyword">double</span> energy,<span class="keyword">double</span> dist)	{
 
-  <span class="keyword">double</span> xbegin = <a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a>-&gt;Eval(energy);	
+  <span class="keyword">double</span> xbegin = <a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a>-><a href="../TSpline3.html#TSpline3:Eval" title="Double_t TSpline3::Eval(Double_t x)">Eval</a>(energy);	
  <span class="comment">// printf(<span class="string">"xbegin = %.02f \t energy = %.02f \t xend = %.02f \t Xmax = %.02f\n"</span>,xbegin,energy,xbegin+dist,<a href="../TSRIM.html#TSRIM:Xmax" title="double TSRIM::Xmax">Xmax</a>);</span>
 
   <span class="keyword">if</span>( energy &gt; <a href="../TSRIM.html#TSRIM:Emax" title="double TSRIM::Emax">Emax</a> || xbegin+dist &lt; <a href="../TSRIM.html#TSRIM:Xmin" title="double TSRIM::Xmin">Xmin</a> ){
@@ -222,7 +222,7 @@ ClassImp(<a href="../TSRIM.html">TSRIM</a>)
   <span class="keyword">else</span> <span class="keyword">if</span> (xbegin &gt; <a href="../TSRIM.html#TSRIM:Xmax" title="double TSRIM::Xmax">Xmax</a> || xbegin+dist &gt; <a href="../TSRIM.html#TSRIM:Xmax" title="double TSRIM::Xmax">Xmax</a>)
     <span class="keyword">return</span> 0.0;
 
-  <span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a>-&gt;Eval(xbegin+dist);
+  <span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a>-><a href="../TSpline3.html#TSpline3:Eval" title="Double_t TSpline3::Eval(Double_t x)">Eval</a>(xbegin+dist);
 }
 
 <span class="comment">// THIS FUNCTION DOES A MORE ACCURATE ENERGY LOSS CALCULATION BASED ON SMALL EXTRAPOLATIONS</span>
@@ -234,14 +234,14 @@ ClassImp(<a href="../TSRIM.html">TSRIM</a>)
 	
 	<span class="keyword">double</span> energy_temp = energy;
 	<span class="keyword">double</span> xstep = stepsize, xtot = 0.0; <span class="comment">// MAKE XSTEP SMALLER FOR BETTER RESULTS. 1UM SHOULD BE FINE ... UNLESS YOU ARE AT THE BRAGG PEAK ??</span>
-	energy_temp -= fmod(thickness,xstep) * <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-&gt;Eval(energy_temp); <span class="comment">// get rid of fractional distance</span>
+	energy_temp -= fmod(thickness,xstep) * <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-><a href="../TSpline3.html#TSpline3:Eval" title="Double_t TSpline3::Eval(Double_t x)">Eval</a>(energy_temp); <span class="comment">// get rid of fractional distance</span>
 	xtot += fmod(thickness,xstep);
 		
 	<span class="keyword">if</span>(thickness &gt;= xstep) {
 
 		<span class="keyword">while</span>(xtot&lt;thickness){
-<span class="comment">//				printf(<span class="string">"energy_temp = %.02f\t DEDX = %.02f\n"</span>,energy_temp,<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>-&gt;Eval(energy_temp,0,<span class="string">"S"</span>));</span>
-				energy_temp -= xstep * <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-&gt;Eval(energy_temp); <span class="comment">// update energy recursively so that it decreases each step</span>
+<span class="comment">//				printf(<span class="string">"energy_temp = %.02f\t DEDX = %.02f\n"</span>,energy_temp,<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>-><a href="../TGraph.html#TGraph:Eval" title="Double_t TGraph::Eval(Double_t x,TSpline* spline=0,Option_t* option=&quot;&quot;)">Eval</a>(energy_temp,0,<span class="string">"S"</span>));</span>
+				energy_temp -= xstep * <a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>-><a href="../TSpline3.html#TSpline3:Eval" title="Double_t TSpline3::Eval(Double_t x)">Eval</a>(energy_temp); <span class="comment">// update energy recursively so that it decreases each step</span>
 				xtot += xstep;
 				<span class="keyword">if</span>(energy_temp&lt;=0.0)
 					<span class="keyword">return</span> 0.0; <span class="comment">// if no energy is remaining then final energy is zero</span>
@@ -259,7 +259,7 @@ ClassImp(<a href="../TSRIM.html">TSRIM</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

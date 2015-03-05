@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:14 2015            -->
+<!--   Date: Wed Mar  4 20:38:50 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -27,46 +27,46 @@
 <span class="comment">//                                                                      //</span>
 <span class="comment">// <a href="../GROOTGuiFactory.html">GROOTGuiFactory</a>                                                      //</span>
 <span class="comment">//                                                                      //</span>
-<span class="comment">// This class is a factory for ROOT GUI components. It overrides        //</span>
-<span class="comment">// the member functions of the ABS <a href="../#TGuiFactory:TGuiFactory" title="TGuiFactory TGuiFactory::TGuiFactory(const char* name=&quot;Batch&quot;,const char* title=&quot;Batch GUI Factory&quot;) or overloads">TGuiFactory</a>.  This is necessary      //</span>
+<span class="comment">// This class is a factory for <a href="../ROOT.html">ROOT</a> GUI components. It overrides        //</span>
+<span class="comment">// the member functions of the ABS <a href="../TGuiFactory.html">TGuiFactory</a>.  This is necessary      //</span>
 <span class="comment">// in order to override the native root canvas and fully take control   //</span>
 <span class="comment">// of the users interface with objects drawn to the screen   pcb.       //</span>
 <span class="comment">//                                                                      //</span>
 <span class="comment">//////////////////////////////////////////////////////////////////////////</span>
 
 <span class="cpp">#ifndef ROOT_TGuiFactory</span>
-<span class="cpp">#include "TGuiFactory.h"</span>
+<span class="cpp">#include "<a href="../TGuiFactory.h">TGuiFactory.h</a>"</span>
 <span class="cpp">#endif</span>
 
-<span class="keyword">class</span> TApplicationImp;
-<span class="keyword">class</span> TCanvasImp;
-<span class="keyword">class</span> TBrowserImp;
-<span class="keyword">class</span> TContextMenuImp;
-<span class="keyword">class</span> TContextMenu;
-<span class="keyword">class</span> TControlBarImp;
-<span class="keyword">class</span> TControlBar;
+<span class="keyword">class</span> <a href="../TApplicationImp.html">TApplicationImp</a>;
+<span class="keyword">class</span> <a href="../TCanvasImp.html">TCanvasImp</a>;
+<span class="keyword">class</span> <a href="../TBrowserImp.html">TBrowserImp</a>;
+<span class="keyword">class</span> <a href="../TContextMenuImp.html">TContextMenuImp</a>;
+<span class="keyword">class</span> <a href="../TContextMenu.html">TContextMenu</a>;
+<span class="keyword">class</span> <a href="../TControlBarImp.html">TControlBarImp</a>;
+<span class="keyword">class</span> <a href="../TControlBar.html">TControlBar</a>;
 
 
-<span class="keyword">class</span> <a href="../GROOTGuiFactory.html">GROOTGuiFactory</a> : <span class="keyword">public</span> <a href="../#TGuiFactory:TGuiFactory" title="TGuiFactory TGuiFactory::TGuiFactory(const char* name=&quot;Batch&quot;,const char* title=&quot;Batch GUI Factory&quot;) or overloads">TGuiFactory</a> {
+<span class="keyword">class</span> <a href="../GROOTGuiFactory.html">GROOTGuiFactory</a> : <span class="keyword">public</span> <a href="../TGuiFactory.html">TGuiFactory</a> {
 
 <span class="keyword">public</span>:
 <a name="YG_c1E"></a>   <a href="../GROOTGuiFactory.html">GROOTGuiFactory</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name = <span class="string">"Root"</span>, <span class="keyword">const</span> <span class="keyword">char</span> *title = <span class="string">"ROOT GUI Factory"</span>);
 <a name="WjV.yB"></a>   <span class="keyword">virtual</span> <a href="../GROOTGuiFactory.html#GROOTGuiFactory:_GROOTGuiFactory" title="void GROOTGuiFactory::~GROOTGuiFactory()">~GROOTGuiFactory</a>() { }
 
-   <span class="keyword">virtual</span> TApplicationImp *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateApplicationImp" title="TApplicationImp* GROOTGuiFactory::CreateApplicationImp(const char* classname,int* argc,char** argv)">CreateApplicationImp</a>(<span class="keyword">const</span> <span class="keyword">char</span> *classname, <span class="keyword">int</span> *argc, <span class="keyword">char</span> **argv);
+   <span class="keyword">virtual</span> <a href="../TApplicationImp.html">TApplicationImp</a> *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateApplicationImp" title="TApplicationImp* GROOTGuiFactory::CreateApplicationImp(const char* classname,int* argc,char** argv)">CreateApplicationImp</a>(<span class="keyword">const</span> <span class="keyword">char</span> *classname, <span class="keyword">int</span> *argc, <span class="keyword">char</span> **argv);
 
-   <span class="keyword">virtual</span> TCanvasImp *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateCanvasImp" title="TCanvasImp* GROOTGuiFactory::CreateCanvasImp(TCanvas* c,const char* title,UInt_t width,UInt_t height) or overloads">CreateCanvasImp</a>(TCanvas *c, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> width, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> height);
-   <span class="keyword">virtual</span> TCanvasImp *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateCanvasImp" title="TCanvasImp* GROOTGuiFactory::CreateCanvasImp(TCanvas* c,const char* title,UInt_t width,UInt_t height) or overloads">CreateCanvasImp</a>(TCanvas *c, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#Int_t">Int_t</a> x, <a href="../ListOfTypes.html#Int_t">Int_t</a> y, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> width, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> height);
+   <span class="keyword">virtual</span> <a href="../TCanvasImp.html">TCanvasImp</a> *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateCanvasImp" title="TCanvasImp* GROOTGuiFactory::CreateCanvasImp(TCanvas* c,const char* title,UInt_t width,UInt_t height) or overloads">CreateCanvasImp</a>(<a href="../TCanvas.html">TCanvas</a> *c, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> width, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> height);
+   <span class="keyword">virtual</span> <a href="../TCanvasImp.html">TCanvasImp</a> *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateCanvasImp" title="TCanvasImp* GROOTGuiFactory::CreateCanvasImp(TCanvas* c,const char* title,UInt_t width,UInt_t height) or overloads">CreateCanvasImp</a>(<a href="../TCanvas.html">TCanvas</a> *c, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#Int_t">Int_t</a> x, <a href="../ListOfTypes.html#Int_t">Int_t</a> y, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> width, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> height);
 
-   <span class="keyword">virtual</span> TBrowserImp *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateBrowserImp" title="TBrowserImp* GROOTGuiFactory::CreateBrowserImp(TBrowser* b,const char* title,UInt_t width,UInt_t height,Option_t* opt=&quot;&quot;) or overloads">CreateBrowserImp</a>(TBrowser *b, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> width, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> height, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
-   <span class="keyword">virtual</span> TBrowserImp *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateBrowserImp" title="TBrowserImp* GROOTGuiFactory::CreateBrowserImp(TBrowser* b,const char* title,UInt_t width,UInt_t height,Option_t* opt=&quot;&quot;) or overloads">CreateBrowserImp</a>(TBrowser *b, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#Int_t">Int_t</a> x, <a href="../ListOfTypes.html#Int_t">Int_t</a> y, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> width, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> height, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
+   <span class="keyword">virtual</span> <a href="../TBrowserImp.html">TBrowserImp</a> *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateBrowserImp" title="TBrowserImp* GROOTGuiFactory::CreateBrowserImp(TBrowser* b,const char* title,UInt_t width,UInt_t height,Option_t* opt=&quot;&quot;) or overloads">CreateBrowserImp</a>(<a href="../TBrowser.html">TBrowser</a> *b, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> width, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> height, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
+   <span class="keyword">virtual</span> <a href="../TBrowserImp.html">TBrowserImp</a> *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateBrowserImp" title="TBrowserImp* GROOTGuiFactory::CreateBrowserImp(TBrowser* b,const char* title,UInt_t width,UInt_t height,Option_t* opt=&quot;&quot;) or overloads">CreateBrowserImp</a>(<a href="../TBrowser.html">TBrowser</a> *b, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#Int_t">Int_t</a> x, <a href="../ListOfTypes.html#Int_t">Int_t</a> y, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> width, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> height, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
 
-   <span class="keyword">virtual</span> TContextMenuImp *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateContextMenuImp" title="TContextMenuImp* GROOTGuiFactory::CreateContextMenuImp(TContextMenu* c,const char* name,const char* title)">CreateContextMenuImp</a>(TContextMenu *c, <span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">const</span> <span class="keyword">char</span> *title);
+   <span class="keyword">virtual</span> <a href="../TContextMenuImp.html">TContextMenuImp</a> *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateContextMenuImp" title="TContextMenuImp* GROOTGuiFactory::CreateContextMenuImp(TContextMenu* c,const char* name,const char* title)">CreateContextMenuImp</a>(<a href="../TContextMenu.html">TContextMenu</a> *c, <span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">const</span> <span class="keyword">char</span> *title);
 
-   <span class="keyword">virtual</span> TControlBarImp *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateControlBarImp" title="TControlBarImp* GROOTGuiFactory::CreateControlBarImp(TControlBar* c,const char* title) or overloads">CreateControlBarImp</a>(TControlBar *c, <span class="keyword">const</span> <span class="keyword">char</span> *title);
-   <span class="keyword">virtual</span> TControlBarImp *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateControlBarImp" title="TControlBarImp* GROOTGuiFactory::CreateControlBarImp(TControlBar* c,const char* title) or overloads">CreateControlBarImp</a>(TControlBar *c, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#Int_t">Int_t</a> x, <a href="../ListOfTypes.html#Int_t">Int_t</a> y);
+   <span class="keyword">virtual</span> <a href="../TControlBarImp.html">TControlBarImp</a> *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateControlBarImp" title="TControlBarImp* GROOTGuiFactory::CreateControlBarImp(TControlBar* c,const char* title) or overloads">CreateControlBarImp</a>(<a href="../TControlBar.html">TControlBar</a> *c, <span class="keyword">const</span> <span class="keyword">char</span> *title);
+   <span class="keyword">virtual</span> <a href="../TControlBarImp.html">TControlBarImp</a> *<a href="../GROOTGuiFactory.html#GROOTGuiFactory:CreateControlBarImp" title="TControlBarImp* GROOTGuiFactory::CreateControlBarImp(TControlBar* c,const char* title) or overloads">CreateControlBarImp</a>(<a href="../TControlBar.html">TControlBar</a> *c, <span class="keyword">const</span> <span class="keyword">char</span> *title, <a href="../ListOfTypes.html#Int_t">Int_t</a> x, <a href="../ListOfTypes.html#Int_t">Int_t</a> y);
 
-   ClassDef(<a href="../GROOTGuiFactory.html">GROOTGuiFactory</a>,0)  <span class="comment">//Factory for ROOT GUI components</span>
+   ClassDef(<a href="../GROOTGuiFactory.html">GROOTGuiFactory</a>,0)  <span class="comment">//Factory for <a href="../ROOT.html">ROOT</a> GUI components</span>
 };
 
 <span class="cpp">#endif</span>
@@ -78,7 +78,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:38 </em><em>&raquo; Last generated: 2015-03-04 20:38</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

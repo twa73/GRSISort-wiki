@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:16:12 2015            -->
+<!--   Date: Wed Mar  4 20:39:24 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -24,9 +24,9 @@
 <span class="cpp">#include "<a href="../TGRSIOptions.h">TGRSIOptions.h</a>"</span>
 
 <span class="comment">// The class definition in <a href="../TFragmentSelector.html">TFragmentSelector</a>.h has been generated automatically</span>
-<span class="comment">// by the ROOT utility TTree::MakeSelector(). This class is derived</span>
-<span class="comment">// from the ROOT class <a href="../#TSelector:TSelector" title="TSelector TSelector::TSelector(const TSelector&amp; ) or overloads">TSelector</a>. For more information on the <a href="../#TSelector:TSelector" title="TSelector TSelector::TSelector(const TSelector&amp; ) or overloads">TSelector</a></span>
-<span class="comment">// framework see $ROOTSYS/README/README.SELECTOR or the ROOT User Manual.</span>
+<span class="comment">// by the <a href="../ROOT.html">ROOT</a> utility <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:MakeSelector" title="Int_t TTree::MakeSelector(const char* selector=0)">MakeSelector</a>(). This class is derived</span>
+<span class="comment">// from the <a href="../ROOT.html">ROOT</a> class <a href="../TSelector.html">TSelector</a>. For more information on the <a href="../TSelector.html">TSelector</a></span>
+<span class="comment">// framework see $ROOTSYS/README/README.SELECTOR or the <a href="../ROOT.html">ROOT</a> User Manual.</span>
 
 <span class="comment">// The following methods are defined in this file:</span>
 <span class="comment">//    <a href="../TFragmentSelector.html#TFragmentSelector:Begin" title="void TFragmentSelector::Begin(TTree* tree)">Begin</a>():        called every time a loop on the tree starts,</span>
@@ -60,26 +60,26 @@
 <span class="comment">/////////////////////////////////////////////////////////////////////</span>
 
 <span class="cpp">#include "<a href="../TFragmentSelector.h">TFragmentSelector.h</a>"</span>
-<span class="cpp">#include &lt;TH2.h&gt;</span>
-<span class="cpp">#include &lt;TStyle.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TH2.h">TH2.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TStyle.h">TStyle.h</a>&gt;</span>
 
-<a name="XZpty"></a><span class="keyword">void</span> <a href="../TFragmentSelector.html">TFragmentSelector</a>::<a href="../TFragmentSelector.html#TFragmentSelector:Begin" title="void TFragmentSelector::Begin(TTree* tree)">Begin</a>(TTree * <span class="comment">/*tree*/</span>)
+<a name="XZpty"></a><span class="keyword">void</span> <a href="../TFragmentSelector.html">TFragmentSelector</a>::<a href="../TFragmentSelector.html#TFragmentSelector:Begin" title="void TFragmentSelector::Begin(TTree* tree)">Begin</a>(<a href="../TTree.html">TTree</a> * <span class="comment">/*tree*/</span>)
 {
    <span class="comment">// The <a href="../TFragmentSelector.html#TFragmentSelector:Begin" title="void TFragmentSelector::Begin(TTree* tree)">Begin</a>() function is called at the start of the query.</span>
    <span class="comment">// When running with PROOF <a href="../TFragmentSelector.html#TFragmentSelector:Begin" title="void TFragmentSelector::Begin(TTree* tree)">Begin</a>() is only called on the client.</span>
    <span class="comment">// The tree argument is deprecated (on PROOF 0 is passed).</span>
 
-   TString option = <a href="../#TSelector:GetOption" title="const char* TSelector::GetOption()">GetOption</a>();
+   <a href="../TString.html">TString</a> option = <a href="../TSelector.html#TSelector:GetOption" title="const char* TSelector::GetOption()">GetOption</a>();
 }
 
-<a name="WgzxUC"></a><span class="keyword">void</span> <a href="../TFragmentSelector.html">TFragmentSelector</a>::<a href="../TFragmentSelector.html#TFragmentSelector:SlaveBegin" title="void TFragmentSelector::SlaveBegin(TTree* tree)">SlaveBegin</a>(TTree * <span class="comment">/*tree*/</span>)
+<a name="WgzxUC"></a><span class="keyword">void</span> <a href="../TFragmentSelector.html">TFragmentSelector</a>::<a href="../TFragmentSelector.html#TFragmentSelector:SlaveBegin" title="void TFragmentSelector::SlaveBegin(TTree* tree)">SlaveBegin</a>(<a href="../TTree.html">TTree</a> * <span class="comment">/*tree*/</span>)
 {
    <span class="comment">// The <a href="../TFragmentSelector.html#TFragmentSelector:SlaveBegin" title="void TFragmentSelector::SlaveBegin(TTree* tree)">SlaveBegin</a>() function is called after the <a href="../TFragmentSelector.html#TFragmentSelector:Begin" title="void TFragmentSelector::Begin(TTree* tree)">Begin</a>() function.</span>
    <span class="comment">// When running with PROOF <a href="../TFragmentSelector.html#TFragmentSelector:SlaveBegin" title="void TFragmentSelector::SlaveBegin(TTree* tree)">SlaveBegin</a>() is called on each slave server.</span>
    <span class="comment">// The tree argument is deprecated (on PROOF 0 is passed).</span>
 
    <span class="cpp">#include "UserInitObj.h"</span>
-   TString option = <a href="../#TSelector:GetOption" title="const char* TSelector::GetOption()">GetOption</a>();
+   <a href="../TString.html">TString</a> option = <a href="../TSelector.html#TSelector:GetOption" title="const char* TSelector::GetOption()">GetOption</a>();
 
 }
 
@@ -88,7 +88,7 @@
    <span class="comment">// The <a href="../TFragmentSelector.html#TFragmentSelector:Process" title="Bool_t TFragmentSelector::Process(Long64_t entry)">Process</a>() function is called for each entry in the tree (or possibly</span>
    <span class="comment">// keyed object in the case of PROOF) to be processed. The entry argument</span>
    <span class="comment">// specifies which entry in the currently loaded tree is to be processed.</span>
-   <span class="comment">// It can be passed to either <a href="../TFragmentSelector.html">TFragmentSelector</a>::<a href="../TFragmentSelector.html#TFragmentSelector:GetEntry" title="Int_t TFragmentSelector::GetEntry(Long64_t entry,Int_t getall=0)">GetEntry</a>() or TBranch::<a href="../TFragmentSelector.html#TFragmentSelector:GetEntry" title="Int_t TFragmentSelector::GetEntry(Long64_t entry,Int_t getall=0)">GetEntry</a>()</span>
+   <span class="comment">// It can be passed to either <a href="../TFragmentSelector.html">TFragmentSelector</a>::<a href="../TFragmentSelector.html#TFragmentSelector:GetEntry" title="Int_t TFragmentSelector::GetEntry(Long64_t entry,Int_t getall=0)">GetEntry</a>() or <a href="../TBranch.html">TBranch</a>::<a href="../TBranch.html#TBranch:GetEntry" title="Int_t TBranch::GetEntry(Long64_t entry=0,Int_t getall=0)">GetEntry</a>()</span>
    <span class="comment">// to read either all or the required parts of the data. When processing</span>
    <span class="comment">// keyed objects with PROOF, the object is already loaded and is available</span>
    <span class="comment">// via the fObject pointer.</span>
@@ -97,18 +97,18 @@
    <span class="comment">// simple or elaborate selection criteria, run algorithms on the data</span>
    <span class="comment">// of the event and typically fill histograms.</span>
    <span class="comment">//</span>
-   <span class="comment">// The processing can be stopped by calling <a href="../#TSelector:Abort" title="void TSelector::Abort(const char* why,TSelector::EAbort what=kAbortProcess)">Abort</a>().</span>
+   <span class="comment">// The processing can be stopped by calling <a href="../TSelector.html#TSelector:Abort" title="void TSelector::Abort(const char* why,TSelector::EAbort what=kAbortProcess)">Abort</a>().</span>
    <span class="comment">//</span>
-   <span class="comment">// Use fStatus to set the return value of TTree::<a href="../TFragmentSelector.html#TFragmentSelector:Process" title="Bool_t TFragmentSelector::Process(Long64_t entry)">Process</a>().</span>
+   <span class="comment">// Use fStatus to set the return value of <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>().</span>
    <span class="comment">//</span>
    <span class="comment">// The return value is currently not used.</span>
 
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;<a href="../TFragmentSelector.html#TFragmentSelector:GetEntry" title="Int_t TFragmentSelector::GetEntry(Long64_t entry,Int_t getall=0)">GetEntry</a>(entry);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:GetEntry" title="Int_t TTree::GetEntry(Long64_t entry=0,Int_t getall=0)">GetEntry</a>(entry);
    <a href="../TChannel.html">TChannel</a> *channel = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannel" title="TChannel* TChannel::GetChannel(unsigned int temp_address)">GetChannel</a>(<a href="../TFragmentSelector.html#TFragmentSelector:fragment" title="TFragment* TFragmentSelector::fragment">fragment</a>-><a href="../TFragment.html#TFragment:ChannelAddress" title="UInt_t TFragment::ChannelAddress">ChannelAddress</a>);
    <span class="keyword">if</span>(!channel){
       <span class="keyword">return</span> <span class="keyword">true</span>;   <span class="comment">// I think if we don't have a channel at this point (i.e. the channel</span>
                   <span class="comment">// was not defined a name/address/odb; we should drop the <a href="../TFragmentSelector.html#TFragmentSelector:fragment" title="TFragment* TFragmentSelector::fragment">fragment</a>.  </span>
-                  <span class="comment">// The <a href="../#TSelector:TSelector" title="TSelector TSelector::TSelector(const TSelector&amp; ) or overloads">TSelector</a> by design is made to crunch lots of data, worrying about </span>
+                  <span class="comment">// The <a href="../TSelector.html">TSelector</a> by design is made to crunch lots of data, worrying about </span>
                   <span class="comment">// whether we are dropping good events should have already happen by this stage.  pdb.</span>
 <span class="comment">//     channel = new <a href="../TChannel.html">TChannel</a>();</span>
 <span class="comment">//     channel-&gt;SetAddress(<a href="../TFragmentSelector.html#TFragmentSelector:fragment" title="TFragment* TFragmentSelector::fragment">fragment</a>-><a href="../TFragment.html#TFragment:ChannelAddress" title="UInt_t TFragment::ChannelAddress">ChannelAddress</a>);</span>
@@ -117,7 +117,7 @@
    
   <span class="comment">// if(<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetNumberOfChannels" title="int TChannel::GetNumberOfChannels()">GetNumberOfChannels</a>() != 0 ) </span>
 	   <span class="cpp">#include "UserFillObj.h"</span>
-       <span class="comment">//  gSystem-&gt;CompileMacro(<span class="string">"UserFillObj.h"</span>);</span>
+       <span class="comment">//  <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:CompileMacro" title="int TSystem::CompileMacro(const char* filename,Option_t* opt=&quot;&quot;,const char* library_name=&quot;&quot;,const char* build_dir=&quot;&quot;,UInt_t dirmode=0)">CompileMacro</a>(<span class="string">"UserFillObj.h"</span>);</span>
 
    <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kTRUE</a>;
 }
@@ -142,20 +142,20 @@
    <span class="keyword">else</span>
       histsname = Form(<span class="string">"hists%05i_%03i.root"</span>,<a href="../TFragmentSelector.html#TFragmentSelector:frunnumber" title="int TFragmentSelector::frunnumber">frunnumber</a>,<a href="../TFragmentSelector.html#TFragmentSelector:fsubrunnumber" title="int TFragmentSelector::fsubrunnumber">fsubrunnumber</a>);
 
-   TFile f(histsname,<span class="string">"recreate"</span>);
-   std::string rootfilename = f.<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>();
+   <a href="../TFile.html">TFile</a> f(histsname,<span class="string">"recreate"</span>);
+   std::string rootfilename = f.<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>();
 <span class="comment">//   <a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:AddInputRootFile" title="void TGRSIOptions::AddInputRootFile(string&amp; input)">AddInputRootFile</a>(rootfilename);   this real messess up so library loading... pcb.</span>
 <span class="comment">/*
    if(<a href="../TFragmentSelector.html#TFragmentSelector:fsubrunnumber" title="int TFragmentSelector::fsubrunnumber">fsubrunnumber</a> == -1){
-      TFile f(Form(<span class="string">"hists%05i.root"</span>,<a href="../TFragmentSelector.html#TFragmentSelector:frunnumber" title="int TFragmentSelector::frunnumber">frunnumber</a>),<span class="string">"recreate"</span>);
+      <a href="../TFile.html">TFile</a> f(Form(<span class="string">"hists%05i.root"</span>,<a href="../TFragmentSelector.html#TFragmentSelector:frunnumber" title="int TFragmentSelector::frunnumber">frunnumber</a>),<span class="string">"recreate"</span>);
    }
    else{
-      TFile f(Form(<span class="string">"hists%05i_%03i.root"</span>,<a href="../TFragmentSelector.html#TFragmentSelector:frunnumber" title="int TFragmentSelector::frunnumber">frunnumber</a>,<a href="../TFragmentSelector.html#TFragmentSelector:fsubrunnumber" title="int TFragmentSelector::fsubrunnumber">fsubrunnumber</a>),<span class="string">"recreate"</span>);
+      <a href="../TFile.html">TFile</a> f(Form(<span class="string">"hists%05i_%03i.root"</span>,<a href="../TFragmentSelector.html#TFragmentSelector:frunnumber" title="int TFragmentSelector::frunnumber">frunnumber</a>,<a href="../TFragmentSelector.html#TFragmentSelector:fsubrunnumber" title="int TFragmentSelector::fsubrunnumber">fsubrunnumber</a>),<span class="string">"recreate"</span>);
    }*/</span>
-   TIter iter(<span class="keyword">this</span>-&gt;<a href="../TFragmentSelector.html#TFragmentSelector:GetOutputList" title="TList* TFragmentSelector::GetOutputList()">GetOutputList</a>());
-   <span class="keyword">while</span>(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj =iter.Next()) {
-	<span class="keyword">if</span>(obj-&gt;<a href="../#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TH1"</span>))
-		obj-&gt;<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
+   <a href="../TIter.html">TIter</a> iter(<span class="keyword">this</span>-&gt;<a href="../TFragmentSelector.html#TFragmentSelector:GetOutputList" title="TList* TFragmentSelector::GetOutputList()">GetOutputList</a>());
+   <span class="keyword">while</span>(<a href="../TObject.html">TObject</a> *obj =iter.Next()) {
+	<span class="keyword">if</span>(obj-&gt;<a href="../TObject.html#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TH1"</span>))
+		obj-&gt;<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
    }
 
 }
@@ -167,7 +167,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:16 </em><em>&raquo; Last generated: 2015-03-04 13:16</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:20 2015            -->
+<!--   Date: Wed Mar  4 20:39:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -51,15 +51,15 @@
 <span class="cpp">#include &lt;utility&gt;</span>
 <span class="cpp">#include &lt;map&gt;</span>
 
-<span class="cpp">#include "TNamed.h"</span>
-<span class="cpp">#include "TRandom.h"</span>
-<span class="cpp">#include "TList.h"</span>
-<span class="cpp">#include "TTree.h"</span>
+<span class="cpp">#include "<a href="../TNamed.h">TNamed.h</a>"</span>
+<span class="cpp">#include "<a href="../TRandom.h">TRandom.h</a>"</span>
+<span class="cpp">#include "<a href="../TList.h">TList.h</a>"</span>
+<span class="cpp">#include "<a href="../TTree.h">TTree.h</a>"</span>
 
 <span class="cpp">#include "<a href="../TFragment.h">TFragment.h</a>"</span>
 <span class="cpp">#include "<a href="../Globals.h">Globals.h</a>"</span>
 
-<span class="keyword">class</span> <a href="../TChannel.html">TChannel</a> : <span class="keyword">public</span> <a href="../#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>	{
+<span class="keyword">class</span> <a href="../TChannel.html">TChannel</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a>	{
 
   <span class="keyword">public</span>:
     <span class="keyword">static</span> <a href="../TChannel.html">TChannel</a> *<a href="../TChannel.html#TChannel:GetChannel" title="TChannel* TChannel::GetChannel(unsigned int temp_address)">GetChannel</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> temp_address); 
@@ -182,7 +182,7 @@
     <span class="keyword">void</span> <a href="../TChannel.html#TChannel:DestroyTIMECal" title="void TChannel::DestroyTIMECal()">DestroyTIMECal</a>();
     <span class="keyword">void</span> <a href="../TChannel.html#TChannel:DestroyEFFCal" title="void TChannel::DestroyEFFCal()">DestroyEFFCal</a>();
 
-    <span class="keyword">static</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TChannel.html#TChannel:ReadCalFromTree" title="Int_t TChannel::ReadCalFromTree(TTree* ,Option_t* opt=&quot;overwrite&quot;)">ReadCalFromTree</a>(TTree*,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">"overwrite"</span>);
+    <span class="keyword">static</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TChannel.html#TChannel:ReadCalFromTree" title="Int_t TChannel::ReadCalFromTree(TTree* ,Option_t* opt=&quot;overwrite&quot;)">ReadCalFromTree</a>(<a href="../TTree.html">TTree</a>*,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">"overwrite"</span>);
     <span class="keyword">static</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TChannel.html#TChannel:ReadCalFile" title="Int_t TChannel::ReadCalFile(const char* filename=&quot;&quot;)">ReadCalFile</a>(<span class="keyword">const</span> <span class="keyword">char</span> *filename = <span class="string">""</span>);
     <span class="keyword">static</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TChannel.html#TChannel:ParseInputData" title="Int_t TChannel::ParseInputData(const char* inputdata=&quot;&quot;)">ParseInputData</a>(<span class="keyword">const</span> <span class="keyword">char</span> *inputdata = <span class="string">""</span>);
     <span class="keyword">static</span> <span class="keyword">void</span> <a href="../TChannel.html#TChannel:WriteCalFile" title="void TChannel::WriteCalFile(string outfilename=&quot;&quot;)">WriteCalFile</a>(std::string outfilename = <span class="string">""</span>);
@@ -213,7 +213,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:28 2015            -->
+<!--   Date: Wed Mar  4 20:39:47 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -26,11 +26,11 @@
 <span class="cpp">#include &lt;fstream&gt;</span>
 <span class="cpp">#include &lt;string&gt;</span>
 
-<span class="cpp">#include "TNamed.h"</span>
-<span class="cpp">#include "TMath.h"</span>
-<span class="cpp">#include "TSpline.h"</span>
-<span class="cpp">#include "TGraph.h"</span>
-<span class="cpp">#include "TLorentzVector.h"</span>
+<span class="cpp">#include "<a href="../TNamed.h">TNamed.h</a>"</span>
+<span class="cpp">#include "<a href="../TMath.h">TMath.h</a>"</span>
+<span class="cpp">#include "<a href="../TSpline.h">TSpline.h</a>"</span>
+<span class="cpp">#include "<a href="../TGraph.h">TGraph.h</a>"</span>
+<span class="cpp">#include "<a href="../TLorentzVector.h">TLorentzVector.h</a>"</span>
 
 <span class="cpp">#include "<a href="../TNucleus.h">TNucleus.h</a>"</span>
 
@@ -40,7 +40,7 @@
 
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 
-<span class="keyword">class</span> <a href="../TKinematics.html">TKinematics</a> : <span class="keyword">public</span> <a href="../#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a> {
+<span class="keyword">class</span> <a href="../TKinematics.html">TKinematics</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a> {
 <span class="keyword">public</span>:
 <a name="vDjoXB"></a>  <a href="../TKinematics.html">TKinematics</a>(<span class="keyword">double</span> beame, <span class="keyword">const</span> <span class="keyword">char</span>* projectile, <span class="keyword">const</span> <span class="keyword">char</span>* target,<span class="keyword">const</span> <span class="keyword">char</span>* ejectile = NULL, <span class="keyword">const</span> <span class="keyword">char</span>* recoil = NULL, <span class="keyword">const</span> <span class="keyword">char</span> *name = <span class="string">""</span>);
   <a href="../TKinematics.html">TKinematics</a>(<a href="../TNucleus.html">TNucleus</a>* projectile, <a href="../TNucleus.html">TNucleus</a>* target, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span> *name = <span class="string">""</span>);
@@ -53,11 +53,11 @@
   <span class="comment">//<a href="../ListOfTypes.html#void">void</a> <a href="../TKinematics.html#TKinematics:SetAngles" title="void TKinematics::SetAngles(double angle,int part,bool upper=false)">SetAngles</a>(<a href="../ListOfTypes.html#double">double</a> angle, <a href="../ListOfTypes.html#int">int</a> part);</span>
   <span class="keyword">void</span> <a href="../TKinematics.html#TKinematics:SetAngles" title="void TKinematics::SetAngles(double angle,int part,bool upper=false)">SetAngles</a>(<span class="keyword">double</span> angle, <span class="keyword">int</span> part, <span class="keyword">bool</span> upper=<span class="keyword">false</span>);
   <span class="comment">//get</span>
-  TSpline3* <a href="../TKinematics.html#TKinematics:Evslab" title="TSpline3* TKinematics::Evslab(double thmin,double thmax,double size,int part=2)">Evslab</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
-  TSpline3* <a href="../TKinematics.html#TKinematics:Evscm" title="TSpline3* TKinematics::Evscm(double thmin,double thmax,double size,int part=2)">Evscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
-  TSpline3* <a href="../TKinematics.html#TKinematics:labvscm" title="TSpline3* TKinematics::labvscm(double thmin,double thmax,double size,int part=2)">labvscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
-  TSpline3* <a href="../TKinematics.html#TKinematics:cmvslab" title="TSpline3* TKinematics::cmvslab(double thmin,double thmax,double size,int part=2)">cmvslab</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
-  TSpline3* <a href="../TKinematics.html#TKinematics:Steffen_labvscminverse" title="TSpline3* TKinematics::Steffen_labvscminverse(double thmin,double thmax,double size,int part=2)">Steffen_labvscminverse</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
+  <a href="../TSpline3.html">TSpline3</a>* <a href="../TKinematics.html#TKinematics:Evslab" title="TSpline3* TKinematics::Evslab(double thmin,double thmax,double size,int part=2)">Evslab</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
+  <a href="../TSpline3.html">TSpline3</a>* <a href="../TKinematics.html#TKinematics:Evscm" title="TSpline3* TKinematics::Evscm(double thmin,double thmax,double size,int part=2)">Evscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
+  <a href="../TSpline3.html">TSpline3</a>* <a href="../TKinematics.html#TKinematics:labvscm" title="TSpline3* TKinematics::labvscm(double thmin,double thmax,double size,int part=2)">labvscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
+  <a href="../TSpline3.html">TSpline3</a>* <a href="../TKinematics.html#TKinematics:cmvslab" title="TSpline3* TKinematics::cmvslab(double thmin,double thmax,double size,int part=2)">cmvslab</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
+  <a href="../TSpline3.html">TSpline3</a>* <a href="../TKinematics.html#TKinematics:Steffen_labvscminverse" title="TSpline3* TKinematics::Steffen_labvscminverse(double thmin,double thmax,double size,int part=2)">Steffen_labvscminverse</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2);
  
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetCmEnergy" title="double TKinematics::GetCmEnergy(double ebeam) or overloads">GetCmEnergy</a>(<span class="keyword">double</span> ebeam);
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetCmEnergy" title="double TKinematics::GetCmEnergy(double ebeam) or overloads">GetCmEnergy</a>();
@@ -66,8 +66,8 @@
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetMaxAngle" title="double TKinematics::GetMaxAngle(double vcm) or overloads">GetMaxAngle</a>(<span class="keyword">int</span> part);
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:NormalkinEnergy" title="double TKinematics::NormalkinEnergy()">NormalkinEnergy</a>();
   <span class="keyword">bool</span>   <a href="../TKinematics.html#TKinematics:CheckMaxAngle" title="bool TKinematics::CheckMaxAngle(double angle,int part)">CheckMaxAngle</a>(<span class="keyword">double</span> angle, <span class="keyword">int</span> part);
-  <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetExcEnergy" title="double TKinematics::GetExcEnergy(TLorentzVector recoil) or overloads">GetExcEnergy</a>(TLorentzVector recoil);
-  <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetExcEnergy" title="double TKinematics::GetExcEnergy(TLorentzVector recoil) or overloads">GetExcEnergy</a>(TVector3 position, <span class="keyword">double</span> KinE);
+  <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetExcEnergy" title="double TKinematics::GetExcEnergy(TLorentzVector recoil) or overloads">GetExcEnergy</a>(<a href="../TLorentzVector.html">TLorentzVector</a> recoil);
+  <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetExcEnergy" title="double TKinematics::GetExcEnergy(TLorentzVector recoil) or overloads">GetExcEnergy</a>(<a href="../TVector3.html">TVector3</a> position, <span class="keyword">double</span> KinE);
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetExcEnergy" title="double TKinematics::GetExcEnergy(TLorentzVector recoil) or overloads">GetExcEnergy</a>(<span class="keyword">double</span> theta, <span class="keyword">double</span> KinE);
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:ELab" title="double TKinematics::ELab(double angle_lab,int part)">ELab</a>(<span class="keyword">double</span> angle_lab, <span class="keyword">int</span> part);
 
@@ -98,8 +98,8 @@
 <a name="PC_FeB"></a>  <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetVcm" title="double TKinematics::GetVcm(int i)">GetVcm</a>(<span class="keyword">int</span> i)     { <span class="keyword">return</span> <a href="../TKinematics.html#TKinematics:fVcm" title="double TKinematics::fVcm">fVcm</a>[i];    }
 <a name="dLXOE"></a>  <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:GetV" title="double TKinematics::GetV(int i)">GetV</a>(<span class="keyword">int</span> i)       { <span class="keyword">return</span> <a href="../TKinematics.html#TKinematics:fV" title="double TKinematics::fV">fV</a>[i];      }
 
-  TSpline3* <a href="../TKinematics.html#TKinematics:Ruthvscm" title="TSpline3* TKinematics::Ruthvscm(double thmin,double thmax,double size)">Ruthvscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size); 
-  TSpline3* <a href="../TKinematics.html#TKinematics:Ruthvslab" title="TSpline3* TKinematics::Ruthvslab(double thmin,double thmax,double size,int part)">Ruthvslab</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part); 
+  <a href="../TSpline3.html">TSpline3</a>* <a href="../TKinematics.html#TKinematics:Ruthvscm" title="TSpline3* TKinematics::Ruthvscm(double thmin,double thmax,double size)">Ruthvscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size); 
+  <a href="../TSpline3.html">TSpline3</a>* <a href="../TKinematics.html#TKinematics:Ruthvslab" title="TSpline3* TKinematics::Ruthvslab(double thmin,double thmax,double size,int part)">Ruthvslab</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part); 
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:Angle_lab2cm" title="double TKinematics::Angle_lab2cm(double vcm,double angle_lab)">Angle_lab2cm</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_lab);
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:Angle_lab2cminverse" title="double TKinematics::Angle_lab2cminverse(double vcm,double angle_lab,bool upper=true)">Angle_lab2cminverse</a>(<span class="keyword">double</span> vcm, <span class="keyword">double</span> angle_lab, <span class="keyword">bool</span> upper = <span class="keyword">true</span>);
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:Steffen_cm2labinverse" title="double TKinematics::Steffen_cm2labinverse(double theta_lab,int part=2)">Steffen_cm2labinverse</a>(<span class="keyword">double</span> theta_lab, <span class="keyword">int</span> part=2); <span class="comment">// NEW FUNCTIN+</span>
@@ -151,7 +151,7 @@
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:E_final" title="double TKinematics::E_final(int )">E_final</a>(<span class="keyword">int</span>);
   <span class="keyword">double</span> <a href="../TKinematics.html#TKinematics:T_final" title="double TKinematics::T_final(int )">T_final</a>(<span class="keyword">int</span>);
   
-  TSpline3 *<a href="../TKinematics.html#TKinematics:Cm2LabSpline" title="TSpline3* TKinematics::Cm2LabSpline">Cm2LabSpline</a>;
+  <a href="../TSpline3.html">TSpline3</a> *<a href="../TKinematics.html#TKinematics:Cm2LabSpline" title="TSpline3* TKinematics::Cm2LabSpline">Cm2LabSpline</a>;
  
   ClassDef(<a href="../TKinematics.html">TKinematics</a>,1); <span class="comment">// Calculates kinematics parameters (both normal and inverse) for scattering experiments</span>
  
@@ -165,7 +165,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

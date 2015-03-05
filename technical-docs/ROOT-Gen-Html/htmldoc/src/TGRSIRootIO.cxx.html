@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:25 2015            -->
+<!--   Date: Wed Mar  4 20:39:29 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -46,7 +46,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
   <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a> = 0;
   <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>    = 0;
 
-  <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a> = 0; <span class="comment">//new TFile(<span class="string">"test_out.root"</span>,<span class="string">"recreate"</span>);</span>
+  <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a> = 0; <span class="comment">//new <a href="../TFile.html">TFile</a>(<span class="string">"test_out.root"</span>,<span class="string">"recreate"</span>);</span>
 
   <span class="comment">// SetUpChannelTree();</span>
   <span class="comment">// <a href="../TGRSIRootIO.html#TGRSIRootIO:SetUpFragmentTree" title="void TGRSIRootIO::SetUpFragmentTree()">SetUpFragmentTree</a>();</span>
@@ -56,12 +56,12 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
 <a name="vfaR5D"></a><a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:_TGRSIRootIO" title="void TGRSIRootIO::~TGRSIRootIO()">~TGRSIRootIO</a>() {  }
 
 <span class="comment">//<a href="../ListOfTypes.html#void">void</a> <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::SetUpChannelTree() {</span>
-<span class="comment">//   fTChannelTree = new TTree(<span class="string">"ChannelTree"</span>,<span class="string">"ChannelTree"</span>);</span>
+<span class="comment">//   fTChannelTree = new <a href="../TTree.html">TTree</a>(<span class="string">"ChannelTree"</span>,<span class="string">"ChannelTree"</span>);</span>
 <span class="comment">//   <a href="../TGRSIRootIO.html#TGRSIRootIO:fBufferChannel" title="TChannel* TGRSIRootIO::fBufferChannel">fBufferChannel</a> = 0;</span>
 <span class="comment">//   fTChannelTree-&gt;Branch(<span class="string">"TChannel"</span>,<span class="string">"TChannel"</span>,&amp;<a href="../TGRSIRootIO.html#TGRSIRootIO:fBufferChannel" title="TChannel* TGRSIRootIO::fBufferChannel">fBufferChannel</a>,1000,99);</span>
 <span class="comment">//}</span>
 
-<a name="wZqHJB"></a><span class="keyword">void</span> <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:LoadRootFile" title="void TGRSIRootIO::LoadRootFile(TFile* )">LoadRootFile</a>(TFile *file) {
+<a name="wZqHJB"></a><span class="keyword">void</span> <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:LoadRootFile" title="void TGRSIRootIO::LoadRootFile(TFile* )">LoadRootFile</a>(<a href="../TFile.html">TFile</a> *file) {
    <span class="keyword">if</span>(file)
       <a href="../TGRSIRootIO.html#TGRSIRootIO:finfiles" title="vector&lt;TFile*&gt; TGRSIRootIO::finfiles">finfiles</a>.push_back(file);
    <span class="keyword">return</span>;
@@ -70,11 +70,11 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
 <a name="u1BEuC"></a><span class="keyword">void</span> <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:SetUpFragmentTree" title="void TGRSIRootIO::SetUpFragmentTree()">SetUpFragmentTree</a>() {
 
    <span class="keyword">if</span>(<a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>)
-      <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-&gt;cd();
+      <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-><a href="../TDirectoryFile.html#TDirectoryFile:cd" title="Bool_t TDirectoryFile::cd(const char* path=0)">cd</a>();
    <a href="../TGRSIRootIO.html#TGRSIRootIO:fTimesFillCalled" title="int TGRSIRootIO::fTimesFillCalled">fTimesFillCalled</a> = 0;
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a> = <span class="keyword">new</span> TTree(<span class="string">"FragmentTree"</span>,<span class="string">"FragmentTree"</span>);
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a> = <span class="keyword">new</span> <a href="../TTree.html">TTree</a>(<span class="string">"FragmentTree"</span>,<span class="string">"FragmentTree"</span>);
    <a href="../TGRSIRootIO.html#TGRSIRootIO:fBufferFrag" title="TFragment* TGRSIRootIO::fBufferFrag">fBufferFrag</a> = 0;
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>-&gt;Bronch(<span class="string">"TFragment"</span>,<span class="string">"TFragment"</span>,&amp;<a href="../TGRSIRootIO.html#TGRSIRootIO:fBufferFrag" title="TFragment* TGRSIRootIO::fBufferFrag">fBufferFrag</a>,128000,99);
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>-><a href="../TTree.html#TTree:Bronch" title="TBranch* TTree::Bronch(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=99)">Bronch</a>(<span class="string">"TFragment"</span>,<span class="string">"TFragment"</span>,&amp;<a href="../TGRSIRootIO.html#TGRSIRootIO:fBufferFrag" title="TFragment* TGRSIRootIO::fBufferFrag">fBufferFrag</a>,128000,99);
 	printf(<span class="string">"FragmentTree set up.\n"</span>);
 
 }
@@ -84,11 +84,11 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
    <span class="keyword">if</span>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:IgnoreEpics" title="bool TGRSIOptions::IgnoreEpics()">IgnoreEpics</a>()) 
      <span class="keyword">return</span>;
    <span class="keyword">if</span>(<a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>)
-      <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-&gt;cd();
+      <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-><a href="../TDirectoryFile.html#TDirectoryFile:cd" title="Bool_t TDirectoryFile::cd(const char* path=0)">cd</a>();
    <a href="../TGRSIRootIO.html#TGRSIRootIO:fEPICSTimesFillCalled" title="int TGRSIRootIO::fEPICSTimesFillCalled">fEPICSTimesFillCalled</a> = 0;
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a> = <span class="keyword">new</span> TTree(<span class="string">"EpicsTree"</span>,<span class="string">"EpicsTree"</span>);
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a> = <span class="keyword">new</span> <a href="../TTree.html">TTree</a>(<span class="string">"EpicsTree"</span>,<span class="string">"EpicsTree"</span>);
    <a href="../TGRSIRootIO.html#TGRSIRootIO:fEXBufferFrag" title="TEpicsFrag* TGRSIRootIO::fEXBufferFrag">fEXBufferFrag</a> = 0;
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>-&gt;Bronch(<span class="string">"TEpicsFrag"</span>,<span class="string">"TEpicsFrag"</span>,&amp;<a href="../TGRSIRootIO.html#TGRSIRootIO:fEXBufferFrag" title="TEpicsFrag* TGRSIRootIO::fEXBufferFrag">fEXBufferFrag</a>,128000,99);
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>-><a href="../TTree.html#TTree:Bronch" title="TBranch* TTree::Bronch(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=99)">Bronch</a>(<span class="string">"TEpicsFrag"</span>,<span class="string">"TEpicsFrag"</span>,&amp;<a href="../TGRSIRootIO.html#TGRSIRootIO:fEXBufferFrag" title="TEpicsFrag* TGRSIRootIO::fEXBufferFrag">fEXBufferFrag</a>,128000,99);
 	printf(<span class="string">"EPICS-Tree set up.\n"</span>);
 
 }
@@ -104,7 +104,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
   <span class="comment">// if(!<a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>)</span>
   <span class="comment">//    return;</span>
    *<a href="../TGRSIRootIO.html#TGRSIRootIO:fBufferFrag" title="TFragment* TGRSIRootIO::fBufferFrag">fBufferFrag</a> = *frag;
-   <span class="keyword">int</span> bytes =  <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>-&gt;Fill();
+   <span class="keyword">int</span> bytes =  <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>-><a href="../TTree.html#TTree:Fill" title="Int_t TTree::Fill()">Fill</a>();
    <span class="keyword">if</span>(bytes &lt; 1)
       printf(<span class="string">"\n fill failed with bytes = %i\n"</span>,bytes);
    <a href="../TGRSIRootIO.html#TGRSIRootIO:fTimesFillCalled" title="int TGRSIRootIO::fTimesFillCalled">fTimesFillCalled</a>++;
@@ -115,7 +115,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
   <span class="keyword">if</span>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:IgnoreEpics" title="bool TGRSIOptions::IgnoreEpics()">IgnoreEpics</a>()) 
     <span class="keyword">return</span>;
    *<a href="../TGRSIRootIO.html#TGRSIRootIO:fEXBufferFrag" title="TEpicsFrag* TGRSIRootIO::fEXBufferFrag">fEXBufferFrag</a> = *EXfrag;
-   <span class="keyword">int</span> bytes =  <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>-&gt;Fill();
+   <span class="keyword">int</span> bytes =  <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>-><a href="../TTree.html#TTree:Fill" title="Int_t TTree::Fill()">Fill</a>();
    <span class="keyword">if</span>(bytes &lt; 1)
       printf(<span class="string">"\n fill failed with bytes = %i\n"</span>,bytes);
    <a href="../TGRSIRootIO.html#TGRSIRootIO:fEPICSTimesFillCalled" title="int TGRSIRootIO::fEPICSTimesFillCalled">fEPICSTimesFillCalled</a>++;
@@ -125,7 +125,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
 <span class="comment">//<a href="../ListOfTypes.html#void">void</a> <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::FinalizeChannelTree() {</span>
 <span class="comment">//   if(!fTChannelTree)</span>
 <span class="comment">//      return;</span>
-<span class="comment">//   fTChannelTree-&gt;<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();</span>
+<span class="comment">//   fTChannelTree-&gt;<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();</span>
 <span class="comment">//   return;</span>
 <span class="comment">//}</span>
 
@@ -134,23 +134,23 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
 <a name="XzkfnD"></a><span class="keyword">void</span> <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:FinalizeFragmentTree" title="void TGRSIRootIO::FinalizeFragmentTree()">FinalizeFragmentTree</a>() {
    <span class="keyword">if</span>(!<a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a> || !<a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>)
       <span class="keyword">return</span>;
-   TList *list = <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>-&gt;GetUserInfo();
+   <a href="../TList.html">TList</a> *list = <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>-><a href="../TTree.html#TTree:GetUserInfo" title="TList* TTree::GetUserInfo()">GetUserInfo</a>();
    std::map &lt; <span class="keyword">unsigned</span> <span class="keyword">int</span>, <a href="../TChannel.html">TChannel</a> * &gt;::iterator iter;
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-&gt;cd();
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-><a href="../TDirectoryFile.html#TDirectoryFile:cd" title="Bool_t TDirectoryFile::cd(const char* path=0)">cd</a>();
    <span class="keyword">for</span>(iter=<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannelMap" title="map&lt;unsigned int,TChannel*&gt;* TChannel::GetChannelMap()">GetChannelMap</a>()-&gt;begin();iter!=<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannelMap" title="map&lt;unsigned int,TChannel*&gt;* TChannel::GetChannelMap()">GetChannelMap</a>()-&gt;end();iter++) {
 		<a href="../TChannel.html">TChannel</a> *chan = <span class="keyword">new</span> <a href="../TChannel.html">TChannel</a>(iter-&gt;second);
       chan-&gt;SetNameTitle(Form(<span class="string">"TChannels[%i]"</span>,<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetNumberOfChannels" title="int TChannel::GetNumberOfChannels()">GetNumberOfChannels</a>()),
                          Form(<span class="string">"%i TChannels."</span>,<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetNumberOfChannels" title="int TChannel::GetNumberOfChannels()">GetNumberOfChannels</a>()));
       <span class="comment">//list-&gt;Add(chan);//(iter-&gt;second);</span>
                      <span class="comment">// using the write command on any tchannel will now write all </span>
-      chan-&gt;<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>(); <span class="comment">// the tchannels to a root file.  additionally reading a tchannel</span>
+      chan-&gt;<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>(); <span class="comment">// the tchannels to a root file.  additionally reading a tchannel</span>
                      <span class="comment">// from a rootfile will read all the channels saved to it.  tchannels</span>
                      <span class="comment">// are now saved as a text buffer to the root file.  </span>
       <span class="keyword">break</span>;
 	}
    
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-&gt;cd();
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>-&gt;AutoSave(); <span class="comment">//<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();</span>
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-><a href="../TDirectoryFile.html#TDirectoryFile:cd" title="Bool_t TDirectoryFile::cd(const char* path=0)">cd</a>();
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>-><a href="../TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a>(); <span class="comment">//<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();</span>
 	<span class="keyword">return</span>;
 }
 
@@ -160,8 +160,8 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
     <span class="keyword">return</span>;
   <span class="keyword">if</span>(!<a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a> || !<a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>)
       <span class="keyword">return</span>;
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-&gt;cd();
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>-&gt;AutoSave(); <span class="comment">//<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();</span>
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-><a href="../TDirectoryFile.html#TDirectoryFile:cd" title="Bool_t TDirectoryFile::cd(const char* path=0)">cd</a>();
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>-><a href="../TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a>(); <span class="comment">//<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();</span>
 	<span class="keyword">return</span>;
 }
 
@@ -178,7 +178,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
    <span class="comment">//If there are no -s or -a flags these extra names do not matter</span>
    std::string tempname(filename);
    <a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:AddInputRootFile" title="void TGRSIOptions::AddInputRootFile(string&amp; input)">AddInputRootFile</a>(tempname);
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a> = <span class="keyword">new</span> TFile(filename,<span class="string">"recreate"</span>);
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a> = <span class="keyword">new</span> <a href="../TFile.html">TFile</a>(filename,<span class="string">"recreate"</span>);
    
    <a href="../TGRSIRootIO.html#TGRSIRootIO:SetUpFragmentTree" title="void TGRSIRootIO::SetUpFragmentTree()">SetUpFragmentTree</a>();
    <a href="../TGRSIRootIO.html#TGRSIRootIO:SetUpEpicsTree" title="void TGRSIRootIO::SetUpEpicsTree()">SetUpEpicsTree</a>();
@@ -191,7 +191,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
 
    <span class="keyword">if</span>(!<a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>)
       <span class="keyword">return</span>;
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-&gt;cd();
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-><a href="../TDirectoryFile.html#TDirectoryFile:cd" title="Bool_t TDirectoryFile::cd(const char* path=0)">cd</a>();
    printf(DMAGENTA <span class="string">"\n Fill tree called "</span> DYELLOW <span class="string">"%i "</span> DMAGENTA <span class="string">"times.\n"</span> RESET_COLOR, <a href="../TGRSIRootIO.html#TGRSIRootIO:fTimesFillCalled" title="int TGRSIRootIO::fTimesFillCalled">fTimesFillCalled</a>);
    
    <a href="../TGRSIRootIO.html#TGRSIRootIO:FinalizeFragmentTree" title="void TGRSIRootIO::FinalizeFragmentTree()">FinalizeFragmentTree</a>(); 
@@ -199,14 +199,14 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
 
    <span class="keyword">if</span>(<a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:GetNumberOfSystems" title="int TGRSIRunInfo::GetNumberOfSystems()">GetNumberOfSystems</a>()&gt;0) {
       printf(DMAGENTA <span class="string">" Writing RunInfo with "</span> DYELLOW <span class="string">"%i "</span> DMAGENTA <span class="string">" systems to file."</span> RESET_COLOR <span class="string">"\n"</span>,<a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:GetNumberOfSystems" title="int TGRSIRunInfo::GetNumberOfSystems()">GetNumberOfSystems</a>());
-      <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Get" title="TGRSIRunInfo* TGRSIRunInfo::Get()">Get</a>()-><a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
+      <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Get" title="TGRSIRunInfo* TGRSIRunInfo::Get()">Get</a>()-><a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
    }
 
    <span class="keyword">if</span>(<a href="../TGRSIStats.html">TGRSIStats</a>::<a href="../TGRSIStats.html#TGRSIStats:GetSize" title="int TGRSIStats::GetSize()">GetSize</a>() &gt; 0) {
        <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:Get" title="TGRSIRootIO* TGRSIRootIO::Get()">Get</a>()-><a href="../TGRSIRootIO.html#TGRSIRootIO:WriteRunStats" title="void TGRSIRootIO::WriteRunStats()">WriteRunStats</a>();
    }
 
-   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-&gt;Close();
+   <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>-><a href="../TFile.html#TFile:Close" title="void TFile::Close(Option_t* option=&quot;&quot;)">Close</a>();
 	<span class="keyword">delete</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>;	
 	<a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a> = 0;
 	<span class="keyword">return</span>;
@@ -221,12 +221,12 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
    <span class="keyword">int</span> runnumber =0; <span class="comment">//This is where hists run number problem is happening</span>
    <span class="keyword">int</span> subrunnumber=0; <span class="comment">//Might have to make these vectors?</span>
  
-   TChain *chain = <span class="keyword">new</span> TChain(<span class="string">"FragmentTree"</span>);
+   <a href="../TChain.html">TChain</a> *chain = <span class="keyword">new</span> <a href="../TChain.html">TChain</a>(<span class="string">"FragmentTree"</span>);
 
    <span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().size();x++) {
-      TFile f(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(x).c_str(),<span class="string">"read"</span>);
-      <span class="comment">//printf(<span class="string">"%s  f.FindObject(\"FragmentTree\") =0x%08x\n"</span>,f.<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>(),     f.<a href="../#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"FragmentTree"</span>));</span>
-      <span class="comment">//if(f.<a href="../#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"FragmentTree"</span>)) {</span>
+      <a href="../TFile.html">TFile</a> f(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(x).c_str(),<span class="string">"read"</span>);
+      <span class="comment">//printf(<span class="string">"%s  f.FindObject(\"FragmentTree\") =0x%08x\n"</span>,f.<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>(),     f.<a href="../TObject.html#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"FragmentTree"</span>));</span>
+      <span class="comment">//if(f.<a href="../TObject.html#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"FragmentTree"</span>)) {</span>
 	<span class="comment">//printf(<span class="string">"here 4 \n"</span>);</span>
 	chain-&gt;Add(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(x).c_str());
       <span class="comment">//}</span>
@@ -243,7 +243,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
    
    <span class="comment">//printf(<span class="string">"here3\n"</span>);</span>
 
-   TProofLite *proof = (TProofLite*)TProofLite::Open(<span class="string">""</span>);
+   <a href="../TProofLite.html">TProofLite</a> *proof = (<a href="../TProofLite.html">TProofLite</a>*)<a href="../TProofLite.html">TProofLite</a>::<a href="../TProof.html#TProof:Open" title="TProof* TProof::Open(const char* url=0,const char* conffile=0,const char* confdir=0,Int_t loglevel=0)">Open</a>(<span class="string">""</span>);
    proof-&gt;ClearCache();
    proof-&gt;Exec(<span class="string">"gSystem-&gt;Load(\"$(GRSISYS)/libraries/libGRSIFormat.so\")"</span>);
    proof-&gt;SetProgressDialog(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:ProgressDialog" title="bool TGRSIOptions::ProgressDialog()">ProgressDialog</a>());
@@ -254,7 +254,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
    <a href="../TFragmentSelector.html">TFragmentSelector</a> *fragSelc = <span class="keyword">new</span> <a href="../TFragmentSelector.html">TFragmentSelector</a>(runnumber,subrunnumber);
    chain-&gt;Process(fragSelc); 
 
-   chain-&gt;<a href="../#TObject:Delete" title="void TObject::Delete(Option_t* option=&quot;&quot;)">Delete</a>();
+   chain-&gt;<a href="../TObject.html#TObject:Delete" title="void TObject::Delete(Option_t* option=&quot;&quot;)">Delete</a>();
 
    <span class="keyword">return</span>;
 }
@@ -315,7 +315,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
     <span class="keyword">return</span>;
   printf(<span class="string">"actually writing\n"</span>);
    <a href="../TGRSIStats.html">TGRSIStats</a> *stats = 0;
-   TTree *fStatsTree = <span class="keyword">new</span> TTree(<span class="string">"StatsTree"</span>,<span class="string">"StatsTree"</span>);
+   <a href="../TTree.html">TTree</a> *fStatsTree = <span class="keyword">new</span> <a href="../TTree.html">TTree</a>(<span class="string">"StatsTree"</span>,<span class="string">"StatsTree"</span>);
    fStatsTree-&gt;Bronch(<span class="string">"TGRSIStats"</span>,<span class="string">"TGRSIStats"</span>,&amp;stats);
 
   std::map&lt;<span class="keyword">int</span>,<a href="../TGRSIStats.html">TGRSIStats</a>*&gt;::iterator iter;
@@ -334,7 +334,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
   <a href="../TGRSIStats.html">TGRSIStats</a>::<a href="../TGRSIStats.html#TGRSIStats:GetMap" title="map&lt;int,TGRSIStats*&gt;* TGRSIStats::GetMap()">GetMap</a>()-&gt;clear();
   statsout &lt;&lt;  std::endl;
   statsout.close();
-  fStatsTree-&gt;<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
+  fStatsTree-&gt;<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
   <span class="keyword">return</span>;
 }
 
@@ -366,7 +366,7 @@ ClassImp(<a href="../TGRSIRootIO.html">TGRSIRootIO</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

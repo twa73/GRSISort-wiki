@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:27 2015            -->
+<!--   Date: Wed Mar  4 20:39:34 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -96,7 +96,7 @@ ClassImp(<a href="../TGriffinHit.html">TGriffinHit</a>)
 <a href="../TGriffinHit.html">TGriffinHit</a>::GriffinSceptarSuppressors_det[15][3] = 9999;
 */</span>
 <a name="X6V9mC"></a><a href="../TGriffinHit.html">TGriffinHit</a>::<a href="../TGriffinHit.html#TGriffinHit:TGriffinHit" title="TGriffinHit TGriffinHit::TGriffinHit() or overloads">TGriffinHit</a>()	{	
-   <span class="comment">//<a href="../TGriffinHit.html#TGriffinHit:Class" title="TClass* TGriffinHit::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<a href="../ListOfTypes.html#bool">true</a>);</span>
+   <span class="comment">//<a href="../TGriffinHit.html#TGriffinHit:Class" title="TClass* TGriffinHit::Class()">Class</a>()-><a href="../TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<a href="../ListOfTypes.html#bool">true</a>);</span>
 	<a href="../TGriffinHit.html#TGriffinHit:Clear" title="void TGriffinHit::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 }
 
@@ -130,10 +130,10 @@ ClassImp(<a href="../TGriffinHit.html">TGriffinHit</a>)
 
    position.SetXYZ(0,0,1);
 
-	<span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.size();x++)	{
+	<span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:size" title="vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size_type vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size()">size</a>();x++)	{
 		<a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>[x].<a href="../TGriffinHit.html#TGriffinHit:Clear" title="void TGriffinHit::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 	}
-	<a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.clear();
+	<a href="../TGriffinHit.html#TGriffinHit:bgo" title="vector&lt;TCrystalHit&gt; TGriffinHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:clear" title="void vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::clear()">clear</a>();
 
    <a href="../TGriffinHit.html#TGriffinHit:waveform" title="vector&lt;Short_t&gt; TGriffinHit::waveform">waveform</a>.clear();
 }
@@ -189,7 +189,7 @@ ClassImp(<a href="../TGriffinHit.html">TGriffinHit</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

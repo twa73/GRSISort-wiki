@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:26 2015            -->
+<!--   Date: Wed Mar  4 20:39:29 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -48,7 +48,7 @@ std::map&lt;<span class="keyword">int</span>,<a href="../TGRSIStats.html">TGRSIS
 <a href="../ListOfTypes.html#Long_t">Long_t</a> <a href="../TGRSIStats.html">TGRSIStats</a>::<a href="../TGRSIStats.html#TGRSIStats:fGoodEvents" title="Long_t TGRSIStats::fGoodEvents">fGoodEvents</a> = 0;
 
 <a name="yda4LC"></a><a href="../TGRSIStats.html">TGRSIStats</a> *<a href="../TGRSIStats.html">TGRSIStats</a>::<a href="../TGRSIStats.html#TGRSIStats:GetStats" title="TGRSIStats* TGRSIStats::GetStats(int temp_address)">GetStats</a>(<span class="keyword">int</span> temp_add) {
-   <a href="../TGRSIStats.html#TGRSIStats:Class" title="TClass* TGRSIStats::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<span class="keyword">true</span>);
+   <a href="../TGRSIStats.html#TGRSIStats:Class" title="TClass* TGRSIStats::Class()">Class</a>()-><a href="../TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<span class="keyword">true</span>);
   <span class="keyword">if</span>(<a href="../TGRSIStats.html#TGRSIStats:fStatsMap" title="map&lt;int,TGRSIStats*&gt;* TGRSIStats::fStatsMap">fStatsMap</a>-&gt;count(temp_add) == 0)
   	<a href="../TGRSIStats.html#TGRSIStats:fStatsMap" title="map&lt;int,TGRSIStats*&gt;* TGRSIStats::fStatsMap">fStatsMap</a>-&gt;insert( std::pair&lt;<span class="keyword">int</span>,<a href="../TGRSIStats.html">TGRSIStats</a>*&gt;(temp_add,<span class="keyword">new</span> <a href="../TGRSIStats.html">TGRSIStats</a>(temp_add)));
   <span class="keyword">return</span> <a href="../TGRSIStats.html#TGRSIStats:fStatsMap" title="map&lt;int,TGRSIStats*&gt;* TGRSIStats::fStatsMap">fStatsMap</a>-&gt;at(temp_add);
@@ -92,7 +92,7 @@ std::map&lt;<span class="keyword">int</span>,<a href="../TGRSIStats.html">TGRSIS
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

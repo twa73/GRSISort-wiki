@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:32 2015            -->
+<!--   Date: Wed Mar  4 20:40:11 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -20,10 +20,10 @@
 <div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
 <div id="codeAndLineNumbers"><pre class="listing">
 
-<span class="cpp">#include &lt;TMath.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TMath.h">TMath.h</a>&gt;</span>
 
 <span class="cpp">#include "<a href="../TSharc.h">TSharc.h</a>"</span>
-<span class="cpp">#include &lt;TClass.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TClass.h">TClass.h</a>&gt;</span>
 
 
 ClassImp(<a href="../TSharc.html">TSharc</a>)
@@ -48,7 +48,7 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
 <span class="comment">//==========================================================================//</span>
 
 <a name="Tp2mS"></a><a href="../TSharc.html">TSharc</a>::<a href="../TSharc.html#TSharc:TSharc" title="TSharc TSharc::TSharc() or overloads">TSharc</a>() : <a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>(0)	{
-   <a href="../TSharc.html#TSharc:Class" title="TClass* TSharc::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<span class="keyword">true</span>);
+   <a href="../TSharc.html#TSharc:Class" title="TClass* TSharc::Class()">Class</a>()-><a href="../TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<span class="keyword">true</span>);
 }
 
 <a name="nQE_6B"></a><a href="../TSharc.html">TSharc</a>::<a href="../TSharc.html#TSharc:_TSharc" title="void TSharc::~TSharc()">~TSharc</a>()	{
@@ -118,7 +118,7 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
 			printf(<span class="string">"Front[%i] CSQ2 = %.02f    |     Back[%i] CSQ2 = %.02f\n"</span>,
 					<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetFront_StripNbr(i),<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetFront_EngChi2(i),
 					<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetBack_StripNbr(j),<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetBack_EngChi2(j) );
-			TVector3 position = <a href="../TSharc.html">TSharc</a>::<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>(<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetFront_DetectorNbr(i),<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetFront_StripNbr(i),<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetBack_StripNbr(j));
+			<a href="../TVector3.html">TVector3</a> position = <a href="../TSharc.html">TSharc</a>::<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>(<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetFront_DetectorNbr(i),<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetFront_StripNbr(i),<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;GetBack_StripNbr(j));
 			printf(<span class="string">"X: %.02f   Y: %.02f   Z: %.02f\n"</span>,position.X(),position.Y(),position.Z());
 		*/</span>	
 			<a href="../TSharcHit.html">TSharcHit</a> hit; 
@@ -142,7 +142,7 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
                                              hit.GetFrontStrip(),
                                              hit.GetBackStrip()));
          
-        	<span class="keyword">this</span>-&gt;<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.push_back(hit);
+        	<span class="keyword">this</span>-&gt;<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:push_back" title="void vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::push_back(const TSharcHit&amp; x)">push_back</a>(hit);
 
          <span class="comment">//inline <a href="../ListOfTypes.html#void">void</a> SetPadE(const <a href="../ListOfTypes.html#Double_t">Double_t</a> &amp;tenergy)		{	p_energy = tenergy;	}	//!</span>
          <span class="comment">//inline <a href="../ListOfTypes.html#void">void</a> SetPadT(const <a href="../ListOfTypes.html#Double_t">Double_t</a> &amp;ttime)		{	p_time = ttime;	}		//!</span>
@@ -154,13 +154,13 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
 	<span class="comment">//printf(<span class="string">"\n\n"</span>);</span>
 
    <span class="keyword">for</span>(<span class="keyword">int</span> k=0;k&lt;sdata-&gt;GetMultiplicityPAD();k++)	{	
-      <span class="keyword">for</span>(<span class="keyword">int</span> l=0;l&lt;<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.size();l++)	{
-         <span class="keyword">if</span>(sdata-&gt;GetPAD_DetectorNbr(k) != <a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.at(l).GetDetectorNumber())
+      <span class="keyword">for</span>(<span class="keyword">int</span> l=0;l&lt;<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:size" title="vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size_type vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size()">size</a>();l++)	{
+         <span class="keyword">if</span>(sdata-&gt;GetPAD_DetectorNbr(k) != <a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:at" title="vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::reference vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::at(vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size_type n) or overloads">at</a>(l).GetDetectorNumber())
 		      <span class="keyword">continue</span>;
-			<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.at(l).SetPadAddress(sdata-&gt;GetPAD_ChannelAddress(k)); 
-			<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.at(l).SetPadE(sdata-&gt;GetPAD_Energy(k)); 
-			<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.at(l).SetPadT(sdata-&gt;GetPAD_Time(k)); 
-			<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.at(l).SetPadCharge(sdata-&gt;GetPAD_Charge(k)); 
+			<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:at" title="vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::reference vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::at(vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size_type n) or overloads">at</a>(l).SetPadAddress(sdata-&gt;GetPAD_ChannelAddress(k)); 
+			<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:at" title="vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::reference vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::at(vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size_type n) or overloads">at</a>(l).SetPadE(sdata-&gt;GetPAD_Energy(k)); 
+			<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:at" title="vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::reference vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::at(vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size_type n) or overloads">at</a>(l).SetPadT(sdata-&gt;GetPAD_Time(k)); 
+			<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:at" title="vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::reference vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::at(vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size_type n) or overloads">at</a>(l).SetPadCharge(sdata-&gt;GetPAD_Charge(k)); 
      }
    }
 
@@ -192,7 +192,7 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
 
 	if(hit1-&gt;GetFrontCharge() == hit2-&gt;GetFrontCharge()) {  //  same front strip;
 		//printf(<span class="string">"here!!\n"</span>);
-		TVector3 newposition;
+		<a href="../TVector3.html">TVector3</a> newposition;
 		newposition.SetX(hit1-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit1_back_weight + hit2-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit2_back_weight);
 		newposition.SetY(hit1-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit1_back_weight + hit2-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit2_back_weight);
 		newposition.SetZ(hit1-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit1_back_weight + hit2-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit2_back_weight);
@@ -209,7 +209,7 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
 		}
 	}
 	else if(hit1-&gt;GetBackCharge() == hit2-&gt;GetBackCharge()) {   //  same back strip;
-		TVector3 newposition;
+		<a href="../TVector3.html">TVector3</a> newposition;
 		newposition.SetX(hit1-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit1_front_weight + hit2-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit2_front_weight);
 		newposition.SetY(hit1-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit1_front_weight + hit2-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit2_front_weight);
 		newposition.SetZ(hit1-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit1_front_weight + hit2-&gt;<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>().X()*hit2_front_weight);
@@ -246,7 +246,7 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
 
 <a name="ITVmMC"></a><span class="keyword">void</span> <a href="../TSharc.html">TSharc</a>::<a href="../TSharc.html#TSharc:Clear" title="void TSharc::Clear(Option_t* =&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *option)	{
   <span class="keyword">if</span>(<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>) <a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>-&gt;<a href="../TSharc.html#TSharc:Clear" title="void TSharc::Clear(Option_t* =&quot;&quot;)">Clear</a>();
-  <a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.clear();
+  <a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:clear" title="void vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::clear()">clear</a>();
   <span class="keyword">return</span>;
 }
 
@@ -286,7 +286,7 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
 <span class="keyword">double</span> <a href="../TSharc.html">TSharc</a>::<a href="../TSharc.html#TSharc:segmentpitch" title="double TSharc::segmentpitch">segmentpitch</a>         = <a href="../TSharc.html">TSharc</a>::<a href="../TSharc.html#TSharc:Pdim" title="double TSharc::Pdim">Pdim</a> / 24.0;  <span class="comment">//<a href="../TSharc.html">TSharc</a>::backstripslist[1] ; // 81.6/24 = 3.4 degrees (angular pitch)</span>
 
 <span class="comment">// The dimensions are described for a single detector of each type UQ,UB,DB,DQ, and all other detectors can be calculated by rotating this</span>
-<a name="rYoXc"></a>TVector3 <a href="../TSharc.html">TSharc</a>::<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>(<span class="keyword">int</span> detector, <span class="keyword">int</span> frontstrip, <span class="keyword">int</span> backstrip, <span class="keyword">double</span> X, <span class="keyword">double</span> Y, <span class="keyword">double</span> Z)	{
+<a name="rYoXc"></a><a href="../TVector3.html">TVector3</a> <a href="../TSharc.html">TSharc</a>::<a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>(<span class="keyword">int</span> detector, <span class="keyword">int</span> frontstrip, <span class="keyword">int</span> backstrip, <span class="keyword">double</span> X, <span class="keyword">double</span> Y, <span class="keyword">double</span> Z)	{
   <span class="keyword">int</span> FrontDet = detector;
   <span class="keyword">int</span> FrontStr = frontstrip;
   <span class="keyword">int</span> BackDet  = detector;
@@ -296,8 +296,8 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
   <span class="keyword">double</span> y = 0;
   <span class="keyword">double</span> z = 0;
 
-  TVector3 position;
-  TVector3 position_offset;
+  <a href="../TVector3.html">TVector3</a> position;
+  <a href="../TVector3.html">TVector3</a> position_offset;
   position_offset.SetXYZ(X,Y,Z);
 
   <span class="keyword">if</span>(FrontDet&gt;=5 &amp;&amp; FrontDet&lt;=8){ <span class="comment">//forward box</span>
@@ -319,14 +319,14 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
     <span class="keyword">double</span> z = <a href="../TSharc.html#TSharc:ZposUQ" title="double TSharc::ZposUQ">ZposUQ</a>;
     <span class="keyword">double</span> rho = <a href="../TSharc.html#TSharc:RminUQ" title="double TSharc::RminUQ">RminUQ</a> + (FrontStr+0.5)*<a href="../TSharc.html#TSharc:ringpitch" title="double TSharc::ringpitch">ringpitch</a>;    <span class="comment">// [(+9.0) - (+41.0)] </span>
     <span class="keyword">double</span> phi = (<a href="../TSharc.html#TSharc:PminUQ" title="double TSharc::PminUQ">PminUQ</a> + (BackStr+0.5)*<a href="../TSharc.html#TSharc:segmentpitch" title="double TSharc::segmentpitch">segmentpitch</a>)*PI/180.0;  <span class="comment">// [(+2.0) - (+83.6)] </span>
-    position.SetXYZ(rho*TMath::Sin(phi),rho*TMath::Cos(phi),z);   
+    position.SetXYZ(rho*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Sin" title="Double_t TMath::Sin(Double_t x)">Sin</a>(phi),rho*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Cos" title="Double_t TMath::Cos(Double_t x)">Cos</a>(phi),z);   
   }
   <span class="keyword">else</span> <span class="keyword">if</span>(FrontDet&lt;=4){ <span class="comment">// forward (downstream) QQQ</span>
     nrots = FrontDet-1;
     <span class="keyword">double</span> z = <a href="../TSharc.html#TSharc:ZposDQ" title="double TSharc::ZposDQ">ZposDQ</a>;
     <span class="keyword">double</span> rho = <a href="../TSharc.html#TSharc:RminDQ" title="double TSharc::RminDQ">RminDQ</a> + (FrontStr+0.5)*<a href="../TSharc.html#TSharc:ringpitch" title="double TSharc::ringpitch">ringpitch</a>;    <span class="comment">// [(+9.0) - (+41.0)] </span>
     <span class="keyword">double</span> phi = (<a href="../TSharc.html#TSharc:PminDQ" title="double TSharc::PminDQ">PminDQ</a> + (BackStr+0.5)*<a href="../TSharc.html#TSharc:segmentpitch" title="double TSharc::segmentpitch">segmentpitch</a>)*PI/180.0;  <span class="comment">// [(+6.4) - (+88.0)] </span>
-    position.SetXYZ(rho*TMath::Sin(phi),rho*TMath::Cos(phi),z);    
+    position.SetXYZ(rho*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Sin" title="Double_t TMath::Sin(Double_t x)">Sin</a>(phi),rho*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Cos" title="Double_t TMath::Cos(Double_t x)">Cos</a>(phi),z);    
   }  
 
   position.RotateZ(PI*nrots/2);
@@ -350,7 +350,7 @@ ClassImp(<a href="../TSharc.html">TSharc</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

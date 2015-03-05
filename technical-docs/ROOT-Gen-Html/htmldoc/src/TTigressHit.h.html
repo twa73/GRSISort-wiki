@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:33 2015            -->
+<!--   Date: Wed Mar  4 20:40:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -32,8 +32,8 @@
 <span class="cpp">#include "<a href="../TChannel.h">TChannel.h</a>"</span>
 <span class="cpp">#include "<a href="../TCrystalHit.h">TCrystalHit.h</a>"</span>
 
-<span class="cpp">#include "TMath.h"</span>
-<span class="cpp">#include "TVector3.h"</span>
+<span class="cpp">#include "<a href="../TMath.h">TMath.h</a>"</span>
+<span class="cpp">#include "<a href="../TVector3.h">TVector3.h</a>"</span>
 
 <span class="cpp">#include "<a href="../TGRSIDetectorHit.h">TGRSIDetectorHit.h</a>"</span>
 
@@ -56,7 +56,7 @@
 		<span class="comment">//<a href="../ListOfTypes.html#double">double</a> doppler;</span>
 	
 		<span class="comment">//need to do sudo tracking to build addback.</span>
-		TVector3 <a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a>;  <span class="comment">//!</span>
+		<a href="../TVector3.html">TVector3</a> <a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a>;  <span class="comment">//!</span>
 		<span class="cpp">#ifndef __CINT__</span>
 		std::tuple&lt;<span class="keyword">int</span>,<span class="keyword">int</span>,<span class="keyword">int</span>&gt; lastpos; <span class="comment">//!</span>
 		<span class="cpp">#endif</span>
@@ -65,14 +65,14 @@
 
 		<span class="comment">/////////////////////////		/////////////////////////////////////</span>
 <a name="Dz1yrB"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetCore" title="void TTigressHit::SetCore(TCrystalHit&amp; temp)">SetCore</a>(<a href="../TCrystalHit.html">TCrystalHit</a> &amp;temp)		  { <a href="../TTigressHit.html#TTigressHit:core" title="TCrystalHit TTigressHit::core">core</a> = temp;	} 					<span class="comment">//!</span>
-<a name="OKHbR"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetSegment" title="void TTigressHit::SetSegment(TCrystalHit&amp; temp)">SetSegment</a>(<a href="../TCrystalHit.html">TCrystalHit</a> &amp;temp)	{ <a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.push_back(temp);	}		<span class="comment">//!</span>
-<a name="WFM.gC"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetBGO" title="void TTigressHit::SetBGO(TCrystalHit&amp; temp)">SetBGO</a>(<a href="../TCrystalHit.html">TCrystalHit</a> &amp;temp)		  { <a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.push_back(temp);	}			<span class="comment">//!</span>
+<a name="OKHbR"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetSegment" title="void TTigressHit::SetSegment(TCrystalHit&amp; temp)">SetSegment</a>(<a href="../TCrystalHit.html">TCrystalHit</a> &amp;temp)	{ <a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:push_back" title="void vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::push_back(const TCrystalHit&amp; x)">push_back</a>(temp);	}		<span class="comment">//!</span>
+<a name="WFM.gC"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetBGO" title="void TTigressHit::SetBGO(TCrystalHit&amp; temp)">SetBGO</a>(<a href="../TCrystalHit.html">TCrystalHit</a> &amp;temp)		  { <a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:push_back" title="void vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::push_back(const TCrystalHit&amp; x)">push_back</a>(temp);	}			<span class="comment">//!</span>
 
 <a name="WH_dzB"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetDetectorNumber" title="void TTigressHit::SetDetectorNumber(const int&amp; i)">SetDetectorNumber</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;i) { <a href="../TTigressHit.html#TTigressHit:detector" title="UShort_t TTigressHit::detector">detector</a> = i;	} 				<span class="comment">//!</span>
 <a name="uTCtc"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetCrystalNumber" title="void TTigressHit::SetCrystalNumber(const int&amp; i)">SetCrystalNumber</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;i)	 { <a href="../TTigressHit.html#TTigressHit:crystal" title="UShort_t TTigressHit::crystal">crystal</a> = i; }					<span class="comment">//!</span>
 <a name="gAewdB"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetInitalHit" title="void TTigressHit::SetInitalHit(const int&amp; i)">SetInitalHit</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;i)		   { <a href="../TTigressHit.html#TTigressHit:first_segment" title="UShort_t TTigressHit::first_segment">first_segment</a> = i; }				<span class="comment">//!</span>
 
-<a name="w1bAMB"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetPosition" title="void TTigressHit::SetPosition(const TVector3&amp; p)">SetPosition</a>(<span class="keyword">const</span> TVector3 &amp;p)  { position = p;	}					<span class="comment">//!</span>
+<a name="w1bAMB"></a>		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:SetPosition" title="void TTigressHit::SetPosition(const TVector3&amp; p)">SetPosition</a>(<span class="keyword">const</span> <a href="../TVector3.html">TVector3</a> &amp;p)  { position = p;	}					<span class="comment">//!</span>
 		<span class="comment">//<a href="../ListOfTypes.html#void">void</a> SetDoppler(const <a href="../ListOfTypes.html#double">double</a> &amp;d)	   { doppler = d;	}					//!</span>
 		
 		<span class="comment">/////////////////////////		/////////////////////////////////////</span>
@@ -86,28 +86,28 @@
 <a name="zYbUB"></a>    <span class="keyword">inline</span> <span class="keyword">double</span> <a href="../TTigressHit.html#TTigressHit:GetTimeCFD" title="double TTigressHit::GetTimeCFD()">GetTimeCFD</a>()           {  <span class="keyword">return</span> <a href="../TTigressHit.html#TTigressHit:core" title="TCrystalHit TTigressHit::core">core</a>.<a href="../TCrystalHit.html#TCrystalHit:GetCfd" title="double TCrystalHit::GetCfd()">GetCfd</a>(); } <span class="comment">//!</span>
 		<span class="comment">//inline <a href="../ListOfTypes.html#double">double</a>   <a href="../TTigressHit.html#TTigressHit:GetDoppler" title="double TTigressHit::GetDoppler(double beta,TVector3* vec=0)">GetDoppler</a>()	       {	return doppler;				}		//!</span>
 
-<a name="jmXlNB"></a>		<span class="keyword">inline</span> <span class="keyword">double</span> <a href="../TTigressHit.html#TTigressHit:GetDoppler" title="double TTigressHit::GetDoppler(double beta,TVector3* vec=0)">GetDoppler</a>(<span class="keyword">double</span> beta,TVector3 *vec=0) { 
+<a name="jmXlNB"></a>		<span class="keyword">inline</span> <span class="keyword">double</span> <a href="../TTigressHit.html#TTigressHit:GetDoppler" title="double TTigressHit::GetDoppler(double beta,TVector3* vec=0)">GetDoppler</a>(<span class="keyword">double</span> beta,<a href="../TVector3.html">TVector3</a> *vec=0) { 
 			<span class="keyword">bool</span> madevec = <span class="keyword">false</span>;
 			<span class="keyword">if</span>(vec==0) {
-				vec = <span class="keyword">new</span> TVector3;
+				vec = <span class="keyword">new</span> <a href="../TVector3.html">TVector3</a>;
 				vec-&gt;SetXYZ(0,0,1);
 				madevec = <span class="keyword">true</span>;
 			}
 			<span class="keyword">double</span> tmp = 0;
 			<span class="comment">//if(beta != 0.00)  {</span>
       <span class="keyword">double</span> gamma = 1/(sqrt(1-pow(beta,2)));
-      tmp = <span class="keyword">this</span>-&gt;<a href="../TTigressHit.html#TTigressHit:GetEnergy" title="double TTigressHit::GetEnergy()">GetEnergy</a>()*gamma *(1 - beta*TMath::Cos(<span class="keyword">this</span>-&gt;<a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:GetPosition" title="TVector3 TGRSIDetectorHit::GetPosition()">GetPosition</a>().Angle(*vec)));
+      tmp = <span class="keyword">this</span>-&gt;<a href="../TTigressHit.html#TTigressHit:GetEnergy" title="double TTigressHit::GetEnergy()">GetEnergy</a>()*gamma *(1 - beta*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Cos" title="Double_t TMath::Cos(Double_t x)">Cos</a>(<span class="keyword">this</span>-&gt;<a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:GetPosition" title="TVector3 TGRSIDetectorHit::GetPosition()">GetPosition</a>().Angle(*vec)));
 			<span class="comment">//}</span>
 			<span class="keyword">if</span>(madevec) 
 				<span class="keyword">delete</span> vec;
 			<span class="keyword">return</span> tmp;
 		}
 
-<a name="u8c4vC"></a>		<span class="keyword">inline</span> <span class="keyword">int</span> <a href="../TTigressHit.html#TTigressHit:GetSegmentMultiplicity" title="int TTigressHit::GetSegmentMultiplicity()">GetSegmentMultiplicity</a>()		        {	<span class="keyword">return</span> <a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.size();	}	<span class="comment">//!</span>
-<a name="dYiBj"></a>		<span class="keyword">inline</span> <a href="../TCrystalHit.html">TCrystalHit</a> *<a href="../TTigressHit.html#TTigressHit:GetSegment" title="TCrystalHit* TTigressHit::GetSegment(const int&amp; i)">GetSegment</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;i)	{	<span class="keyword">return</span> &amp;<a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.at(i);	}	<span class="comment">//!</span>
+<a name="u8c4vC"></a>		<span class="keyword">inline</span> <span class="keyword">int</span> <a href="../TTigressHit.html#TTigressHit:GetSegmentMultiplicity" title="int TTigressHit::GetSegmentMultiplicity()">GetSegmentMultiplicity</a>()		        {	<span class="keyword">return</span> <a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:size" title="vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size_type vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size()">size</a>();	}	<span class="comment">//!</span>
+<a name="dYiBj"></a>		<span class="keyword">inline</span> <a href="../TCrystalHit.html">TCrystalHit</a> *<a href="../TTigressHit.html#TTigressHit:GetSegment" title="TCrystalHit* TTigressHit::GetSegment(const int&amp; i)">GetSegment</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;i)	{	<span class="keyword">return</span> &amp;<a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:at" title="vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::reference vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::at(vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size_type n) or overloads">at</a>(i);	}	<span class="comment">//!</span>
 
-<a name="suGFmD"></a>		<span class="keyword">inline</span> <span class="keyword">int</span> <a href="../TTigressHit.html#TTigressHit:GetBGOMultiplicity" title="int TTigressHit::GetBGOMultiplicity()">GetBGOMultiplicity</a>()			      {	<span class="keyword">return</span> <a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.size();	}		      <span class="comment">//!</span>
-<a name="IN4Tn"></a>		<span class="keyword">inline</span> <a href="../TCrystalHit.html">TCrystalHit</a> *<a href="../TTigressHit.html#TTigressHit:GetBGO" title="TCrystalHit* TTigressHit::GetBGO(const int&amp; i)">GetBGO</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;i)	{	<span class="keyword">return</span> &amp;<a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.at(i);	}	        <span class="comment">//!</span>
+<a name="suGFmD"></a>		<span class="keyword">inline</span> <span class="keyword">int</span> <a href="../TTigressHit.html#TTigressHit:GetBGOMultiplicity" title="int TTigressHit::GetBGOMultiplicity()">GetBGOMultiplicity</a>()			      {	<span class="keyword">return</span> <a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:size" title="vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size_type vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size()">size</a>();	}		      <span class="comment">//!</span>
+<a name="IN4Tn"></a>		<span class="keyword">inline</span> <a href="../TCrystalHit.html">TCrystalHit</a> *<a href="../TTigressHit.html#TTigressHit:GetBGO" title="TCrystalHit* TTigressHit::GetBGO(const int&amp; i)">GetBGO</a>(<span class="keyword">const</span> <span class="keyword">int</span> &amp;i)	{	<span class="keyword">return</span> &amp;<a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:at" title="vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::reference vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::at(vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size_type n) or overloads">at</a>(i);	}	        <span class="comment">//!</span>
 
 <a name="atVzID"></a>		<span class="keyword">inline</span> <a href="../TCrystalHit.html">TCrystalHit</a> *<a href="../TTigressHit.html#TTigressHit:GetCore" title="TCrystalHit* TTigressHit::GetCore()">GetCore</a>()								{	<span class="keyword">return</span> &amp;<a href="../TTigressHit.html#TTigressHit:core" title="TCrystalHit TTigressHit::core">core</a>;	}	       		  <span class="comment">//!</span>
 
@@ -117,7 +117,7 @@
 		<span class="keyword">static</span> <span class="keyword">bool</span> <a href="../TTigressHit.html#TTigressHit:CompareEnergy" title="bool TTigressHit::CompareEnergy(TTigressHit lhs,TTigressHit rhs)">CompareEnergy</a>(<a href="../TTigressHit.html">TTigressHit</a> lhs, <a href="../TTigressHit.html">TTigressHit</a> rhs);	<span class="comment">//!     { return (lhs.<a href="../TTigressHit.html#TTigressHit:GetDetectorNumber" title="int TTigressHit::GetDetectorNumber()">GetDetectorNumber</a>() &lt; rhs.<a href="../TTigressHit.html#TTigressHit:GetDetectorNumber" title="int TTigressHit::GetDetectorNumber()">GetDetectorNumber</a>()); }</span>
 		
 		<span class="keyword">void</span> <a href="../TTigressHit.html#TTigressHit:Add" title="void TTigressHit::Add(TTigressHit* )">Add</a>(<a href="../TTigressHit.html">TTigressHit</a>*);                                       <span class="comment">//!</span>
-<a name="hld11"></a>		TVector3 <a href="../TTigressHit.html#TTigressHit:GetLastHit" title="TVector3 TTigressHit::GetLastHit()">GetLastHit</a>()	{<span class="keyword">return</span> <a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a>;}                       <span class="comment">//!</span>
+<a name="hld11"></a>		<a href="../TVector3.html">TVector3</a> <a href="../TTigressHit.html#TTigressHit:GetLastHit" title="TVector3 TTigressHit::GetLastHit()">GetLastHit</a>()	{<span class="keyword">return</span> <a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a>;}                       <span class="comment">//!</span>
 		<span class="cpp">#ifndef __CINT__</span>
 		<span class="keyword">inline</span> std::tuple&lt;<span class="keyword">int</span>,<span class="keyword">int</span>,<span class="keyword">int</span>&gt; GetLastPosition() {<span class="keyword">return</span> lastpos;} <span class="comment">//!</span>
 		<span class="cpp">#endif                         </span>
@@ -141,7 +141,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:25 2015            -->
+<!--   Date: Wed Mar  4 20:39:29 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -24,10 +24,10 @@
 
 <span class="cpp">#include &lt;cstdio&gt;</span>
 
-<span class="cpp">#include "TTree.h"</span>
-<span class="cpp">#include "TChain.h"</span>
-<span class="cpp">#include "TFile.h"</span>
-<span class="cpp">#include "TProofLite.h"</span>
+<span class="cpp">#include "<a href="../TTree.h">TTree.h</a>"</span>
+<span class="cpp">#include "<a href="../TChain.h">TChain.h</a>"</span>
+<span class="cpp">#include "<a href="../TFile.h">TFile.h</a>"</span>
+<span class="cpp">#include "<a href="../TProofLite.h">TProofLite.h</a>"</span>
 
 <span class="cpp">#include "<a href="../TFragmentSelector.h">TFragmentSelector.h</a>"</span>
 
@@ -37,7 +37,7 @@
 <span class="cpp">#include "<a href="../TKinematics.h">TKinematics.h</a>"</span>
 <span class="cpp">#include "<a href="../TEpicsFrag.h">TEpicsFrag.h</a>"</span>
 
-<span class="keyword">class</span> <a href="../TGRSIRootIO.html">TGRSIRootIO</a> : <span class="keyword">public</span> <a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> {
+<span class="keyword">class</span> <a href="../TGRSIRootIO.html">TGRSIRootIO</a> : <span class="keyword">public</span> <a href="../TObject.html">TObject</a> {
 
    <span class="keyword">public</span>:
       <span class="keyword">static</span> <a href="../TGRSIRootIO.html">TGRSIRootIO</a> *<a href="../TGRSIRootIO.html#TGRSIRootIO:Get" title="TGRSIRootIO* TGRSIRootIO::Get()">Get</a>();
@@ -48,14 +48,14 @@
 <a name="evK_6C"></a>      <a href="../TGRSIRootIO.html">TGRSIRootIO</a>();
 
    <span class="keyword">private</span>:
-      <span class="comment">//TTree *fTChannelTree;</span>
-      TTree *<a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>;
-      TTree *<a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>;
-      TFile *<a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>;
+      <span class="comment">//<a href="../TTree.html">TTree</a> *fTChannelTree;</span>
+      <a href="../TTree.html">TTree</a> *<a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>;
+      <a href="../TTree.html">TTree</a> *<a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>;
+      <a href="../TFile.html">TFile</a> *<a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>;
       <span class="keyword">int</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:fTimesFillCalled" title="int TGRSIRootIO::fTimesFillCalled">fTimesFillCalled</a>;
       <span class="keyword">int</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:fEPICSTimesFillCalled" title="int TGRSIRootIO::fEPICSTimesFillCalled">fEPICSTimesFillCalled</a>;
 
-      std::vector&lt;TFile*&gt; <a href="../TGRSIRootIO.html#TGRSIRootIO:finfiles" title="vector&lt;TFile*&gt; TGRSIRootIO::finfiles">finfiles</a>;
+      std::vector&lt;<a href="../TFile.html">TFile</a>*&gt; <a href="../TGRSIRootIO.html#TGRSIRootIO:finfiles" title="vector&lt;TFile*&gt; TGRSIRootIO::finfiles">finfiles</a>;
 
       <a href="../TFragment.html">TFragment</a>  *<a href="../TGRSIRootIO.html#TGRSIRootIO:fBufferFrag" title="TFragment* TGRSIRootIO::fBufferFrag">fBufferFrag</a>;
       <a href="../TEpicsFrag.html">TEpicsFrag</a> *<a href="../TGRSIRootIO.html#TGRSIRootIO:fEXBufferFrag" title="TEpicsFrag* TGRSIRootIO::fEXBufferFrag">fEXBufferFrag</a>;
@@ -67,23 +67,23 @@
       <span class="keyword">int</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:GetRunNumber" title="int TGRSIRootIO::GetRunNumber(string )">GetRunNumber</a>(std::string);
       <span class="keyword">int</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:GetSubRunNumber" title="int TGRSIRootIO::GetSubRunNumber(string )">GetSubRunNumber</a>(std::string);
 
-      <span class="keyword">void</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:LoadRootFile" title="void TGRSIRootIO::LoadRootFile(TFile* )">LoadRootFile</a>(TFile*);
+      <span class="keyword">void</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:LoadRootFile" title="void TGRSIRootIO::LoadRootFile(TFile* )">LoadRootFile</a>(<a href="../TFile.html">TFile</a>*);
       
 
-<a name="GzVeyE"></a>      TFile *<a href="../TGRSIRootIO.html#TGRSIRootIO:GetRootOutFile" title="TFile* TGRSIRootIO::GetRootOutFile()">GetRootOutFile</a>()  { <span class="keyword">return</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>;   }  
+<a name="GzVeyE"></a>      <a href="../TFile.html">TFile</a> *<a href="../TGRSIRootIO.html#TGRSIRootIO:GetRootOutFile" title="TFile* TGRSIRootIO::GetRootOutFile()">GetRootOutFile</a>()  { <span class="keyword">return</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:foutfile" title="TFile* TGRSIRootIO::foutfile">foutfile</a>;   }  
 
 <span class="comment">//      <a href="../ListOfTypes.html#void">void</a> SetUpChannelTree();</span>
-<span class="comment">//      TTree *GetChannelTree()  { return fTChannelTree;  }</span>
+<span class="comment">//      <a href="../TTree.html">TTree</a> *GetChannelTree()  { return fTChannelTree;  }</span>
 <span class="comment">//      <a href="../ListOfTypes.html#void">void</a> FillChannelTree(<a href="../TChannel.html">TChannel</a>*);</span>
 <span class="comment">//      <a href="../ListOfTypes.html#void">void</a> FinalizeChannelTree();</span>
 
       <span class="keyword">void</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:SetUpFragmentTree" title="void TGRSIRootIO::SetUpFragmentTree()">SetUpFragmentTree</a>();
-<a name="ImT79D"></a>      TTree *<a href="../TGRSIRootIO.html#TGRSIRootIO:GetFragmentTree" title="TTree* TGRSIRootIO::GetFragmentTree()">GetFragmentTree</a>()  { <span class="keyword">return</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>;  }
+<a name="ImT79D"></a>      <a href="../TTree.html">TTree</a> *<a href="../TGRSIRootIO.html#TGRSIRootIO:GetFragmentTree" title="TTree* TGRSIRootIO::GetFragmentTree()">GetFragmentTree</a>()  { <span class="keyword">return</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:fFragmentTree" title="TTree* TGRSIRootIO::fFragmentTree">fFragmentTree</a>;  }
       <span class="keyword">void</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:FillFragmentTree" title="void TGRSIRootIO::FillFragmentTree(TFragment* )">FillFragmentTree</a>(<a href="../TFragment.html">TFragment</a>*);
       <span class="keyword">void</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:FinalizeFragmentTree" title="void TGRSIRootIO::FinalizeFragmentTree()">FinalizeFragmentTree</a>();
 
       <span class="keyword">void</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:SetUpEpicsTree" title="void TGRSIRootIO::SetUpEpicsTree()">SetUpEpicsTree</a>();
-<a name="MYEG7C"></a>      TTree *<a href="../TGRSIRootIO.html#TGRSIRootIO:GetEpicsTree" title="TTree* TGRSIRootIO::GetEpicsTree()">GetEpicsTree</a>()  { <span class="keyword">return</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>;  }
+<a name="MYEG7C"></a>      <a href="../TTree.html">TTree</a> *<a href="../TGRSIRootIO.html#TGRSIRootIO:GetEpicsTree" title="TTree* TGRSIRootIO::GetEpicsTree()">GetEpicsTree</a>()  { <span class="keyword">return</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>;  }
       <span class="keyword">void</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:FillEpicsTree" title="void TGRSIRootIO::FillEpicsTree(TEpicsFrag* )">FillEpicsTree</a>(<a href="../TEpicsFrag.html">TEpicsFrag</a>*);
       <span class="keyword">void</span> <a href="../TGRSIRootIO.html#TGRSIRootIO:FinalizeEpicsTree" title="void TGRSIRootIO::FinalizeEpicsTree()">FinalizeEpicsTree</a>();
 
@@ -105,7 +105,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

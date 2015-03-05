@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:16:09 2015            -->
+<!--   Date: Wed Mar  4 20:38:47 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,16 +22,16 @@
 
 <span class="cpp">#include "<a href="../Globals.h">Globals.h</a>"</span>
 
-<span class="cpp">#include &lt;TClass.h&gt;</span>
-<span class="cpp">#include &lt;TPaveStats.h&gt;</span>
-<span class="cpp">#include &lt;TList.h&gt;</span>
-<span class="cpp">#include &lt;TText.h&gt;</span>
-<span class="cpp">#include &lt;TLatex.h&gt;</span>
-<span class="cpp">#include &lt;TH1.h&gt;</span>
-<span class="cpp">#include &lt;Buttons.h&gt;</span>
-<span class="cpp">#include &lt;KeySymbols.h&gt; </span>
-<span class="cpp">#include &lt;TVirtualX.h&gt;</span>
-<span class="cpp">#include &lt;TROOT.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TClass.h">TClass.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TPaveStats.h">TPaveStats.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TList.h">TList.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TText.h">TText.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TLatex.h">TLatex.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TH1.h">TH1.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../Buttons.h">Buttons.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../KeySymbols.h">KeySymbols.h</a>&gt;</span> 
+<span class="cpp">#include &lt;<a href="../TVirtualX.h">TVirtualX.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TROOT.h">TROOT.h</a>&gt;</span>
 
 <span class="cpp">#include "<a href="../GCanvas.h">GCanvas.h</a>"</span>
 <span class="cpp">#include "<a href="../GROOTGuiFactory.h">GROOTGuiFactory.h</a>"</span>
@@ -44,27 +44,27 @@
 <span class="keyword">int</span> <a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:lasty" title="int GCanvas::lasty">lasty</a> = 0;
 
 <a name="d09UX"></a><a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:GCanvas" title="GCanvas GCanvas::GCanvas(Bool_t build=kTRUE) or overloads">GCanvas</a>(<a href="../ListOfTypes.html#Bool_t">Bool_t</a> build)
-        :<a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a>(build)  {  
+        :<a href="../TCanvas.html">TCanvas</a>(build)  {  
    <a href="../GCanvas.html#GCanvas:GCanvasInit" title="void GCanvas::GCanvasInit()">GCanvasInit</a>();
 }
 
 
 <a name="hWIvOD"></a><a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:GCanvas" title="GCanvas GCanvas::GCanvas(Bool_t build=kTRUE) or overloads">GCanvas</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* title, <a href="../ListOfTypes.html#Int_t">Int_t</a> form)
-        :<a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a>(name,title,form) { 
+        :<a href="../TCanvas.html">TCanvas</a>(name,title,form) { 
    <a href="../GCanvas.html#GCanvas:GCanvasInit" title="void GCanvas::GCanvasInit()">GCanvasInit</a>();
 
 }
 
 
 <a name="twezEB"></a><a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:GCanvas" title="GCanvas GCanvas::GCanvas(Bool_t build=kTRUE) or overloads">GCanvas</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* title, <a href="../ListOfTypes.html#Int_t">Int_t</a> ww, <a href="../ListOfTypes.html#Int_t">Int_t</a> wh)
-        :<a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a>(name,title,ww,wh) { 
+        :<a href="../TCanvas.html">TCanvas</a>(name,title,ww,wh) { 
    <a href="../GCanvas.html#GCanvas:GCanvasInit" title="void GCanvas::GCanvasInit()">GCanvasInit</a>();
 
 }
 
 
 <a name="J0BmwB"></a><a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:GCanvas" title="GCanvas GCanvas::GCanvas(Bool_t build=kTRUE) or overloads">GCanvas</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="../ListOfTypes.html#Int_t">Int_t</a> ww, <a href="../ListOfTypes.html#Int_t">Int_t</a> wh, <a href="../ListOfTypes.html#Int_t">Int_t</a> winid)
-        :<a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a>(name,ww,wh,winid) { 
+        :<a href="../TCanvas.html">TCanvas</a>(name,ww,wh,winid) { 
   <span class="comment">// this constructor is used to create an embedded canvas</span>
   <span class="comment">// I see no reason for us to support this here.  pcb.</span>
   <a href="../GCanvas.html#GCanvas:GCanvasInit" title="void GCanvas::GCanvasInit()">GCanvasInit</a>();
@@ -72,29 +72,29 @@
 
 
 <a name="h6XHMB"></a><a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:GCanvas" title="GCanvas GCanvas::GCanvas(Bool_t build=kTRUE) or overloads">GCanvas</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* title, <a href="../ListOfTypes.html#Int_t">Int_t</a> wtopx, <a href="../ListOfTypes.html#Int_t">Int_t</a> wtopy, <a href="../ListOfTypes.html#Int_t">Int_t</a> ww, <a href="../ListOfTypes.html#Int_t">Int_t</a> wh)
-        :<a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a>(name,title,wtopx,wtopy,ww,wh) { 
+        :<a href="../TCanvas.html">TCanvas</a>(name,title,wtopx,wtopy,ww,wh) { 
    <a href="../GCanvas.html#GCanvas:GCanvasInit" title="void GCanvas::GCanvasInit()">GCanvasInit</a>();
 }
 
 
 <a name="wzZOlD"></a><a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:_GCanvas" title="void GCanvas::~GCanvas()">~GCanvas</a>() {
-   <span class="comment">//<a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a>::<a href="../#TCanvas:_TCanvas" title="void TCanvas::~TCanvas()">~TCanvas</a>();           </span>
+   <span class="comment">//<a href="../TCanvas.html">TCanvas</a>::<a href="../TCanvas.html#TCanvas:_TCanvas" title="void TCanvas::~TCanvas()">~TCanvas</a>();           </span>
 }
 
 <a name="pTmR.D"></a><span class="keyword">void</span> <a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:GCanvasInit" title="void GCanvas::GCanvasInit()">GCanvasInit</a>() {
    printf(<span class="string">"GCanvasInit called.\n"</span>);
-   <span class="comment">// ok, to interact with the default TGWindow</span>
+   <span class="comment">// ok, to interact with the default <a href="../TGWindow.html">TGWindow</a></span>
    <span class="comment">// stuff from the root gui we need a out own <a href="../GRootCanvas.html">GRootCanvas</a>.  </span>
    <span class="comment">// We make this using <a href="../GROOTGuiFactory.html">GROOTGuiFactory</a>, which replaces the</span>
-   <span class="comment">// TRootGuiFactory used in the creation of some of the </span>
+   <span class="comment">// <a href="../TRootGuiFactory.html">TRootGuiFactory</a> used in the creation of some of the </span>
    <span class="comment">// default gui's (canvas,browser,etc).  </span>
 
-   <span class="comment">//if(gVirtualX-&gt;<a href="../#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TGX11"</span>)) {</span>
+   <span class="comment">//if(gVirtualX-&gt;<a href="../TObject.html#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TGX11"</span>)) {</span>
    <span class="comment">//    printf(<span class="string">"\tusing x11-like graphical interface.\n"</span>);</span>
    <span class="comment">//}</span>
    
 
-   <span class="keyword">this</span>-&gt;<a href="../#TPad:SetCrosshair" title="void TPad::SetCrosshair(Int_t crhair=1)">SetCrosshair</a>(<span class="keyword">true</span>);
+   <span class="keyword">this</span>-&gt;<a href="../TPad.html#TPad:SetCrosshair" title="void TPad::SetCrosshair(Int_t crhair=1)">SetCrosshair</a>(<span class="keyword">true</span>);
 }
 
 
@@ -104,7 +104,7 @@
 
 
 
-<span class="comment">//<a href="../ListOfTypes.html#void">void</a> <a href="../GCanvas.html">GCanvas</a>::ProcessEvent(<a href="../ListOfTypes.html#Int_t">Int_t</a> event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y,<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj) {</span>
+<span class="comment">//<a href="../ListOfTypes.html#void">void</a> <a href="../GCanvas.html">GCanvas</a>::ProcessEvent(<a href="../ListOfTypes.html#Int_t">Int_t</a> event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y,<a href="../TObject.html">TObject</a> *obj) {</span>
 <span class="comment">//   printf(<span class="string">"{GCanvas} ProcessEvent:\n"</span>);</span>
 <span class="comment">//   printf(<span class="string">"\tevent: \t0x%08x\n"</span>,event);</span>
 <span class="comment">//   printf(<span class="string">"\tobject:\t0x%08x\n"</span>,obj);</span>
@@ -112,25 +112,25 @@
 <span class="comment">//   printf(<span class="string">"\ty:     \t0x%i\n"</span>,y);</span>
 <span class="comment">//}</span>
 
-<span class="comment">//<a href="../ListOfTypes.html#void">void</a> <a href="../GCanvas.html">GCanvas</a>::<a href="../#TCanvas:ExecuteEvent" title="void TCanvas::ExecuteEvent(Int_t event,Int_t px,Int_t py)">ExecuteEvent</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y) { </span>
+<span class="comment">//<a href="../ListOfTypes.html#void">void</a> <a href="../GCanvas.html">GCanvas</a>::<a href="../TCanvas.html#TCanvas:ExecuteEvent" title="void TCanvas::ExecuteEvent(Int_t event,Int_t px,Int_t py)">ExecuteEvent</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y) { </span>
 <span class="comment">//  printf(<span class="string">"exc event called.\n"</span>);</span>
 <span class="comment">//}</span>
 
 
 <a name="fqObqE"></a><span class="keyword">void</span> <a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:HandleInput" title="void GCanvas::HandleInput(EEventType event,Int_t x,Int_t y)">HandleInput</a>(EEventType event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y) {
-   <span class="keyword">this</span>-&gt;<a href="../#TPad:SetEditable" title="void TPad::SetEditable(Bool_t mode=kTRUE)">SetEditable</a>(<span class="keyword">false</span>);
+   <span class="keyword">this</span>-&gt;<a href="../TPad.html#TPad:SetEditable" title="void TPad::SetEditable(Bool_t mode=kTRUE)">SetEditable</a>(<span class="keyword">false</span>);
 <span class="comment">//   printf(DRED);</span>
 <span class="comment">//   printf(<span class="string">"{GCanvas} HandleEvent:\n"</span>);</span>
 <span class="comment">//   printf(DYELLOW <span class="string">"\tevent: \t0x%08x\n"</span> DRED,event);</span>
-<span class="comment">//   if(this-&gt;<a href="../#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>())</span>
-<span class="comment">//      printf(<span class="string">"\tfselected found[0x%08x]\t %s\n"</span>,this-&gt;<a href="../#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>(),this-&gt;<a href="../#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>()-&gt;<a href="../#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());</span>
+<span class="comment">//   if(this-&gt;<a href="../TCanvas.html#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>())</span>
+<span class="comment">//      printf(<span class="string">"\tfselected found[0x%08x]\t %s\n"</span>,this-&gt;<a href="../TCanvas.html#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>(),this-&gt;<a href="../TCanvas.html#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>()-><a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());</span>
 <span class="comment">//   printf(DBLUE);</span>
-   <span class="comment">//Event_t ev;</span>
+   <span class="comment">//<a href="../Event_t.html">Event_t</a> ev;</span>
    <span class="comment">//<a href="../ListOfTypes.html#int">int</a> px,py;</span>
    <span class="comment">//printf(<span class="string">"CheckEvent = %i\n"</span>,gVirtualX-&gt;CheckEvent(<a href="../GCanvas.html#GCanvas:fCanvasWindowID" title="Window_t GCanvas::fCanvasWindowID">fCanvasWindowID</a>,(EGEventType)event,ev));</span>
    <span class="comment">//printf(<span class="string">"CheckEvent = %i\n"</span>,gVirtualX-&gt;CheckEvent(gVirtualX-&gt;GetCurrentWindow(),(EGEventType)event,ev));</span>
 
-   <span class="comment">//gVirtualX-&gt;SelectWindow(this-&gt;<a href="../#TCanvas:GetCanvasID" title="Int_t TCanvas::GetCanvasID()">GetCanvasID</a>());</span>
+   <span class="comment">//gVirtualX-&gt;SelectWindow(this-&gt;<a href="../TCanvas.html#TCanvas:GetCanvasID" title="Int_t TCanvas::GetCanvasID()">GetCanvasID</a>());</span>
    <span class="comment">//<a href="../ListOfTypes.html#int">int</a> myevent = gVirtualX-&gt;RequestLocator(1, 1, px, py);</span>
 
    <span class="comment">//printf(<span class="string">"CheckEvent = %i\n"</span>,gVirtualX-&gt;CheckEvent(gVirtualX-&gt;GetDefaultRootWindow(),(EGEventType)event,ev));</span>
@@ -141,61 +141,61 @@
 
 
 <span class="comment">//   printf(RESET_COLOR);</span>
-  <span class="comment">//If the below switch breaks. You need to upgrade your version of ROOT</span>
+  <span class="comment">//If the below switch breaks. You need to upgrade your version of <a href="../ROOT.html">ROOT</a></span>
   <span class="comment">//Version 5.34.24 works.</span>
   <span class="keyword">switch</span>(event) {
       <span class="keyword">case</span> kArrowKeyPress:
       <span class="comment">//case kArrowKeyRelease:</span>
       <span class="keyword">case</span> kKeyPress: 
       <span class="comment">//case kKeyRelease:</span>
-         <span class="comment">//this-&gt;<a href="../#TPad:SetEditable" title="void TPad::SetEditable(Bool_t mode=kTRUE)">SetEditable</a>(<a href="../ListOfTypes.html#bool">true</a>);</span>
-         <a href="../GCanvas.html#GCanvas:HandleKeyPress" title="void GCanvas::HandleKeyPress(int event,int x,int y,TObject* obj)">HandleKeyPress</a>(event,x,y,<span class="keyword">this</span>-&gt;<a href="../#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>());
+         <span class="comment">//this-&gt;<a href="../TPad.html#TPad:SetEditable" title="void TPad::SetEditable(Bool_t mode=kTRUE)">SetEditable</a>(<a href="../ListOfTypes.html#bool">true</a>);</span>
+         <a href="../GCanvas.html#GCanvas:HandleKeyPress" title="void GCanvas::HandleKeyPress(int event,int x,int y,TObject* obj)">HandleKeyPress</a>(event,x,y,<span class="keyword">this</span>-&gt;<a href="../TCanvas.html#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>());
          <span class="keyword">break</span>;
        <span class="keyword">default</span>:
          <span class="comment">//printf(RED<span class="string">"\t\tHANDLE DEFAULT!"</span> RESET_COLOR <span class="string">"\n"</span>);</span>
-         <a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a>::<a href="../GCanvas.html#GCanvas:HandleInput" title="void GCanvas::HandleInput(EEventType event,Int_t x,Int_t y)">HandleInput</a>(event,x,y);
+         <a href="../TCanvas.html">TCanvas</a>::<a href="../TCanvas.html#TCanvas:HandleInput" title="void TCanvas::HandleInput(EEventType button,Int_t x,Int_t y)">HandleInput</a>(event,x,y);
          <span class="comment">//printf(<span class="string">"Window_t = 0x%08x\n"</span>,gVirtualX-&gt;GetCurrentWindow());</span>
          <span class="keyword">break</span>;
    };
 
    
-   <span class="comment">//<a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a>::<a href="../#TCanvas:ProcessedEvent" title="void TCanvas::ProcessedEvent(Int_t event,Int_t x,Int_t y,TObject* selected)">ProcessedEvent</a>(event,x,y,this-&gt;<a href="../#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>());</span>
-   <span class="comment">//this-&gt;<a href="../#TPad:SetEditable" title="void TPad::SetEditable(Bool_t mode=kTRUE)">SetEditable</a>(fal);</span>
-   <span class="keyword">this</span>-&gt;<a href="../#TPad:SetEditable" title="void TPad::SetEditable(Bool_t mode=kTRUE)">SetEditable</a>(<span class="keyword">true</span>);
+   <span class="comment">//<a href="../TCanvas.html">TCanvas</a>::<a href="../TCanvas.html#TCanvas:ProcessedEvent" title="void TCanvas::ProcessedEvent(Int_t event,Int_t x,Int_t y,TObject* selected)">ProcessedEvent</a>(event,x,y,this-&gt;<a href="../TCanvas.html#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>());</span>
+   <span class="comment">//this-&gt;<a href="../TPad.html#TPad:SetEditable" title="void TPad::SetEditable(Bool_t mode=kTRUE)">SetEditable</a>(fal);</span>
+   <span class="keyword">this</span>-&gt;<a href="../TPad.html#TPad:SetEditable" title="void TPad::SetEditable(Bool_t mode=kTRUE)">SetEditable</a>(<span class="keyword">true</span>);
    <span class="keyword">return</span>;
 }
 
 
 <a name="VnaBDB"></a><span class="keyword">void</span> <a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:UpdateStatsInfo" title="void GCanvas::UpdateStatsInfo(int ,int )">UpdateStatsInfo</a>(<span class="keyword">int</span> x, <span class="keyword">int</span> y) {
-   TIter next(<span class="keyword">this</span>-&gt;<a href="../#TPad:GetListOfPrimitives" title="TList* TPad::GetListOfPrimitives()">GetListOfPrimitives</a>());
-   <a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj;
+   <a href="../TIter.html">TIter</a> next(<span class="keyword">this</span>-&gt;<a href="../TPad.html#TPad:GetListOfPrimitives" title="TList* TPad::GetListOfPrimitives()">GetListOfPrimitives</a>());
+   <a href="../TObject.html">TObject</a> *obj;
    <span class="keyword">while</span>((obj=next())) {
-      <span class="keyword">if</span>(obj-&gt;<a href="../#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TH1"</span>)) {
-         ((TH1*)obj)-&gt;<a href="../#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(TH1::kNoStats);
-         printf(<span class="string">"found : %s\n"</span>,obj-&gt;<a href="../#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
-         TPaveStats *st = (TPaveStats*)((TH1*)obj)-&gt;GetListOfFunctions()-&gt;<a href="../#TPad:FindObject" title="TObject* TPad::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"stats"</span>);
-         st-&gt;GetListOfLines()-&gt;<a href="../#TCanvas:Delete" title="void TCanvas::Delete(Option_t* =&quot;&quot;)">Delete</a>();
+      <span class="keyword">if</span>(obj-&gt;<a href="../TObject.html#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TH1"</span>)) {
+         ((<a href="../TH1.html">TH1</a>*)obj)-&gt;<a href="../TObject.html#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(<a href="../TH1.html">TH1</a>::<a href="../TH1.html#TH1:kNoStats" title="const enum TH1:: TH1::kNoStats">kNoStats</a>);
+         printf(<span class="string">"found : %s\n"</span>,obj-&gt;<a href="../TPad.html#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
+         <a href="../TPaveStats.html">TPaveStats</a> *st = (<a href="../TPaveStats.html">TPaveStats</a>*)((<a href="../TH1.html">TH1</a>*)obj)-&gt;GetListOfFunctions()-&gt;<a href="../TPad.html#TPad:FindObject" title="TObject* TPad::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"stats"</span>);
+         st-&gt;GetListOfLines()-&gt;<a href="../TCanvas.html#TCanvas:Delete" title="void TCanvas::Delete(Option_t* =&quot;&quot;)">Delete</a>();
          st-&gt;AddText(Form(<span class="string">"X      %i"</span>,x));
          st-&gt;AddText(Form(<span class="string">"Counts %i"</span>,y));
          
-         <span class="comment">//st-&gt;<a href="../#TCanvas:Paint" title="void TCanvas::Paint(Option_t* option=&quot;&quot;)">Paint</a>();</span>
-         <span class="comment">//gPad-&gt;<a href="../#TPad:Modified" title="void TPad::Modified(Bool_t flag=1)">Modified</a>();</span>
-         <span class="comment">//gPad-&gt;<a href="../#TCanvas:Update" title="void TCanvas::Update()">Update</a>();</span>
+         <span class="comment">//st-&gt;<a href="../TCanvas.html#TCanvas:Paint" title="void TCanvas::Paint(Option_t* option=&quot;&quot;)">Paint</a>();</span>
+         <span class="comment">//gPad-&gt;<a href="../TPad.html#TPad:Modified" title="void TPad::Modified(Bool_t flag=1)">Modified</a>();</span>
+         <span class="comment">//gPad-&gt;<a href="../TCanvas.html#TCanvas:Update" title="void TCanvas::Update()">Update</a>();</span>
       }
    }
 }
 
-<a name="Kjtpv"></a><span class="keyword">void</span> <a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:HandleKeyPress" title="void GCanvas::HandleKeyPress(int event,int x,int y,TObject* obj)">HandleKeyPress</a>(<span class="keyword">int</span> event,<span class="keyword">int</span> x,<span class="keyword">int</span> key,<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj) {
+<a name="Kjtpv"></a><span class="keyword">void</span> <a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:HandleKeyPress" title="void GCanvas::HandleKeyPress(int event,int x,int y,TObject* obj)">HandleKeyPress</a>(<span class="keyword">int</span> event,<span class="keyword">int</span> x,<span class="keyword">int</span> key,<a href="../TObject.html">TObject</a> *obj) {
    printf(DBLUE);
-   <span class="comment">//printf(<span class="string">"\tevent  \t%i\n"</span>,this-&gt;<a href="../#TCanvas:GetEvent" title="Int_t TCanvas::GetEvent()">GetEvent</a>());</span>
-   std::<a href="../ListOfTypes.html#ostream">cout</a> &lt;&lt; <span class="string">"\tevent  \t"</span> &lt;&lt; <span class="keyword">this</span>-&gt;<a href="../#TCanvas:GetEvent" title="Int_t TCanvas::GetEvent()">GetEvent</a>() &lt;&lt; <span class="string">"\n"</span>;
-   printf(<span class="string">"\tfsel:  \t%s\n"</span>,<span class="keyword">this</span>-&gt;<a href="../#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>()-&gt;<a href="../#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
+   <span class="comment">//printf(<span class="string">"\tevent  \t%i\n"</span>,this-&gt;<a href="../TCanvas.html#TCanvas:GetEvent" title="Int_t TCanvas::GetEvent()">GetEvent</a>());</span>
+   std::<a href="../ListOfTypes.html#ostream">cout</a> &lt;&lt; <span class="string">"\tevent  \t"</span> &lt;&lt; <span class="keyword">this</span>-&gt;<a href="../TCanvas.html#TCanvas:GetEvent" title="Int_t TCanvas::GetEvent()">GetEvent</a>() &lt;&lt; <span class="string">"\n"</span>;
+   printf(<span class="string">"\tfsel:  \t%s\n"</span>,<span class="keyword">this</span>-&gt;<a href="../TCanvas.html#TCanvas:GetSelected" title="TObject* TCanvas::GetSelected()">GetSelected</a>()-><a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
    printf(<span class="string">"\tx:     \t%i\n"</span>,x);
    printf(<span class="string">"\tkey:   \t%i\n"</span>,key);
 
-   printf(<span class="string">"\t\tGetEvent:    \t%i\n"</span>,<span class="keyword">this</span>-&gt;<a href="../#TCanvas:GetEvent" title="Int_t TCanvas::GetEvent()">GetEvent</a>());
-   printf(<span class="string">"\t\tGetEventX:   \t%i\n"</span>,<span class="keyword">this</span>-&gt;<a href="../#TCanvas:GetEventX" title="Int_t TCanvas::GetEventX()">GetEventX</a>());
-   printf(<span class="string">"\t\tGetEventY:   \t%i\n"</span>,<span class="keyword">this</span>-&gt;<a href="../#TCanvas:GetEventY" title="Int_t TCanvas::GetEventY()">GetEventY</a>());
+   printf(<span class="string">"\t\tGetEvent:    \t%i\n"</span>,<span class="keyword">this</span>-&gt;<a href="../TCanvas.html#TCanvas:GetEvent" title="Int_t TCanvas::GetEvent()">GetEvent</a>());
+   printf(<span class="string">"\t\tGetEventX:   \t%i\n"</span>,<span class="keyword">this</span>-&gt;<a href="../TCanvas.html#TCanvas:GetEventX" title="Int_t TCanvas::GetEventX()">GetEventX</a>());
+   printf(<span class="string">"\t\tGetEventY:   \t%i\n"</span>,<span class="keyword">this</span>-&gt;<a href="../TCanvas.html#TCanvas:GetEventY" title="Int_t TCanvas::GetEventY()">GetEventY</a>());
 
 
    printf(RESET_COLOR);
@@ -203,30 +203,30 @@
       <span class="keyword">case</span> kKey_Up:
          printf(<span class="string">"UP!\n"</span>);    
          <span class="keyword">if</span>(obj)
-            printf(<span class="string">"\tobj = %s\n"</span>,obj-&gt;<a href="../#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
+            printf(<span class="string">"\tobj = %s\n"</span>,obj-&gt;<a href="../TPad.html#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
          <span class="keyword">break</span>;
       <span class="keyword">case</span> kKey_Down:
          printf(<span class="string">"DOWN!\n"</span>);         
          <span class="keyword">if</span>(obj)
-            printf(<span class="string">"\tobj = %s\n"</span>,obj-&gt;<a href="../#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
+            printf(<span class="string">"\tobj = %s\n"</span>,obj-&gt;<a href="../TPad.html#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
          <span class="keyword">break</span>;
       <span class="keyword">case</span> kKey_Right:
          printf(<span class="string">"RIGHT!\n"</span>);         
          <span class="keyword">if</span>(obj)
-            printf(<span class="string">"\tobj = %s\n"</span>,obj-&gt;<a href="../#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
+            printf(<span class="string">"\tobj = %s\n"</span>,obj-&gt;<a href="../TPad.html#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
          <span class="keyword">break</span>;
       <span class="keyword">case</span> kKey_Left:
          printf(<span class="string">"LEFT!\n"</span>);         
          <span class="keyword">if</span>(obj)
-            printf(<span class="string">"\tobj = %s\n"</span>,obj-&gt;<a href="../#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
+            printf(<span class="string">"\tobj = %s\n"</span>,obj-&gt;<a href="../TPad.html#TPad:GetName" title="const char* TPad::GetName()">GetName</a>());
          <span class="keyword">break</span>;
    };
 }
 
 <a name="vYxzd"></a><span class="keyword">void</span> <a href="../GCanvas.html">GCanvas</a>::<a href="../GCanvas.html#GCanvas:Draw" title="void GCanvas::Draw(Option_t* opt=&quot;&quot;)">Draw</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) {
    printf(<span class="string">"GCanvas Draw was called.\n"</span>);
-   <a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a>::<a href="../GCanvas.html#GCanvas:Draw" title="void GCanvas::Draw(Option_t* opt=&quot;&quot;)">Draw</a>(opt);
-   <span class="keyword">this</span>-&gt;<a href="../#TPad:FindObject" title="TObject* TPad::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>)-&gt;<a href="../#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(TBox::kCannotMove);
+   <a href="../TCanvas.html">TCanvas</a>::<a href="../TCanvas.html#TCanvas:Draw" title="void TCanvas::Draw(Option_t* option=&quot;&quot;)">Draw</a>(opt);
+   <span class="keyword">this</span>-&gt;<a href="../TPad.html#TPad:FindObject" title="TObject* TPad::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>)-><a href="../TObject.html#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(<a href="../TBox.html">TBox</a>::<a href="../TBox.html#TBox:kCannotMove" title="const enum TBox:: TBox::kCannotMove">kCannotMove</a>);
 }
 
 
@@ -239,7 +239,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:16 </em><em>&raquo; Last generated: 2015-03-04 13:16</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:38 </em><em>&raquo; Last generated: 2015-03-04 20:38</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

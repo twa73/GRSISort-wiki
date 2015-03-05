@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:32 2015            -->
+<!--   Date: Wed Mar  4 20:40:12 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -29,11 +29,11 @@
 <span class="cpp">#include &lt;utility&gt;</span>
 
 <span class="comment">//#include <span class="string">"TChannel.h"</span></span>
-<span class="cpp">#include "TVector3.h" </span>
-<span class="cpp">#include "TObject.h" </span>
-<span class="cpp">#include "TRandom.h"</span>
-<span class="cpp">#include "Rtypes.h"</span>
-<span class="cpp">#include "TMath.h"</span>
+<span class="cpp">#include "<a href="../TVector3.h">TVector3.h</a>"</span> 
+<span class="cpp">#include "<a href="../TObject.h">TObject.h</a>"</span> 
+<span class="cpp">#include "<a href="../TRandom.h">TRandom.h</a>"</span>
+<span class="cpp">#include "<a href="../Rtypes.h">Rtypes.h</a>"</span>
+<span class="cpp">#include "<a href="../TMath.h">TMath.h</a>"</span>
 <span class="cpp">#include "<a href="../TGRSIDetectorHit.h">TGRSIDetectorHit.h</a>"</span>
 
 
@@ -77,7 +77,7 @@
 		<span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TSharcHit.html#TSharcHit:Print" title="void TSharcHit::Print(Option_t* =&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>);	<span class="comment">//!</span>
 
 		<span class="comment">//<a href="../ListOfTypes.html#void">void</a> CalibrateSharcHit(<a href="../TChannel.html">TChannel</a> *); //!</span>
-		<span class="comment">//static <a href="../ListOfTypes.html#bool">bool</a> <a href="../#TObject:Compare" title="Int_t TObject::Compare(const TObject* obj)">Compare</a>(<a href="../TSharcHit.html">TSharcHit</a> *lhs,<a href="../TSharcHit.html">TSharcHit</a> *rhs); //!</span>
+		<span class="comment">//static <a href="../ListOfTypes.html#bool">bool</a> <a href="../TObject.html#TObject:Compare" title="Int_t TObject::Compare(const TObject* obj)">Compare</a>(<a href="../TSharcHit.html">TSharcHit</a> *lhs,<a href="../TSharcHit.html">TSharcHit</a> *rhs); //!</span>
 
 <a name="zvwiuB"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetDeltaE" title="Double_t TSharcHit::GetDeltaE()">GetDeltaE</a>()	{	<span class="keyword">return</span> <a href="../TSharcHit.html#TSharcHit:d_energy_front" title="Double_t TSharcHit::d_energy_front">d_energy_front</a>;	};	<span class="comment">//!</span>
 <a name="qzP6YC"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetDeltaT" title="Double_t TSharcHit::GetDeltaT()">GetDeltaT</a>()	{	<span class="keyword">return</span> <a href="../TSharcHit.html#TSharcHit:d_time_front" title="Double_t TSharcHit::d_time_front">d_time_front</a>;		};	<span class="comment">//!</span>
@@ -99,10 +99,10 @@
 
 <a name="yr3NVC"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TSharcHit.html#TSharcHit:GetFrontCharge" title="Int_t TSharcHit::GetFrontCharge()">GetFrontCharge</a>() 	  {	<span class="keyword">return</span>	<a href="../TSharcHit.html#TSharcHit:front_charge" title="Int_t TSharcHit::front_charge">front_charge</a>;	}	<span class="comment">//!</span>
 		       <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetFrontChgHeight" title="Double_t TSharcHit::GetFrontChgHeight()">GetFrontChgHeight</a>() ;	<span class="comment">//!</span>
-<a name="kTjPME"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetFrontChgDbl" title="Double_t TSharcHit::GetFrontChgDbl()">GetFrontChgDbl</a>() 	  {	<span class="keyword">return</span>	(<a href="../ListOfTypes.html#Double_t">Double_t</a>)<a href="../TSharcHit.html#TSharcHit:front_charge" title="Int_t TSharcHit::front_charge">front_charge</a> + gRandom-&gt;Uniform();	}	<span class="comment">//!</span>
+<a name="kTjPME"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetFrontChgDbl" title="Double_t TSharcHit::GetFrontChgDbl()">GetFrontChgDbl</a>() 	  {	<span class="keyword">return</span>	(<a href="../ListOfTypes.html#Double_t">Double_t</a>)<a href="../TSharcHit.html#TSharcHit:front_charge" title="Int_t TSharcHit::front_charge">front_charge</a> + <a href="../TRandom.html">gRandom</a>-><a href="../TRandom.html#TRandom:Uniform" title="Double_t TRandom::Uniform(Double_t x1=1) or overloads">Uniform</a>();	}	<span class="comment">//!</span>
 <a name="ZoMbiD"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TSharcHit.html#TSharcHit:GetBackCharge" title="Int_t TSharcHit::GetBackCharge()">GetBackCharge</a>()		  {	<span class="keyword">return</span>	<a href="../TSharcHit.html#TSharcHit:back_charge" title="Int_t TSharcHit::back_charge">back_charge</a>;	}	<span class="comment">//!</span>
 		       <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetBackChgHeight" title="Double_t TSharcHit::GetBackChgHeight()">GetBackChgHeight</a>()  ;	<span class="comment">//!</span>
-<a name="qrMziE"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetBackChgDbl" title="Double_t TSharcHit::GetBackChgDbl()">GetBackChgDbl</a>()		  {	<span class="keyword">return</span>	(<a href="../ListOfTypes.html#Double_t">Double_t</a>)<a href="../TSharcHit.html#TSharcHit:back_charge" title="Int_t TSharcHit::back_charge">back_charge</a> + gRandom-&gt;Uniform();	}	<span class="comment">//!</span>
+<a name="qrMziE"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetBackChgDbl" title="Double_t TSharcHit::GetBackChgDbl()">GetBackChgDbl</a>()		  {	<span class="keyword">return</span>	(<a href="../ListOfTypes.html#Double_t">Double_t</a>)<a href="../TSharcHit.html#TSharcHit:back_charge" title="Int_t TSharcHit::back_charge">back_charge</a> + <a href="../TRandom.html">gRandom</a>-><a href="../TRandom.html#TRandom:Uniform" title="Double_t TRandom::Uniform(Double_t x1=1) or overloads">Uniform</a>();	}	<span class="comment">//!</span>
 <a name="SYG_yC"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TSharcHit.html#TSharcHit:GetPadCharge" title="Int_t TSharcHit::GetPadCharge()">GetPadCharge</a>()		  {	<span class="keyword">return</span>	<a href="../TSharcHit.html#TSharcHit:pad_charge" title="Int_t TSharcHit::pad_charge">pad_charge</a>;		}	<span class="comment">//!</span>
 		       <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetPadChgHeight" title="Double_t TSharcHit::GetPadChgHeight()">GetPadChgHeight</a>()		;	<span class="comment">//!</span>
 		
@@ -118,7 +118,7 @@
     <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:PadEnergyCal" title="Double_t TSharcHit::PadEnergyCal()">PadEnergyCal</a>(); <span class="comment">//!</span>
     <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:FrontEnergyCal" title="Double_t TSharcHit::FrontEnergyCal()">FrontEnergyCal</a>(); <span class="comment">//!</span>
 
-<a name="pQ7jaC"></a>		<a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetThetaDeg" title="Double_t TSharcHit::GetThetaDeg(double Xoff=0.0,double Yoff=0.0,double Zoff=0.0)">GetThetaDeg</a>(<span class="keyword">double</span> Xoff = 0.0, <span class="keyword">double</span> Yoff = 0.0, <span class="keyword">double</span> Zoff = 0.0) { <span class="keyword">return</span> <a href="../TSharcHit.html#TSharcHit:GetTheta" title="Double_t TSharcHit::GetTheta(double Xoff=0.0,double Yoff=0.0,double Zoff=0.0)">GetTheta</a>(Xoff,Yoff,Zoff)*TMath::RadToDeg(); } ; <span class="comment">//! </span>
+<a name="pQ7jaC"></a>		<a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetThetaDeg" title="Double_t TSharcHit::GetThetaDeg(double Xoff=0.0,double Yoff=0.0,double Zoff=0.0)">GetThetaDeg</a>(<span class="keyword">double</span> Xoff = 0.0, <span class="keyword">double</span> Yoff = 0.0, <span class="keyword">double</span> Zoff = 0.0) { <span class="keyword">return</span> <a href="../TSharcHit.html#TSharcHit:GetTheta" title="Double_t TSharcHit::GetTheta(double Xoff=0.0,double Yoff=0.0,double Zoff=0.0)">GetTheta</a>(Xoff,Yoff,Zoff)*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:RadToDeg" title="Double_t TMath::RadToDeg()">RadToDeg</a>(); } ; <span class="comment">//! </span>
 		<a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html#TSharcHit:GetTheta" title="Double_t TSharcHit::GetTheta(double Xoff=0.0,double Yoff=0.0,double Zoff=0.0)">GetTheta</a>(<span class="keyword">double</span> Xoff = 0.0, <span class="keyword">double</span> Yoff = 0.0, <span class="keyword">double</span> Zoff = 0.0); <span class="comment">//! </span>
 
 <a name="FMs7D"></a>		<span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TSharcHit.html#TSharcHit:SetDeltaFrontE" title="void TSharcHit::SetDeltaFrontE(const Double_t&amp; tenergy)">SetDeltaFrontE</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#Double_t">Double_t</a> &amp;tenergy)	{	<a href="../TSharcHit.html#TSharcHit:d_energy_front" title="Double_t TSharcHit::d_energy_front">d_energy_front</a> = tenergy;	}	<span class="comment">//!</span>
@@ -133,7 +133,7 @@
 		<span class="comment">//<a href="../ListOfTypes.html#void">void</a> SetFrontCFD(const <a href="../ListOfTypes.html#double">double</a> &amp;cfd)		{	front_cfd = cfd;	} //!</span>
 		<span class="comment">//<a href="../ListOfTypes.html#void">void</a> SetBackCFD(const <a href="../ListOfTypes.html#double">double</a> &amp;cfd)		{	back_cfd = cfd;		} //!</span>
 
-<a name="jlnfqC"></a>		<span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TSharcHit.html#TSharcHit:SetPosition" title="void TSharcHit::SetPosition(const TVector3&amp; pos)">SetPosition</a>(<span class="keyword">const</span> TVector3 &amp;pos)	{	position = pos;		} <span class="comment">//!</span>
+<a name="jlnfqC"></a>		<span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TSharcHit.html#TSharcHit:SetPosition" title="void TSharcHit::SetPosition(const TVector3&amp; pos)">SetPosition</a>(<span class="keyword">const</span> <a href="../TVector3.html">TVector3</a> &amp;pos)	{	position = pos;		} <span class="comment">//!</span>
 
 		<span class="comment">//<a href="../ListOfTypes.html#void">void</a> SetPixel(const <a href="../ListOfTypes.html#int">int</a> &amp;front, const  <a href="../ListOfTypes.html#int">int</a> &amp;back)	{<a href="../TSharcHit.html#TSharcHit:front_strip" title="UShort_t TSharcHit::front_strip">front_strip</a> = front; <a href="../TSharcHit.html#TSharcHit:back_strip" title="UShort_t TSharcHit::back_strip">back_strip</a> = back;}	//!</span>
 <a name="jeyjHE"></a>		<span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TSharcHit.html#TSharcHit:SetDetector" title="void TSharcHit::SetDetector(const UShort_t&amp; detector)">SetDetector</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#UShort_t">UShort_t</a> &amp;detector)	{	<a href="../TSharcHit.html#TSharcHit:detectornumber" title="UShort_t TSharcHit::detectornumber">detectornumber</a> = detector;	}						<span class="comment">//!</span>
@@ -173,7 +173,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

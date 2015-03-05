@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:24 2015            -->
+<!--   Date: Wed Mar  4 20:39:28 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,8 +22,8 @@
 
 <span class="cpp">#include &lt;stdint.h&gt;</span>
 
-<span class="cpp">#include &lt;TSystem.h&gt;</span>
-<span class="cpp">#include &lt;TStopwatch.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TSystem.h">TSystem.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TStopwatch.h">TStopwatch.h</a>&gt;</span>
 
 <span class="cpp">#include "<a href="../TGRSILoop.h">TGRSILoop.h</a>"</span>
 <span class="cpp">#include "<a href="../TGRSIOptions.h">TGRSIOptions.h</a>"</span>
@@ -102,7 +102,7 @@ ClassImp(<a href="../TGRSILoop.html">TGRSILoop</a>)
       <a href="../TMidasFile.html">TMidasFile</a> *mfile = <span class="keyword">new</span> <a href="../TMidasFile.html">TMidasFile</a>;
       <span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputMidas" title="vector&lt;std::string&gt; TGRSIOptions::GetInputMidas()">GetInputMidas</a>().size();x++) {
          <span class="keyword">if</span>(mfile-&gt;Open(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputMidas" title="vector&lt;std::string&gt; TGRSIOptions::GetInputMidas()">GetInputMidas</a>().at(x).c_str()))  {
-            <span class="comment">//std::sting filename = mfile-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>();</span>
+            <span class="comment">//std::sting filename = mfile-&gt;<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>();</span>
             fMidasThread = <span class="keyword">new</span> std::thread(&amp;<a href="../TGRSILoop.html">TGRSILoop</a>::<a href="../TGRSILoop.html#TGRSILoop:ProcessMidasFile" title="void TGRSILoop::ProcessMidasFile(TMidasFile* )">ProcessMidasFile</a>,<span class="keyword">this</span>,mfile);
             <a href="../TGRSILoop.html#TGRSILoop:fMidasThreadRunning" title="bool TGRSILoop::fMidasThreadRunning">fMidasThreadRunning</a> = <span class="keyword">true</span>;
             fFillTreeThread = <span class="keyword">new</span> std::thread(&amp;<a href="../TGRSILoop.html">TGRSILoop</a>::<a href="../TGRSILoop.html#TGRSILoop:FillFragmentTree" title="void TGRSILoop::FillFragmentTree(TMidasFile* )">FillFragmentTree</a>,<span class="keyword">this</span>,mfile);
@@ -177,14 +177,14 @@ ClassImp(<a href="../TGRSILoop.html">TGRSILoop</a>)
    <span class="keyword">long</span> <span class="keyword">long</span> bytesread = 0;
    <span class="keyword">int</span> currenteventnumber = 0;
 
-   TStopwatch w;
+   <a href="../TStopwatch.html">TStopwatch</a> w;
    w.Start();
 
    <span class="keyword">if</span>(!<a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:Get" title="TGRSIRootIO* TGRSIRootIO::Get()">Get</a>()-><a href="../TGRSIRootIO.html#TGRSIRootIO:GetRootOutFile" title="TFile* TGRSIRootIO::GetRootOutFile()">GetRootOutFile</a>())
      <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:Get" title="TGRSIRootIO* TGRSIRootIO::Get()">Get</a>()-><a href="../TGRSIRootIO.html#TGRSIRootIO:SetUpRootOutFile" title="void TGRSIRootIO::SetUpRootOutFile(int ,int )">SetUpRootOutFile</a>(midasfile-&gt;GetRunNumber(),midasfile-&gt;GetSubRunNumber());
 
    <span class="keyword">while</span>(<span class="keyword">true</span>) {
-      bytes = midasfile-&gt;<a href="../#TObject:Read" title="Int_t TObject::Read(const char* name)">Read</a>(&amp;fMidasEvent);
+      bytes = midasfile-&gt;<a href="../TObject.html#TObject:Read" title="Int_t TObject::Read(const char* name)">Read</a>(&amp;fMidasEvent);
       currenteventnumber++;
       <span class="keyword">if</span>(bytes == 0){
          printf(DMAGENTA <span class="string">"\tfile: %s ended on %s"</span> RESET_COLOR <span class="string">"\n"</span>,midasfile-&gt;GetFilename(),midasfile-&gt;GetLastError());
@@ -244,7 +244,7 @@ ClassImp(<a href="../TGRSILoop.html">TGRSILoop</a>)
             <span class="keyword">break</span>;
       };
       <span class="keyword">if</span>((currenteventnumber%5000)== 0) {
-         gSystem-&gt;ProcessEvents();
+         <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:ProcessEvents" title="Bool_t TSystem::ProcessEvents()">ProcessEvents</a>();
          printf(HIDE_CURSOR <span class="string">" Processing event %i have processed %.2fMB/%.2f MB =&gt; %.1f MB/s              "</span> SHOW_CURSOR <span class="string">"\r"</span>,
 					 currenteventnumber,(bytesread/1000000.0),(filesize/1000000.0),(bytesread/1000000.0)/w.RealTime());
          w.Continue();
@@ -273,7 +273,7 @@ ClassImp(<a href="../TGRSILoop.html">TGRSILoop</a>)
 
 	<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:DeleteAllChannels" title="void TChannel::DeleteAllChannels()">DeleteAllChannels</a>();
 
-   TXMLNode *node = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(<span class="string">"/Experiment"</span>);
+   <a href="../TXMLNode.html">TXMLNode</a> *node = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(<span class="string">"/Experiment"</span>);
    <span class="keyword">if</span>(!node-&gt;HasChildren())
       <span class="keyword">return</span>;
    node = node-&gt;GetChildren();
@@ -299,7 +299,7 @@ ClassImp(<a href="../TGRSILoop.html">TGRSILoop</a>)
    printf(<span class="string">"using GRIFFIN path to analyzer info: %s...\n"</span>,path.c_str());
    
    std::string temp = path; temp.append(<span class="string">"/MSC"</span>);
-   TXMLNode *node = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(temp.c_str());
+   <a href="../TXMLNode.html">TXMLNode</a> *node = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(temp.c_str());
    std::vector&lt;<span class="keyword">int</span>&gt; address = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:ReadIntArray" title="vector&lt;int&gt; TXMLOdb::ReadIntArray(TXMLNode* node)">ReadIntArray</a>(node);
 
    temp = path; temp.append(<span class="string">"/chan"</span>);
@@ -351,15 +351,15 @@ ClassImp(<a href="../TGRSILoop.html">TGRSILoop</a>)
   
    std::string typepath = <span class="string">"/Equipment/Trigger/settings/Detector Settings"</span>;
    std::map&lt;<span class="keyword">int</span>,std::pair&lt;std::string,std::string&gt; &gt;typemap;
-   TXMLNode *typenode = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(typepath.c_str());
+   <a href="../TXMLNode.html">TXMLNode</a> *typenode = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(typepath.c_str());
    <span class="keyword">int</span> typecounter = 0;
    <span class="keyword">if</span>(typenode-&gt;HasChildren()) {
-      TXMLNode *typechild = typenode-&gt;GetChildren();
+      <a href="../TXMLNode.html">TXMLNode</a> *typechild = typenode-&gt;GetChildren();
       <span class="keyword">while</span>(1) {
          std::string tname = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:GetNodeName" title="const char* TXMLOdb::GetNodeName(TXMLNode* )">GetNodeName</a>(typechild);
          <span class="keyword">if</span>(tname.length()&gt;0 &amp;&amp; typechild-&gt;HasChildren()) {
             typecounter++;
-            TXMLNode *grandchild = typechild-&gt;GetChildren();
+            <a href="../TXMLNode.html">TXMLNode</a> *grandchild = typechild-&gt;GetChildren();
             <span class="keyword">while</span>(1) {
                std::string grandchildname = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:GetNodeName" title="const char* TXMLOdb::GetNodeName(TXMLNode* )">GetNodeName</a>(grandchild);
                <span class="keyword">if</span>(grandchildname.compare(0,7,<span class="string">"Digitis"</span>)==0) {
@@ -380,13 +380,13 @@ ClassImp(<a href="../TGRSILoop.html">TGRSILoop</a>)
    }
    
    std::string path = <span class="string">"/Analyzer/Shared Parameters/Config"</span>;
-	TXMLNode *test = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(path.c_str());
+	<a href="../TXMLNode.html">TXMLNode</a> *test = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(path.c_str());
 	<span class="keyword">if</span>(!test)
 		path.assign(<span class="string">"/Analyzer/Parameters/Cathode/Config"</span>);  <span class="comment">//the old path to the useful odb info.</span>
    printf(<span class="string">"using TIGRESS path to analyzer info: %s...\n"</span>,path.c_str());
 
    std::string temp = path; temp.append(<span class="string">"/FSCP"</span>);
-   TXMLNode *node = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(temp.c_str());
+   <a href="../TXMLNode.html">TXMLNode</a> *node = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(temp.c_str());
    std::vector&lt;<span class="keyword">int</span>&gt; address = <a href="../TGRSILoop.html#TGRSILoop:fOdb" title="TXMLOdb* TGRSILoop::fOdb">fOdb</a>-><a href="../TXMLOdb.html#TXMLOdb:ReadIntArray" title="vector&lt;int&gt; TXMLOdb::ReadIntArray(TXMLNode* node)">ReadIntArray</a>(node);
 
    temp = path; temp.append(<span class="string">"/Name"</span>);
@@ -502,7 +502,7 @@ ClassImp(<a href="../TGRSILoop.html">TGRSILoop</a>)
           DCYAN <span class="string">"%0d"</span> DMAGENTA <span class="string">"  ---&gt; "</span> DYELLOW <span class="string">" %.2f"</span> DMAGENTA <span class="string">" percent passed."</span> 
           RESET_COLOR <span class="string">"\n"</span>,<a href="../TGRSILoop.html#TGRSILoop:fFragsSentToTree" title="int TGRSILoop::fFragsSentToTree">fFragsSentToTree</a>,<a href="../TGRSILoop.html#TGRSILoop:fFragsReadFromMidas" title="int TGRSILoop::fFragsReadFromMidas">fFragsReadFromMidas</a>,((<span class="keyword">double</span>)<a href="../TGRSILoop.html#TGRSILoop:fFragsSentToTree" title="int TGRSILoop::fFragsSentToTree">fFragsSentToTree</a>/(<span class="keyword">double</span>)<a href="../TGRSILoop.html#TGRSILoop:fFragsReadFromMidas" title="int TGRSILoop::fFragsReadFromMidas">fFragsReadFromMidas</a>)*100.);
 
-<span class="comment">//   TIter *iter = <a href="../TChannel.html">TChannel</a>::GetChannelIter();   </span>
+<span class="comment">//   <a href="../TIter.html">TIter</a> *iter = <a href="../TChannel.html">TChannel</a>::GetChannelIter();   </span>
 <span class="comment">//   while(<a href="../TChannel.html">TChannel</a> *chan = (<a href="../TChannel.html">TChannel</a>*)iter-&gt;Next()) {</span>
 <span class="comment">//      <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:Get" title="TGRSIRootIO* TGRSIRootIO::Get()">Get</a>()->FillChannelTree(chan);</span>
 <span class="comment">//      <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:Get" title="TGRSIRootIO* TGRSIRootIO::Get()">Get</a>()->GetChannelTree()-&gt;GetUserInfo()-&gt;Add(chan);</span>
@@ -624,7 +624,7 @@ ClassImp(<a href="../TGRSILoop.html">TGRSILoop</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

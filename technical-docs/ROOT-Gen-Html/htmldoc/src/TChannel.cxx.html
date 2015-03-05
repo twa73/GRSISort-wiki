@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:19 2015            -->
+<!--   Date: Wed Mar  4 20:39:16 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -32,8 +32,8 @@
 <span class="cpp">#include &lt;sstream&gt;</span>
 <span class="cpp">#include &lt;algorithm&gt;</span>
 
-<span class="cpp">#include &lt;TFile.h&gt;</span>
-<span class="cpp">#include &lt;TKey.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TFile.h">TFile.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TKey.h">TKey.h</a>&gt;</span>
 
 <span class="comment">/*
  * Author:  P.C. Bender, &lt;pcbend@gmail.com&gt;
@@ -67,7 +67,7 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
 
 <a name="tlNWvB"></a><a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:TChannel" title="TChannel TChannel::TChannel() or overloads">TChannel</a>(<span class="keyword">const</span> <span class="keyword">char</span> *temp_name) {
    <a href="../TChannel.html#TChannel:Clear" title="void TChannel::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
-   <a href="../#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(temp_name);
+   <a href="../TNamed.html#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(temp_name);
    <a href="../TChannel.html#TChannel:channelname" title="string TChannel::channelname">channelname</a> = temp_name;
 }
 
@@ -132,7 +132,7 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
 <span class="comment">//Add a <a href="../TChannel.html">TChannel</a> to <a href="../TChannel.html#TChannel:fChannelMap" title="map&lt;unsigned int,TChannel*&gt;* TChannel::fChannelMap">fChannelMap</a>. If the <a href="../TChannel.html">TChannel</a> doesn't exist, create a new <a href="../TChannel.html">TChannel</a> and add that the <a href="../TChannel.html#TChannel:fChannelMap" title="map&lt;unsigned int,TChannel*&gt;* TChannel::fChannelMap">fChannelMap</a>.</span>
 <span class="comment">//Options:</span>
 <span class="comment">//        <span class="string">"overwrite"</span> -  The <a href="../TChannel.html">TChannel</a> in the <a href="../TChannel.html#TChannel:fChannelMap" title="map&lt;unsigned int,TChannel*&gt;* TChannel::fChannelMap">fChannelMap</a> at the same <a href="../TChannel.html#TChannel:address" title="unsigned int TChannel::address">address</a> is overwritten. </span>
-<span class="comment">//                       If this option is not specified, an <a href="../#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a> is returned if the <a href="../TChannel.html">TChannel</a> already </span>
+<span class="comment">//                       If this option is not specified, an <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a> is returned if the <a href="../TChannel.html">TChannel</a> already </span>
 <span class="comment">//                       exists in the <a href="../TChannel.html#TChannel:fChannelMap" title="map&lt;unsigned int,TChannel*&gt;* TChannel::fChannelMap">fChannelMap</a>.</span>
 <span class="comment">//        <span class="string">"save"</span>      -  The temporary channel is not deleted after being placed in the map. </span>
     <span class="keyword">if</span>(!chan)
@@ -371,7 +371,7 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
    
    <span class="comment">//We need to add a random <a href="../TChannel.html#TChannel:number" title="int TChannel::number">number</a> between 0 and 1 before calibrating to avoid</span>
    <span class="comment">//binning issues.</span>
-   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateENG" title="double TChannel::CalibrateENG(double ) or overloads">CalibrateENG</a>(((<span class="keyword">double</span>)charge+gRandom-&gt;Uniform()) / (<span class="keyword">double</span>)temp_int);
+   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateENG" title="double TChannel::CalibrateENG(double ) or overloads">CalibrateENG</a>(((<span class="keyword">double</span>)charge+<a href="../TRandom.html">gRandom</a>-><a href="../TRandom.html#TRandom:Uniform" title="Double_t TRandom::Uniform(Double_t x1=1) or overloads">Uniform</a>()) / (<span class="keyword">double</span>)temp_int);
 };
 
 <a name="GKDhGC"></a><span class="keyword">double</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:CalibrateENG" title="double TChannel::CalibrateENG(double ) or overloads">CalibrateENG</a>(<span class="keyword">double</span> charge) {
@@ -389,7 +389,7 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
 
 <a name="iCnCiC"></a><span class="keyword">double</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:CalibrateCFD" title="double TChannel::CalibrateCFD(double ) or overloads">CalibrateCFD</a>(<span class="keyword">int</span> cfd) {
    <span class="comment">//Calibrates the CFD properly.</span>
-   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateCFD" title="double TChannel::CalibrateCFD(double ) or overloads">CalibrateCFD</a>((<span class="keyword">double</span>)cfd + gRandom-&gt;Uniform());
+   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateCFD" title="double TChannel::CalibrateCFD(double ) or overloads">CalibrateCFD</a>((<span class="keyword">double</span>)cfd + <a href="../TRandom.html">gRandom</a>-><a href="../TRandom.html#TRandom:Uniform" title="Double_t TRandom::Uniform(Double_t x1=1) or overloads">Uniform</a>());
 };
 
 <a name="aKHHp"></a><span class="keyword">double</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:CalibrateCFD" title="double TChannel::CalibrateCFD(double ) or overloads">CalibrateCFD</a>(<span class="keyword">double</span> cfd) {
@@ -408,7 +408,7 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
 
 <a name="V2r94B"></a><span class="keyword">double</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:CalibrateLED" title="double TChannel::CalibrateLED(double ) or overloads">CalibrateLED</a>(<span class="keyword">int</span> led) {
    <span class="comment">//Calibrates the LED</span>
-   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateLED" title="double TChannel::CalibrateLED(double ) or overloads">CalibrateLED</a>((<span class="keyword">double</span>)led + gRandom-&gt;Uniform());
+   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateLED" title="double TChannel::CalibrateLED(double ) or overloads">CalibrateLED</a>((<span class="keyword">double</span>)led + <a href="../TRandom.html">gRandom</a>-><a href="../TRandom.html#TRandom:Uniform" title="Double_t TRandom::Uniform(Double_t x1=1) or overloads">Uniform</a>());
 };
 
 <a name="amepo"></a><span class="keyword">double</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:CalibrateLED" title="double TChannel::CalibrateLED(double ) or overloads">CalibrateLED</a>(<span class="keyword">double</span> led) {
@@ -426,7 +426,7 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
 
 <a name="kxALnC"></a><span class="keyword">double</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:CalibrateTIME" title="double TChannel::CalibrateTIME(double ) or overloads">CalibrateTIME</a>(<span class="keyword">int</span> time)  {
    <span class="comment">//Calibrates the time spectrum</span>
-   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateTIME" title="double TChannel::CalibrateTIME(double ) or overloads">CalibrateTIME</a>((<span class="keyword">double</span>)time + gRandom-&gt;Uniform());
+   <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CalibrateTIME" title="double TChannel::CalibrateTIME(double ) or overloads">CalibrateTIME</a>((<span class="keyword">double</span>)time + <a href="../TRandom.html">gRandom</a>-><a href="../TRandom.html#TRandom:Uniform" title="Double_t TRandom::Uniform(Double_t x1=1) or overloads">Uniform</a>());
 };
 
 <a name="CvvBmE"></a><span class="keyword">double</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:CalibrateTIME" title="double TChannel::CalibrateTIME(double ) or overloads">CalibrateTIME</a>(<span class="keyword">double</span> time)  {
@@ -518,16 +518,16 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
 }
 
 
-<a name="oOjxIC"></a><a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:ReadCalFromTree" title="Int_t TChannel::ReadCalFromTree(TTree* ,Option_t* opt=&quot;overwrite&quot;)">ReadCalFromTree</a>(TTree *tree,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) {
+<a name="oOjxIC"></a><a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:ReadCalFromTree" title="Int_t TChannel::ReadCalFromTree(TTree* ,Option_t* opt=&quot;overwrite&quot;)">ReadCalFromTree</a>(<a href="../TTree.html">TTree</a> *tree,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) {
 <span class="comment">//Reads the <a href="../TChannel.html">TChannel</a> information from a Tree if it has already been written to that Tree.</span>
 <span class="comment">/*
    if(!tree)
 	return 0;
-    TList *list = tree-&gt;GetUserInfo();	
-    TIter iter(list);
+    <a href="../TList.html">TList</a> *list = tree-&gt;GetUserInfo();	
+    <a href="../TIter.html">TIter</a> iter(list);
     <a href="../ListOfTypes.html#int">int</a> channelsfound = 0;
-    while(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj = iter.Next()) {
-	if(!obj-&gt;<a href="../#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TChannel"</span>))
+    while(<a href="../TObject.html">TObject</a> *obj = iter.Next()) {
+	if(!obj-&gt;<a href="../TObject.html#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TChannel"</span>))
             continue;
 	<a href="../TChannel.html">TChannel</a> *chan = new <a href="../TChannel.html">TChannel</a>((<a href="../TChannel.html">TChannel</a>*)obj);
  	<a href="../TChannel.html#TChannel:AddChannel" title="void TChannel::AddChannel(TChannel* ,Option_t* opt=&quot;&quot;)">AddChannel</a>(chan,opt);// if we read from the tree we want to overwrite any channels found
@@ -538,17 +538,17 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
 
    <span class="keyword">if</span>(!tree)
 	  <span class="keyword">return</span> 0;
-   TFile *tempf = tree-&gt;GetCurrentFile();
-   TList *list =  tempf-&gt;GetListOfKeys();
-   TIter iter(list);
+   <a href="../TFile.html">TFile</a> *tempf = tree-&gt;GetCurrentFile();
+   <a href="../TList.html">TList</a> *list =  tempf-&gt;GetListOfKeys();
+   <a href="../TIter.html">TIter</a> iter(list);
 
 
-   <span class="comment">//while(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj = ((TKey*)(iter.Next()))-&gt;ReadObj()) {</span>
-   <span class="keyword">while</span>(TKey *key = (TKey*)(iter.Next())) {
+   <span class="comment">//while(<a href="../TObject.html">TObject</a> *obj = ((<a href="../TKey.html">TKey</a>*)(iter.Next()))-&gt;ReadObj()) {</span>
+   <span class="keyword">while</span>(<a href="../TKey.html">TKey</a> *key = (<a href="../TKey.html">TKey</a>*)(iter.Next())) {
       <span class="keyword">if</span>(!key || strcmp(key-&gt;GetClassName(),<span class="string">"TChannel"</span>))
          <span class="keyword">continue</span>;
-      <span class="comment">//<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *  obj = key-&gt;ReadObj();</span>
-      <span class="comment">//if(obj &amp;&amp; !obj-&gt;<a href="../#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TChannel"</span>))</span>
+      <span class="comment">//<a href="../TObject.html">TObject</a> *  obj = key-&gt;ReadObj();</span>
+      <span class="comment">//if(obj &amp;&amp; !obj-&gt;<a href="../TObject.html#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TChannel"</span>))</span>
       <span class="comment">//   continue;</span>
       <span class="comment">//<a href="../TChannel.html">TChannel</a> *c = (<a href="../TChannel.html">TChannel</a>*)obj;</span>
       <a href="../TChannel.html">TChannel</a> *c = (<a href="../TChannel.html">TChannel</a>*)key-&gt;ReadObj();
@@ -768,20 +768,20 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
    <span class="keyword">return</span>;
 }
 
-<a name="lgkPd"></a><span class="keyword">void</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(TBuffer &amp;R__b) {
+<a name="lgkPd"></a><span class="keyword">void</span> <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(<a href="../TBuffer.html">TBuffer</a> &amp;R__b) {
    <a href="../ListOfTypes.html#UInt_t">UInt_t</a> R__s, R__c;
    <span class="keyword">if</span>(R__b.IsReading()) { <span class="comment">// reading from file</span>
       <a href="../ListOfTypes.html#Version_t">Version_t</a> R__v = R__b.ReadVersion(&amp;R__s,&amp;R__c); <span class="keyword">if</span> (R__v) { }
-      <a href="../#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>::<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b);
-      { TString R__str; R__str.<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b); <a href="../TChannel.html#TChannel:fFileName" title="string TChannel::fFileName">fFileName</a>.assign(R__str.Data()); }
-      { TString R__str; R__str.<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b); <a href="../TChannel.html#TChannel:fFileData" title="string TChannel::fFileData">fFileData</a>.assign(R__str.Data()); }
+      <a href="../TNamed.html">TNamed</a>::<a href="../TNamed.html#TNamed:Streamer" title="void TNamed::Streamer(TBuffer&amp; )">Streamer</a>(R__b);
+      { <a href="../TString.html">TString</a> R__str; R__str.<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b); <a href="../TChannel.html#TChannel:fFileName" title="string TChannel::fFileName">fFileName</a>.assign(R__str.Data()); }
+      { <a href="../TString.html">TString</a> R__str; R__str.<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b); <a href="../TChannel.html#TChannel:fFileData" title="string TChannel::fFileData">fFileData</a>.assign(R__str.Data()); }
       <a href="../TChannel.html#TChannel:InitChannelInput" title="void TChannel::InitChannelInput()">InitChannelInput</a>();
       R__b.CheckByteCount(R__s,R__c,<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:IsA" title="TClass* TChannel::IsA()">IsA</a>());
    } <span class="keyword">else</span> {               <span class="comment">// writing to file</span>
       R__c = R__b.WriteVersion(<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:IsA" title="TClass* TChannel::IsA()">IsA</a>(),<span class="keyword">true</span>);
-      <a href="../#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>::<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b);
-      {TString R__str = <a href="../TChannel.html#TChannel:fFileName" title="string TChannel::fFileName">fFileName</a>.c_str(); R__str.<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b);}
-      {TString R__str = <a href="../TChannel.html#TChannel:fFileData" title="string TChannel::fFileData">fFileData</a>.c_str(); R__str.<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b);}
+      <a href="../TNamed.html">TNamed</a>::<a href="../TNamed.html#TNamed:Streamer" title="void TNamed::Streamer(TBuffer&amp; )">Streamer</a>(R__b);
+      {<a href="../TString.html">TString</a> R__str = <a href="../TChannel.html#TChannel:fFileName" title="string TChannel::fFileName">fFileName</a>.c_str(); R__str.<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b);}
+      {<a href="../TString.html">TString</a> R__str = <a href="../TChannel.html#TChannel:fFileData" title="string TChannel::fFileData">fFileData</a>.c_str(); R__str.<a href="../TChannel.html#TChannel:Streamer" title="void TChannel::Streamer(TBuffer&amp; )">Streamer</a>(R__b);}
       R__b.SetByteCount(R__c,<span class="keyword">true</span>);
    }
 }
@@ -792,7 +792,7 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
      printf(<span class="string">"No TChannels found to write.\n"</span>);
   <span class="keyword">if</span>(!gDirectory)
      printf(<span class="string">"No file opened to wrtie to.\n"</span>);
-  c-&gt;<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
+  c-&gt;<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
   <span class="keyword">return</span>;
 }
 
@@ -804,7 +804,7 @@ std::string <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#T
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

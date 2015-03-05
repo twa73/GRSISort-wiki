@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:19 2015            -->
+<!--   Date: Wed Mar  4 20:39:16 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -23,10 +23,10 @@
 <span class="cpp">#define TCALMANAGER_H__</span>
 
 <span class="cpp">#include "<a href="../TCal.h">TCal.h</a>"</span>
-<span class="cpp">#include "TNamed.h"</span>
-<span class="cpp">#include "TClass.h"</span>
+<span class="cpp">#include "<a href="../TNamed.h">TNamed.h</a>"</span>
+<span class="cpp">#include "<a href="../TClass.h">TClass.h</a>"</span>
 
-<span class="keyword">class</span> <a href="../TCalManager.html">TCalManager</a> : <span class="keyword">public</span> <a href="../#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a> {
+<span class="keyword">class</span> <a href="../TCalManager.html">TCalManager</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a> {
  <span class="keyword">public</span>: 
 <a name="zGZtb"></a>   <a href="../TCalManager.html">TCalManager</a>();
    <a href="../TCalManager.html">TCalManager</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname);
@@ -38,8 +38,8 @@
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TCalManager.html#TCalManager:AddToManager" title="Bool_t TCalManager::AddToManager(TCal* cal,UInt_t channum,Option_t* opt=&quot;&quot;) or overloads">AddToManager</a>(<a href="../TCal.html">TCal</a>* cal, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
    <span class="keyword">void</span> <a href="../TCalManager.html#TCalManager:RemoveCal" title="void TCalManager::RemoveCal(UInt_t channum,Option_t* opt=&quot;&quot;)">RemoveCal</a>(<a href="../ListOfTypes.html#UInt_t">UInt_t</a> channum, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
    <span class="keyword">void</span> <a href="../TCalManager.html#TCalManager:SetClass" title="void TCalManager::SetClass(const char* classname) or overloads">SetClass</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname);
-   <span class="keyword">void</span> <a href="../TCalManager.html#TCalManager:SetClass" title="void TCalManager::SetClass(const char* classname) or overloads">SetClass</a>(<span class="keyword">const</span> TClass *cl);
-<a name="TFc7eE"></a>   <span class="keyword">const</span> <span class="keyword">char</span>* <a href="../TCalManager.html#TCalManager:GetClass" title="const char* TCalManager::GetClass()">GetClass</a>(){ <span class="keyword">return</span> <a href="../TCalManager.html#TCalManager:fClass" title="TClass* TCalManager::fClass">fClass</a> ? <a href="../TCalManager.html#TCalManager:fClass" title="TClass* TCalManager::fClass">fClass</a>-&gt;<a href="../#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>() : 0;}
+   <span class="keyword">void</span> <a href="../TCalManager.html#TCalManager:SetClass" title="void TCalManager::SetClass(const char* classname) or overloads">SetClass</a>(<span class="keyword">const</span> <a href="../TClass.html">TClass</a> *cl);
+<a name="TFc7eE"></a>   <span class="keyword">const</span> <span class="keyword">char</span>* <a href="../TCalManager.html#TCalManager:GetClass" title="const char* TCalManager::GetClass()">GetClass</a>(){ <span class="keyword">return</span> <a href="../TCalManager.html#TCalManager:fClass" title="TClass* TCalManager::fClass">fClass</a> ? <a href="../TCalManager.html#TCalManager:fClass" title="TClass* TCalManager::fClass">fClass</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>() : 0;}
    <span class="keyword">void</span> <a href="../TCalManager.html#TCalManager:WriteToChannel" title="void TCalManager::WriteToChannel()">WriteToChannel</a>() <span class="keyword">const</span>;
 
    <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TCalManager.html#TCalManager:Print" title="void TCalManager::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>;
@@ -50,7 +50,7 @@
  <span class="keyword">private</span>:
    <span class="keyword">typedef</span> std::map&lt;<a href="../ListOfTypes.html#UInt_t">UInt_t</a>,<a href="../TCal.html">TCal</a>*&gt; CalMap;
    CalMap <a href="../TCalManager.html#TCalManager:fcalmap" title="map&lt;unsigned int,TCal*,less&lt;unsigned int&gt;,allocator&lt;pair&lt;const unsigned int,TCal*&gt; &gt; &gt; TCalManager::fcalmap">fcalmap</a>;
-   TClass* <a href="../TCalManager.html#TCalManager:fClass" title="TClass* TCalManager::fClass">fClass</a>;
+   <a href="../TClass.html">TClass</a>* <a href="../TCalManager.html#TCalManager:fClass" title="TClass* TCalManager::fClass">fClass</a>;
 
 
    ClassDef(<a href="../TCalManager.html">TCalManager</a>,1);
@@ -66,7 +66,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

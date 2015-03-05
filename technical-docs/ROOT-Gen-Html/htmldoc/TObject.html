@@ -1,0 +1,1040 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Wed Mar  4 20:36:08 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TObject</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TObject','libCore','TObject.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TObject.h.html">header file</a>
+<a class="descrheadentry" href="src/TObject.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TObject:description">class description</a> 
+<a class="descrheadentry" href="#TObject:Function_Members">function members</a>
+<a class="descrheadentry" href="#TObject:Data_Members">data members</a>
+<a class="descrheadentry" href="#TObject:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./CORE_Index.html">CORE</a>
+ &#187; <a class="locationlevel" href="./CORE_BASE_Index.html">BASE</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TObject</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TObject:description"></a>class TObject</h1>
+<div class="classdescr">
+<pre>
+
+<a href="./TObject.html">TObject</a>
+
+Mother of all <a href="./ROOT.html">ROOT</a> objects.
+
+The <a href="./TObject.html">TObject</a> class provides default behaviour and protocol for all
+objects in the <a href="./ROOT.html">ROOT</a> system. It provides protocol for object I/O,
+error handling, sorting, inspection, printing, drawing, etc.
+Every object which inherits from <a href="./TObject.html">TObject</a> can be stored in the
+<a href="./ROOT.html">ROOT</a> collection classes.
+<a href="./TObject.html">TObject</a>'s bits can be used as flags, bits 0 - 13 and 24-31 are
+reserved as  global bits while bits 14 - 23 can be used in different
+class hierarchies (watch out for overlaps).
+
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TObject:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TObject:TObject">TObject</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TObject:TObject@1">TObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>&amp; object)</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TObject:_TObject">~TObject</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod">AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad">AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse">Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TObject:Class">Class</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName">ClassName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:Clone">Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Compare">Compare</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Copy">Copy</a>(<a href="./TObject.html">TObject</a>&amp; object) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Delete">Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:DistancetoPrimitive">DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Draw">Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DrawClass">DrawClass</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:DrawClone">DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Dump">Dump</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Error">Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute">Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute@1">Execute</a>(<a href="./TMethod.html">TMethod</a>* method, <a href="./TObjArray.html">TObjArray</a>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ExecuteEvent">ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Fatal">Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject">FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1">FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption">GetDrawOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly">GetDtorOnly</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName">GetIconName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetName">GetName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetObjectInfo">GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetObjectStat">GetObjectStat</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetOption">GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetTitle">GetTitle</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID">GetUniqueID</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer">HandleTimer</a>(<a href="./TTimer.html">TTimer</a>* timer)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Hash">Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info">Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom">InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom@1">InheritsFrom</a>(<span class="keyword">const</span> <a href="./TClass.html">TClass</a>* cl) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Inspect">Inspect</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:InvertBit">InvertBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TObject:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsEqual">IsEqual</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsFolder">IsFolder</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsOnHeap">IsOnHeap</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsSortable">IsSortable</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsZombie">IsZombie</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ls">ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MayNotUse">MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Notify">Notify</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Obsolete">Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete">operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete@1">operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]">operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]@1">operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new">operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new@1">operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]">operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]@1">operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TObject.html">TObject</a>&amp;</td><td class="funcname"><a class="funcname" href="#TObject:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>&amp; rhs)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Paint">Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Pop">Pop</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Read">Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:RecursiveRemove">RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ResetBit">ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SaveAs">SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SavePrimitive">SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit@1">SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit">SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDrawOption">SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDtorOnly">SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetObjectStat">SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetUniqueID">SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:StreamerNVirtual">StreamerNVirtual</a>(<a href="./TBuffer.html">TBuffer</a>&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SysError">SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBit">TestBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBits">TestBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:UseCurrentStyle">UseCurrentStyle</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Warning">Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write">Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write@1">Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DoError">DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie">MakeZombie</a>()</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TObject:Data_Members"></a>Data Members</h2>
+<div class="access" id="enumpubl"><b>public:</b>
+<table class="data" id="tabenumpubl" cellspacing="0">
+<tr class="data"><td class="datatype">enum EStatusBits { </td><td class="dataname"><a name="TObject:kCanDelete"></a>kCanDelete</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kMustCleanup"></a>kMustCleanup</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kObjInCanvas"></a>kObjInCanvas</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kIsReferenced"></a>kIsReferenced</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kHasUUID"></a>kHasUUID</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kCannotPick"></a>kCannotPick</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kNoContextMenu"></a>kNoContextMenu</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kInvalidObject"></a>kInvalidObject</td><td></td></tr>
+<tr class="data"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="data"><td class="datatype">enum  { </td><td class="dataname"><a name="TObject:kIsOnHeap"></a>kIsOnHeap</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kNotDeleted"></a>kNotDeleted</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kZombie"></a>kZombie</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kBitMask"></a>kBitMask</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kSingleKey"></a>kSingleKey</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kOverwrite"></a>kOverwrite</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TObject:kWriteDelete"></a>kWriteDelete</td><td></td></tr>
+<tr class="data"><td class="datatype">};</td><td></td><td></td></tr>
+
+</table></div>
+<div class="access" id="datapriv"><b>private:</b>
+<table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a name="TObject:fBits"></a>fBits</td><td class="datadesc">bit field status word</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a name="TObject:fUniqueID"></a>fUniqueID</td><td class="datadesc">object unique identifier</td></tr>
+<tr class="data"><td class="datatype">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="dataname"><a name="TObject:fgDtorOnly"></a>fgDtorOnly</td><td class="datadesc">object for which to call dtor only (i.e. no delete)</td></tr>
+<tr class="data"><td class="datatype">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a name="TObject:fgObjectStat"></a>fgObjectStat</td><td class="datadesc">if true keep track of objects in TObjectTable</td></tr>
+
+</table></div>
+</div>
+<h2><a id="TObject:Class_Charts"></a>Class Charts</h2>
+<map name="MapTObject_Inh" id="MapTObject_Inh">
+<area shape="rect" id="node3" href="./TVirtualPad.html" title="TVirtualPad" alt="" coords="91,186,142,196"/>
+<area shape="rect" id="node4" href="./TObjString.html" title="TObjString" alt="" coords="91,337,142,347"/>
+<area shape="rect" id="node5" href="./TNamed.html" title="TNamed" alt="" coords="91,347,142,357"/>
+<area shape="rect" id="node6" href="./TGClient.html" title="TGClient" alt="" coords="91,693,142,703"/>
+<area shape="rect" id="node7" href="./TSysEvtHandler.html" title="TSysEvtHandler" alt="" coords="91,703,142,713"/>
+<area shape="rect" id="node8" href="./THtml.html" title="THtml" alt="" coords="91,733,142,743"/>
+<area shape="rect" id="node9" href="./TGObject.html" title="TGObject" alt="" coords="91,743,142,753"/>
+<area shape="rect" id="node10" href="./TCollection.html" title="TCollection" alt="" coords="91,774,142,784"/>
+<area shape="rect" id="node11" href="./ROOT__TSchemaRule.html" title="ROOT::TSchemaRule" alt="" coords="83,784,150,794"/>
+<area shape="rect" id="node12" href="./ROOT__TSchemaRuleSet.html" title="ROOT::TSchemaRuleSet" alt="" coords="78,794,154,804"/>
+<area shape="rect" id="node13" href="./TAnalysisTreeBuilder.html" title="TAnalysisTreeBuilder" alt="" coords="83,804,150,814"/>
+<area shape="rect" id="node14" href="./TApplication.html" title="TApplication" alt="" coords="91,814,142,824"/>
+<area shape="rect" id="node15" href="./TEllipse.html" title="TEllipse" alt="" coords="91,826,142,836"/>
+<area shape="rect" id="node16" href="./TArchiveFile.html" title="TArchiveFile" alt="" coords="91,836,142,846"/>
+<area shape="rect" id="node17" href="./TArchiveMember.html" title="TArchiveMember" alt="" coords="89,846,143,857"/>
+<area shape="rect" id="node18" href="./TLine.html" title="TLine" alt="" coords="91,857,142,867"/>
+<area shape="rect" id="node19" href="./TBinomialEfficiencyFitter.html" title="TBinomialEfficiencyFitter" alt="" coords="77,867,156,877"/>
+<area shape="rect" id="node20" href="./TBits.html" title="TBits" alt="" coords="91,877,142,887"/>
+<area shape="rect" id="node21" href="./TBox.html" title="TBox" alt="" coords="91,892,142,902"/>
+<area shape="rect" id="node22" href="./TBuffer.html" title="TBuffer" alt="" coords="91,902,142,912"/>
+<area shape="rect" id="node24" href="./TPad.html" title="TPad" alt="" coords="205,36,255,46"/>
+<area shape="rect" id="node25" href="./TVirtualX.html" title="TVirtualX" alt="" coords="205,51,255,61"/>
+<area shape="rect" id="node26" href="./TGuiFactory.html" title="TGuiFactory" alt="" coords="205,68,255,78"/>
+<area shape="rect" id="node27" href="./TSignalHandler.html" title="TSignalHandler" alt="" coords="205,678,255,688"/>
+<area shape="rect" id="node28" href="./TFileHandler.html" title="TFileHandler" alt="" coords="205,688,255,698"/>
+<area shape="rect" id="node29" href="./TMessageHandler.html" title="TMessageHandler" alt="" coords="202,99,257,109"/>
+<area shape="rect" id="node30" href="./TTree.html" title="TTree" alt="" coords="205,109,255,119"/>
+<area shape="rect" id="node31" href="./TDirectory.html" title="TDirectory" alt="" coords="205,139,255,149"/>
+<area shape="rect" id="node32" href="./TH1.html" title="TH1" alt="" coords="205,189,255,199"/>
+<area shape="rect" id="node33" href="./TGWindow.html" title="TGWindow" alt="" coords="205,718,255,728"/>
+<area shape="rect" id="node34" href="./ROOT__THnBaseBrowsable.html" title="ROOT::THnBaseBrowsable" alt="" coords="188,297,272,307"/>
+<area shape="rect" id="node35" href="./TSeqCollection.html" title="TSeqCollection" alt="" coords="205,759,255,769"/>
+<area shape="rect" id="node36" href="./ROOT__TSchemaRule__TSources.html" title="ROOT::TSchemaRule::TSources" alt="" coords="181,307,279,317"/>
+<area shape="rect" id="node37" href="./TApplicationRemote.html" title="TApplicationRemote" alt="" coords="198,789,261,799"/>
+<area shape="rect" id="node38" href="./TApplicationServer.html" title="TApplicationServer" alt="" coords="200,799,260,809"/>
+<area shape="rect" id="node39" href="./TArc.html" title="TArc" alt="" coords="205,839,255,849"/>
+<area shape="rect" id="node40" href="./TArrow.html" title="TArrow" alt="" coords="205,879,255,889"/>
+<area shape="rect" id="node41" href="./TAxis.html" title="TAxis" alt="" coords="205,317,255,327"/>
+<area shape="rect" id="node42" href="./TAxis3D.html" title="TAxis3D" alt="" coords="205,327,255,337"/>
+<area shape="rect" id="node43" href="./TShape.html" title="TShape" alt="" coords="205,337,255,347"/>
+<area shape="rect" id="node44" href="./TVirtualFitter.html" title="TVirtualFitter" alt="" coords="205,347,255,357"/>
+<area shape="rect" id="node45" href="./TDictionary.html" title="TDictionary" alt="" coords="205,382,255,392"/>
+<area shape="rect" id="node46" href="./TKey.html" title="TKey" alt="" coords="205,412,255,422"/>
+<area shape="rect" id="node47" href="./TBenchmark.html" title="TBenchmark" alt="" coords="205,422,255,432"/>
+<area shape="rect" id="node48" href="./TBranch.html" title="TBranch" alt="" coords="205,452,255,462"/>
+<area shape="rect" id="node49" href="./TBrowser.html" title="TBrowser" alt="" coords="205,462,255,472"/>
+<area shape="rect" id="node50" href="./TBrowserPlugin.html" title="TBrowserPlugin" alt="" coords="205,472,255,482"/>
+<area shape="rect" id="node51" href="./TBufferFile.html" title="TBufferFile" alt="" coords="205,934,255,944"/>
+<area shape="rect" id="node52" href="./TCal.html" title="TCal" alt="" coords="205,492,255,502"/>
+<area shape="rect" id="node53" href="./TCalManager.html" title="TCalManager" alt="" coords="205,502,255,512"/>
+<area shape="rect" id="node55" href="./TCrown.html" title="TCrown" alt="" coords="205,849,255,859"/>
+<area shape="rect" id="node56" href="./TPave.html" title="TPave" alt="" coords="205,899,255,909"/>
+<area shape="rect" id="node57" href="./TWbox.html" title="TWbox" alt="" coords="205,909,255,919"/>
+<area shape="rect" id="node58" href="./TGApplication.html" title="TGApplication" alt="" coords="205,809,255,819"/>
+<area shape="rect" id="node59" href="./TGFontPool.html" title="TGFontPool" alt="" coords="205,728,255,738"/>
+<area shape="rect" id="node60" href="./TGGCPool.html" title="TGGCPool" alt="" coords="205,738,255,749"/>
+<area shape="rect" id="node61" href="./TRint.html" title="TRint" alt="" coords="205,819,255,829"/>
+<area shape="rect" id="node62" href="./TGResourcePool.html" title="TGResourcePool" alt="" coords="204,749,256,759"/>
+<area shape="rect" id="node63" href="./TGaxis.html" title="TGaxis" alt="" coords="205,889,255,899"/>
+<area shape="rect" id="node64" href="./THashTable.html" title="THashTable" alt="" coords="205,769,255,779"/>
+<area shape="rect" id="node65" href="./TMap.html" title="TMap" alt="" coords="205,779,255,789"/>
+<area shape="rect" id="node66" href="./TTimer.html" title="TTimer" alt="" coords="205,698,255,708"/>
+<area shape="rect" id="node67" href="./TProofServ.html" title="TProofServ" alt="" coords="205,829,255,839"/>
+<area shape="rect" id="node68" href="./TStdExceptionHandler.html" title="TStdExceptionHandler" alt="" coords="196,708,264,718"/>
+<area shape="rect" id="node69" href="./TZIPFile.html" title="TZIPFile" alt="" coords="205,859,255,869"/>
+<area shape="rect" id="node70" href="./TZIPMember.html" title="TZIPMember" alt="" coords="205,869,255,879"/>
+<area shape="rect" id="node71" href="./TGX11.html" title="TGX11" alt="" coords="310,48,361,58"/>
+<area shape="rect" id="node72" href="./TRootGuiFactory.html" title="TRootGuiFactory" alt="" coords="309,58,362,68"/>
+<area shape="rect" id="node73" href="./TCanvas.html" title="TCanvas" alt="" coords="310,13,361,23"/>
+<area shape="rect" id="node74" href="./TChain.html" title="TChain" alt="" coords="310,78,361,89"/>
+<area shape="rect" id="node75" href="./TDirectoryFile.html" title="TDirectoryFile" alt="" coords="310,129,361,139"/>
+<area shape="rect" id="node76" href="./TH1D.html" title="TH1D" alt="" coords="310,149,361,159"/>
+<area shape="rect" id="node77" href="./GROOTGuiFactory.html" title="GROOTGuiFactory" alt="" coords="306,68,366,78"/>
+<area shape="rect" id="node78" href="./TGFrame.html" title="TGFrame" alt="" coords="310,658,361,668"/>
+<area shape="rect" id="node79" href="./GTree.html" title="GTree" alt="" coords="310,89,361,99"/>
+<area shape="rect" id="node80" href="./TObjArray.html" title="TObjArray" alt="" coords="310,759,361,769"/>
+<area shape="rect" id="node81" href="./TBRIK.html" title="TBRIK" alt="" coords="310,294,361,304"/>
+<area shape="rect" id="node82" href="./TBackCompFitter.html" title="TBackCompFitter" alt="" coords="308,347,363,357"/>
+<area shape="rect" id="node83" href="./TBaseClass.html" title="TBaseClass" alt="" coords="310,357,361,367"/>
+<area shape="rect" id="node84" href="./TBasket.html" title="TBasket" alt="" coords="310,427,361,437"/>
+<area shape="rect" id="node85" href="./TBranchClones.html" title="TBranchClones" alt="" coords="310,447,361,457"/>
+<area shape="rect" id="node86" href="./TBranchElement.html" title="TBranchElement" alt="" coords="310,457,361,467"/>
+<area shape="rect" id="node87" href="./TBranchObject.html" title="TBranchObject" alt="" coords="310,467,361,477"/>
+<area shape="rect" id="node88" href="./TBranchRef.html" title="TBranchRef" alt="" coords="310,477,361,487"/>
+<area shape="rect" id="node89" href="./TBranchSTL.html" title="TBranchSTL" alt="" coords="310,487,361,498"/>
+<area shape="rect" id="node90" href="./TBtree.html" title="TBtree" alt="" coords="310,769,361,779"/>
+<area shape="rect" id="node91" href="./TBufferSQL.html" title="TBufferSQL" alt="" coords="310,929,361,939"/>
+<area shape="rect" id="node92" href="./TBufferXML.html" title="TBufferXML" alt="" coords="310,939,361,949"/>
+<area shape="rect" id="node93" href="./TButton.html" title="TButton" alt="" coords="310,28,361,38"/>
+<area shape="rect" id="node94" href="./TTUBE.html" title="TTUBE" alt="" coords="310,307,361,317"/>
+<area shape="rect" id="node95" href="./TClass.html" title="TClass" alt="" coords="310,367,361,377"/>
+<area shape="rect" id="node96" href="./TDataMember.html" title="TDataMember" alt="" coords="310,377,361,387"/>
+<area shape="rect" id="node97" href="./TDataType.html" title="TDataType" alt="" coords="310,387,361,397"/>
+<area shape="rect" id="node98" href="./TPaveText.html" title="TPaveText" alt="" coords="310,879,361,889"/>
+<area shape="rect" id="node99" href="./TEfficiencyCal.html" title="TEfficiencyCal" alt="" coords="310,498,361,508"/>
+<area shape="rect" id="node100" href="./TEnergyCal.html" title="TEnergyCal" alt="" coords="310,508,361,518"/>
+<area shape="rect" id="node101" href="./TFrame.html" title="TFrame" alt="" coords="310,909,361,919"/>
+<area shape="rect" id="node102" href="./TFunction.html" title="TFunction" alt="" coords="310,397,361,407"/>
+<area shape="rect" id="node103" href="./TGRSIint.html" title="TGRSIint" alt="" coords="310,819,361,829"/>
+<area shape="rect" id="node104" href="./TGainMatch.html" title="TGainMatch" alt="" coords="310,518,361,528"/>
+<area shape="rect" id="node105" href="./TGlobal.html" title="TGlobal" alt="" coords="310,407,361,417"/>
+<area shape="rect" id="node106" href="./TList.html" title="TList" alt="" coords="310,789,361,799"/>
+<area shape="rect" id="node107" href="./TH1C.html" title="TH1C" alt="" coords="310,159,361,169"/>
+<area shape="rect" id="node108" href="./TH1F.html" title="TH1F" alt="" coords="310,169,361,179"/>
+<area shape="rect" id="node109" href="./TH1I.html" title="TH1I" alt="" coords="310,179,361,189"/>
+<area shape="rect" id="node110" href="./TH1K.html" title="TH1K" alt="" coords="310,189,361,199"/>
+<area shape="rect" id="node111" href="./TH1S.html" title="TH1S" alt="" coords="310,199,361,209"/>
+<area shape="rect" id="node112" href="./TH2.html" title="TH2" alt="" coords="310,209,361,219"/>
+<area shape="rect" id="node113" href="./TH3.html" title="TH3" alt="" coords="310,234,361,244"/>
+<area shape="rect" id="node114" href="./TKeyXML.html" title="TKeyXML" alt="" coords="310,437,361,447"/>
+<area shape="rect" id="node115" href="./TLegend.html" title="TLegend" alt="" coords="310,889,361,899"/>
+<area shape="rect" id="node116" href="./TMessage.html" title="TMessage" alt="" coords="310,949,361,959"/>
+<area shape="rect" id="node117" href="./TMethodArg.html" title="TMethodArg" alt="" coords="310,417,361,427"/>
+<area shape="rect" id="node118" href="./TNtuple.html" title="TNtuple" alt="" coords="310,99,361,109"/>
+<area shape="rect" id="node119" href="./TNtupleD.html" title="TNtupleD" alt="" coords="310,109,361,119"/>
+<area shape="rect" id="node120" href="./TOrdCollection.html" title="TOrdCollection" alt="" coords="310,799,361,809"/>
+<area shape="rect" id="node121" href="./TPCON.html" title="TPCON" alt="" coords="310,317,361,327"/>
+<area shape="rect" id="node122" href="./TPaveLabel.html" title="TPaveLabel" alt="" coords="310,899,361,909"/>
+<area shape="rect" id="node123" href="./TProcessEventTimer.html" title="TProcessEventTimer" alt="" coords="304,648,367,658"/>
+<area shape="rect" id="node124" href="./TProofServLite.html" title="TProofServLite" alt="" coords="310,829,361,839"/>
+<area shape="rect" id="node125" href="./TROOT.html" title="TROOT" alt="" coords="310,139,361,149"/>
+<area shape="rect" id="node126" href="./TRefArray.html" title="TRefArray" alt="" coords="310,809,361,819"/>
+<area shape="rect" id="node127" href="./TSPHE.html" title="TSPHE" alt="" coords="310,327,361,337"/>
+<area shape="rect" id="node128" href="./TSlider.html" title="TSlider" alt="" coords="310,38,361,48"/>
+<area shape="rect" id="node129" href="./TSliderBox.html" title="TSliderBox" alt="" coords="310,919,361,929"/>
+<area shape="rect" id="node130" href="./TTreeSQL.html" title="TTreeSQL" alt="" coords="310,119,361,129"/>
+<area shape="rect" id="node131" href="./TXTRU.html" title="TXTRU" alt="" coords="310,337,361,347"/>
+<area shape="rect" id="node132" href="./TGX11TTF.html" title="TGX11TTF" alt="" coords="403,48,453,58"/>
+<area shape="rect" id="node133" href="./GCanvas.html" title="GCanvas" alt="" coords="403,1,453,11"/>
+<area shape="rect" id="node134" href="./GChain.html" title="GChain" alt="" coords="403,74,453,84"/>
+<area shape="rect" id="node135" href="./TFile.html" title="TFile" alt="" coords="403,129,453,139"/>
+<area shape="rect" id="node136" href="./GH1D.html" title="GH1D" alt="" coords="403,139,453,149"/>
+<area shape="rect" id="node137" href="./TGCompositeFrame.html" title="TGCompositeFrame" alt="" coords="397,427,459,437"/>
+<area shape="rect" id="node138" href="./ROOT__TSchemaMatch.html" title="ROOT::TSchemaMatch" alt="" coords="392,759,464,769"/>
+<area shape="rect" id="node139" href="./TBasketSQL.html" title="TBasketSQL" alt="" coords="403,417,453,427"/>
+<area shape="rect" id="node140" href="./TCONE.html" title="TCONE" alt="" coords="403,319,453,329"/>
+<area shape="rect" id="node141" href="./TTUBS.html" title="TTUBS" alt="" coords="403,329,453,340"/>
+<area shape="rect" id="node142" href="./TClonesArray.html" title="TClonesArray" alt="" coords="403,769,453,779"/>
+<area shape="rect" id="node143" href="./TDialogCanvas.html" title="TDialogCanvas" alt="" coords="403,11,453,21"/>
+<area shape="rect" id="node144" href="./TDiamond.html" title="TDiamond" alt="" coords="403,869,453,879"/>
+<area shape="rect" id="node145" href="./TELTU.html" title="TELTU" alt="" coords="403,340,453,350"/>
+<area shape="rect" id="node146" href="./TGButton.html" title="TGButton" alt="" coords="403,543,453,553"/>
+<area shape="rect" id="node147" href="./TGCanvas.html" title="TGCanvas" alt="" coords="403,568,453,578"/>
+<area shape="rect" id="node148" href="./TGColorFrame.html" title="TGColorFrame" alt="" coords="403,578,453,588"/>
+<area shape="rect" id="node149" href="./TGColorPalette.html" title="TGColorPalette" alt="" coords="403,588,453,598"/>
+<area shape="rect" id="node150" href="./TGColorPick.html" title="TGColorPick" alt="" coords="403,598,453,608"/>
+<area shape="rect" id="node151" href="./TGDoubleSlider.html" title="TGDoubleSlider" alt="" coords="403,608,453,618"/>
+<area shape="rect" id="node152" href="./TGDragWindow.html" title="TGDragWindow" alt="" coords="402,618,454,628"/>
+<area shape="rect" id="node153" href="./TGLVEntry.html" title="TGLVEntry" alt="" coords="403,628,453,638"/>
+<area shape="rect" id="node154" href="./TGProgressBar.html" title="TGProgressBar" alt="" coords="403,638,453,648"/>
+<area shape="rect" id="node155" href="./TGScrollBar.html" title="TGScrollBar" alt="" coords="403,648,453,658"/>
+<area shape="rect" id="node156" href="./TGSlider.html" title="TGSlider" alt="" coords="403,658,453,668"/>
+<area shape="rect" id="node157" href="./TGSplitter.html" title="TGSplitter" alt="" coords="403,668,453,678"/>
+<area shape="rect" id="node158" href="./TGHorizontal3DLine.html" title="TGHorizontal3DLine" alt="" coords="396,678,460,688"/>
+<area shape="rect" id="node159" href="./TGIcon.html" title="TGIcon" alt="" coords="403,688,453,698"/>
+<area shape="rect" id="node160" href="./TGLBEntry.html" title="TGLBEntry" alt="" coords="403,698,453,708"/>
+<area shape="rect" id="node161" href="./TGLabel.html" title="TGLabel" alt="" coords="403,708,453,718"/>
+<area shape="rect" id="node162" href="./TGMdiContainer.html" title="TGMdiContainer" alt="" coords="402,718,454,728"/>
+<area shape="rect" id="node163" href="./TGMdiWinResizer.html" title="TGMdiWinResizer" alt="" coords="399,728,457,738"/>
+<area shape="rect" id="node164" href="./TGMenuTitle.html" title="TGMenuTitle" alt="" coords="403,738,453,749"/>
+<area shape="rect" id="node166" href="./TGTRA.html" title="TGTRA" alt="" coords="403,269,453,279"/>
+<area shape="rect" id="node167" href="./TGridJobStatusList.html" title="TGridJobStatusList" alt="" coords="399,779,457,789"/>
+<area shape="rect" id="node168" href="./TGridResult.html" title="TGridResult" alt="" coords="403,789,453,799"/>
+<area shape="rect" id="node169" href="./TGroupButton.html" title="TGroupButton" alt="" coords="403,31,453,41"/>
+<area shape="rect" id="node170" href="./TH2C.html" title="TH2C" alt="" coords="403,159,453,169"/>
+<area shape="rect" id="node171" href="./TH2D.html" title="TH2D" alt="" coords="403,169,453,179"/>
+<area shape="rect" id="node172" href="./TH2F.html" title="TH2F" alt="" coords="403,179,453,189"/>
+<area shape="rect" id="node173" href="./TH2I.html" title="TH2I" alt="" coords="403,189,453,199"/>
+<area shape="rect" id="node174" href="./TH2Poly.html" title="TH2Poly" alt="" coords="403,199,453,209"/>
+<area shape="rect" id="node175" href="./TH2S.html" title="TH2S" alt="" coords="403,209,453,219"/>
+<area shape="rect" id="node176" href="./TH3C.html" title="TH3C" alt="" coords="403,219,453,229"/>
+<area shape="rect" id="node177" href="./TH3D.html" title="TH3D" alt="" coords="403,229,453,239"/>
+<area shape="rect" id="node178" href="./TH3F.html" title="TH3F" alt="" coords="403,239,453,249"/>
+<area shape="rect" id="node179" href="./TH3I.html" title="TH3I" alt="" coords="403,249,453,259"/>
+<area shape="rect" id="node180" href="./TH3S.html" title="TH3S" alt="" coords="403,259,453,269"/>
+<area shape="rect" id="node181" href="./THYPE.html" title="THYPE" alt="" coords="403,350,453,360"/>
+<area shape="rect" id="node182" href="./THashList.html" title="THashList" alt="" coords="403,799,453,809"/>
+<area shape="rect" id="node183" href="./TInspectCanvas.html" title="TInspectCanvas" alt="" coords="403,21,453,31"/>
+<area shape="rect" id="node184" href="./TMethod.html" title="TMethod" alt="" coords="403,397,453,407"/>
+<area shape="rect" id="node185" href="./TPARA.html" title="TPARA" alt="" coords="403,279,453,289"/>
+<area shape="rect" id="node186" href="./TPGON.html" title="TPGON" alt="" coords="403,360,453,370"/>
+<area shape="rect" id="node187" href="./TPaveClass.html" title="TPaveClass" alt="" coords="403,899,453,909"/>
+<area shape="rect" id="node188" href="./TPaveStats.html" title="TPaveStats" alt="" coords="403,879,453,889"/>
+<area shape="rect" id="node189" href="./TPavesText.html" title="TPavesText" alt="" coords="403,889,453,899"/>
+<area shape="rect" id="node190" href="./TProfile.html" title="TProfile" alt="" coords="403,149,453,159"/>
+<area shape="rect" id="node191" href="./TProofChain.html" title="TProofChain" alt="" coords="403,84,453,94"/>
+<area shape="rect" id="node192" href="./TProofOutputList.html" title="TProofOutputList" alt="" coords="401,809,455,819"/>
+<area shape="rect" id="node193" href="./TQClass.html" title="TQClass" alt="" coords="403,370,453,380"/>
+<area shape="rect" id="node194" href="./TQCommand.html" title="TQCommand" alt="" coords="403,819,453,829"/>
+<area shape="rect" id="node195" href="./TQConnection.html" title="TQConnection" alt="" coords="403,829,453,839"/>
+<area shape="rect" id="node196" href="./TSortedList.html" title="TSortedList" alt="" coords="403,839,453,849"/>
+<area shape="rect" id="node197" href="./TTRAP.html" title="TTRAP" alt="" coords="403,289,453,299"/>
+<area shape="rect" id="node198" href="./TTRD1.html" title="TTRD1" alt="" coords="403,299,453,309"/>
+<area shape="rect" id="node199" href="./TTRD2.html" title="TTRD2" alt="" coords="403,309,453,319"/>
+<area shape="rect" id="node200" href="./GFile.html" title="GFile" alt="" coords="508,109,559,119"/>
+<area shape="rect" id="node201" href="./TGMainFrame.html" title="TGMainFrame" alt="" coords="508,277,559,287"/>
+<area shape="rect" id="node202" href="./TCONS.html" title="TCONS" alt="" coords="508,257,559,267"/>
+<area shape="rect" id="node203" href="./TCTUB.html" title="TCTUB" alt="" coords="508,267,559,277"/>
+<area shape="rect" id="node204" href="./TG16ColorSelector.html" title="TG16ColorSelector" alt="" coords="504,327,563,337"/>
+<area shape="rect" id="node205" href="./TGGroupFrame.html" title="TGGroupFrame" alt="" coords="508,337,559,347"/>
+<area shape="rect" id="node206" href="./TGTextButton.html" title="TGTextButton" alt="" coords="508,528,559,538"/>
+<area shape="rect" id="node207" href="./TGColorPopup.html" title="TGColorPopup" alt="" coords="508,347,559,357"/>
+<area shape="rect" id="node208" href="./TGComboBox.html" title="TGComboBox" alt="" coords="508,357,559,367"/>
+<area shape="rect" id="node209" href="./TGComboBoxPopup.html" title="TGComboBoxPopup" alt="" coords="501,367,565,377"/>
+<area shape="rect" id="node210" href="./TGContainer.html" title="TGContainer" alt="" coords="508,377,559,387"/>
+<area shape="rect" id="node211" href="./TGDockButton.html" title="TGDockButton" alt="" coords="508,538,559,548"/>
+<area shape="rect" id="node212" href="./TGDockableFrame.html" title="TGDockableFrame" alt="" coords="504,387,562,397"/>
+<area shape="rect" id="node213" href="./TGDoubleHSlider.html" title="TGDoubleHSlider" alt="" coords="505,588,561,598"/>
+<area shape="rect" id="node214" href="./TGDoubleVSlider.html" title="TGDoubleVSlider" alt="" coords="505,598,561,608"/>
+<area shape="rect" id="node215" href="./TGFileItem.html" title="TGFileItem" alt="" coords="508,608,559,618"/>
+<area shape="rect" id="node216" href="./TGHProgressBar.html" title="TGHProgressBar" alt="" coords="507,618,559,628"/>
+<area shape="rect" id="node217" href="./TGHScrollBar.html" title="TGHScrollBar" alt="" coords="508,638,559,648"/>
+<area shape="rect" id="node218" href="./TGHSlider.html" title="TGHSlider" alt="" coords="508,658,559,668"/>
+<area shape="rect" id="node219" href="./TGHSplitter.html" title="TGHSplitter" alt="" coords="508,678,559,688"/>
+<area shape="rect" id="node220" href="./TGHorizontalFrame.html" title="TGHorizontalFrame" alt="" coords="503,397,564,407"/>
+<area shape="rect" id="node221" href="./TGView.html" title="TGView" alt="" coords="508,407,559,417"/>
+<area shape="rect" id="node222" href="./TGTextLBEntry.html" title="TGTextLBEntry" alt="" coords="508,708,559,718"/>
+<area shape="rect" id="node223" href="./TGPictureButton.html" title="TGPictureButton" alt="" coords="507,548,559,558"/>
+<area shape="rect" id="node224" href="./TGListBox.html" title="TGListBox" alt="" coords="508,417,559,427"/>
+<area shape="rect" id="node225" href="./TGListView.html" title="TGListView" alt="" coords="508,558,559,568"/>
+<area shape="rect" id="node226" href="./TGMdiButtons.html" title="TGMdiButtons" alt="" coords="508,427,559,437"/>
+<area shape="rect" id="node227" href="./TGMdiCornerWinResizer.html" title="TGMdiCornerWinResizer" alt="" coords="494,728,572,738"/>
+<area shape="rect" id="node228" href="./TGMdiDecorFrame.html" title="TGMdiDecorFrame" alt="" coords="503,437,563,447"/>
+<area shape="rect" id="node229" href="./TGMdiFrame.html" title="TGMdiFrame" alt="" coords="508,447,559,457"/>
+<area shape="rect" id="node230" href="./TGMdiHorizontalWinResizer.html" title="TGMdiHorizontalWinResizer" alt="" coords="489,738,577,749"/>
+<area shape="rect" id="node231" href="./TGMdiMainFrame.html" title="TGMdiMainFrame" alt="" coords="505,568,562,578"/>
+<area shape="rect" id="node232" href="./TGMdiMenuBar.html" title="TGMdiMenuBar" alt="" coords="508,457,559,467"/>
+<area shape="rect" id="node233" href="./TGMdiTitleBar.html" title="TGMdiTitleBar" alt="" coords="508,467,559,477"/>
+<area shape="rect" id="node234" href="./TGMdiTitleIcon.html" title="TGMdiTitleIcon" alt="" coords="508,698,559,708"/>
+<area shape="rect" id="node235" href="./TGMdiVerticalWinResizer.html" title="TGMdiVerticalWinResizer" alt="" coords="493,749,574,759"/>
+<area shape="rect" id="node236" href="./TGNumberEntry.html" title="TGNumberEntry" alt="" coords="507,477,559,487"/>
+<area shape="rect" id="node237" href="./TGPack.html" title="TGPack" alt="" coords="508,487,559,498"/>
+<area shape="rect" id="node238" href="./TGShapedFrame.html" title="TGShapedFrame" alt="" coords="507,498,559,508"/>
+<area shape="rect" id="node239" href="./TGShutter.html" title="TGShutter" alt="" coords="508,508,559,518"/>
+<area shape="rect" id="node241" href="./TGTreeLBEntry.html" title="TGTreeLBEntry" alt="" coords="508,718,559,728"/>
+<area shape="rect" id="node242" href="./TGVSplitter.html" title="TGVSplitter" alt="" coords="508,688,559,698"/>
+<area shape="rect" id="node243" href="./TGVProgressBar.html" title="TGVProgressBar" alt="" coords="507,628,559,638"/>
+<area shape="rect" id="node244" href="./TGVScrollBar.html" title="TGVScrollBar" alt="" coords="508,648,559,658"/>
+<area shape="rect" id="node245" href="./TGVSlider.html" title="TGVSlider" alt="" coords="508,668,559,678"/>
+<area shape="rect" id="node246" href="./TMemFile.html" title="TMemFile" alt="" coords="508,119,559,129"/>
+<area shape="rect" id="node247" href="./TNetFile.html" title="TNetFile" alt="" coords="508,129,559,139"/>
+<area shape="rect" id="node248" href="./TProfile2D.html" title="TProfile2D" alt="" coords="508,169,559,179"/>
+<area shape="rect" id="node249" href="./TProfile3D.html" title="TProfile3D" alt="" coords="508,229,559,239"/>
+<area shape="rect" id="node250" href="./TQUndoManager.html" title="TQUndoManager" alt="" coords="506,819,560,829"/>
+<area shape="rect" id="node251" href="./TRootEmbeddedCanvas.html" title="TRootEmbeddedCanvas" alt="" coords="497,578,569,588"/>
+<area shape="rect" id="node252" href="./TWebFile.html" title="TWebFile" alt="" coords="508,139,559,149"/>
+<area shape="rect" id="node253" href="./TSelectorList.html" title="TSelectorList" alt="" coords="508,799,559,809"/>
+<area shape="rect" id="node254" href="./TXMLFile.html" title="TXMLFile" alt="" coords="508,149,559,159"/>
+<area shape="rect" id="node255" href="./GRootBrowser.html" title="GRootBrowser" alt="" coords="615,211,666,222"/>
+<area shape="rect" id="node256" href="./GRootCanvas.html" title="GRootCanvas" alt="" coords="615,222,666,232"/>
+<area shape="rect" id="node257" href="./TGButtonGroup.html" title="TGButtonGroup" alt="" coords="615,322,666,332"/>
+<area shape="rect" id="node258" href="./TGCheckButton.html" title="TGCheckButton" alt="" coords="615,508,666,518"/>
+<area shape="rect" id="node259" href="./TGTransientFrame.html" title="TGTransientFrame" alt="" coords="612,232,670,242"/>
+<area shape="rect" id="node260" href="./TGCommandPlugin.html" title="TGCommandPlugin" alt="" coords="611,242,671,252"/>
+<area shape="rect" id="node261" href="./TGDockHideButton.html" title="TGDockHideButton" alt="" coords="610,538,671,548"/>
+<area shape="rect" id="node262" href="./TGFSComboBox.html" title="TGFSComboBox" alt="" coords="614,332,667,342"/>
+<area shape="rect" id="node263" href="./TGFileBrowser.html" title="TGFileBrowser" alt="" coords="615,252,666,262"/>
+<area shape="rect" id="node264" href="./TGLVContainer.html" title="TGLVContainer" alt="" coords="615,372,666,382"/>
+<area shape="rect" id="node265" href="./TGFontTypeComboBox.html" title="TGFontTypeComboBox" alt="" coords="604,342,677,352"/>
+<area shape="rect" id="node266" href="./TGHeaderFrame.html" title="TGHeaderFrame" alt="" coords="615,402,666,412"/>
+<area shape="rect" id="node267" href="./TGHtml.html" title="TGHtml" alt="" coords="615,432,666,442"/>
+<area shape="rect" id="node268" href="./TGHtmlBrowser.html" title="TGHtmlBrowser" alt="" coords="615,262,666,272"/>
+<area shape="rect" id="node269" href="./TGIconLBEntry.html" title="TGIconLBEntry" alt="" coords="615,703,666,713"/>
+<area shape="rect" id="node270" href="./TGImageMap.html" title="TGImageMap" alt="" coords="615,548,666,558"/>
+<area shape="rect" id="node271" href="./TGLBContainer.html" title="TGLBContainer" alt="" coords="615,382,666,392"/>
+<area shape="rect" id="node272" href="./TGLineLBEntry.html" title="TGLineLBEntry" alt="" coords="615,713,666,723"/>
+<area shape="rect" id="node273" href="./TGLineStyleComboBox.html" title="TGLineStyleComboBox" alt="" coords="604,352,677,362"/>
+<area shape="rect" id="node274" href="./TGLineWidthComboBox.html" title="TGLineWidthComboBox" alt="" coords="603,362,679,372"/>
+<area shape="rect" id="node275" href="./TGListTree.html" title="TGListTree" alt="" coords="615,392,666,402"/>
+<area shape="rect" id="node276" href="./TGMenuBar.html" title="TGMenuBar" alt="" coords="615,412,666,422"/>
+<area shape="rect" id="node277" href="./TGRadioButton.html" title="TGRadioButton" alt="" coords="615,518,666,528"/>
+<area shape="rect" id="node278" href="./TGSplitButton.html" title="TGSplitButton" alt="" coords="615,528,666,538"/>
+<area shape="rect" id="node279" href="./TGStatusBar.html" title="TGStatusBar" alt="" coords="615,422,666,432"/>
+<area shape="rect" id="node280" href="./TGTextView.html" title="TGTextView" alt="" coords="615,442,666,452"/>
+<area shape="rect" id="node281" href="./TGTextEditor.html" title="TGTextEditor" alt="" coords="615,272,666,282"/>
+<area shape="rect" id="node282" href="./TGTripleHSlider.html" title="TGTripleHSlider" alt="" coords="615,588,667,598"/>
+<area shape="rect" id="node283" href="./TGTripleVSlider.html" title="TGTripleVSlider" alt="" coords="615,598,667,608"/>
+<area shape="rect" id="node284" href="./TGVFileSplitter.html" title="TGVFileSplitter" alt="" coords="615,688,666,698"/>
+<area shape="rect" id="node285" href="./TParallelMergingFile.html" title="TParallelMergingFile" alt="" coords="609,119,673,129"/>
+<area shape="rect" id="node286" href="./TRootBrowser.html" title="TRootBrowser" alt="" coords="615,282,666,292"/>
+<area shape="rect" id="node287" href="./TRootBrowserLite.html" title="TRootBrowserLite" alt="" coords="612,292,669,302"/>
+<area shape="rect" id="node288" href="./TRootCanvas.html" title="TRootCanvas" alt="" coords="615,302,666,312"/>
+<area shape="rect" id="node289" href="./TRootControlBar.html" title="TRootControlBar" alt="" coords="614,312,667,322"/>
+<area shape="rect" id="node290" href="./TS3WebFile.html" title="TS3WebFile" alt="" coords="615,139,666,149"/>
+<area shape="rect" id="node291" href="./TGColorDialog.html" title="TGColorDialog" alt="" coords="709,181,760,191"/>
+<area shape="rect" id="node292" href="./TGColorSelect.html" title="TGColorSelect" alt="" coords="709,508,760,518"/>
+<area shape="rect" id="node293" href="./TGFileContainer.html" title="TGFileContainer" alt="" coords="708,372,760,382"/>
+<area shape="rect" id="node294" href="./TGFileDialog.html" title="TGFileDialog" alt="" coords="709,191,760,201"/>
+<area shape="rect" id="node295" href="./TGFontDialog.html" title="TGFontDialog" alt="" coords="709,201,760,211"/>
+<area shape="rect" id="node296" href="./TGGotoDialog.html" title="TGGotoDialog" alt="" coords="709,211,760,222"/>
+<area shape="rect" id="node297" href="./TGHButtonGroup.html" title="TGHButtonGroup" alt="" coords="707,317,762,327"/>
+<area shape="rect" id="node298" href="./TGInputDialog.html" title="TGInputDialog" alt="" coords="709,222,760,232"/>
+<area shape="rect" id="node299" href="./TGMsgBox.html" title="TGMsgBox" alt="" coords="709,232,760,242"/>
+<area shape="rect" id="node300" href="./TGPrintDialog.html" title="TGPrintDialog" alt="" coords="709,242,760,252"/>
+<area shape="rect" id="node301" href="./TGSearchDialog.html" title="TGSearchDialog" alt="" coords="709,252,760,262"/>
+<area shape="rect" id="node302" href="./TGTextEdit.html" title="TGTextEdit" alt="" coords="709,442,760,452"/>
+<area shape="rect" id="node303" href="./TGUndockedFrame.html" title="TGUndockedFrame" alt="" coords="704,262,764,272"/>
+<area shape="rect" id="node304" href="./TGVButtonGroup.html" title="TGVButtonGroup" alt="" coords="707,327,762,337"/>
+<area shape="rect" id="node305" href="./TRootDialog.html" title="TRootDialog" alt="" coords="709,272,760,282"/>
+<area shape="rect" id="node306" href="./TRootHelpDialog.html" title="TRootHelpDialog" alt="" coords="707,282,761,292"/>
+</map>
+<map name="MapTObject_Lib" id="MapTObject_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
+</map>
+<div class="tabs">
+<a id="imgTObject_Inh" class="tabsel" href="inh/TObject_Inh.png" onclick="javascript:return SetImg('Charts','inh/TObject_Inh.png');">Inheritance</a>
+<a id="imgTObject_InhMem" class="tab" href="inhmem/TObject_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TObject_InhMem.png');">Inherited Members</a>
+<a id="imgTObject_Incl" class="tab" href="incl/TObject_Incl.png" onclick="javascript:return SetImg('Charts','incl/TObject_Incl.png');">Includes</a>
+<a id="imgTObject_Lib" class="tab" href="lib/TObject_Lib.png" onclick="javascript:return SetImg('Charts','lib/TObject_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTObject_Inh" src="inh/TObject_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TObject:TObject" href="src/TObject.cxx.html#LEDPjD">TObject</a>()</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html">TObject</a> constructor. It sets the two data words of <a href="./TObject.html">TObject</a> to their
+ initial values. The unique ID is set to 0 and the status word is
+ set depending if the object is created on the stack or allocated
+ on the heap. Depending on the <a href="./ROOT.html">ROOT</a> environment variable <span class="string">"Root.MemStat"</span>
+ (see <a href="./TEnv.html">TEnv</a>) the object is added to the global <a href="./TObjectTable.html">TObjectTable</a> for
+ bookkeeping.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TObject:TObject@1" href="src/TObject.cxx.html#PsnxaD">TObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>&amp; object)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html">TObject</a> copy ctor.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TObject.html">TObject</a>&amp; <a class="funcname" name="TObject:operator_" href="src/TObject.cxx.html#F7Q0BC">operator=</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>&amp; rhs)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html">TObject</a> assignment operator.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Copy" href="src/TObject.cxx.html#evmZtD">Copy</a>(<a href="./TObject.html">TObject</a>&amp; object) const</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Copy" title="void TObject::Copy(TObject&amp; object)">Copy</a> this to obj.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TObject:_TObject" href="src/TObject.cxx.html#W8SfTE">~TObject</a>()</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html">TObject</a> destructor. Removes object from all canvases and object browsers
+ if observer bit is on and remove from the global object table.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:AppendPad" href="src/TObject.cxx.html#AO.rLE">AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Append graphics object to current pad. In case no current pad is set
+ yet, create a default canvas with the name <span class="string">"c1"</span>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Browse" href="src/TObject.cxx.html#LNJ4WB">Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Browse" title="void TObject::Browse(TBrowser* b)">Browse</a> object. May be overridden for another default action
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TObject:ClassName" href="src/TObject.cxx.html#N5c6aB">ClassName</a>() const</span><br />
+<div class="funccomm"><pre> Returns name of class to which the object belongs.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TObject.html">TObject</a> * <a class="funcname" name="TObject:Clone" href="src/TObject.cxx.html#WXE.H">Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) const</span><br />
+<div class="funccomm"><pre> Make a clone of an object using the <a href="./TObject.html#TObject:Streamer" title="void TObject::Streamer(TBuffer&amp; )">Streamer</a> facility.
+ If the object derives from <a href="./TNamed.html">TNamed</a>, this function is called
+ by <a href="./TNamed.html">TNamed</a>::<a href="./TNamed.html#TNamed:Clone" title="TObject* TNamed::Clone(const char* newname=&quot;&quot;)">Clone</a>. TNamed::<a href="./TObject.html#TObject:Clone" title="TObject* TObject::Clone(const char* newname=&quot;&quot;)">Clone</a> uses the optional argument to set
+ a new name to the newly created object.
+
+ If the object class has a DirectoryAutoAdd function, it will be
+ called at the end of the function with the parameter gDirectory.
+ This usually means that the object will be appended to the current
+ <a href="./ROOT.html">ROOT</a> directory.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TObject:Compare" href="src/TObject.cxx.html#LdkO5C">Compare</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) const</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Compare" title="Int_t TObject::Compare(const TObject* obj)">Compare</a> abstract method. Must be overridden if a class wants to be able
+ to compare itself with other objects. Must return -1 if this is smaller
+ than obj, 0 if objects are equal and 1 if this is larger than obj.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Delete" href="src/TObject.cxx.html#uO7lYC">Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Delete" title="void TObject::Delete(Option_t* option=&quot;&quot;)">Delete</a> this object. Typically called as a command via the interpreter.
+ Normally use <span class="string">"delete"</span> operator when object has been allocated on the heap.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TObject:DistancetoPrimitive" href="src/TObject.cxx.html#qz2ITB">DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</span><br />
+<div class="funccomm"><pre> Computes distance from point (px,py) to the object.
+ This member function must be implemented for each graphics primitive.
+ This default function returns a big number (999999).
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Draw" href="src/TObject.cxx.html#EOrTy">Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Default <a href="./TObject.html#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a> method for all objects
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:DrawClass" href="src/TObject.cxx.html#PTkdIE">DrawClass</a>() const</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a> class inheritance tree of the class to which this object belongs.
+ If a class B inherits from a class A, description of B is drawn
+ on the right side of description of A.
+ Member functions overridden by B are shown in class A with a blue line
+ crossing-out the corresponding member function.
+ The following picture is the class inheritance tree of class <a href="./TPaveLabel.html">TPaveLabel</a>:
+
+</pre><!-- TDocHtmlDirective start -->   /*
+   <img src="gif/drawclass.gif">
+   */
+<!-- TDocHtmlDirective end --><pre>
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TObject.html">TObject</a> * <a class="funcname" name="TObject:DrawClone" href="src/TObject.cxx.html#UjSx7C">DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) const</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a> a clone of this object in the current pad
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Dump" href="src/TObject.cxx.html#UO494E">Dump</a>() const</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Dump" title="void TObject::Dump()">Dump</a> contents of object on stdout.
+ Using the information in the object dictionary (class <a href="./TClass.html">TClass</a>)
+ each data member is interpreted.
+ If a data member is a pointer, the pointer value is printed
+
+ The following output is the <a href="./TObject.html#TObject:Dump" title="void TObject::Dump()">Dump</a> of a <a href="./TArrow.html">TArrow</a> object:
+   fAngle                   0           Arrow opening angle (degrees)
+   fArrowSize               0.2         Arrow Size
+   fOption.*fData
+   fX1                      0.1         X of 1st point
+   fY1                      0.15        Y of 1st point
+   fX2                      0.67        X of 2nd point
+   fY2                      0.83        Y of 2nd point
+   <a href="./TObject.html#TObject:fUniqueID" title="UInt_t TObject::fUniqueID">fUniqueID</a>                0           object unique identifier
+   <a href="./TObject.html#TObject:fBits" title="UInt_t TObject::fBits">fBits</a>                    50331648    bit field status word
+   fLineColor               1           line color
+   fLineStyle               1           line style
+   fLineWidth               1           line width
+   fFillColor               19          fill area color
+   fFillStyle               1001        fill area style
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Execute" href="src/TObject.cxx.html#l5Msn">Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Execute" title="void TObject::Execute(const char* method,const char* params,Int_t* error=0) or overloads">Execute</a> method on this object with the given parameter string, e.g.
+ <span class="string">"3.14,1,\"text\""</span>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Execute@1" href="src/TObject.cxx.html#vMpfPB">Execute</a>(<a href="./TMethod.html">TMethod</a>* method, <a href="./TObjArray.html">TObjArray</a>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Execute" title="void TObject::Execute(const char* method,const char* params,Int_t* error=0) or overloads">Execute</a> method on this object with parameters stored in the <a href="./TObjArray.html">TObjArray</a>.
+ The <a href="./TObjArray.html">TObjArray</a> should contain an argv vector like:
+
+  argv[0] ... argv[n] = the list of <a href="./TObjString.html">TObjString</a> parameters
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:ExecuteEvent" href="src/TObject.cxx.html#DIg5CD">ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Execute" title="void TObject::Execute(const char* method,const char* params,Int_t* error=0) or overloads">Execute</a> action corresponding to an event at (px,py). This method
+ must be overridden if an object can react to graphics events.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TObject.html">TObject</a> * <a class="funcname" name="TObject:FindObject" href="src/TObject.cxx.html#inMRVC">FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
+<div class="funccomm"><pre> Must be redefined in derived classes.
+ This function is typycally used with TCollections, but can also be used
+ to find an object by name inside this object.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TObject.html">TObject</a> * <a class="funcname" name="TObject:FindObject@1" href="src/TObject.cxx.html#CJ8rbB">FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) const</span><br />
+<div class="funccomm"><pre> Must be redefined in derived classes.
+ This function is typycally used with TCollections, but can also be used
+ to find an object inside this object.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Option_t">Option_t</a> * <a class="funcname" name="TObject:GetDrawOption" href="src/TObject.cxx.html#W2wGrC">GetDrawOption</a>() const</span><br />
+<div class="funccomm"><pre> Get option used by the graphics system to draw this object.
+ Note that before calling object.<a href="./TObject.html#TObject:GetDrawOption" title="Option_t* TObject::GetDrawOption()">GetDrawOption</a>(), you must
+ have called object.<a href="./TObject.html#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>(..) before in the current pad.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TObject:GetName" href="src/TObject.cxx.html#EkQ85E">GetName</a>() const</span><br />
+<div class="funccomm"><pre> Returns name of object. This default method returns the class name.
+ Classes that give objects a name should override this method.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TObject:GetIconName" href="src/TObject.cxx.html#m95KZB">GetIconName</a>() const</span><br />
+<div class="funccomm"><pre> Returns mime type name of object. Used by the <a href="./TBrowser.html">TBrowser</a> (via <a href="./TGMimeTypes.html">TGMimeTypes</a>
+ class). Override for class of which you would like to have different
+ icons for objects of the same class.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#UInt_t">UInt_t</a> <a class="funcname" name="TObject:GetUniqueID" href="src/TObject.cxx.html#zwX.8D">GetUniqueID</a>() const</span><br />
+<div class="funccomm"><pre> Return the unique object id.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">char</span> * <a class="funcname" name="TObject:GetObjectInfo" href="src/TObject.cxx.html#UqgbFB">GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) const</span><br />
+<div class="funccomm"><pre> Returns string containing info about the object at position (px,py).
+ This method is typically overridden by classes of which the objects
+ can report peculiarities for different positions.
+ Returned string will be re-used (lock in MT environment).
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TObject:GetTitle" href="src/TObject.cxx.html#zm.LHD">GetTitle</a>() const</span><br />
+<div class="funccomm"><pre> Returns title of object. This default method returns the class title
+ (i.e. description). Classes that give objects a title should override
+ this method.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:HandleTimer" href="src/TObject.cxx.html#S3aULB">HandleTimer</a>(<a href="./TTimer.html">TTimer</a>* timer)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Execute" title="void TObject::Execute(const char* method,const char* params,Int_t* error=0) or overloads">Execute</a> action in response of a timer timing out. This method
+ must be overridden if an object has to react to timers.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#ULong_t">ULong_t</a> <a class="funcname" name="TObject:Hash" href="src/TObject.cxx.html#ouJUZB">Hash</a>() const</span><br />
+<div class="funccomm"><pre> Return hash value for this object.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:InheritsFrom" href="src/TObject.cxx.html#TTZm6C">InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) const</span><br />
+<div class="funccomm"><pre> Returns <a href="./ListOfTypes.html#Bool_t">kTRUE</a> if object inherits from class <span class="string">"classname"</span>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:InheritsFrom@1" href="src/TObject.cxx.html#F3uorD">InheritsFrom</a>(<span class="keyword">const</span> <a href="./TClass.html">TClass</a>* cl) const</span><br />
+<div class="funccomm"><pre> Returns <a href="./ListOfTypes.html#Bool_t">kTRUE</a> if object inherits from <a href="./TClass.html">TClass</a> cl.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Inspect" href="src/TObject.cxx.html#iS9AMB">Inspect</a>() const</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Dump" title="void TObject::Dump()">Dump</a> contents of this object in a graphics canvas.
+ Same action as <a href="./TObject.html#TObject:Dump" title="void TObject::Dump()">Dump</a> but in a graphical form.
+ In addition pointers to other objects can be followed.
+
+ The following picture is the <a href="./TObject.html#TObject:Inspect" title="void TObject::Inspect()">Inspect</a> of a histogram object:
+
+</pre><!-- TDocHtmlDirective start -->   /*
+   <img src="gif/hpxinspect.gif">
+   */
+<!-- TDocHtmlDirective end --><pre>
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:IsFolder" href="src/TObject.cxx.html#uQibDE">IsFolder</a>() const</span><br />
+<div class="funccomm"><pre> Returns <a href="./ListOfTypes.html#Bool_t">kTRUE</a> in case object contains browsable objects (like containers
+ or lists of other objects).
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:IsEqual" href="src/TObject.cxx.html#fL2JhC">IsEqual</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) const</span><br />
+<div class="funccomm"><pre> Default equal comparison (objects are equal if they have the same
+ address in memory). More complicated classes might want to override
+ this function.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:ls" href="src/TObject.cxx.html#lDS_zB">ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) const</span><br />
+<div class="funccomm"><pre> The <a href="./TObject.html#TObject:ls" title="void TObject::ls(Option_t* option=&quot;&quot;)">ls</a> function lists the contents of a class on stdout. Ls output
+ is typically much less verbose then <a href="./TObject.html#TObject:Dump" title="void TObject::Dump()">Dump</a>().
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:Notify" href="src/TObject.cxx.html#pA6hl">Notify</a>()</span><br />
+<div class="funccomm"><pre> This method must be overridden to handle object notifcation.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Paint" href="src/TObject.cxx.html#Se_cp">Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> This method must be overridden if a class wants to paint itself.
+ The difference between <a href="./TObject.html#TObject:Paint" title="void TObject::Paint(Option_t* option=&quot;&quot;)">Paint</a>() and <a href="./TObject.html#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>() is that when a object
+ draws itself it is added to the display list of the pad in
+ which it is drawn (and automatically redrawn whenever the pad is
+ redrawn). While paint just draws the object without adding it to
+ the pad display list.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Pop" href="src/TObject.cxx.html#ciSLj">Pop</a>()</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Pop" title="void TObject::Pop()">Pop</a> on object drawn in a pad to the top of the display list. I.e. it
+ will be drawn last and on top of all other primitives.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Print" href="src/TObject.cxx.html#oxu8tE">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) const</span><br />
+<div class="funccomm"><pre> This method must be overridden when a class wants to print itself.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TObject:Read" href="src/TObject.cxx.html#DRW7qB">Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Read" title="Int_t TObject::Read(const char* name)">Read</a> contents of object with specified name from the current directory.
+ First the key with the given name is searched in the current directory,
+ next the key buffer is deserialized into the object.
+ The object must have been created before via the default constructor.
+ See <a href="./TObject.html">TObject</a>::<a href="./TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>().
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:RecursiveRemove" href="src/TObject.cxx.html#xvA3wB">RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</span><br />
+<div class="funccomm"><pre> Recursively remove this object from a list. Typically implemented
+ by classes that can contain mulitple references to a same object.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SaveAs" href="src/TObject.cxx.html#o10VVD">SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) const</span><br />
+<div class="funccomm"><pre> Save this object in the file specified by filename.
+ if (filename contains <span class="string">".root"</span> the object is saved in filename (root binary file)
+ if (filename contains <span class="string">".xml"</span>  the object is saved in filename (xml ascii file)
+  otherwise the object is written to filename as a CINT/C++ script.
+  The C++ code to rebuild this object is generated via <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>().
+  The option parameter is passed to <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>. By default it is
+  en empty string. It can be used to specify the <a href="./TObject.html#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a> option
+  in the code generated by <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>.
+ The function is available via the object context menu.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SavePrimitive" href="src/TObject.cxx.html#L8H9yD">SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Save a primitive as a C++ statement(s) on output stream <span class="string">"out"</span>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SetDrawOption" href="src/TObject.cxx.html#E6MYvD">SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Set drawing option for object. This option only affects
+ the drawing style and is stored in the option field of the
+ TObjOptLink supporting a <a href="./TPad.html">TPad</a>'s primitive list (<a href="./TList.html">TList</a>).
+ Note that it does not make sense to call object.<a href="./TObject.html#TObject:SetDrawOption" title="void TObject::SetDrawOption(Option_t* option=&quot;&quot;)">SetDrawOption</a>(option)
+ before having called object.<a href="./TObject.html#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>().
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SetBit" href="src/TObject.cxx.html#ZOPdjD">SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</span><br />
+<div class="funccomm"><pre> Set or unset the user status bits as specified in f.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SetUniqueID" href="src/TObject.cxx.html#lHd0hC">SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</span><br />
+<div class="funccomm"><pre> Set the unique object id.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:UseCurrentStyle" href="src/TObject.cxx.html#Rb3vOE">UseCurrentStyle</a>()</span><br />
+<div class="funccomm"><pre> Set current style settings in this object
+ This function is called when either <a href="./TCanvas.html">TCanvas</a>::<a href="./TCanvas.html#TCanvas:UseCurrentStyle" title="void TCanvas::UseCurrentStyle()">UseCurrentStyle</a>
+ or <a href="./TROOT.html">TROOT</a>::<a href="./TROOT.html#TROOT:ForceStyle" title="void TROOT::ForceStyle(Bool_t force=kTRUE)">ForceStyle</a> have been invoked.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TObject:Write@1" href="src/TObject.cxx.html#t5J4_B">Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) const</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a> this object to the current directory.
+ The data structure corresponding to this object is serialized.
+ The corresponding buffer is written to the current directory
+ with an associated key with name <span class="string">"name"</span>.
+
+ Writing an object to a file involves the following steps:
+
+  -Creation of a support <a href="./TKey.html">TKey</a> object in the current directory.
+   The <a href="./TKey.html">TKey</a> object creates a <a href="./TBuffer.html">TBuffer</a> object.
+
+  -The <a href="./TBuffer.html">TBuffer</a> object is filled via the class::<a href="./TObject.html#TObject:Streamer" title="void TObject::Streamer(TBuffer&amp; )">Streamer</a> function.
+
+  -If the file is compressed (default) a second buffer is created to
+   hold the compressed buffer.
+
+  -Reservation of the corresponding space in the file by looking
+   in the <a href="./TFree.html">TFree</a> list of free blocks of the file.
+
+  -The buffer is written to the file.
+
+  Bufsize can be given to force a given buffer size to write this object.
+  By default, the buffersize will be taken from the average buffer size
+  of all objects written to the current file so far.
+
+  If a name is specified, it will be the name of the key.
+  If name is not given, the name of the key will be the name as returned
+  by <a href="./TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>().
+
+  The option can be a combination of:
+    <a href="./TObject.html#TObject:kSingleKey" title="const enum TObject:: TObject::kSingleKey">kSingleKey</a>, <a href="./TObject.html#TObject:kOverwrite" title="const enum TObject:: TObject::kOverwrite">kOverwrite</a> or <a href="./TObject.html#TObject:kWriteDelete" title="const enum TObject:: TObject::kWriteDelete">kWriteDelete</a>
+  Using the <a href="./TObject.html#TObject:kOverwrite" title="const enum TObject:: TObject::kOverwrite">kOverwrite</a> option a previous key with the same name is
+  overwritten. The previous key is deleted before writing the new object.
+  Using the <a href="./TObject.html#TObject:kWriteDelete" title="const enum TObject:: TObject::kWriteDelete">kWriteDelete</a> option a previous key with the same name is
+  deleted only after the new object has been written. This option
+  is safer than <a href="./TObject.html#TObject:kOverwrite" title="const enum TObject:: TObject::kOverwrite">kOverwrite</a> but it is slower.
+  The <a href="./TObject.html#TObject:kSingleKey" title="const enum TObject:: TObject::kSingleKey">kSingleKey</a> option is only used by <a href="./TCollection.html">TCollection</a>::<a href="./TCollection.html#TCollection:Write" title="Int_t TCollection::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>() to write
+  a container with a single key instead of each object in the container
+  with its own key.
+
+  An object is read from the file into memory via <a href="./TKey.html">TKey</a>::<a href="./TKey.html#TKey:Read" title="Int_t TKey::Read(const char* name) or overloads">Read</a>() or
+  via <a href="./TObject.html">TObject</a>::<a href="./TObject.html#TObject:Read" title="Int_t TObject::Read(const char* name)">Read</a>().
+
+  The function returns the total number of bytes written to the file.
+  It returns 0 if the object cannot be written.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TObject:Write" href="src/TObject.cxx.html#gCOUd">Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</span><br />
+<div class="funccomm"><pre> <a href="./TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a> this object to the current directory. For more see the
+ const version of this method.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Streamer" href="src/TObject.cxx.html#pqsmHC">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp; )</span><br />
+<div class="funccomm"><pre> Stream an object of class <a href="./TObject.html">TObject</a>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:DoError" href="src/TObject.cxx.html#uIU13">DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) const</span><br />
+<div class="funccomm"><pre> Interface to ErrorHandler (protected).
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Info" href="src/TObject.cxx.html#lnhTJB">Info</a>(<span class="keyword">const</span> <span class="keyword">char</span> *location, <span class="keyword">const</span> <span class="keyword">char</span> *va_(fmt), ...)</span><br />
+<div class="funccomm"><pre> Issue info message. Use <span class="string">"location"</span> to specify the method where the
+ warning occured. Accepts standard printf formatting arguments.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Warning" href="src/TObject.cxx.html#kIp.FE">Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span> *location, <span class="keyword">const</span> <span class="keyword">char</span> *va_(fmt), ...)</span><br />
+<div class="funccomm"><pre> Issue warning message. Use <span class="string">"location"</span> to specify the method where the
+ warning occured. Accepts standard printf formatting arguments.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Error" href="src/TObject.cxx.html#yeZXGE">Error</a>(<span class="keyword">const</span> <span class="keyword">char</span> *location, <span class="keyword">const</span> <span class="keyword">char</span> *va_(fmt), ...)</span><br />
+<div class="funccomm"><pre> Issue error message. Use <span class="string">"location"</span> to specify the method where the
+ error occured. Accepts standard printf formatting arguments.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SysError" href="src/TObject.cxx.html#wR9_YC">SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span> *location, <span class="keyword">const</span> <span class="keyword">char</span> *va_(fmt), ...)</span><br />
+<div class="funccomm"><pre> Issue system error message. Use <span class="string">"location"</span> to specify the method where
+ the system error occured. Accepts standard printf formatting arguments.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Fatal" href="src/TObject.cxx.html#KaZd5D">Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span> *location, <span class="keyword">const</span> <span class="keyword">char</span> *va_(fmt), ...)</span><br />
+<div class="funccomm"><pre> Issue fatal error message. Use <span class="string">"location"</span> to specify the method where the
+ fatal error occured. Accepts standard printf formatting arguments.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:AbstractMethod" href="src/TObject.cxx.html#uH7.bD">AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) const</span><br />
+<div class="funccomm"><pre> Use this method to implement an <span class="string">"abstract"</span> method that you don't
+ want to leave purely abstract.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:MayNotUse" href="src/TObject.cxx.html#FRVndC">MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) const</span><br />
+<div class="funccomm"><pre> Use this method to signal that a method (defined in a base class)
+ may not be called in a derived class (in principle against good
+ design since a child class should not provide less functionality
+ than its parent, however, sometimes it is necessary).
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Obsolete" href="src/TObject.cxx.html#x8tsaD">Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) const</span><br />
+<div class="funccomm"><pre> Use this method to declare a method obsolete. Specify as of which version
+ the method is obsolete and as from which version it will be removed.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:GetObjectStat" href="src/TObject.cxx.html#Nil6cE">GetObjectStat</a>()</span><br />
+<div class="funccomm"><pre> Get status of object stat flag.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SetObjectStat" href="src/TObject.cxx.html#jO39WB">SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</span><br />
+<div class="funccomm"><pre> Turn on/off tracking of objects in the <a href="./TObjectTable.html">TObjectTable</a>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Long_t">Long_t</a> <a class="funcname" name="TObject:GetDtorOnly" href="src/TObject.cxx.html#sE.nvD">GetDtorOnly</a>()</span><br />
+<div class="funccomm"><pre>return destructor only flag
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SetDtorOnly" href="src/TObject.cxx.html#RrHmYB">SetDtorOnly</a>(<span class="keyword">void</span>* obj)</span><br />
+<div class="funccomm"><pre>set destructor only flag
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:operator_delete" href="src/TObject.cxx.html#bsuMcD">operator delete</a>(<span class="keyword">void</span>* ptr)</span><br />
+<div class="funccomm"><pre>operator delete
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:operator_delete[]" href="src/TObject.cxx.html#gOZX4B">operator delete[]</a>(<span class="keyword">void</span>* ptr)</span><br />
+<div class="funccomm"><pre>operator delete []
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:operator_delete@1" href="src/TObject.cxx.html#u5HvIE">operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</span><br />
+<div class="funccomm"><pre> Only called by placement new when throwing an exception.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:operator_delete[]@1" href="src/TObject.cxx.html#RDz52C">operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</span><br />
+<div class="funccomm"><pre> Only called by placement new[] when throwing an exception.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:MakeZombie" href="src/TObject.h.html#fR0MR">MakeZombie</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TObject.html#TObject:fBits" title="UInt_t TObject::fBits">fBits</a> |= <a href="./TObject.html#TObject:kZombie" title="const enum TObject:: TObject::kZombie">kZombie</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:Clear" href="src/TObject.h.html#QvIEDC">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
+
+<div class="code"><code class="inlinecode">{ }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Option_t">Option_t</a>   * <a class="funcname" name="TObject:GetOption" href="src/TObject.h.html#N5dDYE">GetOption</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <span class="string">""</span>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:IsSortable" href="src/TObject.h.html#IcjlTC">IsSortable</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ListOfTypes.html#Bool_t">kFALSE</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:IsOnHeap" href="src/TObject.h.html#Wt1acB">IsOnHeap</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TObject.html#TObject:TestBit" title="Bool_t TObject::TestBit(UInt_t f)">TestBit</a>(<a href="./TObject.html#TObject:kIsOnHeap" title="const enum TObject:: TObject::kIsOnHeap">kIsOnHeap</a>); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:IsZombie" href="src/TObject.h.html#H_lbgB">IsZombie</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TObject.html#TObject:TestBit" title="Bool_t TObject::TestBit(UInt_t f)">TestBit</a>(<a href="./TObject.html#TObject:kZombie" title="const enum TObject:: TObject::kZombie">kZombie</a>); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span>    * <a class="funcname" name="TObject:operator_new" href="src/TObject.h.html#CiRAH">operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</span><br />
+<div class="funccomm"><pre>----- operators
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TStorage.html">TStorage</a>::<a href="./TStorage.html#TStorage:ObjectAlloc" title="void* TStorage::ObjectAlloc(size_t size) or overloads">ObjectAlloc</a>(sz); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span>    * <a class="funcname" name="TObject:operator_new[]" href="src/TObject.h.html#F6FkJC">operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TStorage.html">TStorage</a>::<a href="./TStorage.html#TStorage:ObjectAlloc" title="void* TStorage::ObjectAlloc(size_t size) or overloads">ObjectAlloc</a>(sz); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span>    * <a class="funcname" name="TObject:operator_new@1" href="src/TObject.h.html#tWNpOB">operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TStorage.html">TStorage</a>::<a href="./TStorage.html#TStorage:ObjectAlloc" title="void* TStorage::ObjectAlloc(size_t size) or overloads">ObjectAlloc</a>(sz, vp); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span>    * <a class="funcname" name="TObject:operator_new[]@1" href="src/TObject.h.html#vtqwH">operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TStorage.html">TStorage</a>::<a href="./TStorage.html#TStorage:ObjectAlloc" title="void* TStorage::ObjectAlloc(size_t size) or overloads">ObjectAlloc</a>(sz, vp); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SetBit" href="src/TObject.h.html#qFpQ0">SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</span><br />
+<div class="funccomm"><pre>----- bit manipulation
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:ResetBit" href="src/TObject.h.html#nEWF6D">ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TObject.html#TObject:fBits" title="UInt_t TObject::fBits">fBits</a> &amp;= ~(f &amp; <a href="./TObject.html#TObject:kBitMask" title="const enum TObject:: TObject::kBitMask">kBitMask</a>); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TObject:TestBit" href="src/TObject.h.html#U3Xo6D">TestBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Bool_t">Bool_t</a>) ((<a href="./TObject.html#TObject:fBits" title="UInt_t TObject::fBits">fBits</a> &amp; f) != 0); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TObject:TestBits" href="src/TObject.h.html#QWVE4B">TestBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>) (<a href="./TObject.html#TObject:fBits" title="UInt_t TObject::fBits">fBits</a> &amp; f); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:InvertBit" href="src/TObject.h.html#pBGOI">InvertBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TObject.html#TObject:fBits" title="UInt_t TObject::fBits">fBits</a> ^= f &amp; <a href="./TObject.html#TObject:kBitMask" title="const enum TObject:: TObject::kBitMask">kBitMask</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+<em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   26/12/94</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

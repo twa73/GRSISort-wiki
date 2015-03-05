@@ -1,0 +1,717 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Wed Mar  4 20:36:51 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TQObject</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TQObject','libCore','TQObject.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TQObject.h.html">header file</a>
+<a class="descrheadentry" href="src/TQObject.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TQObject:description">class description</a> 
+<a class="descrheadentry" href="#TQObject:Function_Members">function members</a>
+<a class="descrheadentry" href="#TQObject:Data_Members">data members</a>
+<a class="descrheadentry" href="#TQObject:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./CORE_Index.html">CORE</a>
+ &#187; <a class="locationlevel" href="./CORE_BASE_Index.html">BASE</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TQObject</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TQObject:description"></a>class TQObject</h1>
+<div class="classdescr">
+<pre>
+
+This is the <a href="./ROOT.html">ROOT</a> implementation of the Qt object communication
+mechanism (see also http://www.troll.no/qt/metaobjects.html)
+
+Signals and slots are used for communication between objects.
+When an object has changed in some way that might be interesting
+for the outside world, it emits a signal to tell whoever is
+listening. All slots that are connected to this signal will be
+activated (called). It is even possible to connect a signal
+directly to another signal (this will emit the second signal
+immediately whenever the first is emitted.) There is no limitation
+on the number of slots that can be connected to a signal.
+The slots will be activated in the order they were connected
+to the signal. This mechanism allows objects to be easily reused,
+because the object that emits a signal does not need to know
+to which objects the signals are connected.
+Together, signals and slots make up a powerfull component
+programming mechanism.
+
+This implementation is provided by
+Valeriy Onuchin (onuchin@sirius.ihep.su).
+
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TQObject:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TQObject:TQObject@1">TQObject</a>()</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TQObject:_TQObject">~TQObject</a>()</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:AreAllSignalsBlocked">AreAllSignalsBlocked</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:AreSignalsBlocked">AreSignalsBlocked</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:BlockAllSignals">BlockAllSignals</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> b)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:BlockSignals">BlockSignals</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> b)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:ChangedBy">ChangedBy</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method)<span class="funcprop"><abbr title="emits a signal">SIGNAL</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TQObject:Class">Class</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:CollectClassSignalLists">CollectClassSignalLists</a>(<a href="./TList.html">TList</a>&amp; list, <a href="./TClass.html">TClass</a>* cls)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:Connect">Connect</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">const</span> <span class="keyword">char</span>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:Connect@1">Connect</a>(<a href="./TQObject.html">TQObject</a>* sender, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">const</span> <span class="keyword">char</span>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:Connect@2">Connect</a>(<span class="keyword">const</span> <span class="keyword">char</span>* sender_class, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">const</span> <span class="keyword">char</span>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Connected">Connected</a>(<span class="keyword">const</span> <span class="keyword">char</span>*)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Destroyed">Destroyed</a>()<span class="funcprop"><abbr title="emits a signal">SIGNAL</abbr> </span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:Disconnect">Disconnect</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal = 0, <span class="keyword">void</span>* receiver = 0, <span class="keyword">const</span> <span class="keyword">char</span>* slot = 0)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:Disconnect@1">Disconnect</a>(<a href="./TQObject.html">TQObject</a>* sender, <span class="keyword">const</span> <span class="keyword">char</span>* signal = 0, <span class="keyword">void</span>* receiver = 0, <span class="keyword">const</span> <span class="keyword">char</span>* slot = 0)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:Disconnect@2">Disconnect</a>(<span class="keyword">const</span> <span class="keyword">char</span>* class_name, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">void</span>* receiver = 0, <span class="keyword">const</span> <span class="keyword">char</span>* slot = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Disconnected">Disconnected</a>(<span class="keyword">const</span> <span class="keyword">char</span>*)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@1">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Long_t">Long_t</a>* paramArr)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@2">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">const</span> <span class="keyword">char</span>* params)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@3">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Double_t">Double_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@4">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Long_t">Long_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@5">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@6">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@7">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Char_t">Char_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@8">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#UChar_t">UChar_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@9">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Short_t">Short_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@10">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#UShort_t">UShort_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@11">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Int_t">Int_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@12">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@13">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#ULong_t">ULong_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@14">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#ULong64_t">ULong64_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Emit@15">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Float_t">Float_t</a> param)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:EmitVA">EmitVA</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Int_t">Int_t</a> nargs)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:EmitVA@1">EmitVA</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Int_t">Int_t</a> nargs, va_list va)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TList.html">TList</a>*</td><td class="funcname"><a class="funcname" href="#TQObject:GetListOfClassSignals">GetListOfClassSignals</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TList.html">TList</a>*</td><td class="funcname"><a class="funcname" href="#TQObject:GetListOfConnections">GetListOfConnections</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TList.html">TList</a>*</td><td class="funcname"><a class="funcname" href="#TQObject:GetListOfSignals">GetListOfSignals</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:HasConnection">HasConnection</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal_name) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:HighPriority">HighPriority</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal_name, <span class="keyword">const</span> <span class="keyword">char</span>* slot_name = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TQObject:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:LoadRQ_OBJECT">LoadRQ_OBJECT</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:LowPriority">LowPriority</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal_name, <span class="keyword">const</span> <span class="keyword">char</span>* slot_name = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Message">Message</a>(<span class="keyword">const</span> <span class="keyword">char</span>* msg)<span class="funcprop"><abbr title="emits a signal">SIGNAL</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:NumberOfConnections">NumberOfConnections</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:NumberOfSignals">NumberOfSignals</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQObject:StreamerNVirtual">StreamerNVirtual</a>(<a href="./TBuffer.html">TBuffer</a>&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:CheckConnectArgs">CheckConnectArgs</a>(<a href="./TQObject.html">TQObject</a>* sender, <a href="./TClass.html">TClass</a>* sender_class, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./TClass.html">TClass</a>* receiver_class, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:ConnectToClass">ConnectToClass</a>(<a href="./TQObject.html">TQObject</a>* sender, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./TClass.html">TClass</a>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TQObject:ConnectToClass@1">ConnectToClass</a>(<span class="keyword">const</span> <span class="keyword">char</span>* sender_class, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./TClass.html">TClass</a>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TQObject:GetSender">GetSender</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TQObject:GetSenderClassName">GetSenderClassName</a>() <span class="keyword">const</span></td></tr>
+
+</table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TQObject:TQObject">TQObject</a>(<span class="keyword">const</span> <a href="./TQObject.html">TQObject</a>&amp; tqo)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TQObject.html">TQObject</a>&amp;</td><td class="funcname"><a class="funcname" href="#TQObject:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TQObject.html">TQObject</a>&amp; tqo)</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TQObject:Data_Members"></a>Data Members</h2>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="data"><td class="datatype"><a href="./TList.html">TList</a>*</td><td class="dataname"><a name="TQObject:fListOfConnections"></a>fListOfConnections</td><td class="datadesc">! list of connections to this object</td></tr>
+<tr class="data"><td class="datatype"><a href="./TList.html">TList</a>*</td><td class="dataname"><a name="TQObject:fListOfSignals"></a>fListOfSignals</td><td class="datadesc">! list of signals from this object</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a name="TQObject:fSignalsBlocked"></a>fSignalsBlocked</td><td class="datadesc">! flag used for suppression of signals</td></tr>
+<tr class="data"><td class="datatype">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a name="TQObject:fgAllSignalsBlocked"></a>fgAllSignalsBlocked</td><td class="datadesc">flag used for suppression of all signals</td></tr>
+
+</table></div>
+</div>
+<h2><a id="TQObject:Class_Charts"></a>Class Charts</h2>
+<map name="MapTQObject_Inh" id="MapTQObject_Inh">
+<area shape="rect" id="node3" href="./TVirtualPad.html" title="TVirtualPad" alt="" coords="108,173,175,186"/>
+<area shape="rect" id="node4" href="./TGClient.html" title="TGClient" alt="" coords="108,305,175,318"/>
+<area shape="rect" id="node5" href="./TSysEvtHandler.html" title="TSysEvtHandler" alt="" coords="108,318,175,331"/>
+<area shape="rect" id="node6" href="./TMessageHandler.html" title="TMessageHandler" alt="" coords="106,629,178,642"/>
+<area shape="rect" id="node7" href="./TGFrame.html" title="TGFrame" alt="" coords="108,642,175,655"/>
+<area shape="rect" id="node8" href="./TApplication.html" title="TApplication" alt="" coords="108,801,175,814"/>
+<area shape="rect" id="node9" href="./TXMLParser.html" title="TXMLParser" alt="" coords="108,814,175,827"/>
+<area shape="rect" id="node10" href="./TGEventHandler.html" title="TGEventHandler" alt="" coords="107,827,176,840"/>
+<area shape="rect" id="node11" href="./TGTableFrame.html" title="TGTableFrame" alt="" coords="108,840,175,853"/>
+<area shape="rect" id="node12" href="./TMonitor.html" title="TMonitor" alt="" coords="108,853,175,867"/>
+<area shape="rect" id="node13" href="./TProof.html" title="TProof" alt="" coords="108,867,175,880"/>
+<area shape="rect" id="node14" href="./TProofLog.html" title="TProofLog" alt="" coords="108,880,175,893"/>
+<area shape="rect" id="node15" href="./TQClass.html" title="TQClass" alt="" coords="108,893,175,906"/>
+<area shape="rect" id="node16" href="./TQCommand.html" title="TQCommand" alt="" coords="108,906,175,920"/>
+<area shape="rect" id="node17" href="./TQConnection.html" title="TQConnection" alt="" coords="108,920,175,933"/>
+<area shape="rect" id="node18" href="./TQObjSender.html" title="TQObjSender" alt="" coords="108,933,175,946"/>
+<area shape="rect" id="node19" href="./TVirtualProofPlayer.html" title="TVirtualProofPlayer" alt="" coords="101,946,182,959"/>
+<area shape="rect" id="node20" href="./TPad.html" title="TPad" alt="" coords="228,47,294,60"/>
+<area shape="rect" id="node21" href="./TSignalHandler.html" title="TSignalHandler" alt="" coords="228,285,294,298"/>
+<area shape="rect" id="node22" href="./TFileHandler.html" title="TFileHandler" alt="" coords="228,298,294,311"/>
+<area shape="rect" id="node23" href="./TGCompositeFrame.html" title="TGCompositeFrame" alt="" coords="221,338,301,351"/>
+<area shape="rect" id="node24" href="./TApplicationRemote.html" title="TApplicationRemote" alt="" coords="219,774,302,787"/>
+<area shape="rect" id="node25" href="./TApplicationServer.html" title="TApplicationServer" alt="" coords="222,787,300,801"/>
+<area shape="rect" id="node26" href="./TDOMParser.html" title="TDOMParser" alt="" coords="228,840,294,853"/>
+<area shape="rect" id="node27" href="./TGApplication.html" title="TGApplication" alt="" coords="228,801,294,814"/>
+<area shape="rect" id="node28" href="./TGButton.html" title="TGButton" alt="" coords="228,490,294,503"/>
+<area shape="rect" id="node29" href="./TGCanvas.html" title="TGCanvas" alt="" coords="228,523,294,536"/>
+<area shape="rect" id="node30" href="./TGColorFrame.html" title="TGColorFrame" alt="" coords="228,536,294,549"/>
+<area shape="rect" id="node31" href="./TGColorPalette.html" title="TGColorPalette" alt="" coords="228,549,294,563"/>
+<area shape="rect" id="node32" href="./TGColorPick.html" title="TGColorPick" alt="" coords="228,563,294,576"/>
+<area shape="rect" id="node33" href="./TGDoubleSlider.html" title="TGDoubleSlider" alt="" coords="228,576,294,589"/>
+<area shape="rect" id="node34" href="./TGDragWindow.html" title="TGDragWindow" alt="" coords="227,589,295,602"/>
+<area shape="rect" id="node35" href="./TGLVEntry.html" title="TGLVEntry" alt="" coords="228,602,294,615"/>
+<area shape="rect" id="node36" href="./TGProgressBar.html" title="TGProgressBar" alt="" coords="228,615,294,629"/>
+<area shape="rect" id="node37" href="./TGScrollBar.html" title="TGScrollBar" alt="" coords="228,629,294,642"/>
+<area shape="rect" id="node38" href="./TGSlider.html" title="TGSlider" alt="" coords="228,642,294,655"/>
+<area shape="rect" id="node39" href="./TGSplitter.html" title="TGSplitter" alt="" coords="228,655,294,668"/>
+<area shape="rect" id="node40" href="./TGHorizontal3DLine.html" title="TGHorizontal3DLine" alt="" coords="218,668,304,682"/>
+<area shape="rect" id="node41" href="./TGIcon.html" title="TGIcon" alt="" coords="228,682,294,695"/>
+<area shape="rect" id="node42" href="./TGLBEntry.html" title="TGLBEntry" alt="" coords="228,695,294,708"/>
+<area shape="rect" id="node43" href="./TGLabel.html" title="TGLabel" alt="" coords="228,708,294,721"/>
+<area shape="rect" id="node44" href="./TGMdiContainer.html" title="TGMdiContainer" alt="" coords="227,721,295,734"/>
+<area shape="rect" id="node45" href="./TGMdiWinResizer.html" title="TGMdiWinResizer" alt="" coords="223,734,299,748"/>
+<area shape="rect" id="node46" href="./TGMenuTitle.html" title="TGMenuTitle" alt="" coords="228,748,294,761"/>
+<area shape="rect" id="node48" href="./TRint.html" title="TRint" alt="" coords="228,814,294,827"/>
+<area shape="rect" id="node49" href="./TTimer.html" title="TTimer" alt="" coords="228,311,294,325"/>
+<area shape="rect" id="node50" href="./TProofCondor.html" title="TProofCondor" alt="" coords="228,867,294,880"/>
+<area shape="rect" id="node51" href="./TProofLite.html" title="TProofLite" alt="" coords="228,880,294,893"/>
+<area shape="rect" id="node52" href="./TProofServ.html" title="TProofServ" alt="" coords="228,827,294,840"/>
+<area shape="rect" id="node53" href="./TProofSuperMaster.html" title="TProofSuperMaster" alt="" coords="222,893,300,906"/>
+<area shape="rect" id="node54" href="./TQUndoManager.html" title="TQUndoManager" alt="" coords="226,906,296,920"/>
+<area shape="rect" id="node55" href="./TSAXParser.html" title="TSAXParser" alt="" coords="228,853,294,867"/>
+<area shape="rect" id="node56" href="./TStdExceptionHandler.html" title="TStdExceptionHandler" alt="" coords="216,325,306,338"/>
+<area shape="rect" id="node57" href="./TCanvas.html" title="TCanvas" alt="" coords="364,21,431,34"/>
+<area shape="rect" id="node58" href="./TGMainFrame.html" title="TGMainFrame" alt="" coords="364,133,431,146"/>
+<area shape="rect" id="node59" href="./TButton.html" title="TButton" alt="" coords="364,40,431,54"/>
+<area shape="rect" id="node60" href="./TG16ColorSelector.html" title="TG16ColorSelector" alt="" coords="359,206,437,219"/>
+<area shape="rect" id="node61" href="./TGGroupFrame.html" title="TGGroupFrame" alt="" coords="364,219,431,232"/>
+<area shape="rect" id="node62" href="./TGTextButton.html" title="TGTextButton" alt="" coords="364,470,431,483"/>
+<area shape="rect" id="node63" href="./TGColorPopup.html" title="TGColorPopup" alt="" coords="364,232,431,245"/>
+<area shape="rect" id="node64" href="./TGComboBox.html" title="TGComboBox" alt="" coords="364,245,431,258"/>
+<area shape="rect" id="node65" href="./TGComboBoxPopup.html" title="TGComboBoxPopup" alt="" coords="356,258,440,272"/>
+<area shape="rect" id="node66" href="./TGContainer.html" title="TGContainer" alt="" coords="364,272,431,285"/>
+<area shape="rect" id="node67" href="./TGDockButton.html" title="TGDockButton" alt="" coords="364,483,431,496"/>
+<area shape="rect" id="node68" href="./TGDockableFrame.html" title="TGDockableFrame" alt="" coords="360,285,436,298"/>
+<area shape="rect" id="node69" href="./TGDoubleHSlider.html" title="TGDoubleHSlider" alt="" coords="361,549,434,563"/>
+<area shape="rect" id="node70" href="./TGDoubleVSlider.html" title="TGDoubleVSlider" alt="" coords="361,563,434,576"/>
+<area shape="rect" id="node71" href="./TGFileItem.html" title="TGFileItem" alt="" coords="364,576,431,589"/>
+<area shape="rect" id="node72" href="./TGHProgressBar.html" title="TGHProgressBar" alt="" coords="363,589,432,602"/>
+<area shape="rect" id="node73" href="./TGHScrollBar.html" title="TGHScrollBar" alt="" coords="364,615,431,629"/>
+<area shape="rect" id="node74" href="./TGHSlider.html" title="TGHSlider" alt="" coords="364,642,431,655"/>
+<area shape="rect" id="node75" href="./TGHSplitter.html" title="TGHSplitter" alt="" coords="364,668,431,682"/>
+<area shape="rect" id="node76" href="./TGHorizontalFrame.html" title="TGHorizontalFrame" alt="" coords="358,298,438,311"/>
+<area shape="rect" id="node77" href="./TGView.html" title="TGView" alt="" coords="364,311,431,325"/>
+<area shape="rect" id="node78" href="./TGTextLBEntry.html" title="TGTextLBEntry" alt="" coords="364,708,431,721"/>
+<area shape="rect" id="node79" href="./TGPictureButton.html" title="TGPictureButton" alt="" coords="363,496,432,510"/>
+<area shape="rect" id="node80" href="./TGListBox.html" title="TGListBox" alt="" coords="364,325,431,338"/>
+<area shape="rect" id="node81" href="./TGListView.html" title="TGListView" alt="" coords="364,510,431,523"/>
+<area shape="rect" id="node82" href="./TGMdiButtons.html" title="TGMdiButtons" alt="" coords="364,338,431,351"/>
+<area shape="rect" id="node83" href="./TGMdiCornerWinResizer.html" title="TGMdiCornerWinResizer" alt="" coords="347,734,449,748"/>
+<area shape="rect" id="node84" href="./TGMdiDecorFrame.html" title="TGMdiDecorFrame" alt="" coords="359,351,437,364"/>
+<area shape="rect" id="node85" href="./TGMdiFrame.html" title="TGMdiFrame" alt="" coords="364,364,431,377"/>
+<area shape="rect" id="node86" href="./TGMdiHorizontalWinResizer.html" title="TGMdiHorizontalWinResizer" alt="" coords="340,748,456,761"/>
+<area shape="rect" id="node87" href="./TGMdiMainFrame.html" title="TGMdiMainFrame" alt="" coords="360,523,435,536"/>
+<area shape="rect" id="node88" href="./TGMdiMenuBar.html" title="TGMdiMenuBar" alt="" coords="364,377,431,391"/>
+<area shape="rect" id="node89" href="./TGMdiTitleBar.html" title="TGMdiTitleBar" alt="" coords="364,391,431,404"/>
+<area shape="rect" id="node90" href="./TGMdiTitleIcon.html" title="TGMdiTitleIcon" alt="" coords="364,695,431,708"/>
+<area shape="rect" id="node91" href="./TGMdiVerticalWinResizer.html" title="TGMdiVerticalWinResizer" alt="" coords="345,761,451,774"/>
+<area shape="rect" id="node92" href="./TGNumberEntry.html" title="TGNumberEntry" alt="" coords="364,404,432,417"/>
+<area shape="rect" id="node93" href="./TGPack.html" title="TGPack" alt="" coords="364,417,431,430"/>
+<area shape="rect" id="node94" href="./TGRSIint.html" title="TGRSIint" alt="" coords="364,814,431,827"/>
+<area shape="rect" id="node95" href="./TGShapedFrame.html" title="TGShapedFrame" alt="" coords="364,430,432,444"/>
+<area shape="rect" id="node96" href="./TGShutter.html" title="TGShutter" alt="" coords="364,444,431,457"/>
+<area shape="rect" id="node98" href="./TGTreeLBEntry.html" title="TGTreeLBEntry" alt="" coords="364,721,431,734"/>
+<area shape="rect" id="node99" href="./TGVSplitter.html" title="TGVSplitter" alt="" coords="364,682,431,695"/>
+<area shape="rect" id="node100" href="./TGVProgressBar.html" title="TGVProgressBar" alt="" coords="363,602,432,615"/>
+<area shape="rect" id="node101" href="./TGVScrollBar.html" title="TGVScrollBar" alt="" coords="364,629,431,642"/>
+<area shape="rect" id="node102" href="./TGVSlider.html" title="TGVSlider" alt="" coords="364,655,431,668"/>
+<area shape="rect" id="node103" href="./TProcessEventTimer.html" title="TProcessEventTimer" alt="" coords="356,120,439,133"/>
+<area shape="rect" id="node104" href="./TProofServLite.html" title="TProofServLite" alt="" coords="364,827,431,840"/>
+<area shape="rect" id="node105" href="./TRootEmbeddedCanvas.html" title="TRootEmbeddedCanvas" alt="" coords="350,536,446,549"/>
+<area shape="rect" id="node106" href="./TSlider.html" title="TSlider" alt="" coords="364,54,431,67"/>
+<area shape="rect" id="node107" href="./GCanvas.html" title="GCanvas" alt="" coords="506,1,573,14"/>
+<area shape="rect" id="node108" href="./GRootBrowser.html" title="GRootBrowser" alt="" coords="506,54,573,67"/>
+<area shape="rect" id="node109" href="./GRootCanvas.html" title="GRootCanvas" alt="" coords="506,67,573,80"/>
+<area shape="rect" id="node110" href="./TDialogCanvas.html" title="TDialogCanvas" alt="" coords="506,14,573,27"/>
+<area shape="rect" id="node111" href="./TGButtonGroup.html" title="TGButtonGroup" alt="" coords="506,199,573,212"/>
+<area shape="rect" id="node112" href="./TGCheckButton.html" title="TGCheckButton" alt="" coords="506,444,573,457"/>
+<area shape="rect" id="node113" href="./TGTransientFrame.html" title="TGTransientFrame" alt="" coords="502,80,577,93"/>
+<area shape="rect" id="node114" href="./TGCommandPlugin.html" title="TGCommandPlugin" alt="" coords="500,93,579,107"/>
+<area shape="rect" id="node115" href="./TGDockHideButton.html" title="TGDockHideButton" alt="" coords="499,483,580,496"/>
+<area shape="rect" id="node116" href="./TGFSComboBox.html" title="TGFSComboBox" alt="" coords="504,212,575,226"/>
+<area shape="rect" id="node117" href="./TGFileBrowser.html" title="TGFileBrowser" alt="" coords="506,107,573,120"/>
+<area shape="rect" id="node118" href="./TGLVContainer.html" title="TGLVContainer" alt="" coords="506,265,573,278"/>
+<area shape="rect" id="node119" href="./TGFontTypeComboBox.html" title="TGFontTypeComboBox" alt="" coords="491,226,588,239"/>
+<area shape="rect" id="node120" href="./TGHeaderFrame.html" title="TGHeaderFrame" alt="" coords="506,305,573,318"/>
+<area shape="rect" id="node121" href="./TGHtml.html" title="TGHtml" alt="" coords="506,345,573,358"/>
+<area shape="rect" id="node122" href="./TGHtmlBrowser.html" title="TGHtmlBrowser" alt="" coords="506,120,573,133"/>
+<area shape="rect" id="node123" href="./TGIconLBEntry.html" title="TGIconLBEntry" alt="" coords="506,701,573,714"/>
+<area shape="rect" id="node124" href="./TGImageMap.html" title="TGImageMap" alt="" coords="506,496,573,510"/>
+<area shape="rect" id="node125" href="./TGLBContainer.html" title="TGLBContainer" alt="" coords="506,278,573,292"/>
+<area shape="rect" id="node126" href="./TGLineLBEntry.html" title="TGLineLBEntry" alt="" coords="506,714,573,728"/>
+<area shape="rect" id="node127" href="./TGLineStyleComboBox.html" title="TGLineStyleComboBox" alt="" coords="491,239,588,252"/>
+<area shape="rect" id="node128" href="./TGLineWidthComboBox.html" title="TGLineWidthComboBox" alt="" coords="490,252,589,265"/>
+<area shape="rect" id="node129" href="./TGListTree.html" title="TGListTree" alt="" coords="506,292,573,305"/>
+<area shape="rect" id="node130" href="./TGMenuBar.html" title="TGMenuBar" alt="" coords="506,318,573,331"/>
+<area shape="rect" id="node131" href="./TGRadioButton.html" title="TGRadioButton" alt="" coords="506,457,573,470"/>
+<area shape="rect" id="node132" href="./TGSplitButton.html" title="TGSplitButton" alt="" coords="506,470,573,483"/>
+<area shape="rect" id="node133" href="./TGStatusBar.html" title="TGStatusBar" alt="" coords="506,331,573,345"/>
+<area shape="rect" id="node134" href="./TGTextView.html" title="TGTextView" alt="" coords="506,358,573,371"/>
+<area shape="rect" id="node135" href="./TGTextEditor.html" title="TGTextEditor" alt="" coords="506,133,573,146"/>
+<area shape="rect" id="node136" href="./TGTripleHSlider.html" title="TGTripleHSlider" alt="" coords="505,549,574,563"/>
+<area shape="rect" id="node137" href="./TGTripleVSlider.html" title="TGTripleVSlider" alt="" coords="505,563,574,576"/>
+<area shape="rect" id="node138" href="./TGVFileSplitter.html" title="TGVFileSplitter" alt="" coords="506,682,573,695"/>
+<area shape="rect" id="node139" href="./TGroupButton.html" title="TGroupButton" alt="" coords="506,40,573,54"/>
+<area shape="rect" id="node140" href="./TInspectCanvas.html" title="TInspectCanvas" alt="" coords="506,27,573,40"/>
+<area shape="rect" id="node141" href="./TRootBrowser.html" title="TRootBrowser" alt="" coords="506,146,573,159"/>
+<area shape="rect" id="node142" href="./TRootBrowserLite.html" title="TRootBrowserLite" alt="" coords="502,159,577,173"/>
+<area shape="rect" id="node143" href="./TRootCanvas.html" title="TRootCanvas" alt="" coords="506,173,573,186"/>
+<area shape="rect" id="node144" href="./TRootControlBar.html" title="TRootControlBar" alt="" coords="504,186,575,199"/>
+<area shape="rect" id="node145" href="./TGColorDialog.html" title="TGColorDialog" alt="" coords="629,14,696,27"/>
+<area shape="rect" id="node146" href="./TGColorSelect.html" title="TGColorSelect" alt="" coords="629,444,696,457"/>
+<area shape="rect" id="node147" href="./TGFileContainer.html" title="TGFileContainer" alt="" coords="629,265,696,278"/>
+<area shape="rect" id="node148" href="./TGFileDialog.html" title="TGFileDialog" alt="" coords="629,27,696,40"/>
+<area shape="rect" id="node149" href="./TGFontDialog.html" title="TGFontDialog" alt="" coords="629,40,696,54"/>
+<area shape="rect" id="node150" href="./TGGotoDialog.html" title="TGGotoDialog" alt="" coords="629,54,696,67"/>
+<area shape="rect" id="node151" href="./TGHButtonGroup.html" title="TGHButtonGroup" alt="" coords="626,192,699,206"/>
+<area shape="rect" id="node152" href="./TGInputDialog.html" title="TGInputDialog" alt="" coords="629,67,696,80"/>
+<area shape="rect" id="node153" href="./TGMsgBox.html" title="TGMsgBox" alt="" coords="629,80,696,93"/>
+<area shape="rect" id="node154" href="./TGPrintDialog.html" title="TGPrintDialog" alt="" coords="629,93,696,107"/>
+<area shape="rect" id="node155" href="./TGSearchDialog.html" title="TGSearchDialog" alt="" coords="629,107,696,120"/>
+<area shape="rect" id="node156" href="./TGTextEdit.html" title="TGTextEdit" alt="" coords="629,358,696,371"/>
+<area shape="rect" id="node157" href="./TGUndockedFrame.html" title="TGUndockedFrame" alt="" coords="623,120,702,133"/>
+<area shape="rect" id="node158" href="./TGVButtonGroup.html" title="TGVButtonGroup" alt="" coords="626,206,699,219"/>
+<area shape="rect" id="node159" href="./TRootDialog.html" title="TRootDialog" alt="" coords="629,133,696,146"/>
+<area shape="rect" id="node160" href="./TRootHelpDialog.html" title="TRootHelpDialog" alt="" coords="627,146,698,159"/>
+</map>
+<map name="MapTQObject_Lib" id="MapTQObject_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
+</map>
+<div class="tabs">
+<a id="imgTQObject_Inh" class="tabsel" href="inh/TQObject_Inh.png" onclick="javascript:return SetImg('Charts','inh/TQObject_Inh.png');">Inheritance</a>
+<a id="imgTQObject_InhMem" class="tab" href="inhmem/TQObject_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TQObject_InhMem.png');">Inherited Members</a>
+<a id="imgTQObject_Incl" class="tab" href="incl/TQObject_Incl.png" onclick="javascript:return SetImg('Charts','incl/TQObject_Incl.png');">Includes</a>
+<a id="imgTQObject_Lib" class="tab" href="lib/TQObject_Lib.png" onclick="javascript:return SetImg('Charts','lib/TQObject_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTQObject_Inh" src="inh/TQObject_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TQObject:CheckConnectArgs" href="src/TQObject.cxx.html#exw_zC">CheckConnectArgs</a>(<a href="./TQObject.html">TQObject</a>* sender, <a href="./TClass.html">TClass</a>* sender_class, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./TClass.html">TClass</a>* receiver_class, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</span><br />
+<div class="funccomm"><pre> Checking of consitency of sender/receiver methods/arguments.
+ Returns -1 on error, otherwise number or arguments of signal function.
+ Static method.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TQObject:TQObject@1" href="src/TQObject.cxx.html#qdUnwB">TQObject</a>()</span><br />
+<div class="funccomm"><pre> <a href="./TQObject.html">TQObject</a> Constructor.
+ Comment:
+  - In order to minimize memory allocation <a href="./TQObject.html#TQObject:fListOfSignals" title="TList* TQObject::fListOfSignals">fListOfSignals</a> and
+    <a href="./TQObject.html#TQObject:fListOfConnections" title="TList* TQObject::fListOfConnections">fListOfConnections</a> are allocated only if it is neccesary
+  - When <a href="./TQObject.html#TQObject:fListOfSignals" title="TList* TQObject::fListOfSignals">fListOfSignals</a>/<a href="./TQObject.html#TQObject:fListOfConnections" title="TList* TQObject::fListOfConnections">fListOfConnections</a> are empty they will
+    be deleted
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TQObject:_TQObject" href="src/TQObject.cxx.html#LgpTt">~TQObject</a>()</span><br />
+<div class="funccomm"><pre> <a href="./TQObject.html">TQObject</a> Destructor.
+    - delete all connections and signal list
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TList.html">TList</a> * <a class="funcname" name="TQObject:GetListOfClassSignals" href="src/TQObject.cxx.html#L4WnNB">GetListOfClassSignals</a>() const</span><br />
+<div class="funccomm"><pre> Returns pointer to list of signals of this class.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:CollectClassSignalLists" href="src/TQObject.cxx.html#lGPGZB">CollectClassSignalLists</a>(<a href="./TList.html">TList</a>&amp; list, <a href="./TClass.html">TClass</a>* cls)</span><br />
+<div class="funccomm"><pre> Collect class signal lists from class cls and all its
+ base-classes.
+
+ The recursive traversal is not performed for classes not
+ deriving from <a href="./TQClass.html">TQClass</a>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:HighPriority" href="src/TQObject.cxx.html#GLJtuD">HighPriority</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal_name, <span class="keyword">const</span> <span class="keyword">char</span>* slot_name = 0)</span><br />
+<div class="funccomm"><pre> 1. If slot_name = 0 =&gt; makes signal defined by the signal_name
+    to be the first in the <a href="./TQObject.html#TQObject:fListOfSignals" title="TList* TQObject::fListOfSignals">fListOfSignals</a>, this decreases
+    the time for lookup.
+ 2. If slot_name != 0 =&gt; makes slot defined by the slot_name
+    to be executed first when signal_name is emitted.
+ Signal name is not compressed.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:LowPriority" href="src/TQObject.cxx.html#YJ48QE">LowPriority</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal_name, <span class="keyword">const</span> <span class="keyword">char</span>* slot_name = 0)</span><br />
+<div class="funccomm"><pre> 1. If slot_name = 0 =&gt; makes signal defined by the signal_name
+    to be the last in the <a href="./TQObject.html#TQObject:fListOfSignals" title="TList* TQObject::fListOfSignals">fListOfSignals</a>, this increase the time
+    for lookup.
+ 2. If slot_name != 0 =&gt; makes slot defined by the slot_name
+    to  be executed last when signal_name is emitted.
+ Signal name is not compressed.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:HasConnection" href="src/TQObject.cxx.html#GVasMB">HasConnection</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal_name) const</span><br />
+<div class="funccomm"><pre> Return <a href="./ListOfTypes.html#bool">true</a> if there is any object connected to this signal.
+ Only checks for object signals.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TQObject:NumberOfSignals" href="src/TQObject.cxx.html#qY_kX">NumberOfSignals</a>() const</span><br />
+<div class="funccomm"><pre> Return number of signals for this object.
+ Only checks for object signals.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TQObject:NumberOfConnections" href="src/TQObject.cxx.html#w9EIu">NumberOfConnections</a>() const</span><br />
+<div class="funccomm"><pre> Return number of connections for this object.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit" href="src/TQObject.cxx.html#ohyV">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal)</span><br />
+<div class="funccomm"><pre> Acitvate signal without args.
+ Example:
+          theButton-&gt;<a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(<span class="string">"Clicked()"</span>);
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:EmitVA@1" href="src/TQObject.cxx.html#SpR__">EmitVA</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Int_t">Int_t</a> nargs, va_list va)</span><br />
+<div class="funccomm"><pre> Activate signal with variable argument list.
+ Example:
+          theButton-&gt;<a href="./TQObject.html#TQObject:EmitVA" title="void TQObject::EmitVA(const char* signal,Int_t nargs) or overloads">EmitVA</a>(<span class="string">"Clicked(int,float)"</span>, 2, id, fid)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:EmitVA@1" href="src/TQObject.cxx.html#JuT6v">EmitVA</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Int_t">Int_t</a> nargs, va_list va)</span><br />
+<div class="funccomm"><pre> Activate signal with variable argument list.
+ For internal use and for var arg <a href="./TQObject.html#TQObject:EmitVA" title="void TQObject::EmitVA(const char* signal,Int_t nargs) or overloads">EmitVA</a>() in RQ_OBJECT.h.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@4" href="src/TQObject.cxx.html#qJ3doB">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Long_t">Long_t</a> param)</span><br />
+<div class="funccomm"><pre> Activate signal with single parameter.
+ Example:
+          theButton-&gt;<a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(<span class="string">"Clicked(int)"</span>,id)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@5" href="src/TQObject.cxx.html#oc8EZC">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> param)</span><br />
+<div class="funccomm"><pre> Activate signal with single parameter.
+ Example:
+          theButton-&gt;<a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(<span class="string">"Progress(Long64_t)"</span>,processed)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@3" href="src/TQObject.cxx.html#ZQZHLB">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Double_t">Double_t</a> param)</span><br />
+<div class="funccomm"><pre> Activate signal with single parameter.
+ Example:
+          theButton-&gt;<a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(<span class="string">"Scale(float)"</span>,factor)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@2" href="src/TQObject.cxx.html#tLQFj">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">const</span> <span class="keyword">char</span>* params)</span><br />
+<div class="funccomm"><pre> Activate signal with parameter text string.
+ Example:
+          myObject-&gt;<a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(<span class="string">"Error(char*)"</span>,<span class="string">"Fatal error"</span>);
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@1" href="src/TQObject.cxx.html#xMyY7C">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Long_t">Long_t</a>* paramArr)</span><br />
+<div class="funccomm"><pre> <a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a> a signal with a varying number of arguments,
+ paramArr is an array of the parameters.
+ Note: any parameter should be converted to <a href="./ListOfTypes.html#long">long</a> type.
+ Example:
+    <a href="./TQObject.html">TQObject</a> *processor; // data processor
+    <a href="./TH1F.html">TH1F</a>     *hist;      // filled with processor results
+
+    processor-&gt;<a href="./TQObject.html#TQObject:Connect" title="Bool_t TQObject::Connect(const char* signal,const char* receiver_class,void* receiver,const char* slot) or overloads">Connect</a>(<span class="string">"Evaluated(Float_t,Float_t)"</span>,
+                       <span class="string">"TH1F"</span>,hist,<span class="string">"Fill12(Axis_t,Axis_t)"</span>);
+
+    <a href="./ListOfTypes.html#Long_t">Long_t</a> args[2];
+    args[0] = (<a href="./ListOfTypes.html#Long_t">Long_t</a>)processor-&gt;GetValue(1);
+    args[1] = (<a href="./ListOfTypes.html#Long_t">Long_t</a>)processor-&gt;GetValue(2);
+
+    processor-&gt;<a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(<span class="string">"Evaluated(Float_t,Float_t)"</span>,args);
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:ConnectToClass" href="src/TQObject.cxx.html#mEuqqC">ConnectToClass</a>(<a href="./TQObject.html">TQObject</a>* sender, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./TClass.html">TClass</a>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</span><br />
+<div class="funccomm"><pre> Create connection between sender and receiver.
+ Receiver class needs to have a dictionary.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:ConnectToClass@1" href="src/TQObject.cxx.html#seiO1E">ConnectToClass</a>(<span class="keyword">const</span> <span class="keyword">char</span>* sender_class, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./TClass.html">TClass</a>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</span><br />
+<div class="funccomm"><pre> This method allows to make connection from any object
+ of the same class to the receiver object.
+ Receiver class needs to have a dictionary.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:Connect@1" href="src/TQObject.cxx.html#ZbDaJD">Connect</a>(<a href="./TQObject.html">TQObject</a>* sender, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">const</span> <span class="keyword">char</span>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</span><br />
+<div class="funccomm"><pre> Create connection between sender and receiver.
+ Signal and slot string must have a form:
+    <span class="string">"Draw(char*, Option_t* ,Int_t)"</span>
+ All blanks and <span class="string">"const"</span> words will be removed,
+
+ cl != 0 - class name, it can be class with or
+           without dictionary, e.g interpreted class.
+ Example:
+       <a href="./TGButton.html">TGButton</a> *myButton;
+       <a href="./TH2F.html">TH2F</a>     *myHist;
+
+       <a href="./TQObject.html">TQObject</a>::<a href="./TQObject.html#TQObject:Connect" title="Bool_t TQObject::Connect(const char* signal,const char* receiver_class,void* receiver,const char* slot) or overloads">Connect</a>(myButton,<span class="string">"Clicked()"</span>,
+                         <span class="string">"TH2F"</span>, myHist,<span class="string">"Draw(Option_t*)"</span>);
+
+ cl == 0 - corresponds to function (interpereted or global)
+           the name of the function is defined by the slot string,
+           parameter receiver should be 0.
+ Example:
+       <a href="./TGButton.html">TGButton</a> *myButton;
+       <a href="./TH2F.html">TH2F</a>     *myHist;
+
+       <a href="./TQObject.html">TQObject</a>::<a href="./TQObject.html#TQObject:Connect" title="Bool_t TQObject::Connect(const char* signal,const char* receiver_class,void* receiver,const char* slot) or overloads">Connect</a>(myButton,<span class="string">"Clicked()"</span>,
+                         0, 0,<span class="string">"hsimple()"</span>);
+
+ Warning:
+  If receiver is class not derived from <a href="./TQObject.html">TQObject</a> and going to be
+  deleted, disconnect all connections to this receiver.
+  In case of class derived from <a href="./TQObject.html">TQObject</a> it is done automatically.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:Connect@2" href="src/TQObject.cxx.html#aIYqDE">Connect</a>(<span class="keyword">const</span> <span class="keyword">char</span>* sender_class, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">const</span> <span class="keyword">char</span>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</span><br />
+<div class="funccomm"><pre> This method allows to make a connection from any object
+ of the same class to a single slot.
+ Signal and slot string must have a form:
+    <span class="string">"Draw(char*, Option_t* ,Int_t)"</span>
+ All blanks and <span class="string">"const"</span> words will be removed,
+
+ cl != 0 - class name, it can be class with or
+           without dictionary, e.g interpreted class.
+ Example:
+       <a href="./TGButton.html">TGButton</a> *myButton;
+       <a href="./TH2F.html">TH2F</a>     *myHist;
+
+       <a href="./TQObject.html">TQObject</a>::<a href="./TQObject.html#TQObject:Connect" title="Bool_t TQObject::Connect(const char* signal,const char* receiver_class,void* receiver,const char* slot) or overloads">Connect</a>(<span class="string">"TGButton"</span>, <span class="string">"Clicked()"</span>,
+                         <span class="string">"TH2F"</span>, myHist, <span class="string">"Draw(Option_t*)"</span>);
+
+ cl == 0 - corresponds to function (interpereted or global)
+           the name of the function is defined by the slot string,
+           parameter receiver should be 0.
+ Example:
+       <a href="./TGButton.html">TGButton</a> *myButton;
+       <a href="./TH2F.html">TH2F</a>     *myHist;
+
+       <a href="./TQObject.html">TQObject</a>::<a href="./TQObject.html#TQObject:Connect" title="Bool_t TQObject::Connect(const char* signal,const char* receiver_class,void* receiver,const char* slot) or overloads">Connect</a>(<span class="string">"TGButton"</span>, <span class="string">"Clicked()"</span>,
+                         0, 0, <span class="string">"hsimple()"</span>);
+
+ Warning:
+  If receiver class not derived from <a href="./TQObject.html">TQObject</a> and going to be
+  deleted, disconnect all connections to this receiver.
+  In case of class derived from <a href="./TQObject.html">TQObject</a> it is done automatically.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:Connect" href="src/TQObject.cxx.html#n5NpmB">Connect</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">const</span> <span class="keyword">char</span>* receiver_class, <span class="keyword">void</span>* receiver, <span class="keyword">const</span> <span class="keyword">char</span>* slot)</span><br />
+<div class="funccomm"><pre> Non-static method is used to connect from the signal
+ of this object to the receiver slot.
+
+ Warning! No check on consistency of sender/receiver
+ classes/methods.
+
+ This method makes possible to have connection/signals from
+ interpreted class. See also RQ_OBJECT.h.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:Disconnect@1" href="src/TQObject.cxx.html#wPc87">Disconnect</a>(<a href="./TQObject.html">TQObject</a>* sender, <span class="keyword">const</span> <span class="keyword">char</span>* signal = 0, <span class="keyword">void</span>* receiver = 0, <span class="keyword">const</span> <span class="keyword">char</span>* slot = 0)</span><br />
+<div class="funccomm"><pre> Disconnects signal in object sender from slot_method in
+ object receiver. For objects derived from <a href="./TQObject.html">TQObject</a> signal-slot
+ connection is removed when either of the objects involved
+ are destroyed.
+
+ <a href="./TQObject.html#TQObject:Disconnect" title="Bool_t TQObject::Disconnect(const char* signal=0,void* receiver=0,const char* slot=0) or overloads">Disconnect</a>() is typically used in three ways, as the following
+ examples shows:
+
+  - <a href="./TQObject.html#TQObject:Disconnect" title="Bool_t TQObject::Disconnect(const char* signal=0,void* receiver=0,const char* slot=0) or overloads">Disconnect</a> everything connected to an object's signals:
+       <a href="./TQObject.html#TQObject:Disconnect" title="Bool_t TQObject::Disconnect(const char* signal=0,void* receiver=0,const char* slot=0) or overloads">Disconnect</a>(myObject);
+  - <a href="./TQObject.html#TQObject:Disconnect" title="Bool_t TQObject::Disconnect(const char* signal=0,void* receiver=0,const char* slot=0) or overloads">Disconnect</a> everything connected to a signal:
+       <a href="./TQObject.html#TQObject:Disconnect" title="Bool_t TQObject::Disconnect(const char* signal=0,void* receiver=0,const char* slot=0) or overloads">Disconnect</a>(myObject, <span class="string">"mySignal()"</span>);
+  - <a href="./TQObject.html#TQObject:Disconnect" title="Bool_t TQObject::Disconnect(const char* signal=0,void* receiver=0,const char* slot=0) or overloads">Disconnect</a> a specific receiver:
+       <a href="./TQObject.html#TQObject:Disconnect" title="Bool_t TQObject::Disconnect(const char* signal=0,void* receiver=0,const char* slot=0) or overloads">Disconnect</a>(myObject, 0, myReceiver, 0);
+
+ 0 may be used as a wildcard in three of the four arguments,
+ meaning <span class="string">"any signal"</span>, <span class="string">"any receiving object"</span> or
+ <span class="string">"any slot in the receiving object"</span>, respectively.
+
+ The sender has no default and may never be 0
+ (you cannot disconnect signals from more than one object).
+
+ If signal is 0, it disconnects receiver and slot_method
+ from any signal. If not, only the specified signal is
+ disconnected.
+
+ If  receiver is 0, it disconnects anything connected to signal.
+ If not, slots in objects other than receiver are not
+ disconnected
+
+ If slot_method is 0, it disconnects anything that is connected
+ to receiver.  If not, only slots named slot_method will be
+ disconnected, and all other slots are left alone.
+ The slot_method must be 0 if receiver is left out, so you
+ cannot disconnect a specifically-named slot on all objects.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:Disconnect@2" href="src/TQObject.cxx.html#DXEljD">Disconnect</a>(<span class="keyword">const</span> <span class="keyword">char</span>* class_name, <span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">void</span>* receiver = 0, <span class="keyword">const</span> <span class="keyword">char</span>* slot = 0)</span><br />
+<div class="funccomm"><pre> Disconnects <span class="string">"class signal"</span>. The class is defined by class_name.
+ See also <a href="./TQObject.html#TQObject:Connect" title="Bool_t TQObject::Connect(const char* signal,const char* receiver_class,void* receiver,const char* slot) or overloads">Connect</a>(class_name,signal,receiver,slot).
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:Disconnect" href="src/TQObject.cxx.html#FXJhi">Disconnect</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal = 0, <span class="keyword">void</span>* receiver = 0, <span class="keyword">const</span> <span class="keyword">char</span>* slot = 0)</span><br />
+<div class="funccomm"><pre> Disconnects signal of this object from slot of receiver.
+ Equivalent to <a href="./TQObject.html#TQObject:Disconnect" title="Bool_t TQObject::Disconnect(const char* signal=0,void* receiver=0,const char* slot=0) or overloads">Disconnect</a>(this, signal, receiver, slot)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Streamer" href="src/TQObject.cxx.html#fmSogB">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp; )</span><br />
+<div class="funccomm"><pre> Stream an object of class <a href="./TQObject.html">TQObject</a>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:AreAllSignalsBlocked" href="src/TQObject.cxx.html#kibKwE">AreAllSignalsBlocked</a>()</span><br />
+<div class="funccomm"><pre> Returns <a href="./ListOfTypes.html#bool">true</a> if all signals are blocked.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:BlockAllSignals" href="src/TQObject.cxx.html#BUWn6E">BlockAllSignals</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> b)</span><br />
+<div class="funccomm"><pre> Block or unblock all signals. Returns the previous block status.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:LoadRQ_OBJECT" href="src/TQObject.cxx.html#oHfTIE">LoadRQ_OBJECT</a>()</span><br />
+<div class="funccomm"><pre> Load RQ_OBJECT.h which contains the #define RQ_OBJECT needed to
+ let interpreted classes connect to signals of compiled classes.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span>       * <a class="funcname" name="TQObject:GetSender" href="src/TQObject.h.html#roaUNC">GetSender</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <span class="keyword">this</span>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TQObject:GetSenderClassName" href="src/TQObject.h.html#cCZm2">GetSenderClassName</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <span class="string">""</span>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TQObject:TQObject" href="src/TQObject.h.html#rYwtiC">TQObject</a>(<span class="keyword">const</span> <a href="./TQObject.html">TQObject</a>&amp; tqo)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TQObject.html">TQObject</a>&amp; <a class="funcname" name="TQObject:operator_" href="src/TQObject.h.html#lhAvoD">operator=</a>(<span class="keyword">const</span> <a href="./TQObject.html">TQObject</a>&amp; tqo)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TList.html">TList</a>   * <a class="funcname" name="TQObject:GetListOfSignals" href="src/TQObject.h.html#vnqoCD">GetListOfSignals</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQObject.html#TQObject:fListOfSignals" title="TList* TQObject::fListOfSignals">fListOfSignals</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TList.html">TList</a>   * <a class="funcname" name="TQObject:GetListOfConnections" href="src/TQObject.h.html#wgwWYE">GetListOfConnections</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQObject.html#TQObject:fListOfConnections" title="TList* TQObject::fListOfConnections">fListOfConnections</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:AreSignalsBlocked" href="src/TQObject.h.html#NQeK7C">AreSignalsBlocked</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQObject.html#TQObject:fSignalsBlocked" title="Bool_t TQObject::fSignalsBlocked">fSignalsBlocked</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQObject:BlockSignals" href="src/TQObject.h.html#cYRLCC">BlockSignals</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> b)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./ListOfTypes.html#Bool_t">Bool_t</a> ret = <a href="./TQObject.html#TQObject:fSignalsBlocked" title="Bool_t TQObject::fSignalsBlocked">fSignalsBlocked</a>; <a href="./TQObject.html#TQObject:fSignalsBlocked" title="Bool_t TQObject::fSignalsBlocked">fSignalsBlocked</a> = b; <span class="keyword">return</span> ret; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit" href="src/TQObject.h.html#ii7MjD">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@1" href="src/TQObject.h.html#qCr2bE">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Long_t">Long_t</a>* paramArr)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@2" href="src/TQObject.h.html#md1DAC">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <span class="keyword">const</span> <span class="keyword">char</span>* params)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@3" href="src/TQObject.h.html#IT5onE">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Double_t">Double_t</a> param)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@4" href="src/TQObject.h.html#z2aLiB">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Long_t">Long_t</a> param)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@5" href="src/TQObject.h.html#KT2taC">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> param)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@6" href="src/TQObject.h.html#g60WXD">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> param)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(signal, (<a href="./ListOfTypes.html#Long_t">Long_t</a>)param); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@7" href="src/TQObject.h.html#UpXUIE">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Char_t">Char_t</a> param)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(signal, (<a href="./ListOfTypes.html#Long_t">Long_t</a>)param); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@8" href="src/TQObject.h.html#D5yTsC">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#UChar_t">UChar_t</a> param)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(signal, (<a href="./ListOfTypes.html#Long_t">Long_t</a>)param); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Emit@9" href="src/TQObject.h.html#WqmLT">Emit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Short_t">Short_t</a> param)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(signal, (<a href="./ListOfTypes.html#Long_t">Long_t</a>)param); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Connected" href="src/TQObject.h.html#Io5l1D">Connected</a>(<span class="keyword">const</span> <span class="keyword">char</span>* )</span><br />
+
+<div class="code"><code class="inlinecode">{ }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Disconnected" href="src/TQObject.h.html#TR1ak">Disconnected</a>(<span class="keyword">const</span> <span class="keyword">char</span>* )</span><br />
+
+<div class="code"><code class="inlinecode">{ }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Destroyed" href="src/TQObject.h.html#hNEq8D">Destroyed</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(<span class="string">"Destroyed()"</span>); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:ChangedBy" href="src/TQObject.h.html#RYbjxE">ChangedBy</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(<span class="string">"ChangedBy(char*)"</span>, method); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQObject:Message" href="src/TQObject.h.html#V_KbNB">Message</a>(<span class="keyword">const</span> <span class="keyword">char</span>* msg)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQObject.html#TQObject:Emit" title="void TQObject::Emit(const char* signal) or overloads">Emit</a>(<span class="string">"Message(char*)"</span>, msg); }</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+<em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Valeriy+Onuchin+&+Fons+Rademakers"> Valeriy Onuchin & Fons Rademakers   15/10/2000</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

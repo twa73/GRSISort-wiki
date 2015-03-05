@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:17 2015            -->
+<!--   Date: Wed Mar  4 20:39:13 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,14 +22,14 @@
 
 <span class="cpp">#include "<a href="../Globals.h">Globals.h</a>"</span>
 
-<span class="cpp">#include &lt;TVirtualIndex.h&gt;</span>
-<span class="cpp">#include &lt;TTreeIndex.h&gt;</span>
-<span class="cpp">#include &lt;TSystem.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TVirtualIndex.h">TVirtualIndex.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TTreeIndex.h">TTreeIndex.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TSystem.h">TSystem.h</a>&gt;</span>
 
 <span class="cpp">#include "<a href="../TAnalysisTreeBuilder.h">TAnalysisTreeBuilder.h</a>"</span>
 <span class="cpp">#include "<a href="../TGRSIOptions.h">TGRSIOptions.h</a>"</span>
 
-<span class="cpp">#include &lt;TStopwatch.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TStopwatch.h">TStopwatch.h</a>&gt;</span>
 
 <span class="cpp">#include &lt;<a href="../TGRSIOptions.h">TGRSIOptions.h</a>&gt;</span>
 
@@ -168,17 +168,17 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:tigress" title="TTigress* TAnalysisTreeBuilder::tigress">tigress</a> = 0;<span class="comment">//new <a href="../TTigress.html">TTigress</a>;</span>
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sharc" title="TSharc* TAnalysisTreeBuilder::sharc">sharc</a> = 0;<span class="comment">//new <a href="../TSharc.html">TSharc</a>;</span>
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a> = 0;<span class="comment">//new <a href="../TTriFoil.html">TTriFoil</a>;</span>
-   <span class="comment">//rf-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
+   <span class="comment">//rf-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:csm" title="TCSM* TAnalysisTreeBuilder::csm">csm</a> = 0;<span class="comment">//new <a href="../TCSM.html">TCSM</a>;</span>
-   <span class="comment">//spice-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); s3-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
-   <span class="comment">//tip-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
+   <span class="comment">//spice-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); s3-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
+   <span class="comment">//tip-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
 
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a> = 0;<span class="comment">//new <a href="../TGriffin.html">TGriffin</a>;</span>
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a> = 0;<span class="comment">//new <a href="../TSceptar.html">TSceptar</a>;</span>
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a>   = 0;<span class="comment">//new <a href="../TPaces.html">TPaces</a>;</span>
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a> = 0;<span class="comment">//new <a href="../TDescant.html">TDescant</a>;</span>
-   <span class="comment">//dante-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
-   <span class="comment">//zerodegree-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
+   <span class="comment">//dante-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
+   <span class="comment">//zerodegree-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();</span>
 
 }
 
@@ -207,7 +207,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <span class="keyword">if</span>(!<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>)
       <span class="keyword">return</span>;
 
-   <span class="comment">//<a href="../#TObject:Delete" title="void TObject::Delete(Option_t* option=&quot;&quot;)">Delete</a> channels from memory incase there is something in there still</span>
+   <span class="comment">//<a href="../TObject.html#TObject:Delete" title="void TObject::Delete(Option_t* option=&quot;&quot;)">Delete</a> channels from memory incase there is something in there still</span>
    <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:DeleteAllChannels" title="void TChannel::DeleteAllChannels()">DeleteAllChannels</a>(); 
    <span class="comment">//Try to read the calibration data from the fragment tree</span>
 	<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:ReadCalFromTree" title="Int_t TChannel::ReadCalFromTree(TTree* ,Option_t* opt=&quot;overwrite&quot;)">ReadCalFromTree</a>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>);
@@ -224,22 +224,22 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 
 
 <a name="foyWBC"></a><span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>::<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SetUpFragmentChain" title="void TAnalysisTreeBuilder::SetUpFragmentChain(TChain* chain) or overloads">SetUpFragmentChain</a>(std::vector&lt;std::string&gt; infiles) {
-   <span class="comment">//Makes a TChain of all of the fragments input on the command line. This may not work as</span>
+   <span class="comment">//Makes a <a href="../TChain.html">TChain</a> of all of the fragments input on the command line. This may not work as</span>
    <span class="comment">//desired for the Griffin DAQ. In this case histograms should be summed during post</span>
    <span class="comment">//processing.</span>
-   TChain *chain = <span class="keyword">new</span> TChain(<span class="string">"FragmentTree"</span>);
+   <a href="../TChain.html">TChain</a> *chain = <span class="keyword">new</span> <a href="../TChain.html">TChain</a>(<span class="string">"FragmentTree"</span>);
    <span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;infiles.size();x++) 
       chain-&gt;Add(infiles.at(x).c_str());
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SetUpFragmentChain" title="void TAnalysisTreeBuilder::SetUpFragmentChain(TChain* chain) or overloads">SetUpFragmentChain</a>(chain);
    
 }
 
-<a name="Z8hL7D"></a><span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>::<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SetUpFragmentChain" title="void TAnalysisTreeBuilder::SetUpFragmentChain(TChain* chain) or overloads">SetUpFragmentChain</a>(TChain *chain) {
-   <span class="comment">//Sets the fFragment chain from the TChain chain.</span>
+<a name="Z8hL7D"></a><span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>::<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SetUpFragmentChain" title="void TAnalysisTreeBuilder::SetUpFragmentChain(TChain* chain) or overloads">SetUpFragmentChain</a>(<a href="../TChain.html">TChain</a> *chain) {
+   <span class="comment">//Sets the fFragment chain from the <a href="../TChain.html">TChain</a> chain.</span>
    <span class="keyword">if</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>)
       <span class="keyword">delete</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>;
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a> = chain;
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-&gt;CanDeleteRefs(<span class="keyword">true</span>); 
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-><a href="../TChain.html#TChain:CanDeleteRefs" title="void TChain::CanDeleteRefs(Bool_t flag=kTRUE)">CanDeleteRefs</a>(<span class="keyword">true</span>); 
 }
 
 <a name="RtZMPC"></a><span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>::<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SortFragmentChain" title="void TAnalysisTreeBuilder::SortFragmentChain()">SortFragmentChain</a>() {
@@ -247,28 +247,28 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <span class="keyword">if</span>(!<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>)
       <span class="keyword">return</span>;
    
-   <span class="keyword">int</span> ntrees = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-&gt;GetNtrees();
-   <span class="keyword">int</span> nChainEntries = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-&gt;GetEntries();
+   <span class="keyword">int</span> ntrees = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-><a href="../TChain.html#TChain:GetNtrees" title="Int_t TChain::GetNtrees()">GetNtrees</a>();
+   <span class="keyword">int</span> nChainEntries = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-><a href="../TChain.html#TChain:GetEntries" title="Long64_t TChain::GetEntries() or overloads">GetEntries</a>();
    <span class="keyword">int</span> treeNumber, lastTreeNumber = -1;
 
    printf(<span class="string">"Found %i trees with %i total fragments.\n"</span>,ntrees,nChainEntries);
 
    <span class="keyword">for</span>(<span class="keyword">int</span> i=0;i&lt;nChainEntries;i++) {
-      <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-&gt;LoadTree(i);
-      treeNumber = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-&gt;GetTreeNumber();
+      <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-><a href="../TChain.html#TChain:LoadTree" title="Long64_t TChain::LoadTree(Long64_t entry)">LoadTree</a>(i);
+      treeNumber = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-><a href="../TChain.html#TChain:GetTreeNumber" title="Int_t TChain::GetTreeNumber()">GetTreeNumber</a>();
       <span class="keyword">if</span>(treeNumber != lastTreeNumber) {
          <span class="keyword">if</span>(lastTreeNumber == -1) {
-            printf(DYELLOW <span class="string">"Sorting tree[%d]: %s"</span> RESET_COLOR <span class="string">"\n"</span>,treeNumber+1,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-&gt;GetTree()-&gt;GetCurrentFile()-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
+            printf(DYELLOW <span class="string">"Sorting tree[%d]: %s"</span> RESET_COLOR <span class="string">"\n"</span>,treeNumber+1,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-><a href="../TChain.html#TChain:GetTree" title="TTree* TChain::GetTree()">GetTree</a>()-><a href="../TTree.html#TTree:GetCurrentFile" title="TFile* TTree::GetCurrentFile()">GetCurrentFile</a>()-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
          } <span class="keyword">else</span> {
-            printf(DYELLOW <span class="string">"Changing to tree[%d/%d]: %s"</span> RESET_COLOR <span class="string">"\n"</span>,treeNumber+1,ntrees,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-&gt;GetTree()-&gt;GetCurrentFile()-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
+            printf(DYELLOW <span class="string">"Changing to tree[%d/%d]: %s"</span> RESET_COLOR <span class="string">"\n"</span>,treeNumber+1,ntrees,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-><a href="../TChain.html#TChain:GetTree" title="TTree* TChain::GetTree()">GetTree</a>()-><a href="../TTree.html#TTree:GetCurrentFile" title="TFile* TTree::GetCurrentFile()">GetCurrentFile</a>()-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
             printf(DYELLOW <span class="string">"    Switched from tree[%d] at chain entry number %i"</span> RESET_COLOR <span class="string">"\n"</span>,lastTreeNumber,i);
          }
          lastTreeNumber = treeNumber;
       }  <span class="keyword">else</span> {
          <span class="keyword">continue</span>;
       }
-      <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a> = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-&gt;GetTree();
-      <span class="keyword">int</span> nentries = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetEntries();
+      <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a> = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentChain" title="TChain* TAnalysisTreeBuilder::fFragmentChain">fFragmentChain</a>-><a href="../TChain.html#TChain:GetTree" title="TTree* TChain::GetTree()">GetTree</a>();
+      <span class="keyword">int</span> nentries = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetEntries" title="Long64_t TTree::GetEntries() or overloads">GetEntries</a>();
       <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SetupFragmentTree" title="void TAnalysisTreeBuilder::SetupFragmentTree()">SetupFragmentTree</a>();
       <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SetupOutFile" title="void TAnalysisTreeBuilder::SetupOutFile()">SetupOutFile</a>();
       <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SetupAnalysisTree" title="void TAnalysisTreeBuilder::SetupAnalysisTree()">SetupAnalysisTree</a>();
@@ -295,7 +295,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
       <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:CloseAnalysisFile" title="void TAnalysisTreeBuilder::CloseAnalysisFile()">CloseAnalysisFile</a>();
       printf(<span class="string">"\n"</span>);
       i+=(nentries);<span class="comment">//-10);</span>
-      <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragFile" title="TFile* TAnalysisTreeBuilder::fCurrentFragFile">fCurrentFragFile</a>-&gt;Close(<span class="string">"r"</span>);
+      <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragFile" title="TFile* TAnalysisTreeBuilder::fCurrentFragFile">fCurrentFragFile</a>-><a href="../TFile.html#TFile:Close" title="void TFile::Close(Option_t* option=&quot;&quot;)">Close</a>(<span class="string">"r"</span>);
    }
    printf(<span class="string">"Finished chain sort.\n"</span>);
    <span class="keyword">return</span>;
@@ -304,18 +304,18 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 <a name="HHPUNB"></a><span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>::<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SortFragmentTree" title="void TAnalysisTreeBuilder::SortFragmentTree()">SortFragmentTree</a>() {
    <span class="comment">//Sorts the fragment tree based on the TreeIndex major name.</span>
    <span class="comment">//It then puts the fragment into the event Q.</span>
-   <span class="keyword">long</span> major_min = (<span class="keyword">long</span>) <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetMinimum(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetTreeIndex()-&gt;GetMajorName());
+   <span class="keyword">long</span> major_min = (<span class="keyword">long</span>) <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetMinimum" title="Double_t TTree::GetMinimum(const char* columname)">GetMinimum</a>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetTreeIndex" title="TVirtualIndex* TTree::GetTreeIndex()">GetTreeIndex</a>()-><a href="../TVirtualIndex.html#TVirtualIndex:GetMajorName" title="const char* TVirtualIndex::GetMajorName()">GetMajorName</a>());
    <span class="keyword">if</span>(major_min&lt;0)
       major_min = 0;
-   <span class="keyword">long</span> major_max = (<span class="keyword">long</span>) <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetMaximum(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetTreeIndex()-&gt;GetMajorName());
+   <span class="keyword">long</span> major_max = (<span class="keyword">long</span>) <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetMaximum" title="Double_t TTree::GetMaximum(const char* columname)">GetMaximum</a>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetTreeIndex" title="TVirtualIndex* TTree::GetTreeIndex()">GetTreeIndex</a>()-><a href="../TVirtualIndex.html#TVirtualIndex:GetMajorName" title="const char* TVirtualIndex::GetMajorName()">GetMajorName</a>());
 
-   TTreeIndex *index = (TTreeIndex*)<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetTreeIndex();
+   TTreeIndex *index = (TTreeIndex*)<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetTreeIndex" title="TVirtualIndex* TTree::GetTreeIndex()">GetTreeIndex</a>();
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fEntries" title="long TAnalysisTreeBuilder::fEntries">fEntries</a> = index-&gt;GetN();
 
    <span class="keyword">for</span>(<span class="keyword">int</span> j=major_min;j&lt;=major_max;j++) {
       std::vector&lt;<a href="../TFragment.html">TFragment</a>&gt; *event = <span class="keyword">new</span> std::vector&lt;<a href="../TFragment.html">TFragment</a>&gt;;
       <span class="keyword">int</span> fragno = 1;
-      <span class="keyword">while</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetEntryWithIndex(j,fragno++) != -1) {
+      <span class="keyword">while</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetEntryWithIndex" title="Int_t TTree::GetEntryWithIndex(Int_t major,Int_t minor=0)">GetEntryWithIndex</a>(j,fragno++) != -1) {
          <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fFragmentsIn" title="int TAnalysisTreeBuilder::fFragmentsIn">fFragmentsIn</a>++;
          event-&gt;push_back(*<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragPtr" title="TFragment* TAnalysisTreeBuilder::fCurrentFragPtr">fCurrentFragPtr</a>);
       }
@@ -326,8 +326,8 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
       }
    }
    printf(<span class="string">"\n"</span>);
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;DropBranchFromCache(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetBranch(<span class="string">"TFragment"</span>),<span class="keyword">true</span>);
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;SetCacheSize(0);
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:DropBranchFromCache" title="void TTree::DropBranchFromCache(const char* bname,Bool_t subbranches=kFALSE) or overloads">DropBranchFromCache</a>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetBranch" title="TBranch* TTree::GetBranch(const char* name)">GetBranch</a>(<span class="string">"TFragment"</span>),<span class="keyword">true</span>);
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:SetCacheSize" title="void TTree::SetCacheSize(Long64_t cachesize=-1)">SetCacheSize</a>(0);
    <span class="keyword">return</span>;
 }
 
@@ -339,18 +339,18 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <a href="../TFragment.html">TFragment</a> *currentFrag = 0;
 
    <span class="comment">//Find the <a href="../TFragment.html">TFragment</a> cranch of the tree</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;SetBranchAddress(<span class="string">"TFragment"</span>,&amp;currentFrag);
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"TFragment"</span>,&amp;currentFrag);
 
    <span class="comment">//<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:Get" title="TAnalysisTreeBuilder* TAnalysisTreeBuilder::Get()">Get</a> the tree index of the fragment tree</span>
-   TTreeIndex *index = (TTreeIndex*)<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetTreeIndex();
+   TTreeIndex *index = (TTreeIndex*)<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetTreeIndex" title="TVirtualIndex* TTree::GetTreeIndex()">GetTreeIndex</a>();
 
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fEntries" title="long TAnalysisTreeBuilder::fEntries">fEntries</a> = index-&gt;GetN();
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a> *indexvalues = index-&gt;GetIndex();
    <span class="comment">//Set the major index to be sorted over as the high bits of the time stamp</span>
-   <span class="keyword">int</span> major_max = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetMaximum(<span class="string">"TimeStampHigh"</span>);
+   <span class="keyword">int</span> major_max = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetMaximum" title="Double_t TTree::GetMaximum(const char* columname)">GetMaximum</a>(<span class="string">"TimeStampHigh"</span>);
 
-   <span class="comment">//<a href="../#TObject:Read" title="Int_t TObject::Read(const char* name)">Read</a> in the first fragment from the fragment tree</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetEntry(indexvalues[0]);
+   <span class="comment">//<a href="../TObject.html#TObject:Read" title="Int_t TObject::Read(const char* name)">Read</a> in the first fragment from the fragment tree</span>
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetEntry" title="Int_t TTree::GetEntry(Long64_t entry=0,Int_t getall=0)">GetEntry</a>(indexvalues[0]);
    <span class="keyword">long</span> firstTimeStamp = currentFrag-&gt;GetTimeStamp();
    <span class="keyword">int</span>  firstDetectorType = currentFrag-&gt;DetectorType;
 
@@ -364,7 +364,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    
    <span class="comment">//loop over all of the fragments in the tree </span>
    <span class="keyword">for</span>(<span class="keyword">int</span> x=1;x&lt;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fEntries" title="long TAnalysisTreeBuilder::fEntries">fEntries</a>;x++) {
-      <span class="keyword">if</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetEntry(indexvalues[x]) == -1 ) {  <span class="comment">//major,minor) == -1) {</span>
+      <span class="keyword">if</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetEntry" title="Int_t TTree::GetEntry(Long64_t entry=0,Int_t getall=0)">GetEntry</a>(indexvalues[x]) == -1 ) {  <span class="comment">//major,minor) == -1) {</span>
          <span class="comment">//GetEntry Reads all branches of entry and returns total number of bytes read.</span>
          <span class="comment">//This means that if this if statement passes, we have had an I/O error.</span>
          printf(DRED <span class="string">"FIRE!!!"</span> RESET_COLOR  <span class="string">"\n"</span>);
@@ -460,8 +460,8 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    }
    
    <span class="comment">//Drop the TFragmentBranch from the Cache so we aren't still holding it in memory</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;DropBranchFromCache(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetBranch(<span class="string">"TFragment"</span>),<span class="keyword">true</span>);
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;SetCacheSize(0);
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:DropBranchFromCache" title="void TTree::DropBranchFromCache(const char* bname,Bool_t subbranches=kFALSE) or overloads">DropBranchFromCache</a>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetBranch" title="TBranch* TTree::GetBranch(const char* name)">GetBranch</a>(<span class="string">"TFragment"</span>),<span class="keyword">true</span>);
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:SetCacheSize" title="void TTree::SetCacheSize(Long64_t cachesize=-1)">SetCacheSize</a>(0);
    <span class="keyword">return</span>;
 }
 
@@ -470,7 +470,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 
 <a name="HRNnZ"></a><span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>::<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:SetupFragmentTree" title="void TAnalysisTreeBuilder::SetupFragmentTree()">SetupFragmentTree</a>() {
    <span class="comment">//Set up the fragment Tree to be sorted on time stamps or trigger Id's. This also reads the the run info out of the fragment tree.</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragFile" title="TFile* TAnalysisTreeBuilder::fCurrentFragFile">fCurrentFragFile</a> = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetCurrentFile();
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragFile" title="TFile* TAnalysisTreeBuilder::fCurrentFragFile">fCurrentFragFile</a> = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetCurrentFile" title="TFile* TTree::GetCurrentFile()">GetCurrentFile</a>();
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>  = (<a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>*)fCurrentFragFile-&gt;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:Get" title="TAnalysisTreeBuilder* TAnalysisTreeBuilder::Get()">Get</a>(<span class="string">"TGRSIRunInfo"</span>);
    <span class="comment">//if(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>) {</span>
    <span class="comment">//   <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:SetInfoFromFile" title="void TGRSIRunInfo::SetInfoFromFile(TGRSIRunInfo* temp)">SetInfoFromFile</a>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>);</span>
@@ -488,28 +488,28 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 
    <span class="comment">//Check to see if the fragment tree already has an index set. If not build the index based on timestamps if it is a Griffin </span>
    <span class="comment">//fragment. If it is not Griffin build based on the trigger Id.</span>
-   <span class="keyword">if</span>(!<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetTreeIndex()) {
+   <span class="keyword">if</span>(!<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetTreeIndex" title="TVirtualIndex* TTree::GetTreeIndex()">GetTreeIndex</a>()) {
       <span class="keyword">if</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MajorIndex" title="string TGRSIRunInfo::MajorIndex()">MajorIndex</a>().length()&gt;0) {
          printf(DBLUE <span class="string">"Tree Index not found, building index on %s/%s..."</span> RESET_COLOR,
                         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MajorIndex" title="string TGRSIRunInfo::MajorIndex()">MajorIndex</a>().c_str(),<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MinorIndex" title="string TGRSIRunInfo::MinorIndex()">MinorIndex</a>().c_str());  fflush(stdout); 
          <span class="keyword">if</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MinorIndex" title="string TGRSIRunInfo::MinorIndex()">MinorIndex</a>().length()&gt;0) {
-            <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;BuildIndex(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MajorIndex" title="string TGRSIRunInfo::MajorIndex()">MajorIndex</a>().c_str(),<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MinorIndex" title="string TGRSIRunInfo::MinorIndex()">MinorIndex</a>().c_str());
+            <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:BuildIndex" title="Int_t TTree::BuildIndex(const char* majorname,const char* minorname=&quot;0&quot;)">BuildIndex</a>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MajorIndex" title="string TGRSIRunInfo::MajorIndex()">MajorIndex</a>().c_str(),<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MinorIndex" title="string TGRSIRunInfo::MinorIndex()">MinorIndex</a>().c_str());
          } <span class="keyword">else</span> {
-            <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;BuildIndex(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MajorIndex" title="string TGRSIRunInfo::MajorIndex()">MajorIndex</a>().c_str());
+            <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:BuildIndex" title="Int_t TTree::BuildIndex(const char* majorname,const char* minorname=&quot;0&quot;)">BuildIndex</a>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:MajorIndex" title="string TGRSIRunInfo::MajorIndex()">MajorIndex</a>().c_str());
          }
       } <span class="keyword">else</span> {
          printf(DBLUE <span class="string">"Tree Index not found, building index on TriggerId/FragmentId..."</span> RESET_COLOR);  fflush(stdout);   
-         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;BuildIndex(<span class="string">"TriggerId"</span>,<span class="string">"FragmentId"</span>);
+         <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:BuildIndex" title="Int_t TTree::BuildIndex(const char* majorname,const char* minorname=&quot;0&quot;)">BuildIndex</a>(<span class="string">"TriggerId"</span>,<span class="string">"FragmentId"</span>);
       }
       printf(DBLUE <span class="string">" done!"</span> RESET_COLOR <span class="string">"\n"</span>);
    }
 
    <span class="comment">//Set the branch to point at the Fragment Tree.</span>
-   TBranch *branch = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;GetBranch(<span class="string">"TFragment"</span>);
+   <a href="../TBranch.html">TBranch</a> *branch = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:GetBranch" title="TBranch* TTree::GetBranch(const char* name)">GetBranch</a>(<span class="string">"TFragment"</span>);
    <span class="comment">//Make the <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragPtr" title="TFragment* TAnalysisTreeBuilder::fCurrentFragPtr">fCurrentFragPtr</a> point at the Fragment Tree.</span>
    branch-&gt;SetAddress(&amp;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragPtr" title="TFragment* TAnalysisTreeBuilder::fCurrentFragPtr">fCurrentFragPtr</a>);
    <span class="comment">//Load the fragment tree into the <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:MEM_SIZE" title="const size_t TAnalysisTreeBuilder::MEM_SIZE">MEM_SIZE</a> (described in the header and above) into memory</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-&gt;LoadBaskets(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:MEM_SIZE" title="const size_t TAnalysisTreeBuilder::MEM_SIZE">MEM_SIZE</a>);   
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragTree" title="TTree* TAnalysisTreeBuilder::fCurrentFragTree">fCurrentFragTree</a>-><a href="../TTree.html#TTree:LoadBaskets" title="Int_t TTree::LoadBaskets(Long64_t maxmemory=2000000000)">LoadBaskets</a>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:MEM_SIZE" title="const size_t TAnalysisTreeBuilder::MEM_SIZE">MEM_SIZE</a>);   
    printf(DRED <span class="string">"\t MEM_SIZE = %zd"</span> RESET_COLOR  <span class="string">"\n"</span>, <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:MEM_SIZE" title="const size_t TAnalysisTreeBuilder::MEM_SIZE">MEM_SIZE</a>);
    <span class="keyword">return</span>;
 }
@@ -528,9 +528,9 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:AddInputRootFile" title="void TGRSIOptions::AddInputRootFile(string&amp; input)">AddInputRootFile</a>(outfilename);
    <span class="keyword">if</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>)
       <span class="keyword">delete</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>;
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a> = <span class="keyword">new</span> TFile(outfilename.c_str(),<span class="string">"recreate"</span>);
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-&gt;SetCompressionSettings(1);
-   printf(<span class="string">"created output file: %s\n"</span>,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a> = <span class="keyword">new</span> <a href="../TFile.html">TFile</a>(outfilename.c_str(),<span class="string">"recreate"</span>);
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-><a href="../TFile.html#TFile:SetCompressionSettings" title="void TFile::SetCompressionSettings(Int_t settings=1)">SetCompressionSettings</a>(1);
+   printf(<span class="string">"created output file: %s\n"</span>,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
    <span class="keyword">return</span>;
 }
 
@@ -541,14 +541,14 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <span class="keyword">if</span>(!<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a> || !<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>)
       <span class="keyword">return</span>;
    <span class="comment">//Create a new Analysis Tree in the analysistree.root file.</span>
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-&gt;cd();
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-><a href="../TDirectoryFile.html#TDirectoryFile:cd" title="Bool_t TDirectoryFile::cd(const char* path=0)">cd</a>();
    <span class="keyword">if</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>)
       <span class="keyword">delete</span> <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>;
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a> = <span class="keyword">new</span> TTree(<span class="string">"AnalysisTree"</span>,<span class="string">"AnalysisTree"</span>);
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a> = <span class="keyword">new</span> <a href="../TTree.html">TTree</a>(<span class="string">"AnalysisTree"</span>,<span class="string">"AnalysisTree"</span>);
 
    <span class="comment">//Load in the run info</span>
    <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a> *info = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>;
-   TTree *tree = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>;
+   <a href="../TTree.html">TTree</a> *tree = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>;
 
    <span class="comment">//Set new branches in the analysis tree if the run info in the fragment tree says the detectors are in the data stream</span>
    <span class="keyword">int</span> basketSize = 128000; <span class="comment">//128000;</span>
@@ -560,8 +560,8 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <span class="comment">//if(info-&gt;Spice())     { tree-&gt;Bronch(<span class="string">"TSpice"</span>,<span class="string">"TSpice"</span>,&amp;spice); }//, basketSize); tree-&gt;SetBronch(<span class="string">"TS3"</span>,<span class="string">"TS3"</span>,&amp;s3); }//, basketSize); } </span>
    <span class="comment">//if(info-&gt;Tip())       { tree-&gt;Bronch(<span class="string">"TTip"</span>,<span class="string">"TTip"</span>,&amp;tip); }//, basketSize); } </span>
 
-   <span class="keyword">if</span>(info-&gt;Griffin())   { TBranch *branch = tree-&gt;Bronch(<span class="string">"TGriffin"</span>,<span class="string">"TGriffin"</span>,&amp;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>, basketSize, 99);}<span class="comment">// branch-&gt;SetAddress(0);} </span>
-   <span class="keyword">if</span>(info-&gt;Sceptar())   { TBranch *branch = tree-&gt;Bronch(<span class="string">"TSceptar"</span>,<span class="string">"TSceptar"</span>,&amp;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a>, basketSize, 99);}<span class="comment">// branch-&gt;SetAddress(0);} </span>
+   <span class="keyword">if</span>(info-&gt;Griffin())   { <a href="../TBranch.html">TBranch</a> *branch = tree-&gt;Bronch(<span class="string">"TGriffin"</span>,<span class="string">"TGriffin"</span>,&amp;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>, basketSize, 99);}<span class="comment">// branch-&gt;SetAddress(0);} </span>
+   <span class="keyword">if</span>(info-&gt;Sceptar())   { <a href="../TBranch.html">TBranch</a> *branch = tree-&gt;Bronch(<span class="string">"TSceptar"</span>,<span class="string">"TSceptar"</span>,&amp;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a>, basketSize, 99);}<span class="comment">// branch-&gt;SetAddress(0);} </span>
    <span class="keyword">if</span>(info-&gt;Paces())     { tree-&gt;Bronch(<span class="string">"TPaces"</span>,<span class="string">"TPaces"</span>,&amp;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a>, basketSize,99); }<span class="comment">//, basketSize); } </span>
    <span class="comment">//if(info-&gt;Dante())     { tree-&gt;Bronch(<span class="string">"TDante"</span>,<span class="string">"TDante"</span>,&amp;dante); }//, basketSize); } </span>
    <span class="comment">//if(info-&gt;ZeroDegree()){ tree-&gt;Bronch(<span class="string">"TZeroDegree"</span>,<span class="string">"TZeroDegree"</span>,&amp;zerodegree); }//, basketSize); } </span>
@@ -582,22 +582,22 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <span class="keyword">if</span>(!<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a> || !<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>)
       <span class="keyword">return</span>;
    <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a> *info = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>;
-   TTree *tree = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>;
+   <a href="../TTree.html">TTree</a> *tree = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>;
 
    <span class="keyword">if</span>(info-&gt;Tigress())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:tigress" title="TTigress* TAnalysisTreeBuilder::tigress">tigress</a>-><a href="../TTigress.html#TTigress:Clear" title="void TTigress::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); }
    <span class="keyword">if</span>(info-&gt;Sharc())     { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sharc" title="TSharc* TAnalysisTreeBuilder::sharc">sharc</a>-><a href="../TSharc.html#TSharc:Clear" title="void TSharc::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }
    <span class="keyword">if</span>(info-&gt;TriFoil())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a>-><a href="../TTriFoil.html#TTriFoil:Clear" title="void TTriFoil::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); }
-   <span class="comment">//if(info-&gt;Rf())        { rf-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="comment">//if(info-&gt;Rf())        { rf-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
    <span class="keyword">if</span>(info-&gt;CSM())       { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:csm" title="TCSM* TAnalysisTreeBuilder::csm">csm</a>-><a href="../TCSM.html#TCSM:Clear" title="void TCSM::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }
-   <span class="comment">//if(info-&gt;Spice())     { spice-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); s3-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
-   <span class="comment">//if(info-&gt;Tip())       { tip-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="comment">//if(info-&gt;Spice())     { spice-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); s3-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="comment">//if(info-&gt;Tip())       { tip-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
 <span class="comment">//printf(<span class="string">"clearing griffin 0x08%x\n"</span>,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>);</span>
 <span class="comment">//<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>-><a href="../TGriffin.html#TGriffin:Print" title="void TGriffin::Print(Option_t* opt=&quot;&quot;)">Print</a>();</span>
    <span class="keyword">if</span>(info-&gt;Griffin())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>-><a href="../TGriffin.html#TGriffin:Clear" title="void TGriffin::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); }
    <span class="keyword">if</span>(info-&gt;Sceptar())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a>-><a href="../TSceptar.html#TSceptar:Clear" title="void TSceptar::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); }
    <span class="keyword">if</span>(info-&gt;Paces())     { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a>-><a href="../TPaces.html#TPaces:Clear" title="void TPaces::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(); } 
-   <span class="comment">//if(info-&gt;Dante())     { dante-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
-   <span class="comment">//if(info-&gt;ZeroDegree()){ zerodegree-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="comment">//if(info-&gt;Dante())     { dante-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="comment">//if(info-&gt;ZeroDegree()){ zerodegree-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
    <span class="keyword">if</span>(info-&gt;Descant())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a>-><a href="../TDescant.html#TDescant:Clear" title="void TDescant::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();}
    <span class="comment">//printf(<span class="string">"ClearActiveAnalysisTreeBranches done\n"</span>);</span>
 }
@@ -608,23 +608,23 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <span class="keyword">if</span>(!<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a> || !<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>)
       <span class="keyword">return</span>;
    <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a> *info = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>;
-   TTree *tree = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>;
+   <a href="../TTree.html">TTree</a> *tree = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>;
 
-   <span class="keyword">if</span>(info-&gt;Tigress())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:tigress" title="TTigress* TAnalysisTreeBuilder::tigress">tigress</a> = 0; }<span class="comment">//-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
-   <span class="keyword">if</span>(info-&gt;Sharc())     { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sharc" title="TSharc* TAnalysisTreeBuilder::sharc">sharc</a> = 0; }<span class="comment">//-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
-   <span class="keyword">if</span>(info-&gt;TriFoil())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a> = 0; }<span class="comment">//-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
-   <span class="comment">//if(info-&gt;Rf())        { rf-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
-   <span class="keyword">if</span>(info-&gt;CSM())       { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:csm" title="TCSM* TAnalysisTreeBuilder::csm">csm</a> = 0; }<span class="comment">//-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
-   <span class="comment">//if(info-&gt;Spice())     { spice-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); s3-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
-   <span class="comment">//if(info-&gt;Tip())       { tip-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="keyword">if</span>(info-&gt;Tigress())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:tigress" title="TTigress* TAnalysisTreeBuilder::tigress">tigress</a> = 0; }<span class="comment">//-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
+   <span class="keyword">if</span>(info-&gt;Sharc())     { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sharc" title="TSharc* TAnalysisTreeBuilder::sharc">sharc</a> = 0; }<span class="comment">//-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
+   <span class="keyword">if</span>(info-&gt;TriFoil())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:triFoil" title="TTriFoil* TAnalysisTreeBuilder::triFoil">triFoil</a> = 0; }<span class="comment">//-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
+   <span class="comment">//if(info-&gt;Rf())        { rf-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="keyword">if</span>(info-&gt;CSM())       { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:csm" title="TCSM* TAnalysisTreeBuilder::csm">csm</a> = 0; }<span class="comment">//-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
+   <span class="comment">//if(info-&gt;Spice())     { spice-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); s3-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="comment">//if(info-&gt;Tip())       { tip-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
 <span class="comment">//printf(<span class="string">"clearing griffin 0x08%x\n"</span>,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>);</span>
 <span class="comment">//<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a>-><a href="../TGriffin.html#TGriffin:Print" title="void TGriffin::Print(Option_t* opt=&quot;&quot;)">Print</a>();</span>
-   <span class="keyword">if</span>(info-&gt;Griffin())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a> = 0; }<span class="comment">//-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
-   <span class="keyword">if</span>(info-&gt;Sceptar())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a> = 0; }<span class="comment">//-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
-   <span class="keyword">if</span>(info-&gt;Paces())     { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a> = 0; }<span class="comment">//-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
-   <span class="comment">//if(info-&gt;Dante())     { dante-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
-   <span class="comment">//if(info-&gt;ZeroDegree()){ zerodegree-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
-   <span class="keyword">if</span>(info-&gt;Descant())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a> = 0; }<span class="comment">//-&gt;<a href="../#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();}</span>
+   <span class="keyword">if</span>(info-&gt;Griffin())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a> = 0; }<span class="comment">//-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
+   <span class="keyword">if</span>(info-&gt;Sceptar())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:sceptar" title="TSceptar* TAnalysisTreeBuilder::sceptar">sceptar</a> = 0; }<span class="comment">//-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); }</span>
+   <span class="keyword">if</span>(info-&gt;Paces())     { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a> = 0; }<span class="comment">//-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="comment">//if(info-&gt;Dante())     { dante-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="comment">//if(info-&gt;ZeroDegree()){ zerodegree-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>(); } </span>
+   <span class="keyword">if</span>(info-&gt;Descant())   { <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:descant" title="TDescant* TAnalysisTreeBuilder::descant">descant</a> = 0; }<span class="comment">//-&gt;<a href="../TObject.html#TObject:Clear" title="void TObject::Clear(Option_t* =&quot;&quot;)">Clear</a>();}</span>
    <span class="comment">//printf(<span class="string">"ClearActiveAnalysisTreeBranches done\n"</span>);</span>
 }
 
@@ -641,7 +641,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <span class="keyword">if</span>(!<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a> || !<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>)
       <span class="keyword">return</span>;
    <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a> *info = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentRunInfo" title="TGRSIRunInfo* TAnalysisTreeBuilder::fCurrentRunInfo">fCurrentRunInfo</a>;
-   TTree *tree = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>;
+   <a href="../TTree.html">TTree</a> *tree = <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>;
 
    <span class="keyword">for</span>(<span class="keyword">auto</span> det = detectors-&gt;begin(); det != detectors-&gt;end(); det++) {
       det-&gt;second-&gt;BuildHits();
@@ -655,7 +655,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 }
 
 <a name="GslwJE"></a><span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>::<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:WriteAnalysisTree" title="void TAnalysisTreeBuilder::WriteAnalysisTree()">WriteAnalysisTree</a>() {
-   <span class="comment">//<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a> the analysis tree to the root file. We do this by filling the analysis tree with each</span>
+   <span class="comment">//<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a> the analysis tree to the root file. We do this by filling the analysis tree with each</span>
    <span class="comment">//of the built events in the write Q.</span>
    <span class="keyword">int</span> counter = 0;
    <span class="keyword">while</span>(TWriteQueue::Size() &gt; 0 || TEventQueue::Size() &gt; 0 || !fSortFragmentDone) {
@@ -693,9 +693,9 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
          <span class="comment">//*rf = *((TRf*) det-&gt;second);</span>
       } <span class="keyword">else</span> <span class="keyword">if</span>(strcmp(det-&gt;first,<span class="string">"CS"</span>) == 0) {
          <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:csm" title="TCSM* TAnalysisTreeBuilder::csm">csm</a> = (<a href="../TCSM.html">TCSM</a>*) det-&gt;second;
-      <span class="comment">//} else if(strcmp(det-&gt;second-&gt;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:IsA" title="TClass* TAnalysisTreeBuilder::IsA()">IsA</a>()-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>(),<span class="string">"TSpice"</span>) == 0) {</span>
+      <span class="comment">//} else if(strcmp(det-&gt;second-&gt;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:IsA" title="TClass* TAnalysisTreeBuilder::IsA()">IsA</a>()-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),<span class="string">"TSpice"</span>) == 0) {</span>
          <span class="comment">//*spice = *((TSpice*) det-&gt;second);</span>
-      <span class="comment">//} else if(strcmp(det-&gt;second-&gt;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:IsA" title="TClass* TAnalysisTreeBuilder::IsA()">IsA</a>()-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>(),<span class="string">"TTip"</span>) == 0) {</span>
+      <span class="comment">//} else if(strcmp(det-&gt;second-&gt;<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:IsA" title="TClass* TAnalysisTreeBuilder::IsA()">IsA</a>()-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),<span class="string">"TTip"</span>) == 0) {</span>
          <span class="comment">//*tip = *((TTip*) det-&gt;second);</span>
       } <span class="keyword">else</span> <span class="keyword">if</span>(strcmp(det-&gt;first,<span class="string">"GR"</span>) == 0) {
          <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:griffin" title="TGriffin* TAnalysisTreeBuilder::griffin">griffin</a> = (<a href="../TGriffin.html">TGriffin</a>*) det-&gt;second;
@@ -707,7 +707,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
          <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:paces" title="TPaces* TAnalysisTreeBuilder::paces">paces</a> = (<a href="../TPaces.html">TPaces</a>*) det-&gt;second;
       } 
    }
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>-&gt;Fill();
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>-><a href="../TTree.html#TTree:Fill" title="Int_t TTree::Fill()">Fill</a>();
    
    <span class="comment">//<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:ClearActiveAnalysisTreeBranches" title="void TAnalysisTreeBuilder::ClearActiveAnalysisTreeBranches()">ClearActiveAnalysisTreeBranches</a>();	</span>
    <span class="comment">//Zero the detectors in the detector map</span>
@@ -730,20 +730,20 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
    <span class="comment">///******************************////</span>
    <span class="comment">// this will be removed and put into a seperate thread later.</span>
 
-   printf(<span class="string">"Writing file %s\n"</span>,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
+   printf(<span class="string">"Writing file %s\n"</span>,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
    <span class="comment">///******************************////</span>
    <span class="comment">///******************************////</span>
 
    <span class="keyword">if</span>(<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetNumberOfChannels" title="int TChannel::GetNumberOfChannels()">GetNumberOfChannels</a>()&gt;0) {
      <a href="../TChannel.html">TChannel</a> *c = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetDefaultChannel" title="TChannel* TChannel::GetDefaultChannel()">GetDefaultChannel</a>();
-     c-&gt;<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
+     c-&gt;<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
    }
    <span class="comment">//<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:DeleteAllChannels" title="void TChannel::DeleteAllChannels()">DeleteAllChannels</a>();</span>
 
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-&gt;cd();
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-><a href="../TDirectoryFile.html#TDirectoryFile:cd" title="Bool_t TDirectoryFile::cd(const char* path=0)">cd</a>();
    <span class="keyword">if</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>)
-      <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>-&gt;<a href="../#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
-   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-&gt;Close();
+      <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a>-><a href="../TTree.html#TTree:Write" title="Int_t TTree::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a>();
+   <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-><a href="../TFile.html#TFile:Close" title="void TFile::Close(Option_t* option=&quot;&quot;)">Close</a>();
 
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisTree" title="TTree* TAnalysisTreeBuilder::fCurrentAnalysisTree">fCurrentAnalysisTree</a> = 0;
    <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a> = 0;
@@ -838,7 +838,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 <a name="gMEuFB"></a><span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>::<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:Print" title="void TAnalysisTreeBuilder::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) {
    <span class="comment">//Prints information about the Q's and threads in the AnalysisTreeBuilding process</span>
    <span class="keyword">if</span>(<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragFile" title="TFile* TAnalysisTreeBuilder::fCurrentFragFile">fCurrentFragFile</a> &amp;&amp; <a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>)
-      printf(DMAGENTA <span class="string">" %s/%s"</span> RESET_COLOR  <span class="string">"\n"</span>,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragFile" title="TFile* TAnalysisTreeBuilder::fCurrentFragFile">fCurrentFragFile</a>-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>(),<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
+      printf(DMAGENTA <span class="string">" %s/%s"</span> RESET_COLOR  <span class="string">"\n"</span>,<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentFragFile" title="TFile* TAnalysisTreeBuilder::fCurrentFragFile">fCurrentFragFile</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:fCurrentAnalysisFile" title="TFile* TAnalysisTreeBuilder::fCurrentAnalysisFile">fCurrentAnalysisFile</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
    printf(DMAGENTA <span class="string">" fSortFragmentDone         = %s"</span> RESET_COLOR <span class="string">"\n"</span>,fSortFragmentDone ? <span class="string">"true"</span>:<span class="string">"false"</span>);
    printf(DYELLOW  <span class="string">" TEventQueue::Size()       = %i"</span> RESET_COLOR <span class="string">"\n"</span>,TEventQueue::Size());
    printf(DBLUE    <span class="string">" TWriteQueue::Size()       = %i"</span> RESET_COLOR <span class="string">"\n"</span>,TWriteQueue::Size());
@@ -850,7 +850,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 
 <a name="trrGIC"></a><span class="keyword">void</span> <a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>::<a href="../TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:Status" title="void TAnalysisTreeBuilder::Status()">Status</a>() {
    <span class="comment">//Prints the current status for each of the threads in the TAnalysisTree Building process</span>
-   TStopwatch w;
+   <a href="../TStopwatch.html">TStopwatch</a> w;
    w.Start();
    <span class="keyword">bool</span> fragmentsDone = <span class="keyword">false</span>;
    <span class="keyword">bool</span> sortingDone = <span class="keyword">false</span>;
@@ -910,7 +910,7 @@ ClassImp(<a href="../TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

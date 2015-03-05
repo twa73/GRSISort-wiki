@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:32 2015            -->
+<!--   Date: Wed Mar  4 20:40:12 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -32,8 +32,8 @@
 <span class="cpp">#ifndef __CINT__</span>
 <span class="cpp">#endif</span>
 
-<span class="cpp">#include "TMath.h"</span>
-<span class="cpp">#include "TVector3.h"</span>
+<span class="cpp">#include "<a href="../TMath.h">TMath.h</a>"</span>
+<span class="cpp">#include "<a href="../TVector3.h">TVector3.h</a>"</span>
 
 <span class="cpp">#include "<a href="../TGRSIDetector.h">TGRSIDetector.h</a>"</span>
 
@@ -59,13 +59,13 @@
 		<span class="keyword">void</span> <a href="../TSharc.html#TSharc:RemoveHits" title="void TSharc::RemoveHits(vector&lt;TSharcHit&gt;* ,set&lt;int,less&lt;int&gt;,allocator&lt;int&gt; &gt;* )">RemoveHits</a>(std::vector&lt;<a href="../TSharcHit.html">TSharcHit</a>&gt;*,std::set&lt;<span class="keyword">int</span>&gt;*);	<span class="comment">//!</span>
 
 	<span class="keyword">public</span>: 
-<a name="A53WRD"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Short_t">Short_t</a>    <a href="../TSharc.html#TSharc:GetNumberOfHits" title="Short_t TSharc::GetNumberOfHits()">GetNumberOfHits</a>()   	{<span class="keyword">return</span> <a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.size();}	<span class="comment">//-&gt;</span>
-<a name="wW2Rg"></a>		<span class="keyword">inline</span> <a href="../TSharcHit.html">TSharcHit</a> *<a href="../TSharc.html#TSharc:GetHit" title="TSharcHit* TSharc::GetHit(int i)">GetHit</a>(<span class="keyword">int</span> i)		   {<span class="keyword">return</span> &amp;<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.at(i);}	<span class="comment">//-&gt;</span>
-    <span class="keyword">static</span> TVector3 <a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>(<span class="keyword">int</span> detector, <span class="keyword">int</span> frontstrip, <span class="keyword">int</span> backstrip, <span class="keyword">double</span> X=0.00, <span class="keyword">double</span> Y=0.00, <span class="keyword">double</span> Z=0.00);	<span class="comment">//! </span>
+<a name="A53WRD"></a>		<span class="keyword">inline</span> <a href="../ListOfTypes.html#Short_t">Short_t</a>    <a href="../TSharc.html#TSharc:GetNumberOfHits" title="Short_t TSharc::GetNumberOfHits()">GetNumberOfHits</a>()   	{<span class="keyword">return</span> <a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:size" title="vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size_type vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size()">size</a>();}	<span class="comment">//-&gt;</span>
+<a name="wW2Rg"></a>		<span class="keyword">inline</span> <a href="../TSharcHit.html">TSharcHit</a> *<a href="../TSharc.html#TSharc:GetHit" title="TSharcHit* TSharc::GetHit(int i)">GetHit</a>(<span class="keyword">int</span> i)		   {<span class="keyword">return</span> &amp;<a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:at" title="vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::reference vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::at(vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size_type n) or overloads">at</a>(i);}	<span class="comment">//-&gt;</span>
+    <span class="keyword">static</span> <a href="../TVector3.html">TVector3</a> <a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector,int frontstrip,int backstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>(<span class="keyword">int</span> detector, <span class="keyword">int</span> frontstrip, <span class="keyword">int</span> backstrip, <span class="keyword">double</span> X=0.00, <span class="keyword">double</span> Y=0.00, <span class="keyword">double</span> Z=0.00);	<span class="comment">//! </span>
 
 		<span class="keyword">void</span> <a href="../TSharc.html#TSharc:BuildHits" title="void TSharc::BuildHits(TGRSIDetectorData* sd=0,Option_t* =&quot;&quot;)">BuildHits</a>(TGRSIDetectorData *sd=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>);			   <span class="comment">//!</span>
 
-<a name="hOolaD"></a>		<span class="keyword">int</span> <a href="../TSharc.html#TSharc:GetMultiplicity" title="int TSharc::GetMultiplicity()">GetMultiplicity</a>() { <span class="keyword">return</span> <a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.size(); } <span class="comment">//!</span>
+<a name="hOolaD"></a>		<span class="keyword">int</span> <a href="../TSharc.html#TSharc:GetMultiplicity" title="int TSharc::GetMultiplicity()">GetMultiplicity</a>() { <span class="keyword">return</span> <a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:size" title="vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size_type vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::size()">size</a>(); } <span class="comment">//!</span>
 
 		<span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TSharc.html#TSharc:Clear" title="void TSharc::Clear(Option_t* =&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>);		<span class="comment">//!</span>
 		<span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TSharc.html#TSharc:Print" title="void TSharc::Print(Option_t* =&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>);		<span class="comment">//!</span>
@@ -119,7 +119,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

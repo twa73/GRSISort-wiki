@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:31 2015            -->
+<!--   Date: Wed Mar  4 20:40:10 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -30,10 +30,10 @@
 <span class="cpp">#include&lt;map&gt;</span>
 <span class="cpp">#include&lt;utility&gt;</span>
 
-<span class="cpp">#include"TGraph.h"</span>
-<span class="cpp">#include"TSpline.h"</span>
-<span class="cpp">#include"TH1.h"</span>
-<span class="cpp">#include"TF1.h"</span>
+<span class="cpp">#include"<a href="../TGraph.h">TGraph.h</a>"</span>
+<span class="cpp">#include"<a href="../TSpline.h">TSpline.h</a>"</span>
+<span class="cpp">#include"<a href="../TH1.h">TH1.h</a>"</span>
+<span class="cpp">#include"<a href="../TF1.h">TF1.h</a>"</span>
 
 <span class="cpp">#include&lt;iostream&gt;</span>
 
@@ -48,8 +48,8 @@
 
 	<span class="keyword">private</span>:
 		std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TSRIM.html#TSRIM:IonEnergy" title="vector&lt;double&gt; TSRIM::IonEnergy">IonEnergy</a>, <a href="../TSRIM.html#TSRIM:dEdX" title="vector&lt;double&gt; TSRIM::dEdX">dEdX</a>;
-		TGraph *<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>, *<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>, *<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>;
-    TSpline3 *<a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>, *<a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a>, *<a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a>; 
+		<a href="../TGraph.html">TGraph</a> *<a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>, *<a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>, *<a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>;
+    <a href="../TSpline3.html">TSpline3</a> *<a href="../TSRIM.html#TSRIM:sEnergyLoss" title="TSpline3* TSRIM::sEnergyLoss">sEnergyLoss</a>, *<a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a>, *<a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a>; 
 		std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TSRIM.html#TSRIM:E" title="vector&lt;double&gt; TSRIM::E">E</a>; <span class="comment">// units of keV</span>
 		std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TSRIM.html#TSRIM:X" title="vector&lt;double&gt; TSRIM::X">X</a>; <span class="comment">// units of um</span>
     <span class="keyword">double</span> <a href="../TSRIM.html#TSRIM:Emin" title="double TSRIM::Emin">Emin</a>, <a href="../TSRIM.html#TSRIM:Emax" title="double TSRIM::Emax">Emax</a>, <a href="../TSRIM.html#TSRIM:Xmin" title="double TSRIM::Xmin">Xmin</a>, <a href="../TSRIM.html#TSRIM:Xmax" title="double TSRIM::Xmax">Xmax</a>;
@@ -71,11 +71,11 @@
 <a name="TkJffC"></a>    <span class="keyword">double</span> <a href="../TSRIM.html#TSRIM:GetXmax" title="double TSRIM::GetXmax()">GetXmax</a>(){ <span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:Xmax" title="double TSRIM::Xmax">Xmax</a>;};
 <a name="JHnBVE"></a>    <span class="keyword">double</span> <a href="../TSRIM.html#TSRIM:GetXmin" title="double TSRIM::GetXmin()">GetXmin</a>(){ <span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:Xmin" title="double TSRIM::Xmin">Xmin</a>;};
 
-<a name="f8EpCD"></a>		TGraph *<a href="../TSRIM.html#TSRIM:GetEnergyLossGraph" title="TGraph* TSRIM::GetEnergyLossGraph()">GetEnergyLossGraph</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>;};
-<a name="WBn7FD"></a>		TGraph *<a href="../TSRIM.html#TSRIM:GetEvsXGraph" title="TGraph* TSRIM::GetEvsXGraph()">GetEvsXGraph</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>;};
-<a name="v6hpZB"></a>		TGraph *<a href="../TSRIM.html#TSRIM:GetXvsEGraph" title="TGraph* TSRIM::GetXvsEGraph()">GetXvsEGraph</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>;};
-<a name="bQ10HB"></a>		TSpline3 *<a href="../TSRIM.html#TSRIM:GetEvsXSpline" title="TSpline3* TSRIM::GetEvsXSpline()">GetEvsXSpline</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a>;};
-<a name="XZzvME"></a>		TSpline3 *<a href="../TSRIM.html#TSRIM:GetXvsESpline" title="TSpline3* TSRIM::GetXvsESpline()">GetXvsESpline</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a>;};
+<a name="f8EpCD"></a>		<a href="../TGraph.html">TGraph</a> *<a href="../TSRIM.html#TSRIM:GetEnergyLossGraph" title="TGraph* TSRIM::GetEnergyLossGraph()">GetEnergyLossGraph</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:fEnergyLoss" title="TGraph* TSRIM::fEnergyLoss">fEnergyLoss</a>;};
+<a name="WBn7FD"></a>		<a href="../TGraph.html">TGraph</a> *<a href="../TSRIM.html#TSRIM:GetEvsXGraph" title="TGraph* TSRIM::GetEvsXGraph()">GetEvsXGraph</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:fXgetE" title="TGraph* TSRIM::fXgetE">fXgetE</a>;};
+<a name="v6hpZB"></a>		<a href="../TGraph.html">TGraph</a> *<a href="../TSRIM.html#TSRIM:GetXvsEGraph" title="TGraph* TSRIM::GetXvsEGraph()">GetXvsEGraph</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:fEgetX" title="TGraph* TSRIM::fEgetX">fEgetX</a>;};
+<a name="bQ10HB"></a>		<a href="../TSpline3.html">TSpline3</a> *<a href="../TSRIM.html#TSRIM:GetEvsXSpline" title="TSpline3* TSRIM::GetEvsXSpline()">GetEvsXSpline</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:sXgetE" title="TSpline3* TSRIM::sXgetE">sXgetE</a>;};
+<a name="XZzvME"></a>		<a href="../TSpline3.html">TSpline3</a> *<a href="../TSRIM.html#TSRIM:GetXvsESpline" title="TSpline3* TSRIM::GetXvsESpline()">GetXvsESpline</a>() {<span class="keyword">return</span> <a href="../TSRIM.html#TSRIM:sEgetX" title="TSpline3* TSRIM::sEgetX">sEgetX</a>;};
 		ClassDef(<a href="../TSRIM.html">TSRIM</a>,0)
 };
 
@@ -88,7 +88,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

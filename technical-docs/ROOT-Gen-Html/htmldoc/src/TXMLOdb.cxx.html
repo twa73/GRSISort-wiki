@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:16:12 2015            -->
+<!--   Date: Wed Mar  4 20:40:44 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,29 +22,29 @@
 
 <span class="cpp">#include "<a href="../TXMLOdb.h">TXMLOdb.h</a>"</span>
 
-<span class="cpp">#include &lt;TList.h&gt;</span>
-<span class="cpp">#include &lt;TXMLAttr.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TList.h">TList.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TXMLAttr.h">TXMLAttr.h</a>&gt;</span>
 
 <a name="pnRohD"></a><a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:TXMLOdb" title="TXMLOdb TXMLOdb::TXMLOdb(char* buffer,int size=0) or overloads">TXMLOdb</a>(<span class="keyword">char</span> *buffer,<span class="keyword">int</span> size)   {
    <a href="../TXMLOdb.html#TXMLOdb:fOdb" title="TXMLNode* TXMLOdb::fOdb">fOdb</a> = 0;
    <a href="../TXMLOdb.html#TXMLOdb:fDoc" title="TXMLDocument* TXMLOdb::fDoc">fDoc</a> = 0;
    std::<a href="../ListOfTypes.html#ifstream">ifstream</a> input;
    input.open(buffer);
-   <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a> = <span class="keyword">new</span> TDOMParser;
-   <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a>-&gt;SetValidate(<span class="keyword">false</span>);
+   <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a> = <span class="keyword">new</span> <a href="../TDOMParser.html">TDOMParser</a>;
+   <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a>-><a href="../TXMLParser.html#TXMLParser:SetValidate" title="void TXMLParser::SetValidate(Bool_t val=kTRUE)">SetValidate</a>(<span class="keyword">false</span>);
    <span class="keyword">if</span>(input.is_open()) {
-      <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a>-&gt;ParseFile(buffer);
+      <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a>-><a href="../TDOMParser.html#TDOMParser:ParseFile" title="Int_t TDOMParser::ParseFile(const char* filename)">ParseFile</a>(buffer);
    } <span class="keyword">else</span> {
       <span class="comment">//printf(<span class="string">"0x%08x\t%i\n"</span>,buffer,size);</span>
-      <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a>-&gt;ParseBuffer(buffer,size);
+      <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a>-><a href="../TDOMParser.html#TDOMParser:ParseBuffer" title="Int_t TDOMParser::ParseBuffer(const char* buffer,Int_t len)">ParseBuffer</a>(buffer,size);
    }
-   <a href="../TXMLOdb.html#TXMLOdb:fDoc" title="TXMLDocument* TXMLOdb::fDoc">fDoc</a> = <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a>-&gt;GetXMLDocument();
+   <a href="../TXMLOdb.html#TXMLOdb:fDoc" title="TXMLDocument* TXMLOdb::fDoc">fDoc</a> = <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a>-><a href="../TDOMParser.html#TDOMParser:GetXMLDocument" title="TXMLDocument* TDOMParser::GetXMLDocument()">GetXMLDocument</a>();
    <span class="keyword">if</span> (!<a href="../TXMLOdb.html#TXMLOdb:fDoc" title="TXMLDocument* TXMLOdb::fDoc">fDoc</a>)   {
       fprintf(stderr,<span class="string">"XmlOdb::XmlOdb: Malformed ODB dump: cannot get XML document\n"</span>);
       <span class="keyword">return</span>;
    }
-   <a href="../TXMLOdb.html#TXMLOdb:fOdb" title="TXMLNode* TXMLOdb::fOdb">fOdb</a> =  <a href="../TXMLOdb.html#TXMLOdb:fDoc" title="TXMLDocument* TXMLOdb::fDoc">fDoc</a>-&gt;GetRootNode();
-   <span class="keyword">if</span>(strcmp(<a href="../TXMLOdb.html#TXMLOdb:fOdb" title="TXMLNode* TXMLOdb::fOdb">fOdb</a>-&gt;<a href="../TXMLOdb.html#TXMLOdb:GetNodeName" title="const char* TXMLOdb::GetNodeName(TXMLNode* )">GetNodeName</a>(),<span class="string">"odb"</span>)!=0) {
+   <a href="../TXMLOdb.html#TXMLOdb:fOdb" title="TXMLNode* TXMLOdb::fOdb">fOdb</a> =  <a href="../TXMLOdb.html#TXMLOdb:fDoc" title="TXMLDocument* TXMLOdb::fDoc">fDoc</a>-><a href="../TXMLDocument.html#TXMLDocument:GetRootNode" title="TXMLNode* TXMLDocument::GetRootNode()">GetRootNode</a>();
+   <span class="keyword">if</span>(strcmp(<a href="../TXMLOdb.html#TXMLOdb:fOdb" title="TXMLNode* TXMLOdb::fOdb">fOdb</a>-><a href="../TXMLNode.html#TXMLNode:GetNodeName" title="const char* TXMLNode::GetNodeName()">GetNodeName</a>(),<span class="string">"odb"</span>)!=0) {
       fprintf(stderr,<span class="string">"XmlOdb::XmlOdb: Malformed ODB dump: cannot find &lt;odb&gt; tag\n"</span>);
       <span class="keyword">return</span>;
    }  
@@ -57,7 +57,7 @@
       <span class="keyword">delete</span> <a href="../TXMLOdb.html#TXMLOdb:fParser" title="TDOMParser* TXMLOdb::fParser">fParser</a>;
 }
 
-<a name="HqVHxD"></a>TXMLNode *<a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:FindNode" title="TXMLNode* TXMLOdb::FindNode(const char* name,TXMLNode* node=0)">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name, TXMLNode *node) {
+<a name="HqVHxD"></a><a href="../TXMLNode.html">TXMLNode</a> *<a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:FindNode" title="TXMLNode* TXMLOdb::FindNode(const char* name,TXMLNode* node=0)">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name, <a href="../TXMLNode.html">TXMLNode</a> *node) {
    <span class="keyword">if</span>(!node) {
       <span class="keyword">if</span>(!<a href="../TXMLOdb.html#TXMLOdb:fOdb" title="TXMLNode* TXMLOdb::fOdb">fOdb</a>) {
          <span class="keyword">return</span> 0;
@@ -79,7 +79,7 @@
    <span class="keyword">return</span> 0;
 }
 
-<a name="WWLrzB"></a>TXMLNode *<a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(<span class="keyword">const</span> <span class="keyword">char</span> *path, TXMLNode *node) {
+<a name="WWLrzB"></a><a href="../TXMLNode.html">TXMLNode</a> *<a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(<span class="keyword">const</span> <span class="keyword">char</span> *path, <a href="../TXMLNode.html">TXMLNode</a> *node) {
    <span class="keyword">if</span>(!node) {
       <span class="keyword">if</span>(!<a href="../TXMLOdb.html#TXMLOdb:fOdb" title="TXMLNode* TXMLOdb::fOdb">fOdb</a>) {
          <span class="keyword">return</span> 0;
@@ -138,10 +138,10 @@
 }
 
 
-<a name="KV6r5D"></a><span class="keyword">const</span> <span class="keyword">char</span>* <a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:GetNodeName" title="const char* TXMLOdb::GetNodeName(TXMLNode* )">GetNodeName</a>(TXMLNode *node) {
-   TList *list = node-&gt;GetAttributes();
+<a name="KV6r5D"></a><span class="keyword">const</span> <span class="keyword">char</span>* <a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:GetNodeName" title="const char* TXMLOdb::GetNodeName(TXMLNode* )">GetNodeName</a>(<a href="../TXMLNode.html">TXMLNode</a> *node) {
+   <a href="../TList.html">TList</a> *list = node-&gt;GetAttributes();
    <span class="keyword">if</span>(list) {
-      std::string buffer = ((TXMLAttr*)(list-&gt;At(0)))-&gt;GetValue();
+      std::string buffer = ((<a href="../TXMLAttr.html">TXMLAttr</a>*)(list-&gt;At(0)))-&gt;GetValue();
       <span class="comment">//list-&gt;Delete();</span>
       <span class="keyword">return</span> buffer.c_str();
    } <span class="keyword">else</span> {
@@ -150,37 +150,37 @@
 }
 
 <a name="qo0DDD"></a><span class="keyword">int</span> <a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:ReadInt" title="int TXMLOdb::ReadInt(const char* path,int index=0,int defaultValue=0xffffffff)">ReadInt</a>(<span class="keyword">const</span> <span class="keyword">char</span> *path,<span class="keyword">int</span> index, <span class="keyword">int</span> defaultValue) {
-   TXMLNode *node = <a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(path);
+   <a href="../TXMLNode.html">TXMLNode</a> *node = <a href="../TXMLOdb.html#TXMLOdb:FindPath" title="TXMLNode* TXMLOdb::FindPath(const char* path,TXMLNode* node=0)">FindPath</a>(path);
    <span class="keyword">if</span>(!node)
       <span class="keyword">return</span> defaultValue;
    <span class="keyword">return</span> 0;
 }
 
 
-<a name="ym_NuE"></a>std::vector&lt;<span class="keyword">int</span>&gt; <a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:ReadIntArray" title="vector&lt;int&gt; TXMLOdb::ReadIntArray(TXMLNode* node)">ReadIntArray</a>(TXMLNode *node) {
+<a name="ym_NuE"></a>std::vector&lt;<span class="keyword">int</span>&gt; <a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:ReadIntArray" title="vector&lt;int&gt; TXMLOdb::ReadIntArray(TXMLNode* node)">ReadIntArray</a>(<a href="../TXMLNode.html">TXMLNode</a> *node) {
    std::vector&lt;<span class="keyword">int</span>&gt; temp;
    <span class="keyword">if</span>(!node)
       <span class="keyword">return</span> temp;
    <span class="keyword">if</span>(!node-&gt;HasChildren())
       <span class="keyword">return</span> temp;
-   TList *list = node-&gt;GetAttributes();
+   <a href="../TList.html">TList</a> *list = node-&gt;GetAttributes();
    <span class="keyword">if</span>(!list)
       <span class="keyword">return</span> temp;
-   TIter iter(list);
+   <a href="../TIter.html">TIter</a> iter(list);
    <span class="keyword">int</span> size = 0;
-   <span class="keyword">while</span>(TXMLAttr *attr =(TXMLAttr*)(iter.Next())) {
+   <span class="keyword">while</span>(<a href="../TXMLAttr.html">TXMLAttr</a> *attr =(<a href="../TXMLAttr.html">TXMLAttr</a>*)(iter.Next())) {
       <span class="keyword">if</span>(strcmp(attr-&gt;GetName(),<span class="string">"num_values"</span>)==0)
          size = atoi(attr-&gt;GetValue());
    }
 <span class="comment">//   printf(<span class="string">"size = %i\n"</span>,size);</span>
    temp.assign(size,0);
-   TXMLNode *child = node-&gt;GetChildren();
+   <a href="../TXMLNode.html">TXMLNode</a> *child = node-&gt;GetChildren();
 	<span class="keyword">int</span> counter = 0;
    <span class="keyword">while</span>(<span class="keyword">true</span>) {
-      <span class="keyword">if</span>(TList *index = child-&gt;GetAttributes()){
-         <span class="comment">//printf(<span class="string">"index = %i\n"</span>,atoi(((TXMLAttr*)(index-&gt;At(0)))-&gt;GetValue()));</span>
+      <span class="keyword">if</span>(<a href="../TList.html">TList</a> *index = child-&gt;GetAttributes()){
+         <span class="comment">//printf(<span class="string">"index = %i\n"</span>,atoi(((<a href="../TXMLAttr.html">TXMLAttr</a>*)(index-&gt;At(0)))-&gt;GetValue()));</span>
          <span class="comment">//printf(<span class="string">"value = %s\t%i\n"</span>,child-&gt;GetText(),atoi(child-&gt;GetText()));</span>
-         <span class="keyword">int</span> indexnum = atoi(((TXMLAttr*)(index-&gt;At(0)))-&gt;GetValue());
+         <span class="keyword">int</span> indexnum = atoi(((<a href="../TXMLAttr.html">TXMLAttr</a>*)(index-&gt;At(0)))-&gt;GetValue());
          <span class="keyword">int</span> value = atoi(child-&gt;GetText());
 <span class="comment">//         printf(<span class="string">"indexnum %i : value 0x%08x\n"</span>,indexnum,value);</span>
          temp.at(indexnum) = value;
@@ -198,31 +198,31 @@
 }
 
 
-<a name="fxLSW"></a>std::vector&lt;std::string&gt; <a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:ReadStringArray" title="vector&lt;std::string&gt; TXMLOdb::ReadStringArray(TXMLNode* node)">ReadStringArray</a>(TXMLNode *node) {
+<a name="fxLSW"></a>std::vector&lt;std::string&gt; <a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:ReadStringArray" title="vector&lt;std::string&gt; TXMLOdb::ReadStringArray(TXMLNode* node)">ReadStringArray</a>(<a href="../TXMLNode.html">TXMLNode</a> *node) {
    std::vector&lt;std::string&gt; temp;
    <span class="keyword">if</span>(!node)
       <span class="keyword">return</span> temp;
    <span class="keyword">if</span>(!node-&gt;HasChildren())
       <span class="keyword">return</span> temp;
-   TList *list = node-&gt;GetAttributes();
+   <a href="../TList.html">TList</a> *list = node-&gt;GetAttributes();
    <span class="keyword">if</span>(!list)
       <span class="keyword">return</span> temp;
-   TIter iter(list);
+   <a href="../TIter.html">TIter</a> iter(list);
    <span class="keyword">int</span> size = 0;
-   <span class="keyword">while</span>(TXMLAttr *attr =(TXMLAttr*)(iter.Next())) {
+   <span class="keyword">while</span>(<a href="../TXMLAttr.html">TXMLAttr</a> *attr =(<a href="../TXMLAttr.html">TXMLAttr</a>*)(iter.Next())) {
       <span class="keyword">if</span>(strcmp(attr-&gt;GetName(),<span class="string">"num_values"</span>)==0)
          size = atoi(attr-&gt;GetValue());
    }
 <span class="comment">//   printf(<span class="string">"size = %i\n"</span>,size);</span>
    temp.assign(size,<span class="string">""</span>);
-   TXMLNode *child = node-&gt;GetChildren();
+   <a href="../TXMLNode.html">TXMLNode</a> *child = node-&gt;GetChildren();
 	<span class="keyword">int</span> counter = 0;
    <span class="keyword">while</span>(<span class="keyword">true</span>) {
 <span class="comment">//     printf(<span class="string">"here\n"</span>);</span>
-      <span class="keyword">if</span>(TList *index = child-&gt;GetAttributes()){
-         <span class="comment">//printf(<span class="string">"index = %i\n"</span>,atoi(((TXMLAttr*)(index-&gt;At(0)))-&gt;GetValue()));</span>
+      <span class="keyword">if</span>(<a href="../TList.html">TList</a> *index = child-&gt;GetAttributes()){
+         <span class="comment">//printf(<span class="string">"index = %i\n"</span>,atoi(((<a href="../TXMLAttr.html">TXMLAttr</a>*)(index-&gt;At(0)))-&gt;GetValue()));</span>
          <span class="comment">//printf(<span class="string">"value = %s\t%i\n"</span>,child-&gt;GetText(),atoi(child-&gt;GetText()));</span>
-         <span class="keyword">int</span> indexnum = atoi(((TXMLAttr*)(index-&gt;At(0)))-&gt;GetValue());
+         <span class="keyword">int</span> indexnum = atoi(((<a href="../TXMLAttr.html">TXMLAttr</a>*)(index-&gt;At(0)))-&gt;GetValue());
          std::string value = child-&gt;GetText();
 <span class="comment">//         printf(<span class="string">"indexnum %i : value 0x%08x\n"</span>,indexnum,value);</span>
          temp.at(indexnum) = value;
@@ -239,31 +239,31 @@
 }
 
 
-<a name="E8xajC"></a>std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:ReadDoubleArray" title="vector&lt;double&gt; TXMLOdb::ReadDoubleArray(TXMLNode* node)">ReadDoubleArray</a>(TXMLNode *node) {
+<a name="E8xajC"></a>std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TXMLOdb.html">TXMLOdb</a>::<a href="../TXMLOdb.html#TXMLOdb:ReadDoubleArray" title="vector&lt;double&gt; TXMLOdb::ReadDoubleArray(TXMLNode* node)">ReadDoubleArray</a>(<a href="../TXMLNode.html">TXMLNode</a> *node) {
    std::vector&lt;<span class="keyword">double</span>&gt; temp;
    <span class="keyword">if</span>(!node)
       <span class="keyword">return</span> temp;
    <span class="keyword">if</span>(!node-&gt;HasChildren())
       <span class="keyword">return</span> temp;
-   TList *list = node-&gt;GetAttributes();
+   <a href="../TList.html">TList</a> *list = node-&gt;GetAttributes();
    <span class="keyword">if</span>(!list)
       <span class="keyword">return</span> temp;
-   TIter iter(list);
+   <a href="../TIter.html">TIter</a> iter(list);
    <span class="keyword">int</span> size = 0;
-   <span class="keyword">while</span>(TXMLAttr *attr =(TXMLAttr*)(iter.Next())) {
+   <span class="keyword">while</span>(<a href="../TXMLAttr.html">TXMLAttr</a> *attr =(<a href="../TXMLAttr.html">TXMLAttr</a>*)(iter.Next())) {
       <span class="keyword">if</span>(strcmp(attr-&gt;GetName(),<span class="string">"num_values"</span>)==0)
          size = atoi(attr-&gt;GetValue());
    }
 <span class="comment">//   printf(<span class="string">"size = %i\n"</span>,size);</span>
    temp.assign(size,0.0);
-   TXMLNode *child = node-&gt;GetChildren();
+   <a href="../TXMLNode.html">TXMLNode</a> *child = node-&gt;GetChildren();
 	<span class="keyword">int</span> counter = 0;
    <span class="keyword">while</span>(<span class="keyword">true</span>) {
 <span class="comment">//      printf(<span class="string">"here\n"</span>);</span>
-      <span class="keyword">if</span>(TList *index = child-&gt;GetAttributes()){
-         <span class="comment">//printf(<span class="string">"index = %i\n"</span>,atoi(((TXMLAttr*)(index-&gt;At(0)))-&gt;GetValue()));</span>
+      <span class="keyword">if</span>(<a href="../TList.html">TList</a> *index = child-&gt;GetAttributes()){
+         <span class="comment">//printf(<span class="string">"index = %i\n"</span>,atoi(((<a href="../TXMLAttr.html">TXMLAttr</a>*)(index-&gt;At(0)))-&gt;GetValue()));</span>
          <span class="comment">//printf(<span class="string">"value = %s\t%i\n"</span>,child-&gt;GetText(),atoi(child-&gt;GetText()));</span>
-         <span class="keyword">int</span> indexnum = atoi(((TXMLAttr*)(index-&gt;At(0)))-&gt;GetValue());
+         <span class="keyword">int</span> indexnum = atoi(((<a href="../TXMLAttr.html">TXMLAttr</a>*)(index-&gt;At(0)))-&gt;GetValue());
          <span class="keyword">double</span> value = atof(child-&gt;GetText());
 <span class="comment">//         printf(<span class="string">"indexnum %i : value 0x%08x\n"</span>,indexnum,value);</span>
          temp.at(indexnum) = value;
@@ -286,7 +286,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:16 </em><em>&raquo; Last generated: 2015-03-04 13:16</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

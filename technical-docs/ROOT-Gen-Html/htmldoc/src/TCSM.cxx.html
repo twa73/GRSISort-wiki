@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:18 2015            -->
+<!--   Date: Wed Mar  4 20:39:15 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -19,7 +19,7 @@
 <body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
 <div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
 <div id="codeAndLineNumbers"><pre class="listing">
-<span class="cpp">#include &lt;TMath.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TMath.h">TMath.h</a>&gt;</span>
 <span class="cpp">#include "<a href="../TCSM.h">TCSM.h</a>"</span>
 <span class="cpp">#define RECOVERHITS 1</span>
 
@@ -29,7 +29,7 @@ ClassImp(<a href="../TCSM.html">TCSM</a>)
 
 <a name="kNYAp"></a><a href="../TCSM.html">TCSM</a>::<a href="../TCSM.html#TCSM:TCSM" title="TCSM TCSM::TCSM() or overloads">TCSM</a>() : <a href="../TCSM.html#TCSM:data" title="TCSMData* TCSM::data">data</a>(0)
 {
-  <a href="../TCSM.html#TCSM:Class" title="TClass* TCSM::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<span class="keyword">true</span>);
+  <a href="../TCSM.html#TCSM:Class" title="TClass* TCSM::Class()">Class</a>()-><a href="../TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<span class="keyword">true</span>);
   <span class="comment">//InitializeSRIMInputs();</span>
   <a href="../TCSM.html#TCSM:AlmostEqualWindow" title="double TCSM::AlmostEqualWindow">AlmostEqualWindow</a> = .1;
 }
@@ -185,14 +185,14 @@ ClassImp(<a href="../TCSM.html">TCSM</a>)
   <a href="../TCSM.html#TCSM:BuilddEE" title="void TCSM::BuilddEE(vector&lt;TCSMHit&gt;&amp; ,vector&lt;TCSMHit&gt;&amp; ,vector&lt;TCSMHit&gt;&amp; )">BuilddEE</a>(D_Hits,E_Hits,<a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>);
 
   <span class="comment">/* This prints the built hits
-  if(<a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.size()&gt;2)
+  if(<a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.<a href="../vector_TCSMHit_.html#vector_TCSMHit_:size" title="vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::size_type vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::size()">size</a>()&gt;2)
     <a href="../ListOfTypes.html#ostream">cout</a>&lt;&lt;DRED;
-  else if(<a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.size()&gt;1)
+  else if(<a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.<a href="../vector_TCSMHit_.html#vector_TCSMHit_:size" title="vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::size_type vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::size()">size</a>()&gt;1)
     <a href="../ListOfTypes.html#ostream">cout</a>&lt;&lt;DGREEN;  
   
-  for(<a href="../ListOfTypes.html#int">int</a> finaliter=0;finaliter&lt;<a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.size();finaliter++)
+  for(<a href="../ListOfTypes.html#int">int</a> finaliter=0;finaliter&lt;<a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.<a href="../vector_TCSMHit_.html#vector_TCSMHit_:size" title="vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::size_type vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::size()">size</a>();finaliter++)
   {
-    <a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.at(finaliter).<a href="../TCSM.html#TCSM:Print" title="void TCSM::Print(Option_t* =&quot;&quot;)">Print</a>();
+    <a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.<a href="../vector_TCSMHit_.html#vector_TCSMHit_:at" title="vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::reference vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::at(vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::size_type n) or overloads">at</a>(finaliter).<a href="../TCSM.html#TCSM:Print" title="void TCSM::Print(Option_t* =&quot;&quot;)">Print</a>();
   }
   <a href="../ListOfTypes.html#ostream">cout</a>&lt;&lt;RESET_COLOR;
   */</span>
@@ -204,8 +204,8 @@ ClassImp(<a href="../TCSM.html">TCSM</a>)
   <span class="comment">//<a href="../ListOfTypes.html#ostream">cout</a> &lt;&lt; <span class="string">"clearing "</span> &lt;&lt; endl;</span>
   <span class="keyword">if</span>(<a href="../TCSM.html#TCSM:data" title="TCSMData* TCSM::data">data</a>) <a href="../TCSM.html#TCSM:data" title="TCSMData* TCSM::data">data</a>-&gt;<a href="../TCSM.html#TCSM:Clear" title="void TCSM::Clear(Option_t* =&quot;&quot;)">Clear</a>();
 
-  <a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.clear();
-  <span class="comment">//<a href="../ListOfTypes.html#ostream">cout</a> &lt;&lt;<span class="string">" size: "</span> &lt;&lt; <a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.size() &lt;&lt; endl;</span>
+  <a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.<a href="../vector_TCSMHit_.html#vector_TCSMHit_:clear" title="void vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::clear()">clear</a>();
+  <span class="comment">//<a href="../ListOfTypes.html#ostream">cout</a> &lt;&lt;<span class="string">" size: "</span> &lt;&lt; <a href="../TCSM.html#TCSM:csm_hits" title="vector&lt;TCSMHit&gt; TCSM::csm_hits">csm_hits</a>.<a href="../vector_TCSMHit_.html#vector_TCSMHit_:size" title="vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::size_type vector&lt;TCSMHit,allocator&lt;TCSMHit&gt; &gt;::size()">size</a>() &lt;&lt; endl;</span>
   <span class="keyword">return</span>;
 }
 
@@ -216,18 +216,18 @@ ClassImp(<a href="../TCSM.html">TCSM</a>)
 }
 
 
-<a name="NdRea"></a>TVector3 <a href="../TCSM.html">TCSM</a>::<a href="../TCSM.html#TCSM:GetPosition" title="TVector3 TCSM::GetPosition(int detector,char pos,int horizontalstrip,int verticalstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>(<span class="keyword">int</span> detector,<span class="keyword">char</span> pos, <span class="keyword">int</span> horizontalstrip, <span class="keyword">int</span> verticalstrip, <span class="keyword">double</span> X, <span class="keyword">double</span> Y, <span class="keyword">double</span> Z)
+<a name="NdRea"></a><a href="../TVector3.html">TVector3</a> <a href="../TCSM.html">TCSM</a>::<a href="../TCSM.html#TCSM:GetPosition" title="TVector3 TCSM::GetPosition(int detector,char pos,int horizontalstrip,int verticalstrip,double X=0.00,double Y=0.00,double Z=0.00)">GetPosition</a>(<span class="keyword">int</span> detector,<span class="keyword">char</span> pos, <span class="keyword">int</span> horizontalstrip, <span class="keyword">int</span> verticalstrip, <span class="keyword">double</span> X, <span class="keyword">double</span> Y, <span class="keyword">double</span> Z)
 {
   <span class="comment">//horizontal strips collect N charge!</span>
   <span class="comment">//vertical strips collect P charge!</span>
-  TVector3 Pos;
+  <a href="../TVector3.html">TVector3</a> Pos;
   <span class="keyword">double</span> SideX = 68;
   <span class="keyword">double</span> SideZ = -4.8834;
   <span class="keyword">double</span> dEX = 54.9721;
   <span class="keyword">double</span> dEZ = 42.948977;
   <span class="keyword">double</span> EX = 58.062412;
   <span class="keyword">double</span> EZ = 48.09198;
-  <span class="keyword">double</span> detTheta = 31. * (TMath::Pi()/180.);
+  <span class="keyword">double</span> detTheta = 31. * (<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Pi" title="Double_t TMath::Pi()">Pi</a>()/180.);
   <span class="keyword">double</span> x = 0.0,y = 0.0,z = 0.0;
 
   <span class="keyword">if</span>(detector==3&amp;&amp;pos==<span class="string">'D'</span>)
@@ -827,7 +827,7 @@ ClassImp(<a href="../TCSM.html">TCSM</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

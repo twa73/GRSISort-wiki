@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:26 2015            -->
+<!--   Date: Wed Mar  4 20:39:30 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -24,17 +24,17 @@
 
 <span class="cpp">#include &lt;cstdio&gt;</span>
 
-<span class="cpp">#include "TClass.h"</span>
-<span class="cpp">#include "TObject.h"</span>
+<span class="cpp">#include "<a href="../TClass.h">TClass.h</a>"</span>
+<span class="cpp">#include "<a href="../TObject.h">TObject.h</a>"</span>
 
-<span class="keyword">class</span> <a href="../TGRSITransition.html">TGRSITransition</a> : <span class="keyword">public</span> <a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> {
+<span class="keyword">class</span> <a href="../TGRSITransition.html">TGRSITransition</a> : <span class="keyword">public</span> <a href="../TObject.html">TObject</a> {
    <span class="keyword">friend</span> <span class="keyword">class</span> <a href="../TNucleus.html">TNucleus</a>;
    <span class="keyword">public</span>:
 <a name="i8cKEE"></a>      <a href="../TGRSITransition.html">TGRSITransition</a>();
       <a href="../TGRSITransition.html#TGRSITransition:_TGRSITransition" title="void TGRSITransition::~TGRSITransition()">~TGRSITransition</a>();
 
 <a name="RwrGLC"></a>      <span class="keyword">bool</span> <a href="../TGRSITransition.html#TGRSITransition:IsSortable" title="bool TGRSITransition::IsSortable()">IsSortable</a>() <span class="keyword">const</span> { <span class="keyword">return</span> <span class="keyword">true</span>; }
-      <span class="keyword">int</span> <a href="../TGRSITransition.html#TGRSITransition:Compare" title="int TGRSITransition::Compare(const TObject* obj)">Compare</a>(<span class="keyword">const</span> <a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj) <span class="keyword">const</span>;
+      <span class="keyword">int</span> <a href="../TGRSITransition.html#TGRSITransition:Compare" title="int TGRSITransition::Compare(const TObject* obj)">Compare</a>(<span class="keyword">const</span> <a href="../TObject.html">TObject</a> *obj) <span class="keyword">const</span>;
 
 <a name="MXfDDD"></a>      <span class="keyword">void</span> <a href="../TGRSITransition.html#TGRSITransition:SetEnergy" title="void TGRSITransition::SetEnergy(double&amp; tmpenergy)">SetEnergy</a>(<span class="keyword">double</span> &amp;tmpenergy){<a href="../TGRSITransition.html#TGRSITransition:energy" title="double TGRSITransition::energy">energy</a> = tmpenergy;}
 <a name="C5oX4C"></a>      <span class="keyword">void</span> <a href="../TGRSITransition.html#TGRSITransition:SetEnergyUncertainty" title="void TGRSITransition::SetEnergyUncertainty(double&amp; tmperror)">SetEnergyUncertainty</a>(<span class="keyword">double</span> &amp;tmperror){ <a href="../TGRSITransition.html#TGRSITransition:energy_uncertainty" title="double TGRSITransition::energy_uncertainty">energy_uncertainty</a> = tmperror;}
@@ -65,7 +65,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

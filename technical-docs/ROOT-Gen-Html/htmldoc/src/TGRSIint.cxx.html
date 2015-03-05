@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:26 2015            -->
+<!--   Date: Wed Mar  4 20:39:30 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -29,13 +29,13 @@
 <span class="cpp">#include "<a href="../TGRSIRootIO.h">TGRSIRootIO.h</a>"</span>
 <span class="cpp">#include "<a href="../TDataParser.h">TDataParser.h</a>"</span>
 <span class="cpp">#include "<a href="../TAnalysisTreeBuilder.h">TAnalysisTreeBuilder.h</a>"</span>
-<span class="cpp">#include "Getline.h"</span>
+<span class="cpp">#include "<a href="../Getline.h">Getline.h</a>"</span>
 <span class="cpp">#include "<a href="../GROOTGuiFactory.h">GROOTGuiFactory.h</a>"</span>
 
 <span class="cpp">#include "<a href="../Globals.h">Globals.h</a>"</span>
 <span class="cpp">#include "<a href="../GRSIVersion.h">GRSIVersion.h</a>"</span>
 
-<span class="cpp">#include "TGHtmlBrowser.h"</span>
+<span class="cpp">#include "<a href="../TGHtmlBrowser.h">TGHtmlBrowser.h</a>"</span>
 <span class="comment">//#include &lt;pstream.h&gt;</span>
 
 <span class="cpp">#include &lt;thread&gt;</span>
@@ -47,7 +47,7 @@ ClassImp(<a href="../TGRSIint.html">TGRSIint</a>)
 
 <a href="../TGRSIint.html">TGRSIint</a> *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIint:fTGRSIint" title="TGRSIint* TGRSIint::fTGRSIint">fTGRSIint</a> = NULL;
 
-TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIint:fGRSIEnv" title="TEnv* TGRSIint::fGRSIEnv">fGRSIEnv</a> = NULL;
+<a href="../TEnv.html">TEnv</a> *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIint:fGRSIEnv" title="TEnv* TGRSIint::fGRSIEnv">fGRSIEnv</a> = NULL;
 <span class="comment">//std::vector&lt;std::string&gt; *<a href="../TGRSIint.html">TGRSIint</a>::fInputRootFile  = new std::vector&lt;std::string&gt;;</span>
 <span class="comment">//std::vector&lt;std::string&gt; *<a href="../TGRSIint.html">TGRSIint</a>::fInputMidasFile = new std::vector&lt;std::string&gt;;</span>
 <span class="comment">//std::vector&lt;std::string&gt; *<a href="../TGRSIint.html">TGRSIint</a>::fInputCalFile   = new std::vector&lt;std::string&gt;;</span>
@@ -62,21 +62,21 @@ TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIin
 }
 
 <a name="spuCdB"></a><a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIint:TGRSIint" title="TGRSIint TGRSIint::TGRSIint(int argc,char** argv,void* options=0,int numOptions=0,bool noLogo=false,const char* appClassName=&quot;grsisort&quot;)">TGRSIint</a>(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv,<span class="keyword">void</span> *options, <a href="../ListOfTypes.html#Int_t">Int_t</a> numOptions, <a href="../ListOfTypes.html#Bool_t">Bool_t</a> noLogo,<span class="keyword">const</span> <span class="keyword">char</span> *appClassName) 
-      :<a href="../#TRint:TRint" title="TRint TRint::TRint(const TRint&amp; ) or overloads">TRint</a>(appClassName, &amp;argc, argv, options, numOptions,noLogo) {
+      :<a href="../TRint.html">TRint</a>(appClassName, &amp;argc, argv, options, numOptions,noLogo) {
 
-      <a href="../TGRSIint.html#TGRSIint:fGRSIEnv" title="TEnv* TGRSIint::fGRSIEnv">fGRSIEnv</a> = gEnv;
-      <span class="comment">//<a href="../#TRint:TRint" title="TRint TRint::TRint(const TRint&amp; ) or overloads">TRint</a>::<a href="../#TRint:TRint" title="TRint TRint::TRint(const TRint&amp; ) or overloads">TRint</a>(appClassName, &amp;argc, argv, options, numOptions,noLogo)</span>
+      <a href="../TGRSIint.html#TGRSIint:fGRSIEnv" title="TEnv* TGRSIint::fGRSIEnv">fGRSIEnv</a> = <a href="../TEnv.html">gEnv</a>;
+      <span class="comment">//<a href="../TRint.html">TRint</a>::<a href="../TRint.html#TRint:TRint" title="TRint TRint::TRint(const TRint&amp; ) or overloads">TRint</a>(appClassName, &amp;argc, argv, options, numOptions,noLogo)</span>
 
-      <span class="comment">//TSignalHandler sig_handi;</span>
-      <a href="../#TApplication:GetSignalHandler" title="TSignalHandler* TApplication::GetSignalHandler()">GetSignalHandler</a>()-&gt;Remove();
+      <span class="comment">//<a href="../TSignalHandler.html">TSignalHandler</a> sig_handi;</span>
+      <a href="../TApplication.html#TApplication:GetSignalHandler" title="TSignalHandler* TApplication::GetSignalHandler()">GetSignalHandler</a>()-><a href="../TSignalHandler.html#TSignalHandler:Remove" title="void TSignalHandler::Remove()">Remove</a>();
       TGRSIInterruptHandler *ih = <span class="keyword">new</span> TGRSIInterruptHandler();
       ih-&gt;Add();
 
       <a href="../TGRSIint.html#TGRSIint:InitFlags" title="void TGRSIint::InitFlags()">InitFlags</a>();
       <a href="../TGRSIint.html#TGRSIint:GetOptions" title="void TGRSIint::GetOptions(int* argc,char** argv)">GetOptions</a>(&amp;argc,argv);
       <a href="../TGRSIint.html#TGRSIint:PrintLogo" title="void TGRSIint::PrintLogo(bool )">PrintLogo</a>(<a href="../TGRSIint.html#TGRSIint:fPrintLogo" title="bool TGRSIint::fPrintLogo">fPrintLogo</a>);
-    <span class="comment">//  <a href="../#TRint:SetPrompt" title="const char* TRint::SetPrompt(const char* newPrompt)">SetPrompt</a>( DYELLOW <span class="string">"GRSI [%d] "</span> RESET_COLOR);</span>
-      <a href="../#TRint:SetPrompt" title="const char* TRint::SetPrompt(const char* newPrompt)">SetPrompt</a>(<span class="string">"GRSI [%d] "</span>);
+    <span class="comment">//  <a href="../TRint.html#TRint:SetPrompt" title="const char* TRint::SetPrompt(const char* newPrompt)">SetPrompt</a>( DYELLOW <span class="string">"GRSI [%d] "</span> RESET_COLOR);</span>
+      <a href="../TRint.html#TRint:SetPrompt" title="const char* TRint::SetPrompt(const char* newPrompt)">SetPrompt</a>(<span class="string">"GRSI [%d] "</span>);
       <a href="../TGRSIint.html#TGRSIint:PrintHelp" title="void TGRSIint::PrintHelp(bool )">PrintHelp</a>(<a href="../TGRSIint.html#TGRSIint:fPrintHelp" title="bool TGRSIint::fPrintHelp">fPrintHelp</a>);
       <a href="../TGRSIint.html#TGRSIint:ApplyOptions" title="void TGRSIint::ApplyOptions()">ApplyOptions</a>();
 }
@@ -87,7 +87,7 @@ TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIin
    <a href="../TGRSIint.html#TGRSIint:fFragmentSort" title="bool TGRSIint::fFragmentSort">fFragmentSort</a> = <span class="keyword">false</span>;
    <a href="../TGRSIint.html#TGRSIint:fMakeAnalysisTree" title="bool TGRSIint::fMakeAnalysisTree">fMakeAnalysisTree</a> = <span class="keyword">false</span>;
 
-<span class="comment">//   if(<a href="../TGRSIint.html#TGRSIint:fGRSIEnv" title="TEnv* TGRSIint::fGRSIEnv">fGRSIEnv</a>) <a href="../TGRSIint.html#TGRSIint:fGRSIEnv" title="TEnv* TGRSIint::fGRSIEnv">fGRSIEnv</a>-&gt;<a href="../#TObject:Delete" title="void TObject::Delete(Option_t* option=&quot;&quot;)">Delete</a>();</span>
+<span class="comment">//   if(<a href="../TGRSIint.html#TGRSIint:fGRSIEnv" title="TEnv* TGRSIint::fGRSIEnv">fGRSIEnv</a>) <a href="../TGRSIint.html#TGRSIint:fGRSIEnv" title="TEnv* TGRSIint::fGRSIEnv">fGRSIEnv</a>-><a href="../TObject.html#TObject:Delete" title="void TObject::Delete(Option_t* option=&quot;&quot;)">Delete</a>();</span>
 }
 
 <a name="TxadCE"></a><span class="keyword">void</span> <a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIint:ApplyOptions" title="void TGRSIint::ApplyOptions()">ApplyOptions</a>() {
@@ -113,33 +113,33 @@ TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIin
    }
    <span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().size();x++) {
       <span class="comment">//printf(<span class="string">"TFile *_file%i = new TFile(\"%s\",\"read\")\n"</span>,x,<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(x).c_str());</span>
-      <span class="keyword">long</span> error = <a href="../#TApplication:ProcessLine" title="Long_t TApplication::ProcessLine(const char* line,Bool_t sync=kFALSE,Int_t* error=0)">ProcessLine</a>(Form(<span class="string">"TFile *_file%i = new TFile(\"%s\",\"read\");"</span>,x,<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(x).c_str()));
+      <span class="keyword">long</span> error = <a href="../TApplication.html#TApplication:ProcessLine" title="Long_t TApplication::ProcessLine(const char* line,Bool_t sync=kFALSE,Int_t* error=0)">ProcessLine</a>(Form(<span class="string">"TFile *_file%i = new TFile(\"%s\",\"read\");"</span>,x,<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(x).c_str()));
       <span class="keyword">if</span>(error &lt;=0) <span class="keyword">continue</span>;
-      TFile *file = (TFile*)gROOT-&gt;<a href="../#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(x).c_str());
-      printf(<span class="string">"\tfile %s opened as _file%i\n"</span>,file-&gt;<a href="../#TObject:GetName" title="const char* TObject::GetName()">GetName</a>(),x);
+      <a href="../TFile.html">TFile</a> *file = (<a href="../TFile.html">TFile</a>*)<a href="../TROOT.html">gROOT</a>-><a href="../TROOT.html#TROOT:FindObject" title="TObject* TROOT::FindObject(const char* name) or overloads">FindObject</a>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(x).c_str());
+      printf(<span class="string">"\tfile %s opened as _file%i\n"</span>,file-&gt;<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>(),x);
       <a href="../TGRSIRootIO.html">TGRSIRootIO</a>::<a href="../TGRSIRootIO.html#TGRSIRootIO:Get" title="TGRSIRootIO* TGRSIRootIO::Get()">Get</a>()-><a href="../TGRSIRootIO.html#TGRSIRootIO:LoadRootFile" title="void TGRSIRootIO::LoadRootFile(TFile* )">LoadRootFile</a>(file);
    }
    <span class="keyword">if</span>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().size() &gt; 0) {
       <span class="keyword">if</span>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(0).find(<span class="string">"fragment"</span>) != std::string::npos){
-         <a href="../ListOfTypes.html#Int_t">Int_t</a> chans_read = <a href="../#TApplication:ProcessLine" title="Long_t TApplication::ProcessLine(const char* line,Bool_t sync=kFALSE,Int_t* error=0)">ProcessLine</a>(<span class="string">"TChannel::ReadCalFromTree(FragmentTree)"</span>);
+         <a href="../ListOfTypes.html#Int_t">Int_t</a> chans_read = <a href="../TApplication.html#TApplication:ProcessLine" title="Long_t TApplication::ProcessLine(const char* line,Bool_t sync=kFALSE,Int_t* error=0)">ProcessLine</a>(<span class="string">"TChannel::ReadCalFromTree(FragmentTree)"</span>);
          printf(<span class="string">"Read calibration info for %d channels from \"%s\" FragmentTree\n"</span>,chans_read,<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(0).c_str()); 
       }   
       <span class="keyword">if</span>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(0).find(<span class="string">"analysis"</span>) != std::string::npos){ 
-         <a href="../ListOfTypes.html#Int_t">Int_t</a> chans_read = <a href="../#TApplication:ProcessLine" title="Long_t TApplication::ProcessLine(const char* line,Bool_t sync=kFALSE,Int_t* error=0)">ProcessLine</a>(<span class="string">"TChannel::ReadCalFromTree(AnalysisTree)"</span>);    
+         <a href="../ListOfTypes.html#Int_t">Int_t</a> chans_read = <a href="../TApplication.html#TApplication:ProcessLine" title="Long_t TApplication::ProcessLine(const char* line,Bool_t sync=kFALSE,Int_t* error=0)">ProcessLine</a>(<span class="string">"TChannel::ReadCalFromTree(AnalysisTree)"</span>);    
          printf(<span class="string">"Read calibration info for %d channels from \"%s\" AnalysisTree\n"</span>,chans_read,<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetInputRoot" title="vector&lt;std::string&gt; TGRSIOptions::GetInputRoot()">GetInputRoot</a>().at(0).c_str());
       }
    }
   
   <span class="keyword">if</span>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:WorkHarder" title="bool TGRSIOptions::WorkHarder()">WorkHarder</a>()) {
       <span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetMacroFile" title="vector&lt;std::string&gt; TGRSIOptions::GetMacroFile()">GetMacroFile</a>().size();x++) {
-         gROOT-&gt;Macro(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetMacroFile" title="vector&lt;std::string&gt; TGRSIOptions::GetMacroFile()">GetMacroFile</a>().at(x).c_str());  
-       <span class="comment">// gROOT-&gt;ProcessLineSync(Form(<span class="string">".x %s"</span>,<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetMacroFile" title="vector&lt;std::string&gt; TGRSIOptions::GetMacroFile()">GetMacroFile</a>().at(x).c_str()));</span>
+         <a href="../TROOT.html">gROOT</a>-><a href="../TROOT.html#TROOT:Macro" title="Long_t TROOT::Macro(const char* filename,Int_t* error=0,Bool_t padUpdate=kTRUE)">Macro</a>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetMacroFile" title="vector&lt;std::string&gt; TGRSIOptions::GetMacroFile()">GetMacroFile</a>().at(x).c_str());  
+       <span class="comment">// <a href="../TROOT.html">gROOT</a>-><a href="../TROOT.html#TROOT:ProcessLineSync" title="Long_t TROOT::ProcessLineSync(const char* line,Int_t* error=0)">ProcessLineSync</a>(Form(<span class="string">".x %s"</span>,<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:GetMacroFile" title="vector&lt;std::string&gt; TGRSIOptions::GetMacroFile()">GetMacroFile</a>().at(x).c_str()));</span>
       }
    }
 
 
   <span class="keyword">if</span>(<a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:CloseAfterSort" title="bool TGRSIOptions::CloseAfterSort()">CloseAfterSort</a>())
-     gApplication-&gt;<a href="../#TRint:Terminate" title="void TRint::Terminate(int status)">Terminate</a>();
+     <a href="../TApplication.html">gApplication</a>-><a href="../TApplication.html#TApplication:Terminate" title="void TApplication::Terminate(Int_t status=0)">Terminate</a>();
 }
 
 
@@ -148,21 +148,21 @@ TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIin
 }
 
 <a name="p7JVl"></a><span class="keyword">bool</span> <a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIint:HandleTermInput" title="bool TGRSIint::HandleTermInput()">HandleTermInput</a>() {
-   <span class="keyword">return</span> <a href="../#TRint:TRint" title="TRint TRint::TRint(const TRint&amp; ) or overloads">TRint</a>::<a href="../TGRSIint.html#TGRSIint:HandleTermInput" title="bool TGRSIint::HandleTermInput()">HandleTermInput</a>();
+   <span class="keyword">return</span> <a href="../TRint.html">TRint</a>::<a href="../TRint.html#TRint:HandleTermInput" title="Bool_t TRint::HandleTermInput()">HandleTermInput</a>();
 }
 
 <a name="b650jD"></a><span class="keyword">int</span> <a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIint:TabCompletionHook" title="int TGRSIint::TabCompletionHook(char* ,int* ,ostream&amp; )">TabCompletionHook</a>(<span class="keyword">char</span>* buf, <span class="keyword">int</span>* pLoc, std::<a href="../ListOfTypes.html#ostream">ostream</a>&amp; out) {
-   <span class="keyword">return</span> <a href="../#TRint:TRint" title="TRint TRint::TRint(const TRint&amp; ) or overloads">TRint</a>::<a href="../TGRSIint.html#TGRSIint:TabCompletionHook" title="int TGRSIint::TabCompletionHook(char* ,int* ,ostream&amp; )">TabCompletionHook</a>(buf,pLoc,out);
+   <span class="keyword">return</span> <a href="../TRint.html">TRint</a>::<a href="../TRint.html#TRint:TabCompletionHook" title="Int_t TRint::TabCompletionHook(char* buf,int* pLoc,ostream&amp; out)">TabCompletionHook</a>(buf,pLoc,out);
 }
 
 <span class="keyword">void</span> ReadTheNews(<span class="keyword">void</span>) {
-   <span class="comment">//gROOT-&gt;<a href="../#TApplication:ProcessLine" title="Long_t TApplication::ProcessLine(const char* line,Bool_t sync=kFALSE,Int_t* error=0)">ProcessLine</a>(<span class="string">".! wget -q -l1 - http://en.wikipedia.org/wiki/Special:Random -Otemp.html"</span>);</span>
-   <span class="comment">//new TGHtmlBrowser(<span class="string">"temp.html"</span>);</span>
+   <span class="comment">//<a href="../TROOT.html">gROOT</a>-><a href="../TROOT.html#TROOT:ProcessLine" title="Long_t TROOT::ProcessLine(const char* line,Int_t* error=0)">ProcessLine</a>(<span class="string">".! wget -q -l1 - http://en.wikipedia.org/wiki/Special:Random -Otemp.html"</span>);</span>
+   <span class="comment">//new <a href="../TGHtmlBrowser.html">TGHtmlBrowser</a>(<span class="string">"temp.html"</span>);</span>
    <span class="comment">//std::ipstream wrandom(<span class="string">"xdg-open http://en.wikipedia.org/wiki/Special:Random"</span>);</span>
    <span class="cpp">#ifdef __APPLE__</span>
-   gROOT-&gt;<a href="../#TApplication:ProcessLine" title="Long_t TApplication::ProcessLine(const char* line,Bool_t sync=kFALSE,Int_t* error=0)">ProcessLine</a>(<span class="string">".! open http://en.wikipedia.org/wiki/Special:Random &gt; /dev/null 2&gt;&amp;1"</span>);
+   <a href="../TROOT.html">gROOT</a>-><a href="../TROOT.html#TROOT:ProcessLine" title="Long_t TROOT::ProcessLine(const char* line,Int_t* error=0)">ProcessLine</a>(<span class="string">".! open http://en.wikipedia.org/wiki/Special:Random &gt; /dev/null 2&gt;&amp;1"</span>);
    <span class="cpp">#else</span>
-   gROOT-&gt;<a href="../#TApplication:ProcessLine" title="Long_t TApplication::ProcessLine(const char* line,Bool_t sync=kFALSE,Int_t* error=0)">ProcessLine</a>(<span class="string">".! xdg-open http://en.wikipedia.org/wiki/Special:Random &gt; /dev/null 2&gt;&amp;1"</span>);
+   <a href="../TROOT.html">gROOT</a>-><a href="../TROOT.html#TROOT:ProcessLine" title="Long_t TROOT::ProcessLine(const char* line,Int_t* error=0)">ProcessLine</a>(<span class="string">".! xdg-open http://en.wikipedia.org/wiki/Special:Random &gt; /dev/null 2&gt;&amp;1"</span>);
    <span class="cpp">#endif</span>
    <span class="keyword">return</span>;
 }
@@ -333,8 +333,8 @@ TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIin
      } <span class="keyword">else</span> <span class="keyword">if</span> (sargv[0] != <span class="string">'-'</span> &amp;&amp; sargv[0] != <span class="string">'+'</span>) { <span class="comment">//files and directories!</span>
        <span class="keyword">long</span> size;
        <span class="keyword">long</span> id, flags, modtime;
-       <span class="keyword">char</span> *dir = gSystem-&gt;ExpandPathName(argv[i]);
-       <span class="keyword">if</span> (!gSystem-&gt;GetPathInfo(dir, &amp;id, &amp;size, &amp;flags, &amp;modtime)) {   
+       <span class="keyword">char</span> *dir = <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:ExpandPathName" title="Bool_t TSystem::ExpandPathName(TString&amp; path) or overloads">ExpandPathName</a>(argv[i]);
+       <span class="keyword">if</span> (!<a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:GetPathInfo" title="int TSystem::GetPathInfo(const char* path,Long_t* id,Long_t* size,Long_t* flags,Long_t* modtime) or overloads">GetPathInfo</a>(dir, &amp;id, &amp;size, &amp;flags, &amp;modtime)) {   
           <span class="keyword">if</span> ((flags &amp; 2)) {                                                      
              <span class="comment">//I am not sur what to do with directorys right now.                           </span>
              <span class="comment">//if (pwd == <span class="string">""</span>) {</span>
@@ -361,9 +361,9 @@ TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIin
 
 
 <a name="w0S5hE"></a><span class="keyword">void</span> <a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIint:LoadGROOTGraphics" title="void TGRSIint::LoadGROOTGraphics()">LoadGROOTGraphics</a>() {
-   <span class="keyword">if</span> (gROOT-&gt;IsBatch()) <span class="keyword">return</span>;
+   <span class="keyword">if</span> (<a href="../TROOT.html">gROOT</a>-><a href="../TROOT.html#TROOT:IsBatch" title="Bool_t TROOT::IsBatch()">IsBatch</a>()) <span class="keyword">return</span>;
    <span class="comment">// force Canvas to load, this ensures global GUI Factory ptr exists.</span>
-   gROOT-&gt;LoadClass(<span class="string">"TCanvas"</span>, <span class="string">"Gpad"</span>);
+   <a href="../TROOT.html">gROOT</a>-><a href="../TROOT.html#TROOT:LoadClass" title="Int_t TROOT::LoadClass(const char* classname,const char* libname,Bool_t check=kFALSE) or overloads">LoadClass</a>(<span class="string">"TCanvas"</span>, <span class="string">"Gpad"</span>);
    gGuiFactory =  <span class="keyword">new</span> <a href="../GROOTGuiFactory.html">GROOTGuiFactory</a>();  
 }
 
@@ -371,7 +371,7 @@ TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIin
 <a name="twQPWE"></a><span class="keyword">void</span> <a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIint:PrintHelp" title="void TGRSIint::PrintHelp(bool )">PrintHelp</a>(<span class="keyword">bool</span> print) {
    <span class="keyword">if</span>(print) {
       printf( DRED BG_WHITE <span class="string">"     Sending Help!!     "</span> RESET_COLOR  <span class="string">"\n"</span>);
-      <span class="keyword">new</span> TGHtmlBrowser(gSystem-&gt;ExpandPathName(<span class="string">"${GRSISYS}/README.html"</span>));
+      <span class="keyword">new</span> <a href="../TGHtmlBrowser.html">TGHtmlBrowser</a>(<a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:ExpandPathName" title="Bool_t TSystem::ExpandPathName(TString&amp; path) or overloads">ExpandPathName</a>(<span class="string">"${GRSISYS}/README.html"</span>));
    }
    <span class="keyword">return</span>;
 }
@@ -416,10 +416,10 @@ TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIin
 }
 
 
-<span class="keyword">bool</span> TGRSIInterruptHandler::<a href="../#TObject:Notify" title="Bool_t TObject::Notify()">Notify</a>() {
+<span class="keyword">bool</span> TGRSIInterruptHandler::<a href="../TObject.html#TObject:Notify" title="Bool_t TObject::Notify()">Notify</a>() {
    printf(<span class="string">"\n"</span> DRED BG_WHITE  <span class="string">"   Control-c was pressed.   "</span> RESET_COLOR <span class="string">"\n"</span>);
    abort();
-   gApplication-&gt;<a href="../#TRint:Terminate" title="void TRint::Terminate(int status)">Terminate</a>();
+   <a href="../TApplication.html">gApplication</a>-><a href="../TApplication.html#TApplication:Terminate" title="void TApplication::Terminate(Int_t status=0)">Terminate</a>();
    <span class="keyword">return</span> <span class="keyword">true</span>;
 }
 
@@ -440,7 +440,7 @@ TEnv *<a href="../TGRSIint.html">TGRSIint</a>::<a href="../TGRSIint.html#TGRSIin
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

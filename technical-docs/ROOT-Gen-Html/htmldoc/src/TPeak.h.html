@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:31 2015            -->
+<!--   Date: Wed Mar  4 20:40:07 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -24,9 +24,9 @@
 
 <span class="cpp">#include "<a href="../TGRSIFunctions.h">TGRSIFunctions.h</a>"</span>
 <span class="cpp">#include "<a href="../TGRSIFit.h">TGRSIFit.h</a>"</span>
-<span class="cpp">#include "TF1.h"</span>
-<span class="cpp">#include "TFitResultPtr.h"</span>
-<span class="cpp">#include "TFitResult.h"</span>
+<span class="cpp">#include "<a href="../TF1.h">TF1.h</a>"</span>
+<span class="cpp">#include "<a href="../TFitResultPtr.h">TFitResultPtr.h</a>"</span>
+<span class="cpp">#include "<a href="../TFitResult.h">TFitResult.h</a>"</span>
 <span class="cpp">#include &lt;string&gt;</span>
 <span class="cpp">#include &lt;algorithm&gt;</span>
 
@@ -55,23 +55,23 @@
    
 
  <span class="keyword">public</span>:
-   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TPeak.html#TPeak:Copy" title="void TPeak::Copy(TObject&amp; obj)">Copy</a>(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> &amp;obj) <span class="keyword">const</span>;
-<a name="R10n3D"></a>   <span class="keyword">void</span> <a href="../TPeak.html#TPeak:SetCentroid" title="void TPeak::SetCentroid(Double_t cent)">SetCentroid</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> cent)  { <a href="../#TFormula:SetParameter" title="void TFormula::SetParameter(const char* name,Double_t parvalue) or overloads">SetParameter</a>(<span class="string">"centroid"</span>,cent); }
+   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TPeak.html#TPeak:Copy" title="void TPeak::Copy(TObject&amp; obj)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;obj) <span class="keyword">const</span>;
+<a name="R10n3D"></a>   <span class="keyword">void</span> <a href="../TPeak.html#TPeak:SetCentroid" title="void TPeak::SetCentroid(Double_t cent)">SetCentroid</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> cent)  { <a href="../TFormula.html#TFormula:SetParameter" title="void TFormula::SetParameter(const char* name,Double_t parvalue) or overloads">SetParameter</a>(<span class="string">"centroid"</span>,cent); }
    <span class="keyword">void</span> <a href="../TPeak.html#TPeak:SetType" title="void TPeak::SetType(Option_t* type)">SetType</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *type);
 
-   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TPeak.html#TPeak:Fit" title="Bool_t TPeak::Fit(TH1* fithist,Option_t* opt=&quot;&quot;)">Fit</a>(TH1* fithist, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>); <span class="comment">//Might switch this to TFitResultPtr</span>
-  <span class="comment">// <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TPeak.html#TPeak:Fit" title="Bool_t TPeak::Fit(TH1* fithist,Option_t* opt=&quot;&quot;)">Fit</a>(TH1* fithist = 0);</span>
+   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TPeak.html#TPeak:Fit" title="Bool_t TPeak::Fit(TH1* fithist,Option_t* opt=&quot;&quot;)">Fit</a>(<a href="../TH1.html">TH1</a>* fithist, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>); <span class="comment">//Might switch this to <a href="../TFitResultPtr.html">TFitResultPtr</a></span>
+  <span class="comment">// <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TPeak.html#TPeak:Fit" title="Bool_t TPeak::Fit(TH1* fithist,Option_t* opt=&quot;&quot;)">Fit</a>(<a href="../TH1.html">TH1</a>* fithist = 0);</span>
 
-<a name="m8PbCC"></a>   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:GetCentroid" title="Double_t TPeak::GetCentroid()">GetCentroid</a>() <span class="keyword">const</span>     { <span class="keyword">return</span> <a href="../#TFormula:GetParameter" title="Double_t TFormula::GetParameter(Int_t ipar) or overloads">GetParameter</a>(<span class="string">"centroid"</span>); }
-<a name="Nm9GvD"></a>   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:GetCentroidErr" title="Double_t TPeak::GetCentroidErr()">GetCentroidErr</a>() <span class="keyword">const</span>  { <span class="keyword">return</span> <a href="../#TF1:GetParError" title="Double_t TF1::GetParError(Int_t ipar)">GetParError</a>(<a href="../#TFormula:GetParNumber" title="Int_t TFormula::GetParNumber(const char* name)">GetParNumber</a>(<span class="string">"centroid"</span>)); }
+<a name="m8PbCC"></a>   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:GetCentroid" title="Double_t TPeak::GetCentroid()">GetCentroid</a>() <span class="keyword">const</span>     { <span class="keyword">return</span> <a href="../TFormula.html#TFormula:GetParameter" title="Double_t TFormula::GetParameter(Int_t ipar) or overloads">GetParameter</a>(<span class="string">"centroid"</span>); }
+<a name="Nm9GvD"></a>   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:GetCentroidErr" title="Double_t TPeak::GetCentroidErr()">GetCentroidErr</a>() <span class="keyword">const</span>  { <span class="keyword">return</span> <a href="../TF1.html#TF1:GetParError" title="Double_t TF1::GetParError(Int_t ipar)">GetParError</a>(<a href="../TFormula.html#TFormula:GetParNumber" title="Int_t TFormula::GetParNumber(const char* name)">GetParNumber</a>(<span class="string">"centroid"</span>)); }
 <a name="tjE4QC"></a>   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:GetArea" title="Double_t TPeak::GetArea()">GetArea</a>() <span class="keyword">const</span>         { <span class="keyword">return</span> <a href="../TPeak.html#TPeak:farea" title="Double_t TPeak::farea">farea</a>; }
 <a name="i3vlsD"></a>   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:GetAreaErr" title="Double_t TPeak::GetAreaErr()">GetAreaErr</a>() <span class="keyword">const</span>      { <span class="keyword">return</span> <a href="../TPeak.html#TPeak:fd_area" title="Double_t TPeak::fd_area">fd_area</a>; }
 <span class="comment">/*
    <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:Fit" title="Bool_t TPeak::Fit(TH1* fithist,Option_t* opt=&quot;&quot;)">Fit</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
-   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:Fit" title="Bool_t TPeak::Fit(TH1* fithist,Option_t* opt=&quot;&quot;)">Fit</a>(TH1* hist, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:Fit" title="Bool_t TPeak::Fit(TH1* fithist,Option_t* opt=&quot;&quot;)">Fit</a>(<a href="../TH1.html">TH1</a>* hist, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
    <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TPeak.html#TPeak:Fit" title="Bool_t TPeak::Fit(TH1* fithist,Option_t* opt=&quot;&quot;)">Fit</a>(const <a href="../ListOfTypes.html#char">char</a>* histname, <a href="../ListOfTypes.html#Option_t">Option_t</a> *opt);
 */</span>
-<a name="R8anPB"></a>   <a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>* <a href="../TPeak.html#TPeak:GetFitFunction" title="TF1* TPeak::GetFitFunction()">GetFitFunction</a>() <span class="keyword">const</span>      { <span class="keyword">return</span> (<a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>*)(<span class="keyword">this</span>); } <span class="comment">//I might move the fit functions to <a href="../TGRSIFit.html">TGRSIFit</a>, it's just a little tricky to initilize the function</span>
+<a name="R8anPB"></a>   <a href="../TF1.html">TF1</a>* <a href="../TPeak.html#TPeak:GetFitFunction" title="TF1* TPeak::GetFitFunction()">GetFitFunction</a>() <span class="keyword">const</span>      { <span class="keyword">return</span> (<a href="../TF1.html">TF1</a>*)(<span class="keyword">this</span>); } <span class="comment">//I might move the fit functions to <a href="../TGRSIFit.html">TGRSIFit</a>, it's just a little tricky to initilize the function</span>
 
 
  <span class="keyword">protected</span>:  
@@ -80,7 +80,7 @@
 <a name="pkqzVB"></a>   <span class="keyword">void</span> <a href="../TPeak.html#TPeak:SetArea" title="void TPeak::SetArea(Double_t a) or overloads">SetArea</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> a, <a href="../ListOfTypes.html#Double_t">Double_t</a> d_a){<a href="../TPeak.html#TPeak:SetArea" title="void TPeak::SetArea(Double_t a) or overloads">SetArea</a>(a);<a href="../TPeak.html#TPeak:SetAreaErr" title="void TPeak::SetAreaErr(Double_t d_a)">SetAreaErr</a>(d_a);}
 
  <span class="keyword">public</span>:
-   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TPeak.html#TPeak:InitParams" title="Bool_t TPeak::InitParams(TH1* fithist=0)">InitParams</a>(TH1 *fithist = 0);
+   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TPeak.html#TPeak:InitParams" title="Bool_t TPeak::InitParams(TH1* fithist=0)">InitParams</a>(<a href="../TH1.html">TH1</a> *fithist = 0);
 
  <span class="keyword">public</span>:
    <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TPeak.html#TPeak:Print" title="void TPeak::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>;
@@ -104,7 +104,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

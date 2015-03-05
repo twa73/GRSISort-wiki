@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:22 2015            -->
+<!--   Date: Wed Mar  4 20:39:23 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -62,8 +62,8 @@ std::map&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt
 <a name="cRecCE"></a><a href="../TFragmentQueue.html">TFragmentQueue</a>::<a href="../TFragmentQueue.html#TFragmentQueue:TFragmentQueue" title="TFragmentQueue TFragmentQueue::TFragmentQueue() or overloads">TFragmentQueue</a>()	{	
 	<a href="../TFragmentQueue.html#TFragmentQueue:fFragsInQueue" title="int TFragmentQueue::fFragsInQueue">fFragsInQueue</a> = 0;
 	<span class="comment">//When the Global Q is created, start a timer to see how <a href="../ListOfTypes.html#long">long</a> we are using it.</span>
-	<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a> = <span class="keyword">new</span> TStopwatch();
-	<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>-&gt;Start();
+	<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a> = <span class="keyword">new</span> <a href="../TStopwatch.html">TStopwatch</a>();
+	<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>-><a href="../TStopwatch.html#TStopwatch:Start" title="void TStopwatch::Start(Bool_t reset=kTRUE)">Start</a>();
 
 	<a href="../TFragmentQueue.html#TFragmentQueue:fStop" title="bool TFragmentQueue::fStop">fStop</a> = <span class="keyword">false</span>;
 
@@ -109,7 +109,7 @@ std::map&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt
 	<a href="../TFragmentQueue.html#TFragmentQueue:fTotalFragsIn" title="unsigned int TFragmentQueue::fTotalFragsIn">fTotalFragsIn</a> = 0;
 	<a href="../TFragmentQueue.html#TFragmentQueue:fTotalFragsOut" title="unsigned int TFragmentQueue::fTotalFragsOut">fTotalFragsOut</a> = 0;
 
-	<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>-&gt;Reset();
+	<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>-><a href="../TStopwatch.html#TStopwatch:Reset" title="void TStopwatch::Reset()">Reset</a>();
 
 	<span class="keyword">if</span>(locked)
 		<a href="../TFragmentQueue.html">TFragmentQueue</a>::All.unlock();
@@ -277,7 +277,7 @@ std::map&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt
 
 	<span class="keyword">while</span>(<a href="../TFragmentQueue.html#TFragmentQueue:fStatusUpdateOn" title="bool TFragmentQueue::fStatusUpdateOn">fStatusUpdateOn</a>)	{
 		<span class="comment">//printf(<span class="string">"Fragments in que: %i\n"</span>,frag_q_ptr-&gt;<a href="../TFragmentQueue.html#TFragmentQueue:Size" title="int TFragmentQueue::Size()">Size</a>());</span>
-		time = <a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>-&gt;RealTime();
+		time = <a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>-><a href="../TStopwatch.html#TStopwatch:RealTime" title="Double_t TStopwatch::RealTime()">RealTime</a>();
 		frag_rate_in = <a href="../TFragmentQueue.html#TFragmentQueue:fragments_in" title="int TFragmentQueue::fragments_in">fragments_in</a>/time; 
 		frag_rate_out = <a href="../TFragmentQueue.html#TFragmentQueue:fragments_out" title="int TFragmentQueue::fragments_out">fragments_out</a>/time;
 		<span class="keyword">while</span>(!<a href="../TFragmentQueue.html">TFragmentQueue</a>::All.try_lock()){
@@ -289,13 +289,13 @@ std::map&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt
 		printf(BLUE <span class="string">"\n\tfrags rate in  = %.2f/sec, nqueue = %d\n"</span> RESET_COLOR,frag_rate_in, <a href="../TFragmentQueue.html#TFragmentQueue:Size" title="int TFragmentQueue::Size()">Size</a>());
 		printf(DGREEN <span class="string">"\tfrags rate out = %.2f/sec\n"</span> RESET_COLOR,frag_rate_out);
 		<a href="../TFragmentQueue.html">TFragmentQueue</a>::All.unlock();
-<span class="comment">//		TThread::ps();</span>
+<span class="comment">//		<a href="../TThread.html">TThread</a>::<a href="../TThread.html#TThread:ps" title="void TThread::ps()">ps</a>();</span>
 		<a href="../TFragmentQueue.html#TFragmentQueue:ResetRateCounter" title="void TFragmentQueue::ResetRateCounter()">ResetRateCounter</a>();
-		<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>-&gt;Start();
+		<a href="../TFragmentQueue.html#TFragmentQueue:sw" title="TStopwatch* TFragmentQueue::sw">sw</a>-><a href="../TStopwatch.html#TStopwatch:Start" title="void TStopwatch::Start(Bool_t reset=kTRUE)">Start</a>();
         <span class="comment">//std::this_thread::sleep_for(std::chrono::milliseconds(1000));</span>
 
 	}
-	<span class="comment">//TThread::CleanUp();</span>
+	<span class="comment">//<a href="../TThread.html">TThread</a>::<a href="../TThread.html#TThread:CleanUp" title="Int_t TThread::CleanUp()">CleanUp</a>();</span>
 }
 
 <a name="fUrwCD"></a><span class="keyword">void</span> <a href="../TFragmentQueue.html">TFragmentQueue</a>::<a href="../TFragmentQueue.html#TFragmentQueue:ResetRateCounter" title="void TFragmentQueue::ResetRateCounter()">ResetRateCounter</a>()	{
@@ -322,7 +322,7 @@ std::map&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

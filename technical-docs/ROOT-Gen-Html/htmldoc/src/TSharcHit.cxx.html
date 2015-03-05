@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:32 2015            -->
+<!--   Date: Wed Mar  4 20:40:12 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,12 +22,12 @@
 
 <span class="cpp">#include "<a href="../TSharcHit.h">TSharcHit.h</a>"</span>
 <span class="cpp">#include "<a href="../TChannel.h">TChannel.h</a>"</span>
-<span class="cpp">#include &lt;TClass.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TClass.h">TClass.h</a>&gt;</span>
 
 ClassImp(<a href="../TSharcHit.html">TSharcHit</a>)
 
 <a name="g5nEpE"></a><a href="../TSharcHit.html">TSharcHit</a>::<a href="../TSharcHit.html#TSharcHit:TSharcHit" title="TSharcHit TSharcHit::TSharcHit() or overloads">TSharcHit</a>()	{	
-   <a href="../TSharcHit.html#TSharcHit:Class" title="TClass* TSharcHit::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<span class="keyword">true</span>);
+   <a href="../TSharcHit.html#TSharcHit:Class" title="TClass* TSharcHit::Class()">Class</a>()-><a href="../TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<span class="keyword">true</span>);
 	<a href="../TSharcHit.html#TSharcHit:Clear" title="void TSharcHit::Clear(Option_t* =&quot;&quot;)">Clear</a>();
 }
 
@@ -95,7 +95,7 @@ ClassImp(<a href="../TSharcHit.html">TSharcHit</a>)
     printf(<span class="string">"AHHHH, can't find sharc channel with address %d in TChannel\n"</span>,temp_add);
     <span class="keyword">return</span> <a href="../TSharcHit.html#TSharcHit:back_charge" title="Int_t TSharcHit::back_charge">back_charge</a>;
   }
-  <span class="keyword">return</span> chan-&gt;CalibrateENG(<a href="../TSharcHit.html#TSharcHit:back_charge" title="Int_t TSharcHit::back_charge">back_charge</a>); <span class="comment">//((<a href="../ListOfTypes.html#double">double</a>)(<a href="../TSharcHit.html#TSharcHit:front_charge" title="Int_t TSharcHit::front_charge">front_charge</a>)+gRandom-&gt;Uniform())/((<a href="../ListOfTypes.html#double">double</a>)chan-&gt;GetIntegration());</span>
+  <span class="keyword">return</span> chan-&gt;CalibrateENG(<a href="../TSharcHit.html#TSharcHit:back_charge" title="Int_t TSharcHit::back_charge">back_charge</a>); <span class="comment">//((<a href="../ListOfTypes.html#double">double</a>)(<a href="../TSharcHit.html#TSharcHit:front_charge" title="Int_t TSharcHit::front_charge">front_charge</a>)+<a href="../TRandom.html">gRandom</a>-><a href="../TRandom.html#TRandom:Uniform" title="Double_t TRandom::Uniform(Double_t x1=1) or overloads">Uniform</a>())/((<a href="../ListOfTypes.html#double">double</a>)chan-&gt;GetIntegration());</span>
 }
 
 
@@ -107,14 +107,14 @@ ClassImp(<a href="../TSharcHit.html">TSharcHit</a>)
     printf(<span class="string">"AHHHH, can't find sharc channel with address %d in TChannel\n"</span>,<a href="../TSharcHit.html#TSharcHit:p_address" title="Int_t TSharcHit::p_address">p_address</a>);
     <span class="keyword">return</span> <a href="../TSharcHit.html#TSharcHit:pad_charge" title="Int_t TSharcHit::pad_charge">pad_charge</a>;
   }
-  <span class="keyword">return</span> ((<span class="keyword">double</span>)(<a href="../TSharcHit.html#TSharcHit:front_charge" title="Int_t TSharcHit::front_charge">front_charge</a>)+gRandom-&gt;Uniform())/((<span class="keyword">double</span>)chan-&gt;GetIntegration());
+  <span class="keyword">return</span> ((<span class="keyword">double</span>)(<a href="../TSharcHit.html#TSharcHit:front_charge" title="Int_t TSharcHit::front_charge">front_charge</a>)+<a href="../TRandom.html">gRandom</a>-><a href="../TRandom.html#TRandom:Uniform" title="Double_t TRandom::Uniform(Double_t x1=1) or overloads">Uniform</a>())/((<span class="keyword">double</span>)chan-&gt;GetIntegration());
 }
 
 
 
 
 <a name="dYafH"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html">TSharcHit</a>::<a href="../TSharcHit.html#TSharcHit:GetTheta" title="Double_t TSharcHit::GetTheta(double Xoff=0.0,double Yoff=0.0,double Zoff=0.0)">GetTheta</a>(<span class="keyword">double</span> Xoff, <span class="keyword">double</span> Yoff, <span class="keyword">double</span> Zoff) {
-	TVector3 posoff; 
+	<a href="../TVector3.html">TVector3</a> posoff; 
 	posoff.SetXYZ(Xoff,Yoff,Zoff);
    <span class="keyword">return</span> (position+posoff).Theta();
 }
@@ -141,7 +141,7 @@ ClassImp(<a href="../TSharcHit.html">TSharcHit</a>)
 
 
 
-<span class="comment">//<a href="../ListOfTypes.html#bool">bool</a> <a href="../TSharcHit.html">TSharcHit</a>::<a href="../#TObject:Compare" title="Int_t TObject::Compare(const TObject* obj)">Compare</a>(<a href="../TSharcHit.html">TSharcHit</a> *lhs, <a href="../TSharcHit.html">TSharcHit</a> *rhs)	{</span>
+<span class="comment">//<a href="../ListOfTypes.html#bool">bool</a> <a href="../TSharcHit.html">TSharcHit</a>::<a href="../TObject.html#TObject:Compare" title="Int_t TObject::Compare(const TObject* obj)">Compare</a>(<a href="../TSharcHit.html">TSharcHit</a> *lhs, <a href="../TSharcHit.html">TSharcHit</a> *rhs)	{</span>
 <span class="comment">//	if(lhs-&gt;<a href="../TSharcHit.html#TSharcHit:GetDetectorNumber" title="Int_t TSharcHit::GetDetectorNumber()">GetDetectorNumber</a>() &lt; rhs-&gt;<a href="../TSharcHit.html#TSharcHit:GetDetectorNumber" title="Int_t TSharcHit::GetDetectorNumber()">GetDetectorNumber</a>())	{</span>
 <span class="comment">//		if(lhs-&gt;<a href="../TSharcHit.html#TSharcHit:GetFrontStrip" title="UShort_t TSharcHit::GetFrontStrip()">GetFrontStrip</a>() &lt; rhs-&gt;<a href="../TSharcHit.html#TSharcHit:GetFrontStrip" title="UShort_t TSharcHit::GetFrontStrip()">GetFrontStrip</a>())	{</span>
 <span class="comment">//			if(lhs-&gt;GetFrontCFD() &lt; rhs-&gt;GetFrontCFD())	{</span>
@@ -173,7 +173,7 @@ ClassImp(<a href="../TSharcHit.html">TSharcHit</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

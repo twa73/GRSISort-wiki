@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:25 2015            -->
+<!--   Date: Wed Mar  4 20:39:29 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -52,11 +52,11 @@ std::string <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRu
 
 <span class="comment">//<a href="../ListOfTypes.html#int">int</a> <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:fNumberOfTrueSystems" title="int TGRSIRunInfo::fNumberOfTrueSystems">fNumberOfTrueSystems</a> = 0;</span>
 
-<a name="GcSXu"></a><span class="keyword">void</span> <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(TBuffer &amp;b) {
+<a name="GcSXu"></a><span class="keyword">void</span> <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(<a href="../TBuffer.html">TBuffer</a> &amp;b) {
  <a href="../ListOfTypes.html#UInt_t">UInt_t</a> R__s, R__c;
  <span class="keyword">if</span>(b.IsReading()) {
    <a href="../ListOfTypes.html#Version_t">Version_t</a> R__v = b.ReadVersion(&amp;R__s,&amp;R__c); <span class="keyword">if</span> (R__v) { }
-   <a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b);  
+   <a href="../TObject.html">TObject</a>::<a href="../TObject.html#TObject:Streamer" title="void TObject::Streamer(TBuffer&amp; )">Streamer</a>(b);  
    {<a href="../ListOfTypes.html#Int_t">Int_t</a>  R__int ; b &gt;&gt; R__int;  <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fRunNumber" title="int TGRSIRunInfo::fRunNumber">fRunNumber</a> = R__int;}
    {<a href="../ListOfTypes.html#Int_t">Int_t</a>  R__int ; b &gt;&gt; R__int;  <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fSubRunNumber" title="int TGRSIRunInfo::fSubRunNumber">fSubRunNumber</a> = R__int;}
    {<a href="../ListOfTypes.html#Bool_t">Bool_t</a> R__bool; b &gt;&gt; R__bool; <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fTigress" title="bool TGRSIRunInfo::fTigress">fTigress</a> = R__bool;   }
@@ -74,13 +74,13 @@ std::string <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRu
    {<a href="../ListOfTypes.html#Bool_t">Bool_t</a> R__bool; b &gt;&gt; R__bool; <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fDante" title="bool TGRSIRunInfo::fDante">fDante</a> = R__bool;     }
    {<a href="../ListOfTypes.html#Bool_t">Bool_t</a> R__bool; b &gt;&gt; R__bool; <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fZeroDegree" title="bool TGRSIRunInfo::fZeroDegree">fZeroDegree</a> = R__bool;}
    {<a href="../ListOfTypes.html#Bool_t">Bool_t</a> R__bool; b &gt;&gt; R__bool; <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fDescant" title="bool TGRSIRunInfo::fDescant">fDescant</a> = R__bool;   }
-   {TString R__str; R__str.<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b); <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fMajorIndex" title="string TGRSIRunInfo::fMajorIndex">fMajorIndex</a>.assign(R__str.Data()); } 
-   {TString R__str; R__str.<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b); <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fMinorIndex" title="string TGRSIRunInfo::fMinorIndex">fMinorIndex</a>.assign(R__str.Data()); }
+   {<a href="../TString.html">TString</a> R__str; R__str.<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b); <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fMajorIndex" title="string TGRSIRunInfo::fMajorIndex">fMajorIndex</a>.assign(R__str.Data()); } 
+   {<a href="../TString.html">TString</a> R__str; R__str.<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b); <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fMinorIndex" title="string TGRSIRunInfo::fMinorIndex">fMinorIndex</a>.assign(R__str.Data()); }
    <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fGRSIRunInfo" title="TGRSIRunInfo* TGRSIRunInfo::fGRSIRunInfo">fGRSIRunInfo</a> = <span class="keyword">this</span>;
    b.CheckByteCount(R__s,R__c,<a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:IsA" title="TClass* TGRSIRunInfo::IsA()">IsA</a>());
  } <span class="keyword">else</span> {
    R__c = b.WriteVersion(<a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:IsA" title="TClass* TGRSIRunInfo::IsA()">IsA</a>(),<span class="keyword">true</span>);
-   <a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b);  
+   <a href="../TObject.html">TObject</a>::<a href="../TObject.html#TObject:Streamer" title="void TObject::Streamer(TBuffer&amp; )">Streamer</a>(b);  
    {<a href="../ListOfTypes.html#Int_t">Int_t</a> R__int = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fRunNumber" title="int TGRSIRunInfo::fRunNumber">fRunNumber</a>;    b &lt;&lt; R__int;}
    {<a href="../ListOfTypes.html#Int_t">Int_t</a> R__int = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fSubRunNumber" title="int TGRSIRunInfo::fSubRunNumber">fSubRunNumber</a>; b &lt;&lt; R__int;}
    {<a href="../ListOfTypes.html#Bool_t">Bool_t</a> R__bool = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fTigress" title="bool TGRSIRunInfo::fTigress">fTigress</a>;    b &lt;&lt; R__bool;}
@@ -98,8 +98,8 @@ std::string <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRu
    {<a href="../ListOfTypes.html#Bool_t">Bool_t</a> R__bool = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fDante" title="bool TGRSIRunInfo::fDante">fDante</a>;      b &lt;&lt; R__bool;}
    {<a href="../ListOfTypes.html#Bool_t">Bool_t</a> R__bool = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fZeroDegree" title="bool TGRSIRunInfo::fZeroDegree">fZeroDegree</a>; b &lt;&lt; R__bool;}
    {<a href="../ListOfTypes.html#Bool_t">Bool_t</a> R__bool = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fDescant" title="bool TGRSIRunInfo::fDescant">fDescant</a>;    b &lt;&lt; R__bool;}
-   {TString R__str; R__str = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fMajorIndex" title="string TGRSIRunInfo::fMajorIndex">fMajorIndex</a>.c_str(); R__str.<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b);}
-   {TString R__str; R__str = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fMinorIndex" title="string TGRSIRunInfo::fMinorIndex">fMinorIndex</a>.c_str(); R__str.<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b);}
+   {<a href="../TString.html">TString</a> R__str; R__str = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fMajorIndex" title="string TGRSIRunInfo::fMajorIndex">fMajorIndex</a>.c_str(); R__str.<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b);}
+   {<a href="../TString.html">TString</a> R__str; R__str = <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fMinorIndex" title="string TGRSIRunInfo::fMinorIndex">fMinorIndex</a>.c_str(); R__str.<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a>(b);}
    b.SetByteCount(R__c,<span class="keyword">true</span>);
  }
 }
@@ -238,7 +238,7 @@ std::string <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRu
 }
 
 
-<a name="O6SA6D"></a><span class="keyword">void</span> <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:SetAnalysisTreeBranches" title="void TGRSIRunInfo::SetAnalysisTreeBranches(TTree* )">SetAnalysisTreeBranches</a>(TTree*) {
+<a name="O6SA6D"></a><span class="keyword">void</span> <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:SetAnalysisTreeBranches" title="void TGRSIRunInfo::SetAnalysisTreeBranches(TTree* )">SetAnalysisTreeBranches</a>(<a href="../TTree.html">TTree</a>*) {
 
 
 
@@ -256,7 +256,7 @@ std::string <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRu
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

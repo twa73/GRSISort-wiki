@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:24 2015            -->
+<!--   Date: Wed Mar  4 20:39:28 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -23,44 +23,44 @@
 <span class="cpp">#define TGRSIFIT_H</span>
 
 <span class="cpp">#include "<a href="../TGRSIFunctions.h">TGRSIFunctions.h</a>"</span>
-<span class="cpp">#include "TObject.h"</span>
-<span class="cpp">#include "TH1.h"</span>
-<span class="cpp">#include "TF1.h"</span>
-<span class="cpp">#include "TList.h"</span>
-<span class="cpp">#include "TFitResult.h"</span>
-<span class="cpp">#include "TFitResultPtr.h"</span>
-<span class="cpp">#include "TRandom.h"</span>
-<span class="cpp">#include "TSpectrum.h"</span>
-<span class="cpp">#include "TVirtualFitter.h"</span>
-<span class="cpp">#include "TMath.h"</span>
-<span class="cpp">#include "TNamed.h"</span>
-<span class="cpp">#include "TROOT.h"</span>
+<span class="cpp">#include "<a href="../TObject.h">TObject.h</a>"</span>
+<span class="cpp">#include "<a href="../TH1.h">TH1.h</a>"</span>
+<span class="cpp">#include "<a href="../TF1.h">TF1.h</a>"</span>
+<span class="cpp">#include "<a href="../TList.h">TList.h</a>"</span>
+<span class="cpp">#include "<a href="../TFitResult.h">TFitResult.h</a>"</span>
+<span class="cpp">#include "<a href="../TFitResultPtr.h">TFitResultPtr.h</a>"</span>
+<span class="cpp">#include "<a href="../TRandom.h">TRandom.h</a>"</span>
+<span class="cpp">#include "<a href="../TSpectrum.h">TSpectrum.h</a>"</span>
+<span class="cpp">#include "<a href="../TVirtualFitter.h">TVirtualFitter.h</a>"</span>
+<span class="cpp">#include "<a href="../TMath.h">TMath.h</a>"</span>
+<span class="cpp">#include "<a href="../TNamed.h">TNamed.h</a>"</span>
+<span class="cpp">#include "<a href="../TROOT.h">TROOT.h</a>"</span>
 <span class="cpp">#include &lt;utility&gt;</span>
 
 <span class="keyword">using</span> <span class="keyword">namespace</span> <a href="../TGRSIFunctions.html">TGRSIFunctions</a>;
 
-<span class="keyword">class</span> <a href="../TGRSIFit.html">TGRSIFit</a> : <span class="keyword">public</span> <a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a> {
+<span class="keyword">class</span> <a href="../TGRSIFit.html">TGRSIFit</a> : <span class="keyword">public</span> <a href="../TF1.html">TF1</a> {
  <span class="keyword">public</span>:
 <a name="r2SkVD"></a>   <span class="keyword">virtual</span> <a href="../TGRSIFit.html#TGRSIFit:_TGRSIFit" title="void TGRSIFit::~TGRSIFit()">~TGRSIFit</a>(){};
 
  <span class="keyword">protected</span>: 
    <a href="../TGRSIFit.html">TGRSIFit</a>();
-   <span class="comment">//<a href="../TGRSIFit.html">TGRSIFit</a>(const <a href="../ListOfTypes.html#char">char</a> *name,<a href="../ListOfTypes.html#Double_t">Double_t</a> (*fcn)(<a href="../ListOfTypes.html#Double_t">Double_t</a> *, <a href="../ListOfTypes.html#Double_t">Double_t</a> *), <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name, fcn, xmin, xmax, npar){};</span>
-   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* formula, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin = 0, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax = 1) : <a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,formula,xmin,xmax){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); } 
-   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,xmin,xmax,npar){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
-   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* fcn, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name, fcn,xmin,xmax,npar){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
-   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, ROOT::Math::ParamFunctor f, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin = 0, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax = 1, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar = 0) : <a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,f,xmin,xmax,npar){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
-   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* ptr, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar, <span class="keyword">const</span> <span class="keyword">char</span>* className) : <a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,ptr, xmin, xmax, npar, className){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
+   <span class="comment">//<a href="../TGRSIFit.html">TGRSIFit</a>(const <a href="../ListOfTypes.html#char">char</a> *name,<a href="../ListOfTypes.html#Double_t">Double_t</a> (*fcn)(<a href="../ListOfTypes.html#Double_t">Double_t</a> *, <a href="../ListOfTypes.html#Double_t">Double_t</a> *), <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name, fcn, xmin, xmax, npar){};</span>
+   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* formula, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin = 0, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax = 1) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,formula,xmin,xmax){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); } 
+   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,xmin,xmax,npar){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
+   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* fcn, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name, fcn,xmin,xmax,npar){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
+   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="../ROOT.html">ROOT</a>::<a href="../ROOT__Math.html">Math</a>::<a href="../ROOT__Math__ParamFunctor.html">ParamFunctor</a> f, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin = 0, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax = 1, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar = 0) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,f,xmin,xmax,npar){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
+   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* ptr, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar, <span class="keyword">const</span> <span class="keyword">char</span>* className) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,ptr, xmin, xmax, npar, className){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
 
    <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <a href="../TGRSIFit.html">TGRSIFit</a> &amp;copy);
   
  <span class="keyword">public</span>:
-   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TGRSIFit.html#TGRSIFit:Copy" title="void TGRSIFit::Copy(TObject&amp; copy)">Copy</a>(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> &amp;copy) <span class="keyword">const</span>;
+   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TGRSIFit.html#TGRSIFit:Copy" title="void TGRSIFit::Copy(TObject&amp; copy)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;copy) <span class="keyword">const</span>;
    <span class="comment">//Every fit object should have to initialize parameters and have a fit method defined.</span>
  <span class="comment">//  virtual <a href="../ListOfTypes.html#Double_t">Double_t</a> Fit(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) = 0;</span>
-<a name="LoE9a"></a>   <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TGRSIFit.html#TGRSIFit:InitParams" title="Bool_t TGRSIFit::InitParams(TH1* )">InitParams</a>(TH1*) = 0;
+<a name="LoE9a"></a>   <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TGRSIFit.html#TGRSIFit:InitParams" title="Bool_t TGRSIFit::InitParams(TH1* )">InitParams</a>(<a href="../TH1.html">TH1</a>*) = 0;
 <a name="xznmwD"></a>   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TGRSIFit.html#TGRSIFit:IsGoodFit" title="Bool_t TGRSIFit::IsGoodFit()">IsGoodFit</a>() <span class="keyword">const</span> { <span class="keyword">return</span> <a href="../TGRSIFit.html#TGRSIFit:goodfit_flag" title="Bool_t TGRSIFit::goodfit_flag">goodfit_flag</a>; }
-<a name="yHiYsB"></a>   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TGRSIFit.html#TGRSIFit:SetHistogram" title="void TGRSIFit::SetHistogram(TH1* hist)">SetHistogram</a>(TH1* hist){fHistogram = hist;} <span class="comment">//fHistogram is a member of <a href="../#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>. I'm not sure this does anything proper right now</span>
+<a name="yHiYsB"></a>   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TGRSIFit.html#TGRSIFit:SetHistogram" title="void TGRSIFit::SetHistogram(TH1* hist)">SetHistogram</a>(<a href="../TH1.html">TH1</a>* hist){fHistogram = hist;} <span class="comment">//fHistogram is a member of <a href="../TF1.html">TF1</a>. I'm not sure this does anything proper right now</span>
  <span class="keyword">protected</span>:
 <a name="VwUdw"></a>   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TGRSIFit.html#TGRSIFit:IsInitialized" title="Bool_t TGRSIFit::IsInitialized()">IsInitialized</a>() <span class="keyword">const</span> { <span class="keyword">return</span> <a href="../TGRSIFit.html#TGRSIFit:init_flag" title="Bool_t TGRSIFit::init_flag">init_flag</a>; }
 <a name="XHd5x"></a>   <span class="keyword">void</span> <a href="../TGRSIFit.html#TGRSIFit:SetInitialized" title="void TGRSIFit::SetInitialized(Bool_t flag=true)">SetInitialized</a>(<a href="../ListOfTypes.html#Bool_t">Bool_t</a> flag = <span class="keyword">true</span>) {<a href="../TGRSIFit.html#TGRSIFit:init_flag" title="Bool_t TGRSIFit::init_flag">init_flag</a> = flag;}
@@ -86,7 +86,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

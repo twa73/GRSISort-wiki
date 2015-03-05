@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:33 2015            -->
+<!--   Date: Wed Mar  4 20:40:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -21,12 +21,12 @@
 <div id="codeAndLineNumbers"><pre class="listing">
 
 <span class="cpp">#include "<a href="../TTigressHit.h">TTigressHit.h</a>"</span>
-<span class="cpp">#include &lt;TClass.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TClass.h">TClass.h</a>&gt;</span>
 
 ClassImp(<a href="../TTigressHit.html">TTigressHit</a>)
 
 <a name="cL4vn"></a><a href="../TTigressHit.html">TTigressHit</a>::<a href="../TTigressHit.html#TTigressHit:TTigressHit" title="TTigressHit TTigressHit::TTigressHit() or overloads">TTigressHit</a>()	{	
-   <a href="../TTigressHit.html#TTigressHit:Class" title="TClass* TTigressHit::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<span class="keyword">true</span>);
+   <a href="../TTigressHit.html#TTigressHit:Class" title="TClass* TTigressHit::Class()">Class</a>()-><a href="../TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<span class="keyword">true</span>);
 	<a href="../TTigressHit.html#TTigressHit:Clear" title="void TTigressHit::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 }
 
@@ -41,16 +41,16 @@ ClassImp(<a href="../TTigressHit.html">TTigressHit</a>)
 	<a href="../TTigressHit.html#TTigressHit:first_segment_charge" title="Int_t TTigressHit::first_segment_charge">first_segment_charge</a> = 0.0;
 
 	<a href="../TTigressHit.html#TTigressHit:core" title="TCrystalHit TTigressHit::core">core</a>.<a href="../TCrystalHit.html#TCrystalHit:Clear" title="void TCrystalHit::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
-	<span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.size();x++) { 
+	<span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:size" title="vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size_type vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size()">size</a>();x++) { 
 		<a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>[x].<a href="../TTigressHit.html#TTigressHit:Clear" title="void TTigressHit::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 	}
-	<a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.clear();
-	<span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.size();x++)	{
+	<a href="../TTigressHit.html#TTigressHit:segment" title="vector&lt;TCrystalHit&gt; TTigressHit::segment">segment</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:clear" title="void vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::clear()">clear</a>();
+	<span class="keyword">for</span>(<span class="keyword">int</span> x=0;x&lt;<a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:size" title="vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size_type vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::size()">size</a>();x++)	{
 		<a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>[x].<a href="../TTigressHit.html#TTigressHit:Clear" title="void TTigressHit::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 	}
-	<a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.clear();
+	<a href="../TTigressHit.html#TTigressHit:bgo" title="vector&lt;TCrystalHit&gt; TTigressHit::bgo">bgo</a>.<a href="../vector_TCrystalHit_.html#vector_TCrystalHit_:clear" title="void vector&lt;TCrystalHit,allocator&lt;TCrystalHit&gt; &gt;::clear()">clear</a>();
 
-	<a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a>.SetXYZ(0,0,0);
+	<a href="../TTigressHit.html#TTigressHit:lasthit" title="TVector3 TTigressHit::lasthit">lasthit</a>.<a href="../TVector3.html#TVector3:SetXYZ" title="void TVector3::SetXYZ(Double_t xx,Double_t yy,Double_t zz)">SetXYZ</a>(0,0,0);
 }
 
 
@@ -104,7 +104,7 @@ ClassImp(<a href="../TTigressHit.html">TTigressHit</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

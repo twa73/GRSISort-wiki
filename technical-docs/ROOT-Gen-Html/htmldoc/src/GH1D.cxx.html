@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:16:10 2015            -->
+<!--   Date: Wed Mar  4 20:38:49 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -20,10 +20,10 @@
 <div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
 <div id="codeAndLineNumbers"><pre class="listing">
 
-<span class="cpp">#include &lt;TPad.h&gt;</span>
-<span class="cpp">#include &lt;TString.h&gt;</span>
-<span class="cpp">#include &lt;TList.h&gt;</span>
-<span class="cpp">#include &lt;TBox.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TPad.h">TPad.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TString.h">TString.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TList.h">TList.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TBox.h">TBox.h</a>&gt;</span>
 
 <span class="cpp">#include "<a href="../GH1D.h">GH1D.h</a>"</span>
 <span class="cpp">#include "<a href="../GCanvas.h">GCanvas.h</a>"</span>
@@ -35,24 +35,24 @@ std::map &lt;<a href="../GH1D.html">GH1D</a>*,<span class="keyword">int</span>&g
 
 
 <a name="YkzuZE"></a><a href="../GH1D.html">GH1D</a>::<a href="../GH1D.html#GH1D:GH1D" title="GH1D GH1D::GH1D() or overloads">GH1D</a>() 
-      :<a href="../#TH1D:TH1D" title="TH1D TH1D::TH1D() or overloads">TH1D</a>() {  <a href="../GH1D.html#GH1D:InitGH1D" title="void GH1D::InitGH1D()">InitGH1D</a>();  }
+      :<a href="../TH1D.html">TH1D</a>() {  InitGH1D();  }
 
 <a name="X9OGoB"></a><a href="../GH1D.html">GH1D</a>::<a href="../GH1D.html#GH1D:_GH1D" title="void GH1D::~GH1D()">~GH1D</a>() { 
    <a href="../GH1D.html#GH1D:RemoveFromMap" title="void GH1D::RemoveFromMap(GH1D* )">RemoveFromMap</a>(<span class="keyword">this</span>);   
 }
 
 
-<a name="bhXn7B"></a><a href="../GH1D.html">GH1D</a>::<a href="../GH1D.html#GH1D:GH1D" title="GH1D GH1D::GH1D() or overloads">GH1D</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#TVectorD">TVectorD</a>&amp; v) 
-      :<a href="../#TH1D:TH1D" title="TH1D TH1D::TH1D() or overloads">TH1D</a>(v) {  <a href="../GH1D.html#GH1D:InitGH1D" title="void GH1D::InitGH1D()">InitGH1D</a>();  }
+<a name="bhXn7B"></a><a href="../GH1D.html">GH1D</a>::<a href="../GH1D.html#GH1D:GH1D" title="GH1D GH1D::GH1D() or overloads">GH1D</a>(<span class="keyword">const</span> <a href="../TVectorD.html">TVectorD</a>&amp; v) 
+      :<a href="../TH1D.html">TH1D</a>(v) {  InitGH1D();  }
 
 <a name="ATk4kE"></a><a href="../GH1D.html">GH1D</a>::<a href="../GH1D.html#GH1D:GH1D" title="GH1D GH1D::GH1D() or overloads">GH1D</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">const</span> <span class="keyword">char</span> *title,<a href="../ListOfTypes.html#Int_t">Int_t</a> nbinsx,<span class="keyword">const</span> <a href="../ListOfTypes.html#Float_t">Float_t</a> *xbins)
-      :<a href="../#TH1D:TH1D" title="TH1D TH1D::TH1D() or overloads">TH1D</a>(name,title,nbinsx,xbins)         {  <a href="../GH1D.html#GH1D:InitGH1D" title="void GH1D::InitGH1D()">InitGH1D</a>();  }
+      :<a href="../TH1D.html">TH1D</a>(name,title,nbinsx,xbins)         {  InitGH1D();  }
 
 <a name="z6OS9B"></a><a href="../GH1D.html">GH1D</a>::<a href="../GH1D.html#GH1D:GH1D" title="GH1D GH1D::GH1D() or overloads">GH1D</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">const</span> <span class="keyword">char</span> *title,<a href="../ListOfTypes.html#Int_t">Int_t</a> nbinsx,<span class="keyword">const</span> <a href="../ListOfTypes.html#Double_t">Double_t</a> *xbins)
-      :<a href="../#TH1D:TH1D" title="TH1D TH1D::TH1D() or overloads">TH1D</a>(name,title,nbinsx,xbins)        {  <a href="../GH1D.html#GH1D:InitGH1D" title="void GH1D::InitGH1D()">InitGH1D</a>();  }
+      :<a href="../TH1D.html">TH1D</a>(name,title,nbinsx,xbins)        {  InitGH1D();  }
 
 <a name="CeY9.D"></a><a href="../GH1D.html">GH1D</a>::<a href="../GH1D.html#GH1D:GH1D" title="GH1D GH1D::GH1D() or overloads">GH1D</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">const</span> <span class="keyword">char</span> *title,<a href="../ListOfTypes.html#Int_t">Int_t</a> nbinsx,<a href="../ListOfTypes.html#Double_t">Double_t</a> xlow, <a href="../ListOfTypes.html#Double_t">Double_t</a> xup)
-      :<a href="../#TH1D:TH1D" title="TH1D TH1D::TH1D() or overloads">TH1D</a>(name,title,nbinsx,xlow,xup)  {  <a href="../GH1D.html#GH1D:InitGH1D" title="void GH1D::InitGH1D()">InitGH1D</a>();  }
+      :<a href="../TH1D.html">TH1D</a>(name,title,nbinsx,xlow,xup)  {  InitGH1D();  }
 
 
 <span class="comment">//<a href="../ListOfTypes.html#void">void</a> <a href="../GH1D.html">GH1D</a>::<a href="../GH1D.html#GH1D:ExecuteEvent" title="void GH1D::ExecuteEvent(Int_t evnet,Int_t x,Int_t y)">ExecuteEvent</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> event, <a href="../ListOfTypes.html#Int_t">Int_t</a> px, <a href="../ListOfTypes.html#Int_t">Int_t</a> py) {</span>
@@ -65,8 +65,8 @@ std::map &lt;<a href="../GH1D.html">GH1D</a>*,<span class="keyword">int</span>&g
 
 <a name="xGc_FE"></a><span class="keyword">void</span> <a href="../GH1D.html">GH1D</a>::<a href="../GH1D.html#GH1D:Draw" title="void GH1D::Draw(Option_t* opt)">Draw</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *option) {
 
-   TString opt1 = option; opt1.ToLower();
-   TString opt2 = option;
+   <a href="../TString.html">TString</a> opt1 = option; opt1.ToLower();
+   <a href="../TString.html">TString</a> opt2 = option;
    <a href="../ListOfTypes.html#Int_t">Int_t</a> index  = opt1.Index(<span class="string">"same"</span>);
 
    <span class="keyword">if</span> (index&gt;=0) {
@@ -80,29 +80,29 @@ std::map &lt;<a href="../GH1D.html">GH1D</a>*,<span class="keyword">int</span>&g
    <a href="../GCanvas.html">GCanvas</a>  *tgc_ptr = 0;
 
    <span class="keyword">if</span> (gPad) {
-      <span class="keyword">if</span> (!gPad-&gt;IsEditable()) tgc_ptr = <span class="keyword">new</span> <a href="../GCanvas.html">GCanvas</a>();  <span class="comment">//gROOT-&gt;MakeDefCanvas();</span>
+      <span class="keyword">if</span> (!gPad-&gt;IsEditable()) tgc_ptr = <span class="keyword">new</span> <a href="../GCanvas.html">GCanvas</a>();  <span class="comment">//<a href="../TROOT.html">gROOT</a>-><a href="../TROOT.html#TROOT:MakeDefCanvas" title="TCanvas* TROOT::MakeDefCanvas()">MakeDefCanvas</a>();</span>
       <span class="keyword">if</span> (index&gt;=0) {
          <span class="keyword">if</span> (gPad-&gt;GetX1() == 0   &amp;&amp; gPad-&gt;GetX2() == 1 &amp;&amp;
              gPad-&gt;GetY1() == 0   &amp;&amp; gPad-&gt;GetY2() == 1 &amp;&amp;
-             gPad-&gt;GetListOfPrimitives()-&gt;<a href="../#TArray:GetSize" title="Int_t TArray::GetSize()">GetSize</a>()==0) opt2.Remove(index,4);
+             gPad-&gt;GetListOfPrimitives()-&gt;<a href="../TArray.html#TArray:GetSize" title="Int_t TArray::GetSize()">GetSize</a>()==0) opt2.Remove(index,4);
       } <span class="keyword">else</span> {
          <span class="comment">//the following statement is necessary in case one attempts to draw</span>
          <span class="comment">//a temporary histogram already in the current pad</span>
-         <span class="keyword">if</span> (<a href="../#TObject:TestBit" title="Bool_t TObject::TestBit(UInt_t f)">TestBit</a>(kCanDelete)) gPad-&gt;GetListOfPrimitives()-&gt;Remove(<span class="keyword">this</span>);
-         gPad-&gt;<a href="../#TNamed:Clear" title="void TNamed::Clear(Option_t* option=&quot;&quot;)">Clear</a>();
+         <span class="keyword">if</span> (<a href="../TObject.html#TObject:TestBit" title="Bool_t TObject::TestBit(UInt_t f)">TestBit</a>(kCanDelete)) gPad-&gt;GetListOfPrimitives()-&gt;Remove(<span class="keyword">this</span>);
+         gPad-&gt;<a href="../TNamed.html#TNamed:Clear" title="void TNamed::Clear(Option_t* option=&quot;&quot;)">Clear</a>();
       }
    } <span class="keyword">else</span> {
       <span class="keyword">if</span> (index&gt;=0) opt2.Remove(index,4);
       tgc_ptr = <span class="keyword">new</span> <a href="../GCanvas.html">GCanvas</a>;
    }
 
-   <a href="../#TH1D:TH1D" title="TH1D TH1D::TH1D() or overloads">TH1D</a>::<a href="../GH1D.html#GH1D:Draw" title="void GH1D::Draw(Option_t* opt)">Draw</a>(opt2.Data());
-   <span class="comment">//gPad-&gt;<a href="../#TH1:FindObject" title="TObject* TH1::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>);//-&gt;<a href="../#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(TBox::kCannotMove);</span>
-   <span class="comment">//gPad-&gt;GetListOfPrimitives()-&gt;<a href="../#TH1:Print" title="void TH1::Print(Option_t* option=&quot;&quot;)">Print</a>();</span>
+   <a href="../TH1D.html">TH1D</a>::<a href="../TH1.html#TH1:Draw" title="void TH1::Draw(Option_t* option=&quot;&quot;)">Draw</a>(opt2.Data());
+   <span class="comment">//gPad-&gt;<a href="../TH1.html#TH1:FindObject" title="TObject* TH1::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>);//-><a href="../TObject.html#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(<a href="../TBox.html">TBox</a>::<a href="../TBox.html#TBox:kCannotMove" title="const enum TBox:: TBox::kCannotMove">kCannotMove</a>);</span>
+   <span class="comment">//gPad-&gt;GetListOfPrimitives()-&gt;<a href="../TH1.html#TH1:Print" title="void TH1::Print(Option_t* option=&quot;&quot;)">Print</a>();</span>
    <span class="comment">//gPad-&gt;Update();</span>
-   <span class="comment">//gPad-&gt;<a href="../#TH1:FindObject" title="TObject* TH1::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>)-&gt;<a href="../#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(TBox::kCannotMove);</span>
-   <span class="comment">//printf(<span class="string">"gPad-&gt;FindObject(\"TFrame\") = %p\n"</span>,gPad-&gt;<a href="../#TH1:FindObject" title="TObject* TH1::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>)); //-&gt;<a href="../#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(kCannotMove);</span>
-   <span class="comment">//printf(<span class="string">"Draw called\t\t%p\t%p\n"</span>,gPad,gPad-&gt;<a href="../#TH1:FindObject" title="TObject* TH1::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>));</span>
+   <span class="comment">//gPad-&gt;<a href="../TH1.html#TH1:FindObject" title="TObject* TH1::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>)-><a href="../TObject.html#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(<a href="../TBox.html">TBox</a>::<a href="../TBox.html#TBox:kCannotMove" title="const enum TBox:: TBox::kCannotMove">kCannotMove</a>);</span>
+   <span class="comment">//printf(<span class="string">"gPad-&gt;FindObject(\"TFrame\") = %p\n"</span>,gPad-&gt;<a href="../TH1.html#TH1:FindObject" title="TObject* TH1::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>)); //-&gt;<a href="../TObject.html#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(kCannotMove);</span>
+   <span class="comment">//printf(<span class="string">"Draw called\t\t%p\t%p\n"</span>,gPad,gPad-&gt;<a href="../TH1.html#TH1:FindObject" title="TObject* TH1::FindObject(const char* name) or overloads">FindObject</a>(<span class="string">"TFrame"</span>));</span>
 }
 
 
@@ -119,7 +119,7 @@ std::map &lt;<a href="../GH1D.html">GH1D</a>*,<span class="keyword">int</span>&g
    printf(<span class="string">"Number of GH1Ds in memory[%lu]:\n"</span>,<a href="../GH1D.html#GH1D:fCurrentHistMap" title="map&lt;GH1D*,int&gt; GH1D::fCurrentHistMap">fCurrentHistMap</a>.size());
    std::map&lt;<a href="../GH1D.html">GH1D</a>*,<span class="keyword">int</span>&gt;::iterator iter; <span class="keyword">int</span> x=0;
    <span class="keyword">for</span> (iter = <a href="../GH1D.html#GH1D:fCurrentHistMap" title="map&lt;GH1D*,int&gt; GH1D::fCurrentHistMap">fCurrentHistMap</a>.begin(); iter != <a href="../GH1D.html#GH1D:fCurrentHistMap" title="map&lt;GH1D*,int&gt; GH1D::fCurrentHistMap">fCurrentHistMap</a>.end(); iter++) {
-      printf(<span class="string">"\thist[%i]: fUnique = %i\t%s\n"</span>,x++,iter-&gt;second,iter-&gt;first-&gt;<a href="../#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
+      printf(<span class="string">"\thist[%i]: fUnique = %i\t%s\n"</span>,x++,iter-&gt;second,iter-&gt;first-&gt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
    }
    printf(<span class="string">"-----------------------\n"</span>);
 }
@@ -138,7 +138,7 @@ std::map &lt;<a href="../GH1D.html">GH1D</a>*,<span class="keyword">int</span>&g
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:16 </em><em>&raquo; Last generated: 2015-03-04 13:16</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:38 </em><em>&raquo; Last generated: 2015-03-04 20:38</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

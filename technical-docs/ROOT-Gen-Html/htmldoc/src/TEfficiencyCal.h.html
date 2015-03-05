@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:21 2015            -->
+<!--   Date: Wed Mar  4 20:39:21 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -24,7 +24,7 @@
 
 <span class="cpp">#include "<a href="../TCal.h">TCal.h</a>"</span>
 <span class="cpp">#include "<a href="../TPeak.h">TPeak.h</a>"</span>
-<span class="cpp">#include "TSpectrum.h"</span>
+<span class="cpp">#include "<a href="../TSpectrum.h">TSpectrum.h</a>"</span>
 
 <span class="keyword">class</span> <a href="../TEfficiencyCal.html">TEfficiencyCal</a> : <span class="keyword">public</span> <a href="../TCal.html">TCal</a> {
  <span class="keyword">public</span>: 
@@ -35,7 +35,7 @@
    <a href="../TEfficiencyCal.html">TEfficiencyCal</a>(<span class="keyword">const</span> <a href="../TEfficiencyCal.html">TEfficiencyCal</a> &amp;copy);
 
  <span class="keyword">public</span>:
-   <span class="keyword">void</span> <a href="../TEfficiencyCal.html#TEfficiencyCal:Copy" title="void TEfficiencyCal::Copy(TObject&amp; obj)">Copy</a>(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> &amp;obj) <span class="keyword">const</span>;
+   <span class="keyword">void</span> <a href="../TEfficiencyCal.html#TEfficiencyCal:Copy" title="void TEfficiencyCal::Copy(TObject&amp; obj)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;obj) <span class="keyword">const</span>;
    <span class="keyword">void</span> <a href="../TEfficiencyCal.html#TEfficiencyCal:AddPoint" title="void TEfficiencyCal::AddPoint(Double_t energy,Double_t area,Double_t d_energy=0.0,Double_t d_area=0.0) or overloads">AddPoint</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> energy, <a href="../ListOfTypes.html#Double_t">Double_t</a> area, <a href="../ListOfTypes.html#Double_t">Double_t</a> d_energy=0.0, <a href="../ListOfTypes.html#Double_t">Double_t</a> d_area=0.0);
    <span class="keyword">void</span> <a href="../TEfficiencyCal.html#TEfficiencyCal:AddPoint" title="void TEfficiencyCal::AddPoint(Double_t energy,Double_t area,Double_t d_energy=0.0,Double_t d_area=0.0) or overloads">AddPoint</a>(<a href="../TPeak.html">TPeak</a> *peak);
 
@@ -62,7 +62,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

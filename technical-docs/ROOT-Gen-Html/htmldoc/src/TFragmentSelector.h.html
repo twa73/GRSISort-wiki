@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:16:12 2015            -->
+<!--   Date: Wed Mar  4 20:39:24 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -21,34 +21,34 @@
 <div id="codeAndLineNumbers"><pre class="listing">
 <span class="comment">//////////////////////////////////////////////////////////</span>
 <span class="comment">// This class has been automatically generated on</span>
-<span class="comment">// Mon Aug 11 14:56:50 2014 by ROOT version 5.34/14</span>
-<span class="comment">// from TTree FragmentTree/FragmentTree</span>
+<span class="comment">// Mon Aug 11 14:56:50 2014 by <a href="../ROOT.html">ROOT</a> version 5.34/14</span>
+<span class="comment">// from <a href="../TTree.html">TTree</a> FragmentTree/FragmentTree</span>
 <span class="comment">// found on file: fragment00008_000.root</span>
 <span class="comment">//////////////////////////////////////////////////////////</span>
 
 <span class="cpp">#ifndef TFragmentSelector_h</span>
 <span class="cpp">#define TFragmentSelector_h</span>
 
-<span class="cpp">#include "TROOT.h"</span>
-<span class="cpp">#include "TChain.h"</span>
-<span class="cpp">#include "TFile.h"</span>
-<span class="cpp">#include "TSelector.h"</span>
-<span class="cpp">#include "TProof.h"</span>
-<span class="cpp">#include "TSystem.h"</span>
+<span class="cpp">#include "<a href="../TROOT.h">TROOT.h</a>"</span>
+<span class="cpp">#include "<a href="../TChain.h">TChain.h</a>"</span>
+<span class="cpp">#include "<a href="../TFile.h">TFile.h</a>"</span>
+<span class="cpp">#include "<a href="../TSelector.h">TSelector.h</a>"</span>
+<span class="cpp">#include "<a href="../TProof.h">TProof.h</a>"</span>
+<span class="cpp">#include "<a href="../TSystem.h">TSystem.h</a>"</span>
 
 <span class="comment">//class <a href="../TChannel.html">TChannel</a>;</span>
 
-<span class="comment">// Header file for the classes stored in the TTree if any.</span>
+<span class="comment">// Header file for the classes stored in the <a href="../TTree.html">TTree</a> if any.</span>
 <span class="cpp">#include "<a href="../TFragment.h">TFragment.h</a>"</span>
 <span class="cpp">#include "<a href="../TChannel.h">TChannel.h</a>"</span>
 
 
 
-<span class="comment">// Fixed size dimensions of array or collections stored in the TTree if any.</span>
+<span class="comment">// Fixed size dimensions of array or collections stored in the <a href="../TTree.html">TTree</a> if any.</span>
 
-<span class="keyword">class</span> <a href="../TFragmentSelector.html">TFragmentSelector</a> : <span class="keyword">public</span> <a href="../#TSelector:TSelector" title="TSelector TSelector::TSelector(const TSelector&amp; ) or overloads">TSelector</a> {
+<span class="keyword">class</span> <a href="../TFragmentSelector.html">TFragmentSelector</a> : <span class="keyword">public</span> <a href="../TSelector.html">TSelector</a> {
 <span class="keyword">public</span> :
-   TTree          *<a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>;   <span class="comment">//!pointer to the analyzed TTree or TChain</span>
+   <a href="../TTree.html">TTree</a>          *<a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>;   <span class="comment">//!pointer to the analyzed <a href="../TTree.html">TTree</a> or <a href="../TChain.html">TChain</a></span>
 
    <span class="comment">// Declaration of leaf types</span>
  <span class="comment">//<a href="../TFragment.html">TFragment</a>       *<a href="../TFragment.html">TFragment</a>;</span>
@@ -80,46 +80,46 @@
    std::vector&lt;int16_t&gt; wavebuffer;
 
    // List of branches
-   TBranch        *b_TFragment_MidasTimeStamp;   //!
-   TBranch        *b_TFragment_MidasId;   //!
-   TBranch        *b_TFragment_TriggerId;   //!
-   TBranch        *b_TFragment_FragmentId;   //!
-   TBranch        *b_TFragment_TriggerBitPattern;   //!
-   TBranch        *b_TFragment_ChannelNumber;   //!
-   TBranch        *b_TFragment_ChannelAddress;   //!
-   TBranch        *b_TFragment_Cfd;   //!
-   TBranch        *b_TFragment_Led;   //!
-   TBranch        *b_TFragment_Charge;   //!
-   TBranch        *b_TFragment_TimeStampLow;   //!
-   TBranch        *b_TFragment_TimeStampHigh;   //!
-   TBranch        *b_TFragment_TimeToTrig;   //!
-   TBranch        *b_TFragment_PPG;   //!
-   TBranch        *b_TFragment_DeadTime;   //!
-   TBranch        *b_TFragment_NumberOfFilters;   //!
-   TBranch        *b_TFragment_NumberOfPileups;   //!
-   TBranch        *b_TFragment_DataType;   //!
-   TBranch        *b_TFragment_DetectorType;   //!
-   TBranch        *b_TFragment_ChannelId;   //!
-   TBranch        *b_TFragment_KValue;   //!
-   TBranch        *b_TFragment_wavebuffer;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_MidasTimeStamp;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_MidasId;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_TriggerId;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_FragmentId;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_TriggerBitPattern;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_ChannelNumber;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_ChannelAddress;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_Cfd;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_Led;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_Charge;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_TimeStampLow;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_TimeStampHigh;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_TimeToTrig;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_PPG;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_DeadTime;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_NumberOfFilters;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_NumberOfPileups;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_DataType;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_DetectorType;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_ChannelId;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_KValue;   //!
+   <a href="../TBranch.html">TBranch</a>        *b_TFragment_wavebuffer;   //!
 */</span>
 
 
-<a name="c9kqNC"></a>   <a href="../TFragmentSelector.html">TFragmentSelector</a>(<span class="keyword">int</span> runnumber=0,<span class="keyword">int</span> subrunnumber=0,TTree * <span class="comment">/*tree*/</span> =0) : <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>(0),<a href="../TFragmentSelector.html#TFragmentSelector:fragment" title="TFragment* TFragmentSelector::fragment">fragment</a>(0) {
+<a name="c9kqNC"></a>   <a href="../TFragmentSelector.html">TFragmentSelector</a>(<span class="keyword">int</span> runnumber=0,<span class="keyword">int</span> subrunnumber=0,<a href="../TTree.html">TTree</a> * <span class="comment">/*tree*/</span> =0) : <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>(0),fragment(0) {
     <a href="../TFragmentSelector.html#TFragmentSelector:frunnumber" title="int TFragmentSelector::frunnumber">frunnumber</a> = runnumber; <a href="../TFragmentSelector.html#TFragmentSelector:fsubrunnumber" title="int TFragmentSelector::fsubrunnumber">fsubrunnumber</a> = subrunnumber;
    }
 <a name="JtfaS"></a>   <span class="keyword">virtual</span> <a href="../TFragmentSelector.html#TFragmentSelector:_TFragmentSelector" title="void TFragmentSelector::~TFragmentSelector()">~TFragmentSelector</a>() { }
 <a name="qBwhx"></a>   <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>   <a href="../TFragmentSelector.html#TFragmentSelector:Version" title="Int_t TFragmentSelector::Version()">Version</a>() <span class="keyword">const</span> { <span class="keyword">return</span> 2; }
-   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:Begin" title="void TFragmentSelector::Begin(TTree* tree)">Begin</a>(TTree *tree);
-   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:SlaveBegin" title="void TFragmentSelector::SlaveBegin(TTree* tree)">SlaveBegin</a>(TTree *tree);
-   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:Init" title="void TFragmentSelector::Init(TTree* tree)">Init</a>(TTree *tree);
+   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:Begin" title="void TFragmentSelector::Begin(TTree* tree)">Begin</a>(<a href="../TTree.html">TTree</a> *tree);
+   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:SlaveBegin" title="void TFragmentSelector::SlaveBegin(TTree* tree)">SlaveBegin</a>(<a href="../TTree.html">TTree</a> *tree);
+   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:Init" title="void TFragmentSelector::Init(TTree* tree)">Init</a>(<a href="../TTree.html">TTree</a> *tree);
    <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  <a href="../TFragmentSelector.html#TFragmentSelector:Notify" title="Bool_t TFragmentSelector::Notify()">Notify</a>();
    <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  <a href="../TFragmentSelector.html#TFragmentSelector:Process" title="Bool_t TFragmentSelector::Process(Long64_t entry)">Process</a>(<a href="../ListOfTypes.html#Long64_t">Long64_t</a> entry);
-<a name="pWScwB"></a>   <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>   <a href="../TFragmentSelector.html#TFragmentSelector:GetEntry" title="Int_t TFragmentSelector::GetEntry(Long64_t entry,Int_t getall=0)">GetEntry</a>(<a href="../ListOfTypes.html#Long64_t">Long64_t</a> entry, <a href="../ListOfTypes.html#Int_t">Int_t</a> getall = 0) { <span class="keyword">return</span> <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a> ? <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;GetTree()-&gt;<a href="../TFragmentSelector.html#TFragmentSelector:GetEntry" title="Int_t TFragmentSelector::GetEntry(Long64_t entry,Int_t getall=0)">GetEntry</a>(entry, getall) : 0; }
+<a name="pWScwB"></a>   <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>   <a href="../TFragmentSelector.html#TFragmentSelector:GetEntry" title="Int_t TFragmentSelector::GetEntry(Long64_t entry,Int_t getall=0)">GetEntry</a>(<a href="../ListOfTypes.html#Long64_t">Long64_t</a> entry, <a href="../ListOfTypes.html#Int_t">Int_t</a> getall = 0) { <span class="keyword">return</span> <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a> ? <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:GetTree" title="TTree* TTree::GetTree()">GetTree</a>()-><a href="../TTree.html#TTree:GetEntry" title="Int_t TTree::GetEntry(Long64_t entry=0,Int_t getall=0)">GetEntry</a>(entry, getall) : 0; }
 <a name="fvwm2B"></a>   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:SetOption" title="void TFragmentSelector::SetOption(const char* option)">SetOption</a>(<span class="keyword">const</span> <span class="keyword">char</span> *option) { fOption = option; }
-<a name="uVnBRD"></a>   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:SetObject" title="void TFragmentSelector::SetObject(TObject* obj)">SetObject</a>(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj) { fObject = obj; }
-<a name="HBoyaC"></a>   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:SetInputList" title="void TFragmentSelector::SetInputList(TList* input)">SetInputList</a>(TList *input) { fInput = input; }
-<a name="ZwUbjB"></a>   <span class="keyword">virtual</span> TList  *<a href="../TFragmentSelector.html#TFragmentSelector:GetOutputList" title="TList* TFragmentSelector::GetOutputList()">GetOutputList</a>() <span class="keyword">const</span> { <span class="keyword">return</span> fOutput; }
+<a name="uVnBRD"></a>   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:SetObject" title="void TFragmentSelector::SetObject(TObject* obj)">SetObject</a>(<a href="../TObject.html">TObject</a> *obj) { fObject = obj; }
+<a name="HBoyaC"></a>   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:SetInputList" title="void TFragmentSelector::SetInputList(TList* input)">SetInputList</a>(<a href="../TList.html">TList</a> *input) { fInput = input; }
+<a name="ZwUbjB"></a>   <span class="keyword">virtual</span> <a href="../TList.html">TList</a>  *<a href="../TFragmentSelector.html#TFragmentSelector:GetOutputList" title="TList* TFragmentSelector::GetOutputList()">GetOutputList</a>() <span class="keyword">const</span> { <span class="keyword">return</span> fOutput; }
    <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:SlaveTerminate" title="void TFragmentSelector::SlaveTerminate()">SlaveTerminate</a>();
    <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TFragmentSelector.html#TFragmentSelector:Terminate" title="void TFragmentSelector::Terminate()">Terminate</a>();
 
@@ -133,7 +133,7 @@
 <span class="cpp">#endif</span>
 
 <span class="cpp">#ifdef TFragmentSelector_cxx</span>
-<a name="hJkGG"></a><span class="keyword">void</span> <a href="../TFragmentSelector.html">TFragmentSelector</a>::<a href="../TFragmentSelector.html#TFragmentSelector:Init" title="void TFragmentSelector::Init(TTree* tree)">Init</a>(TTree *tree)
+<a name="hJkGG"></a><span class="keyword">void</span> <a href="../TFragmentSelector.html">TFragmentSelector</a>::<a href="../TFragmentSelector.html#TFragmentSelector:Init" title="void TFragmentSelector::Init(TTree* tree)">Init</a>(<a href="../TTree.html">TTree</a> *tree)
 {
    <span class="comment">// The <a href="../TFragmentSelector.html#TFragmentSelector:Init" title="void TFragmentSelector::Init(TTree* tree)">Init</a>() function is called when the selector needs to initialize</span>
    <span class="comment">// a new tree or chain. Typically here the branch addresses and branch</span>
@@ -147,15 +147,15 @@
    <span class="keyword">if</span> (!tree) <span class="keyword">return</span>;
    <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a> = tree;
 
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"TFragment"</span>,&amp;<a href="../TFragmentSelector.html#TFragmentSelector:fragment" title="TFragment* TFragmentSelector::fragment">fragment</a>);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"TFragment"</span>,&amp;<a href="../TFragmentSelector.html#TFragmentSelector:fragment" title="TFragment* TFragmentSelector::fragment">fragment</a>);
 
 
   <span class="keyword">if</span>(<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetNumberOfChannels" title="int TChannel::GetNumberOfChannels()">GetNumberOfChannels</a>()==0) {
-     TList *chanlist = <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;GetUserInfo();
-     TIter iter(chanlist);
-		 <span class="keyword">while</span>(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj = iter.Next()) {
+     <a href="../TList.html">TList</a> *chanlist = <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:GetUserInfo" title="TList* TTree::GetUserInfo()">GetUserInfo</a>();
+     <a href="../TIter.html">TIter</a> iter(chanlist);
+		 <span class="keyword">while</span>(<a href="../TObject.html">TObject</a> *obj = iter.Next()) {
      <span class="comment">//while(<a href="../TChannel.html">TChannel</a> *chan = (<a href="../TChannel.html">TChannel</a>*)iter.Next()) {</span>
-				<span class="keyword">if</span>(!obj-&gt;<a href="../#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TChannel"</span>))
+				<span class="keyword">if</span>(!obj-&gt;<a href="../TObject.html#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TChannel"</span>))
 					<span class="keyword">continue</span>;
 				<a href="../TChannel.html">TChannel</a> *newchan = <span class="keyword">new</span> <a href="../TChannel.html">TChannel</a>((<a href="../TChannel.html">TChannel</a>*)obj);<span class="comment">//-&gt;GetAddress());</span>
 				<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:UpdateChannel" title="int TChannel::UpdateChannel(TChannel* ,Option_t* opt=&quot;&quot;)">UpdateChannel</a>(newchan);
@@ -167,30 +167,30 @@
 
 
 <span class="comment">/*
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetMakeClass(1);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetMakeClass" title="void TTree::SetMakeClass(Int_t make)">SetMakeClass</a>(1);
 
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"MidasTimeStamp"</span>, &amp;MidasTimeStamp, &amp;b_TFragment_MidasTimeStamp);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"MidasId"</span>, &amp;MidasId, &amp;b_TFragment_MidasId);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"TriggerId"</span>, &amp;TriggerId, &amp;b_TFragment_TriggerId);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"FragmentId"</span>, &amp;FragmentId, &amp;b_TFragment_FragmentId);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"TriggerBitPattern"</span>, &amp;TriggerBitPattern, &amp;b_TFragment_TriggerBitPattern);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"ChannelNumber"</span>, &amp;ChannelNumber, &amp;b_TFragment_ChannelNumber);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"ChannelAddress"</span>, &amp;ChannelAddress, &amp;b_TFragment_ChannelAddress);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"Cfd"</span>, &amp;Cfd, &amp;b_TFragment_Cfd);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"Led"</span>, &amp;Led, &amp;b_TFragment_Led);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"Charge"</span>, &amp;Charge, &amp;b_TFragment_Charge);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"TimeStampLow"</span>, &amp;TimeStampLow, &amp;b_TFragment_TimeStampLow);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"TimeStampHigh"</span>, &amp;TimeStampHigh, &amp;b_TFragment_TimeStampHigh);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"TimeToTrig"</span>, &amp;TimeToTrig, &amp;b_TFragment_TimeToTrig);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"PPG"</span>, &amp;PPG, &amp;b_TFragment_PPG);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"DeadTime"</span>, &amp;DeadTime, &amp;b_TFragment_DeadTime);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"NumberOfFilters"</span>, &amp;NumberOfFilters, &amp;b_TFragment_NumberOfFilters);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"NumberOfPileups"</span>, &amp;NumberOfPileups, &amp;b_TFragment_NumberOfPileups);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"DataType"</span>, &amp;DataType, &amp;b_TFragment_DataType);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"DetectorType"</span>, &amp;DetectorType, &amp;b_TFragment_DetectorType);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"ChannelId"</span>, &amp;ChannelId, &amp;b_TFragment_ChannelId);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"KValue"</span>, &amp;KValue, &amp;b_TFragment_KValue);
-   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-&gt;SetBranchAddress(<span class="string">"wavebuffer"</span>, &amp;wavebuffer, &amp;b_TFragment_wavebuffer);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"MidasTimeStamp"</span>, &amp;MidasTimeStamp, &amp;b_TFragment_MidasTimeStamp);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"MidasId"</span>, &amp;MidasId, &amp;b_TFragment_MidasId);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"TriggerId"</span>, &amp;TriggerId, &amp;b_TFragment_TriggerId);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"FragmentId"</span>, &amp;FragmentId, &amp;b_TFragment_FragmentId);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"TriggerBitPattern"</span>, &amp;TriggerBitPattern, &amp;b_TFragment_TriggerBitPattern);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"ChannelNumber"</span>, &amp;ChannelNumber, &amp;b_TFragment_ChannelNumber);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"ChannelAddress"</span>, &amp;ChannelAddress, &amp;b_TFragment_ChannelAddress);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"Cfd"</span>, &amp;Cfd, &amp;b_TFragment_Cfd);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"Led"</span>, &amp;Led, &amp;b_TFragment_Led);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"Charge"</span>, &amp;Charge, &amp;b_TFragment_Charge);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"TimeStampLow"</span>, &amp;TimeStampLow, &amp;b_TFragment_TimeStampLow);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"TimeStampHigh"</span>, &amp;TimeStampHigh, &amp;b_TFragment_TimeStampHigh);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"TimeToTrig"</span>, &amp;TimeToTrig, &amp;b_TFragment_TimeToTrig);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"PPG"</span>, &amp;PPG, &amp;b_TFragment_PPG);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"DeadTime"</span>, &amp;DeadTime, &amp;b_TFragment_DeadTime);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"NumberOfFilters"</span>, &amp;NumberOfFilters, &amp;b_TFragment_NumberOfFilters);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"NumberOfPileups"</span>, &amp;NumberOfPileups, &amp;b_TFragment_NumberOfPileups);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"DataType"</span>, &amp;DataType, &amp;b_TFragment_DataType);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"DetectorType"</span>, &amp;DetectorType, &amp;b_TFragment_DetectorType);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"ChannelId"</span>, &amp;ChannelId, &amp;b_TFragment_ChannelId);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"KValue"</span>, &amp;KValue, &amp;b_TFragment_KValue);
+   <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"wavebuffer"</span>, &amp;wavebuffer, &amp;b_TFragment_wavebuffer);
 */</span>
 }
 
@@ -198,7 +198,7 @@
 <a name="fKW0RC"></a><a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TFragmentSelector.html">TFragmentSelector</a>::<a href="../TFragmentSelector.html#TFragmentSelector:Notify" title="Bool_t TFragmentSelector::Notify()">Notify</a>()
 {
    <span class="comment">// The <a href="../TFragmentSelector.html#TFragmentSelector:Notify" title="Bool_t TFragmentSelector::Notify()">Notify</a>() function is called when a new file is opened. This</span>
-   <span class="comment">// can be either for a new TTree in a TChain or when when a new TTree</span>
+   <span class="comment">// can be either for a new <a href="../TTree.html">TTree</a> in a <a href="../TChain.html">TChain</a> or when when a new <a href="../TTree.html">TTree</a></span>
    <span class="comment">// is started when using PROOF. It is normally not necessary to make changes</span>
    <span class="comment">// to the generated code, but the routine can be extended by the</span>
    <span class="comment">// user if needed. The return value is currently not used.</span>
@@ -215,7 +215,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:16 </em><em>&raquo; Last generated: 2015-03-04 13:16</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

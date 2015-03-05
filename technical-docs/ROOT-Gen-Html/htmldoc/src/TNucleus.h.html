@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:29 2015            -->
+<!--   Date: Wed Mar  4 20:40:05 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -32,11 +32,11 @@
 
 <span class="cpp">#include "<a href="../TGRSITransition.h">TGRSITransition.h</a>"</span>
 
-<span class="cpp">#include "TObject.h"</span>
-<span class="cpp">#include "TNamed.h"</span>
-<span class="cpp">#include "TList.h"</span>
+<span class="cpp">#include "<a href="../TObject.h">TObject.h</a>"</span>
+<span class="cpp">#include "<a href="../TNamed.h">TNamed.h</a>"</span>
+<span class="cpp">#include "<a href="../TList.h">TList.h</a>"</span>
 
-<span class="keyword">class</span> <a href="../TNucleus.html">TNucleus</a> : <span class="keyword">public</span> <a href="../#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>{
+<span class="keyword">class</span> <a href="../TNucleus.html">TNucleus</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a>{
 
  <span class="keyword">private</span>:
   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TNucleus.html#TNucleus:grsipath" title="const char* TNucleus::grsipath">grsipath</a>;
@@ -68,7 +68,7 @@
  <span class="keyword">double</span> <a href="../TNucleus.html#TNucleus:GetRadius" title="double TNucleus::GetRadius()">GetRadius</a>() <span class="keyword">const</span>;					
   <span class="keyword">int</span> <a href="../TNucleus.html#TNucleus:GetZfromSymbol" title="int TNucleus::GetZfromSymbol(char* )">GetZfromSymbol</a>(<span class="keyword">char</span>*);				
 
-  TList <a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>;
+  <a href="../TList.html">TList</a> <a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>;
   <span class="keyword">bool</span> <a href="../TNucleus.html#TNucleus:SetSourceData" title="bool TNucleus::SetSourceData()">SetSourceData</a>();
 
 <span class="keyword">private</span>:
@@ -94,7 +94,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

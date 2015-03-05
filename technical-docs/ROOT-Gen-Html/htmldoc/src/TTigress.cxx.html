@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:32 2015            -->
+<!--   Date: Wed Mar  4 20:40:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -24,9 +24,9 @@
 
 <span class="cpp">#include "<a href="../TTigress.h">TTigress.h</a>"</span>
 
-<span class="cpp">#include &lt;TRandom.h&gt;</span>
-<span class="cpp">#include &lt;TMath.h&gt;</span>
-<span class="cpp">#include &lt;TClass.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TRandom.h">TRandom.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TMath.h">TMath.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TClass.h">TClass.h</a>&gt;</span>
 
 ClassImp(<a href="../TTigress.html">TTigress</a>)
 
@@ -41,7 +41,7 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
 
 
 <a name="bIBwQD"></a><a href="../TTigress.html">TTigress</a>::<a href="../TTigress.html#TTigress:TTigress" title="TTigress TTigress::TTigress() or overloads">TTigress</a>() : <a href="../TTigress.html#TTigress:tigdata" title="TTigressData* TTigress::tigdata">tigdata</a>(0), <a href="../TTigress.html#TTigress:bgodata" title="TBGOData* TTigress::bgodata">bgodata</a>(0)	{
-   <a href="../TTigress.html#TTigress:Class" title="TClass* TTigress::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<span class="keyword">true</span>);
+   <a href="../TTigress.html#TTigress:Class" title="TClass* TTigress::Class()">Class</a>()-><a href="../TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<span class="keyword">true</span>);
    <a href="../TTigress.html#TTigress:Clear" title="void TTigress::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 }
 
@@ -55,8 +55,8 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
 	<span class="keyword">if</span>(<a href="../TTigress.html#TTigress:tigdata" title="TTigressData* TTigress::tigdata">tigdata</a>) <a href="../TTigress.html#TTigress:tigdata" title="TTigressData* TTigress::tigdata">tigdata</a>-&gt;<a href="../TTigress.html#TTigress:Clear" title="void TTigress::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 	<span class="keyword">if</span>(<a href="../TTigress.html#TTigress:bgodata" title="TBGOData* TTigress::bgodata">bgodata</a>) <a href="../TTigress.html#TTigress:bgodata" title="TBGOData* TTigress::bgodata">bgodata</a>-&gt;<a href="../TTigress.html#TTigress:Clear" title="void TTigress::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 
-	<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.clear();
-	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.clear();
+	<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:clear" title="void vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::clear()">clear</a>();
+	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:clear" title="void vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::clear()">clear</a>();
 
 }
 
@@ -143,10 +143,10 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
     corehit.SetCrystalNumber(tdata-&gt;GetCoreNumber(i));
 
 
-		<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.push_back(corehit);
+		<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:push_back" title="void vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::push_back(const TTigressHit&amp; x)">push_back</a>(corehit);
 	}
 	
-	<span class="keyword">for</span>(<span class="keyword">int</span> i=0;i&lt;<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.size();i++)	{
+	<span class="keyword">for</span>(<span class="keyword">int</span> i=0;i&lt;<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:size" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size()">size</a>();i++)	{
 	   <span class="keyword">for</span>(<span class="keyword">int</span> j=0;j&lt;tdata-&gt;GetSegmentMultiplicity();j++)	{
 	      <span class="keyword">if</span>((<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>[i].GetDetectorNumber() == tdata-&gt;GetSegCloverNumber(j))  &amp;&amp; (<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>[i].GetCrystalNumber() == tdata-&gt;GetSegCoreNumber(j))) {
 	         <a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>[i].CheckFirstHit(tdata-&gt;GetSegmentCharge(j),tdata-&gt;GetSegmentNumber(j));
@@ -164,7 +164,7 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
            <span class="keyword">if</span>(<a href="../TTigress.html">TTigress</a>::<a href="../TTigress.html#TTigress:SetSegmentWave" title="bool TTigress::SetSegmentWave()">SetSegmentWave</a>()) {
              temp_crystal.SetWave(tdata-&gt;GetSegmentWave(j));
            }
-           <a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.at(i).SetSegment(temp_crystal);
+           <a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(i).SetSegment(temp_crystal);
         }	
 	   }  <span class="comment">// all segments set.  </span>
 
@@ -180,16 +180,16 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
           <span class="keyword">if</span>(<a href="../TTigress.html">TTigress</a>::<a href="../TTigress.html#TTigress:SetBGOWave" title="bool TTigress::SetBGOWave()">SetBGOWave</a>()) {
             temp_crystal.SetWave(bdata-&gt;GetBGOWave(j));
           }			
-	        <a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.at(i).SetBGO(temp_crystal);	
+	        <a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(i).SetBGO(temp_crystal);	
         }
       }
     }  <span class="comment">// all bgo's set.</span>
 
-		<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.at(i).SetPosition(<a href="../TTigress.html#TTigress:GetPosition" title="TVector3 TTigress::GetPosition(TTigressHit* ,int distance=0) or overloads">GetPosition</a>(&amp;(<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.at(i))));
-		<span class="comment">//DopplerCorrect(&amp;(<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.at(i)));</span>
+		<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(i).SetPosition(<a href="../TTigress.html#TTigress:GetPosition" title="TVector3 TTigress::GetPosition(TTigressHit* ,int distance=0) or overloads">GetPosition</a>(&amp;(<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(i))));
+		<span class="comment">//DopplerCorrect(&amp;(<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(i)));</span>
 	}
 
-	<span class="keyword">if</span>(<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.size()&gt;1)
+	<span class="keyword">if</span>(<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:size" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size()">size</a>()&gt;1)
 		<a href="../TTigress.html#TTigress:BuildAddBack" title="void TTigress::BuildAddBack(Option_t* opt=&quot;&quot;)">BuildAddBack</a>();
 
 }
@@ -210,13 +210,13 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
 
 
 
-<a name="qzRRR"></a>TVector3 <a href="../TTigress.html">TTigress</a>::<a href="../TTigress.html#TTigress:GetPosition" title="TVector3 TTigress::GetPosition(TTigressHit* ,int distance=0) or overloads">GetPosition</a>(<a href="../TTigressHit.html">TTigressHit</a> *hit, <span class="keyword">int</span> dist)  {
+<a name="qzRRR"></a><a href="../TVector3.html">TVector3</a> <a href="../TTigress.html">TTigress</a>::<a href="../TTigress.html#TTigress:GetPosition" title="TVector3 TTigress::GetPosition(TTigressHit* ,int distance=0) or overloads">GetPosition</a>(<a href="../TTigressHit.html">TTigressHit</a> *hit, <span class="keyword">int</span> dist)  {
 			<span class="keyword">return</span> <a href="../TTigress.html">TTigress</a>::<a href="../TTigress.html#TTigress:GetPosition" title="TVector3 TTigress::GetPosition(TTigressHit* ,int distance=0) or overloads">GetPosition</a>(hit-&gt;GetDetectorNumber(),hit-&gt;GetCrystalNumber(),hit-&gt;GetInitialHit());	
 }
 
-<a name="sDFuBD"></a>TVector3 <a href="../TTigress.html">TTigress</a>::<a href="../TTigress.html#TTigress:GetPosition" title="TVector3 TTigress::GetPosition(TTigressHit* ,int distance=0) or overloads">GetPosition</a>(<span class="keyword">int</span> DetNbr,<span class="keyword">int</span> CryNbr,<span class="keyword">int</span> SegNbr, <span class="keyword">int</span> dist)	{
+<a name="sDFuBD"></a><a href="../TVector3.html">TVector3</a> <a href="../TTigress.html">TTigress</a>::<a href="../TTigress.html#TTigress:GetPosition" title="TVector3 TTigress::GetPosition(TTigressHit* ,int distance=0) or overloads">GetPosition</a>(<span class="keyword">int</span> DetNbr,<span class="keyword">int</span> CryNbr,<span class="keyword">int</span> SegNbr, <span class="keyword">int</span> dist)	{
 
-			TVector3 det_pos;
+			<a href="../TVector3.html">TVector3</a> det_pos;
 			<span class="keyword">double</span> xx = 0;
 			<span class="keyword">double</span> yy = 0;
 			<span class="keyword">double</span> zz = 0;
@@ -318,12 +318,12 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
 			if(CryNbr&lt;0 || CryNbr &gt;3) 
 				return det_pos;
 
-			TRotation Cry_Rot;	
-			Cry_Rot.RotateZ(90*CryNbr*TMath::DegToRad());
+			<a href="../TRotation.html">TRotation</a> Cry_Rot;	
+			Cry_Rot.RotateZ(90*CryNbr*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:DegToRad" title="Double_t TMath::DegToRad()">DegToRad</a>());
 
-			TRotation rot;
-			TRotation rot_theta;
-			TRotation rot_phi;
+			<a href="../TRotation.html">TRotation</a> rot;
+			<a href="../TRotation.html">TRotation</a> rot_theta;
+			<a href="../TRotation.html">TRotation</a> rot_phi;
 			<a href="../ListOfTypes.html#bool">bool</a> need_to_be_mirrored = <a href="../ListOfTypes.html#bool">false</a>;
 			<a href="../ListOfTypes.html#double">double</a> theta;
 			<a href="../ListOfTypes.html#double">double</a> phi;
@@ -405,14 +405,14 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
 			};
 
 			if(need_to_be_mirrored)	{
-				Cry_Rot.RotateZ(180*TMath::DegToRad());
+				Cry_Rot.RotateZ(180*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:DegToRad" title="Double_t TMath::DegToRad()">DegToRad</a>());
 			}
 
 			det_pos.SetXYZ(x_offset,y_offset,R+z_offset);
-		//	rot_theta.RotateY(theta*TMath::DegToRad());
-			rot_theta.RotateX(theta*TMath::DegToRad());
-		//	rot_phi.RotateZ((phi)*TMath::DegToRad());
-			rot_phi.RotateZ((phi)*TMath::DegToRad());
+		//	rot_theta.RotateY(theta*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:DegToRad" title="Double_t TMath::DegToRad()">DegToRad</a>());
+			rot_theta.RotateX(theta*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:DegToRad" title="Double_t TMath::DegToRad()">DegToRad</a>());
+		//	rot_phi.RotateZ((phi)*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:DegToRad" title="Double_t TMath::DegToRad()">DegToRad</a>());
+			rot_phi.RotateZ((phi)*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:DegToRad" title="Double_t TMath::DegToRad()">DegToRad</a>());
 			rot =   Cry_Rot * rot_phi * rot_theta; //
 
 			//det_pos.Transform(rot_theta);
@@ -422,8 +422,8 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
 		<span class="comment">/*
 			std::<a href="../ListOfTypes.html#ostream">cout</a> &lt;&lt; det_pos.X() &lt;&lt;<span class="string">"\t"</span> &lt;&lt; det_pos.Y() &lt;&lt; <span class="string">"\t"</span> &lt;&lt; det_pos.Z() &lt;&lt; std::endl;
 			det_pos.SetXYZ(x_offset,y_offset,R+z_offset);
-			rot_theta.RotateY(theta*TMath::DegToRad());
-			rot_phi.RotateZ(-phi*TMath::DegToRad());
+			rot_theta.RotateY(theta*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:DegToRad" title="Double_t TMath::DegToRad()">DegToRad</a>());
+			rot_phi.RotateZ(-phi*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:DegToRad" title="Double_t TMath::DegToRad()">DegToRad</a>());
 			rot =    rot_phi * rot_theta; //Cry_Rot *
 			*/</span>
 		<span class="comment">//	det_pos.Transform(rot_phi);</span>
@@ -443,33 +443,33 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
 
 <a name="ApQFrC"></a><span class="keyword">void</span> <a href="../TTigress.html">TTigress</a>::<a href="../TTigress.html#TTigress:BuildAddBack" title="void TTigress::BuildAddBack(Option_t* opt=&quot;&quot;)">BuildAddBack</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt)	{ 
 
-	<span class="keyword">if</span>(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.size() == 0)
+	<span class="keyword">if</span>(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:tigress_hits" title="vector&lt;TTigressHit&gt; TTigress::tigress_hits">tigress_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:size" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size()">size</a>() == 0)
     	<span class="keyword">return</span>;
 
-	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.clear();
-	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.push_back(*(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(0)));
-	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.at(0).Add(&amp;(<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.at(0)));
+	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:clear" title="void vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::clear()">clear</a>();
+	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:push_back" title="void vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::push_back(const TTigressHit&amp; x)">push_back</a>(*(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(0)));
+	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(0).Add(&amp;(<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(0)));
 
 	<span class="keyword">for</span>(<span class="keyword">int</span> i = 1; i&lt;<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetMultiplicity" title="Short_t TTigress::GetMultiplicity()">GetMultiplicity</a>(); i++)   {
     	<span class="keyword">bool</span> used = <span class="keyword">false</span>;
-	    <span class="keyword">for</span>(<span class="keyword">int</span> j =0; j&lt;<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.size();j++)    {
-    	    TVector3 res = <a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.at(j).GetLastHit() - <span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i)-><a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:GetPosition" title="TVector3 TGRSIDetectorHit::GetPosition()">GetPosition</a>();
-        	<span class="keyword">int</span> d_time = abs(<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.at(j).GetTime() - <span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i)-><a href="../TTigressHit.html#TTigressHit:GetTime" title="double TTigressHit::GetTime()">GetTime</a>());
+	    <span class="keyword">for</span>(<span class="keyword">int</span> j =0; j&lt;<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:size" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size()">size</a>();j++)    {
+    	    <a href="../TVector3.html">TVector3</a> res = <a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(j).GetLastHit() - <span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i)-><a href="../TGRSIDetectorHit.html#TGRSIDetectorHit:GetPosition" title="TVector3 TGRSIDetectorHit::GetPosition()">GetPosition</a>();
+        	<span class="keyword">int</span> d_time = abs(<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(j).GetTime() - <span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i)-><a href="../TTigressHit.html#TTigressHit:GetTime" title="double TTigressHit::GetTime()">GetTime</a>());
 
-			<span class="keyword">int</span> seg1 = std::get&lt;2&gt;(<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.at(j).GetLastPosition());
+			<span class="keyword">int</span> seg1 = std::get&lt;2&gt;(<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(j).GetLastPosition());
 			<span class="keyword">int</span> seg2 = <span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i)-><a href="../TTigressHit.html#TTigressHit:GetInitialHit" title="int TTigressHit::GetInitialHit()">GetInitialHit</a>();
 		
 			<span class="keyword">if</span>( (seg1&lt;5 &amp;&amp; seg2&lt;5) || (seg1&gt;4 &amp;&amp; seg2&gt;4) )	{
 		        <span class="keyword">if</span>( (res.Mag() &lt; 54) &amp;&amp; (d_time &lt; 11) )    {
     		        used = <span class="keyword">true</span>;
-        		    <a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.at(j).Add(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i));
+        		    <a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(j).Add(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i));
             		<span class="keyword">break</span>;
 	        	}
 			}
 			<span class="keyword">else</span> <span class="keyword">if</span>( (seg1&lt;5 &amp;&amp; seg2&gt;4) || (seg1&gt;4 &amp;&amp; seg2&lt;5) )	{
 		        <span class="keyword">if</span>( (res.Mag() &lt; 105) &amp;&amp; (d_time &lt; 11) )    {
     		        used = <span class="keyword">true</span>;
-        		    <a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.at(j).Add(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i));
+        		    <a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:at" title="vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::reference vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::at(vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::size_type n) or overloads">at</a>(j).Add(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i));
             		<span class="keyword">break</span>;
 	        	}
 			}
@@ -479,8 +479,8 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
 
     	}
 	    <span class="keyword">if</span>(!used) {
-    	    <a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.push_back(*(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i)));
-        	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.back().Add(&amp;(<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.back()));
+    	    <a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:push_back" title="void vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::push_back(const TTigressHit&amp; x)">push_back</a>(*(<span class="keyword">this</span>-&gt;<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(int i)">GetTigressHit</a>(i)));
+        	<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:back" title="TTigressHit&amp; vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::back()">back</a>().<a href="../TTigressHit.html#TTigressHit:Add" title="void TTigressHit::Add(TTigressHit* )">Add</a>(&amp;(<a href="../TTigress.html#TTigress:addback_hits" title="vector&lt;TTigressHit&gt; TTigress::addback_hits">addback_hits</a>.<a href="../vector_TTigressHit_.html#vector_TTigressHit_:back" title="TTigressHit&amp; vector&lt;TTigressHit,allocator&lt;TTigressHit&gt; &gt;::back()">back</a>()));
 	    }
 	}
 }
@@ -590,7 +590,7 @@ ClassImp(<a href="../TTigress.html">TTigress</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

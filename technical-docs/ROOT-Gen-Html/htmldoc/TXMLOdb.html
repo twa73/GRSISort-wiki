@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:16:12 2015            -->
+<!--   Date: Wed Mar  4 20:40:44 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -53,7 +53,7 @@ return false;}
 </div>
 <div class="location">
 <a class="locationlevel" href="index.html">GRSISort</a>
- &#187; <a class="locationlevel" href="./INCLUDE_Index.html">INCLUDE</a>
+ &#187; <a class="locationlevel" href="./GRSISORT_Index.html">GRSISORT</a>
  &#187; <a class="locationlevel" href="#TopOfPage">TXMLOdb</a>
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="TXMLOdb:description"></a>class TXMLOdb</h1>
@@ -68,19 +68,19 @@ return false;}
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TXMLOdb:TXMLOdb@1">TXMLOdb</a>(<span class="keyword">const</span> <a href="./TXMLOdb.html">TXMLOdb</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TXMLOdb:TXMLOdb">TXMLOdb</a>(<span class="keyword">char</span>* buffer, <span class="keyword">int</span> size = 0)</td></tr>
 <tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TXMLOdb:_TXMLOdb">~TXMLOdb</a>()</td></tr>
-<tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:Class">Class</a>()</td></tr>
-<tr class="func"><td class="funcret">TXMLNode*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:FindNode">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, TXMLNode* node = 0)</td></tr>
-<tr class="func"><td class="funcret">TXMLNode*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:FindPath">FindPath</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, TXMLNode* node = 0)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:GetNodeName">GetNodeName</a>(TXMLNode*)</td></tr>
-<tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:Class">Class</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./TXMLNode.html">TXMLNode</a>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:FindNode">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./TXMLNode.html">TXMLNode</a>* node = 0)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TXMLNode.html">TXMLNode</a>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:FindPath">FindPath</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, <a href="./TXMLNode.html">TXMLNode</a>* node = 0)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:GetNodeName">GetNodeName</a>(<a href="./TXMLNode.html">TXMLNode</a>*)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TXMLOdb.html">TXMLOdb</a>&amp;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TXMLOdb.html">TXMLOdb</a>&amp;)</td></tr>
-<tr class="func"><td class="funcret">vector&lt;<span class="keyword">double</span>&gt;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadDoubleArray">ReadDoubleArray</a>(TXMLNode* node)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<span class="keyword">double</span>&gt;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadDoubleArray">ReadDoubleArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadInt">ReadInt</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, <span class="keyword">int</span> index = 0, <span class="keyword">int</span> defaultValue = 0xffffffff)</td></tr>
-<tr class="func"><td class="funcret">vector&lt;<span class="keyword">int</span>&gt;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadIntArray">ReadIntArray</a>(TXMLNode* node)</td></tr>
-<tr class="func"><td class="funcret">vector&lt;std::string&gt;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadStringArray">ReadStringArray</a>(TXMLNode* node)</td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:ShowMembers">ShowMembers</a>(TMemberInspector&amp;)</td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<span class="keyword">int</span>&gt;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadIntArray">ReadIntArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;std::string&gt;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadStringArray">ReadStringArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:StreamerNVirtual">StreamerNVirtual</a>(<a href="./TBuffer.html">TBuffer</a>&amp; ClassDef_StreamerNVirtual_b)</td></tr>
 
 </table></div>
 </div>
@@ -89,9 +89,9 @@ return false;}
 <h2><a name="TXMLOdb:Data_Members"></a>Data Members</h2>
 <div class="access" id="datapubl"><b>public:</b>
 <table class="data" id="tabdatapubl" cellspacing="0">
-<tr class="data"><td class="datatype">TXMLDocument*</td><td class="dataname"><a name="TXMLOdb:fDoc"></a>fDoc</td><td></td></tr>
-<tr class="data"><td class="datatype">TXMLNode*</td><td class="dataname"><a name="TXMLOdb:fOdb"></a>fOdb</td><td></td></tr>
-<tr class="data"><td class="datatype">TDOMParser*</td><td class="dataname"><a name="TXMLOdb:fParser"></a>fParser</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TXMLDocument.html">TXMLDocument</a>*</td><td class="dataname"><a name="TXMLOdb:fDoc"></a>fDoc</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TXMLNode.html">TXMLNode</a>*</td><td class="dataname"><a name="TXMLOdb:fOdb"></a>fOdb</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TDOMParser.html">TDOMParser</a>*</td><td class="dataname"><a name="TXMLOdb:fParser"></a>fParser</td><td></td></tr>
 
 </table></div>
 </div>
@@ -111,19 +111,19 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TXMLOdb:_TXMLOdb" href="src/TXMLOdb.cxx.html#LPeKEC">~TXMLOdb</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname">TXMLNode * <a class="funcname" name="TXMLOdb:FindNode" href="src/TXMLOdb.cxx.html#HqVHxD">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, TXMLNode* node = 0)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./TXMLNode.html">TXMLNode</a> * <a class="funcname" name="TXMLOdb:FindNode" href="src/TXMLOdb.cxx.html#HqVHxD">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./TXMLNode.html">TXMLNode</a>* node = 0)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname">TXMLNode * <a class="funcname" name="TXMLOdb:FindPath" href="src/TXMLOdb.cxx.html#WWLrzB">FindPath</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, TXMLNode* node = 0)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./TXMLNode.html">TXMLNode</a> * <a class="funcname" name="TXMLOdb:FindPath" href="src/TXMLOdb.cxx.html#WWLrzB">FindPath</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, <a href="./TXMLNode.html">TXMLNode</a>* node = 0)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TXMLOdb:GetNodeName" href="src/TXMLOdb.cxx.html#KV6r5D">GetNodeName</a>(TXMLNode* )</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TXMLOdb:GetNodeName" href="src/TXMLOdb.cxx.html#KV6r5D">GetNodeName</a>(<a href="./TXMLNode.html">TXMLNode</a>* )</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TXMLOdb:ReadInt" href="src/TXMLOdb.cxx.html#qo0DDD">ReadInt</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, <span class="keyword">int</span> index = 0, <span class="keyword">int</span> defaultValue = 0xffffffff)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname">std::vector&lt;<span class="keyword">int</span>&gt; <a class="funcname" name="TXMLOdb:ReadIntArray" href="src/TXMLOdb.cxx.html#ym_NuE">ReadIntArray</a>(TXMLNode* node)</span><br />
+<div class="funcdoc"><span class="funcname">std::vector&lt;<span class="keyword">int</span>&gt; <a class="funcname" name="TXMLOdb:ReadIntArray" href="src/TXMLOdb.cxx.html#ym_NuE">ReadIntArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname">std::vector&lt;std::string&gt; <a class="funcname" name="TXMLOdb:ReadStringArray" href="src/TXMLOdb.cxx.html#fxLSW">ReadStringArray</a>(TXMLNode* node)</span><br />
+<div class="funcdoc"><span class="funcname">std::vector&lt;std::string&gt; <a class="funcname" name="TXMLOdb:ReadStringArray" href="src/TXMLOdb.cxx.html#fxLSW">ReadStringArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname">std::vector&lt;<span class="keyword">double</span>&gt; <a class="funcname" name="TXMLOdb:ReadDoubleArray" href="src/TXMLOdb.cxx.html#E8xajC">ReadDoubleArray</a>(TXMLNode* node)</span><br />
+<div class="funcdoc"><span class="funcname">std::vector&lt;<span class="keyword">double</span>&gt; <a class="funcname" name="TXMLOdb:ReadDoubleArray" href="src/TXMLOdb.cxx.html#E8xajC">ReadDoubleArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TXMLOdb:TXMLOdb" href="src/TXMLOdb.h.html#jf.fSB">TXMLOdb</a>(<span class="keyword">char</span>* buffer, <span class="keyword">int</span> size = 0)</span><br />
 </div>
@@ -132,7 +132,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Wed Mar  4 13:16:12 2015 </em><em>&raquo; Last generated: 2015-03-04 13:16</em><br />
+<em>&raquo; Last changed: Wed Mar  4 20:40:44 2015 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

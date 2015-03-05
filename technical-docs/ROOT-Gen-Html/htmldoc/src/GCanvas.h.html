@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:16:10 2015            -->
+<!--   Date: Wed Mar  4 20:38:48 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,10 +22,10 @@
 <span class="cpp">#ifndef GRUTCANVAS_H</span>
 <span class="cpp">#define GRUTCANVAS_H</span>
 
-<span class="cpp">#include "TCanvas.h"</span>
-<span class="cpp">#include "TRootCanvas.h"</span>
+<span class="cpp">#include "<a href="../TCanvas.h">TCanvas.h</a>"</span>
+<span class="cpp">#include "<a href="../TRootCanvas.h">TRootCanvas.h</a>"</span>
 
-<span class="keyword">class</span> <a href="../GCanvas.html">GCanvas</a> : <span class="keyword">public</span> <a href="../#TCanvas:TCanvas" title="TCanvas TCanvas::TCanvas(const TCanvas&amp; canvas) or overloads">TCanvas</a> {
+<span class="keyword">class</span> <a href="../GCanvas.html">GCanvas</a> : <span class="keyword">public</span> <a href="../TCanvas.html">TCanvas</a> {
    <span class="keyword">public</span>:
         <a href="../GCanvas.html">GCanvas</a>(<a href="../ListOfTypes.html#Bool_t">Bool_t</a> build = <a href="../ListOfTypes.html#Bool_t">kTRUE</a>);
         <a href="../GCanvas.html">GCanvas</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* title = <span class="string">""</span>, <a href="../ListOfTypes.html#Int_t">Int_t</a> form = 1);
@@ -34,8 +34,8 @@
         <a href="../GCanvas.html">GCanvas</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* title, <a href="../ListOfTypes.html#Int_t">Int_t</a> wtopx, <a href="../ListOfTypes.html#Int_t">Int_t</a> wtopy, <a href="../ListOfTypes.html#Int_t">Int_t</a> ww, <a href="../ListOfTypes.html#Int_t">Int_t</a> wh);
         <span class="keyword">virtual</span> <a href="../GCanvas.html#GCanvas:_GCanvas" title="void GCanvas::~GCanvas()">~GCanvas</a>();
 
-        <span class="comment">//<a href="../ListOfTypes.html#void">void</a> ProcessEvent(<a href="../ListOfTypes.html#Int_t">Int_t</a> event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y,<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj);</span>
-        <span class="comment">//<a href="../ListOfTypes.html#void">void</a> CatchEvent(<a href="../ListOfTypes.html#Int_t">Int_t</a> event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y,<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj);</span>
+        <span class="comment">//<a href="../ListOfTypes.html#void">void</a> ProcessEvent(<a href="../ListOfTypes.html#Int_t">Int_t</a> event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y,<a href="../TObject.html">TObject</a> *obj);</span>
+        <span class="comment">//<a href="../ListOfTypes.html#void">void</a> CatchEvent(<a href="../ListOfTypes.html#Int_t">Int_t</a> event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y,<a href="../TObject.html">TObject</a> *obj);</span>
 
         <span class="keyword">void</span> <a href="../GCanvas.html#GCanvas:HandleInput" title="void GCanvas::HandleInput(EEventType event,Int_t x,Int_t y)">HandleInput</a>(EEventType event,<a href="../ListOfTypes.html#Int_t">Int_t</a> x,<a href="../ListOfTypes.html#Int_t">Int_t</a> y);
 
@@ -52,10 +52,10 @@
       <span class="keyword">static</span> <span class="keyword">int</span> <a href="../GCanvas.html#GCanvas:lasty" title="int GCanvas::lasty">lasty</a>;
 
 
-      <span class="keyword">void</span> <a href="../GCanvas.html#GCanvas:HandleKeyPress" title="void GCanvas::HandleKeyPress(int event,int x,int y,TObject* obj)">HandleKeyPress</a>(<span class="keyword">int</span> event,<span class="keyword">int</span> x,<span class="keyword">int</span> y,<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> *obj);
+      <span class="keyword">void</span> <a href="../GCanvas.html#GCanvas:HandleKeyPress" title="void GCanvas::HandleKeyPress(int event,int x,int y,TObject* obj)">HandleKeyPress</a>(<span class="keyword">int</span> event,<span class="keyword">int</span> x,<span class="keyword">int</span> y,<a href="../TObject.html">TObject</a> *obj);
 
       <a href="../ListOfTypes.html#Window_t">Window_t</a> <a href="../GCanvas.html#GCanvas:fCanvasWindowID" title="Window_t GCanvas::fCanvasWindowID">fCanvasWindowID</a>;
-      TRootCanvas *<a href="../GCanvas.html#GCanvas:fRootCanvas" title="TRootCanvas* GCanvas::fRootCanvas">fRootCanvas</a>;
+      <a href="../TRootCanvas.html">TRootCanvas</a> *<a href="../GCanvas.html#GCanvas:fRootCanvas" title="TRootCanvas* GCanvas::fRootCanvas">fRootCanvas</a>;
 
 };
 
@@ -68,7 +68,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:16 </em><em>&raquo; Last generated: 2015-03-04 13:16</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:38 </em><em>&raquo; Last generated: 2015-03-04 20:38</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

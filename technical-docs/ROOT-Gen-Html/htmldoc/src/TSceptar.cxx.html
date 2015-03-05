@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:31 2015            -->
+<!--   Date: Wed Mar  4 20:40:10 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,8 +22,8 @@
 
 <span class="cpp">#include &lt;iostream&gt;</span>
 <span class="cpp">#include "<a href="../TSceptar.h">TSceptar.h</a>"</span>
-<span class="cpp">#include &lt;TRandom.h&gt;</span>
-<span class="cpp">#include &lt;TMath.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TRandom.h">TRandom.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TMath.h">TMath.h</a>&gt;</span>
 
 <span class="comment">////////////////////////////////////////////////////////////</span>
 <span class="comment">//                    </span>
@@ -40,37 +40,37 @@ ClassImp(<a href="../TSceptar.html">TSceptar</a>)
 
 <span class="comment">//<a href="../ListOfTypes.html#bool">bool</a> <a href="../TSceptar.html">TSceptar</a>::fSetWave = <a href="../ListOfTypes.html#bool">false</a>;</span>
 
-TVector3 <a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSceptar:gPaddlePosition" title="TVector3 TSceptar::gPaddlePosition">gPaddlePosition</a>[21] = { 
+<a href="../TVector3.html">TVector3</a> <a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSceptar:gPaddlePosition" title="TVector3 TSceptar::gPaddlePosition">gPaddlePosition</a>[21] = { 
    <span class="comment">//Sceptar positions from Evan; Thanks Evan.</span>
-   TVector3(0,0,1),
-   TVector3(14.3025, 4.6472, 22.8096),  
-   TVector3(0, 15.0386, 22.8096), 
-   TVector3(-14.3025, 4.6472, 22.8096),  
-   TVector3(-8.8395, -12.1665, 22.8096),  
-   TVector3(8.8395, -12.1665, 22.8096),     
-   TVector3(19.7051, 6.4026, 6.2123),  
-   TVector3(0, 20.7192, 6.2123),  
-   TVector3(-19.7051, 6.4026, 6.2123),  
-   TVector3(-12.1784, -16.7622, 6.2123),  
-   TVector3(12.1784, -16.7622, 6.2123),     
-   TVector3(19.7051, 6.4026, -6.2123),  
-   TVector3(0, 20.7192, -6.2123),  
-   TVector3(-19.7051, 6.4026, -6.2123),  
-   TVector3(-12.1784, -16.7622, -6.2123),  
-   TVector3(12.1784, -16.7622, -6.2123),
-   TVector3(14.3025, 4.6472, -22.8096),  
-   TVector3(0, 15.0386, -22.8096),  
-   TVector3(-14.3025, 4.6472, -22.8096),  
-   TVector3(-8.8395, -12.1665, -22.8096),  
-   TVector3(8.8395, -12.1665, -22.8096)
+   <a href="../TVector3.html">TVector3</a>(0,0,1),
+   <a href="../TVector3.html">TVector3</a>(14.3025, 4.6472, 22.8096),  
+   <a href="../TVector3.html">TVector3</a>(0, 15.0386, 22.8096), 
+   <a href="../TVector3.html">TVector3</a>(-14.3025, 4.6472, 22.8096),  
+   <a href="../TVector3.html">TVector3</a>(-8.8395, -12.1665, 22.8096),  
+   <a href="../TVector3.html">TVector3</a>(8.8395, -12.1665, 22.8096),     
+   <a href="../TVector3.html">TVector3</a>(19.7051, 6.4026, 6.2123),  
+   <a href="../TVector3.html">TVector3</a>(0, 20.7192, 6.2123),  
+   <a href="../TVector3.html">TVector3</a>(-19.7051, 6.4026, 6.2123),  
+   <a href="../TVector3.html">TVector3</a>(-12.1784, -16.7622, 6.2123),  
+   <a href="../TVector3.html">TVector3</a>(12.1784, -16.7622, 6.2123),     
+   <a href="../TVector3.html">TVector3</a>(19.7051, 6.4026, -6.2123),  
+   <a href="../TVector3.html">TVector3</a>(0, 20.7192, -6.2123),  
+   <a href="../TVector3.html">TVector3</a>(-19.7051, 6.4026, -6.2123),  
+   <a href="../TVector3.html">TVector3</a>(-12.1784, -16.7622, -6.2123),  
+   <a href="../TVector3.html">TVector3</a>(12.1784, -16.7622, -6.2123),
+   <a href="../TVector3.html">TVector3</a>(14.3025, 4.6472, -22.8096),  
+   <a href="../TVector3.html">TVector3</a>(0, 15.0386, -22.8096),  
+   <a href="../TVector3.html">TVector3</a>(-14.3025, 4.6472, -22.8096),  
+   <a href="../TVector3.html">TVector3</a>(-8.8395, -12.1665, -22.8096),  
+   <a href="../TVector3.html">TVector3</a>(8.8395, -12.1665, -22.8096)
 };
 
 
 <a name="n.KHqC"></a><a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSceptar:TSceptar" title="TSceptar TSceptar::TSceptar() or overloads">TSceptar</a>() : <a href="../TSceptar.html#TSceptar:sceptardata" title="TSceptarData* TSceptar::sceptardata">sceptardata</a>(0)	{
    <span class="comment">//Default Constructor</span>
-   <span class="comment">//<a href="../TSceptar.html#TSceptar:Class" title="TClass* TSceptar::Class()">Class</a>()-&gt;IgnoreTObjectStreamer(<a href="../ListOfTypes.html#bool">true</a>);</span>
-   <span class="comment">//<a href="../TSceptar.html#TSceptar:Class" title="TClass* TSceptar::Class()">Class</a>()-&gt;AddRule(<span class="string">"TSceptar sceptar_hits attributes=NotOwner"</span>);</span>
-   <span class="comment">//<a href="../TSceptar.html#TSceptar:Class" title="TClass* TSceptar::Class()">Class</a>()-&gt;AddRule(<span class="string">"TSceptar sceptardata attributes=NotOwner"</span>);</span>
+   <span class="comment">//<a href="../TSceptar.html#TSceptar:Class" title="TClass* TSceptar::Class()">Class</a>()-><a href="../TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<a href="../ListOfTypes.html#bool">true</a>);</span>
+   <span class="comment">//<a href="../TSceptar.html#TSceptar:Class" title="TClass* TSceptar::Class()">Class</a>()-><a href="../TClass.html#TClass:AddRule" title="Bool_t TClass::AddRule(const char* rule)">AddRule</a>(<span class="string">"TSceptar sceptar_hits attributes=NotOwner"</span>);</span>
+   <span class="comment">//<a href="../TSceptar.html#TSceptar:Class" title="TClass* TSceptar::Class()">Class</a>()-><a href="../TClass.html#TClass:AddRule" title="Bool_t TClass::AddRule(const char* rule)">AddRule</a>(<span class="string">"TSceptar sceptardata attributes=NotOwner"</span>);</span>
    <a href="../TSceptar.html#TSceptar:Clear" title="void TSceptar::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 }
 
@@ -83,7 +83,7 @@ TVector3 <a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSce
 <span class="comment">//Clears all of the hits and data</span>
    <span class="keyword">if</span>(<a href="../TSceptar.html#TSceptar:sceptardata" title="TSceptarData* TSceptar::sceptardata">sceptardata</a>) <a href="../TSceptar.html#TSceptar:sceptardata" title="TSceptarData* TSceptar::sceptardata">sceptardata</a>-&gt;<a href="../TSceptar.html#TSceptar:Clear" title="void TSceptar::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 
-	<a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>.clear();
+	<a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>.<a href="../vector_TSceptarHit_.html#vector_TSceptarHit_:clear" title="void vector&lt;TSceptarHit,allocator&lt;TSceptarHit&gt; &gt;::clear()">clear</a>();
 }
 
 
@@ -127,7 +127,7 @@ TVector3 <a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSce
    <span class="keyword">if</span>(!gdata)
       <span class="keyword">return</span>;
 
-   <a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>.clear();
+   <a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>.<a href="../vector_TSceptarHit_.html#vector_TSceptarHit_:clear" title="void vector&lt;TSceptarHit,allocator&lt;TSceptarHit&gt; &gt;::clear()">clear</a>();
    <a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSceptar:SetBeta" title="void TSceptar::SetBeta(bool flag=true)">SetBeta</a>(<span class="keyword">false</span>);
    
    <span class="keyword">for</span>(<span class="keyword">int</span> i=0;i&lt;gdata-&gt;<a href="../TSceptar.html#TSceptar:GetMultiplicity" title="Short_t TSceptar::GetMultiplicity()">GetMultiplicity</a>();i++)	{
@@ -149,7 +149,7 @@ TVector3 <a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSce
    
       dethit.SetPosition(<a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSceptar:GetPosition" title="TVector3 TSceptar::GetPosition(int DetNbr)">GetPosition</a>(gdata-&gt;GetDetNumber(i)));
 
-      <a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>.push_back(dethit);
+      <a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>.<a href="../vector_TSceptarHit_.html#vector_TSceptarHit_:push_back" title="void vector&lt;TSceptarHit,allocator&lt;TSceptarHit&gt; &gt;::push_back(const TSceptarHit&amp; x)">push_back</a>(dethit);
       <a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSceptar:SetBeta" title="void TSceptar::SetBeta(bool flag=true)">SetBeta</a>();
    }
 }
@@ -161,7 +161,7 @@ TVector3 <a href="../TSceptar.html">TSceptar</a>::<a href="../TSceptar.html#TSce
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

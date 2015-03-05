@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:29 2015            -->
+<!--   Date: Wed Mar  4 20:40:05 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -33,7 +33,7 @@
 <span class="cpp">#else</span>
 <span class="keyword">class</span> TPacesData;
 <span class="cpp">#endif</span>
-<span class="cpp">#include "TVector3.h" </span>
+<span class="cpp">#include "<a href="../TVector3.h">TVector3.h</a>"</span> 
 
 <span class="cpp">#include "<a href="../TGRSIDetector.h">TGRSIDetector.h</a>"</span> 
 
@@ -49,7 +49,7 @@
      <span class="keyword">void</span> <a href="../TPaces.html#TPaces:BuildHits" title="void TPaces::BuildHits(TGRSIDetectorData* data=0,Option_t* opt=&quot;&quot;)">BuildHits</a>(TGRSIDetectorData *data =0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>); <span class="comment">//!</span>
 
 <a name="xg6G2"></a>     <a href="../TPacesHit.html">TPacesHit</a> *<a href="../TPaces.html#TPaces:GetPacesHit" title="TPacesHit* TPaces::GetPacesHit(int i)">GetPacesHit</a>(<span class="keyword">int</span> i)           {	<span class="keyword">return</span> &amp;<a href="../TPaces.html#TPaces:paces_hits" title="vector&lt;TPacesHit&gt; TPaces::paces_hits">paces_hits</a>[i];   }	<span class="comment">//!</span>
-<a name="Z3ambE"></a>     <a href="../ListOfTypes.html#Short_t">Short_t</a> <a href="../TPaces.html#TPaces:GetMultiplicity" title="Short_t TPaces::GetMultiplicity()">GetMultiplicity</a>() <span class="keyword">const</span>	      {	<span class="keyword">return</span> <a href="../TPaces.html#TPaces:paces_hits" title="vector&lt;TPacesHit&gt; TPaces::paces_hits">paces_hits</a>.size();}	<span class="comment">//!</span>
+<a name="Z3ambE"></a>     <a href="../ListOfTypes.html#Short_t">Short_t</a> <a href="../TPaces.html#TPaces:GetMultiplicity" title="Short_t TPaces::GetMultiplicity()">GetMultiplicity</a>() <span class="keyword">const</span>	      {	<span class="keyword">return</span> <a href="../TPaces.html#TPaces:paces_hits" title="vector&lt;TPacesHit&gt; TPaces::paces_hits">paces_hits</a>.<a href="../vector_TPacesHit_.html#vector_TPacesHit_:size" title="vector&lt;TPacesHit,allocator&lt;TPacesHit&gt; &gt;::size_type vector&lt;TPacesHit,allocator&lt;TPacesHit&gt; &gt;::size()">size</a>();}	<span class="comment">//!</span>
 
      <span class="keyword">void</span> <a href="../TPaces.html#TPaces:FillData" title="void TPaces::FillData(TFragment* ,TChannel* ,MNEMONIC* )">FillData</a>(<a href="../TFragment.html">TFragment</a>*,<a href="../TChannel.html">TChannel</a>*,MNEMONIC*); <span class="comment">//!</span>
 
@@ -108,7 +108,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

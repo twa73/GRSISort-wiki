@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Wed Mar  4 20:28:10 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TAttFill</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TAttFill','libCore','TAttFill.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TAttFill.h.html">header file</a>
+<a class="descrheadentry" href="src/TAttFill.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TAttFill:description">class description</a> 
+<a class="descrheadentry" href="#TAttFill:Function_Members">function members</a>
+<a class="descrheadentry" href="#TAttFill:Data_Members">data members</a>
+<a class="descrheadentry" href="#TAttFill:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./CORE_Index.html">CORE</a>
+ &#187; <a class="locationlevel" href="./CORE_BASE_Index.html">BASE</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TAttFill</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TAttFill:description"></a>class TAttFill</h1>
+<div class="classdescr">
+<pre>
+
+</pre><!-- TDocHtmlDirective start --><center><h2>Fill Area Attributes class</h2></center>
+This class is used (in general by secondary inheritance)
+by many other classes (graphics, histograms). It holds all the fill area
+attributes.
+<h3>Fill Area attributes</h3>
+Fill Area attributes are:
+<ul>
+<li><a href="#F1">Fill Area color.</a></li>
+<li><a href="#F2">Fill Area style.</a></li>
+</ul>
+<a name="F1"></a><h3>Fill Area color</h3>
+The fill area color is a color index (integer) pointing in the ROOT
+color table.
+The fill area color of any class inheriting from <tt>TAttFill</tt> can
+be changed using the method <tt>SetFillColor</tt> and retrieved using the
+method <tt>GetFillColor</tt>.
+The following table shows the first 50 default colors.
+<!-- TDocHtmlDirective end --><pre>
+</pre><div class="tabs">
+<a id="MACRO_TAttFill_1_c_A0" class="tabsel" href="MACRO_TAttFill_1_c.gif" onclick="javascript:return SetDiv('MACRO_TAttFill_1_c',0);">Picture</a>
+<a id="MACRO_TAttFill_1_c_A1" class="tab" href="#" onclick="javascript:return SetDiv('MACRO_TAttFill_1_c',1);">Source</a>
+<br /></div><div class="tabcontent">
+<div id="MACRO_TAttFill_1_c_0" class="tabvisible"><span class="macro"><img class="macro" alt="output of MACRO_TAttFill_1_c" title="MACRO" src="MACRO_TAttFill_1_c.gif" /></span></div>
+<div id="MACRO_TAttFill_1_c_1" class="tabhidden"><div class="listing"><pre class="code">{
+   <a href="./TCanvas.html">TCanvas</a> *c = <span class="keyword">new</span> <a href="./TCanvas.html">TCanvas</a>(<span class="string">"c"</span>,<span class="string">"Fill Area colors"</span>,0,0,500,200);
+   c.DrawColorTable();
+   <span class="keyword">return</span> c;
+}</pre></div></div><div class="clear"></div></div><pre>
+
+</pre><!-- TDocHtmlDirective start --><h4>Color transparency</h4>
+<tt>SetFillColorAlpha()</tt>, allows to set a transparent color.
+In the following example the fill color of the histogram <tt>histo</tt>
+is set to blue with a transparency of 35%. The color <tt>kBlue</tt>
+itself remains fully opaque.
+<p>
+<pre>
+histo->SetFillColorAlpha(kBlue, 0.35);
+</pre>
+<p>
+The transparency is available on all platforms when the <tt>flagOpenGL.CanvasPreferGL</tt> is set to <tt>1</tt>
+in <tt>$ROOTSYS/etc/system.rootrc</tt>, or on Mac with the Cocoa backend. On the file output
+it is visible with PDF, PNG, Gif, JPEG, SVG ... but not PostScript.
+<h4>The ROOT Color Wheel.</h4>
+The wheel contains the recommended 216 colors to be used in web applications.
+The colors in the Color Wheel are created by TColor::CreateColorWheel.
+<p>Using this color set for your text, background or graphics will give your
+application a consistent appearance across different platforms and browsers.
+<p>Colors are grouped by hue, the aspect most important in human perception
+Touching color chips have the same hue, but with different brightness and vividness.
+<p>Colors of slightly different hues <b>clash</b>. If you intend to display
+colors of the same hue together, you should pick them from the same group.
+<p>Each color chip is identified by a mnemonic (eg kYellow) and a number.
+The keywords, kRed, kBlue, kYellow, kPink, etc are defined in the header file <b>Rtypes.h</b>
+that is included in all ROOT other header files. We strongly recommend to use these keywords
+in your code instead of hardcoded color numbers, eg:
+<pre>
+   myObject.SetFillColor(kRed);
+   myObject.SetFillColor(kYellow-10);
+   myLine.SetLineColor(kMagenta+2);
+</pre>
+<!-- TDocHtmlDirective end --><pre>
+</pre><div class="tabs">
+<a id="MACRO_TAttFill_3_wheel_A0" class="tabsel" href="MACRO_TAttFill_3_wheel.gif" onclick="javascript:return SetDiv('MACRO_TAttFill_3_wheel',0);">Picture</a>
+<a id="MACRO_TAttFill_3_wheel_A1" class="tab" href="#" onclick="javascript:return SetDiv('MACRO_TAttFill_3_wheel',1);">Source</a>
+<br /></div><div class="tabcontent">
+<div id="MACRO_TAttFill_3_wheel_0" class="tabvisible"><span class="macro"><img class="macro" alt="output of MACRO_TAttFill_3_wheel" title="MACRO" src="MACRO_TAttFill_3_wheel.gif" /></span></div>
+<div id="MACRO_TAttFill_3_wheel_1" class="tabhidden"><div class="listing"><pre class="code">{
+   <a href="./TColorWheel.html">TColorWheel</a> *w = <span class="keyword">new</span> <a href="./TColorWheel.html">TColorWheel</a>();
+   w-&gt;Draw();
+   <span class="keyword">return</span> w-&gt;GetCanvas();
+}</pre></div></div><div class="clear"></div></div><pre>
+
+</pre><!-- TDocHtmlDirective start --><h4>Special case forcing black&white output.</h4>
+If the current style fill area color is set to 0, then ROOT will force
+a black&white output for all objects with a fill area defined and independently
+of the object fill style.
+<a name="F2"></a><h3>Fill Area style</h3>
+The fill area style defines the pattern used to fill a polygon.
+The fill area style of any class inheriting from <tt>TAttFill</tt> can
+be changed using the method <tt>SetFillStyle</tt> and retrieved using the
+method <tt>GetFillStyle</tt>.
+<h4>Conventions for fill styles:</h4>
+<ul>
+<li>  0    : hollow                   </li>
+<li>  1001 : Solid                    </li>
+<li>  3000+pattern_number (see below) </li>
+<li>  For TPad only:                  </li>
+<ul>
+   <li>  4000 :the window is transparent.                            </li>
+   <li>  4000 to 4100 the window is 100% transparent to 100% opaque. </li>
+</ul>
+      The pad transparency is visible in binary outputs files like gif, jpg, png etc ..
+      but not in vector graphics output files like PS, PDF and SVG. This convention
+      (fill style > 4000) is kept for backward compatibility. It is better to use
+      the color transparency instead.
+</ul>
+pattern_number can have any value from 1 to 25 (see table), or any
+value from 100 to 999. For the latest the numbering convention is the following:
+<pre>
+      pattern_number = ijk      (FillStyle = 3ijk)
+      i (1-9) : specify the space between each hatch
+                1 = 1/2mm  9 = 6mm
+      j (0-9) : specify angle between 0 and 90 degrees
+                0 = 0
+                1 = 10
+                2 = 20
+                3 = 30
+                4 = 45
+                5 = Not drawn
+                6 = 60
+                7 = 70
+                8 = 80
+                9 = 90
+      k (0-9) : specify angle between 90 and 180 degrees
+                0 = 180
+                1 = 170
+                2 = 160
+                3 = 150
+                4 = 135
+                5 = Not drawn
+                6 = 120
+                7 = 110
+                8 = 100
+                9 = 90
+</pre>
+The following table shows the list of pattern styles.
+The first table displays the 25 fixed patterns. They cannot be
+customized unlike the hatches displayed in the second table which be
+customized using:
+<ul>
+<li> <tt>gStyle->SetHatchesSpacing()</tt> to define the spacing between hatches.
+<li> <tt>gStyle->SetHatchesLineWidth()</tt> to define the hatches line width.
+</ul>
+<!-- TDocHtmlDirective end --><pre>
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TAttFill:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TAttFill:TAttFill">TAttFill</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TAttFill:TAttFill@2">TAttFill</a>(<span class="keyword">const</span> <a href="./TAttFill.html">TAttFill</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TAttFill:TAttFill@1">TAttFill</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> fcolor, <a href="./ListOfTypes.html#Style_t">Style_t</a> fstyle)</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TAttFill:_TAttFill">~TAttFill</a>()</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TAttFill:Class">Class</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:Copy">Copy</a>(<a href="./TAttFill.html">TAttFill</a>&amp; attfill) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Color_t">Color_t</a></td><td class="funcname"><a class="funcname" href="#TAttFill:GetFillColor">GetFillColor</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Style_t">Style_t</a></td><td class="funcname"><a class="funcname" href="#TAttFill:GetFillStyle">GetFillStyle</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TAttFill:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TAttFill:IsTransparent">IsTransparent</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:Modify">Modify</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./TAttFill.html">TAttFill</a>&amp;</td><td class="funcname"><a class="funcname" href="#TAttFill:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TAttFill.html">TAttFill</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:ResetAttFill">ResetAttFill</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:SaveFillAttributes">SaveFillAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:SetFillAttributes">SetFillAttributes</a>()<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:SetFillColor">SetFillColor</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> fcolor)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:SetFillColorAlpha">SetFillColorAlpha</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> fcolor, <a href="./ListOfTypes.html#Float_t">Float_t</a> falpha)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:SetFillStyle">SetFillStyle</a>(<a href="./ListOfTypes.html#Style_t">Style_t</a> fstyle)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttFill:StreamerNVirtual">StreamerNVirtual</a>(<a href="./TBuffer.html">TBuffer</a>&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TAttFill:Data_Members"></a>Data Members</h2>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Color_t">Color_t</a></td><td class="dataname"><a name="TAttFill:fFillColor"></a>fFillColor</td><td class="datadesc">fill area color</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Style_t">Style_t</a></td><td class="dataname"><a name="TAttFill:fFillStyle"></a>fFillStyle</td><td class="datadesc">fill area style</td></tr>
+
+</table></div>
+</div>
+<h2><a id="TAttFill:Class_Charts"></a>Class Charts</h2>
+<map name="MapTAttFill_Inh" id="MapTAttFill_Inh">
+<area shape="rect" id="node3" href="./TVirtualPad.html" title="TVirtualPad" alt="" coords="129,60,214,77"/>
+<area shape="rect" id="node4" href="./TVirtualX.html" title="TVirtualX" alt="" coords="129,98,214,115"/>
+<area shape="rect" id="node5" href="./TTree.html" title="TTree" alt="" coords="129,140,214,157"/>
+<area shape="rect" id="node6" href="./TH1.html" title="TH1" alt="" coords="129,250,214,267"/>
+<area shape="rect" id="node7" href="./TEllipse.html" title="TEllipse" alt="" coords="129,419,214,436"/>
+<area shape="rect" id="node8" href="./TArrow.html" title="TArrow" alt="" coords="129,503,214,520"/>
+<area shape="rect" id="node9" href="./TShape.html" title="TShape" alt="" coords="129,520,214,537"/>
+<area shape="rect" id="node10" href="./TBox.html" title="TBox" alt="" coords="129,571,214,588"/>
+<area shape="rect" id="node11" href="./TBranch.html" title="TBranch" alt="" coords="129,630,214,646"/>
+<area shape="rect" id="node12" href="./TPolyLine.html" title="TPolyLine" alt="" coords="129,689,214,706"/>
+<area shape="rect" id="node13" href="./TGraph.html" title="TGraph" alt="" coords="129,714,214,731"/>
+<area shape="rect" id="node14" href="./TEfficiency.html" title="TEfficiency" alt="" coords="129,731,214,748"/>
+<area shape="rect" id="node15" href="./TF1.html" title="TF1" alt="" coords="129,777,214,794"/>
+<area shape="rect" id="node16" href="./TGraph2D.html" title="TGraph2D" alt="" coords="129,803,214,819"/>
+<area shape="rect" id="node17" href="./TVirtualPS.html" title="TVirtualPS" alt="" coords="129,836,214,853"/>
+<area shape="rect" id="node18" href="./TLegendEntry.html" title="TLegendEntry" alt="" coords="129,853,214,870"/>
+<area shape="rect" id="node19" href="./TMarker3DBox.html" title="TMarker3DBox" alt="" coords="129,870,214,887"/>
+<area shape="rect" id="node20" href="./TMaterial.html" title="TMaterial" alt="" coords="129,887,214,904"/>
+<area shape="rect" id="node21" href="./TMathText.html" title="TMathText" alt="" coords="129,904,214,921"/>
+<area shape="rect" id="node22" href="./TNode.html" title="TNode" alt="" coords="129,921,214,938"/>
+<area shape="rect" id="node24" href="./TPad.html" title="TPad" alt="" coords="270,54,355,71"/>
+<area shape="rect" id="node25" href="./TGX11.html" title="TGX11" alt="" coords="270,81,355,98"/>
+<area shape="rect" id="node26" href="./TChain.html" title="TChain" alt="" coords="270,98,355,115"/>
+<area shape="rect" id="node27" href="./TH1D.html" title="TH1D" alt="" coords="270,182,355,199"/>
+<area shape="rect" id="node28" href="./GTree.html" title="GTree" alt="" coords="270,115,355,132"/>
+<area shape="rect" id="node29" href="./TArc.html" title="TArc" alt="" coords="270,402,355,419"/>
+<area shape="rect" id="node30" href="./TBRIK.html" title="TBRIK" alt="" coords="270,436,355,452"/>
+<area shape="rect" id="node31" href="./TBranchClones.html" title="TBranchClones" alt="" coords="270,588,355,604"/>
+<area shape="rect" id="node32" href="./TBranchElement.html" title="TBranchElement" alt="" coords="269,604,355,621"/>
+<area shape="rect" id="node33" href="./TBranchObject.html" title="TBranchObject" alt="" coords="270,621,355,638"/>
+<area shape="rect" id="node34" href="./TBranchRef.html" title="TBranchRef" alt="" coords="270,638,355,655"/>
+<area shape="rect" id="node35" href="./TBranchSTL.html" title="TBranchSTL" alt="" coords="270,655,355,672"/>
+<area shape="rect" id="node36" href="./TTUBE.html" title="TTUBE" alt="" coords="270,486,355,503"/>
+<area shape="rect" id="node37" href="./TCrown.html" title="TCrown" alt="" coords="270,419,355,436"/>
+<area shape="rect" id="node38" href="./TCurlyLine.html" title="TCurlyLine" alt="" coords="270,672,355,689"/>
+<area shape="rect" id="node39" href="./TCutG.html" title="TCutG" alt="" coords="270,689,355,706"/>
+<area shape="rect" id="node40" href="./TPave.html" title="TPave" alt="" coords="270,554,355,571"/>
+<area shape="rect" id="node41" href="./TF12.html" title="TF12" alt="" coords="270,773,355,790"/>
+<area shape="rect" id="node42" href="./TF2.html" title="TF2" alt="" coords="270,790,355,807"/>
+<area shape="rect" id="node43" href="./TWbox.html" title="TWbox" alt="" coords="270,571,355,588"/>
+<area shape="rect" id="node44" href="./TGRSIFit.html" title="TGRSIFit" alt="" coords="270,807,355,824"/>
+<area shape="rect" id="node45" href="./TGraph2DErrors.html" title="TGraph2DErrors" alt="" coords="269,824,355,841"/>
+<area shape="rect" id="node46" href="./TGraphAsymmErrors.html" title="TGraphAsymmErrors" alt="" coords="257,706,367,723"/>
+<area shape="rect" id="node47" href="./TGraphBentErrors.html" title="TGraphBentErrors" alt="" coords="265,723,360,739"/>
+<area shape="rect" id="node48" href="./TGraphErrors.html" title="TGraphErrors" alt="" coords="270,739,355,756"/>
+<area shape="rect" id="node49" href="./TGraphQQ.html" title="TGraphQQ" alt="" coords="270,756,355,773"/>
+<area shape="rect" id="node50" href="./TH1C.html" title="TH1C" alt="" coords="270,199,355,216"/>
+<area shape="rect" id="node51" href="./TH1F.html" title="TH1F" alt="" coords="270,216,355,233"/>
+<area shape="rect" id="node52" href="./TH1I.html" title="TH1I" alt="" coords="270,233,355,250"/>
+<area shape="rect" id="node53" href="./TH1K.html" title="TH1K" alt="" coords="270,250,355,267"/>
+<area shape="rect" id="node54" href="./TH1S.html" title="TH1S" alt="" coords="270,267,355,284"/>
+<area shape="rect" id="node55" href="./TH2.html" title="TH2" alt="" coords="270,284,355,300"/>
+<area shape="rect" id="node56" href="./TH3.html" title="TH3" alt="" coords="270,326,355,343"/>
+<area shape="rect" id="node57" href="./TImageDump.html" title="TImageDump" alt="" coords="270,841,355,858"/>
+<area shape="rect" id="node58" href="./TMixture.html" title="TMixture" alt="" coords="270,925,355,942"/>
+<area shape="rect" id="node59" href="./TNodeDiv.html" title="TNodeDiv" alt="" coords="270,942,355,959"/>
+<area shape="rect" id="node60" href="./TNtuple.html" title="TNtuple" alt="" coords="270,132,355,149"/>
+<area shape="rect" id="node61" href="./TNtupleD.html" title="TNtupleD" alt="" coords="270,149,355,165"/>
+<area shape="rect" id="node62" href="./TPCON.html" title="TPCON" alt="" coords="270,503,355,520"/>
+<area shape="rect" id="node63" href="./TPDF.html" title="TPDF" alt="" coords="270,858,355,875"/>
+<area shape="rect" id="node64" href="./TPostScript.html" title="TPostScript" alt="" coords="270,875,355,891"/>
+<area shape="rect" id="node65" href="./TSPHE.html" title="TSPHE" alt="" coords="270,520,355,537"/>
+<area shape="rect" id="node66" href="./TSVG.html" title="TSVG" alt="" coords="270,891,355,908"/>
+<area shape="rect" id="node67" href="./TTeXDump.html" title="TTeXDump" alt="" coords="270,908,355,925"/>
+<area shape="rect" id="node68" href="./TTreeSQL.html" title="TTreeSQL" alt="" coords="270,165,355,182"/>
+<area shape="rect" id="node69" href="./TXTRU.html" title="TXTRU" alt="" coords="270,537,355,554"/>
+<area shape="rect" id="node70" href="./TGX11TTF.html" title="TGX11TTF" alt="" coords="410,81,495,98"/>
+<area shape="rect" id="node71" href="./TCanvas.html" title="TCanvas" alt="" coords="410,22,495,39"/>
+<area shape="rect" id="node72" href="./GChain.html" title="GChain" alt="" coords="410,98,495,115"/>
+<area shape="rect" id="node73" href="./GH1D.html" title="GH1D" alt="" coords="410,165,495,182"/>
+<area shape="rect" id="node74" href="./TButton.html" title="TButton" alt="" coords="410,47,495,64"/>
+<area shape="rect" id="node75" href="./TCONE.html" title="TCONE" alt="" coords="410,469,495,486"/>
+<area shape="rect" id="node76" href="./TTUBS.html" title="TTUBS" alt="" coords="410,486,495,503"/>
+<area shape="rect" id="node77" href="./TCurlyArc.html" title="TCurlyArc" alt="" coords="410,672,495,689"/>
+<area shape="rect" id="node78" href="./TPaveText.html" title="TPaveText" alt="" coords="410,554,495,571"/>
+<area shape="rect" id="node79" href="./TELTU.html" title="TELTU" alt="" coords="410,503,495,520"/>
+<area shape="rect" id="node80" href="./TF3.html" title="TF3" alt="" coords="410,790,495,807"/>
+<area shape="rect" id="node81" href="./TFrame.html" title="TFrame" alt="" coords="410,604,495,621"/>
+<area shape="rect" id="node82" href="./TGTRA.html" title="TGTRA" alt="" coords="410,385,495,402"/>
+<area shape="rect" id="node83" href="./TGraphPolar.html" title="TGraphPolar" alt="" coords="410,739,495,756"/>
+<area shape="rect" id="node84" href="./TH2C.html" title="TH2C" alt="" coords="410,199,495,216"/>
+<area shape="rect" id="node85" href="./TH2D.html" title="TH2D" alt="" coords="410,216,495,233"/>
+<area shape="rect" id="node86" href="./TH2F.html" title="TH2F" alt="" coords="410,233,495,250"/>
+<area shape="rect" id="node87" href="./TH2I.html" title="TH2I" alt="" coords="410,250,495,267"/>
+<area shape="rect" id="node88" href="./TH2Poly.html" title="TH2Poly" alt="" coords="410,267,495,284"/>
+<area shape="rect" id="node89" href="./TH2S.html" title="TH2S" alt="" coords="410,284,495,300"/>
+<area shape="rect" id="node90" href="./TH3C.html" title="TH3C" alt="" coords="410,300,495,317"/>
+<area shape="rect" id="node91" href="./TH3D.html" title="TH3D" alt="" coords="410,317,495,334"/>
+<area shape="rect" id="node92" href="./TH3F.html" title="TH3F" alt="" coords="410,334,495,351"/>
+<area shape="rect" id="node93" href="./TH3I.html" title="TH3I" alt="" coords="410,351,495,368"/>
+<area shape="rect" id="node94" href="./TH3S.html" title="TH3S" alt="" coords="410,368,495,385"/>
+<area shape="rect" id="node95" href="./THYPE.html" title="THYPE" alt="" coords="410,520,495,537"/>
+<area shape="rect" id="node96" href="./TLegend.html" title="TLegend" alt="" coords="410,571,495,588"/>
+<area shape="rect" id="node97" href="./TPARA.html" title="TPARA" alt="" coords="410,402,495,419"/>
+<area shape="rect" id="node98" href="./TPGON.html" title="TPGON" alt="" coords="410,537,495,554"/>
+<area shape="rect" id="node99" href="./TPaveLabel.html" title="TPaveLabel" alt="" coords="410,588,495,604"/>
+<area shape="rect" id="node100" href="./TPeak.html" title="TPeak" alt="" coords="410,807,495,824"/>
+<area shape="rect" id="node101" href="./TProfile.html" title="TProfile" alt="" coords="410,182,495,199"/>
+<area shape="rect" id="node102" href="./TProofChain.html" title="TProofChain" alt="" coords="410,115,495,132"/>
+<area shape="rect" id="node103" href="./TSlider.html" title="TSlider" alt="" coords="410,64,495,81"/>
+<area shape="rect" id="node104" href="./TSliderBox.html" title="TSliderBox" alt="" coords="410,621,495,638"/>
+<area shape="rect" id="node105" href="./TTRAP.html" title="TTRAP" alt="" coords="410,419,495,436"/>
+<area shape="rect" id="node106" href="./TTRD1.html" title="TTRD1" alt="" coords="410,436,495,452"/>
+<area shape="rect" id="node107" href="./TTRD2.html" title="TTRD2" alt="" coords="410,452,495,469"/>
+<area shape="rect" id="node108" href="./GCanvas.html" title="GCanvas" alt="" coords="538,1,623,18"/>
+<area shape="rect" id="node109" href="./TCONS.html" title="TCONS" alt="" coords="538,478,623,495"/>
+<area shape="rect" id="node110" href="./TCTUB.html" title="TCTUB" alt="" coords="538,495,623,512"/>
+<area shape="rect" id="node111" href="./TDialogCanvas.html" title="TDialogCanvas" alt="" coords="538,18,623,35"/>
+<area shape="rect" id="node112" href="./TDiamond.html" title="TDiamond" alt="" coords="538,537,623,554"/>
+<area shape="rect" id="node113" href="./TGroupButton.html" title="TGroupButton" alt="" coords="538,52,623,69"/>
+<area shape="rect" id="node114" href="./TInspectCanvas.html" title="TInspectCanvas" alt="" coords="538,35,623,52"/>
+<area shape="rect" id="node115" href="./TPaveClass.html" title="TPaveClass" alt="" coords="538,588,623,604"/>
+<area shape="rect" id="node116" href="./TPaveStats.html" title="TPaveStats" alt="" coords="538,554,623,571"/>
+<area shape="rect" id="node117" href="./TPavesText.html" title="TPavesText" alt="" coords="538,571,623,588"/>
+<area shape="rect" id="node118" href="./TProfile2D.html" title="TProfile2D" alt="" coords="538,216,623,233"/>
+<area shape="rect" id="node119" href="./TProfile3D.html" title="TProfile3D" alt="" coords="538,317,623,334"/>
+</map>
+<map name="MapTAttFill_Lib" id="MapTAttFill_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
+</map>
+<div class="tabs">
+<a id="imgTAttFill_Inh" class="tabsel" href="inh/TAttFill_Inh.png" onclick="javascript:return SetImg('Charts','inh/TAttFill_Inh.png');">Inheritance</a>
+<a id="imgTAttFill_InhMem" class="tab" href="inhmem/TAttFill_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TAttFill_InhMem.png');">Inherited Members</a>
+<a id="imgTAttFill_Incl" class="tab" href="incl/TAttFill_Incl.png" onclick="javascript:return SetImg('Charts','incl/TAttFill_Incl.png');">Includes</a>
+<a id="imgTAttFill_Lib" class="tab" href="lib/TAttFill_Lib.png" onclick="javascript:return SetImg('Charts','lib/TAttFill_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTAttFill_Inh" src="inh/TAttFill_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAttFill:TAttFill" href="src/TAttFill.cxx.html#Kv1btB">TAttFill</a>()</span><br />
+<div class="funccomm"><pre> AttFill default constructor.
+ Default fill attributes are taking from the current style
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAttFill:TAttFill@1" href="src/TAttFill.cxx.html#FUQsBE">TAttFill</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> fcolor, <a href="./ListOfTypes.html#Style_t">Style_t</a> fstyle)</span><br />
+<div class="funccomm"><pre> AttFill normal constructor.
+ color Fill Color
+ style Fill Style
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAttFill:_TAttFill" href="src/TAttFill.cxx.html#TuPnpD">~TAttFill</a>()</span><br />
+<div class="funccomm"><pre> AttFill destructor.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttFill:Copy" href="src/TAttFill.cxx.html#SPbap">Copy</a>(<a href="./TAttFill.html">TAttFill</a>&amp; attfill) const</span><br />
+<div class="funccomm"><pre> <a href="./TAttFill.html#TAttFill:Copy" title="void TAttFill::Copy(TAttFill&amp; attfill)">Copy</a> this fill attributes to a new <a href="./TAttFill.html">TAttFill</a>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttFill:Modify" href="src/TAttFill.cxx.html#P7I5dE">Modify</a>()</span><br />
+<div class="funccomm"><pre> Change current fill area attributes if necessary.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttFill:ResetAttFill" href="src/TAttFill.cxx.html#cecpyE">ResetAttFill</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Reset this fill attributes to default values.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttFill:SaveFillAttributes" href="src/TAttFill.cxx.html#Z_UnaC">SaveFillAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</span><br />
+<div class="funccomm"><pre> Save fill attributes as C++ statement(s) on output stream out
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttFill:SetFillAttributes" href="src/TAttFill.cxx.html#Th5W9">SetFillAttributes</a>()</span><br />
+<div class="funccomm"><pre> Invoke the DialogCanvas Fill attributes.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttFill:SetFillColorAlpha" href="src/TAttFill.cxx.html#UP1gY">SetFillColorAlpha</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> fcolor, <a href="./ListOfTypes.html#Float_t">Float_t</a> falpha)</span><br />
+<div class="funccomm"><pre> Set a transparent fill color. falpha defines the percentage of
+ the color opacity from 0. (fully transparent) to 1. (fully opaque).
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TAttFill:IsTransparent" href="src/TAttFill.h.html#crJjeE">IsTransparent</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TAttFill.html#TAttFill:fFillStyle" title="Style_t TAttFill::fFillStyle">fFillStyle</a> &gt;= 4000 &amp;&amp; <a href="./TAttFill.html#TAttFill:fFillStyle" title="Style_t TAttFill::fFillStyle">fFillStyle</a> &lt;= 4100 ? <a href="./ListOfTypes.html#Bool_t">kTRUE</a> : <a href="./ListOfTypes.html#Bool_t">kFALSE</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAttFill:TAttFill" href="src/TAttFill.h.html#PeyByB">TAttFill</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Color_t">Color_t</a> <a class="funcname" name="TAttFill:GetFillColor" href="src/TAttFill.h.html#SeukvB">GetFillColor</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TAttFill.html#TAttFill:fFillColor" title="Color_t TAttFill::fFillColor">fFillColor</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Style_t">Style_t</a> <a class="funcname" name="TAttFill:GetFillStyle" href="src/TAttFill.h.html#DB7mv">GetFillStyle</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TAttFill.html#TAttFill:fFillStyle" title="Style_t TAttFill::fFillStyle">fFillStyle</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttFill:SetFillColor" href="src/TAttFill.h.html#bDcOcB">SetFillColor</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> fcolor)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TAttFill.html#TAttFill:fFillColor" title="Color_t TAttFill::fFillColor">fFillColor</a> = fcolor; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttFill:SetFillStyle" href="src/TAttFill.h.html#hXhgEE">SetFillStyle</a>(<a href="./ListOfTypes.html#Style_t">Style_t</a> fstyle)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TAttFill.html#TAttFill:fFillStyle" title="Style_t TAttFill::fFillStyle">fFillStyle</a> = fstyle; }</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+<em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   12/12/94</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

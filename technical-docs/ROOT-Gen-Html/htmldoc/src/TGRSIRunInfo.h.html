@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:26 2015            -->
+<!--   Date: Wed Mar  4 20:39:29 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -42,7 +42,7 @@
  *
  * Due to some root quarkiness, I have done something a bit strange.
  * The info is written ok at the end of the fragment tree process.
- * After reading the <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a> object from a TFile, the static function
+ * After reading the <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a> object from a <a href="../TFile.html">TFile</a>, the static function
  *
  *   <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="../TGRSIRunInfo.html#TGRSIRunInfo:SetInfoFromFile" title="void TGRSIRunInfo::SetInfoFromFile(TGRSIRunInfo* temp)">SetInfoFromFile</a>(ptr_to_runinfo);
  *
@@ -76,13 +76,13 @@
 
 <span class="cpp">#include &lt;cstdio&gt;</span>
 
-<span class="cpp">#include &lt;TObject.h&gt;</span>
-<span class="cpp">#include &lt;TTree.h&gt;</span>
-<span class="cpp">#include &lt;TFile.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TObject.h">TObject.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TTree.h">TTree.h</a>&gt;</span>
+<span class="cpp">#include &lt;<a href="../TFile.h">TFile.h</a>&gt;</span>
 
 <span class="cpp">#include "<a href="../TChannel.h">TChannel.h</a>"</span>
 
-<span class="keyword">class</span> <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a> : <span class="keyword">public</span> <a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a> {
+<span class="keyword">class</span> <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a> : <span class="keyword">public</span> <a href="../TObject.html">TObject</a> {
 
    <span class="keyword">public</span>:
       <span class="keyword">static</span> <a href="../TGRSIRunInfo.html">TGRSIRunInfo</a> *<a href="../TGRSIRunInfo.html#TGRSIRunInfo:Get" title="TGRSIRunInfo* TGRSIRunInfo::Get()">Get</a>();
@@ -104,7 +104,7 @@
 
 
       <span class="keyword">static</span> <span class="keyword">void</span> <a href="../TGRSIRunInfo.html#TGRSIRunInfo:SetRunInfo" title="void TGRSIRunInfo::SetRunInfo(int runnum=0,int subrunnum=-1)">SetRunInfo</a>(<span class="keyword">int</span> runnum=0,<span class="keyword">int</span> subrunnum=-1);
-      <span class="keyword">static</span> <span class="keyword">void</span> <a href="../TGRSIRunInfo.html#TGRSIRunInfo:SetAnalysisTreeBranches" title="void TGRSIRunInfo::SetAnalysisTreeBranches(TTree* )">SetAnalysisTreeBranches</a>(TTree*);
+      <span class="keyword">static</span> <span class="keyword">void</span> <a href="../TGRSIRunInfo.html#TGRSIRunInfo:SetAnalysisTreeBranches" title="void TGRSIRunInfo::SetAnalysisTreeBranches(TTree* )">SetAnalysisTreeBranches</a>(<a href="../TTree.html">TTree</a>*);
 
 <a name="s3GQXB"></a>      <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TGRSIRunInfo.html#TGRSIRunInfo:SetRunNumber" title="void TGRSIRunInfo::SetRunNumber(int tmp)">SetRunNumber</a>(<span class="keyword">int</span> tmp) { <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fGRSIRunInfo" title="TGRSIRunInfo* TGRSIRunInfo::fGRSIRunInfo">fGRSIRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:fRunNumber" title="int TGRSIRunInfo::fRunNumber">fRunNumber</a> = tmp; }
 <a name="su5iF"></a>      <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TGRSIRunInfo.html#TGRSIRunInfo:SetSubRunNumber" title="void TGRSIRunInfo::SetSubRunNumber(int tmp)">SetSubRunNumber</a>(<span class="keyword">int</span> tmp) { <a href="../TGRSIRunInfo.html#TGRSIRunInfo:fGRSIRunInfo" title="TGRSIRunInfo* TGRSIRunInfo::fGRSIRunInfo">fGRSIRunInfo</a>-><a href="../TGRSIRunInfo.html#TGRSIRunInfo:fSubRunNumber" title="int TGRSIRunInfo::fSubRunNumber">fSubRunNumber</a> = tmp; }
@@ -236,7 +236,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:39 </em><em>&raquo; Last generated: 2015-03-04 20:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

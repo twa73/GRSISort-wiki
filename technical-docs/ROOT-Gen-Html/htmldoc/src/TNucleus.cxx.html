@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 13:15:29 2015            -->
+<!--   Date: Wed Mar  4 20:40:04 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -28,7 +28,7 @@
 <span class="cpp">#include &lt;cstring&gt;</span>
 <span class="cpp">#include &lt;sstream&gt;</span>
 
-<span class="cpp">#include &lt;TClass.h&gt;</span>
+<span class="cpp">#include &lt;<a href="../TClass.h">TClass.h</a>&gt;</span>
 
 <span class="comment">//#define debug</span>
 
@@ -124,7 +124,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
   <a href="../TNucleus.html#TNucleus:SetMassExcess" title="void TNucleus::SetMassExcess(double )">SetMassExcess</a>(mass/1000.0);
   <a href="../TNucleus.html#TNucleus:SetMass" title="void TNucleus::SetMass(double ) or overloads">SetMass</a>();
 	<a href="../TNucleus.html#TNucleus:SetSymbol" title="void TNucleus::SetSymbol(const char* )">SetSymbol</a>(symbol.c_str());
-  <a href="../#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(element.c_str());
+  <a href="../TNamed.html#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(element.c_str());
 }
 <span class="comment">/*
 */</span>
@@ -135,7 +135,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
   <a href="../TNucleus.html#TNucleus:fN" title="int TNucleus::fN">fN</a> = neutrons;
   <a href="../TNucleus.html#TNucleus:fSymbol" title="string TNucleus::fSymbol">fSymbol</a> = symbol;
   <a href="../TNucleus.html#TNucleus:fMass" title="double TNucleus::fMass">fMass</a> = mass;
-  <a href="../#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(symbol);
+  <a href="../TNamed.html#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(symbol);
 }
 
 <a name="SWScZ"></a><a href="../TNucleus.html">TNucleus</a>::<a href="../TNucleus.html#TNucleus:TNucleus" title="TNucleus TNucleus::TNucleus() or overloads">TNucleus</a>(<span class="keyword">int</span> charge, <span class="keyword">int</span> neutrons, <span class="keyword">const</span> <span class="keyword">char</span>* MassFile){
@@ -179,7 +179,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
 
 	name = name.substr(name.find_first_not_of(<span class="string">"0123456789 "</span>));
 	name.append(number);
-  <a href="../#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(name.c_str());
+  <a href="../TNamed.html#TNamed:SetName" title="void TNamed::SetName(const char* name)">SetName</a>(name.c_str());
 }
 
 <span class="comment">//<a href="../ListOfTypes.html#void">void</a> <a href="../TNucleus.html">TNucleus</a>::SetA(<a href="../ListOfTypes.html#int">int</a> aval){</span>
@@ -312,11 +312,11 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
    <a href="../ListOfTypes.html#ifstream">ifstream</a> sourcefile;
    sourcefile.open(path.c_str());
    <span class="keyword">if</span>(!sourcefile.is_open()) {
-      printf(<span class="string">"unable to set source data for %s.\n"</span>,<a href="../#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
+      printf(<span class="string">"unable to set source data for %s.\n"</span>,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
       <span class="keyword">return</span> <span class="keyword">false</span>;
    }
 
-   <a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.<a href="../#TNamed:Clear" title="void TNamed::Clear(Option_t* option=&quot;&quot;)">Clear</a>();
+   <a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.<a href="../TList.html#TList:Clear" title="void TList::Clear(Option_t* option=&quot;&quot;)">Clear</a>();
 
    std::string line;
    <span class="keyword">int</span> linenumber = 0;
@@ -333,8 +333,8 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
       ss &gt;&gt; tran-&gt;energy_uncertainty;
       ss &gt;&gt; tran-&gt;intensity;
       ss &gt;&gt; tran-&gt;intensity_uncertainty;
-      <a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.Add(tran);
-      printf(<span class="string">"eng: %.02f\tinten: %.02f\n"</span>,((<a href="../TGRSITransition.html">TGRSITransition</a>*)<a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.Last())-&gt;energy,((<a href="../TGRSITransition.html">TGRSITransition</a>*)<a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.Last())-&gt;intensity);
+      <a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.<a href="../TList.html#TList:Add" title="void TList::Add(TObject* obj) or overloads">Add</a>(tran);
+      printf(<span class="string">"eng: %.02f\tinten: %.02f\n"</span>,((<a href="../TGRSITransition.html">TGRSITransition</a>*)<a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.<a href="../TList.html#TList:Last" title="TObject* TList::Last()">Last</a>())-&gt;energy,((<a href="../TGRSITransition.html">TGRSITransition</a>*)<a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.<a href="../TList.html#TList:Last" title="TObject* TList::Last()">Last</a>())-&gt;intensity);
    }                                                                                                         
 
    <span class="keyword">return</span> <span class="keyword">true</span>;
@@ -350,7 +350,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 13:15 </em><em>&raquo; Last generated: 2015-03-04 13:15</em><br />
+<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
