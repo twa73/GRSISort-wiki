@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:40:05 2015            -->
+<!--   Date: Wed Mar  4 21:38:51 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -216,10 +216,10 @@ return false;}
 <tr class="data"><td class="datatype"><span class="keyword">long</span></td><td class="dataname"><a name="TPaces:fCycleStartTime"></a>fCycleStartTime</td><td class="datadesc">The start of the cycle as it's saved to the tree</td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">long</span></td><td class="dataname"><a name="TPaces:fLastPPG"></a>fLastPPG</td><td class="datadesc">!  value of the last ppg</td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">bool</span></td><td class="dataname"><a name="TPaces:fSetCoreWave"></a>fSetCoreWave</td><td class="datadesc">!  Flag for Waveforms ON/OFF</td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TPaces:fbackground"></a>fbackground</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TPaces:fbeamon"></a>fbeamon</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TPaces:fdecay"></a>fdecay</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TPaces:ftapemove"></a>ftapemove</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TPaces:fbackground"></a>fbackground</td><td class="datadesc">flag set during background portion of cycle</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TPaces:fbeamon"></a>fbeamon</td><td class="datadesc">flag set during beam on portion of cycle</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TPaces:fdecay"></a>fdecay</td><td class="datadesc">flag set during decay portion of cycle</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TPaces:ftapemove"></a>ftapemove</td><td class="datadesc">flag set during tape move portion of cycle</td></tr>
 <tr class="data"><td class="datatype"><a href="./vector_TPacesHit_.html">vector&lt;TPacesHit&gt;</a></td><td class="dataname"><a name="TPaces:paces_hits"></a>paces_hits</td><td class="datadesc">The set of crystal hits</td></tr>
 <tr class="data"><td class="datatype">TPacesData*</td><td class="dataname"><a name="TPaces:pacesdata"></a>pacesdata</td><td class="datadesc">!  Used to build PACES Hits</td></tr>
 
@@ -262,6 +262,8 @@ return false;}
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TPaces:TPaces@1" href="src/TPaces.cxx.html#XhmNS">TPaces</a>(<span class="keyword">const</span> <a href="./TPaces.html">TPaces</a>&amp; )</span><br />
+<div class="funccomm"><pre>Default <a href="./TObject.html#TObject:Copy" title="void TObject::Copy(TObject&amp; object)">Copy</a> Constructor
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TPaces:_TPaces" href="src/TPaces.cxx.html#HvmspB">~TPaces</a>()</span><br />
 <div class="funccomm"><pre>Default Destructor
@@ -276,6 +278,8 @@ return false;}
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TPaces.html">TPaces</a>&amp; <a class="funcname" name="TPaces:operator_" href="src/TPaces.cxx.html#rxPIsC">operator=</a>(<span class="keyword">const</span> <a href="./TPaces.html">TPaces</a>&amp; )</span><br />
+<div class="funccomm"><pre>Assignment operator
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TPaces:FillData" href="src/TPaces.cxx.html#TnhuHC">FillData</a>(<a href="./TFragment.html">TFragment</a>* , <a href="./TChannel.html">TChannel</a>* , MNEMONIC* )</span><br />
 <div class="funccomm"><pre>Fills the <span class="string">"Data"</span> structure for a specific channel with <a href="./TFragment.html">TFragment</a> frag.
@@ -355,7 +359,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Wed Mar  4 20:40:05 2015 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
+<em>&raquo; Last changed: Wed Mar  4 21:38:52 2015 </em><em>&raquo; Last generated: 2015-03-04 21:38</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
