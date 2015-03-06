@@ -68,7 +68,8 @@ You can also add LaTeX to function and class descriptions by surrounding it with
 ###Authorship
 At the top of a file, you can include authorship by typing
 ```c++
-\\ Author: name of author
+\\ Author: name of author 
 ```
+at the very top of the header file. This is worth doing in all files you make to get credit for your hard work!
 ###HTML generation
 HTML documentation will be generated and placed on the wiki periodically. If you would like the documentation to be updated please contact @r3dunlop.
