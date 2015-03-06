@@ -4,7 +4,7 @@
 The [TFragment](https://rawgit.com/wiki/pcbend/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/TFragment.html ) class is a good example of how to comment a class for automatic HTML generation. Please see the [THtml](https://root.cern.ch/root/html/THtml.html) page for more information.
 
 ###Class Description
-CLASS DESCRIPTION IMAGE
+[[/images/ClassDesc.png]]
 To create the class description, place it in a block of comments such as:
 ```c++
 ////////////////////////////////////////////////////////////////
@@ -19,7 +19,7 @@ To create the class description, place it in a block of comments such as:
 This block of comments must go in the implementation file, ie the .cxx file.
 
 ###Class Index
-CLASS INDEX IMAGE
+[[images/ClassIndexDesc.png]]
 To create the class index, place a comment after the ClassDef statement in the header file.
 For example,
 ```c++
@@ -27,7 +27,7 @@ ClassDef(TFragment,4);  // Event Fragments
 ```
 
 ###Method Documentation
-METHOD DOCUMENTATION IMAGE
+[[images/FuncDesc.png]]
 To create method documentation, place the instructions or details in the first comments after the name of the function. Like in a class description block, everything until the first non-commented line is considered as a valid member function description block.
 For example,
 ```c++
@@ -49,7 +49,7 @@ double TChannel::CalibrateTIME(double time)  {
 Produces the above image.
 
 ###Data Member Documentation
-DATA MEMBER DOCUMENTATION IMAGE
+[[images/MemberDesc.png]]
 To document a data member put a C++ comment behind their declaration in the header file.
 ```c++
    UInt_t PPG;                    //-> Programmable pattern generator value
