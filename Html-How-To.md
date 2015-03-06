@@ -1,7 +1,7 @@
 [**HOME**](Home) > [**TECHNICAL DOCUMENTATION**](Technical-Documentation) > [**COMMENTS FOR HTML DOCS**](Html-How-To)
 
 #Commenting Code For HTML
-The [TFragment](https://rawgit.com/wiki/pcbend/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/TFragment.html ) class is a good example of how to comment a class for automatic HTML generation.
+The [TFragment](https://rawgit.com/wiki/pcbend/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/TFragment.html ) class is a good example of how to comment a class for automatic HTML generation. Please see the [THtml](https://root.cern.ch/root/html/THtml.html) page for more information.
 
 ###Class Description
 CLASS DESCRIPTION IMAGE
