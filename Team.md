@@ -26,6 +26,6 @@
 ###Other Contributions
 ||||
 |:------------- |:-------------:|:-------------:|
-|Ryan Braid| @rbraid  | <a href="https://github.com/rbradin"><img src="https://avatars0.githubusercontent.com/u/5347959?v=3&s=460" align="left" height="48" width="48" ></a> |
+|Ryan Braid| @rbraid  | <a href="https://github.com/rbraid"><img src="https://avatars0.githubusercontent.com/u/5347959?v=3&s=460" align="left" height="48" width="48" ></a> |
 |Steffen Cruz| @steffencruz |<a href="https://github.com/steffencruz"><img src="https://avatars1.githubusercontent.com/u/6709103?v=3&s=460" align="left" height="48" width="48" ></a> |
 |Jenna Smith| @SmithJK |<a href="https://github.com/SmithJk"><img src="https://avatars1.githubusercontent.com/u/10604745?v=3&s=192" align="left" height="48" width="48" ></a> |
