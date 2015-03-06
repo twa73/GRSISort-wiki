@@ -1,6 +1,6 @@
 #GRSISort
 
-A lean, mean, sorting machine.
+A lean, mean, sorting machine. Created by P.C. Bender.
 
 
 ## Quick navigation
