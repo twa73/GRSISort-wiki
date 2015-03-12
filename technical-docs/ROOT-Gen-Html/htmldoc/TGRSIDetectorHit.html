@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 21:38:14 2015            -->
+<!--   Date: Thu Mar 12 13:29:55 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -58,7 +58,15 @@ return false;}
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="TGRSIDetectorHit:description"></a>class TGRSIDetectorHit: public <a href="./TObject.html">TObject</a></h1>
 <div class="classdescr">
-<h4>This class is also known as (typedefs to this class)</h4>vector&lt;<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>,allocator&lt;<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>&gt; &gt;::value_type</div>
+<pre>
+
+<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>
+
+This is class that contains the basic info about detector
+ hits. This is where the <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:position" title="TVector3 TGRSIDetectorHit::position">position</a> of a detector is stored.
+
+
+</pre><h4>This class is also known as (typedefs to this class)</h4>vector&lt;<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>,allocator&lt;<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>&gt; &gt;::value_type</div>
 </div></div>
 
 <div id="functions">
@@ -186,7 +194,7 @@ return false;}
 </table></div>
 <div class="access" id="dataprot"><b>protected:</b>
 <table class="data" id="tabdataprot" cellspacing="0">
-<tr class="data"><td class="datatype"><a href="./TVector3.html">TVector3</a></td><td class="dataname"><a name="TGRSIDetectorHit:position"></a>position</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TVector3.html">TVector3</a></td><td class="dataname"><a name="TGRSIDetectorHit:position"></a>position</td><td class="datadesc">Position of hit detector</td></tr>
 
 </table></div>
 </div>
@@ -224,25 +232,27 @@ return false;}
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTGRSIDetectorHit_Inh" src="inh/TGRSIDetectorHit_Inh.png"/></div>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIDetectorHit:TGRSIDetectorHit" href="src/TGRSIDetectorHit.cxx.html#pT2jPE">TGRSIDetectorHit</a>()</span><br />
-<div class="funccomm"><pre> <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:Class" title="TClass* TGRSIDetectorHit::Class()">Class</a>()-><a href="./TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<a href="./ListOfTypes.html#bool">true</a>);
+<div class="funccomm"><pre>Default constructor
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIDetectorHit:_TGRSIDetectorHit" href="src/TGRSIDetectorHit.cxx.html#L5nOaC">~TGRSIDetectorHit</a>()</span><br />
-
-<div class="code"><code class="inlinecode">{	}</code></div>
-<div style="clear:both;"></div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIDetectorHit:_TGRSIDetectorHit" href="src/TGRSIDetectorHit.cxx.html#pLing">~TGRSIDetectorHit</a>()</span><br />
+<div class="funccomm"><pre>Default destructor
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGRSIDetectorHit:BremSuppressed" href="src/TGRSIDetectorHit.cxx.html#lP1kkB">BremSuppressed</a>(<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>* )</span><br />
+<div class="funccomm"><pre>Checks to see if the hit is bremsstrahlung suppressed or not.
+Currently ALWAYS returns <a href="./ListOfTypes.html#bool">false</a>.
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetectorHit:Print" href="src/TGRSIDetectorHit.cxx.html#ajc.r">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
-
-<div class="code"><code class="inlinecode">{ }</code></div>
-<div style="clear:both;"></div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetectorHit:Print" href="src/TGRSIDetectorHit.cxx.html#Uj8oE">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre>General print statement for a <a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>.
+Currently prints nothing.
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetectorHit:Clear" href="src/TGRSIDetectorHit.cxx.html#Oo5xh">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
-
-<div class="code"><code class="inlinecode">{ }</code></div>
-<div style="clear:both;"></div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetectorHit:Clear" href="src/TGRSIDetectorHit.cxx.html#w2KqIB">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre>General clear statement for a <a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>.
+Currently does nothing.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIDetectorHit:TGRSIDetectorHit" href="src/TGRSIDetectorHit.h.html#ewEEWD">TGRSIDetectorHit</a>()</span><br />
 </div>
@@ -261,7 +271,7 @@ virtual <a href="./ListOfTypes.html#void">void</a> SetPosition(<a href="./TGRSID
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Wed Mar  4 21:38:14 2015 </em><em>&raquo; Last generated: 2015-03-04 21:38</em><br />
+<em>&raquo; Last changed: Thu Mar 12 13:29:55 2015 </em><em>&raquo; Last generated: 2015-03-12 13:29</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

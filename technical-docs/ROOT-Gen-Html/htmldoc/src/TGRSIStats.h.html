@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 21:38:16 2015            -->
+<!--   Date: Thu Mar 12 13:29:59 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -39,19 +39,19 @@
 
    <span class="keyword">private</span>:
      <span class="keyword">static</span> std::map&lt;<span class="keyword">int</span>,<a href="../TGRSIStats.html">TGRSIStats</a>*&gt; *<a href="../TGRSIStats.html#TGRSIStats:fStatsMap" title="map&lt;int,TGRSIStats*&gt;* TGRSIStats::fStatsMap">fStatsMap</a>; <span class="comment">//A Map of channel number to a set of stats</span>
-     <span class="keyword">static</span> <a href="../ListOfTypes.html#time_t">time_t</a> <a href="../TGRSIStats.html#TGRSIStats:fLowestMidasTimeStamp" title="time_t TGRSIStats::fLowestMidasTimeStamp">fLowestMidasTimeStamp</a>; <span class="comment">//The lowest midas time stamp recorded during a sub-run</span>
-     <span class="keyword">static</span> <a href="../ListOfTypes.html#time_t">time_t</a> <a href="../TGRSIStats.html#TGRSIStats:fHighestMidasTimeStamp" title="time_t TGRSIStats::fHighestMidasTimeStamp">fHighestMidasTimeStamp</a>;<span class="comment">//This highest midas time stamp recorded during a sub-run</span>
+     <span class="keyword">static</span> <a href="../ListOfTypes.html#time_t">time_t</a> <a href="../TGRSIStats.html#TGRSIStats:fLowestMidasTimeStamp" title="time_t TGRSIStats::fLowestMidasTimeStamp">fLowestMidasTimeStamp</a>;         <span class="comment">//The lowest midas time stamp recorded during a sub-run</span>
+     <span class="keyword">static</span> <a href="../ListOfTypes.html#time_t">time_t</a> <a href="../TGRSIStats.html#TGRSIStats:fHighestMidasTimeStamp" title="time_t TGRSIStats::fHighestMidasTimeStamp">fHighestMidasTimeStamp</a>;        <span class="comment">//This highest midas time stamp recorded during a sub-run</span>
 
-     <span class="keyword">static</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TGRSIStats.html#TGRSIStats:fLowestNetworkPacket" title="Int_t TGRSIStats::fLowestNetworkPacket">fLowestNetworkPacket</a>; <span class="comment">//The lowest network packet recorded during a sub-run</span>
-     <span class="keyword">static</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TGRSIStats.html#TGRSIStats:fHighestNetworkPacket" title="Int_t TGRSIStats::fHighestNetworkPacket">fHighestNetworkPacket</a>; <span class="comment">//The highest network packet recorded durin a sub-run</span>
+     <span class="keyword">static</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TGRSIStats.html#TGRSIStats:fLowestNetworkPacket" title="Int_t TGRSIStats::fLowestNetworkPacket">fLowestNetworkPacket</a>;           <span class="comment">//The lowest network packet recorded during a sub-run</span>
+     <span class="keyword">static</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TGRSIStats.html#TGRSIStats:fHighestNetworkPacket" title="Int_t TGRSIStats::fHighestNetworkPacket">fHighestNetworkPacket</a>;          <span class="comment">//The highest network packet recorded durin a sub-run</span>
 
-     <span class="keyword">int</span> <a href="../TGRSIStats.html#TGRSIStats:fStatAddress" title="int TGRSIStats::fStatAddress">fStatAddress</a>; <span class="comment">//The address that the stats correspon to</span>
+     <span class="keyword">int</span> <a href="../TGRSIStats.html#TGRSIStats:fStatAddress" title="int TGRSIStats::fStatAddress">fStatAddress</a>;                            <span class="comment">//The address that the stats correspon to</span>
 
-     <span class="keyword">unsigned</span> <span class="keyword">long</span> <a href="../TGRSIStats.html#TGRSIStats:fDeadTime" title="unsigned long TGRSIStats::fDeadTime">fDeadTime</a>; <span class="comment">//The total dead-time recorded in a channel</span>
-     <span class="keyword">int</span> <a href="../TGRSIStats.html#TGRSIStats:fLostEvents" title="int TGRSIStats::fLostEvents">fLostEvents</a>; <span class="comment">//The number of lost events in a channel</span>
-     <span class="keyword">int</span> <a href="../TGRSIStats.html#TGRSIStats:fLastChannelIdSeen" title="int TGRSIStats::fLastChannelIdSeen">fLastChannelIdSeen</a>; <span class="comment">//The last channelId that came from the channel</span>
+     <span class="keyword">unsigned</span> <span class="keyword">long</span> <a href="../TGRSIStats.html#TGRSIStats:fDeadTime" title="unsigned long TGRSIStats::fDeadTime">fDeadTime</a>;                     <span class="comment">//The total dead-time recorded in a channel</span>
+     <span class="keyword">int</span> <a href="../TGRSIStats.html#TGRSIStats:fLostEvents" title="int TGRSIStats::fLostEvents">fLostEvents</a>;                             <span class="comment">//The number of lost events in a channel</span>
+     <span class="keyword">int</span> <a href="../TGRSIStats.html#TGRSIStats:fLastChannelIdSeen" title="int TGRSIStats::fLastChannelIdSeen">fLastChannelIdSeen</a>;                      <span class="comment">//The last channelId that came from the channel</span>
 
-     <span class="keyword">static</span> <a href="../ListOfTypes.html#Long_t">Long_t</a> <a href="../TGRSIStats.html#TGRSIStats:fGoodEvents" title="Long_t TGRSIStats::fGoodEvents">fGoodEvents</a>; <span class="comment">//The total number of good events in a sub-run</span>
+     <span class="keyword">static</span> <a href="../ListOfTypes.html#Long_t">Long_t</a> <a href="../TGRSIStats.html#TGRSIStats:fGoodEvents" title="Long_t TGRSIStats::fGoodEvents">fGoodEvents</a>;                   <span class="comment">//The total number of good events in a sub-run</span>
 
    <span class="keyword">public</span>:
       <a href="../TGRSIStats.html#TGRSIStats:_TGRSIStats" title="void TGRSIStats::~TGRSIStats()">~TGRSIStats</a>();
@@ -99,7 +99,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 21:38 </em><em>&raquo; Last generated: 2015-03-04 21:38</em><br />
+<em>&raquo; Last changed: 2015-03-12 13:29 </em><em>&raquo; Last generated: 2015-03-12 13:29</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 21:38:58 2015            -->
+<!--   Date: Thu Mar 12 13:30:53 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -129,7 +129,7 @@ ClassImp(<a href="../TSharcHit.html">TSharcHit</a>)
 
 <a name="i2UxEB"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSharcHit.html">TSharcHit</a>::<a href="../TSharcHit.html#TSharcHit:FrontEnergyCal" title="Double_t TSharcHit::FrontEnergyCal()">FrontEnergyCal</a>() { <span class="comment">//!</span>
   <a href="../TChannel.html">TChannel</a> *chan = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannel" title="TChannel* TChannel::GetChannel(unsigned int temp_address)">GetChannel</a>(<a href="../TSharcHit.html#TSharcHit:front_address" title="Int_t TSharcHit::front_address">front_address</a>);
-  printf(<span class="string">"\n\nchan = %p.\t front_address = %i\n"</span>,chan,<a href="../TSharcHit.html#TSharcHit:front_address" title="Int_t TSharcHit::front_address">front_address</a>);
+<span class="comment">//  printf(<span class="string">"\n\nchan = %p.\t front_address = %i\n"</span>,chan,<a href="../TSharcHit.html#TSharcHit:front_address" title="Int_t TSharcHit::front_address">front_address</a>);</span>
   <span class="keyword">if</span>(!chan)
     chan = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannelByNumber" title="TChannel* TChannel::GetChannelByNumber(int temp_numebr)">GetChannelByNumber</a>(<a href="../TSharcHit.html#TSharcHit:front_address" title="Int_t TSharcHit::front_address">front_address</a>);
   <span class="keyword">if</span>(!chan)
@@ -173,7 +173,7 @@ ClassImp(<a href="../TSharcHit.html">TSharcHit</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 21:38 </em><em>&raquo; Last generated: 2015-03-04 21:38</em><br />
+<em>&raquo; Last changed: 2015-03-12 13:30 </em><em>&raquo; Last generated: 2015-03-12 13:30</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
