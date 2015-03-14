@@ -21,4 +21,7 @@ Utilities, such as analysis scripts, are kept in the **util** directory. Below a
   * **MakeMatrices**
   * **html_generator.C**
   * **odbgains.C**
+  * **bufferclean**
+  * **offsetfind**
+  * **offsetfix**
         
