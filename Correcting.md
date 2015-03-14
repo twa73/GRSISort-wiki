@@ -15,3 +15,9 @@ The script works by using the [offsetfind](#offsetfind) algorithm, and shifting 
 
 ##Finding GRIF-16 Timestamp Offsets <a name="offsetfind" />
 Sometimes, the GRIF-16 digitizers do not properly reset their timestamps at the start of a new run. To find the timestamp offset from each address, the **offsetfind** algorithm can be used. This is a script in it's own right, but is mostly useful for checking that the [offsetfix](#offsetfix) script worked properly.
+####The way it works
+1. The first thing the script does is look for the smallest high time stamp of all of the GRIF-16's, this becomes the *reference GRIF-16 digitizer*.
+2. All of the high timestamps for a specific digitizer are then shifted by the smallest high timestamp for that specific digitizer.
+3. The total timestamp of an event for each digitizer is then compared to the the total timestamp for the *reference digitizer*. This is plotted for each digitizer on a TH1 called rough_*address* that contains enough bins to encompass an entire high time stamp worth of bins. This is "rough" offset finding as we can only accept a certain number of events due to the size of the plot.
+4. Finally, this "rough" offset is applied and we repeat step 3 on a more fine-tuned scale. The largest bin in the time difference plot is found, and the final shift is based on this amount. The final plot used is contained in the spectrum timediff_*address*. <br>
+The code outputs the timestamp offset it has currently found for each digitizer at each step in the process.
