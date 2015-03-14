@@ -19,6 +19,7 @@
   - [[Fitting | Fitting ]]
   - [[Calibration | Calibration]]
   - [[Kinematics | Kinematics]]
+  - [[Data Correcting | Correcting]]
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
