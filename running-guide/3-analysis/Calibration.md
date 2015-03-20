@@ -22,7 +22,7 @@ where `myCal` is a pointer to the calibration being added to the manager. It sho
 ```c++
 myCalManager->AddToManager(myCal,channel_number);
 ```
-and to overwrite the TCal at a given channel, you must use the option `"overwrite"`. Fore example,
+and to overwrite the TCal at a given channel, you must use the option `"overwrite"`. For example,
 ```c++
 myCalManager->AddToManager(myCal,channel_number,"overwrite");
 ```
