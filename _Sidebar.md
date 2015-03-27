@@ -1,14 +1,15 @@
 [**Home**](Home)
 
 [**Setup GRSISort**](Setting-up-GRSISort)    
-
-- [Step 1: Install git](Setting-up-GRSISort#step1)
-- [Step 2: Install Root](Setting-up-GRSISort#step2)
-- [Step 3: Download GRSISort](Setting-up-GRSISort#step3)
-- [Step 4: Setup Environment Variables](Setting-up-GRSISort#step4)
-- [Step 5: Compile GRSISort](Setting-up-GRSISort#step5)
-- [Step 6: ???](Setting-up-GRSISort#step6)
-- [Step 7: Profit](Setting-up-GRSISort#step7)
+- [Installation](Setting-up-GRSISort)
+  - [Step 1: Install git](Setting-up-GRSISort#step1)
+  - [Step 2: Install Root](Setting-up-GRSISort#step2)
+  - [Step 3: Download GRSISort](Setting-up-GRSISort#step3)
+  - [Step 4: Setup Environment Variables](Setting-up-GRSISort#step4)
+  - [Step 5: Compile GRSISort](Setting-up-GRSISort#step5)
+  - [Step 6: ???](Setting-up-GRSISort#step6)
+  - [Step 7: Profit](Setting-up-GRSISort#step7)
+- [Using Github](GitHub)
 
 [**Running GRSISort**](Running-GRSISort)  
 
