@@ -4,7 +4,7 @@ The GainMatchGRIFFIN macro is designed to gain-match GRIFFIN detectors relative 
 It is important to note that this is a *gain-matching* code, not an energy calibration code. Slopes and offsets are applied to each crystal so that its peaks will line up with the peaks in the crystal with the lowest channel number. A *rough*, linear, energy calibration may also be applied.
 
 ##Usage
-The variables in the main() function (detailed below and identified in GainMatchGRIFFIN.C with `//-------------- VARIABLE DECLARATION SECTION --------------//`) should be set for each gain-matching. When anything is changed in GainMatchGRIFFIN.C, it should be recompiled. The compilation line is given in the commented first line of the file. Once it has been compiled, the user may gain match a run by running:
+The [variables](##Variables) in the main() function (detailed below and identified in GainMatchGRIFFIN.C with `//-------------- VARIABLE DECLARATION SECTION --------------//`) should be set for each gain-matching. When anything is changed in GainMatchGRIFFIN.C, it should be recompiled. The compilation line is given in the commented first line of the file. Once it has been compiled, the user may gain match a run by running:
 
     ./GainMatchGRIFFIN <fragment filename(s)>
 
