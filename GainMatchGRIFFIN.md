@@ -1,31 +1,14 @@
 ##Scope
-The GainMatchGRIFFIN macro is designed to gain match a single run of GRIFFIN. It has been designed as a sequential execution of many smaller functions that will take the user from initial data set to calibration file and diagnostic images to evaluate the quality of the gainmatch. It is important to note that this is a *gain-matching* code, not an energy calibration code. Slopes and offsets are applied to each crystal so that its peaks will line up with the peaks in the crystal with the lowest channel number. A *rough*, linear, energy calibration may also be applied.
+The GainMatchGRIFFIN macro is designed to gain-match GRIFFIN detectors relative to each other, not a specified energy calibration. It has been designed as a sequential execution of many smaller functions that will take the user from initial data set to calibration file and diagnostic images to evaluate the quality of the gain match.
+
+It is important to note that this is a *gain-matching* code, not an energy calibration code. Slopes and offsets are applied to each crystal so that its peaks will line up with the peaks in the crystal with the lowest channel number. A *rough*, linear, energy calibration may also be applied.
 
 ##Usage
-The variables in the main() function (detailed below and identified in GainMatchGRIFFIN.C with `//-------------- VARIABLE DECLARATION SECTION --------------//`) should be set for each gain-matching. When anything is changed in GainMatchGRIFFIN.C, it should be recompiled. The compilation line is given in the commented first line of the file. Once it has been compiled, the user may gain-match a run by running:
+The variables in the main() function (detailed below and identified in GainMatchGRIFFIN.C with `//-------------- VARIABLE DECLARATION SECTION --------------//`) should be set for each gain-matching. When anything is changed in GainMatchGRIFFIN.C, it should be recompiled. The compilation line is given in the commented first line of the file. Once it has been compiled, the user may gain match a run by running:
 
-    ./GainMatchGRIFFIN <raw filename(s)>
+    ./GainMatchGRIFFIN <fragment filename(s)>
 
-from the command line. The file name of the raw data (i.e. fragmentXXXX_XXX.root) is taken as input to the compiled function. It is expected that the user will modify this macro for their own use if more nuanced control is necessary.
-
-##Output
-###Using a single file: Two ROOT files, one .cal file, and four PNG diagnostic images.
-- `calib_<raw filename>`: This ROOT file contains the raw charge histograms for each channel that are created by the make_calibration_histograms function. They are named hst1, hst2, etc. where the number is the channel number. After executing the create_gainmatch_graphs function, it also contains energy vs. charge TGraphs for each of those histograms, with points for each of the peaks specified in the fittingpeaks array. If something goes wrong in the peak-finding, these TGraphs can be modified on a point-by-point basis before executing the create_GRIFFIN_cal function.
-- `GRIFFINcal.cal`: (or whatever else you set the calFile variable to): This is the calibration file that is output from the create_GRIFFIN_cal function.
-- `GRIFFIN_fitting_params.png`: This PNG diagnostic canvas shows the slopes, offset, and chi^2 values from the linear fit of the graphs in the calib_<raw filename> file as a function of channel number.
-- `GRIFFIN_calgraph.png`: This diagnostic canvas plots all the graphs in the calib_<raw filename> file on top of each other.
-- `newcal_<raw filename>`: This ROOT file contains the calibrated energy histograms that are created by the recalibrate_spectra function for each channel. Again, they are named hst1, hst2, etc. This file also contains a few diagnostic histograms:
-  - `hstall`: This is the sum of all available channel histograms.
-  - `residualXX`: These histograms show the difference between the peak centroids of a single crystal and the peak centroids of the summed spectrum.
-  - `fwhm`: This 2D histogram plots the FWHM for each crystal as a function of energy.
-  - `fwhmratio`: This 2D histogram plots the FWTM/FWHM ratio for each crystal as a function of energy.
-  - `fwhm_all`: This 2D histogram plots the FWHM for the summed spectrum (hstall) as a function of energy.
-  - `fwhmratio_all`: This 2D histogram plots the FWTM/FWHM ratio for the summed spectrum (hstall) as a function of energy.
-- `GRIFFIN_FWHM_diagnostic.png`: This diagnostic canvas shows the histogram fwhm plotted as a candle plot (see below for more details on candle, or box-and-whiskers plots) and the fwhm_all histogram plotted on top, with star points. If the gain-matching has been successful, the star will be within the solid outline box.
-- `GRIFFIN_FWHMratio_diagnostic.png`: This diagnostic canvas shows the histogram fwhmratio plotted as a candle plot (see below for more details on candle, or box-and-whiskers plots) and the fwhmratio_all histogram plotted on top, with star points. If the gain-matching has been successful, the star will be within the solid outline box.
-
-###Using multiple fragment files
-It is occasionally useful to combine the counts from multiple subruns or runs before gain-matching (to use low-intensity peaks, for example.) This code has been set up to accomodate this. If the user lists multiple filenames in the command line call of GainMatchGRIFFIN, the output will differ slightly. All individual ROOT fragment files will have corresponding calib_<raw filename> and newcal_<raw filename> files. After these are created, however, hadd will be called to sum them into new ROOT files, respectively called calib_hst_summed.root and newcal_summed.root. The individual ROOT files will contain the charge and energy histograms listed above, but the TGraphs and the diagnostic histograms will exist on in the summed files.
+from the command line. The file name of the raw data (i.e. `fragmentXXXX_XXX.root`) is taken as input to the compiled function.
 
 ##Variables
 The most commonly used variables are declared in the main() function at the bottom of GainMatchGRIFFIN.C. The variables that are hard-coded at the time of compilation are:
@@ -49,6 +32,25 @@ The most commonly used variables are declared in the main() function at the bott
 - `peakstocheck`: a list of peaks (again, in keV if you'd like a rough energy calibration) that will be checked to evaluate the quality of the fit. Does not have to be the same as the `fittingpeaks` vector, but may.
 - `windowsize`: the +/0 value that sets the search window when looking for peaks in the calibrated histograms. If you have requested a rough energy calibration, should be in keV.
 - `do_make_calibration_histograms`, `do_create_gainmatch_graphs`, etc.: these Booleans turn on and off the smaller functions within the code. It is expected that the user will not want to execute all of the functions at all times. As an example, the histograms that are going to be used for calibration (raw "Charge" spectra) are likely to only be created once. If the inital gain-match is unsatisfactory, the user can set do_make_calibration_histograms to false and recompile the macros for faster running.
+
+##Output
+###Calibrating a single fragment file
+- `calib_<raw filename>`: This ROOT file contains the raw charge histograms for each channel that are created by the make_calibration_histograms function. They are named hst1, hst2, etc. where the number is the channel number. After executing the create_gainmatch_graphs function, it also contains energy vs. charge TGraphs for each of those histograms, with points for each of the peaks specified in the fittingpeaks array. If something goes wrong in the peak-finding, these TGraphs can be modified on a point-by-point basis before executing the create_GRIFFIN_cal function.
+- `GRIFFINcal.cal`: (or whatever else you set the `calFile` variable to): This is the calibration file that is output from the create_GRIFFIN_cal function.
+- `GRIFFIN_fitting_params.png`: This PNG diagnostic canvas shows the slopes, offset, and chi-square values from the linear fit of the graphs in the `calib_<raw filename>` file as a function of channel number.
+- `GRIFFIN_calgraph.png`: This diagnostic canvas plots all the graphs in the `calib_<raw filename>` file on top of each other.
+- `newcal_<raw filename>`: This ROOT file contains the calibrated energy histograms that are created by the recalibrate_spectra function for each channel. Again, they are named `hst1`, `hst2`, etc. This file also contains a few diagnostic histograms:
+  - `hstall`: This is the sum of all available channel histograms.
+  - `residualXX`: These histograms show the difference between the peak centroids of a single crystal and the peak centroids of the summed spectrum.
+  - `fwhm`: This 2D histogram plots the FWHM for each crystal as a function of energy.
+  - `fwhmratio`: This 2D histogram plots the FWTM/FWHM ratio for each crystal as a function of energy.
+  - `fwhm_all`: This 2D histogram plots the FWHM for the summed spectrum (`hstall`) as a function of energy.
+  - `fwhmratio_all`: This 2D histogram plots the FWTM/FWHM ratio for the summed spectrum (hstall) as a function of energy.
+- `GRIFFIN_FWHM_diagnostic.png`: This diagnostic canvas shows the histogram fwhm plotted as a candle plot (see below for more details on candle, or box-and-whiskers plots) and the fwhm_all histogram plotted on top, with star points. If the gain-matching has been successful, the star will be within the solid outline box.
+- `GRIFFIN_FWHMratio_diagnostic.png`: This diagnostic canvas shows the histogram fwhmratio plotted as a candle plot (see below for more details on candle, or box-and-whiskers plots) and the fwhmratio_all histogram plotted on top, with star points. If the gain-matching has been successful, the star will be within the solid outline box.
+
+###Using multiple fragment files
+It is occasionally useful to combine the counts from multiple subruns or runs before gain-matching (to use low-intensity peaks, for example.) This code has been set up to accomodate this. If the user lists multiple filenames in the command line call of GainMatchGRIFFIN, the output will differ slightly. All individual ROOT fragment files will have corresponding calib_<raw filename> and newcal_<raw filename> files. After these are created, however, hadd will be called to sum them into new ROOT files, respectively called calib_hst_summed.root and newcal_summed.root. The individual ROOT files will contain the charge and energy histograms listed above, but the TGraphs and the diagnostic histograms will exist on in the summed files.
 
 ##Smaller functions
 ###make_calibration_histograms:
