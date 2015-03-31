@@ -15,12 +15,12 @@ from the command line. The file name of the raw data (i.e. fragmentXXXX_XXX.root
 - `GRIFFIN_fitting_params.png`: This PNG diagnostic canvas shows the slopes, offset, and chi^2 values from the linear fit of the graphs in the calib_<raw filename> file as a function of channel number.
 - `GRIFFIN_calgraph.png`: This diagnostic canvas plots all the graphs in the calib_<raw filename> file on top of each other.
 - `newcal_<raw filename>`: This ROOT file contains the calibrated energy histograms that are created by the recalibrate_spectra function for each channel. Again, they are named hst1, hst2, etc. This file also contains a few diagnostic histograms:
-		- `hstall`: This is the sum of all available channel histograms.
-		- `residualXX`: These histograms show the difference between the peak centroids of a single crystal and the peak centroids of the summed spectrum.
-		- `fwhm`: This 2D histogram plots the FWHM for each crystal as a function of energy.
-		- `fwhmratio`: This 2D histogram plots the FWTM/FWHM ratio for each crystal as a function of energy.
-		- `fwhm_all`: This 2D histogram plots the FWHM for the summed spectrum (hstall) as a function of energy.
-		- `fwhmratio_all`: This 2D histogram plots the FWTM/FWHM ratio for the summed spectrum (hstall) as a function of energy.
+  - `hstall`: This is the sum of all available channel histograms.
+  - `residualXX`: These histograms show the difference between the peak centroids of a single crystal and the peak centroids of the summed spectrum.
+  - `fwhm`: This 2D histogram plots the FWHM for each crystal as a function of energy.
+  - `fwhmratio`: This 2D histogram plots the FWTM/FWHM ratio for each crystal as a function of energy.
+  - `fwhm_all`: This 2D histogram plots the FWHM for the summed spectrum (hstall) as a function of energy.
+  - `fwhmratio_all`: This 2D histogram plots the FWTM/FWHM ratio for the summed spectrum (hstall) as a function of energy.
 - `GRIFFIN_FWHM_diagnostic.png`: This diagnostic canvas shows the histogram fwhm plotted as a candle plot (see below for more details on candle, or box-and-whiskers plots) and the fwhm_all histogram plotted on top, with star points. If the gain-matching has been successful, the star will be within the solid outline box.
 - `GRIFFIN_FWHMratio_diagnostic.png`: This diagnostic canvas shows the histogram fwhmratio plotted as a candle plot (see below for more details on candle, or box-and-whiskers plots) and the fwhmratio_all histogram plotted on top, with star points. If the gain-matching has been successful, the star will be within the solid outline box.
 
