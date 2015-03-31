@@ -29,26 +29,26 @@ It is occasionally useful to combine the counts from multiple subruns or runs be
 
 ##Variables
 The most commonly used variables are declared in the main() function at the bottom of GainMatchGRIFFIN.C. The variables that are hard-coded at the time of compilation are:
-- minchannel: lowest GRIFFIN channel number for gain-matching.
-- maxchannel: highest GRIFFIN channel number for gain-matching.
-- channelstoskip: a vector of integers that lists channels that should not be gain-matched, but that are between minchannel and maxchannel.
-- xbins_charge: the number of bins used in creating the raw charge histograms.
-- xmin_charge: the minimum bound on the charge axis in the raw charge histograms.
-- xmax_charge: the maximum bound on the charge axis in the raw charge histograms.
-- integration: the integration parameter by which charge is divided before it is calibrated. This should ideally be set to the integration parameter of the GRIFFIN digitizers, which have a default of 512.
-- roughenergy: set to kTRUE if a rough energy calibration is desired. set to kFALSE if not.
-- largepeak: the value of the largest peak. If you use a rough energy calibration, this should be in keV. Otherwise, it may be in charge units.
-- fittingpeaks: a vector of peaks used for fitting. While these values may be approximate, they should be in keV if a rough energy calibration is desired.
-- mindistance: the +/- value that sets the search window when looking for peaks in the raw histograms. Should be in units of your raw histogram (most likely charge).
-- twopeaks: a boolean variable that tells the code to expect two equally strong large peaks. To use, set to true and then declare largepeak2.
-- largepeak2: if there are two nearly equally large peaks (say in 60Co), set this value to the value of the second largest peak. If you use a rough energy calibration, this should be in keV. Otherwise, it may be in charge units.
-- calFile: the name of your output calibration file.
-- xbins_energy: the number of bins used in creating the calibrated energy histograms.
-- xmin_energy: the minimum bound on the charge axis in the calibrated energy histograms.
-- xmax_energy: the maximum bound on the charge axis in the calibrated energy histograms.
-- peaks to check: a list of peaks (again, in keV if you'd like a rough energy calibration) that will be checked to evaluate the quality of the fit. Does not have to be the same as the fittingpeaks vector, but may.
-- windowsize: the +/0 value that sets the search window when looking for peaks in the calibrated histograms. If you have requested a rough energy calibration, should be in keV.
-- do_make_calibration_histograms, do_create_gainmatch_graphs, etc.: these Booleans turn on and off the smaller functions within the code. It is expected that the user will not want to execute all of the functions at all times. As an example, the histograms that are going to be used for calibration (raw "Charge" spectra) are likely to only be created once. If the inital gain-match is unsatisfactory, the user can set do_make_calibration_histograms to false and recompile the macros for faster running.
+- `minchannel`: lowest GRIFFIN channel number for gain-matching.
+- `maxchannel`: highest GRIFFIN channel number for gain-matching.
+- `channelstoskip`: a vector of integers that lists channels that should not be gain-matched, but that are between minchannel and maxchannel.
+- `xbins_charge`: the number of bins used in creating the raw charge histograms.
+- `xmin_charge`: the minimum bound on the charge axis in the raw charge histograms.
+- `xmax_charge`: the maximum bound on the charge axis in the raw charge histograms.
+- `integration`: the integration parameter by which charge is divided before it is calibrated. This should ideally be set to the integration parameter of the GRIFFIN digitizers, which have a default of 512.
+- `roughenergy`: set to kTRUE if a rough energy calibration is desired. set to kFALSE if not.
+- `largepeak`: the value of the largest peak. If you use a rough energy calibration, this should be in keV. Otherwise, it may be in charge units.
+- `fittingpeaks`: a vector of peaks used for fitting. While these values may be approximate, they should be in keV if a rough energy calibration is desired.
+- `mindistance`: the +/- value that sets the search window when looking for peaks in the raw histograms. Should be in units of your raw histogram (most likely charge).
+- `twopeaks`: a boolean variable that tells the code to expect two equally strong large peaks. To use, set to true and then declare largepeak2.
+- `largepeak2`: if there are two nearly equally large peaks (say in 60Co), set this value to the value of the second largest peak. If you use a rough energy calibration, this should be in keV. Otherwise, it may be in charge units.
+- `calFile`: the name of your output calibration file.
+- `xbins_energy`: the number of bins used in creating the calibrated energy histograms.
+- `xmin_energy`: the minimum bound on the charge axis in the calibrated energy histograms.
+- `xmax_energy`: the maximum bound on the charge axis in the calibrated energy histograms.
+- `peakstocheck`: a list of peaks (again, in keV if you'd like a rough energy calibration) that will be checked to evaluate the quality of the fit. Does not have to be the same as the `fittingpeaks` vector, but may.
+- `windowsize`: the +/0 value that sets the search window when looking for peaks in the calibrated histograms. If you have requested a rough energy calibration, should be in keV.
+- `do_make_calibration_histograms`, `do_create_gainmatch_graphs`, etc.: these Booleans turn on and off the smaller functions within the code. It is expected that the user will not want to execute all of the functions at all times. As an example, the histograms that are going to be used for calibration (raw "Charge" spectra) are likely to only be created once. If the inital gain-match is unsatisfactory, the user can set do_make_calibration_histograms to false and recompile the macros for faster running.
 
 ##Smaller functions
 ###make_calibration_histograms:
