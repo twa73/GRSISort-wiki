@@ -4,14 +4,14 @@ The GainMatchGRIFFIN macro is designed to gain-match GRIFFIN detectors relative 
 It is important to note that this is a *gain-matching* code, not an energy calibration code. Slopes and offsets are applied to each crystal so that its peaks will line up with the peaks in the crystal with the lowest channel number. A *rough*, linear, energy calibration may also be applied.
 
 ##Usage
-The [variables](##Variables) in the main() function (detailed below and identified in GainMatchGRIFFIN.C with `//-------------- VARIABLE DECLARATION SECTION --------------//`) should be set for each gain-matching. When anything is changed in GainMatchGRIFFIN.C, it should be recompiled. The compilation line is given in the commented first line of the file. Once it has been compiled, the user may gain match a run by running:
+A set of [variables](#Variables) should be set for each gain-matching. Then `GainMatchGRIFFIN.C` should be (re)compiled. The compilation line is given in the commented first line of the file. Once it has been compiled, the user may gain match a run by running:
 
     ./GainMatchGRIFFIN <fragment filename(s)>
 
 from the command line. The file name of the raw data (i.e. `fragmentXXXX_XXX.root`) is taken as input to the compiled function.
 
 ##Variables
-The most commonly used variables are declared in the main() function at the bottom of GainMatchGRIFFIN.C. The variables that are hard-coded at the time of compilation are:
+The most commonly used variables are declared in the `main()` function at the bottom of GainMatchGRIFFIN.C. They in the section of code marked `//-------------- VARIABLE DECLARATION SECTION --------------//`. The variables that are hard-coded at the time of compilation are:
 - `minchannel`: lowest GRIFFIN channel number for gain-matching.
 - `maxchannel`: highest GRIFFIN channel number for gain-matching.
 - `channelstoskip`: a vector of integers that lists channels that should not be gain-matched, but that are between minchannel and maxchannel.
