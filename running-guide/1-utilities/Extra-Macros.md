@@ -7,4 +7,4 @@
   * **bufferclean.C** <br> Cleans the extraneous data that is dumped into the GRIFFIN stream at the start of a run. This gets written to a new Midas File.
   * **offsetfind.C** <br> Finds the timestamp offset between the different GRIF-16 and 4G digitizer systems (must have buffer cleaned).
   * **offsetfix.C** <br> Finds the timestamp offset between the different GRIF-16 and 4G digitizers and then produces a new midas file with the fixed timestamps (must have buffer cleaned).
-  * [**GainMatchGRIFFIN.C**](GainMatchGRIFFIN) <br> Needs something here
+  * [**GainMatchGRIFFIN.C**](GainMatchGRIFFIN) <br> Gain-matches GRIFFIN given a set of peak values. Fairly flexible, and written to work with few (but not no) modifications.
