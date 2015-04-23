@@ -5,7 +5,7 @@ A lean, mean, sorting machine. Created by P. C. Bender.
 
 ## Quick navigation
 
-| Setup Guide             |  How to Run          | Technical Documentation                  |
+| Setup Guide             |  How to Run     |  Interactive Analysis   | Technical Documentation                  |
 |----------------------------|-------------------------------|---------------------------|
 | [[/images/setup.png]] | [[/images/running.png]] | [[/images/blueprint.png]] |
 | [[Setup Guide|Setting-up-GRSISort]] | [[Running GRSISort|Running-GRSISort]] | [[Technical Documentation|Technical-Documentation]]|
