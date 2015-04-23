@@ -68,5 +68,5 @@ Another example, of a 2D histogram that displays calibrated energy vs. detector 
 FragmentTree->Draw("ChannelNumber:GetEnergy() >> h(16000,0,16000,64,0,64)", "ChannelNumber!=12", "LEGO")
 ```
 
-####The Autosort Feature (NOT IMPLEMENTED)
-If the __-a__ or __-s__ flags are used on the MIDAS file, GRSISort will sort the MIDAS file and then complete a fragment sort by applying the flags and sorting the fragment tree.
+####The Autosort Feature 
+If the __-a__ flag is used on the MIDAS file, GRSISort will sort the MIDAS file and then complete a fragment sort by applying the flags and sorting the fragment tree, making an analysis tree file.
