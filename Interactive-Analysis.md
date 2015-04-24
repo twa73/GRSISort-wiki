@@ -18,6 +18,8 @@ To take advantage of these features all one has to do is start GRSISort!  They a
   * **e**   Expand the region between the last two markers.
   * **o**   Unzoom the entire histogram.
   * **Arrow Left/Arrow Right**   When zoomed in, mover the display region to the left/right by one half of the region currently displayed.
+  * **f**   
+  * **F**
   * **g**   Simple Gaus fit between the last to marks, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED**
   * **G**   Gaus fit with linear background, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED**
 
