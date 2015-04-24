@@ -4,7 +4,6 @@ A lean, mean, sorting machine. Created by P. C. Bender.
 
 
 ## Quick navigation
-table{border:1px solid black; text-align:center;}.
 | Setup Guide             |  How to Run    | Interactive Analysis |  Technical Documentation                  |
 |----------------------------|--------------------|-----------------|-----------|---------------------------|
 | [[/images/setup.png]] | [[/images/running.png]] | [[/images/analysis.png]] | [[/images/blueprint.png]] |
