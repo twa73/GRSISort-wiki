@@ -9,7 +9,7 @@
   - [Step 5: Compile GRSISort](Setting-up-GRSISort#step5)
   - [Step 6: ???](Setting-up-GRSISort#step6)
   - [Step 7: Profit](Setting-up-GRSISort#step7)
-- [Using Github](GitHub)
+- [Using GitHub](GitHub)
 
 [**Running GRSISort**](Running-GRSISort)  
 
