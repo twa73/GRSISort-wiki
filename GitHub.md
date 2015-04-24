@@ -20,7 +20,42 @@ git pull.
 ```
 You should get output like this:
 ```
-SUCCESSFUL UPDATE OUTPUT
+Updating a59d87f..682462a
+Fast-forward
+ include/GCanvas.h                                  |   55 ++-
+ include/GHistBrowser.h                             |   25 +
+ include/GRootCanvas.h                              |    8 +-
+ include/GRootCanvasManager.h                       |   47 ++
+ include/TCal.h                                     |    2 +-
+ include/TChannel.h                                 |    2 +-
+ include/TEnergyCal.h                               |    3 +
+ include/TFragment.h                                |    2 +-
+ include/TGRSITransition.h                          |    2 +
+ include/TGRSIint.h                                 |    2 +
+ include/TGainMatch.h                               |   38 +-
+ include/TNucleus.h                                 |   10 +
+ libraries/GROOT/GCanvas.cxx                        |  542 +++++++++++++++++---
+ libraries/GROOT/GHistBrowser.cxx                   |   15 +
+ libraries/GROOT/GROOTGuiFactory.cxx                |   16 +-
+ libraries/GROOT/GROOTLinkDef.h                     |    1 +
+ libraries/GROOT/GRootCanvas.cxx                    |   78 ++-
+ libraries/GROOT/GRootCanvasManager.cxx             |   60 +++
+ libraries/GROOT/makefile                           |    2 +-
+ libraries/TGRSIAnalysis/TCal/TEnergyCal.cxx        |   19 +
+ libraries/TGRSIAnalysis/TCal/TGainMatch.cxx        |  434 ++++++++++++++--
+ .../TGRSIAnalysis/TNucleus/TGRSITransition.cxx     |   11 +
+ libraries/TGRSIAnalysis/TNucleus/TNucleus.cxx      |   76 +++-
+ libraries/TGRSIFormat/TChannel.cxx                 |   28 +-
+ libraries/TGRSIFormat/TFragment.cxx                |   12 +-
+ libraries/TGRSIint/TGRSIint.cxx                    |   20 +
+ util/MakeMatrices.C                                |   41 +-
+ util/MakeTimeDiffSpec.C                            |   11 +-
+ util/offsetfix.C                                   |    4 +-
+ 29 files changed, 1343 insertions(+), 223 deletions(-)
+ create mode 100644 include/GHistBrowser.h
+ create mode 100644 include/GRootCanvasManager.h
+ create mode 100644 libraries/GROOT/GHistBrowser.cxx
+ create mode 100644 libraries/GROOT/GRootCanvasManager.cxx
 ```
 
 ##Developer
