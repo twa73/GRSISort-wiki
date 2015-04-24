@@ -48,7 +48,7 @@ git push origin master
 ```
 This pushes the changes from your local master branch to the online repository identified as origin. To see a list of the repositories you are connected to, use `git remote -v`.
 
-###Updating your personal online repository
+###Making changes to your personal online repository
 Add any files that you have created or modified to your staging area with:
 ```
 git add FILENAME1 FILENAME2 …
