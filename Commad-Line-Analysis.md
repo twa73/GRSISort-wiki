@@ -11,5 +11,5 @@ To take advantage of these features all one has to do is start GRSISort!  They a
   * **GCanvas** <br>  The most notable difference, is the replacement of the TCanvas with GCanvas.  This replacement is done naturally - no changes from either existing ROOT scripts or GRSISort scripts are needed to take advantage of the GCanvas default behavior.  AS of right now, the major changes are only for 1d histograms however, however global histogram management and 2d histogram command are on there way.
 
 * **TH1 Commands**
---* All normal root commands/interactions.
---* All normal root commands/interactions.
+  * All normal root commands/interactions.
+  * All normal root commands/interactions.
