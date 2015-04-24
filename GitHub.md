@@ -57,7 +57,7 @@ Then update your online repository with the modifications specified in the stagi
 ```
 git commit -m “Quick message that summarizes these changes.”
 ```
-The `-m` flag here is not optional. If you do not use it, git will open up a text editor and ask you to write a commit message there. The point of this is to record exactly what changed and when – enforced documentation!
+If you do not use the `-m` flag, git will open up a text editor and ask you to write a commit message there. The point of this is to record exactly what changed and when – enforced documentation!
 
 ###Suggesting a change to the common repository
 To suggest a change to the common repository, first make sure your local copy has the most recent changes from the common repository. Then, update your personal online repository with the suggested changes. Finally, [create a pull request](https://help.github.com/articles/creating-a-pull-request/). An administrator will look over the code and merge it into the common online repository or discuss possible modifications to you proposed changes.
