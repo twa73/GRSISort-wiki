@@ -19,7 +19,7 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 | **n**  | Remove all markers / functions drawn on the histogram.|
 | **e**  | Expand the region between the last two markers.|
 | **o**  | Unzoom the entire histogram.|
-| **Arrow Left/Arrow Right** |  When zoomed in, mover the display region to the left/right by one half of the region currently displayed.|
+| **Arrow Left/Right** |  When zoomed in, mover the display region to the left/right by one half of the region currently displayed.|
 | **f**  | Ryan D's TPeak Fit (proper skewd gaus for gamma-rays with automatic bg) with minimum output. |  
 | **F**  | Ryan D's TPeak Fit (proper skewd gaus for gamma-rays with automatic bg) with full output.   |
 | **g**  | Simple Gaus fit between the last to marks, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED** |
