@@ -66,7 +66,7 @@ As a developer, you will use git and GitHub to make sure your local version is u
 The best path forward is to  to create your own account on GitHub and [fork the repository] (https://help.github.com/articles/fork-a-repo/). This creates your own online repository that you can play with while not messing up the common repository. It also allows you to submit changes to the common repository. To do this, register with GitHub and then navigate to the GRSISort webpage. In the upper right-hand corner, click the “Fork” button. You should see your own version of this repository now.
 
 ###Downloading a copy of your personal repository
-To install a local copy of your personal repository, follow the instructions in the Setting Up GRSISort page except instead of cloning `https://github.com/pcbend/GRSISort.git`, clone `https://github.com/YOUR-USER-NAME/GRSISort.git`.
+To install a local copy of your personal repository, follow the instructions in the [[Setting Up GRSISort|Setting-up-GRSISort]] page except instead of cloning `https://github.com/pcbend/GRSISort.git`, clone `https://github.com/YOUR-USER-NAME/GRSISort.git`.
 
 ###Updating your code from the common repository
 To this, you must first tell git where the upstream (common) repository is. This is succinctly and clearly explained in GitHub's [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/) help page.
