@@ -29,3 +29,10 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 | **l**  | Make y-axis linear. |
 | **L**  | Make y-axis logarithmic. |
 | **F10**  | Print any TPeaks currently displayed on the histogram to <histname>.fits. If file already exists, the file is destroyed and recreated. |
+
+
+## TGraph/TGraphErrors Commands
+|  Key  | Action |
+|:------|:------:|
+|        | All normal root commands/interactions.|
+| **p**  | Print the graph to the terminal.
