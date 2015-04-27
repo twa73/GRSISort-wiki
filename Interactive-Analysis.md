@@ -17,6 +17,7 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 | **m**  | Toggle on marker mode; when on, the histogram will remember and display the last four clicks as marks on the histogram.|
 | **M**  | Toggle off marker mode.|
 | **n**  | Remove all markers / functions drawn on the histogram.|
+| **N**  | Remove all markers and the LAST function drawn on the histogram.|
 | **e**  | Expand the region between the last two markers.|
 | **o**  | Unzoom the entire histogram.|
 | **Arrow Left/Right** |  When zoomed in, mover the display region to the left/right by one half of the region currently displayed.|
