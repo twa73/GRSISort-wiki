@@ -12,7 +12,7 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 
 ## TH1 Commands
 |  Key  | Action |
-|:------|:------:|
+|:------|:------|
 |        | All normal root commands/interactions.|
 | **m**  | Toggle on marker mode; when on, the histogram will remember and display the last four clicks as marks on the histogram.|
 | **M**  | Toggle off marker mode.|
@@ -33,6 +33,6 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 
 ## TGraph/TGraphErrors Commands
 |  Key  | Action |
-|:------|:------:|
+|:------|:------|
 |        | All normal root commands/interactions.|
 | **p**  | Print the graph to the terminal.
