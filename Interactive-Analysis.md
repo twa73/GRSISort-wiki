@@ -28,3 +28,4 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 | **S**  | Toggle histogram Stats on/off. |
 | **l**  | Make y-axis linear. |
 | **L**  | Make y-axis logarithmic. |
+| **F10**  | Print any TPeaks currently displayed on the histogram to <histname>.fits. If file already exists, the file is destroyed and recreated. |
