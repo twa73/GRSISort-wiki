@@ -25,4 +25,5 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 | **g**  | Simple Gaus fit between the last to marks, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED** |
 | **G**  | Gaus fit with linear background, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED** |
 | **S**  | Toggle histogram Stats on/off. |
-
+| **l**  | Make y-axis linear. |
+| **L**  | Make y-axis logarithmic. |
