@@ -13,7 +13,7 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 ## TH1 Commands
 |  Key  | Action |
 |:------|:------:|
-|   test    | All normal root commands/interactions.|
+|        | All normal root commands/interactions.|
 | **m**  | Toggle on marker mode; when on, the histogram will remember and display the last four clicks as marks on the histogram.|
 | **M**  | Toggle off marker mode.|
 | **n**  | Remove all markers / functions drawn on the histogram.|
