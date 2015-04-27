@@ -18,7 +18,8 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 | **M**  | Toggle off marker mode.|
 | **n**  | Remove all markers / functions drawn on the histogram.|
 | **N**  | Remove all markers and the LAST function drawn on the histogram.|
-| **e**  | Expand the region between the last two markers.|
+| **e**  | Expand the x-axis range between the last two markers.|
+| **E**  | Bring up dialogue box used to set desired x-axis range.|
 | **o**  | Unzoom the entire histogram.|
 | **Arrow Left/Right** |  When zoomed in, mover the display region to the left/right by one half of the region currently displayed.|
 | **f**  | Ryan D's TPeak Fit (proper skewd gaus for gamma-rays with automatic bg) with minimum output. |  
