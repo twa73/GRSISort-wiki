@@ -1,6 +1,6 @@
 <a name="top" />
 
-[**HOME**](Home) > [**COMMAND LINE ANALYSIS**](Command-Line-Analysis)
+[**HOME**](Home) > [**INTERACTIVE ANALYSIS**](Interactive-Analysis)
 
 #The GROOT library and you.
 
