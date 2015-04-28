@@ -21,7 +21,6 @@
   - [[Calibration | Calibration]]
   - [[Kinematics | Kinematics]]
   - [[Data Correcting | Correcting]]
-- [[Interactive|Interactive]] 
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
@@ -38,7 +37,6 @@
 
 **Useful resources**  
 
-- [[TGRSIViewer|TGRSIViewer]]
 - [[Troubleshooting | Troubleshooting ]]  
 - [[Running GRSISort|Running-GRSISort]]
 - [[Technical Docs|Technical-Documentation]]
