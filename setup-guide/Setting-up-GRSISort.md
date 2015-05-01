@@ -31,11 +31,11 @@ To download and install root follow the directions on the [ROOT](http://root.cer
 <a name="step3" />
 ## Step 3: Download GRSISort
 
-The newest version of GRSISort currently resides on P.C. Bender's github repository.
+The newest version of GRSISort currently resides on GRIFFIN collaboration github repository.
 
 To Clone (Download) the newest version of GRSISort, navigate to the directory where you want the GRSISort directory to be. Clone the repo using:
 ``````````
-git clone https://github.com/pcbend/GRSISort.git
+git clone https://github.com/GRIFFINCollaboration/GRSISort.git
 ``````````
 
 GRSISort should now download to **./GRSISort**
