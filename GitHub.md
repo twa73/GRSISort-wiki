@@ -2,7 +2,7 @@
 
 The way you use git and GitHub will depend on how you plan on interacting with the GRSISort code. If you plan on simply using the code, you should look at the User section. If you plan on developing the code (fixing issues or adding functionality), or just modifying the code for your own use, you should look at the Developer section.
 
-GitHub has a good glossary of commonly used terms: [GitHub Glossary](https://help.github.com/articles/github-glossary/).
+GitHub has a good [glossary](https://help.github.com/articles/github-glossary/) of commonly used terms.
 
 ##User
 
