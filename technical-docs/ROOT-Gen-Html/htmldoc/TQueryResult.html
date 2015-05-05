@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:52 2015            -->
+<!--   Date: Tue May  5 12:09:26 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TQueryResult.h.html">header file</a>
 <a class="descrheadentry" href="src/TQueryResult.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TQueryResult_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -111,7 +111,9 @@ A container class for query results.
 <tr class="func"><td class="funcret"><a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetInputObject">GetInputObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetLibList">GetLibList</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TMacro.html">TMacro</a>*</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetLogFile">GetLogFile</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetMergeTime">GetMergeTime</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:GetName"><span class="baseclass">TNamed::</span>GetName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetNumMergers">GetNumMergers</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetNumWrks">GetNumWrks</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
@@ -119,13 +121,16 @@ A container class for query results.
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetOptions">GetOptions</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TList.html">TList</a>*</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetOutputList">GetOutputList</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetParList">GetParList</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetPrepTime">GetPrepTime</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetProcTime">GetProcTime</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetRecvTime">GetRecvTime</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetResultFile">GetResultFile</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TMacro.html">TMacro</a>*</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetSelecHdr">GetSelecHdr</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TMacro.html">TMacro</a>*</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetSelecImp">GetSelecImp</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetSeqNum">GetSeqNum</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TDatime.html">TDatime</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetStartTime">GetStartTime</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TQueryResult.html">TQueryResult</a>::EQueryStatus</td><td class="funcname"><a class="funcname" href="#TQueryResult:GetStatus">GetStatus</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetTermTime">GetTermTime</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:GetTitle"><span class="baseclass">TNamed::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TQueryResult:GetUsedCPU">GetUsedCPU</a>() <span class="keyword">const</span></td></tr>
@@ -167,7 +172,7 @@ A container class for query results.
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -203,8 +208,13 @@ A container class for query results.
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetArchived">SetArchived</a>(<span class="keyword">const</span> <span class="keyword">char</span>* archfile)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetFinalized">SetFinalized</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetInputList">SetInputList</a>(<a href="./TList.html">TList</a>* in, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> adopt = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetMergeTime">SetMergeTime</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> mergetime)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetNumMergers">SetNumMergers</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> nmergers)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetOutputList">SetOutputList</a>(<a href="./TList.html">TList</a>* out, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> adopt = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetPrepTime">SetPrepTime</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> preptime)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetProcessInfo">SetProcessInfo</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a> ent, <a href="./ListOfTypes.html#Float_t">Float_t</a> cpu = 0., <a href="./ListOfTypes.html#Long64_t">Long64_t</a> siz = -1, <a href="./ListOfTypes.html#Float_t">Float_t</a> inittime = 0., <a href="./ListOfTypes.html#Float_t">Float_t</a> proctime = 0.)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetRecvTime">SetRecvTime</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> recvtime)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TQueryResult:SetTermTime">SetTermTime</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> termtime)</td></tr>
 
 </table></div>
 </div>
@@ -251,54 +261,61 @@ A container class for query results.
 <tr class="data"><td class="datatype"><a href="./TList.html">TList</a>*</td><td class="dataname"><a name="TQueryResult:fInputList"></a>fInputList</td><td class="datadesc">input list; contains also data sets, entry list, ...</td></tr>
 <tr class="data"><td class="datatype"><a href="./TString.html">TString</a></td><td class="dataname"><a name="TQueryResult:fLibList"></a>fLibList</td><td class="datadesc">blank-separated list of libs loaded at fStart</td></tr>
 <tr class="data"><td class="datatype"><a href="./TMacro.html">TMacro</a>*</td><td class="dataname"><a name="TQueryResult:fLogFile"></a>fLogFile</td><td class="datadesc">file with log messages from the query</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="TQueryResult:fMergeTime"></a>fMergeTime</td><td class="datadesc">Merging time (seconds) (millisec precision)</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./TString.html">TString</a></td><td class="dataname"><a href="./TNamed.html#TNamed:fName"><span class="baseclass">TNamed::</span>fName</a></td><td class="datadesc">object identifier</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TQueryResult:fNumMergers"></a>fNumMergers</td><td class="datadesc">Number of submergers</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TQueryResult:fNumWrks"></a>fNumWrks</td><td class="datadesc">Number of workers at start</td></tr>
 <tr class="data"><td class="datatype"><a href="./TString.html">TString</a></td><td class="dataname"><a name="TQueryResult:fOptions"></a>fOptions</td><td class="datadesc">processing options + aclic mode (&lt;opt&gt;#&lt;aclic_mode&gt;)</td></tr>
 <tr class="data"><td class="datatype"><a href="./TList.html">TList</a>*</td><td class="dataname"><a name="TQueryResult:fOutputList"></a>fOutputList</td><td class="datadesc">output list</td></tr>
 <tr class="data"><td class="datatype"><a href="./TString.html">TString</a></td><td class="dataname"><a name="TQueryResult:fParList"></a>fParList</td><td class="datadesc">colon-separated list of PAR loaded at fStart</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="TQueryResult:fPrepTime"></a>fPrepTime</td><td class="datadesc">Prepare time (seconds) (millisec precision)</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="TQueryResult:fProcTime"></a>fProcTime</td><td class="datadesc">Processing time (seconds) (millisec precision)</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="TQueryResult:fRecvTime"></a>fRecvTime</td><td class="datadesc">Transfer-to-client time (seconds) (millisec precision)</td></tr>
 <tr class="data"><td class="datatype"><a href="./TString.html">TString</a></td><td class="dataname"><a name="TQueryResult:fResultFile"></a>fResultFile</td><td class="datadesc">URL of the file where results have been archived</td></tr>
 <tr class="data"><td class="datatype"><a href="./TMacro.html">TMacro</a>*</td><td class="dataname"><a name="TQueryResult:fSelecHdr"></a>fSelecHdr</td><td class="datadesc">selector header file</td></tr>
 <tr class="data"><td class="datatype"><a href="./TMacro.html">TMacro</a>*</td><td class="dataname"><a name="TQueryResult:fSelecImp"></a>fSelecImp</td><td class="datadesc">selector implementation file</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TQueryResult:fSeqNum"></a>fSeqNum</td><td class="datadesc">query unique sequential number</td></tr>
 <tr class="data"><td class="datatype"><a href="./TDatime.html">TDatime</a></td><td class="dataname"><a name="TQueryResult:fStart"></a>fStart</td><td class="datadesc">time when processing started</td></tr>
 <tr class="data"><td class="datatype"><a href="./TQueryResult.html">TQueryResult</a>::EQueryStatus</td><td class="dataname"><a name="TQueryResult:fStatus"></a>fStatus</td><td class="datadesc">query status</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="TQueryResult:fTermTime"></a>fTermTime</td><td class="datadesc">Terminate time (seconds) (millisec precision)</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./TString.html">TString</a></td><td class="dataname"><a href="./TNamed.html#TNamed:fTitle"><span class="baseclass">TNamed::</span>fTitle</a></td><td class="datadesc">object title</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="TQueryResult:fUsedCPU"></a>fUsedCPU</td><td class="datadesc">real CPU time used (seconds)</td></tr>
 
 </table></div>
 </div>
 <h2><a id="TQueryResult:Class_Charts"></a>Class Charts</h2>
-<map name="MapTQueryResult_Inh" id="MapTQueryResult_Inh">
-<area shape="rect" id="node3" href="./TNamed.html" title="TNamed" alt="" coords="197,7,327,33"/>
-<area shape="rect" id="node4" href="./TObject.html" title="TObject" alt="" coords="2,7,132,33"/>
-<area shape="rect" id="node6" href="./TProofQueryResult.html" title="TProofQueryResult" alt="" coords="614,7,766,33"/>
-</map>
-<map name="MapTQueryResult_InhMem" id="MapTQueryResult_InhMem">
-<area shape="rect" id="graph12" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph13" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph14" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph15" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph11" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph18" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph19" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph20" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph21" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph22" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph23" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph24" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph17" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTQueryResult_Lib" id="MapTQueryResult_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="376,167,491,215"/>
-</map>
-<div class="tabs">
-<a id="imgTQueryResult_Inh" class="tabsel" href="inh/TQueryResult_Inh.png" onclick="javascript:return SetImg('Charts','inh/TQueryResult_Inh.png');">Inheritance</a>
-<a id="imgTQueryResult_InhMem" class="tab" href="inhmem/TQueryResult_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TQueryResult_InhMem.png');">Inherited Members</a>
-<a id="imgTQueryResult_Incl" class="tab" href="incl/TQueryResult_Incl.png" onclick="javascript:return SetImg('Charts','incl/TQueryResult_Incl.png');">Includes</a>
-<a id="imgTQueryResult_Lib" class="tab" href="lib/TQueryResult_Lib.png" onclick="javascript:return SetImg('Charts','lib/TQueryResult_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTQueryResult_Inh" src="inh/TQueryResult_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TQueryResult" href="./TQueryResult.html">TQueryResult</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TProofQueryResult" href="./TProofQueryResult.html">TProofQueryResult</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TQueryResult:TQueryResult" href="src/TQueryResult.cxx.html#mL62yB">TQueryResult</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> seqnum, <span class="keyword">const</span> <span class="keyword">char</span>* opt, <a href="./TList.html">TList</a>* inlist, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> entries, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> first, <span class="keyword">const</span> <span class="keyword">char</span>* selec)</span><br />
 <div class="funccomm"><pre> Main constructor.
@@ -377,6 +394,31 @@ A container class for query results.
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQueryResult:SetFinalized" href="src/TQueryResult.h.html#McnopE">SetFinalized</a>()</span><br />
 
 <div class="code"><code class="inlinecode">{ <a href="./TQueryResult.html#TQueryResult:fFinalized" title="Bool_t TQueryResult::fFinalized">fFinalized</a> = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQueryResult:SetPrepTime" href="src/TQueryResult.h.html#PtsOuE">SetPrepTime</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> preptime)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQueryResult.html#TQueryResult:fPrepTime" title="Float_t TQueryResult::fPrepTime">fPrepTime</a> = preptime; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQueryResult:SetMergeTime" href="src/TQueryResult.h.html#D2ERW">SetMergeTime</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> mergetime)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQueryResult.html#TQueryResult:fMergeTime" title="Float_t TQueryResult::fMergeTime">fMergeTime</a> = mergetime; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQueryResult:SetRecvTime" href="src/TQueryResult.h.html#Y8JgED">SetRecvTime</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> recvtime)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQueryResult.html#TQueryResult:fRecvTime" title="Float_t TQueryResult::fRecvTime">fRecvTime</a> = recvtime; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQueryResult:SetTermTime" href="src/TQueryResult.h.html#TUSN1D">SetTermTime</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> termtime)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQueryResult.html#TQueryResult:fTermTime" title="Float_t TQueryResult::fTermTime">fTermTime</a> = termtime; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TQueryResult:SetNumMergers" href="src/TQueryResult.h.html#GmlTGB">SetNumMergers</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> nmergers)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TQueryResult.html#TQueryResult:fNumMergers" title="Int_t TQueryResult::fNumMergers">fNumMergers</a> = nmergers; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TQueryResult:TQueryResult@1" href="src/TQueryResult.h.html#zjbGh">TQueryResult</a>()</span><br />
@@ -469,6 +511,11 @@ A container class for query results.
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQueryResult.html#TQueryResult:fResultFile" title="TString TQueryResult::fResultFile">fResultFile</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="TQueryResult:GetPrepTime" href="src/TQueryResult.h.html#oxfS3E">GetPrepTime</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQueryResult.html#TQueryResult:fPrepTime" title="Float_t TQueryResult::fPrepTime">fPrepTime</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="TQueryResult:GetInitTime" href="src/TQueryResult.h.html#vAaXUD">GetInitTime</a>() const</span><br />
 
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQueryResult.html#TQueryResult:fInitTime" title="Float_t TQueryResult::fInitTime">fInitTime</a>; }</code></div>
@@ -479,9 +526,29 @@ A container class for query results.
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQueryResult.html#TQueryResult:fProcTime" title="Float_t TQueryResult::fProcTime">fProcTime</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="TQueryResult:GetMergeTime" href="src/TQueryResult.h.html#Z0N6L">GetMergeTime</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQueryResult.html#TQueryResult:fMergeTime" title="Float_t TQueryResult::fMergeTime">fMergeTime</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="TQueryResult:GetRecvTime" href="src/TQueryResult.h.html#gF4xUE">GetRecvTime</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQueryResult.html#TQueryResult:fRecvTime" title="Float_t TQueryResult::fRecvTime">fRecvTime</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="TQueryResult:GetTermTime" href="src/TQueryResult.h.html#AA3do">GetTermTime</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQueryResult.html#TQueryResult:fTermTime" title="Float_t TQueryResult::fTermTime">fTermTime</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TQueryResult:GetNumWrks" href="src/TQueryResult.h.html#PClt0B">GetNumWrks</a>() const</span><br />
 
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQueryResult.html#TQueryResult:fNumWrks" title="Int_t TQueryResult::fNumWrks">fNumWrks</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TQueryResult:GetNumMergers" href="src/TQueryResult.h.html#BaNzmB">GetNumMergers</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TQueryResult.html#TQueryResult:fNumMergers" title="Int_t TQueryResult::fNumMergers">fNumMergers</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TQueryResult:IsArchived" href="src/TQueryResult.h.html#dCevAE">IsArchived</a>() const</span><br />
@@ -509,7 +576,7 @@ A container class for query results.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?G+Ganis+Sep"> G Ganis Sep 2005</a> </em><em>&raquo; Copyright   (C) 1995-2005, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/tree:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: root/tree:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

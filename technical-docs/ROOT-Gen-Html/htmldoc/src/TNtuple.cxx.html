@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:05 2015            -->
+<!--   Date: Tue May  5 12:09:18 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -109,7 +109,7 @@ ClassImp(<a href="../TNtuple.html">TNtuple</a>)
 <span class="comment">//  Create one branch for each variable</span>
    <span class="keyword">for</span> (i=0;i&lt;<a href="../TNtuple.html#TNtuple:fNvar" title="Int_t TNtuple::fNvar">fNvar</a>;i++) {
       <a href="../ListOfTypes.html#Int_t">Int_t</a> pv = pvars[i];
-      <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(&amp;vars[pv],&amp;<a href="../TNtuple.html#TNtuple:fArgs" title="Float_t* TNtuple::fArgs">fArgs</a>[i],&amp;vars[pv],bufsize);
+      <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(&amp;vars[pv],&amp;<a href="../TNtuple.html#TNtuple:fArgs" title="Float_t* TNtuple::fArgs">fArgs</a>[i],&amp;vars[pv],bufsize);
    }
 
    <span class="keyword">delete</span> [] vars;
@@ -150,7 +150,7 @@ ClassImp(<a href="../TNtuple.html">TNtuple</a>)
 <a name="M8r8X"></a><span class="keyword">void</span> <a href="../TNtuple.html">TNtuple</a>::<a href="../TNtuple.html#TNtuple:ResetBranchAddress" title="void TNtuple::ResetBranchAddress(TBranch* )">ResetBranchAddress</a>(<a href="../TBranch.html">TBranch</a> *branch)
 {
    <span class="comment">// <a href="../TTree.html#TTree:Reset" title="void TTree::Reset(Option_t* option=&quot;&quot;)">Reset</a> the branch addresses to the internal <a href="../TNtuple.html#TNtuple:fArgs" title="Float_t* TNtuple::fArgs">fArgs</a> array. Use this</span>
-   <span class="comment">// method when the addresses were changed via calls to <a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>().</span>
+   <span class="comment">// method when the addresses were changed via calls to <a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void** add,TBranch** ptr=0) or overloads">SetBranchAddress</a>().</span>
 
    <span class="keyword">if</span> (branch) {
       <a href="../ListOfTypes.html#Int_t">Int_t</a> index = fBranches.IndexOf(branch);
@@ -164,7 +164,7 @@ ClassImp(<a href="../TNtuple.html">TNtuple</a>)
 <a name="xZAarB"></a><span class="keyword">void</span> <a href="../TNtuple.html">TNtuple</a>::<a href="../TNtuple.html#TNtuple:ResetBranchAddresses" title="void TNtuple::ResetBranchAddresses()">ResetBranchAddresses</a>()
 {
    <span class="comment">// <a href="../TTree.html#TTree:Reset" title="void TTree::Reset(Option_t* option=&quot;&quot;)">Reset</a> the branch addresses to the internal <a href="../TNtuple.html#TNtuple:fArgs" title="Float_t* TNtuple::fArgs">fArgs</a> array. Use this</span>
-   <span class="comment">// method when the addresses were changed via calls to <a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>().</span>
+   <span class="comment">// method when the addresses were changed via calls to <a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void** add,TBranch** ptr=0) or overloads">SetBranchAddress</a>().</span>
 
    <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; <a href="../TNtuple.html#TNtuple:fNvar" title="Int_t TNtuple::fNvar">fNvar</a>; i++) {
       <a href="../TBranch.html">TBranch</a> *branch = (<a href="../TBranch.html">TBranch</a>*)fBranches.UncheckedAt(i);
@@ -300,7 +300,7 @@ ClassImp(<a href="../TNtuple.html">TNtuple</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

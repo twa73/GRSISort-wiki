@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:38 2015            -->
+<!--   Date: Tue May  5 12:01:19 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -285,7 +285,7 @@ ClassImp(<a href="../TIter.html">TIter</a>)
    <span class="keyword">while</span> ((object = next())) {
       <span class="keyword">if</span> (star) {
          <a href="../TString.html">TString</a> s = object-&gt;<a href="../TCollection.html#TCollection:GetName" title="const char* TCollection::GetName()">GetName</a>();
-         <span class="keyword">if</span> (s != option &amp;&amp; s.Index(re) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">continue</span>;
+         <span class="keyword">if</span> (s != option &amp;&amp; s.Index(re) == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">continue</span>;
       }
       object-&gt;<a href="../TCollection.html#TCollection:ls" title="void TCollection::ls(Option_t* option=&quot;&quot;)">ls</a>(option);
    }
@@ -406,7 +406,7 @@ ClassImp(<a href="../TIter.html">TIter</a>)
       <a href="../TROOT.html">TROOT</a>::<a href="../TROOT.html#TROOT:IncreaseDirLevel" title="Int_t TROOT::IncreaseDirLevel()">IncreaseDirLevel</a>();
       <span class="keyword">while</span> ((object = next())) {
          <a href="../TString.html">TString</a> s = <a href="../TCollection.html#TCollection:GetCollectionEntryName" title="const char* TCollection::GetCollectionEntryName(TObject* entry)">GetCollectionEntryName</a>(object);
-         <span class="keyword">if</span> (nch == 0 || s == wildcard || s.Index(re) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (nch == 0 || s == wildcard || s.Index(re) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
             <a href="../TCollection.html#TCollection:PrintCollectionEntry" title="void TCollection::PrintCollectionEntry(TObject* entry,Option_t* option,Int_t recurse)">PrintCollectionEntry</a>(object, option, recurse - 1);
          }
       }
@@ -683,7 +683,7 @@ ClassImp(<a href="../TIter.html">TIter</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:28 </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

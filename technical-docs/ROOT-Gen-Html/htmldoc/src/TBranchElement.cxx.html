@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:18 2015            -->
+<!--   Date: Tue May  5 12:01:05 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -984,7 +984,7 @@ ClassImp(<a href="../TBranchElement.html">TBranchElement</a>)
    <a href="../TBranchElement.html#TBranchElement:fBranchCount2" title="TBranchElement* TBranchElement::fBranchCount2">fBranchCount2</a> = 0;
    <a href="../TBranchElement.html#TBranchElement:fBranchCount" title="TBranchElement* TBranchElement::fBranchCount">fBranchCount</a> = 0;
 
-   <span class="keyword">if</span> (<a href="../TBranchElement.html#TBranchElement:fType" title="Int_t TBranchElement::fType">fType</a> == 4) {
+   <span class="keyword">if</span> (<a href="../TBranchElement.html#TBranchElement:fType" title="Int_t TBranchElement::fType">fType</a> == 4 || <a href="../TBranchElement.html#TBranchElement:fType" title="Int_t TBranchElement::fType">fType</a> == 0) {
       <span class="comment">// Only the top level <a href="../TBranchElement.html">TBranchElement</a> containing an STL container,</span>
       <span class="comment">// owns the collectionproxy.</span>
       <span class="keyword">delete</span> <a href="../TBranchElement.html#TBranchElement:fCollProxy" title="TVirtualCollectionProxy* TBranchElement::fCollProxy">fCollProxy</a>;
@@ -1057,10 +1057,10 @@ ClassImp(<a href="../TBranchElement.html">TBranchElement</a>)
             <span class="keyword">if</span> (cl) {
                <a href="../TString.html">TString</a> strMember=branch-&gt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>();
                <a href="../ListOfTypes.html#Size_t">Size_t</a> mempos=strMember.Last(<span class="string">'.'</span>);
-               <span class="keyword">if</span> (mempos!=<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+               <span class="keyword">if</span> (mempos!=<a href="../ListOfTypes.html#int">kNPOS</a>)
                   strMember.Remove(0, (<a href="../ListOfTypes.html#Int_t">Int_t</a>)mempos+1);
                mempos=strMember.First(<span class="string">'['</span>);
-               <span class="keyword">if</span> (mempos!=<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+               <span class="keyword">if</span> (mempos!=<a href="../ListOfTypes.html#int">kNPOS</a>)
                   strMember.Remove((<a href="../ListOfTypes.html#Int_t">Int_t</a>)mempos);
                <a href="../TDataMember.html">TDataMember</a>* m=cl-&gt;GetDataMember(strMember);
                <span class="keyword">if</span> (!m || m-&gt;IsPersistent()) persistentBranches.Add(branch);
@@ -1082,14 +1082,14 @@ ClassImp(<a href="../TBranchElement.html">TBranchElement</a>)
       <a href="../TString.html">TString</a> escapedSlash(<span class="string">"\\/"</span>);
       <a href="../TString.html">TString</a> name = <a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>();
       <a href="../ListOfTypes.html#Int_t">Int_t</a> pos = name.First(<span class="string">'['</span>);
-      <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          name.Remove(pos);
       }
       <a href="../TString.html">TString</a> mothername;
       <span class="keyword">if</span> (<a href="../TBranch.html#TBranch:GetMother" title="TBranch* TBranch::GetMother()">GetMother</a>()) {
          mothername = <a href="../TBranch.html#TBranch:GetMother" title="TBranch* TBranch::GetMother()">GetMother</a>()-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>();
          pos = mothername.First(<span class="string">'['</span>);
-         <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#int">kNPOS</a>) {
             mothername.Remove(pos);
          }
          <a href="../ListOfTypes.html#Int_t">Int_t</a> len = mothername.Length();
@@ -1120,7 +1120,7 @@ ClassImp(<a href="../TBranchElement.html">TBranchElement</a>)
             } <span class="keyword">else</span> {
                <span class="comment">// If the mother's name end with a dot then</span>
                <span class="comment">// the daughter probably already contains the mother's name</span>
-               <span class="keyword">if</span> (name.Index(mothername) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+               <span class="keyword">if</span> (name.Index(mothername) == <a href="../ListOfTypes.html#int">kNPOS</a>) {
                   name.Prepend(mothername);
                }
             }
@@ -3157,7 +3157,7 @@ T <a href="../TBranchElement.html">TBranchElement</a>::GetTypedValue(<a href="..
             <span class="keyword">if</span> (alternateElement) {
                <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> dotpos = dataName.Last(<span class="string">'.'</span>);
                <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> endpos = dataName.Length();
-               <span class="keyword">if</span> (dotpos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) ++dotpos; <span class="keyword">else</span> dotpos = 0;
+               <span class="keyword">if</span> (dotpos != <a href="../ListOfTypes.html#int">kNPOS</a>) ++dotpos; <span class="keyword">else</span> dotpos = 0;
                dataName.Replace(dotpos,endpos-dotpos,subBranchElement-&gt;GetFullName());
             }
             <a href="../TRealData.html">TRealData</a>* rd = pClass-&gt;GetRealData(dataName);
@@ -4359,8 +4359,8 @@ T <a href="../TBranchElement.html">TBranchElement</a>::GetTypedValue(<a href="..
    <span class="comment">//    delete event;</span>
    <span class="comment">//    event = 0;</span>
    <span class="comment">//</span>
-   <span class="comment">// These rules affect users of <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(),</span>
-   <span class="comment">// <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(), and <a href="../TChain.html">TChain</a>::<a href="../TChain.html#TChain:SetBranchAddress" title="Int_t TChain::SetBranchAddress(const char* bname,void* add,TBranch** ptr,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>()</span>
+   <span class="comment">// These rules affect users of <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(),</span>
+   <span class="comment">// <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void** add,TBranch** ptr=0) or overloads">SetBranchAddress</a>(), and <a href="../TChain.html">TChain</a>::<a href="../TChain.html#TChain:SetBranchAddress" title="Int_t TChain::SetBranchAddress(const char* bname,void* add,TBranch** ptr,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>()</span>
    <span class="comment">// as well because those routines call this one.</span>
    <span class="comment">//</span>
    <span class="comment">// An example of a tree with branches with objects allocated</span>
@@ -5687,7 +5687,7 @@ T <a href="../TBranchElement.html">TBranchElement</a>::GetTypedValue(<a href="..
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:28 </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

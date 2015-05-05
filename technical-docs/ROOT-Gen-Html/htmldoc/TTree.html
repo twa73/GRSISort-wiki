@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:40:19 2015            -->
+<!--   Date: Tue May  5 13:06:52 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -65,7 +65,7 @@ return false;}
 
   A <a href="./TTree.html">TTree</a> object has a header with a name and a title.
   It consists of a list of independent branches (<a href="./TBranch.html">TBranch</a>). Each branch
-  has its own definition and list of buffers. <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> buffers may be
+  has its own definition and list of buffers. <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> buffers may be
   automatically written to disk or kept in memory until the Tree attribute
   <a href="./TTree.html#TTree:fMaxVirtualSize" title="Long64_t TTree::fMaxVirtualSize">fMaxVirtualSize</a> is reached. Variables of one branch are written to the
   same buffer. A branch buffer is automatically compressed if the file
@@ -92,7 +92,7 @@ return false;}
 
   ==&gt; Case A
 
-     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(branchname, address, leaflist, bufsize)
+     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(branchname, address, leaflist, bufsize)
        * address is the address of the first item of a structure
        * leaflist is the concatenation of all the variable names and types
          separated by a colon character :
@@ -118,7 +118,7 @@ return false;}
             - O : [the letter <span class="string">'o'</span>, not a zero] a boolean (<a href="./ListOfTypes.html#Bool_t">Bool_t</a>)
        * If the address points to a single numerical variable, the leaflist is optional:
            <a href="./ListOfTypes.html#int">int</a> value;
-           tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(branchname, &amp;value);
+           tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(branchname, &amp;value);
        * If the address points to more than one numerical variable, we strongly recommend
          that the variable be sorted in decreasing order of size.  Any other order will
          result in a non-portable (even between CINT and compiled code on the platform)
@@ -127,10 +127,10 @@ return false;}
 
   ==&gt; Case B
 
-     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(branchname, &amp;p_object, bufsize, splitlevel)
-     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(branchname, className, &amp;p_object, bufsize, splitlevel)
+     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(branchname, &amp;p_object, bufsize, splitlevel)
+     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(branchname, className, &amp;p_object, bufsize, splitlevel)
        * p_object is a pointer to an object.
-       * If className is not specified, <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> uses the type of p_object to determine the
+       * If className is not specified, <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> uses the type of p_object to determine the
            type of the object.
        * If className is used to specify explicitly the object type, the className must
            be of a type related to the one pointed to by the pointer.  It should be either
@@ -145,26 +145,26 @@ return false;}
            of the object itself. In case the object member is a <a href="./TClonesArray.html">TClonesArray</a>,
            it is processed as a <a href="./TObject.html">TObject</a>*, only one branch.
 
-       Note: The pointer whose address is passed to <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> must not
+       Note: The pointer whose address is passed to <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> must not
              be destroyed (i.e. go out of scope) until the <a href="./TTree.html">TTree</a> is deleted or
              <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:ResetBranchAddress" title="void TTree::ResetBranchAddress(TBranch* )">ResetBranchAddress</a> is called.
 
-       Note: The pointer p_object must be initialized before calling <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>
+       Note: The pointer p_object must be initialized before calling <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>
           Do either:
              MyDataClass* p_object = 0;
-             tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(branchname, &amp;p_object);
+             tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(branchname, &amp;p_object);
           Or
              MyDataClass* p_object = new MyDataClass;
-             tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(branchname, &amp;p_object);
+             tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(branchname, &amp;p_object);
        Whether the pointer is set to zero or not, the ownership of the object
        is not taken over by the <a href="./TTree.html">TTree</a>.  I.e. eventhough an object will be allocated
-       by <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> if the pointer p_object is zero, the object will &lt;b&gt;not&lt;/b&gt;
+       by <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> if the pointer p_object is zero, the object will &lt;b&gt;not&lt;/b&gt;
        be deleted when the <a href="./TTree.html">TTree</a> is deleted.
 
   ==&gt; Case C
 
      MyClass object;
-     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(branchname, &amp;object, bufsize, splitlevel)
+     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(branchname, &amp;object, bufsize, splitlevel)
 
        Note: The 2nd parameter must be the address of a valid object.
               The object must not be destroyed (i.e. be deleted) until the <a href="./TTree.html">TTree</a>
@@ -182,7 +182,7 @@ return false;}
 
   ==&gt; Case D
 
-     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(branchname,clonesarray, bufsize, splitlevel)
+     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(branchname,clonesarray, bufsize, splitlevel)
          clonesarray is the address of a pointer to a <a href="./TClonesArray.html">TClonesArray</a>.
          The <a href="./TClonesArray.html">TClonesArray</a> is a direct access list of objects of the same class.
          For example, if the <a href="./TClonesArray.html">TClonesArray</a> is an array of TTrack objects,
@@ -191,7 +191,7 @@ return false;}
 
   ==&gt; Case E
 
-     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>( branchname, STLcollection, buffsize, splitlevel);
+     <a href="./TBranch.html">TBranch</a> *branch = tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>( branchname, STLcollection, buffsize, splitlevel);
          STLcollection is the address of a pointer to std::vector, std::list,
          std::deque, std::set or std::multiset containing pointers to objects.
          If the splitlevel is a value bigger than 100 (<a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:kSplitCollectionOfPointers" title="const enum TTree:: TTree::kSplitCollectionOfPointers">kSplitCollectionOfPointers</a>)
@@ -211,7 +211,7 @@ return false;}
          See also the class <a href="./TNtuple.html">TNtuple</a> (a simple Tree with branches of floats)
          and the class <a href="./TNtupleD.html">TNtupleD</a> (a simple Tree with branches of doubles)
 
-       Adding a <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> to an Existing Tree
+       Adding a <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> to an Existing Tree
 
  You may want to add a branch to an existing tree. For example,
  if one variable in the tree was computed with a certain algorithm,
@@ -227,7 +227,7 @@ return false;}
 
    <a href="./ListOfTypes.html#Float_t">Float_t</a> new_v;
    <a href="./TTree.html">TTree</a> *t3 = (<a href="./TTree.html">TTree</a>*)f-&gt;Get(<span class="string">"t3"</span>);
-   <a href="./TBranch.html">TBranch</a> *newBranch = t3-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"new_v"</span>, &amp;new_v, <span class="string">"new_v/F"</span>);
+   <a href="./TBranch.html">TBranch</a> *newBranch = t3-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"new_v"</span>, &amp;new_v, <span class="string">"new_v/F"</span>);
 
    //read the number of entries in the t3
    <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = t3-&gt;<a href="./TTree.html#TTree:GetEntries" title="Long64_t TTree::GetEntries() or overloads">GetEntries</a>();
@@ -307,9 +307,9 @@ A simple example with histograms and a tree*-*-*-
 
  // Create a <a href="./ROOT.html">ROOT</a> Tree
    <a href="./TTree.html">TTree</a> *tree = new <a href="./TTree.html">TTree</a>(<span class="string">"T"</span>,<span class="string">"An example of ROOT tree with a few branches"</span>);
-   tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"point"</span>,&amp;point,<span class="string">"x:y:z"</span>);
-   tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"eventn"</span>,&amp;eventn,<span class="string">"ntrack/I:nseg:nvertex:flag/i:temperature/F"</span>);
-   tree-&gt;<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"hpx"</span>,<span class="string">"TH1F"</span>,&amp;hpx,128000,0);
+   tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"point"</span>,&amp;point,<span class="string">"x:y:z"</span>);
+   tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"eventn"</span>,&amp;eventn,<span class="string">"ntrack/I:nseg:nvertex:flag/i:temperature/F"</span>);
+   tree-&gt;<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"hpx"</span>,<span class="string">"TH1F"</span>,&amp;hpx,128000,0);
 
    <a href="./ListOfTypes.html#Float_t">Float_t</a> px,py,pz;
    static <a href="./ListOfTypes.html#Float_t">Float_t</a> p[3];
@@ -378,15 +378,15 @@ A simple example with histograms and a tree*-*-*-
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:AddZipBytes">AddZipBytes</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> zip)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="funcname"><a class="funcname" href="#TTree:AutoSave">AutoSave</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Branch@1">Branch</a>(<a href="./TList.html">TList</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Branch@2">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* folder, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Branch">Branch</a>(<a href="./TCollection.html">TCollection</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@3">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</td></tr>
-<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@4">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">char</span>* address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</td></tr>
-<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@5">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Long_t">Long_t</a> address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</td></tr>
-<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@6">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">int</span> address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</td></tr>
-<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@8">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>** obj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</td></tr>
-<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@7">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* classname, <span class="keyword">void</span>** obj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Branch@3">Branch</a>(<a href="./TList.html">TList</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Branch@4">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* folder, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@1">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>** obj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Branch@2">Branch</a>(<a href="./TCollection.html">TCollection</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@5">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@6">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">char</span>* address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@7">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Long_t">Long_t</a> address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch@8">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">int</span> address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Branch">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* classname, <span class="keyword">void</span>** obj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:BranchOld">BranchOld</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* classname, <span class="keyword">void</span>* addobj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 1)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:BranchRef">BranchRef</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TBranch.html">TBranch</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Bronch">Bronch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* classname, <span class="keyword">void</span>* addobj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</td></tr>
@@ -575,8 +575,8 @@ A simple example with histograms and a tree*-*-*-
 <tr class="func"><td class="funcret"><a href="./TPrincipal.html">TPrincipal</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Principal">Principal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* varexp = <span class="string">""</span>, <span class="keyword">const</span> <span class="keyword">char</span>* selection = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">"np"</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:PrintCacheStats">PrintCacheStats</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Process">Process</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Process@1">Process</a>(<span class="keyword">void</span>* selector, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Process">Process</a>(<span class="keyword">void</span>* selector, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Process@1">Process</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Project">Project</a>(<span class="keyword">const</span> <span class="keyword">char</span>* hname, <span class="keyword">const</span> <span class="keyword">char</span>* varexp, <span class="keyword">const</span> <span class="keyword">char</span>* selection = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TSQLResult.html">TSQLResult</a>*</td><td class="funcname"><a class="funcname" href="#TTree:Query">Query</a>(<span class="keyword">const</span> <span class="keyword">char</span>* varexp = <span class="string">""</span>, <span class="keyword">const</span> <span class="keyword">char</span>* selection = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
@@ -594,20 +594,20 @@ A simple example with histograms and a tree*-*-*-
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:ResetBranchAddress">ResetBranchAddress</a>(<a href="./TBranch.html">TBranch</a>*)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:ResetBranchAddresses">ResetBranchAddresses</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttMarker.html#TAttMarker:SaveMarkerAttributes"><span class="baseclass">TAttMarker::</span>SaveMarkerAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttMarker.html#TAttMarker:SaveMarkerAttributes"><span class="baseclass">TAttMarker::</span>SaveMarkerAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="funcname"><a class="funcname" href="#TTree:Scan">Scan</a>(<span class="keyword">const</span> <span class="keyword">char</span>* varexp = <span class="string">""</span>, <span class="keyword">const</span> <span class="keyword">char</span>* selection = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TTree:SetAlias">SetAlias</a>(<span class="keyword">const</span> <span class="keyword">char</span>* aliasName, <span class="keyword">const</span> <span class="keyword">char</span>* aliasFormula)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:SetAutoFlush">SetAutoFlush</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a> autof = -30000000)</td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:SetAutoSave">SetAutoSave</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a> autos = 300000000)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:SetAutoSave">SetAutoSave</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a> autos = -300000000)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:SetBasketSize">SetBasketSize</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <a href="./ListOfTypes.html#Int_t">Int_t</a> buffsize = 16000)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:SetBranchAddress@2">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>** add, <a href="./TBranch.html">TBranch</a>** ptr = 0)</td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:SetBranchAddress">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>* add, <a href="./TClass.html">TClass</a>* realClass, EDataType datatype, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> isptr)</td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:SetBranchAddress@1">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>* add, <a href="./TBranch.html">TBranch</a>** ptr, <a href="./TClass.html">TClass</a>* realClass, EDataType datatype, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> isptr)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:SetBranchAddress">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>** add, <a href="./TBranch.html">TBranch</a>** ptr = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:SetBranchAddress@1">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>* add, <a href="./TClass.html">TClass</a>* realClass, EDataType datatype, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> isptr)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TTree:SetBranchAddress@2">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>* add, <a href="./TBranch.html">TBranch</a>** ptr, <a href="./TClass.html">TClass</a>* realClass, EDataType datatype, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> isptr)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:SetBranchStatus">SetBranchStatus</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> status = 1, <a href="./ListOfTypes.html#UInt_t">UInt_t</a>* found = 0)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:SetBranchStyle">SetBranchStyle</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> style = 1)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTree:SetCacheEntryRange">SetCacheEntryRange</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a> first, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> last)</td></tr>
@@ -760,8 +760,8 @@ A simple example with histograms and a tree*-*-*-
 <div class="access" id="dataprot"><b>protected:</b>
 <table class="data" id="tabdataprot" cellspacing="0">
 <tr class="data"><td class="datatype"><a href="./TList.html">TList</a>*</td><td class="dataname"><a name="TTree:fAliases"></a>fAliases</td><td class="datadesc">List of aliases for expressions based on the tree branches.</td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="dataname"><a name="TTree:fAutoFlush"></a>fAutoFlush</td><td class="datadesc">Autoflush tree when fAutoFlush entries written</td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="dataname"><a name="TTree:fAutoSave"></a>fAutoSave</td><td class="datadesc">Autosave tree when fAutoSave bytes produced</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="dataname"><a name="TTree:fAutoFlush"></a>fAutoFlush</td><td class="datadesc">Autoflush tree when fAutoFlush entries written or -fAutoFlush (compressed) bytes produced</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="dataname"><a name="TTree:fAutoSave"></a>fAutoSave</td><td class="datadesc">Autosave tree when fAutoSave entries written or -fAutoSave (compressed) bytes produced</td></tr>
 <tr class="data"><td class="datatype"><a href="./TBranchRef.html">TBranchRef</a>*</td><td class="dataname"><a name="TTree:fBranchRef"></a>fBranchRef</td><td class="datadesc">Branch supporting the TRefTable (if any)</td></tr>
 <tr class="data"><td class="datatype"><a href="./TObjArray.html">TObjArray</a></td><td class="dataname"><a name="TTree:fBranches"></a>fBranches</td><td class="datadesc">List of Branches</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a name="TTree:fCacheDoAutoInit"></a>fCacheDoAutoInit</td><td class="datadesc">! true if cache auto creation or resize check is needed</td></tr>
@@ -827,55 +827,55 @@ A simple example with histograms and a tree*-*-*-
 </div>
 <h2><a id="TTree:Class_Charts"></a>Class Charts</h2>
 <map name="MapTTree_Inh" id="MapTTree_Inh">
-<area shape="rect" id="node3" href="./TNamed.html" title="TNamed" alt="" coords="165,23,275,44"/>
-<area shape="rect" id="node4" href="./TAttLine.html" title="TAttLine" alt="" coords="165,44,275,66"/>
-<area shape="rect" id="node5" href="./TAttFill.html" title="TAttFill" alt="" coords="165,66,275,87"/>
-<area shape="rect" id="node6" href="./TAttMarker.html" title="TAttMarker" alt="" coords="165,87,275,109"/>
-<area shape="rect" id="node7" href="./TObject.html" title="TObject" alt="" coords="2,23,111,44"/>
-<area shape="rect" id="node9" href="./TChain.html" title="TChain" alt="" coords="493,12,603,34"/>
-<area shape="rect" id="node10" href="./GTree.html" title="GTree" alt="" coords="493,34,603,55"/>
-<area shape="rect" id="node11" href="./TNtuple.html" title="TNtuple" alt="" coords="493,55,603,77"/>
-<area shape="rect" id="node12" href="./TNtupleD.html" title="TNtupleD" alt="" coords="493,77,603,98"/>
-<area shape="rect" id="node13" href="./TTreeSQL.html" title="TTreeSQL" alt="" coords="493,98,603,120"/>
-<area shape="rect" id="node14" href="./GChain.html" title="GChain" alt="" coords="657,1,766,23"/>
-<area shape="rect" id="node15" href="./TProofChain.html" title="TProofChain" alt="" coords="657,23,766,45"/>
+<area shape="rect" id="node2" href="./TNamed.html" title="TNamed" alt="" coords="165,22,275,42"/>
+<area shape="rect" id="node3" href="./TAttLine.html" title="TAttLine" alt="" coords="165,43,275,63"/>
+<area shape="rect" id="node4" href="./TAttFill.html" title="TAttFill" alt="" coords="165,64,275,84"/>
+<area shape="rect" id="node5" href="./TAttMarker.html" title="TAttMarker" alt="" coords="165,85,275,105"/>
+<area shape="rect" id="node6" href="./TObject.html" title="TObject" alt="" coords="2,22,111,42"/>
+<area shape="rect" id="node7" href="./TChain.html" title="TChain" alt="" coords="493,12,603,32"/>
+<area shape="rect" id="node8" href="./GTree.html" title="GTree" alt="" coords="493,33,603,53"/>
+<area shape="rect" id="node9" href="./TNtuple.html" title="TNtuple" alt="" coords="493,54,603,74"/>
+<area shape="rect" id="node10" href="./TNtupleD.html" title="TNtupleD" alt="" coords="493,74,603,95"/>
+<area shape="rect" id="node11" href="./TTreeSQL.html" title="TTreeSQL" alt="" coords="493,95,603,116"/>
+<area shape="rect" id="node12" href="./GChain.html" title="GChain" alt="" coords="657,2,766,22"/>
+<area shape="rect" id="node13" href="./TProofChain.html" title="TProofChain" alt="" coords="657,22,766,43"/>
 </map>
 <map name="MapTTree_InhMem" id="MapTTree_InhMem">
-<area shape="rect" id="graph12" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph13" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph14" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph15" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph11" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph18" href="./TAttLine.html" alt="" coords="541,399,629,449"/>
-<area shape="rect" id="graph19" href="./TAttLine.html" alt="" coords="443,399,531,449"/>
-<area shape="rect" id="graph20" href="./TAttLine.html" alt="" coords="376,399,400,420"/>
-<area shape="rect" id="graph21" href="./TAttLine.html" alt="" coords="541,460,629,597"/>
-<area shape="rect" id="graph22" href="./TAttLine.html" alt="" coords="443,460,531,627"/>
-<area shape="rect" id="graph23" href="./TAttLine.html" alt="" coords="344,460,432,627"/>
-<area shape="rect" id="graph17" href="./TAttLine.html" title="TAttLine" alt="" coords="333,352,640,637"/>
-<area shape="rect" id="graph26" href="./TAttFill.html" alt="" coords="344,803,629,839"/>
-<area shape="rect" id="graph27" href="./TAttFill.html" alt="" coords="541,849,629,987"/>
-<area shape="rect" id="graph28" href="./TAttFill.html" alt="" coords="443,849,531,1001"/>
-<area shape="rect" id="graph29" href="./TAttFill.html" alt="" coords="344,849,432,1001"/>
-<area shape="rect" id="graph25" href="./TAttFill.html" title="TAttFill" alt="" coords="333,756,640,1012"/>
-<area shape="rect" id="graph32" href="./TAttMarker.html" alt="" coords="541,1287,629,1337"/>
-<area shape="rect" id="graph33" href="./TAttMarker.html" alt="" coords="443,1287,531,1337"/>
-<area shape="rect" id="graph34" href="./TAttMarker.html" alt="" coords="376,1287,400,1308"/>
-<area shape="rect" id="graph35" href="./TAttMarker.html" alt="" coords="541,1348,629,1500"/>
-<area shape="rect" id="graph36" href="./TAttMarker.html" alt="" coords="443,1348,531,1500"/>
-<area shape="rect" id="graph37" href="./TAttMarker.html" alt="" coords="344,1348,432,1500"/>
-<area shape="rect" id="graph31" href="./TAttMarker.html" title="TAttMarker" alt="" coords="333,1240,640,1511"/>
-<area shape="rect" id="graph40" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph41" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph42" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph43" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph44" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph45" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph46" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph39" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
+<area shape="rect" id="clust11" href="./TNamed.html" alt="" coords="248,47,469,65"/>
+<area shape="rect" id="clust12" href="./TNamed.html" alt="" coords="403,65,469,225"/>
+<area shape="rect" id="clust13" href="./TNamed.html" alt="" coords="325,65,392,225"/>
+<area shape="rect" id="clust14" href="./TNamed.html" alt="" coords="248,65,315,225"/>
+<area shape="rect" id="clust10" href="./TNamed.html" title="TNamed" alt="" coords="248,16,469,225"/>
+<area shape="rect" id="clust17" href="./TAttLine.html" alt="" coords="403,348,469,383"/>
+<area shape="rect" id="clust18" href="./TAttLine.html" alt="" coords="325,348,392,383"/>
+<area shape="rect" id="clust19" href="./TAttLine.html" alt="" coords="281,348,282,351"/>
+<area shape="rect" id="clust20" href="./TAttLine.html" alt="" coords="403,383,469,511"/>
+<area shape="rect" id="clust21" href="./TAttLine.html" alt="" coords="325,383,392,543"/>
+<area shape="rect" id="clust22" href="./TAttLine.html" alt="" coords="248,383,315,543"/>
+<area shape="rect" id="clust16" href="./TAttLine.html" title="TAttLine" alt="" coords="248,317,469,543"/>
+<area shape="rect" id="clust25" href="./TAttFill.html" alt="" coords="248,757,469,776"/>
+<area shape="rect" id="clust26" href="./TAttFill.html" alt="" coords="403,776,469,904"/>
+<area shape="rect" id="clust27" href="./TAttFill.html" alt="" coords="325,776,392,920"/>
+<area shape="rect" id="clust28" href="./TAttFill.html" alt="" coords="248,776,315,920"/>
+<area shape="rect" id="clust24" href="./TAttFill.html" title="TAttFill" alt="" coords="248,727,469,920"/>
+<area shape="rect" id="clust31" href="./TAttMarker.html" alt="" coords="403,1317,469,1352"/>
+<area shape="rect" id="clust32" href="./TAttMarker.html" alt="" coords="325,1317,392,1352"/>
+<area shape="rect" id="clust33" href="./TAttMarker.html" alt="" coords="281,1317,282,1320"/>
+<area shape="rect" id="clust34" href="./TAttMarker.html" alt="" coords="403,1352,469,1496"/>
+<area shape="rect" id="clust35" href="./TAttMarker.html" alt="" coords="325,1352,392,1496"/>
+<area shape="rect" id="clust36" href="./TAttMarker.html" alt="" coords="248,1352,315,1496"/>
+<area shape="rect" id="clust30" href="./TAttMarker.html" title="TAttMarker" alt="" coords="248,1287,469,1496"/>
+<area shape="rect" id="clust39" href="./TObject.html" alt="" coords="171,47,237,145"/>
+<area shape="rect" id="clust40" href="./TObject.html" alt="" coords="93,47,160,161"/>
+<area shape="rect" id="clust41" href="./TObject.html" alt="" coords="16,47,83,161"/>
+<area shape="rect" id="clust42" href="./TObject.html" alt="" coords="203,152,205,155"/>
+<area shape="rect" id="clust43" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust44" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust45" href="./TObject.html" alt="" coords="16,161,83,609"/>
+<area shape="rect" id="clust38" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
 </map>
 <map name="MapTTree_Lib" id="MapTTree_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="376,167,491,215"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="361,160,478,208"/>
 </map>
 <div class="tabs">
 <a id="imgTTree_Inh" class="tabsel" href="inh/TTree_Inh.png" onclick="javascript:return SetImg('Charts','inh/TTree_Inh.png');">Inheritance</a>
@@ -896,7 +896,7 @@ A simple example with histograms and a tree*-*-*-
 <div class="funccomm"><pre> Normal tree constructor.
 
  The tree is created in the current directory.
- Use the various functions <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> below to add branches to this tree.
+ Use the various functions <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> below to add branches to this tree.
 
  If the first character of title is a <span class="string">"/"</span>, the function assumes a folder name.
  In this case, it creates automatically branches following the folder hierarchy.
@@ -1042,16 +1042,18 @@ A simple example with histograms and a tree*-*-*-
 
    When large Trees are produced, it is safe to activate the <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a>
    procedure. Some branches may have buffers holding many entries.
-   <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a> is automatically called by <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Fill" title="Int_t TTree::Fill()">Fill</a> when the number of bytes
-   generated since the previous <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a> is greater than <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> bytes.
-   This function may also be invoked by the user, for example every
-   N entries.
+   If <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> is negative, <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a> is automatically called by
+   <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Fill" title="Int_t TTree::Fill()">Fill</a> when the number of bytes generated since the previous
+   <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a> is greater than -<a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> bytes.
+   If <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> is positive, <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a> is automatically called by
+   <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Fill" title="Int_t TTree::Fill()">Fill</a> every N entries.
+   This function may also be invoked by the user.
    Each <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a> generates a new key on the file.
    Once the key with the tree header has been written, the previous cycle
    (if any) is deleted.
 
    Note that calling <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a> too frequently (or similarly calling
-   <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:SetAutoSave" title="void TTree::SetAutoSave(Long64_t autos=300000000)">SetAutoSave</a> with a small value) is an expensive operation.
+   <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:SetAutoSave" title="void TTree::SetAutoSave(Long64_t autos=-300000000)">SetAutoSave</a> with a small value) is an expensive operation.
    You should make tests for your own application to find a compromise
    between speed and the quantity of information you may loose in case of
    a job crash.
@@ -1114,32 +1116,32 @@ A simple example with histograms and a tree*-*-*-
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TBranch.html">TBranch</a>* <a class="funcname" name="TTree:BranchImp" href="src/TTree.cxx.html#jIE2_B">BranchImp</a>(<span class="keyword">const</span> <span class="keyword">char</span>* branchname, <span class="keyword">const</span> <span class="keyword">char</span>* classname, <a href="./TClass.html">TClass</a>* ptrClass, <span class="keyword">void</span>* addobj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel)</span><br />
-<div class="funccomm"><pre> Same as <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>() with added check that addobj matches className.
+<div class="funccomm"><pre> Same as <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>() with added check that addobj matches className.
 
- See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>() for other details.
+ See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>() for other details.
 
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TBranch.html">TBranch</a>* <a class="funcname" name="TTree:BranchImp@1" href="src/TTree.cxx.html#gFSHGC">BranchImp</a>(<span class="keyword">const</span> <span class="keyword">char</span>* branchname, <a href="./TClass.html">TClass</a>* ptrClass, <span class="keyword">void</span>* addobj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel)</span><br />
-<div class="funccomm"><pre> Same as <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> but automatic detection of the class name.
- See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> for other details.
+<div class="funccomm"><pre> Same as <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> but automatic detection of the class name.
+ See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> for other details.
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TBranch.html">TBranch</a>* <a class="funcname" name="TTree:BranchImpRef" href="src/TTree.cxx.html#DoHzrB">BranchImpRef</a>(<span class="keyword">const</span> <span class="keyword">char</span>* branchname, <span class="keyword">const</span> <span class="keyword">char</span>* classname, <a href="./TClass.html">TClass</a>* ptrClass, <span class="keyword">void</span>* addobj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel)</span><br />
-<div class="funccomm"><pre> Same as <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> but automatic detection of the class name.
- See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> for other details.
+<div class="funccomm"><pre> Same as <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> but automatic detection of the class name.
+ See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> for other details.
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TBranch.html">TBranch</a>* <a class="funcname" name="TTree:BranchImpRef@1" href="src/TTree.cxx.html#SvnaVB">BranchImpRef</a>(<span class="keyword">const</span> <span class="keyword">char</span>* branchname, <a href="./TClass.html">TClass</a>* ptrClass, EDataType datatype, <span class="keyword">void</span>* addobj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel)</span><br />
-<div class="funccomm"><pre> Same as <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> but automatic detection of the class name.
- See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> for other details.
+<div class="funccomm"><pre> Same as <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> but automatic detection of the class name.
+ See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> for other details.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@1" href="src/TTree.cxx.html#ACSoLE">Branch</a>(<a href="./TList.html">TList</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@3" href="src/TTree.cxx.html#ACSoLE">Branch</a>(<a href="./TList.html">TList</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
 <div class="funccomm"><pre> Deprecated function. Use next function instead.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch" href="src/TTree.cxx.html#NWuSmD">Branch</a>(<a href="./TCollection.html">TCollection</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@2" href="src/TTree.cxx.html#NWuSmD">Branch</a>(<a href="./TCollection.html">TCollection</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
 <div class="funccomm"><pre> Create one branch for each element in the collection.
 
    Each entry in the collection becomes a top level branch if the
@@ -1177,8 +1179,8 @@ A simple example with histograms and a tree*-*-*-
  has two or more members referencing the same class.
  For example, if a Tree has two branches B1 and B2 corresponding
  to objects of the same class MyClass, one can do:
-       tree.<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"B1."</span>,<span class="string">"MyClass"</span>,&amp;b1,8000,1);
-       tree.<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"B2."</span>,<span class="string">"MyClass"</span>,&amp;b2,8000,1);
+       tree.<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"B1."</span>,<span class="string">"MyClass"</span>,&amp;b1,8000,1);
+       tree.<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"B2."</span>,<span class="string">"MyClass"</span>,&amp;b2,8000,1);
  if MyClass has 3 members a,b,c, the two instructions above will generate
  subbranches called B1.a, B1.b ,B1.c, B2.a, B2.b, B2.c
 
@@ -1211,22 +1213,22 @@ A simple example with histograms and a tree*-*-*-
          a2-&gt;Add(ha2a);
          a2-&gt;Add(ha2b);
 
-         T.<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(list,16000,2);
+         T.<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(list,16000,2);
          T.<a href="./TTree.html#TTree:Print" title="void TTree::Print(Option_t* option=&quot;&quot;)">Print</a>();
    }
 
 
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@2" href="src/TTree.cxx.html#WlTL8D">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* folder, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@4" href="src/TTree.cxx.html#WlTL8D">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* folder, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
 <div class="funccomm"><pre> Create one branch for each element in the folder.
  Returns the total number of branches created.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./TBranch.html">TBranch</a>* <a class="funcname" name="TTree:Branch@3" href="src/TTree.cxx.html#nsV.s">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</span><br />
-<div class="funccomm"><pre> Create a new <a href="./TTree.html">TTree</a> <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>.
+<div class="funcdoc"><span class="funcname"><a href="./TBranch.html">TBranch</a>* <a class="funcname" name="TTree:Branch@5" href="src/TTree.cxx.html#nsV.s">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</span><br />
+<div class="funccomm"><pre> Create a new <a href="./TTree.html">TTree</a> <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>.
 
-    This <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> constructor is provided to support non-objects in
+    This <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> constructor is provided to support non-objects in
     a Tree. The variables described in leaflist may be simple
     variables or structures.  // See the two following
     constructors for writing objects in a Tree.
@@ -1279,11 +1281,11 @@ A simple example with histograms and a tree*-*-*-
          the entries in the Tree randomly and your Tree is in split mode.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./TBranch.html">TBranch</a>* <a class="funcname" name="TTree:Branch@7" href="src/TTree.cxx.html#jOSXhE">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* classname, <span class="keyword">void</span>** obj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./TBranch.html">TBranch</a>* <a class="funcname" name="TTree:Branch" href="src/TTree.cxx.html#jOSXhE">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* classname, <span class="keyword">void</span>** obj, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
 <div class="funccomm"><pre> Create a new branch with the object of class classname at address addobj.
 
  WARNING:
- Starting with Root version 3.01, the <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> function uses the new style
+ Starting with Root version 3.01, the <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> function uses the new style
  branches (<a href="./TBranchElement.html">TBranchElement</a>). To get the old behaviour, you can:
    - call <a href="./TTree.html#TTree:BranchOld" title="TBranch* TTree::BranchOld(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=1)">BranchOld</a> or
    - call <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:SetBranchStyle" title="void TTree::SetBranchStyle(Int_t style=1)">SetBranchStyle</a>(0)
@@ -1298,7 +1300,7 @@ A simple example with histograms and a tree*-*-*-
  Use splitlevel &lt; 0 instead of splitlevel=0 when the class
  has a custom <a href="./TTree.html#TTree:Streamer" title="void TTree::Streamer(TBuffer&amp; )">Streamer</a>
 
- Note: if the split level is set to the default (99),  <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> will
+ Note: if the split level is set to the default (99),  <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> will
  not issue a warning if the class can not be split.
 </pre></div>
 </div>
@@ -1313,7 +1315,7 @@ A simple example with histograms and a tree*-*-*-
     This option requires access to the library where the corresponding class
     is defined. Accessing one single data member in the object implies
     reading the full object.
-    See the next <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> constructor for a more efficient storage
+    See the next <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> constructor for a more efficient storage
     in case the entry consists of arrays of identical objects.
 
     By default the branch buffers are stored in the same file as the Tree.
@@ -1328,8 +1330,8 @@ A simple example with histograms and a tree*-*-*-
     has two or more members referencing the same class.
     For example, if a Tree has two branches B1 and B2 corresponding
     to objects of the same class MyClass, one can do:
-       tree.<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"B1."</span>,<span class="string">"MyClass"</span>,&amp;b1,8000,1);
-       tree.<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"B2."</span>,<span class="string">"MyClass"</span>,&amp;b2,8000,1);
+       tree.<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"B1."</span>,<span class="string">"MyClass"</span>,&amp;b1,8000,1);
+       tree.<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"B2."</span>,<span class="string">"MyClass"</span>,&amp;b2,8000,1);
     if MyClass has 3 members a,b,c, the two instructions above will generate
     subbranches called B1.a, B1.b ,B1.c, B2.a, B2.b, B2.c
 
@@ -1360,17 +1362,17 @@ A simple example with histograms and a tree*-*-*-
 
 
     This function is designed to replace the internal
-    implementation of the old <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> (whose implementation
+    implementation of the old <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> (whose implementation
     has been moved to <a href="./TTree.html#TTree:BranchOld" title="TBranch* TTree::BranchOld(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=1)">BranchOld</a>).
 
     NOTE: The '<a href="./TTree.html#TTree:Bronch" title="TBranch* TTree::Bronch(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=99)">Bronch</a>' method supports only one possible calls
     signature (where the object type has to be specified
     explicitly and the address must be the address of a pointer).
-    For more flexibility use '<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>'.  Use <a href="./TTree.html#TTree:Bronch" title="TBranch* TTree::Bronch(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=99)">Bronch</a> only in (rare)
+    For more flexibility use '<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>'.  Use <a href="./TTree.html#TTree:Bronch" title="TBranch* TTree::Bronch(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=99)">Bronch</a> only in (rare)
     cases (likely to be legacy cases) where both the new and old
-    implementation of <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> needs to be used at the same time.
+    implementation of <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> needs to be used at the same time.
 
-    This function is far more powerful than the old <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>
+    This function is far more powerful than the old <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>
     function.  It supports the full C++, including STL and has
     the same behaviour in split or non-split mode. classname does
     not have to derive from <a href="./TObject.html">TObject</a>.  The function is based on
@@ -1401,8 +1403,8 @@ A simple example with histograms and a tree*-*-*-
     has two or more members referencing the same class.
     For example, if a Tree has two branches B1 and B2 corresponding
     to objects of the same class MyClass, one can do:
-       tree.<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"B1."</span>,<span class="string">"MyClass"</span>,&amp;b1,8000,1);
-       tree.<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(<span class="string">"B2."</span>,<span class="string">"MyClass"</span>,&amp;b2,8000,1);
+       tree.<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"B1."</span>,<span class="string">"MyClass"</span>,&amp;b1,8000,1);
+       tree.<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(<span class="string">"B2."</span>,<span class="string">"MyClass"</span>,&amp;b2,8000,1);
     if MyClass has 3 members a,b,c, the two instructions above will generate
     subbranches called B1.a, B1.b ,B1.c, B2.a, B2.b, B2.c
 
@@ -1416,12 +1418,12 @@ A simple example with histograms and a tree*-*-*-
     Use splitlevel &lt; 0 instead of splitlevel=0 when the class
     has a custom <a href="./TTree.html#TTree:Streamer" title="void TTree::Streamer(TBuffer&amp; )">Streamer</a>
 
-    Note: if the split level is set to the default (99),  <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> will
+    Note: if the split level is set to the default (99),  <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> will
     not issue a warning if the class can not be split.
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TBranch.html">TBranch</a>* <a class="funcname" name="TTree:BronchExec" href="src/TTree.cxx.html#aRKvIC">BronchExec</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* classname, <span class="keyword">void</span>* addobj, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> isptrptr, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel)</span><br />
-<div class="funccomm"><pre> Helper function implementing <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Bronch" title="TBranch* TTree::Bronch(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=99)">Bronch</a> and <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(const <a href="./ListOfTypes.html#char">char</a> *name, T &amp;obj);
+<div class="funccomm"><pre> Helper function implementing <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Bronch" title="TBranch* TTree::Bronch(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=99)">Bronch</a> and <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(const <a href="./ListOfTypes.html#char">char</a> *name, T &amp;obj);
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TTree:Browse" href="src/TTree.cxx.html#rO9YU">Browse</a>(<a href="./TBrowser.html">TBrowser</a>* )</span><br />
@@ -2284,7 +2286,7 @@ A simple example with histograms and a tree*-*-*-
    entries will be on the same disk region.
    When the first call to flush the baskets happen, we also take this opportunity
    to optimize the baskets buffers.
-   We also check if the amount of data written is greater than <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> (see <a href="./TTree.html#TTree:SetAutoSave" title="void TTree::SetAutoSave(Long64_t autos=300000000)">SetAutoSave</a>).
+   We also check if the amount of data written is greater than <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> (see <a href="./TTree.html#TTree:SetAutoSave" title="void TTree::SetAutoSave(Long64_t autos=-300000000)">SetAutoSave</a>).
    In this case we also write the Tree header. This makes the Tree recoverable up to this point
    in case the program writing the Tree crashes.
    The decisions to <a href="./TTree.html#TTree:FlushBaskets" title="Int_t TTree::FlushBaskets()">FlushBaskets</a> and Auto Save can be made based either on the number
@@ -2356,7 +2358,7 @@ A simple example with histograms and a tree*-*-*-
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:GetBranchStyle" href="src/TTree.cxx.html#AtpHfC">GetBranchStyle</a>()</span><br />
 <div class="funccomm"><pre> Static function returning the current branch style.
- style = 0 old <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>
+ style = 0 old <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>
  style = 1 new <a href="./TTree.html#TTree:Bronch" title="TBranch* TTree::Bronch(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=99)">Bronch</a>
 </pre></div>
 </div>
@@ -2385,7 +2387,7 @@ A simple example with histograms and a tree*-*-*-
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Long64_t">Long64_t</a> <a class="funcname" name="TTree:GetEntriesFriend" href="src/TTree.cxx.html#z.Wmb">GetEntriesFriend</a>() const</span><br />
-<div class="funccomm"><pre> Return pointer to the 1st Leaf named name in any <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> of this Tree or
+<div class="funccomm"><pre> Return pointer to the 1st Leaf named name in any <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> of this Tree or
  any branch in the list of friend trees.
 </pre></div>
 </div>
@@ -2432,7 +2434,7 @@ A simple example with histograms and a tree*-*-*-
  The top level branch in the tree T is declared with:
     Event *event = 0;  //event must be null or point to a valid object
                        //it must be initialized
-    T.<a href="./TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>(<span class="string">"event"</span>,&amp;event);
+    T.<a href="./TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void** add,TBranch** ptr=0) or overloads">SetBranchAddress</a>(<span class="string">"event"</span>,&amp;event);
  When reading the Tree, one can choose one of these 3 options:
 
    OPTION 1
@@ -2575,7 +2577,7 @@ A simple example with histograms and a tree*-*-*-
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TLeaf.html">TLeaf</a>* <a class="funcname" name="TTree:GetLeafImpl" href="src/TTree.cxx.html#UhQ1bB">GetLeafImpl</a>(<span class="keyword">const</span> <span class="keyword">char</span>* branchname, <span class="keyword">const</span> <span class="keyword">char</span>* leafname)</span><br />
-<div class="funccomm"><pre> Return pointer to the 1st Leaf named name in any <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> of this
+<div class="funccomm"><pre> Return pointer to the 1st Leaf named name in any <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> of this
  Tree or any branch in the list of friend trees.
 
  The leaf name can contain the name of a friend tree with the
@@ -2585,7 +2587,7 @@ A simple example with histograms and a tree*-*-*-
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TLeaf.html">TLeaf</a>* <a class="funcname" name="TTree:GetLeaf" href="src/TTree.cxx.html#yc0tnD">GetLeaf</a>(<span class="keyword">const</span> <span class="keyword">char</span>* branchname, <span class="keyword">const</span> <span class="keyword">char</span>* leafname)</span><br />
-<div class="funccomm"><pre> Return pointer to the 1st Leaf named name in any <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> of this
+<div class="funccomm"><pre> Return pointer to the 1st Leaf named name in any <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> of this
  Tree or any branch in the list of friend trees.
 
  The leaf name can contain the name of a friend tree with the
@@ -2595,7 +2597,7 @@ A simple example with histograms and a tree*-*-*-
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TLeaf.html">TLeaf</a>* <a class="funcname" name="TTree:GetLeaf@1" href="src/TTree.cxx.html#MZibP">GetLeaf</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</span><br />
-<div class="funccomm"><pre> Return pointer to the 1st Leaf named name in any <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> of this
+<div class="funccomm"><pre> Return pointer to the 1st Leaf named name in any <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> of this
  Tree or any branch in the list of friend trees.
 
  aname may be of the form branchname/leafname
@@ -2770,7 +2772,7 @@ A simple example with histograms and a tree*-*-*-
  <span class="string">"macrofilename"</span> and optionally <span class="string">"cutfilename"</span> are expected to point
  to source files which will be included by the generated skeleton.
  Method of the same name as the file(minus the extension and path)
- will be called by the generated skeleton's <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> method as follow:
+ will be called by the generated skeleton's <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> method as follow:
     [if (cutfilename())] htemp-&gt;<a href="./TTree.html#TTree:Fill" title="Int_t TTree::Fill()">Fill</a>(macrofilename());
 
  <span class="string">"option"</span> can be used select some of the optional features during
@@ -2827,7 +2829,7 @@ A simple example with histograms and a tree*-*-*-
  Begin           -&gt; <a href="./ListOfTypes.html#void">void</a> h1analysisProxy_Begin(<a href="./TTree.html">TTree</a>*);
  SlaveBegin      -&gt; <a href="./ListOfTypes.html#void">void</a> h1analysisProxy_SlaveBegin(<a href="./TTree.html">TTree</a>*);
  <a href="./TTree.html#TTree:Notify" title="Bool_t TTree::Notify()">Notify</a>          -&gt; <a href="./ListOfTypes.html#Bool_t">Bool_t</a> h1analysisProxy_Notify();
- <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>         -&gt; <a href="./ListOfTypes.html#Bool_t">Bool_t</a> h1analysisProxy_Process(<a href="./ListOfTypes.html#Long64_t">Long64_t</a>);
+ <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>         -&gt; <a href="./ListOfTypes.html#Bool_t">Bool_t</a> h1analysisProxy_Process(<a href="./ListOfTypes.html#Long64_t">Long64_t</a>);
  SlaveTerminate  -&gt; <a href="./ListOfTypes.html#void">void</a> h1analysisProxy_SlaveTerminate();
  Terminate       -&gt; <a href="./ListOfTypes.html#void">void</a> h1analysisProxy_Terminate();
 
@@ -2874,7 +2876,7 @@ A simple example with histograms and a tree*-*-*-
        - <a href="./ListOfTypes.html#void">void</a>    SlaveBegin(<a href="./TTree.html">TTree</a> *tree)
        - <a href="./ListOfTypes.html#void">void</a>    Init(<a href="./TTree.html">TTree</a> *tree)
        - <a href="./ListOfTypes.html#Bool_t">Bool_t</a>  <a href="./TTree.html#TTree:Notify" title="Bool_t TTree::Notify()">Notify</a>()
-       - <a href="./ListOfTypes.html#Bool_t">Bool_t</a>  <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a> entry)
+       - <a href="./ListOfTypes.html#Bool_t">Bool_t</a>  <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a> entry)
        - <a href="./ListOfTypes.html#void">void</a>    Terminate()
        - <a href="./ListOfTypes.html#void">void</a>    SlaveTerminate()
 
@@ -2887,7 +2889,7 @@ A simple example with histograms and a tree*-*-*-
  where T is the name of the Tree in file myfile.root
  and myselect.h, myselect.C the name of the files created by this function.
  In a <a href="./ROOT.html">ROOT</a> session, you can do:
-    root &gt; T-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(<span class="string">"myselect.C"</span>)
+    root &gt; T-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(<span class="string">"myselect.C"</span>)
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TTree:MemoryFull" href="src/TTree.cxx.html#HAE3zE">MemoryFull</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> nbytes)</span><br />
@@ -2990,8 +2992,8 @@ if option =<span class="string">"d"</span> an analysis report is printed.
  if option = <span class="string">"a"</span> the list of blocks in the cache is printed
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Long64_t">Long64_t</a> <a class="funcname" name="TTree:Process" href="src/TTree.cxx.html#JWuGQE">Process</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)</span><br />
-<div class="funccomm"><pre> <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> this tree executing the <a href="./TSelector.html">TSelector</a> code in the specified filename.
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Long64_t">Long64_t</a> <a class="funcname" name="TTree:Process@1" href="src/TTree.cxx.html#JWuGQE">Process</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)</span><br />
+<div class="funccomm"><pre> <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> this tree executing the <a href="./TSelector.html">TSelector</a> code in the specified filename.
  The return value is -1 in case of error and <a href="./TSelector.html">TSelector</a>::<a href="./TSelector.html#TSelector:GetStatus" title="Long64_t TSelector::GetStatus()">GetStatus</a>() in
  in case of success.
 
@@ -3003,7 +3005,7 @@ if option =<span class="string">"d"</span> an analysis report is printed.
                     a convenient place to create your histograms.
     SlaveBegin():   called after Begin(), when on PROOF called only on the
                     slave servers.
-    <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>():      called for each event, in this function you decide what
+    <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>():      called for each event, in this function you decide what
                     to read and fill your histograms.
     SlaveTerminate: called at the end of the loop on the tree, when on PROOF
                     called only on the slave servers.
@@ -3018,11 +3020,11 @@ if option =<span class="string">"d"</span> an analysis report is printed.
  and file.so, the file.C is not compiled, only file.so is loaded.
 
   NOTE1
-  It may be more interesting to invoke directly the other <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> function
+  It may be more interesting to invoke directly the other <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> function
   accepting a <a href="./TSelector.html">TSelector</a>* as argument.eg
      MySelector *selector = (MySelector*)<a href="./TSelector.html">TSelector</a>::<a href="./TSelector.html#TSelector:GetSelector" title="TSelector* TSelector::GetSelector(const char* filename)">GetSelector</a>(filename);
      selector-&gt;CallSomeFunction(..);
-     mytree.<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(selector,..);
+     mytree.<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(selector,..);
 
   NOTE2
   One should not call this function twice with the same selector file
@@ -3034,10 +3036,10 @@ if option =<span class="string">"d"</span> an analysis report is printed.
    <a href="./TSelector.html">TSelector</a> *selector = <a href="./TSelector.html">TSelector</a>::<a href="./TSelector.html#TSelector:GetSelector" title="TSelector* TSelector::GetSelector(const char* filename)">GetSelector</a>(<span class="string">"h1test.C"</span>);
    <a href="./TFile.html">TFile</a> *f1 = new <a href="./TFile.html">TFile</a>(<span class="string">"stubs_nood_le1.root"</span>);
    <a href="./TTree.html">TTree</a> *h1 = (<a href="./TTree.html">TTree</a>*)f1-&gt;Get(<span class="string">"h1"</span>);
-   h1-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(selector);
+   h1-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(selector);
    <a href="./TFile.html">TFile</a> *f2 = new <a href="./TFile.html">TFile</a>(<span class="string">"stubs_nood_le1_coarse.root"</span>);
    <a href="./TTree.html">TTree</a> *h2 = (<a href="./TTree.html">TTree</a>*)f2-&gt;Get(<span class="string">"h1"</span>);
-   h2-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(selector);
+   h2-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(selector);
 }
   or use ACLIC to compile the selector
    workaround 2
@@ -3045,15 +3047,15 @@ if option =<span class="string">"d"</span> an analysis report is printed.
 <a href="./ListOfTypes.html#void">void</a> stubs2() {
    <a href="./TFile.html">TFile</a> *f1 = new <a href="./TFile.html">TFile</a>(<span class="string">"stubs_nood_le1.root"</span>);
    <a href="./TTree.html">TTree</a> *h1 = (<a href="./TTree.html">TTree</a>*)f1-&gt;Get(<span class="string">"h1"</span>);
-   h1-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(<span class="string">"h1test.C+"</span>);
+   h1-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(<span class="string">"h1test.C+"</span>);
    <a href="./TFile.html">TFile</a> *f2 = new <a href="./TFile.html">TFile</a>(<span class="string">"stubs_nood_le1_coarse.root"</span>);
    <a href="./TTree.html">TTree</a> *h2 = (<a href="./TTree.html">TTree</a>*)f2-&gt;Get(<span class="string">"h1"</span>);
-   h2-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(<span class="string">"h1test.C+"</span>);
+   h2-&gt;<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>(<span class="string">"h1test.C+"</span>);
 }
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Long64_t">Long64_t</a> <a class="funcname" name="TTree:Process@1" href="src/TTree.cxx.html#EtPe3C">Process</a>(<span class="keyword">void</span>* selector, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)</span><br />
-<div class="funccomm"><pre> <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> this tree executing the code in the specified selector.
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Long64_t">Long64_t</a> <a class="funcname" name="TTree:Process" href="src/TTree.cxx.html#EtPe3C">Process</a>(<span class="keyword">void</span>* selector, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="./ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0)</span><br />
+<div class="funccomm"><pre> <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> this tree executing the code in the specified selector.
  The return value is -1 in case of error and <a href="./TSelector.html">TSelector</a>::<a href="./TSelector.html#TSelector:GetStatus" title="Long64_t TSelector::GetStatus()">GetStatus</a>() in
  in case of success.
 
@@ -3063,7 +3065,7 @@ if option =<span class="string">"d"</span> an analysis report is printed.
                     a convenient place to create your histograms.
     SlaveBegin():   called after Begin(), when on PROOF called only on the
                     slave servers.
-    <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>():      called for each event, in this function you decide what
+    <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>():      called for each event, in this function you decide what
                     to read and fill your histograms.
     SlaveTerminate: called at the end of the loop on the tree, when on PROOF
                     called only on the slave servers.
@@ -3249,11 +3251,15 @@ if option =<span class="string">"d"</span> an analysis report is printed.
 
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TTree:SetAutoSave" href="src/TTree.cxx.html#c4wH9">SetAutoSave</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a> autos = 300000000)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TTree:SetAutoSave" href="src/TTree.cxx.html#c4wH9">SetAutoSave</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a> autos = -300000000)</span><br />
 <div class="funccomm"><pre>This function may be called at the start of a program to change
-the default value for <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a>(300000000, ie 300 MBytes).
+the default value for <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> (and for <a href="./TTree.html#TTree:SetAutoSave" title="void TTree::SetAutoSave(Long64_t autos=-300000000)">SetAutoSave</a>) is -300000000, ie 300 MBytes
 When filling the Tree the branch buffers as well as the Tree header
-will be flushed to disk when more than <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> bytes have been written to the file.
+will be flushed to disk when the watermark is reached.
+If <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> is positive the watermark is reached when a multiple of <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a>
+entries have been written.
+If <a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> is negative the watermark is reached when -<a href="./TTree.html#TTree:fAutoSave" title="Long64_t TTree::fAutoSave">fAutoSave</a> bytes
+have been written to the file.
 In case of a program crash, it will be possible to recover the data in the Tree
 up to the last <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::AutoSave(Option_t* option=&quot;&quot;)">AutoSave</a> point.
 </pre></div>
@@ -3269,7 +3275,7 @@ up to the last <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::Auto
 
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:SetBranchAddress@2" href="src/TTree.cxx.html#uSIsj">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>** add, <a href="./TBranch.html">TBranch</a>** ptr = 0)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:SetBranchAddress" href="src/TTree.cxx.html#uSIsj">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>** add, <a href="./TBranch.html">TBranch</a>** ptr = 0)</span><br />
 <div class="funccomm"><pre> Change branch address, dealing with clone trees properly.
  See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:CheckBranchAddressType" title="Int_t TTree::CheckBranchAddressType(TBranch* branch,TClass* ptrClass,EDataType datatype,Bool_t ptr)">CheckBranchAddressType</a> for the semantic of the return value.
 
@@ -3278,8 +3284,8 @@ up to the last <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::Auto
 
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:SetBranchAddress" href="src/TTree.cxx.html#pBIqKC">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>* add, <a href="./TClass.html">TClass</a>* realClass, EDataType datatype, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> isptr)</span><br />
-<div class="funccomm"><pre> Verify the validity of the type of addr before calling <a href="./TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>.
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:SetBranchAddress@1" href="src/TTree.cxx.html#pBIqKC">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>* add, <a href="./TClass.html">TClass</a>* realClass, EDataType datatype, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> isptr)</span><br />
+<div class="funccomm"><pre> Verify the validity of the type of addr before calling <a href="./TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void** add,TBranch** ptr=0) or overloads">SetBranchAddress</a>.
  See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:CheckBranchAddressType" title="Int_t TTree::CheckBranchAddressType(TBranch* branch,TClass* ptrClass,EDataType datatype,Bool_t ptr)">CheckBranchAddressType</a> for the semantic of the return value.
 
  Note: See the comments in <a href="./TBranchElement.html">TBranchElement</a>::<a href="./TBranchElement.html#TBranchElement:SetAddress" title="void TBranchElement::SetAddress(void* addobj)">SetAddress</a>() for the
@@ -3287,8 +3293,8 @@ up to the last <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::Auto
 
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:SetBranchAddress@1" href="src/TTree.cxx.html#vjmNQD">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>* add, <a href="./TBranch.html">TBranch</a>** ptr, <a href="./TClass.html">TClass</a>* realClass, EDataType datatype, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> isptr)</span><br />
-<div class="funccomm"><pre> Verify the validity of the type of addr before calling <a href="./TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void* add,TClass* realClass,EDataType datatype,Bool_t isptr) or overloads">SetBranchAddress</a>.
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:SetBranchAddress@2" href="src/TTree.cxx.html#vjmNQD">SetBranchAddress</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <span class="keyword">void</span>* add, <a href="./TBranch.html">TBranch</a>** ptr, <a href="./TClass.html">TClass</a>* realClass, EDataType datatype, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> isptr)</span><br />
+<div class="funccomm"><pre> Verify the validity of the type of addr before calling <a href="./TTree.html#TTree:SetBranchAddress" title="Int_t TTree::SetBranchAddress(const char* bname,void** add,TBranch** ptr=0) or overloads">SetBranchAddress</a>.
  See <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:CheckBranchAddressType" title="Int_t TTree::CheckBranchAddressType(TBranch* branch,TClass* ptrClass,EDataType datatype,Bool_t ptr)">CheckBranchAddressType</a> for the semantic of the return value.
 
  Note: See the comments in <a href="./TBranchElement.html">TBranchElement</a>::<a href="./TBranchElement.html#TBranchElement:SetAddress" title="void TBranchElement::SetAddress(void* addobj)">SetAddress</a>() for the
@@ -3306,7 +3312,7 @@ up to the last <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::Auto
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TTree:SetBranchStatus" href="src/TTree.cxx.html#ZG86DD">SetBranchStatus</a>(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> status = 1, <a href="./ListOfTypes.html#UInt_t">UInt_t</a>* found = 0)</span><br />
-<div class="funccomm"><pre> Set branch status to <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> or DoNotProcess.
+<div class="funccomm"><pre> Set branch status to <a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> or DoNotProcess.
 
   When reading a Tree, by default, all branches are read.
   One can speed up considerably the analysis phase by activating
@@ -3339,7 +3345,7 @@ up to the last <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::Auto
   'name' and not on the branch hierarchy! In order to be able to
   selectively enable a top level object that is 'split' you need to make
   sure the name of the top level branch is prefixed to the sub-branches'
-  name (by adding a dot (<span class="string">'.'</span>) at the end of the <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a> creation and use the
+  name (by adding a dot (<span class="string">'.'</span>) at the end of the <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a> creation and use the
   corresponding bname.
 
   I.e If your Tree has been created in split mode with a parent branch <span class="string">"parent."</span>
@@ -3367,7 +3373,7 @@ up to the last <a href="./TTree.html#TTree:AutoSave" title="Long64_t TTree::Auto
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TTree:SetBranchStyle" href="src/TTree.cxx.html#SpFr6D">SetBranchStyle</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> style = 1)</span><br />
 <div class="funccomm"><pre> Set the current branch style.  (static function)
 
- style = 0 old <a href="./TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>
+ style = 0 old <a href="./TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>
  style = 1 new <a href="./TTree.html#TTree:Bronch" title="TBranch* TTree::Bronch(const char* name,const char* classname,void* addobj,Int_t bufsize=32000,Int_t splitlevel=99)">Bronch</a>
 </pre></div>
 </div>
@@ -3657,13 +3663,13 @@ is deleted. This <a href="./TEntryList.html">TEntryList</a> can be returned by <
 <div class="code"><code class="inlinecode">{ <a href="./TTree.html#TTree:fZipBytes" title="Long64_t TTree::fZipBytes">fZipBytes</a> += zip; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch" href="src/TTree.h.html#jf4zoD">Branch</a>(<a href="./TCollection.html">TCollection</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@2" href="src/TTree.h.html#jf4zoD">Branch</a>(<a href="./TCollection.html">TCollection</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@1" href="src/TTree.h.html#aIUroC">Branch</a>(<a href="./TList.html">TList</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@3" href="src/TTree.h.html#aIUroC">Branch</a>(<a href="./TList.html">TList</a>* list, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@2" href="src/TTree.h.html#ZVjYkE">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* folder, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TTree:Branch@4" href="src/TTree.h.html#ZVjYkE">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* folder, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000, <a href="./ListOfTypes.html#Int_t">Int_t</a> splitlevel = 99)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">return</span> <a class="funcname" name="TTree:Branch@3" href="src/TTree.h.html#mznnjB">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">return</span> <a class="funcname" name="TTree:Branch@5" href="src/TTree.h.html#mznnjB">Branch</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* address, <span class="keyword">const</span> <span class="keyword">char</span>* leaflist, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 32000)</span><br />
 <div class="funccomm"><pre> Overload to avoid confusion between this signature and the template instance.
 </pre></div>
 </div>
@@ -4027,7 +4033,7 @@ is deleted. This <a href="./TEntryList.html">TEntryList</a> can be returned by <
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   12/01/96</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/tree:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
+<em>&raquo; Last changed: root/tree:$Id$ </em><em>&raquo; Last generated: 2015-05-05 13:06</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

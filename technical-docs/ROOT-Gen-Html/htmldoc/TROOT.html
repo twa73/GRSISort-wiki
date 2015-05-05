@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:53 2015            -->
+<!--   Date: Tue May  5 12:09:26 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TROOT.h.html">header file</a>
 <a class="descrheadentry" href="src/TROOT.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TROOT_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -342,7 +342,7 @@ End of Main program
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TROOT:SaveContext">SaveContext</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TDirectory.html#TDirectory:SaveObjectAs"><span class="baseclass">TDirectory::</span>SaveObjectAs</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>*, <span class="keyword">const</span> <span class="keyword">char</span>* = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TDirectory.html#TDirectory:SaveSelf"><span class="baseclass">TDirectory::</span>SaveSelf</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> = <a href="./ListOfTypes.html#Bool_t">kFALSE</a>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TROOT:SetApplication">SetApplication</a>(<a href="./TApplication.html">TApplication</a>* app)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TROOT:SetBatch">SetBatch</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> batch = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
@@ -525,44 +525,41 @@ End of Main program
 </table></div>
 </div>
 <h2><a id="TROOT:Class_Charts"></a>Class Charts</h2>
-<map name="MapTROOT_Inh" id="MapTROOT_Inh">
-<area shape="rect" id="node3" href="./TDirectory.html" title="TDirectory" alt="" coords="419,7,558,35"/>
-<area shape="rect" id="node4" href="./TNamed.html" title="TNamed" alt="" coords="210,7,349,35"/>
-<area shape="rect" id="node5" href="./TObject.html" title="TObject" alt="" coords="2,7,141,35"/>
-</map>
-<map name="MapTROOT_InhMem" id="MapTROOT_InhMem">
-<area shape="rect" id="graph12" href="./TDirectory.html" alt="" coords="859,63,947,99"/>
-<area shape="rect" id="graph13" href="./TDirectory.html" alt="" coords="760,63,848,128"/>
-<area shape="rect" id="graph14" href="./TDirectory.html" alt="" coords="661,63,749,128"/>
-<area shape="rect" id="graph15" href="./TDirectory.html" alt="" coords="891,109,915,131"/>
-<area shape="rect" id="graph16" href="./TDirectory.html" alt="" coords="859,141,947,631"/>
-<area shape="rect" id="graph17" href="./TDirectory.html" alt="" coords="760,139,848,643"/>
-<area shape="rect" id="graph18" href="./TDirectory.html" alt="" coords="661,139,749,643"/>
-<area shape="rect" id="graph11" href="./TDirectory.html" title="TDirectory" alt="" coords="651,16,957,653"/>
-<area shape="rect" id="graph21" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph22" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph23" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph24" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph20" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph27" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph28" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph29" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph30" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph31" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph32" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph33" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph26" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTROOT_Lib" id="MapTROOT_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTROOT_Inh" class="tabsel" href="inh/TROOT_Inh.png" onclick="javascript:return SetImg('Charts','inh/TROOT_Inh.png');">Inheritance</a>
-<a id="imgTROOT_InhMem" class="tab" href="inhmem/TROOT_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TROOT_InhMem.png');">Inherited Members</a>
-<a id="imgTROOT_Incl" class="tab" href="incl/TROOT_Incl.png" onclick="javascript:return SetImg('Charts','incl/TROOT_Incl.png');">Includes</a>
-<a id="imgTROOT_Lib" class="tab" href="lib/TROOT_Lib.png" onclick="javascript:return SetImg('Charts','lib/TROOT_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTROOT_Inh" src="inh/TROOT_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TDirectory" href="./TDirectory.html">TDirectory</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TROOT" href="./TROOT.html">TROOT</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TROOT:_TROOT" href="src/TROOT.cxx.html#z.ocPD">~TROOT</a>()</span><br />
 <div class="funccomm"><pre> Clean up and free resources used by <a href="./ROOT.html">ROOT</a> (files, network sockets,
@@ -586,7 +583,7 @@ End of Main program
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TROOT:ClassSaved" href="src/TROOT.cxx.html#Mg4ZoC">ClassSaved</a>(<a href="./TClass.html">TClass</a>* cl)</span><br />
 <div class="funccomm"><pre> return class status bit kClassSaved for class cl
- This function is called by the <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> functions writing
+ This function is called by the <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> functions writing
  the C++ code for an object.
 </pre></div>
 </div>
@@ -1374,7 +1371,7 @@ End of Main program
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   08/12/94</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

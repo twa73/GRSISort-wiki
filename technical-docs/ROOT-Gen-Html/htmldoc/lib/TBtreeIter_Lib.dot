@@ -1,0 +1,14 @@
+strict digraph G {
+ratio=auto;
+rankdir=RL;
+compound=true;
+constraint=false;
+ranksep=0.7;
+nodesep=0.3;
+size="8,8";
+ratio=compress;
+"All Libraries" [URL="LibraryDependencies.html",shape=box,rank=max,fillcolor=lightgray,style=filled];
+"All Libraries" -> "libCore" [style=invis];
+"libCore" -> {
+ "libCint";}
+}

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Thu Mar 12 13:29:56 2015            -->
+<!--   Date: Tue May  5 12:01:42 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -89,6 +89,7 @@ return false;}
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:SetNumberOfPeaks">SetNumberOfPeaks</a>(<span class="keyword">int</span> tmp)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:SkewedGaus">SkewedGaus</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:SkewedGaus2">SkewedGaus2</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:StepBG">StepBG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIFunctions:StepFunction">StepFunction</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</td></tr>
 
 </table></div>
@@ -113,6 +114,8 @@ Requires the following parameters:
    - par[2]:  standard deviation of gaussian
    - par[5]:  Size of the step in the step function
 </pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TGRSIFunctions:StepBG" href="src/TGRSIFunctions.cxx.html#KAs3wD">StepBG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TGRSIFunctions:PhotoPeak" href="src/TGRSIFunctions.cxx.html#b6PkZD">PhotoPeak</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</span><br />
 <div class="funccomm"><pre>Returns the combination of a <a href="./TGRSIFunctions.html">TGRSIFunctions</a>::<a href="./TGRSIFunctions.html#TGRSIFunctions:Gaus" title="Double_t TGRSIFunctions::Gaus(Double_t* dim,Double_t* par)">Gaus</a> + a <a href="./TGRSIFunctions.html">TGRSIFunctions</a>::<a href="./TGRSIFunctions.html#TGRSIFunctions:SkewedGaus" title="Double_t TGRSIFunctions::SkewedGaus(Double_t* dim,Double_t* par)">SkewedGaus</a>
@@ -149,7 +152,7 @@ Requires the following parameters:
 <div class="funccomm"><pre> STATIC VARIABLE  (<a href="./TGRSIFunctions.html#TGRSIFunctions:npeaks" title="int TGRSIFunctions::npeaks">npeaks</a>) must be set before using!!!
  <a href="./TGRSIFunctions.html">TGRSIFunctions</a>::Set(<a href="./ListOfTypes.html#int">int</a> num);
 
- Limits need to be impossed or error states may occour.
+ Limits need to be imposed or error states may occour.
 
 </pre></div>
 </div>
@@ -222,7 +225,7 @@ binWidth is in s/bin.
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Thu Mar 12 13:29:57 2015 </em><em>&raquo; Last generated: 2015-03-12 13:29</em><br />
+<em>&raquo; Last changed: Tue May  5 12:01:42 2015 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

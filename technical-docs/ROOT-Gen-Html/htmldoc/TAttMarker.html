@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:11 2015            -->
+<!--   Date: Tue May  5 12:00:41 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -213,7 +213,7 @@ style used is 1. That's the most common one to draw scatter plots.
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:Modify">Modify</a>()</td></tr>
 <tr class="func"><td class="funcret"><a href="./TAttMarker.html">TAttMarker</a>&amp;</td><td class="funcname"><a class="funcname" href="#TAttMarker:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TAttMarker.html">TAttMarker</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:ResetAttMarker">ResetAttMarker</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* toption = <span class="string">""</span>)</td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SaveMarkerAttributes">SaveMarkerAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SaveMarkerAttributes">SaveMarkerAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SetMarkerAttributes">SetMarkerAttributes</a>()<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SetMarkerColor">SetMarkerColor</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> mcolor = 1)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SetMarkerColorAlpha">SetMarkerColorAlpha</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> mcolor, <a href="./ListOfTypes.html#Float_t">Float_t</a> malpha)</td></tr>
@@ -238,75 +238,81 @@ style used is 1. That's the most common one to draw scatter plots.
 </div>
 <h2><a id="TAttMarker:Class_Charts"></a>Class Charts</h2>
 <map name="MapTAttMarker_Inh" id="MapTAttMarker_Inh">
-<area shape="rect" id="node3" href="./TVirtualX.html" title="TVirtualX" alt="" coords="162,22,267,43"/>
-<area shape="rect" id="node4" href="./TTree.html" title="TTree" alt="" coords="162,74,267,94"/>
-<area shape="rect" id="node5" href="./TH1.html" title="TH1" alt="" coords="162,208,267,228"/>
-<area shape="rect" id="node6" href="./TGraph.html" title="TGraph" alt="" coords="162,368,267,388"/>
-<area shape="rect" id="node7" href="./TEfficiency.html" title="TEfficiency" alt="" coords="162,440,267,460"/>
-<area shape="rect" id="node8" href="./TF1.html" title="TF1" alt="" coords="162,460,267,481"/>
-<area shape="rect" id="node9" href="./TGraph2D.html" title="TGraph2D" alt="" coords="162,481,267,502"/>
-<area shape="rect" id="node10" href="./TVirtualPS.html" title="TVirtualPS" alt="" coords="162,502,267,522"/>
-<area shape="rect" id="node11" href="./TLegendEntry.html" title="TLegendEntry" alt="" coords="162,522,267,543"/>
-<area shape="rect" id="node12" href="./TMarker.html" title="TMarker" alt="" coords="162,543,267,564"/>
-<area shape="rect" id="node13" href="./TPolyMarker3D.html" title="TPolyMarker3D" alt="" coords="162,564,267,584"/>
-<area shape="rect" id="node14" href="./TPolyMarker.html" title="TPolyMarker" alt="" coords="162,584,267,605"/>
-<area shape="rect" id="node15" href="./TSpline.html" title="TSpline" alt="" coords="162,615,267,636"/>
-<area shape="rect" id="node16" href="./TStyle.html" title="TStyle" alt="" coords="162,636,267,656"/>
-<area shape="rect" id="node17" href="./TGX11.html" title="TGX11" alt="" coords="334,1,438,22"/>
-<area shape="rect" id="node18" href="./TChain.html" title="TChain" alt="" coords="334,22,438,43"/>
-<area shape="rect" id="node19" href="./TH1D.html" title="TH1D" alt="" coords="334,125,438,146"/>
-<area shape="rect" id="node20" href="./GTree.html" title="GTree" alt="" coords="334,43,438,63"/>
-<area shape="rect" id="node21" href="./TCutG.html" title="TCutG" alt="" coords="334,316,438,336"/>
-<area shape="rect" id="node22" href="./TF12.html" title="TF12" alt="" coords="334,419,438,440"/>
-<area shape="rect" id="node23" href="./TF2.html" title="TF2" alt="" coords="334,440,438,460"/>
-<area shape="rect" id="node24" href="./TGRSIFit.html" title="TGRSIFit" alt="" coords="334,460,438,481"/>
-<area shape="rect" id="node25" href="./TGraph2DErrors.html" title="TGraph2DErrors" alt="" coords="333,481,439,502"/>
-<area shape="rect" id="node26" href="./TGraphAsymmErrors.html" title="TGraphAsymmErrors" alt="" coords="319,336,453,357"/>
-<area shape="rect" id="node27" href="./TGraphBentErrors.html" title="TGraphBentErrors" alt="" coords="328,357,444,378"/>
-<area shape="rect" id="node28" href="./TGraphErrors.html" title="TGraphErrors" alt="" coords="334,378,438,398"/>
-<area shape="rect" id="node29" href="./TGraphQQ.html" title="TGraphQQ" alt="" coords="334,398,438,419"/>
-<area shape="rect" id="node30" href="./TH1C.html" title="TH1C" alt="" coords="334,146,438,166"/>
-<area shape="rect" id="node31" href="./TH1F.html" title="TH1F" alt="" coords="334,166,438,187"/>
-<area shape="rect" id="node32" href="./TH1I.html" title="TH1I" alt="" coords="334,187,438,208"/>
-<area shape="rect" id="node33" href="./TH1K.html" title="TH1K" alt="" coords="334,208,438,228"/>
-<area shape="rect" id="node34" href="./TH1S.html" title="TH1S" alt="" coords="334,228,438,249"/>
-<area shape="rect" id="node35" href="./TH2.html" title="TH2" alt="" coords="334,249,438,270"/>
-<area shape="rect" id="node36" href="./TH3.html" title="TH3" alt="" coords="334,295,438,316"/>
-<area shape="rect" id="node37" href="./TImageDump.html" title="TImageDump" alt="" coords="334,502,438,522"/>
-<area shape="rect" id="node38" href="./TNtuple.html" title="TNtuple" alt="" coords="334,63,438,84"/>
-<area shape="rect" id="node39" href="./TNtupleD.html" title="TNtupleD" alt="" coords="334,84,438,105"/>
-<area shape="rect" id="node40" href="./TPDF.html" title="TPDF" alt="" coords="334,522,438,543"/>
-<area shape="rect" id="node41" href="./TPointSet3D.html" title="TPointSet3D" alt="" coords="334,605,438,625"/>
-<area shape="rect" id="node42" href="./TPostScript.html" title="TPostScript" alt="" coords="334,543,438,564"/>
-<area shape="rect" id="node43" href="./TSVG.html" title="TSVG" alt="" coords="334,564,438,584"/>
-<area shape="rect" id="node44" href="./TSpline3.html" title="TSpline3" alt="" coords="334,625,438,646"/>
-<area shape="rect" id="node45" href="./TSpline5.html" title="TSpline5" alt="" coords="334,646,438,667"/>
-<area shape="rect" id="node46" href="./TTeXDump.html" title="TTeXDump" alt="" coords="334,584,438,605"/>
-<area shape="rect" id="node47" href="./TTreeSQL.html" title="TTreeSQL" alt="" coords="334,105,438,125"/>
-<area shape="rect" id="node48" href="./TGX11TTF.html" title="TGX11TTF" alt="" coords="506,1,610,22"/>
-<area shape="rect" id="node49" href="./GChain.html" title="GChain" alt="" coords="506,22,610,43"/>
-<area shape="rect" id="node50" href="./GH1D.html" title="GH1D" alt="" coords="506,110,610,130"/>
-<area shape="rect" id="node51" href="./TF3.html" title="TF3" alt="" coords="506,440,610,460"/>
-<area shape="rect" id="node52" href="./TGraphPolar.html" title="TGraphPolar" alt="" coords="506,388,610,409"/>
-<area shape="rect" id="node53" href="./TH2C.html" title="TH2C" alt="" coords="506,161,610,182"/>
-<area shape="rect" id="node54" href="./TH2D.html" title="TH2D" alt="" coords="506,182,610,202"/>
-<area shape="rect" id="node55" href="./TH2F.html" title="TH2F" alt="" coords="506,202,610,223"/>
-<area shape="rect" id="node56" href="./TH2I.html" title="TH2I" alt="" coords="506,223,610,244"/>
-<area shape="rect" id="node57" href="./TH2Poly.html" title="TH2Poly" alt="" coords="506,244,610,264"/>
-<area shape="rect" id="node58" href="./TH2S.html" title="TH2S" alt="" coords="506,264,610,285"/>
-<area shape="rect" id="node59" href="./TH3C.html" title="TH3C" alt="" coords="506,285,610,306"/>
-<area shape="rect" id="node60" href="./TH3D.html" title="TH3D" alt="" coords="506,306,610,326"/>
-<area shape="rect" id="node61" href="./TH3F.html" title="TH3F" alt="" coords="506,326,610,347"/>
-<area shape="rect" id="node62" href="./TH3I.html" title="TH3I" alt="" coords="506,347,610,368"/>
-<area shape="rect" id="node63" href="./TH3S.html" title="TH3S" alt="" coords="506,368,610,388"/>
-<area shape="rect" id="node64" href="./TPeak.html" title="TPeak" alt="" coords="506,460,610,481"/>
-<area shape="rect" id="node65" href="./TProfile.html" title="TProfile" alt="" coords="506,130,610,151"/>
-<area shape="rect" id="node66" href="./TProofChain.html" title="TProofChain" alt="" coords="506,43,610,63"/>
-<area shape="rect" id="node67" href="./TProfile2D.html" title="TProfile2D" alt="" coords="662,182,767,202"/>
-<area shape="rect" id="node68" href="./TProfile3D.html" title="TProfile3D" alt="" coords="662,306,767,326"/>
+<area shape="rect" id="node2" href="./TTree.html" title="TTree" alt="" coords="162,61,266,81"/>
+<area shape="rect" id="node3" href="./TVirtualX.html" title="TVirtualX" alt="" coords="162,151,266,171"/>
+<area shape="rect" id="node4" href="./TStyle.html" title="TStyle" alt="" coords="162,201,266,221"/>
+<area shape="rect" id="node5" href="./TH1.html" title="TH1" alt="" coords="162,221,266,241"/>
+<area shape="rect" id="node6" href="./TGraph.html" title="TGraph" alt="" coords="162,371,266,391"/>
+<area shape="rect" id="node7" href="./TEfficiency.html" title="TEfficiency" alt="" coords="162,441,266,461"/>
+<area shape="rect" id="node8" href="./TF1.html" title="TF1" alt="" coords="162,461,266,481"/>
+<area shape="rect" id="node9" href="./TGraph2D.html" title="TGraph2D" alt="" coords="162,481,266,500"/>
+<area shape="rect" id="node10" href="./TVirtualPS.html" title="TVirtualPS" alt="" coords="162,501,266,520"/>
+<area shape="rect" id="node11" href="./TLegendEntry.html" title="TLegendEntry" alt="" coords="162,521,266,540"/>
+<area shape="rect" id="node12" href="./TMarker.html" title="TMarker" alt="" coords="162,541,266,560"/>
+<area shape="rect" id="node13" href="./TPolyMarker3D.html" title="TPolyMarker3D" alt="" coords="162,561,266,580"/>
+<area shape="rect" id="node14" href="./TPolyMarker.html" title="TPolyMarker" alt="" coords="162,581,266,600"/>
+<area shape="rect" id="node15" href="./TSpline.html" title="TSpline" alt="" coords="162,621,266,640"/>
+<area shape="rect" id="node16" href="./TChain.html" title="TChain" alt="" coords="333,11,438,31"/>
+<area shape="rect" id="node17" href="./TGCocoa.html" title="TGCocoa" alt="" coords="333,111,438,131"/>
+<area shape="rect" id="node18" href="./TH1C.html" title="TH1C" alt="" coords="333,131,438,151"/>
+<area shape="rect" id="node19" href="./TH1F.html" title="TH1F" alt="" coords="333,151,438,171"/>
+<area shape="rect" id="node20" href="./TH1I.html" title="TH1I" alt="" coords="333,171,438,191"/>
+<area shape="rect" id="node21" href="./TH1K.html" title="TH1K" alt="" coords="333,191,438,211"/>
+<area shape="rect" id="node22" href="./TH1D.html" title="TH1D" alt="" coords="333,211,438,231"/>
+<area shape="rect" id="node23" href="./GTree.html" title="GTree" alt="" coords="333,31,438,51"/>
+<area shape="rect" id="node24" href="./TCutG.html" title="TCutG" alt="" coords="333,321,438,341"/>
+<area shape="rect" id="node25" href="./TGraphErrors.html" title="TGraphErrors" alt="" coords="333,341,438,361"/>
+<area shape="rect" id="node26" href="./TF12.html" title="TF12" alt="" coords="333,421,438,441"/>
+<area shape="rect" id="node27" href="./TF2.html" title="TF2" alt="" coords="333,441,438,461"/>
+<area shape="rect" id="node28" href="./TGRSIFit.html" title="TGRSIFit" alt="" coords="333,461,438,481"/>
+<area shape="rect" id="node29" href="./TGraph2DErrors.html" title="TGraph2DErrors" alt="" coords="333,481,438,500"/>
+<area shape="rect" id="node30" href="./TGraphAsymmErrors.html" title="TGraphAsymmErrors" alt="" coords="319,361,453,381"/>
+<area shape="rect" id="node31" href="./TGraphBentErrors.html" title="TGraphBentErrors" alt="" coords="328,381,443,401"/>
+<area shape="rect" id="node32" href="./TGraphQQ.html" title="TGraphQQ" alt="" coords="333,401,438,421"/>
+<area shape="rect" id="node33" href="./TH1S.html" title="TH1S" alt="" coords="333,231,438,251"/>
+<area shape="rect" id="node34" href="./TH2.html" title="TH2" alt="" coords="333,251,438,271"/>
+<area shape="rect" id="node35" href="./TH3.html" title="TH3" alt="" coords="333,301,438,321"/>
+<area shape="rect" id="node36" href="./TImageDump.html" title="TImageDump" alt="" coords="333,501,438,520"/>
+<area shape="rect" id="node37" href="./TTeXDump.html" title="TTeXDump" alt="" coords="333,521,438,540"/>
+<area shape="rect" id="node38" href="./TTreeSQL.html" title="TTreeSQL" alt="" coords="333,51,438,71"/>
+<area shape="rect" id="node39" href="./TNtuple.html" title="TNtuple" alt="" coords="333,71,438,91"/>
+<area shape="rect" id="node40" href="./TNtupleD.html" title="TNtupleD" alt="" coords="333,91,438,111"/>
+<area shape="rect" id="node41" href="./TPDF.html" title="TPDF" alt="" coords="333,541,438,560"/>
+<area shape="rect" id="node42" href="./TPointSet3D.html" title="TPointSet3D" alt="" coords="333,601,438,620"/>
+<area shape="rect" id="node43" href="./TPostScript.html" title="TPostScript" alt="" coords="333,561,438,580"/>
+<area shape="rect" id="node44" href="./TSVG.html" title="TSVG" alt="" coords="333,581,438,600"/>
+<area shape="rect" id="node45" href="./TSpline3.html" title="TSpline3" alt="" coords="333,621,438,640"/>
+<area shape="rect" id="node46" href="./TSpline5.html" title="TSpline5" alt="" coords="333,641,438,660"/>
+<area shape="rect" id="node47" href="./GChain.html" title="GChain" alt="" coords="505,1,610,21"/>
+<area shape="rect" id="node48" href="./TGQuartz.html" title="TGQuartz" alt="" coords="505,111,610,131"/>
+<area shape="rect" id="node49" href="./GH1D.html" title="GH1D" alt="" coords="505,131,610,151"/>
+<area shape="rect" id="node50" href="./TCal.html" title="TCal" alt="" coords="505,391,610,411"/>
+<area shape="rect" id="node51" href="./TF3.html" title="TF3" alt="" coords="505,441,610,461"/>
+<area shape="rect" id="node52" href="./TGraphPolar.html" title="TGraphPolar" alt="" coords="505,411,610,431"/>
+<area shape="rect" id="node53" href="./TH2C.html" title="TH2C" alt="" coords="505,171,610,191"/>
+<area shape="rect" id="node54" href="./TH2D.html" title="TH2D" alt="" coords="505,191,610,211"/>
+<area shape="rect" id="node55" href="./TH2F.html" title="TH2F" alt="" coords="505,211,610,231"/>
+<area shape="rect" id="node56" href="./TH2I.html" title="TH2I" alt="" coords="505,231,610,251"/>
+<area shape="rect" id="node57" href="./TH2Poly.html" title="TH2Poly" alt="" coords="505,251,610,271"/>
+<area shape="rect" id="node58" href="./TH2S.html" title="TH2S" alt="" coords="505,271,610,291"/>
+<area shape="rect" id="node59" href="./TH3C.html" title="TH3C" alt="" coords="505,291,610,311"/>
+<area shape="rect" id="node60" href="./TH3D.html" title="TH3D" alt="" coords="505,311,610,331"/>
+<area shape="rect" id="node61" href="./TH3F.html" title="TH3F" alt="" coords="505,331,610,351"/>
+<area shape="rect" id="node62" href="./TH3I.html" title="TH3I" alt="" coords="505,351,610,371"/>
+<area shape="rect" id="node63" href="./TH3S.html" title="TH3S" alt="" coords="505,371,610,391"/>
+<area shape="rect" id="node64" href="./TPeak.html" title="TPeak" alt="" coords="505,461,610,481"/>
+<area shape="rect" id="node65" href="./TProfile.html" title="TProfile" alt="" coords="505,151,610,171"/>
+<area shape="rect" id="node66" href="./TProofChain.html" title="TProofChain" alt="" coords="505,21,610,41"/>
+<area shape="rect" id="node67" href="./TGainMatch.html" title="TGainMatch" alt="" coords="662,351,767,371"/>
+<area shape="rect" id="node68" href="./TCFDCal.html" title="TCFDCal" alt="" coords="662,371,767,391"/>
+<area shape="rect" id="node69" href="./TEfficiencyCal.html" title="TEfficiencyCal" alt="" coords="662,391,767,411"/>
+<area shape="rect" id="node70" href="./TEnergyCal.html" title="TEnergyCal" alt="" coords="662,411,767,431"/>
+<area shape="rect" id="node71" href="./TTimeCal.html" title="TTimeCal" alt="" coords="662,431,767,451"/>
+<area shape="rect" id="node72" href="./TProfile2D.html" title="TProfile2D" alt="" coords="662,191,767,211"/>
+<area shape="rect" id="node73" href="./TProfile3D.html" title="TProfile3D" alt="" coords="662,311,767,331"/>
 </map>
 <map name="MapTAttMarker_Lib" id="MapTAttMarker_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="335,5,452,53"/>
 </map>
 <div class="tabs">
 <a id="imgTAttMarker_Inh" class="tabsel" href="inh/TAttMarker_Inh.png" onclick="javascript:return SetImg('Charts','inh/TAttMarker_Inh.png');">Inheritance</a>
@@ -347,7 +353,7 @@ style used is 1. That's the most common one to draw scatter plots.
 <div class="funccomm"><pre> Reset this marker attributes to the default values.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttMarker:SaveMarkerAttributes" href="src/TAttMarker.cxx.html#OKg6fD">SaveMarkerAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttMarker:SaveMarkerAttributes" href="src/TAttMarker.cxx.html#OKg6fD">SaveMarkerAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</span><br />
 <div class="funccomm"><pre> Save line attributes as C++ statement(s) on output stream out.
 </pre></div>
 </div>
@@ -397,7 +403,7 @@ style used is 1. That's the most common one to draw scatter plots.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   12/05/95</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:00</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

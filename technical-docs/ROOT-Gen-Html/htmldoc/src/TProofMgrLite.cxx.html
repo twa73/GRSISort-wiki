@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:42 2015            -->
+<!--   Date: Tue May  5 12:09:24 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -195,9 +195,9 @@ ClassImp(<a href="../TProofMgrLite.html">TProofMgrLite</a>)
             <span class="keyword">if</span> (!strncmp(e, <span class="string">"session-"</span>, 8)) {
                <a href="../TString.html">TString</a> d(e);
                <a href="../ListOfTypes.html#Int_t">Int_t</a> i = d.Last(<span class="string">'-'</span>);
-               <span class="keyword">if</span> (i != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) d.Remove(i);
+               <span class="keyword">if</span> (i != <a href="../ListOfTypes.html#int">kNPOS</a>) d.Remove(i);
                i = d.Last(<span class="string">'-'</span>);
-               <span class="keyword">if</span> (i != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) d.Remove(0,i+1);
+               <span class="keyword">if</span> (i != <a href="../ListOfTypes.html#int">kNPOS</a>) d.Remove(0,i+1);
                <a href="../TString.html">TString</a> path = Form(<span class="string">"%s/%s"</span>, sandbox.Data(), e);
                olddirs-&gt;Add(<span class="keyword">new</span> <a href="../TNamed.html">TNamed</a>(d, path));
             }
@@ -252,7 +252,7 @@ ClassImp(<a href="../TProofMgrLite.html">TProofMgrLite</a>)
                ord = fn;
                ord.ReplaceAll(<span class="string">"worker-"</span>, <span class="string">""</span>);
                <a href="../ListOfTypes.html#Int_t">Int_t</a> id = ord.First(<span class="string">'-'</span>);
-               <span class="keyword">if</span> (id != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+               <span class="keyword">if</span> (id != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                   ord.Remove(id);
                } <span class="keyword">else</span> <span class="keyword">if</span> (ord.Contains(<span class="string">".valgrind"</span>)) {
                   <span class="comment">// Add to the list (special tag for valgrind outputs)</span>
@@ -411,8 +411,8 @@ ClassImp(<a href="../TProofMgrLite.html">TProofMgrLite</a>)
       line.ReadLine(in);
 
       <span class="comment">// Keep only lines with pattern</span>
-      <span class="keyword">if</span> ((excl &amp;&amp; line.Index(re) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) ||
-          (!excl &amp;&amp; line.Index(re) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)) <span class="keyword">continue</span>;
+      <span class="keyword">if</span> ((excl &amp;&amp; line.Index(re) != <a href="../ListOfTypes.html#int">kNPOS</a>) ||
+          (!excl &amp;&amp; line.Index(re) == <a href="../ListOfTypes.html#int">kNPOS</a>)) <span class="keyword">continue</span>;
 
       <span class="comment">// Remove trailing '\n', if any</span>
       <span class="keyword">if</span> (!line.EndsWith(<span class="string">"\n"</span>)) line.Append('\n');
@@ -433,7 +433,7 @@ ClassImp(<a href="../TProofMgrLite.html">TProofMgrLite</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

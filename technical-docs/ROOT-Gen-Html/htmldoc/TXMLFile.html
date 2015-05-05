@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:40:43 2015            -->
+<!--   Date: Tue May  5 13:08:08 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -230,6 +230,7 @@ return false;}
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TXMLFile:GetNbytesFree">GetNbytesFree</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TXMLFile:GetNbytesInfo">GetNbytesInfo</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TDirectoryFile.html#TDirectoryFile:GetNbytesKeys"><span class="baseclass">TDirectoryFile::</span>GetNbytesKeys</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TString.html">TString</a></td><td class="funcname"><a class="funcname" href="./TFile.html#TFile:GetNewUrl"><span class="baseclass">TFile::</span>GetNewUrl</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TXMLSetup.html#TXMLSetup:GetNextRefCounter"><span class="baseclass">TXMLSetup::</span>GetNextRefCounter</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TXMLFile:GetNfree">GetNfree</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TDirectoryFile.html#TDirectoryFile:GetNkeys"><span class="baseclass">TDirectoryFile::</span>GetNkeys</a>() <span class="keyword">const</span></td></tr>
@@ -337,7 +338,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TDirectoryFile.html#TDirectoryFile:Save"><span class="baseclass">TDirectoryFile::</span>Save</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TDirectoryFile.html#TDirectoryFile:SaveObjectAs"><span class="baseclass">TDirectoryFile::</span>SaveObjectAs</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj, <span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TDirectoryFile.html#TDirectoryFile:SaveSelf"><span class="baseclass">TDirectoryFile::</span>SaveSelf</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> force = <a href="./ListOfTypes.html#Bool_t">kFALSE</a>)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TXMLFile:Seek">Seek</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a>, <a href="./TFile.html">TFile</a>::ERelativeTo = kBeg)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
@@ -610,62 +611,62 @@ return false;}
 </div>
 <h2><a id="TXMLFile:Class_Charts"></a>Class Charts</h2>
 <map name="MapTXMLFile_Inh" id="MapTXMLFile_Inh">
-<area shape="rect" id="node3" href="./TFile.html" title="TFile" alt="" coords="542,1,632,19"/>
-<area shape="rect" id="node4" href="./TXMLSetup.html" title="TXMLSetup" alt="" coords="542,19,632,37"/>
-<area shape="rect" id="node5" href="./TDirectoryFile.html" title="TDirectoryFile" alt="" coords="407,1,497,19"/>
-<area shape="rect" id="node6" href="./TDirectory.html" title="TDirectory" alt="" coords="271,1,361,19"/>
-<area shape="rect" id="node7" href="./TNamed.html" title="TNamed" alt="" coords="136,1,226,19"/>
-<area shape="rect" id="node8" href="./TObject.html" title="TObject" alt="" coords="1,1,91,19"/>
+<area shape="rect" id="node2" href="./TFile.html" title="TFile" alt="" coords="542,1,632,18"/>
+<area shape="rect" id="node3" href="./TXMLSetup.html" title="TXMLSetup" alt="" coords="542,18,632,35"/>
+<area shape="rect" id="node4" href="./TDirectoryFile.html" title="TDirectoryFile" alt="" coords="407,1,497,18"/>
+<area shape="rect" id="node5" href="./TDirectory.html" title="TDirectory" alt="" coords="271,1,361,18"/>
+<area shape="rect" id="node6" href="./TNamed.html" title="TNamed" alt="" coords="136,1,226,18"/>
+<area shape="rect" id="node7" href="./TObject.html" title="TObject" alt="" coords="1,1,91,18"/>
 </map>
 <map name="MapTXMLFile_InhMem" id="MapTXMLFile_InhMem">
-<area shape="rect" id="graph12" href="./TFile.html" alt="" coords="1493,63,1581,436"/>
-<area shape="rect" id="graph13" href="./TFile.html" alt="" coords="1395,63,1483,465"/>
-<area shape="rect" id="graph14" href="./TFile.html" alt="" coords="1296,63,1384,465"/>
-<area shape="rect" id="graph15" href="./TFile.html" alt="" coords="1525,447,1549,468"/>
-<area shape="rect" id="graph16" href="./TFile.html" alt="" coords="1493,479,1581,1173"/>
-<area shape="rect" id="graph17" href="./TFile.html" alt="" coords="1395,476,1483,1200"/>
-<area shape="rect" id="graph18" href="./TFile.html" alt="" coords="1296,476,1384,1200"/>
-<area shape="rect" id="graph11" href="./TFile.html" title="TFile" alt="" coords="1285,16,1592,1211"/>
-<area shape="rect" id="graph21" href="./TXMLSetup.html" alt="" coords="1493,1268,1581,1319"/>
-<area shape="rect" id="graph22" href="./TXMLSetup.html" alt="" coords="1395,1268,1483,1348"/>
-<area shape="rect" id="graph23" href="./TXMLSetup.html" alt="" coords="1296,1268,1384,1348"/>
-<area shape="rect" id="graph24" href="./TXMLSetup.html" alt="" coords="1525,1329,1549,1351"/>
-<area shape="rect" id="graph25" href="./TXMLSetup.html" alt="" coords="1493,1361,1581,1557"/>
-<area shape="rect" id="graph26" href="./TXMLSetup.html" alt="" coords="1395,1361,1483,1557"/>
-<area shape="rect" id="graph27" href="./TXMLSetup.html" alt="" coords="1296,1361,1384,1557"/>
-<area shape="rect" id="graph20" href="./TXMLSetup.html" title="TXMLSetup" alt="" coords="1285,1221,1592,1568"/>
-<area shape="rect" id="graph30" href="./TDirectoryFile.html" alt="" coords="1176,63,1264,143"/>
-<area shape="rect" id="graph31" href="./TDirectoryFile.html" alt="" coords="1077,63,1165,157"/>
-<area shape="rect" id="graph32" href="./TDirectoryFile.html" alt="" coords="979,63,1067,157"/>
-<area shape="rect" id="graph33" href="./TDirectoryFile.html" alt="" coords="1208,153,1232,175"/>
-<area shape="rect" id="graph34" href="./TDirectoryFile.html" alt="" coords="1176,185,1264,557"/>
-<area shape="rect" id="graph35" href="./TDirectoryFile.html" alt="" coords="1077,185,1165,557"/>
-<area shape="rect" id="graph36" href="./TDirectoryFile.html" alt="" coords="979,185,1067,557"/>
-<area shape="rect" id="graph29" href="./TDirectoryFile.html" title="TDirectoryFile" alt="" coords="968,16,1275,568"/>
-<area shape="rect" id="graph39" href="./TDirectory.html" alt="" coords="859,63,947,99"/>
-<area shape="rect" id="graph40" href="./TDirectory.html" alt="" coords="760,63,848,128"/>
-<area shape="rect" id="graph41" href="./TDirectory.html" alt="" coords="661,63,749,128"/>
-<area shape="rect" id="graph42" href="./TDirectory.html" alt="" coords="891,109,915,131"/>
-<area shape="rect" id="graph43" href="./TDirectory.html" alt="" coords="859,141,947,631"/>
-<area shape="rect" id="graph44" href="./TDirectory.html" alt="" coords="760,139,848,643"/>
-<area shape="rect" id="graph45" href="./TDirectory.html" alt="" coords="661,139,749,643"/>
-<area shape="rect" id="graph38" href="./TDirectory.html" title="TDirectory" alt="" coords="651,16,957,653"/>
-<area shape="rect" id="graph48" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph49" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph50" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph51" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph47" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph54" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph55" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph56" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph57" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph58" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph59" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph60" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph53" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
+<area shape="rect" id="clust11" href="./TFile.html" alt="" coords="1099,47,1165,433"/>
+<area shape="rect" id="clust12" href="./TFile.html" alt="" coords="1021,47,1088,465"/>
+<area shape="rect" id="clust13" href="./TFile.html" alt="" coords="944,47,1011,465"/>
+<area shape="rect" id="clust14" href="./TFile.html" alt="" coords="1131,448,1133,451"/>
+<area shape="rect" id="clust15" href="./TFile.html" alt="" coords="1099,465,1165,1217"/>
+<area shape="rect" id="clust16" href="./TFile.html" alt="" coords="1021,465,1088,1233"/>
+<area shape="rect" id="clust17" href="./TFile.html" alt="" coords="944,465,1011,1233"/>
+<area shape="rect" id="clust10" href="./TFile.html" title="TFile" alt="" coords="944,16,1165,1233"/>
+<area shape="rect" id="clust20" href="./TXMLSetup.html" alt="" coords="1099,1264,1165,1299"/>
+<area shape="rect" id="clust21" href="./TXMLSetup.html" alt="" coords="1021,1264,1088,1331"/>
+<area shape="rect" id="clust22" href="./TXMLSetup.html" alt="" coords="944,1264,1011,1331"/>
+<area shape="rect" id="clust23" href="./TXMLSetup.html" alt="" coords="1131,1313,1133,1316"/>
+<area shape="rect" id="clust24" href="./TXMLSetup.html" alt="" coords="1099,1331,1165,1523"/>
+<area shape="rect" id="clust25" href="./TXMLSetup.html" alt="" coords="1021,1331,1088,1523"/>
+<area shape="rect" id="clust26" href="./TXMLSetup.html" alt="" coords="944,1331,1011,1523"/>
+<area shape="rect" id="clust19" href="./TXMLSetup.html" title="TXMLSetup" alt="" coords="944,1233,1165,1523"/>
+<area shape="rect" id="clust29" href="./TDirectoryFile.html" alt="" coords="867,47,933,113"/>
+<area shape="rect" id="clust30" href="./TDirectoryFile.html" alt="" coords="789,47,856,129"/>
+<area shape="rect" id="clust31" href="./TDirectoryFile.html" alt="" coords="712,47,779,129"/>
+<area shape="rect" id="clust32" href="./TDirectoryFile.html" alt="" coords="899,120,901,123"/>
+<area shape="rect" id="clust33" href="./TDirectoryFile.html" alt="" coords="867,129,933,513"/>
+<area shape="rect" id="clust34" href="./TDirectoryFile.html" alt="" coords="789,129,856,513"/>
+<area shape="rect" id="clust35" href="./TDirectoryFile.html" alt="" coords="712,129,779,513"/>
+<area shape="rect" id="clust28" href="./TDirectoryFile.html" title="TDirectoryFile" alt="" coords="712,16,933,513"/>
+<area shape="rect" id="clust38" href="./TDirectory.html" alt="" coords="635,47,701,65"/>
+<area shape="rect" id="clust39" href="./TDirectory.html" alt="" coords="557,47,624,97"/>
+<area shape="rect" id="clust40" href="./TDirectory.html" alt="" coords="480,47,547,97"/>
+<area shape="rect" id="clust41" href="./TDirectory.html" alt="" coords="667,80,669,83"/>
+<area shape="rect" id="clust42" href="./TDirectory.html" alt="" coords="635,97,701,609"/>
+<area shape="rect" id="clust43" href="./TDirectory.html" alt="" coords="557,97,624,625"/>
+<area shape="rect" id="clust44" href="./TDirectory.html" alt="" coords="480,97,547,625"/>
+<area shape="rect" id="clust37" href="./TDirectory.html" title="TDirectory" alt="" coords="480,16,701,625"/>
+<area shape="rect" id="clust47" href="./TNamed.html" alt="" coords="248,47,469,65"/>
+<area shape="rect" id="clust48" href="./TNamed.html" alt="" coords="403,65,469,225"/>
+<area shape="rect" id="clust49" href="./TNamed.html" alt="" coords="325,65,392,225"/>
+<area shape="rect" id="clust50" href="./TNamed.html" alt="" coords="248,65,315,225"/>
+<area shape="rect" id="clust46" href="./TNamed.html" title="TNamed" alt="" coords="248,16,469,225"/>
+<area shape="rect" id="clust53" href="./TObject.html" alt="" coords="171,47,237,145"/>
+<area shape="rect" id="clust54" href="./TObject.html" alt="" coords="93,47,160,161"/>
+<area shape="rect" id="clust55" href="./TObject.html" alt="" coords="16,47,83,161"/>
+<area shape="rect" id="clust56" href="./TObject.html" alt="" coords="203,152,205,155"/>
+<area shape="rect" id="clust57" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust58" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust59" href="./TObject.html" alt="" coords="16,161,83,609"/>
+<area shape="rect" id="clust52" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
 </map>
 <map name="MapTXMLFile_Lib" id="MapTXMLFile_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="392,87,507,135"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="373,83,490,131"/>
 </map>
 <div class="tabs">
 <a id="imgTXMLFile_Inh" class="tabsel" href="inh/TXMLFile_Inh.png" onclick="javascript:return SetImg('Charts','inh/TXMLFile_Inh.png');">Inheritance</a>
@@ -1084,7 +1085,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Sergey+Linev"> Sergey Linev  10.05.2004</a> </em><em>&raquo; Copyright   (C) 1995-2004, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/xml:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
+<em>&raquo; Last changed: root/xml:$Id$ </em><em>&raquo; Last generated: 2015-05-05 13:08</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

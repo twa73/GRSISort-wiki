@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:13 2015            -->
+<!--   Date: Tue May  5 12:09:29 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TSVG.h.html">header file</a>
 <a class="descrheadentry" href="src/TSVG.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TSVG_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -118,7 +118,7 @@ using the file extension <tt>.svgz</tt>.
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Clear"><span class="baseclass">TNamed::</span>Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Clone"><span class="baseclass">TNamed::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSVG:Close">Close</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:CMtoSVG">CMtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> u)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:CMtoSVG">CMtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> u)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Compare"><span class="baseclass">TNamed::</span>Compare</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Copy"><span class="baseclass">TNamed::</span>Copy</a>(<a href="./TObject.html">TObject</a>&amp; named) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -186,7 +186,7 @@ using the file extension <tt>.svgz</tt>.
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:ls"><span class="baseclass">TNamed::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:Modify"><span class="baseclass">TAttLine::</span>Modify</a>()</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSVG:MovePS">MovePS</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> x, <a href="./ListOfTypes.html#Int_t">Int_t</a> y)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSVG:MovePS">MovePS</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x, <a href="./ListOfTypes.html#Double_t">Double_t</a> y)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSVG:NewPage">NewPage</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Notify"><span class="baseclass">TObject::</span>Notify</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Obsolete"><span class="baseclass">TObject::</span>Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
@@ -217,11 +217,11 @@ using the file extension <tt>.svgz</tt>.
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttText.html#TAttText:ResetAttText"><span class="baseclass">TAttText::</span>ResetAttText</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* toption = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttMarker.html#TAttMarker:SaveMarkerAttributes"><span class="baseclass">TAttMarker::</span>SaveMarkerAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttText.html#TAttText:SaveTextAttributes"><span class="baseclass">TAttText::</span>SaveTextAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> alidef = 12, <a href="./ListOfTypes.html#Float_t">Float_t</a> angdef = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> fondef = 61, <a href="./ListOfTypes.html#Float_t">Float_t</a> sizdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttMarker.html#TAttMarker:SaveMarkerAttributes"><span class="baseclass">TAttMarker::</span>SaveMarkerAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttText.html#TAttText:SaveTextAttributes"><span class="baseclass">TAttText::</span>SaveTextAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> alidef = 12, <a href="./ListOfTypes.html#Float_t">Float_t</a> angdef = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> fondef = 61, <a href="./ListOfTypes.html#Float_t">Float_t</a> sizdef = 1)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSVG:SetColor">SetColor</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> color = 1)</td></tr>
@@ -270,15 +270,15 @@ using the file extension <tt>.svgz</tt>.
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSVG:TextNDC">TextNDC</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> u, <a href="./ListOfTypes.html#Double_t">Double_t</a> v, <span class="keyword">const</span> <span class="keyword">char</span>* string)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSVG:TextNDC@1">TextNDC</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>, <a href="./ListOfTypes.html#Double_t">Double_t</a>, <span class="keyword">const</span> <span class="keyword">wchar_t</span>*)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:UseCurrentStyle"><span class="baseclass">TObject::</span>UseCurrentStyle</a>()</td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:UtoSVG">UtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> u)</td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:VtoSVG">VtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> v)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:UtoSVG">UtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> u)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:VtoSVG">VtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> v)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TVirtualPS.html#TVirtualPS:WriteInteger"><span class="baseclass">TVirtualPS::</span>WriteInteger</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> space = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TVirtualPS.html#TVirtualPS:WriteReal"><span class="baseclass">TVirtualPS::</span>WriteReal</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> r, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> space = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:XtoSVG">XtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x)</td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:YtoSVG">YtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> y)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:XtoSVG">XtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TSVG:YtoSVG">YtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> y)</td></tr>
 
 </table></div>
 <div class="access" id="funcprot"><b>protected:</b>
@@ -341,80 +341,74 @@ using the file extension <tt>.svgz</tt>.
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TSVG:fType"></a>fType</td><td class="datadesc">Workstation type used to know if the SVG is open</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="TSVG:fXsize"></a>fXsize</td><td class="datadesc">Page size along X</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="TSVG:fYsize"></a>fYsize</td><td class="datadesc">Page size along Y</td></tr>
-<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TSVG:fYsizeSVG"></a>fYsizeSVG</td><td class="datadesc">Page's Y size in SVG units</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="TSVG:fYsizeSVG"></a>fYsizeSVG</td><td class="datadesc">Page's Y size in SVG units</td></tr>
 
 </table></div>
 </div>
 <h2><a id="TSVG:Class_Charts"></a>Class Charts</h2>
-<map name="MapTSVG_Inh" id="MapTSVG_Inh">
-<area shape="rect" id="node3" href="./TVirtualPS.html" title="TVirtualPS" alt="" coords="419,57,558,84"/>
-<area shape="rect" id="node4" href="./TNamed.html" title="TNamed" alt="" coords="210,2,349,29"/>
-<area shape="rect" id="node5" href="./TAttLine.html" title="TAttLine" alt="" coords="210,29,349,57"/>
-<area shape="rect" id="node6" href="./TAttFill.html" title="TAttFill" alt="" coords="210,57,349,84"/>
-<area shape="rect" id="node7" href="./TAttMarker.html" title="TAttMarker" alt="" coords="210,84,349,112"/>
-<area shape="rect" id="node8" href="./TAttText.html" title="TAttText" alt="" coords="210,112,349,139"/>
-<area shape="rect" id="node9" href="./TObject.html" title="TObject" alt="" coords="2,2,141,29"/>
-</map>
-<map name="MapTSVG_InhMem" id="MapTSVG_InhMem">
-<area shape="rect" id="graph12" href="./TVirtualPS.html" alt="" coords="859,63,947,113"/>
-<area shape="rect" id="graph13" href="./TVirtualPS.html" alt="" coords="760,63,848,128"/>
-<area shape="rect" id="graph14" href="./TVirtualPS.html" alt="" coords="661,63,749,128"/>
-<area shape="rect" id="graph15" href="./TVirtualPS.html" alt="" coords="891,124,915,145"/>
-<area shape="rect" id="graph16" href="./TVirtualPS.html" alt="" coords="859,156,947,337"/>
-<area shape="rect" id="graph17" href="./TVirtualPS.html" alt="" coords="760,141,848,337"/>
-<area shape="rect" id="graph18" href="./TVirtualPS.html" alt="" coords="661,141,749,337"/>
-<area shape="rect" id="graph11" href="./TVirtualPS.html" title="TVirtualPS" alt="" coords="651,16,957,348"/>
-<area shape="rect" id="graph21" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph22" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph23" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph24" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph20" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph27" href="./TAttLine.html" alt="" coords="541,344,629,395"/>
-<area shape="rect" id="graph28" href="./TAttLine.html" alt="" coords="443,344,531,395"/>
-<area shape="rect" id="graph29" href="./TAttLine.html" alt="" coords="376,344,400,365"/>
-<area shape="rect" id="graph30" href="./TAttLine.html" alt="" coords="541,405,629,543"/>
-<area shape="rect" id="graph31" href="./TAttLine.html" alt="" coords="443,405,531,572"/>
-<area shape="rect" id="graph32" href="./TAttLine.html" alt="" coords="344,405,432,572"/>
-<area shape="rect" id="graph26" href="./TAttLine.html" title="TAttLine" alt="" coords="333,297,640,583"/>
-<area shape="rect" id="graph35" href="./TAttFill.html" alt="" coords="344,640,629,676"/>
-<area shape="rect" id="graph36" href="./TAttFill.html" alt="" coords="541,687,629,824"/>
-<area shape="rect" id="graph37" href="./TAttFill.html" alt="" coords="443,687,531,839"/>
-<area shape="rect" id="graph38" href="./TAttFill.html" alt="" coords="344,687,432,839"/>
-<area shape="rect" id="graph34" href="./TAttFill.html" title="TAttFill" alt="" coords="333,593,640,849"/>
-<area shape="rect" id="graph41" href="./TAttMarker.html" alt="" coords="541,907,629,957"/>
-<area shape="rect" id="graph42" href="./TAttMarker.html" alt="" coords="443,907,531,957"/>
-<area shape="rect" id="graph43" href="./TAttMarker.html" alt="" coords="376,907,400,928"/>
-<area shape="rect" id="graph44" href="./TAttMarker.html" alt="" coords="541,968,629,1120"/>
-<area shape="rect" id="graph45" href="./TAttMarker.html" alt="" coords="443,968,531,1120"/>
-<area shape="rect" id="graph46" href="./TAttMarker.html" alt="" coords="344,968,432,1120"/>
-<area shape="rect" id="graph40" href="./TAttMarker.html" title="TAttMarker" alt="" coords="333,860,640,1131"/>
-<area shape="rect" id="graph49" href="./TAttText.html" alt="" coords="541,1188,629,1239"/>
-<area shape="rect" id="graph50" href="./TAttText.html" alt="" coords="443,1188,531,1239"/>
-<area shape="rect" id="graph51" href="./TAttText.html" alt="" coords="344,1188,432,1239"/>
-<area shape="rect" id="graph52" href="./TAttText.html" alt="" coords="573,1249,597,1271"/>
-<area shape="rect" id="graph53" href="./TAttText.html" alt="" coords="541,1281,629,1448"/>
-<area shape="rect" id="graph54" href="./TAttText.html" alt="" coords="443,1267,531,1448"/>
-<area shape="rect" id="graph55" href="./TAttText.html" alt="" coords="344,1267,432,1448"/>
-<area shape="rect" id="graph48" href="./TAttText.html" title="TAttText" alt="" coords="333,1141,640,1459"/>
-<area shape="rect" id="graph58" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph59" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph60" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph61" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph62" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph63" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph64" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph57" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTSVG_Lib" id="MapTSVG_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="408,87,523,135"/>
-</map>
-<div class="tabs">
-<a id="imgTSVG_Inh" class="tabsel" href="inh/TSVG_Inh.png" onclick="javascript:return SetImg('Charts','inh/TSVG_Inh.png');">Inheritance</a>
-<a id="imgTSVG_InhMem" class="tab" href="inhmem/TSVG_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TSVG_InhMem.png');">Inherited Members</a>
-<a id="imgTSVG_Incl" class="tab" href="incl/TSVG_Incl.png" onclick="javascript:return SetImg('Charts','incl/TSVG_Incl.png');">Includes</a>
-<a id="imgTSVG_Lib" class="tab" href="lib/TSVG_Lib.png" onclick="javascript:return SetImg('Charts','lib/TSVG_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTSVG_Inh" src="inh/TSVG_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TAttLine" href="./TAttLine.html">TAttLine</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TAttFill" href="./TAttFill.html">TAttFill</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TAttMarker" href="./TAttMarker.html">TAttMarker</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TAttText" href="./TAttText.html">TAttText</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TVirtualPS" href="./TVirtualPS.html">TVirtualPS</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TSVG" href="./TSVG.html">TSVG</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSVG:TSVG" href="src/TSVG.cxx.html#Pcu_3D">TSVG</a>()</span><br />
 <div class="funccomm"><pre> Default SVG constructor
@@ -508,7 +502,7 @@ using the file extension <tt>.svgz</tt>.
  HeaderPS provided by the user program is written in the &lt;defs&gt; part.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSVG:MovePS" href="src/TSVG.cxx.html#ele7lB">MovePS</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> x, <a href="./ListOfTypes.html#Int_t">Int_t</a> y)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSVG:MovePS" href="src/TSVG.cxx.html#nbgqCD">MovePS</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x, <a href="./ListOfTypes.html#Double_t">Double_t</a> y)</span><br />
 <div class="funccomm"><pre> Move to a new position (ix, iy). The move is done in relative coordinates
  which allows to have <a href="./ListOfTypes.html#short">short</a> numbers which decrease the size of the file.
  This function use the full power of the SVG's paths by using the
@@ -578,19 +572,19 @@ using the file extension <tt>.svgz</tt>.
 <div class="funccomm"><pre> <a href="./TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a> a string of characters in NDC
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSVG:UtoSVG" href="src/TSVG.cxx.html#GAgKID">UtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> u)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TSVG:UtoSVG" href="src/TSVG.cxx.html#XNgTlD">UtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> u)</span><br />
 <div class="funccomm"><pre> Convert U from NDC coordinate to SVG
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSVG:VtoSVG" href="src/TSVG.cxx.html#yJlFID">VtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> v)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TSVG:VtoSVG" href="src/TSVG.cxx.html#LcRqME">VtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> v)</span><br />
 <div class="funccomm"><pre> Convert V from NDC coordinate to SVG
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSVG:XtoSVG" href="src/TSVG.cxx.html#Sxv7HD">XtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TSVG:XtoSVG" href="src/TSVG.cxx.html#KcRag">XtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x)</span><br />
 <div class="funccomm"><pre> Convert X from world coordinate to SVG
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSVG:YtoSVG" href="src/TSVG.cxx.html#an02HD">YtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> y)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TSVG:YtoSVG" href="src/TSVG.cxx.html#WNgzHB">YtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> y)</span><br />
 <div class="funccomm"><pre> Convert Y from world coordinate to SVG
 </pre></div>
 </div>
@@ -610,9 +604,9 @@ using the file extension <tt>.svgz</tt>.
 <div class="funccomm"><pre> Not needed in SVG case
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSVG:CMtoSVG" href="src/TSVG.h.html#wzlSGE">CMtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> u)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TSVG:CMtoSVG" href="src/TSVG.h.html#GjwQUD">CMtoSVG</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> u)</span><br />
 
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>(0.5 + 72*u/2.54);}</code></div>
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> 0.5 + 72*u/2.54;}</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSVG:SetLineScale" href="src/TSVG.h.html#wzOr4C">SetLineScale</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>  = 3)</span><br />
@@ -629,7 +623,7 @@ using the file extension <tt>.svgz</tt>.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Olivier+Couet"> Olivier Couet</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/postscript:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: root/postscript:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

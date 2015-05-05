@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:58 2015            -->
+<!--   Date: Tue May  5 12:09:27 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -241,14 +241,14 @@ ClassImp(<a href="../TRegexp.html">TRegexp</a>)
    <span class="keyword">const</span> <span class="keyword">char</span>* startp;
    <span class="keyword">const</span> <span class="keyword">char</span>* s = string.Data();
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> slen = string.Length();
-   <span class="keyword">if</span> (slen &lt; i) <span class="keyword">return</span> <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+   <span class="keyword">if</span> (slen &lt; i) <span class="keyword">return</span> <a href="../ListOfTypes.html#int">kNPOS</a>;
    <span class="keyword">const</span> <span class="keyword">char</span>* endp = ::Matchs(s+i, slen-i, <a href="../TRegexp.html#TRegexp:fPattern" title="unsigned short* TRegexp::fPattern">fPattern</a>, &amp;startp);
    <span class="keyword">if</span> (endp) {
       *len = endp - startp;
       <span class="keyword">return</span> startp - s;
    } <span class="keyword">else</span> {
       *len = 0;
-      <span class="keyword">return</span> <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+      <span class="keyword">return</span> <a href="../ListOfTypes.html#int">kNPOS</a>;
    }
 }
 
@@ -346,15 +346,15 @@ ClassImp(<a href="../TRegexp.html">TRegexp</a>)
    <a href="../ListOfTypes.html#Int_t">Int_t</a> pos = <a href="../TRegexp.html#TRegexp:Index" title="Ssiz_t TRegexp::Index(const TString&amp; str,Ssiz_t* len,Ssiz_t start=0)">Index</a>(rg, &amp;ext, from);
 
    <span class="comment">// Assign to token</span>
-   <span class="keyword">if</span> (pos == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> || pos &gt; from) {
-      <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> last = (pos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) ? (pos - 1) : len;
+   <span class="keyword">if</span> (pos == <a href="../ListOfTypes.html#int">kNPOS</a> || pos &gt; from) {
+      <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> last = (pos != <a href="../ListOfTypes.html#int">kNPOS</a>) ? (pos - 1) : len;
       tok = (*<span class="keyword">this</span>)(from, last-from+1);
    }
    found = <a href="../ListOfTypes.html#Bool_t">kTRUE</a>;
 
    <span class="comment">// Update start-of-search index</span>
    from = pos + ext;
-   <span class="keyword">if</span> (pos == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <span class="keyword">if</span> (pos == <a href="../ListOfTypes.html#int">kNPOS</a>) {
       from = pos;
       <span class="keyword">if</span> (tok.IsNull()) {
          <span class="comment">// Empty, last token</span>
@@ -375,7 +375,7 @@ ClassImp(<a href="../TRegexp.html">TRegexp</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

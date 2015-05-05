@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:29:09 2015            -->
+<!--   Date: Tue May  5 12:01:25 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -1354,7 +1354,7 @@ ClassImp(<a href="../TEntryList.html">TEntryList</a>)
       }
    } <span class="keyword">else</span> {
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> ilst = <a href="../TEntryList.html#TEntryList:fFileName" title="TString TEntryList::fFileName">fFileName</a>.<a href="../TString.html#TString:Last" title="Ssiz_t TString::Last(char c)">Last</a>(<span class="string">'/'</span>);
-      <span class="keyword">if</span> (ilst != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (ilst != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          <a href="../TEntryList.html#TEntryList:fFileName" title="TString TEntryList::fFileName">fFileName</a>.<a href="../TString.html#TString:Replace" title="TString&amp; TString::Replace(Ssiz_t pos,Ssiz_t n,const char* cs) or overloads">Replace</a>(0, ilst, newroot);
       } <span class="keyword">else</span> {
          <a href="../TEntryList.html#TEntryList:fFileName" title="TString TEntryList::fFileName">fFileName</a>.<a href="../TString.html#TString:Insert" title="TString&amp; TString::Insert(Ssiz_t pos,const char* cs) or overloads">Insert</a>(0, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:Format" title="TString TString::Format(const char* fmt)">Format</a>(<span class="string">"%s/"</span>, newroot));
@@ -1398,7 +1398,7 @@ ClassImp(<a href="../TEntryList.html">TEntryList</a>)
    <span class="keyword">while</span> ((key = (<a href="../TKey.html">TKey</a> *) nxk())) {
       <span class="keyword">if</span> (!strcmp(key-&gt;GetClassName(), <span class="string">"TEntryList"</span>)) {
          <a href="../TString.html">TString</a> knm(key-&gt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
-         <span class="keyword">if</span> (knm.Index(nmrg) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (knm.Index(nmrg) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
             <a href="../TEntryList.html">TEntryList</a> *enl = <span class="keyword">dynamic_cast</span>&lt;<a href="../TEntryList.html">TEntryList</a> *&gt;(fl-&gt;Get(knm));
             <span class="keyword">if</span> (enl) {
                <a href="../ListOfTypes.html#Int_t">Int_t</a> xnrl = enl-&gt;<a href="../TEntryList.html#TEntryList:RelocatePaths" title="Int_t TEntryList::RelocatePaths(const char* newloc,const char* oldloc=0)">RelocatePaths</a>(newroot, oldroot);
@@ -1578,7 +1578,7 @@ ClassImp(<a href="../TEntryList.html">TEntryList</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:29 </em><em>&raquo; Last generated: 2015-03-04 20:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

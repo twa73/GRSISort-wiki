@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Thu Mar 12 13:30:06 2015            -->
+<!--   Date: Tue May  5 13:04:09 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -139,7 +139,7 @@
    <a href="../ListOfTypes.html#Double_t">Double_t</a>     Integral(<a href="../ListOfTypes.html#Int_t">Int_t</a>, <a href="../ListOfTypes.html#Int_t">Int_t</a>, <a href="../ListOfTypes.html#Int_t">Int_t</a>, <a href="../ListOfTypes.html#Int_t">Int_t</a>, <a href="../ListOfTypes.html#Int_t">Int_t</a>, <a href="../ListOfTypes.html#Int_t">Int_t</a>, <span class="keyword">const</span> <a href="../ListOfTypes.html#Option_t">Option_t</a>*) <span class="keyword">const</span>{<span class="keyword">return</span> 0;} <span class="comment">//<a href="../TObject.html#TObject:MayNotUse" title="void TObject::MayNotUse(const char* method)">MayNotUse</a></span>
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a>     Merge(<a href="../TCollection.html">TCollection</a> *);
    <span class="keyword">void</span>         Reset(<a href="../ListOfTypes.html#Option_t">Option_t</a> *option);
-   <span class="keyword">void</span>         <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="../ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>);
+   <span class="keyword">void</span>         <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="../ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>);
    <span class="keyword">virtual</span> <span class="keyword">void</span> Scale(<a href="../ListOfTypes.html#Double_t">Double_t</a> c1 = 1, <a href="../ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>);
    <span class="keyword">void</span>         SetBinContent(<a href="../ListOfTypes.html#Int_t">Int_t</a> bin, <a href="../ListOfTypes.html#Double_t">Double_t</a> content);
    <span class="keyword">void</span>         SetBinContent(<a href="../ListOfTypes.html#Int_t">Int_t</a>, <a href="../ListOfTypes.html#Int_t">Int_t</a>, <a href="../ListOfTypes.html#Double_t">Double_t</a>){<span class="keyword">return</span>;}           <span class="comment">//<a href="../TObject.html#TObject:MayNotUse" title="void TObject::MayNotUse(const char* method)">MayNotUse</a></span>
@@ -149,12 +149,12 @@
    <span class="keyword">void</span>         SetNewBinAdded(<a href="../ListOfTypes.html#Bool_t">Bool_t</a> flag){fNewBinAdded = flag;}
 
 <span class="keyword">protected</span>:
-   <a href="../TList.html">TList</a>   *fBins;              <span class="comment">//List of bins.</span>
+   <a href="../TList.html">TList</a>   *fBins;              <span class="comment">//List of bins. The list owns the contained objects</span>
    <a href="../ListOfTypes.html#Double_t">Double_t</a> fOverflow[9];       <span class="comment">//Overflow bins</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    fCellX;             <span class="comment">//Number of partition cells in the x-direction of the histogram</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    fCellY;             <span class="comment">//Number of partition cells in the y-direction of the histogram</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    fNCells;            <span class="comment">//Number of partition cells: fCellX*fCellY</span>
-   <a href="../TList.html">TList</a>   *fCells;             <span class="comment">//[fNCells] The array of TLists that store the bins that intersect with each cell</span>
+   <a href="../TList.html">TList</a>   *fCells;             <span class="comment">//[fNCells] The array of TLists that store the bins that intersect with each cell. List do not own the contained objects</span>
    <a href="../ListOfTypes.html#Double_t">Double_t</a> fStepX, fStepY;     <span class="comment">//Dimensions of a partition cell</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  *fIsEmpty;           <span class="comment">//[fNCells] The array that returns <a href="../ListOfTypes.html#bool">true</a> if the cell at the given coordinate is empty</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  *fCompletelyInside;  <span class="comment">//[fNCells] The array that returns <a href="../ListOfTypes.html#bool">true</a> if the cell at the given coordinate is completely inside a bin</span>
@@ -165,7 +165,7 @@
    <span class="keyword">void</span>   AddBinToPartition(<a href="../TH2PolyBin.html">TH2PolyBin</a> *bin);  <span class="comment">// Adds the input bin into the partition matrix</span>
    <span class="keyword">void</span>   Initialize(<a href="../ListOfTypes.html#Double_t">Double_t</a> xlow, <a href="../ListOfTypes.html#Double_t">Double_t</a> xup, <a href="../ListOfTypes.html#Double_t">Double_t</a> ylow, <a href="../ListOfTypes.html#Double_t">Double_t</a> yup, <a href="../ListOfTypes.html#Int_t">Int_t</a> n, <a href="../ListOfTypes.html#Int_t">Int_t</a> m);
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a> IsIntersecting(<a href="../TH2PolyBin.html">TH2PolyBin</a> *bin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipl, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipr, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipb, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipt);
-   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> IsIntersectingPolygon(<a href="../ListOfTypes.html#Int_t">Int_t</a> bn, <a href="../ListOfTypes.html#Double_t">Double_t</a> *x, <a href="../ListOfTypes.html#Double_t">Double_t</a> *y, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipl, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipr, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipb, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipt);
+   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> IsIntersectingPolygon(<a href="../ListOfTypes.html#Int_t">Int_t</a> bn, <a href="../ListOfTypes.html#Double_t">Double_t</a> *x, <a href="../ListOfTypes.html#Double_t">Double_t</a> *y, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipl, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipr, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipb, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipt);  
 
    ClassDef(<a href="../TH2Poly.html">TH2Poly</a>,1)  <span class="comment">//2-Dim histogram with polygon bins</span>
 };
@@ -179,7 +179,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-12 13:30 </em><em>&raquo; Last generated: 2015-03-12 13:30</em><br />
+<em>&raquo; Last changed: 2015-05-05 13:04 </em><em>&raquo; Last generated: 2015-05-05 13:04</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

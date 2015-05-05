@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:16 2015            -->
+<!--   Date: Tue May  5 12:09:20 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -592,7 +592,7 @@ gVirtualX or from my own member. So! All attributed, _ALL_ go to/from gVirtualX.
             <span class="keyword">if</span> (<span class="keyword">unsigned</span> <span class="keyword">char</span> *argb = (<span class="keyword">unsigned</span> <span class="keyword">char</span> *)image-&gt;GetArgbArray()) {
                <span class="comment">//Ohhh.</span>
                <span class="keyword">if</span> (<span class="keyword">sizeof</span>(<a href="../ListOfTypes.html#UInt_t">UInt_t</a>) == 4) {
-                  <span class="comment">//I know for sure the data returned from TGCocoa::GetColorBits,</span>
+                  <span class="comment">//I know for sure the data returned from <a href="../TGCocoa.html">TGCocoa</a>::<a href="../TGCocoa.html#TGCocoa:GetColorBits" title="unsigned char* TGCocoa::GetColorBits(Drawable_t wid,Int_t x,Int_t y,UInt_t w,UInt_t h)">GetColorBits</a>,</span>
                   <span class="comment">//it's 4 * w * h bytes with what TASImage considers to be argb.</span>
                   std::copy(pixelData, pixelData + 4 * w * h, argb);
                } <span class="keyword">else</span> {
@@ -958,7 +958,7 @@ gVirtualX or from my own member. So! All attributed, _ALL_ go to/from gVirtualX.
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

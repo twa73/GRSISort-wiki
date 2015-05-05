@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:03 2015            -->
+<!--   Date: Tue May  5 12:09:28 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -177,9 +177,9 @@ ClassImp(<a href="../TRootContextMenu.html">TRootContextMenu</a>)
    <span class="comment">// search for arguments to the MENU statement</span>
    <span class="comment">// strcpy(cmd,commentstring);</span>
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> opt_ptr;
-   <span class="keyword">if</span> ((opt_ptr=cmd.Index(<span class="string">"*MENU={"</span>))   != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> ||
-       (opt_ptr=cmd.Index(<span class="string">"*SUBMENU={"</span>))!= <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> ||
-       (opt_ptr=cmd.Index(<span class="string">"*TOGGLE={"</span>)) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> ) {
+   <span class="keyword">if</span> ((opt_ptr=cmd.Index(<span class="string">"*MENU={"</span>))   != <a href="../ListOfTypes.html#int">kNPOS</a> ||
+       (opt_ptr=cmd.Index(<span class="string">"*SUBMENU={"</span>))!= <a href="../ListOfTypes.html#int">kNPOS</a> ||
+       (opt_ptr=cmd.Index(<span class="string">"*TOGGLE={"</span>)) != <a href="../ListOfTypes.html#int">kNPOS</a> ) {
 
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> start = cmd.Index(<span class="string">"{"</span>,opt_ptr) + 1;
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> end = cmd.Index(<span class="string">"}"</span>,start);
@@ -191,10 +191,10 @@ ClassImp(<a href="../TRootContextMenu.html">TRootContextMenu</a>)
       <a href="../TObject.html">TObject</a> *obj;
       <span class="keyword">while</span>((obj = iter())) {
          <a href="../TString.html">TString</a> token(obj-&gt;<a href="../TGWindow.html#TGWindow:GetName" title="const char* TGWindow::GetName()">GetName</a>());
-         <span class="keyword">if</span> (token.Index(<span class="string">"Hierarchy=\""</span>) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (token.Index(<span class="string">"Hierarchy=\""</span>) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> tstart = token.Index(<span class="string">"\""</span>) + 1;
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> tend = token.Index(<span class="string">"\""</span>,tstart+1);
-            <span class="keyword">if</span> (tend == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">continue</span>;
+            <span class="keyword">if</span> (tend == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">continue</span>;
             hierarchy = token(tstart,tend - tstart);
          }
       }
@@ -683,7 +683,7 @@ ClassImp(<a href="../TRootContextMenu.html">TRootContextMenu</a>)
    <a href="../TString.html">TString</a> cmd;
    <a href="../TString.html">TString</a> url = <a href="../TEnv.html">gEnv</a>-><a href="../TEnv.html#TEnv:GetValue" title="Int_t TEnv::GetValue(const char* name,Int_t dflt) or overloads">GetValue</a>(<span class="string">"Browser.StartUrl"</span>, <span class="string">"http://root.cern.ch/root/html/"</span>);
    <span class="keyword">if</span> (url.EndsWith(<span class="string">".html"</span>, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>)) {
-      <span class="keyword">if</span> (url.Last(<span class="string">'/'</span>) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+      <span class="keyword">if</span> (url.Last(<span class="string">'/'</span>) != <a href="../ListOfTypes.html#int">kNPOS</a>)
          url.Remove(url.Last(<span class="string">'/'</span>));
    }
    <span class="keyword">if</span> (!url.EndsWith(<span class="string">"/"</span>)) {
@@ -830,7 +830,7 @@ ClassImp(<a href="../TRootContextMenu.html">TRootContextMenu</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:37 </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

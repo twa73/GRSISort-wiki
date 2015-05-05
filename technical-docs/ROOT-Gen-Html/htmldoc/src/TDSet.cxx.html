@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:49 2015            -->
+<!--   Date: Tue May  5 12:01:21 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -507,7 +507,7 @@ ClassImp(<a href="../TDSet.html">TDSet</a>)
             <span class="keyword">while</span> ((k = (<a href="../TKey.html">TKey</a> *) nxk())) {
                <span class="keyword">if</span> (!strcmp(k-&gt;GetClassName(), <span class="string">"TTree"</span>)) {
                   <a href="../TString.html">TString</a> kn(k-&gt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
-                  <span class="keyword">if</span> (kn.Index(re) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+                  <span class="keyword">if</span> (kn.Index(re) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                      <span class="keyword">if</span> (notfound) {
                         on = kn;
                         notfound = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
@@ -833,8 +833,8 @@ ClassImp(<a href="../TDSet.html">TDSet</a>)
       }
       <span class="comment">// Find MSD if any</span>
       <a href="../TString.html">TString</a> msd(<a href="../TUrl.html">TUrl</a>(file).<a href="../TUrl.html#TUrl:GetOptions" title="const char* TUrl::GetOptions()">GetOptions</a>());
-      <a href="../ListOfTypes.html#Int_t">Int_t</a> imsd = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
-      <span class="keyword">if</span> ((imsd = msd.Index(<span class="string">"msd="</span>)) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <a href="../ListOfTypes.html#Int_t">Int_t</a> imsd = <a href="../ListOfTypes.html#int">kNPOS</a>;
+      <span class="keyword">if</span> ((imsd = msd.Index(<span class="string">"msd="</span>)) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          msd.<a href="../TDSet.html#TDSet:Remove" title="Int_t TDSet::Remove(TDSetElement* elem,Bool_t deleteElem=kTRUE)">Remove</a>(0, imsd+4);
       } <span class="keyword">else</span> {
          <span class="comment">// Not an MSD option</span>
@@ -1422,7 +1422,7 @@ ClassImp(<a href="../TDSet.html">TDSet</a>)
             <span class="keyword">while</span> ((k = (<a href="../TKey.html">TKey</a> *) nxk())) {
                <span class="keyword">if</span> (!strcmp(k-&gt;GetClassName(), <span class="string">"TTree"</span>)) {
                   <a href="../TString.html">TString</a> kn(k-&gt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
-                  <span class="keyword">if</span> (kn.Index(re) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+                  <span class="keyword">if</span> (kn.Index(re) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                      <span class="keyword">if</span> (notfound) {
                         on = kn;
                         notfound = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
@@ -2015,7 +2015,7 @@ ClassImp(<a href="../TDSet.html">TDSet</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:28 </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

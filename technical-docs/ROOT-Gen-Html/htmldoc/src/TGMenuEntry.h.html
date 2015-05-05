@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Thu Mar 12 13:29:55 2015            -->
+<!--   Date: Tue May  5 13:03:53 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -250,7 +250,7 @@
    <a href="../TGMenuBar.html">TGMenuBar</a>      *GetMenuBar() <span class="keyword">const</span> { <span class="keyword">return</span> fMenuBar; }
    <span class="keyword">virtual</span> <span class="keyword">void</span>    Activate(<a href="../ListOfTypes.html#Bool_t">Bool_t</a>) { }
    <span class="keyword">virtual</span> <span class="keyword">void</span>    Activate(<a href="../TGMenuEntry.html">TGMenuEntry</a> *entry);
-   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> *option = <span class="string">""</span>);
+   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> *option = <span class="string">""</span>);
 
    <a href="../ListOfTypes.html#UInt_t">UInt_t</a> GetEntrySep()  <span class="keyword">const</span> { <span class="keyword">return</span> fEntrySep; }
    <span class="keyword">virtual</span> <span class="keyword">void</span> SetEntrySep(<a href="../ListOfTypes.html#UInt_t">UInt_t</a> sep)  { fEntrySep = sep; }
@@ -316,7 +316,7 @@
    <a href="../TGPopupMenu.html">TGPopupMenu</a> *GetMenu() <span class="keyword">const</span> { <span class="keyword">return</span> fMenu; }
    <span class="keyword">const</span> <span class="keyword">char</span>  *<a href="../TGMenuEntry.html#TGMenuEntry:GetName" title="const char* TGMenuEntry::GetName()">GetName</a>() <span class="keyword">const</span> { <span class="keyword">return</span> <a href="../TGMenuEntry.html#TGMenuEntry:fLabel" title="TGHotString* TGMenuEntry::fLabel">fLabel</a> ? <a href="../TGMenuEntry.html#TGMenuEntry:fLabel" title="TGHotString* TGMenuEntry::fLabel">fLabel</a>-><a href="../TGString.html#TGString:GetString" title="const char* TGString::GetString()">GetString</a>() : 0; }
    <span class="keyword">virtual</span> <span class="keyword">void</span> DoSendMessage();
-   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> *option = <span class="string">""</span>);
+   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> *option = <span class="string">""</span>);
 
    ClassDef(<a href="../TGMenuTitle.html">TGMenuTitle</a>,0)  <span class="comment">// Menu title class</span>
 };
@@ -379,7 +379,7 @@
    <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  HandleButton(<a href="../Event_t.html">Event_t</a> *event);
    <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  HandleMotion(<a href="../Event_t.html">Event_t</a> *event);
    <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  HandleKey(<a href="../Event_t.html">Event_t</a> *event);
-   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> *option = <span class="string">""</span>);
+   <span class="keyword">virtual</span> <span class="keyword">void</span>    <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> *option = <span class="string">""</span>);
    <span class="keyword">virtual</span> <span class="keyword">void</span>    Layout();
            <span class="keyword">void</span>    PopupConnection();
    <a href="../TGFrameElement.html">TGFrameElement</a>* GetLastOnLeft();
@@ -396,7 +396,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-12 13:29 </em><em>&raquo; Last generated: 2015-03-12 13:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 13:03 </em><em>&raquo; Last generated: 2015-05-05 13:03</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

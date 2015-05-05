@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:35:06 2015            -->
+<!--   Date: Tue May  5 12:08:11 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -173,9 +173,9 @@
    <span class="keyword">else</span> {
    <span class="comment">// remove <span class="string">"/src/whatever"</span>, <span class="string">"/inc/whatever"</span></span>
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> pos = out_modulename.Index(<span class="string">"/src/"</span>);
-      <span class="keyword">if</span> (pos == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+      <span class="keyword">if</span> (pos == <a href="../ListOfTypes.html#int">kNPOS</a>)
          pos = out_modulename.Index(<span class="string">"/inc/"</span>);
-      <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+      <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#int">kNPOS</a>)
          out_modulename.Remove(pos);
    }
 
@@ -198,12 +198,12 @@
          <span class="comment">// determine the module name from the library name:</span>
          out_modulename = cl-&gt;GetSharedLibs();
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> pos = out_modulename.Index(<span class="string">' '</span>);
-         <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+         <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#int">kNPOS</a>)
             out_modulename.Remove(pos, out_modulename.Length());
          <span class="keyword">if</span> (out_modulename.BeginsWith(<span class="string">"lib"</span>))
             out_modulename.Remove(0,3);
          pos = out_modulename.Index(<span class="string">'.'</span>);
-         <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+         <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#int">kNPOS</a>)
             out_modulename.Remove(pos, out_modulename.Length());
 
          <span class="keyword">if</span> (!out_modulename.Length()) {
@@ -381,12 +381,12 @@
       <a href="../TString.html">TString</a> inclDir;
       <a href="../TString.html">TString</a> inclPath(GetOwner()-&gt;<a href="../THtml.html#THtml:GetPathInfo" title="const THtml::PathInfo_t&amp; THtml::GetPathInfo()">GetPathInfo</a>().fIncludePath);
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> pos = 0;
-      <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> longestMatch = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+      <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> longestMatch = <a href="../ListOfTypes.html#int">kNPOS</a>;
       <span class="keyword">while</span> (inclPath.Tokenize(inclDir, pos, GetOwner()-&gt;<a href="../THtml.html#THtml:GetDirDelimiter" title="const char* THtml::GetDirDelimiter()">GetDirDelimiter</a>())) {
-         <span class="keyword">if</span> (clfile.BeginsWith(inclDir) &amp;&amp; (longestMatch == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> || inclDir.Length() &gt; longestMatch))
+         <span class="keyword">if</span> (clfile.BeginsWith(inclDir) &amp;&amp; (longestMatch == <a href="../ListOfTypes.html#int">kNPOS</a> || inclDir.Length() &gt; longestMatch))
             longestMatch = inclDir.Length();
       }
-      <span class="keyword">if</span> (longestMatch != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (longestMatch != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          clfile.Remove(0, longestMatch);
          <span class="keyword">if</span> (clfile.BeginsWith(<span class="string">"/"</span>) || clfile.BeginsWith(<span class="string">"\\"))</span>
             clfile.Remove(0, 1);
@@ -435,7 +435,7 @@
       <span class="keyword">if</span> (GetFileName(cl, <span class="keyword">true</span>, filesysname, declSysFileName)) {
          filesysname = <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:BaseName" title="const char* TSystem::BaseName(const char* pathname)">BaseName</a>(filesysname);
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posExt = filesysname.Last(<span class="string">'.'</span>);
-         <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+         <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#int">kNPOS</a>)
             filesysname.Remove(posExt);
          filesysname += <span class="string">".cxx"</span>;
          out_filename = filesysname;
@@ -612,7 +612,7 @@
       <span class="comment">// If we have matched any include path then this <a href="../ROOT.html">ROOT</a>-only</span>
       <span class="comment">// algorithm is skipped!</span>
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posInc = hdr.Index(<span class="string">"/inc/"</span>);
-      <span class="keyword">if</span> (posInc == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">return</span> <span class="keyword">true</span>;
+      <span class="keyword">if</span> (posInc == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">return</span> <span class="keyword">true</span>;
       hdr.Remove(0, posInc + 5);
       out_dir = hdr;
    }
@@ -1831,10 +1831,10 @@ ClassImp(<a href="../THtml.html">THtml</a>)
          <span class="keyword">bool</span> inNamespace = <span class="keyword">true</span>;
          <a href="../TString.html">TString</a> surroundingNamespace(dt-&gt;<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posTemplate = surroundingNamespace.Last(<span class="string">'&gt;'</span>);
-         inNamespace = inNamespace &amp;&amp; (posTemplate == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>);
+         inNamespace = inNamespace &amp;&amp; (posTemplate == <a href="../ListOfTypes.html#int">kNPOS</a>);
          <span class="keyword">if</span> (inNamespace) {
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posColumn = surroundingNamespace.Last(<span class="string">':'</span>);
-            <span class="keyword">if</span> (posColumn != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+            <span class="keyword">if</span> (posColumn != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                surroundingNamespace.Remove(posColumn - 1);
                <a href="../TClass.html">TClass</a>* clSurrounding = <a href="../THtml.html#THtml:GetClass" title="TClass* THtml::GetClass(const char* name)">GetClass</a>(surroundingNamespace);
                inNamespace = inNamespace &amp;&amp; (!clSurrounding || <a href="../THtml.html#THtml:IsNamespace" title="Bool_t THtml::IsNamespace(const TClass* cl)">IsNamespace</a>(clSurrounding));
@@ -2009,7 +2009,7 @@ ClassImp(<a href="../THtml.html">THtml</a>)
          <span class="comment">// first one is the class's lib</span>
          <a href="../TString.html">TString</a> libname(classPtr-&gt;GetSharedLibs());
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posSpace = libname.First(<span class="string">' '</span>);
-         <span class="keyword">if</span> (posSpace != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+         <span class="keyword">if</span> (posSpace != <a href="../ListOfTypes.html#int">kNPOS</a>)
             libname.Remove(posSpace, libname.Length());
          <a href="../TString.html">TString</a> libnameBase = <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:BaseName" title="const char* TSystem::BaseName(const char* pathname)">BaseName</a>(libname);
          <span class="keyword">if</span> (libnameBase.BeginsWith(<span class="string">"lib"</span>))
@@ -2546,7 +2546,7 @@ ClassImp(<a href="../THtml.html">THtml</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:35 </em><em>&raquo; Last generated: 2015-03-04 20:35</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:08 </em><em>&raquo; Last generated: 2015-05-05 12:08</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

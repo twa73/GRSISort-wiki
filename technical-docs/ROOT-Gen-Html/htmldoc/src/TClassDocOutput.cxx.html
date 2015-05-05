@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:35 2015            -->
+<!--   Date: Tue May  5 12:01:19 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -334,7 +334,7 @@ ClassImp(<a href="../TClassDocOutput.html">TClassDocOutput</a>);
                startClassName = 5;
             
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> endClassName = enumName.Last(<span class="string">':'</span>); <span class="comment">// need template handling here!</span>
-            <span class="keyword">if</span> (endClassName != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; endClassName &gt; 0 &amp;&amp; enumName[endClassName - 1] == <span class="string">':'</span>) {
+            <span class="keyword">if</span> (endClassName != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; endClassName &gt; 0 &amp;&amp; enumName[endClassName - 1] == <span class="string">':'</span>) {
                <span class="comment">// <a href="../TClass.html">TClass</a>* cl = fHtml-&gt;GetClass(<a href="../TString.html">TString</a>(enumName(startClassName, endClassName - startClassName - 1)));</span>
                <a href="../TSubString.html">TSubString</a> substr(enumName(startClassName, endClassName - startClassName + 1));
                <span class="comment">// if (cl)</span>
@@ -1028,14 +1028,14 @@ ClassImp(<a href="../TClassDocOutput.html">TClassDocOutput</a>);
    <span class="keyword">if</span> (libs.Length()) {
       <a href="../TString.html">TString</a> firstLib(libs);
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> end = firstLib.Index(<span class="string">' '</span>);
-      <span class="keyword">if</span> (end != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (end != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          firstLib.Remove(end, firstLib.Length());
          libs.Remove(0, end + 1);
       } <span class="keyword">else</span> libs = <span class="string">""</span>;
 
       {
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posExt = firstLib.First(<span class="string">"."</span>);
-         <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+         <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#int">kNPOS</a>)
             firstLib.Remove(posExt, firstLib.Length());
       }
 
@@ -1052,7 +1052,7 @@ ClassImp(<a href="../TClassDocOutput.html">TClassDocOutput</a>);
             thisLib += libs[pos];
          <span class="keyword">else</span> <span class="keyword">if</span> (thisLib.Length()) {
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posExt = thisLib.First(<span class="string">"."</span>);
-            <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+            <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#int">kNPOS</a>)
                thisLib.Remove(posExt, thisLib.Length());
             outdot &lt;&lt; <span class="string">" \""</span> &lt;&lt; thisLib &lt;&lt; <span class="string">"\";"</span>;
             thisLib = <span class="string">""</span>;
@@ -1060,7 +1060,7 @@ ClassImp(<a href="../TClassDocOutput.html">TClassDocOutput</a>);
       <span class="comment">// remaining lib</span>
       <span class="keyword">if</span> (thisLib.Length()) {
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posExt = thisLib.First(<span class="string">"."</span>);
-         <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+         <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#int">kNPOS</a>)
             thisLib.Remove(posExt, thisLib.Length());
          outdot &lt;&lt; <span class="string">" \""</span> &lt;&lt; thisLib &lt;&lt; <span class="string">"\";"</span>;
          thisLib = <span class="string">""</span>;
@@ -1525,13 +1525,13 @@ ClassImp(<a href="../TClassDocOutput.html">TClassDocOutput</a>);
          <a href="../TString.html">TString</a> sHeader(headerFileName);
          <span class="keyword">if</span> (<a href="../TDocOutput.html#TDocOutput:GetHtml" title="THtml* TDocOutput::GetHtml()">GetHtml</a>()-><a href="../THtml.html#THtml:GetProductName" title="const TString&amp; THtml::GetProductName()">GetProductName</a>() &amp;&amp; !strcmp(<a href="../TDocOutput.html#TDocOutput:GetHtml" title="THtml* TDocOutput::GetHtml()">GetHtml</a>()-><a href="../THtml.html#THtml:GetProductName" title="const TString&amp; THtml::GetProductName()">GetProductName</a>(), <span class="string">"ROOT"</span>)) {
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posInclude = sHeader.Index(<span class="string">"/include/"</span>);
-            <span class="keyword">if</span> (posInclude != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+            <span class="keyword">if</span> (posInclude != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                <span class="comment">// Cut off <span class="string">".../include"</span>, i.e. keep leading <span class="string">'/'</span></span>
                sHeader.Remove(0, posInclude + 8);
             } <span class="keyword">else</span> {
                <span class="comment">// no /include/; maybe /inc?</span>
                posInclude = sHeader.Index(<span class="string">"/inc/"</span>);
-               <span class="keyword">if</span> (posInclude != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+               <span class="keyword">if</span> (posInclude != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                   sHeader = <span class="string">"/"</span>;
                   sHeader += sInclude;
                }
@@ -1544,12 +1544,12 @@ ClassImp(<a href="../TClassDocOutput.html">TClassDocOutput</a>);
             } <span class="keyword">else</span> {
                <a href="../TString.html">TString</a> src(<a href="../TClassDocOutput.html#TClassDocOutput:fCurrentClass" title="TClass* TClassDocOutput::fCurrentClass">fCurrentClass</a>-><a href="../TClass.html#TClass:GetSharedLibs" title="const char* TClass::GetSharedLibs()">GetSharedLibs</a>());
                <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posEndLib = src.Index(<span class="string">' '</span>);
-               <span class="keyword">if</span> (posEndLib != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+               <span class="keyword">if</span> (posEndLib != <a href="../ListOfTypes.html#int">kNPOS</a>)
                   src.Remove(posEndLib, src.Length());
                <span class="keyword">if</span> (src.BeginsWith(<span class="string">"lib"</span>))
                   src.Remove(0, 3);
                posEndLib = src.Index(<span class="string">'.'</span>);
-               <span class="keyword">if</span> (posEndLib != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+               <span class="keyword">if</span> (posEndLib != <a href="../ListOfTypes.html#int">kNPOS</a>)
                   src.Remove(posEndLib, src.Length());
                src.ToLower();
                src += <span class="string">"/inc"</span>;
@@ -1682,7 +1682,7 @@ ClassImp(<a href="../TClassDocOutput.html">TClassDocOutput</a>);
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:28 </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

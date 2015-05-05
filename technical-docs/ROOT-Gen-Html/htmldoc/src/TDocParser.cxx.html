@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:29:02 2015            -->
+<!--   Date: Tue May  5 12:01:23 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -498,10 +498,10 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
       <a href="../TDocDirective.html">TDocDirective</a>* directive = (<a href="../TDocDirective.html">TDocDirective</a>*)<a href="../TDocParser.html#TDocParser:fDirectiveHandlers" title="TList TDocParser::fDirectiveHandlers">fDirectiveHandlers</a>.<a href="../TList.html#TList:Last" title="TObject* TList::Last()">Last</a>();
       <span class="keyword">const</span> <span class="keyword">char</span>* endTag = directive-&gt;GetEndTag();
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posEndTag = i;
-      <span class="keyword">while</span> (<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> != (posEndTag = line.Index(endTag, posEndTag, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>)))
+      <span class="keyword">while</span> (<a href="../ListOfTypes.html#int">kNPOS</a> != (posEndTag = line.Index(endTag, posEndTag, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>)))
          <span class="keyword">if</span> (posEndTag == 0 || line[posEndTag - 1] != <span class="string">'"</span>') <span class="comment">// escaping <span class="string">'"</span>'</span>
             <span class="keyword">break</span>;
-      <span class="keyword">if</span> (posEndTag != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+      <span class="keyword">if</span> (posEndTag != <a href="../ListOfTypes.html#int">kNPOS</a>)
          i = posEndTag;
       <span class="keyword">else</span> {
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> start = 0;
@@ -925,7 +925,7 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posHash      = pos;
 
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posInclude = line.Index(<span class="string">"include"</span>, pos);
-   <span class="keyword">if</span> (posInclude != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <span class="keyword">if</span> (posInclude != <a href="../ListOfTypes.html#int">kNPOS</a>) {
       <a href="../TString.html">TString</a> filename;
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posStartFilename = posInclude + 7;
       <span class="keyword">if</span> (line.Tokenize(filename, posStartFilename, <span class="string">"[&lt;\"]"</span>)) {
@@ -1057,14 +1057,14 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posEndTag = pos;
       <span class="keyword">const</span> <span class="keyword">char</span>* endTag = directive-&gt;GetEndTag();
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> lenEndTag = strlen(endTag);
-      <span class="keyword">while</span> (<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> != (posEndTag = line.Index(endTag, posEndTag, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>))) {
+      <span class="keyword">while</span> (<a href="../ListOfTypes.html#int">kNPOS</a> != (posEndTag = line.Index(endTag, posEndTag, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>))) {
          <span class="keyword">if</span> (line[posEndTag - 1] == <span class="string">'"</span>') {
             posEndTag += lenEndTag;
             <span class="keyword">continue</span>; <span class="comment">// escaping <span class="string">'"</span>'</span>
          }
          <span class="keyword">break</span>;
       }
-      <span class="keyword">if</span> (posEndTag != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (posEndTag != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          end = <a href="../ListOfTypes.html#Bool_t">kTRUE</a>; <span class="comment">// we just continue below!</span>
       } <span class="keyword">else</span> {
          <a href="../TDocParser.html#TDocParser:fDirectiveHandlers" title="TList TDocParser::fDirectiveHandlers">fDirectiveHandlers</a>.<a href="../TList.html#TList:AddLast" title="void TList::AddLast(TObject* obj) or overloads">AddLast</a>(directive);
@@ -1353,25 +1353,25 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
    <span class="comment">// current line, get a new line from sourceFile, beautify it to srcOut, creating</span>
    <span class="comment">// an anchor as necessary. When this function returns, posMethodName points to the</span>
    <span class="comment">// end of the function declaration, i.e. right after the arguments' closing bracket.</span>
-   <span class="comment">// If posMethodName == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>, we look for the first matching method in <a href="../TDocParser.html#TDocParser:fMethodCounts" title="map&lt;std::string,Int_t&gt; TDocParser::fMethodCounts">fMethodCounts</a>.</span>
+   <span class="comment">// If posMethodName == <a href="../ListOfTypes.html#int">kNPOS</a>, we look for the first matching method in <a href="../TDocParser.html#TDocParser:fMethodCounts" title="map&lt;std::string,Int_t&gt; TDocParser::fMethodCounts">fMethodCounts</a>.</span>
 
    <span class="keyword">typedef</span> std::map&lt;std::string <span class="comment">/*method name*/</span>, <a href="../ListOfTypes.html#Int_t">Int_t</a> &gt; MethodCount_t;
    isconst = <span class="keyword">false</span>;
 
-   <span class="keyword">if</span> (posMethodName == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <span class="keyword">if</span> (posMethodName == <a href="../ListOfTypes.html#int">kNPOS</a>) {
       name.Remove(0);
       <a href="../TMethod.html">TMethod</a> * meth = 0;
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posBlock = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">'{'</span>);
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posQuote = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">'"</span>');
-      <span class="keyword">if</span> (posQuote != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; (posBlock == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> || posQuote &lt; posBlock))
+      <span class="keyword">if</span> (posQuote != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; (posBlock == <a href="../ListOfTypes.html#int">kNPOS</a> || posQuote &lt; posBlock))
          posBlock = posQuote;
-      <span class="keyword">if</span> (posBlock == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) 
+      <span class="keyword">if</span> (posBlock == <a href="../ListOfTypes.html#int">kNPOS</a>) 
          posBlock = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Length" title="Ssiz_t TString::Length()">Length</a>();
       <span class="keyword">for</span> (MethodCount_t::iterator iMethodName = <a href="../TDocParser.html#TDocParser:fMethodCounts" title="map&lt;std::string,Int_t&gt; TDocParser::fMethodCounts">fMethodCounts</a>.begin();
          !name.Length() &amp;&amp; iMethodName != <a href="../TDocParser.html#TDocParser:fMethodCounts" title="map&lt;std::string,Int_t&gt; TDocParser::fMethodCounts">fMethodCounts</a>.end(); ++iMethodName) {
          <a href="../TString.html">TString</a> lookFor(iMethodName-&gt;first);
          posMethodName = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(lookFor);
-         <span class="keyword">if</span> (posMethodName != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; posMethodName &lt; posBlock 
+         <span class="keyword">if</span> (posMethodName != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; posMethodName &lt; posBlock 
             &amp;&amp; (posMethodName == 0 || !<a href="../TDocParser.html#TDocParser:IsWord" title="Bool_t TDocParser::IsWord(UChar_t c)">IsWord</a>(<a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>[posMethodName - 1]))) {
             <span class="comment">// check whether the method name is followed by optional spaces and</span>
             <span class="comment">// an opening parathesis</span>
@@ -1417,7 +1417,7 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
 
    <span class="comment">// extract parameters</span>
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posParam = name.First(<span class="string">'('</span>);
-   <span class="keyword">if</span> (posParam == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> || 
+   <span class="keyword">if</span> (posParam == <a href="../ListOfTypes.html#int">kNPOS</a> || 
       <span class="comment">// no strange return types, please</span>
       ret.Contains(<span class="string">"{"</span>) || ret.Contains(<span class="string">"}"</span>) || ret.Contains(<span class="string">"("</span>) || ret.Contains(<span class="string">")"</span>)
       || ret.Contains(<span class="string">"="</span>)) {
@@ -1441,7 +1441,7 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
       }
    } <span class="comment">// check for op () (...)</span>
 
-   <span class="keyword">if</span> (posParam == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <span class="keyword">if</span> (posParam == <a href="../ListOfTypes.html#int">kNPOS</a>) {
       ret.Remove(0);
       name.Remove(0);
       params.Remove(0);
@@ -1544,9 +1544,9 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posBlock     = params.Index(<span class="string">'{'</span>, posParamEnd);
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posSemicolon = params.Index(<span class="string">';'</span>, posParamEnd);
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posPureVirt  = params.Index(<span class="string">'='</span>, posParamEnd);
-   <span class="keyword">if</span> (posSemicolon != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
-      <span class="keyword">if</span> ((posBlock == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> || (posSemicolon &lt; posBlock)) &amp;&amp;
-         (posPureVirt == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> || !allowPureVirtual)
+   <span class="keyword">if</span> (posSemicolon != <a href="../ListOfTypes.html#int">kNPOS</a>)
+      <span class="keyword">if</span> ((posBlock == <a href="../ListOfTypes.html#int">kNPOS</a> || (posSemicolon &lt; posBlock)) &amp;&amp;
+         (posPureVirt == <a href="../ListOfTypes.html#int">kNPOS</a> || !allowPureVirtual)
          &amp;&amp; !allowPureVirtual) <span class="comment">// allow any <span class="string">"func();"</span> if pv is allowed</span>
          params.Remove(0);
 
@@ -1702,12 +1702,12 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
          <span class="keyword">if</span> (impIdx == 0 &amp;&amp; <a href="../TDocParser.html#TDocParser:fClassDocState" title="enum TDocParser:: TDocParser::fClassDocState">fClassDocState</a> == <a href="../TDocParser.html#TDocParser:kClassDoc_LookingHaveSomething" title="const enum TDocParser:: TDocParser::kClassDoc_LookingHaveSomething">kClassDoc_LookingHaveSomething</a>) {
             <a href="../TString.html">TString</a> name(<a href="../TDocParser.html#TDocParser:fCurrentClass" title="TClass* TDocParser::fCurrentClass">fCurrentClass</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
             <span class="comment">// take unscoped version</span>
-            <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posLastScope = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
-            <span class="keyword">while</span> ((posLastScope = name.Index(<span class="string">"::"</span>)) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+            <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posLastScope = <a href="../ListOfTypes.html#int">kNPOS</a>;
+            <span class="keyword">while</span> ((posLastScope = name.Index(<span class="string">"::"</span>)) != <a href="../ListOfTypes.html#int">kNPOS</a>)
                name.Remove(0, posLastScope + 2);
 
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posName = <a href="../TDocParser.html#TDocParser:fLineStripped" title="TString TDocParser::fLineStripped">fLineStripped</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(name, impIdx);
-            <span class="keyword">if</span> (posName != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+            <span class="keyword">if</span> (posName != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posClosingParen = posName + name.Length();
                <span class="keyword">while</span> (isspace(<a href="../TDocParser.html#TDocParser:fLineStripped" title="TString TDocParser::fLineStripped">fLineStripped</a>[posClosingParen])) ++posClosingParen;
                <span class="keyword">if</span> (<a href="../TDocParser.html#TDocParser:fLineStripped" title="TString TDocParser::fLineStripped">fLineStripped</a>[posClosingParen] == <span class="string">')'</span>) {
@@ -1739,20 +1739,20 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
 
          <span class="keyword">if</span> (!wroteMethodNowWaitingForOpenBlock) {
             <span class="comment">// check for method</span>
-            <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posPattern = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+            <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posPattern = <a href="../ListOfTypes.html#int">kNPOS</a>;
             <span class="keyword">if</span> (methodPattern) {
                posPattern = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>((<a href="../TPRegexp.html">TPRegexp</a>&amp;)patternRE);
             }
-            <span class="keyword">if</span> (posPattern != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; methodPattern) {
+            <span class="keyword">if</span> (posPattern != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; methodPattern) {
                <span class="comment">// no strings, no blocks in front of function declarations / implementations</span>
                <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">char</span> vetoChars[] = <span class="string">"{\""</span>;
-               <span class="keyword">for</span> (<span class="keyword">int</span> ich = 0; posPattern != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; vetoChars[ich]; ++ich) {
+               <span class="keyword">for</span> (<span class="keyword">int</span> ich = 0; posPattern != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; vetoChars[ich]; ++ich) {
                   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posVeto = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(vetoChars[ich]);
-                  <span class="keyword">if</span> (posVeto != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; posVeto &lt; posPattern)
-                     posPattern = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+                  <span class="keyword">if</span> (posVeto != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; posVeto &lt; posPattern)
+                     posPattern = <a href="../ListOfTypes.html#int">kNPOS</a>;
                }
             }
-            <span class="keyword">if</span> (posPattern != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> || !methodPattern) {
+            <span class="keyword">if</span> (posPattern != <a href="../ListOfTypes.html#int">kNPOS</a> || !methodPattern) {
                <span class="keyword">if</span> (methodPattern) {
                   patternRE.Match(<a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>);
                   posPattern += patternRE[0].Length();
@@ -1768,17 +1768,17 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
                   <a href="../TDocParser.html#TDocParser:fComment" title="TString TDocParser::fComment">fComment</a>.<a href="../TString.html#TString:Remove" title="TString&amp; TString::Remove(Ssiz_t pos) or overloads">Remove</a>(0);
                   codeOneLiner.Remove(0);
 
-                  wroteMethodNowWaitingForOpenBlock = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">"{"</span>, posPattern) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
-                  wroteMethodNowWaitingForOpenBlock &amp;= <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">";"</span>, posPattern) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
-               } <span class="keyword">else</span> <span class="keyword">if</span> (<a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:First" title="Ssiz_t TString::First(char c) or overloads">First</a>(<span class="string">"{};"</span>) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+                  wroteMethodNowWaitingForOpenBlock = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">"{"</span>, posPattern) == <a href="../ListOfTypes.html#int">kNPOS</a>;
+                  wroteMethodNowWaitingForOpenBlock &amp;= <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">";"</span>, posPattern) == <a href="../ListOfTypes.html#int">kNPOS</a>;
+               } <span class="keyword">else</span> <span class="keyword">if</span> (<a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:First" title="Ssiz_t TString::First(char c) or overloads">First</a>(<span class="string">"{};"</span>) != <a href="../ListOfTypes.html#int">kNPOS</a>)
                   <span class="comment">// these chars reset the preceding comment</span>
                   <a href="../TDocParser.html#TDocParser:fComment" title="TString TDocParser::fComment">fComment</a>.<a href="../TString.html#TString:Remove" title="TString&amp; TString::Remove(Ssiz_t pos) or overloads">Remove</a>(0);
             } <span class="comment">// pattern matches - could be a method</span>
             <span class="keyword">else</span> 
                <a href="../TDocParser.html#TDocParser:fComment" title="TString TDocParser::fComment">fComment</a>.<a href="../TString.html#TString:Remove" title="TString&amp; TString::Remove(Ssiz_t pos) or overloads">Remove</a>(0);
          } <span class="keyword">else</span> {
-            wroteMethodNowWaitingForOpenBlock &amp;= <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">"{"</span>) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
-            wroteMethodNowWaitingForOpenBlock &amp;= <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">";"</span>) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+            wroteMethodNowWaitingForOpenBlock &amp;= <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">"{"</span>) == <a href="../ListOfTypes.html#int">kNPOS</a>;
+            wroteMethodNowWaitingForOpenBlock &amp;= <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">";"</span>) == <a href="../ListOfTypes.html#int">kNPOS</a>;
          } <span class="comment">// if !wroteMethodNowWaitingForOpenBlock</span>
 
          <span class="keyword">if</span> (methodName.Length() &amp;&amp; !wroteMethodNowWaitingForOpenBlock) {
@@ -1805,10 +1805,10 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
       } <span class="comment">// if !comment</span>
 
       <span class="comment">// check for last update,...</span>
-      <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posTag = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+      <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posTag = <a href="../ListOfTypes.html#int">kNPOS</a>;
       <span class="keyword">if</span> (lookForSourceInfo)
          <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> si = 0; si &lt; (<a href="../ListOfTypes.html#Int_t">Int_t</a>) <a href="../TDocParser.html#TDocParser:kNumSourceInfos" title="const TDocParser::ESourceInfo TDocParser::kNumSourceInfos">kNumSourceInfos</a>; ++si)
-            <span class="keyword">if</span> (!<a href="../TDocParser.html#TDocParser:fSourceInfo" title="TString TDocParser::fSourceInfo">fSourceInfo</a>[si].Length() &amp;&amp; (posTag = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<a href="../TDocParser.html#TDocParser:fSourceInfoTags" title="TString TDocParser::fSourceInfoTags">fSourceInfoTags</a>[si])) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+            <span class="keyword">if</span> (!<a href="../TDocParser.html#TDocParser:fSourceInfo" title="TString TDocParser::fSourceInfo">fSourceInfo</a>[si].Length() &amp;&amp; (posTag = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<a href="../TDocParser.html#TDocParser:fSourceInfoTags" title="TString TDocParser::fSourceInfoTags">fSourceInfoTags</a>[si])) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                <a href="../TDocParser.html#TDocParser:fSourceInfo" title="TString TDocParser::fSourceInfo">fSourceInfo</a>[si] = <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>(posTag + strlen(<a href="../TDocParser.html#TDocParser:fSourceInfoTags" title="TString TDocParser::fSourceInfoTags">fSourceInfoTags</a>[si]), <a href="../TDocParser.html#TDocParser:fLineRaw" title="TString TDocParser::fLineRaw">fLineRaw</a>.<a href="../TString.html#TString:Length" title="Ssiz_t TString::Length()">Length</a>() - posTag);
                <span class="keyword">if</span> (si == <a href="../TDocParser.html#TDocParser:kInfoAuthor" title="const TDocParser::ESourceInfo TDocParser::kInfoAuthor">kInfoAuthor</a>)
                   <a href="../TDocParser.html#TDocParser:fDocOutput" title="TDocOutput* TDocParser::fDocOutput">fDocOutput</a>-><a href="../TDocOutput.html#TDocOutput:FixupAuthorSourceInfo" title="void TDocOutput::FixupAuthorSourceInfo(TString&amp; authors)">FixupAuthorSourceInfo</a>(<a href="../TDocParser.html#TDocParser:fSourceInfo" title="TString TDocParser::fSourceInfo">fSourceInfo</a>[<a href="../TDocParser.html#TDocParser:kInfoAuthor" title="const TDocParser::ESourceInfo TDocParser::kInfoAuthor">kInfoAuthor</a>]);
@@ -1859,8 +1859,8 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
 
    <a href="../TString.html">TString</a> pattern(<a href="../TDocParser.html#TDocParser:fCurrentClass" title="TClass* TDocParser::fCurrentClass">fCurrentClass</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
    <span class="comment">// take unscoped version</span>
-   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posLastScope = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
-   <span class="keyword">while</span> ((posLastScope = pattern.Index(<span class="string">"::"</span>)) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posLastScope = <a href="../ListOfTypes.html#int">kNPOS</a>;
+   <span class="keyword">while</span> ((posLastScope = pattern.Index(<span class="string">"::"</span>)) != <a href="../ListOfTypes.html#int">kNPOS</a>)
       pattern.Remove(0, posLastScope + 2);
    pattern += <span class="string">"::"</span>;
    
@@ -1869,10 +1869,10 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
       <a href="../TDocParser.html#TDocParser:LocateMethods" title="void TDocParser::LocateMethods(ostream&amp; out,const char* filename,Bool_t lookForSourceInfo=kTRUE,Bool_t useDocxxStyle=kFALSE,Bool_t allowPureVirtual=kFALSE,const char* methodPattern=0,const char* sourceExt=0)">LocateMethods</a>(out, implFileName, <a href="../ListOfTypes.html#Bool_t">kFALSE</a> <span class="comment">/*source info*/</span>, useDocxxStyle, 
                     <a href="../ListOfTypes.html#Bool_t">kFALSE</a> <span class="comment">/*allowPureVirtual*/</span>, pattern, <span class="string">".cxx.html"</span>);
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posGt = pattern.Index(<span class="string">'&gt;'</span>);
-      <span class="keyword">if</span> (posGt != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (posGt != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          <span class="comment">// template! Re-run with pattern '...&lt;.*&gt;::'</span>
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posLt = pattern.Index(<span class="string">'&lt;'</span>);
-         <span class="keyword">if</span> (posLt != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; posLt &lt; posGt) {
+         <span class="keyword">if</span> (posLt != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; posLt &lt; posGt) {
             pattern.Replace(posLt + 1, posGt - posLt - 1, <span class="string">".*"</span>);
             <a href="../TDocParser.html#TDocParser:LocateMethods" title="void TDocParser::LocateMethods(ostream&amp; out,const char* filename,Bool_t lookForSourceInfo=kTRUE,Bool_t useDocxxStyle=kFALSE,Bool_t allowPureVirtual=kFALSE,const char* methodPattern=0,const char* sourceExt=0)">LocateMethods</a>(out, implFileName, <a href="../ListOfTypes.html#Bool_t">kFALSE</a> <span class="comment">/*source info*/</span>, useDocxxStyle, 
                     <a href="../ListOfTypes.html#Bool_t">kFALSE</a> <span class="comment">/*allowPureVirtual*/</span>, pattern, <span class="string">".cxx.html"</span>);
@@ -1892,8 +1892,8 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
 
    <a href="../TString.html">TString</a> pattern(<a href="../TDocParser.html#TDocParser:fCurrentClass" title="TClass* TDocParser::fCurrentClass">fCurrentClass</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
    <span class="comment">// take unscoped version</span>
-   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posLastScope = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
-   <span class="keyword">while</span> ((posLastScope = pattern.Index(<span class="string">"::"</span>)) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posLastScope = <a href="../ListOfTypes.html#int">kNPOS</a>;
+   <span class="keyword">while</span> ((posLastScope = pattern.Index(<span class="string">"::"</span>)) != <a href="../ListOfTypes.html#int">kNPOS</a>)
       pattern.Remove(0, posLastScope + 1);
    pattern += <span class="string">"::"</span>;
    
@@ -1902,10 +1902,10 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
       <a href="../TDocParser.html#TDocParser:LocateMethods" title="void TDocParser::LocateMethods(ostream&amp; out,const char* filename,Bool_t lookForSourceInfo=kTRUE,Bool_t useDocxxStyle=kFALSE,Bool_t allowPureVirtual=kFALSE,const char* methodPattern=0,const char* sourceExt=0)">LocateMethods</a>(out, declFileName, <a href="../ListOfTypes.html#Bool_t">kTRUE</a> <span class="comment">/*source info*/</span>, useDocxxStyle, 
                     <a href="../ListOfTypes.html#Bool_t">kFALSE</a> <span class="comment">/*allowPureVirtual*/</span>, pattern, 0);
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posGt = pattern.Index(<span class="string">'&gt;'</span>);
-      <span class="keyword">if</span> (posGt != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (posGt != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          <span class="comment">// template! Re-run with pattern '...&lt;.*&gt;::'</span>
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posLt = pattern.Index(<span class="string">'&lt;'</span>);
-         <span class="keyword">if</span> (posLt != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; posLt &lt; posGt) {
+         <span class="keyword">if</span> (posLt != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; posLt &lt; posGt) {
             pattern.Replace(posLt + 1, posGt - posLt - 1, <span class="string">".*"</span>);
             <a href="../TDocParser.html#TDocParser:LocateMethods" title="void TDocParser::LocateMethods(ostream&amp; out,const char* filename,Bool_t lookForSourceInfo=kTRUE,Bool_t useDocxxStyle=kFALSE,Bool_t allowPureVirtual=kFALSE,const char* methodPattern=0,const char* sourceExt=0)">LocateMethods</a>(out, declFileName, <a href="../ListOfTypes.html#Bool_t">kTRUE</a> <span class="comment">/*source info*/</span>, useDocxxStyle, 
                     <a href="../ListOfTypes.html#Bool_t">kFALSE</a> <span class="comment">/*allowPureVirtual*/</span>, pattern, 0);
@@ -1955,16 +1955,16 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
 
    <span class="comment">// remove all &lt;span class=<span class="string">"comment"</span>&gt; tags</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a> mustDealWithCommentAtBOL = <a href="../TDocParser.html#TDocParser:fCommentAtBOL" title="Bool_t TDocParser::fCommentAtBOL">fCommentAtBOL</a>; <span class="comment">// whether we had a closing <span class="string">"*/"</span></span>
-   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posComment = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posComment = <a href="../ListOfTypes.html#int">kNPOS</a>;
    <span class="keyword">if</span> (!<a href="../TDocParser.html#TDocParser:fCommentAtBOL" title="Bool_t TDocParser::fCommentAtBOL">fCommentAtBOL</a>) 
       posComment = commentLine.Index(<span class="string">"&lt;span class=\"comment\"&gt;"</span>, 0, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
-   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posSpanEnd = commentLine.Index(<span class="string">"&lt;/span&gt;"</span>, posComment == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>?0:posComment, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
-   <span class="keyword">while</span> ((mustDealWithCommentAtBOL &amp;&amp; posSpanEnd != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) || posComment != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posSpanEnd = commentLine.Index(<span class="string">"&lt;/span&gt;"</span>, posComment == <a href="../ListOfTypes.html#int">kNPOS</a>?0:posComment, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
+   <span class="keyword">while</span> ((mustDealWithCommentAtBOL &amp;&amp; posSpanEnd != <a href="../ListOfTypes.html#int">kNPOS</a>) || posComment != <a href="../ListOfTypes.html#int">kNPOS</a>) {
       <a href="../ListOfTypes.html#Int_t">Int_t</a> spanLevel = 1;
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posSpan = commentLine.Index(<span class="string">"&lt;span"</span>, posComment + 1, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
-      <span class="keyword">while</span> (spanLevel &gt; 1 || (posSpan != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; posSpan &lt; posSpanEnd)) {
+      <span class="keyword">while</span> (spanLevel &gt; 1 || (posSpan != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; posSpan &lt; posSpanEnd)) {
          <span class="comment">// another span was opened, take the next &lt;/span&gt;</span>
-         <span class="keyword">if</span> (posSpan != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; posSpan &lt; posSpanEnd) {
+         <span class="keyword">if</span> (posSpan != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; posSpan &lt; posSpanEnd) {
             ++spanLevel;
             posSpan = commentLine.Index(<span class="string">"&lt;span"</span>, posSpan + 1, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
             <span class="comment">// posSpanEnd doesn't change</span>
@@ -1974,10 +1974,10 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
          <span class="comment">// posSpan doesn't change</span>
          posSpanEnd = commentLine.Index(<span class="string">"&lt;/span&gt;"</span>, posSpanEnd + 1, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
       }
-      <span class="keyword">if</span> (posSpanEnd != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (posSpanEnd != <a href="../ListOfTypes.html#int">kNPOS</a>) {
           <span class="comment">// only remove span if &lt;/span&gt; if it exists (or we end up with unbalanced spans)</span>
          commentLine.Remove(posSpanEnd, 7);
-         <span class="keyword">if</span> (posComment != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) 
+         <span class="keyword">if</span> (posComment != <a href="../ListOfTypes.html#int">kNPOS</a>) 
             commentLine.Remove(posComment, 22);
          <span class="keyword">else</span> {
             mustDealWithCommentAtBOL = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
@@ -1987,7 +1987,7 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
          posComment = commentLine.Index(<span class="string">"&lt;span class=\"comment\"&gt;"</span>, posComment, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
       } <span class="keyword">else</span> <span class="keyword">break</span>;
    }
-   <span class="keyword">if</span> (posComment != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+   <span class="keyword">if</span> (posComment != <a href="../ListOfTypes.html#int">kNPOS</a>)
       commentLine.Remove(posComment, 22);
 
    <span class="comment">// don't strip in C comments, do strip if opening:</span>
@@ -2326,7 +2326,7 @@ std::set&lt;std::string&gt;  <a href="../TDocParser.html">TDocParser</a>::<a hre
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:29 </em><em>&raquo; Last generated: 2015-03-04 20:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

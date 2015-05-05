@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Thu Mar 12 13:29:50 2015            -->
+<!--   Date: Tue May  5 12:01:28 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TFragment.h.html">header file</a>
 <a class="descrheadentry" href="src/TFragment.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TFragment_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -101,15 +101,16 @@ fragment
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:Get4GCfd">Get4GCfd</a>(<span class="keyword">int</span> i = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetEnergy">GetEnergy</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetEnergy">GetEnergy</a>(<span class="keyword">int</span> iter = 0) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TFragment:GetName">GetName</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">long</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTimeStamp">GetTimeStamp</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTimeStamp">GetTimeStamp</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">long</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTimeStamp_ns">GetTimeStamp_ns</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTZero">GetTZero</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(<a href="./TTimer.html">TTimer</a>* timer)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
@@ -146,7 +147,7 @@ fragment
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -227,29 +228,25 @@ fragment
 </table></div>
 </div>
 <h2><a id="TFragment:Class_Charts"></a>Class Charts</h2>
-<map name="MapTFragment_Inh" id="MapTFragment_Inh">
-<area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="4,16,308,76"/>
-</map>
-<map name="MapTFragment_InhMem" id="MapTFragment_InhMem">
-<area shape="rect" id="graph12" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph13" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph14" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph15" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph16" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph17" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph18" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph11" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTFragment_Lib" id="MapTFragment_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
-</map>
-<div class="tabs">
-<a id="imgTFragment_Inh" class="tabsel" href="inh/TFragment_Inh.png" onclick="javascript:return SetImg('Charts','inh/TFragment_Inh.png');">Inheritance</a>
-<a id="imgTFragment_InhMem" class="tab" href="inhmem/TFragment_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TFragment_InhMem.png');">Inherited Members</a>
-<a id="imgTFragment_Incl" class="tab" href="incl/TFragment_Incl.png" onclick="javascript:return SetImg('Charts','incl/TFragment_Incl.png');">Includes</a>
-<a id="imgTFragment_Lib" class="tab" href="lib/TFragment_Lib.png" onclick="javascript:return SetImg('Charts','lib/TFragment_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTFragment_Inh" src="inh/TFragment_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TFragment" href="./TFragment.html">TFragment</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragment:TFragment" href="src/TFragment.cxx.html#WR6PTD">TFragment</a>()</span><br />
 <div class="funccomm"><pre> Default Constructor
@@ -264,7 +261,9 @@ fragment
 <div class="funccomm"><pre> Clears all fields of the <a href="./TFragment.html">TFragment</a>
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">long</span> <a class="funcname" name="TFragment:GetTimeStamp" href="src/TFragment.cxx.html#IBg02D">GetTimeStamp</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TFragment:GetTimeStamp" href="src/TFragment.cxx.html#r6MIbE">GetTimeStamp</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TFragment:GetTZero" href="src/TFragment.cxx.html#v858L">GetTZero</a>() const</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">long</span> <a class="funcname" name="TFragment:GetTimeStamp_ns" href="src/TFragment.cxx.html#TnB9n">GetTimeStamp_ns</a>()</span><br />
 </div>
@@ -272,7 +271,7 @@ fragment
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TFragment:GetName" href="src/TFragment.cxx.html#k8dWe">GetName</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TFragment:GetEnergy" href="src/TFragment.cxx.html#KCk4wE">GetEnergy</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TFragment:GetEnergy" href="src/TFragment.cxx.html#MYbHuB">GetEnergy</a>(<span class="keyword">int</span> iter = 0) const</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragment:Print" href="src/TFragment.cxx.html#gOVvqE">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
 <div class="funccomm"><pre>Prints out all fields of the <a href="./TFragment.html">TFragment</a>
@@ -282,12 +281,12 @@ fragment
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TFragment:operator__" href="src/TFragment.h.html#hHdtHE">operator&lt;</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp; rhs) const</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./TFragment.html#TFragment:GetTimeStamp" title="long TFragment::GetTimeStamp()">GetTimeStamp</a>() &lt; rhs.<a href="./TFragment.html#TFragment:GetTimeStamp" title="long TFragment::GetTimeStamp()">GetTimeStamp</a>()); }</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./TFragment.html#TFragment:GetTimeStamp" title="double TFragment::GetTimeStamp()">GetTimeStamp</a>() &lt; rhs.<a href="./TFragment.html#TFragment:GetTimeStamp" title="double TFragment::GetTimeStamp()">GetTimeStamp</a>()); }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TFragment:operator_" href="src/TFragment.h.html#ZRYyCE">operator&gt;</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp; rhs) const</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./TFragment.html#TFragment:GetTimeStamp" title="long TFragment::GetTimeStamp()">GetTimeStamp</a>() &gt; rhs.<a href="./TFragment.html#TFragment:GetTimeStamp" title="long TFragment::GetTimeStamp()">GetTimeStamp</a>()); }</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./TFragment.html#TFragment:GetTimeStamp" title="double TFragment::GetTimeStamp()">GetTimeStamp</a>() &gt; rhs.<a href="./TFragment.html#TFragment:GetTimeStamp" title="double TFragment::GetTimeStamp()">GetTimeStamp</a>()); }</code></div>
 <div style="clear:both;"></div>
 </div>
 
@@ -295,7 +294,7 @@ fragment
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Thu Mar 12 13:29:50 2015 </em><em>&raquo; Last generated: 2015-03-12 13:29</em><br />
+<em>&raquo; Last changed: Tue May  5 12:01:28 2015 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

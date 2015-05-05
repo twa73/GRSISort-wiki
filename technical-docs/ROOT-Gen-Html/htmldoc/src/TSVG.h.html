@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:14 2015            -->
+<!--   Date: Tue May  5 12:09:29 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -56,7 +56,7 @@
    <a href="../ListOfTypes.html#Int_t">Int_t</a>        <a href="../TSVG.html#TSVG:fType" title="Int_t TSVG::fType">fType</a>;            <span class="comment">//Workstation type used to know if the SVG is open</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>       <a href="../TSVG.html#TSVG:fBoundingBox" title="Bool_t TSVG::fBoundingBox">fBoundingBox</a>;     <span class="comment">//True when the SVG header is printed</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>       <a href="../TSVG.html#TSVG:fRange" title="Bool_t TSVG::fRange">fRange</a>;           <span class="comment">//True when a range has been defined</span>
-   <a href="../ListOfTypes.html#Int_t">Int_t</a>        <a href="../TSVG.html#TSVG:fYsizeSVG" title="Int_t TSVG::fYsizeSVG">fYsizeSVG</a>;        <span class="comment">//Page's Y size in SVG units</span>
+   <a href="../ListOfTypes.html#Double_t">Double_t</a>     <a href="../TSVG.html#TSVG:fYsizeSVG" title="Double_t TSVG::fYsizeSVG">fYsizeSVG</a>;        <span class="comment">//Page's Y size in SVG units</span>
 
 <span class="keyword">public</span>:
    <a href="../TSVG.html">TSVG</a>();
@@ -67,7 +67,7 @@
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:CellArrayFill" title="void TSVG::CellArrayFill(Int_t r,Int_t g,Int_t b)">CellArrayFill</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> r, <a href="../ListOfTypes.html#Int_t">Int_t</a> g, <a href="../ListOfTypes.html#Int_t">Int_t</a> b);
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:CellArrayEnd" title="void TSVG::CellArrayEnd()">CellArrayEnd</a>();
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:Close" title="void TSVG::Close(Option_t* opt=&quot;&quot;)">Close</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
-<a name="wzlSGE"></a>   <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TSVG.html#TSVG:CMtoSVG" title="Int_t TSVG::CMtoSVG(Double_t u)">CMtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> u) {<span class="keyword">return</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>(0.5 + 72*u/2.54);}
+<a name="GjwQUD"></a>   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSVG.html#TSVG:CMtoSVG" title="Double_t TSVG::CMtoSVG(Double_t u)">CMtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> u) {<span class="keyword">return</span> 0.5 + 72*u/2.54;}
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:DrawBox" title="void TSVG::DrawBox(Double_t x1,Double_t y1,Double_t x2,Double_t y2)">DrawBox</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> x1, <a href="../ListOfTypes.html#Double_t">Double_t</a> y1,<a href="../ListOfTypes.html#Double_t">Double_t</a> x2, <a href="../ListOfTypes.html#Double_t">Double_t</a>  y2);
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:DrawFrame" title="void TSVG::DrawFrame(Double_t xl,Double_t yl,Double_t xt,Double_t yt,Int_t mode,Int_t border,Int_t dark,Int_t light)">DrawFrame</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> xl, <a href="../ListOfTypes.html#Double_t">Double_t</a> yl, <a href="../ListOfTypes.html#Double_t">Double_t</a> xt, <a href="../ListOfTypes.html#Double_t">Double_t</a>  yt,
                    <a href="../ListOfTypes.html#Int_t">Int_t</a> mode, <a href="../ListOfTypes.html#Int_t">Int_t</a> border, <a href="../ListOfTypes.html#Int_t">Int_t</a> dark, <a href="../ListOfTypes.html#Int_t">Int_t</a> light);
@@ -78,7 +78,7 @@
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:DrawPS" title="void TSVG::DrawPS(Int_t n,Float_t* xw,Float_t* yw) or overloads">DrawPS</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> n, <a href="../ListOfTypes.html#Float_t">Float_t</a> *xw, <a href="../ListOfTypes.html#Float_t">Float_t</a> *yw);
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:DrawPS" title="void TSVG::DrawPS(Int_t n,Float_t* xw,Float_t* yw) or overloads">DrawPS</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> n, <a href="../ListOfTypes.html#Double_t">Double_t</a> *xw, <a href="../ListOfTypes.html#Double_t">Double_t</a> *yw);
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:Initialize" title="void TSVG::Initialize()">Initialize</a>();
-   <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:MovePS" title="void TSVG::MovePS(Int_t x,Int_t y)">MovePS</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> x, <a href="../ListOfTypes.html#Int_t">Int_t</a> y);
+   <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:MovePS" title="void TSVG::MovePS(Double_t x,Double_t y)">MovePS</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> x, <a href="../ListOfTypes.html#Double_t">Double_t</a> y);
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:NewPage" title="void TSVG::NewPage()">NewPage</a>();
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:Off" title="void TSVG::Off()">Off</a>();
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:On" title="void TSVG::On()">On</a>();
@@ -97,12 +97,12 @@
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:Text" title="void TSVG::Text(Double_t x,Double_t y,const char* string) or overloads">Text</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a>, <a href="../ListOfTypes.html#Double_t">Double_t</a>, <span class="keyword">const</span> <span class="keyword">wchar_t</span> *){}
 <a name="JJmXnD"></a>   <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:TextNDC" title="void TSVG::TextNDC(Double_t u,Double_t v,const char* string) or overloads">TextNDC</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> u, <a href="../ListOfTypes.html#Double_t">Double_t</a> v, <span class="keyword">const</span> <span class="keyword">char</span> *string);
    <span class="keyword">void</span>  <a href="../TSVG.html#TSVG:TextNDC" title="void TSVG::TextNDC(Double_t u,Double_t v,const char* string) or overloads">TextNDC</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a>, <a href="../ListOfTypes.html#Double_t">Double_t</a>, <span class="keyword">const</span> <span class="keyword">wchar_t</span> *){}
-   <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TSVG.html#TSVG:UtoSVG" title="Int_t TSVG::UtoSVG(Double_t u)">UtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> u);
-   <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TSVG.html#TSVG:VtoSVG" title="Int_t TSVG::VtoSVG(Double_t v)">VtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> v);
-   <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TSVG.html#TSVG:XtoSVG" title="Int_t TSVG::XtoSVG(Double_t x)">XtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> x);
-   <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TSVG.html#TSVG:YtoSVG" title="Int_t TSVG::YtoSVG(Double_t y)">YtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> y);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSVG.html#TSVG:UtoSVG" title="Double_t TSVG::UtoSVG(Double_t u)">UtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> u);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSVG.html#TSVG:VtoSVG" title="Double_t TSVG::VtoSVG(Double_t v)">VtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> v);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSVG.html#TSVG:XtoSVG" title="Double_t TSVG::XtoSVG(Double_t x)">XtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> x);
+   <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TSVG.html#TSVG:YtoSVG" title="Double_t TSVG::YtoSVG(Double_t y)">YtoSVG</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> y);
 
-   ClassDef(<a href="../TSVG.html">TSVG</a>,0)  <span class="comment">//SVG driver</span>
+   ClassDef(<a href="../TSVG.html">TSVG</a>,1)  <span class="comment">//SVG driver</span>
 };
 
 <span class="cpp">#endif</span>
@@ -114,7 +114,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:37 </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

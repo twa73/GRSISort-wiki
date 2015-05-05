@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:49 2015            -->
+<!--   Date: Tue May  5 12:09:26 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -87,7 +87,7 @@
 <span class="comment">//                                                                      //</span>
 <span class="comment">// 4. Merged commands                                                   //</span>
 <span class="comment">//                                                                      //</span>
-<span class="comment">// It possible to group several commands together so an end user        //</span>
+<span class="comment">// It possible to group several commands together so an <a href="../TCollection.html#TCollection:end" title="TIter TCollection::end()">end</a> user        //</span>
 <span class="comment">// can undo and redo them with one command.                             //</span>
 <span class="comment">//                                                                      //</span>
 <span class="comment">//    <a href="../TQCommand.html">TQCommand</a> *update = new <a href="../TQCommand.html">TQCommand</a>(gPad, <span class="string">"Modified()"</span>);            //</span>
@@ -431,7 +431,7 @@ ClassImp(<a href="../TQUndoManager.html">TQUndoManager</a>)
 <a name="FrRAvC"></a><span class="keyword">void</span> <a href="../TQCommand.html">TQCommand</a>::<a href="../TQCommand.html#TQCommand:Merge" title="void TQCommand::Merge(TQCommand* c) or overloads">Merge</a>(<a href="../TQCommand.html">TQCommand</a> *c)
 {
    <span class="comment">// <a href="../TQCommand.html#TQCommand:Add" title="void TQCommand::Add(TObject* obj,Option_t* opt) or overloads">Add</a> command to the list of merged commands.</span>
-   <span class="comment">// This make it possible to group complex actions together so an end user</span>
+   <span class="comment">// This make it possible to group complex actions together so an <a href="../TCollection.html#TCollection:end" title="TIter TCollection::end()">end</a> user</span>
    <span class="comment">// can undo and redo them with one command. Execution of <a href="../TQUndoManager.html">TQUndoManager</a>::<a href="../TQUndoManager.html#TQUndoManager:Undo" title="void TQUndoManager::Undo(Option_t* option=&quot;&quot;)">Undo</a>(),</span>
    <span class="comment">// <a href="../TQUndoManager.html">TQUndoManager</a>::<a href="../TQUndoManager.html#TQUndoManager:Redo" title="void TQUndoManager::Redo(Option_t* option=&quot;&quot;)">Redo</a>() methods only invokes the top level command as a whole.</span>
    <span class="comment">//</span>
@@ -1244,7 +1244,7 @@ ClassImp(<a href="../TQUndoManager.html">TQUndoManager</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

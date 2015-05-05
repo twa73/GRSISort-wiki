@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:35:23 2015            -->
+<!--   Date: Tue May  5 12:08:59 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -960,9 +960,9 @@ End_Macro
    <span class="keyword">if</span> (fBorderSize != 4) {
       out&lt;&lt;<span class="string">"   leg-&gt;SetBorderSize("</span>&lt;&lt;fBorderSize&lt;&lt;<span class="string">");"</span>&lt;&lt;endl;
    }
-   <a href="../TAttText.html#TAttText:SaveTextAttributes" title="void TAttText::SaveTextAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t alidef=12,Float_t angdef=0,Int_t coldef=1,Int_t fondef=61,Float_t sizdef=1)">SaveTextAttributes</a>(out,<span class="string">"leg"</span>,12,0,1,42,0);
-   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out,<span class="string">"leg"</span>,-1,-1,-1);
-   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out,<span class="string">"leg"</span>,-1,-1);
+   <a href="../TAttText.html#TAttText:SaveTextAttributes" title="void TAttText::SaveTextAttributes(ostream&amp; out,const char* name,Int_t alidef=12,Float_t angdef=0,Int_t coldef=1,Int_t fondef=61,Float_t sizdef=1)">SaveTextAttributes</a>(out,<span class="string">"leg"</span>,12,0,1,42,0);
+   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out,<span class="string">"leg"</span>,-1,-1,-1);
+   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out,<span class="string">"leg"</span>,-1,-1);
    <span class="keyword">if</span> ( <a href="../TLegend.html#TLegend:fPrimitives" title="TList* TLegend::fPrimitives">fPrimitives</a> ) {
       <a href="../TIter.html">TIter</a> next(<a href="../TLegend.html#TLegend:fPrimitives" title="TList* TLegend::fPrimitives">fPrimitives</a>);
       <a href="../TLegendEntry.html">TLegendEntry</a> *entry;
@@ -1030,7 +1030,7 @@ End_Macro
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:35 </em><em>&raquo; Last generated: 2015-03-04 20:35</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

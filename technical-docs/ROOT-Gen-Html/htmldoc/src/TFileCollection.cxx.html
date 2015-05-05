@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:29:19 2015            -->
+<!--   Date: Tue May  5 12:01:27 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -213,7 +213,7 @@ ClassImp(<a href="../TFileCollection.html">TFileCollection</a>)
             <a href="../TRegexp.html">TRegexp</a> rg(filesExp);
             <span class="keyword">while</span> ((ent = <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:GetDirEntry" title="const char* TSystem::GetDirEntry(void* dirp)">GetDirEntry</a>(dataSetDir))) {
                <a href="../TString.html">TString</a> entryString(ent);
-               <span class="keyword">if</span> (entryString.Index(rg) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+               <span class="keyword">if</span> (entryString.Index(rg) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                   <span class="comment">// matching dir entry</span>
                   <a href="../TString.html">TString</a> fn = <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:DirName" title="const char* TSystem::DirName(const char* pathname)">DirName</a>(dir);
                   fn += <span class="string">"/"</span>;
@@ -1028,7 +1028,7 @@ ClassImp(<a href="../TFileCollection.html">TFileCollection</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:29 </em><em>&raquo; Last generated: 2015-03-04 20:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

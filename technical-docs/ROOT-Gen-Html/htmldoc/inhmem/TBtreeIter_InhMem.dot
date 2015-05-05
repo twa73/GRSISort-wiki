@@ -1,0 +1,153 @@
+strict digraph G {
+ratio=auto;
+rankdir=RL;
+compound=true;
+constraint=false;
+ranksep=0.1;
+nodesep=0;
+margin=0;
+  node [style=filled,width=0.7,height=0.15,fixedsize=true,shape=plaintext,fontsize=10];
+subgraph "clusterTBtreeIter" {
+  color=lightgray;
+  label="TBtreeIter";
+subgraph "clusterData0TBtreeIter" {
+  color=white;
+  label="";
+  "clusterNode0TBtreeIter" [height=0,width=0,style=invis];
+"TBtreeIter::fCurCursor" [label="fCurCursor",color="#FFCCCC"];
+};
+subgraph "clusterData1TBtreeIter" {
+  color=white;
+  label="";
+  "clusterNode1TBtreeIter" [height=0,width=0,style=invis];
+"TBtreeIter::fCursor" [label="fCursor",color="#FFCCCC"];
+"TBtreeIter::fDirection" [label="fDirection",color="#FFCCCC"];
+};
+subgraph "clusterData2TBtreeIter" {
+  color=white;
+  label="";
+  "clusterNode2TBtreeIter" [height=0,width=0,style=invis];
+"TBtreeIter::fTree" [label="fTree",color="#FFCCCC"];
+"TBtreeIter::fgIsA" [label="fgIsA",color="#FFCCCC"];
+};
+subgraph "clusterData3TBtreeIter" {
+  color=white;
+  label="";
+  "clusterNode3TBtreeIter" [height=0,width=0,style=invis];
+};
+subgraph "clusterFunc0TBtreeIter" {
+  color=white;
+  label="";
+  "clusterNode0TBtreeIter" [height=0,width=0,style=invis];
+"TBtreeIter::Class" [label="Class",color="#CCFFCC"];
+"TBtreeIter::Class_Name" [label="Class_Name",color="#CCFFCC"];
+"TBtreeIter::Class_Version" [label="Class_Version",color="#CCFFCC"];
+"TBtreeIter::DeclFileLine" [label="DeclFileLine",color="#CCFFCC"];
+"TBtreeIter::DeclFileName" [label="DeclFileName",color="#CCFFCC"];
+"TBtreeIter::Dictionary" [label="Dictionary",color="#CCFFCC"];
+};
+subgraph "clusterFunc1TBtreeIter" {
+  color=white;
+  label="";
+"TBtreeIter::GetCollection" [label="GetCollection",color="#CCFFCC"];
+"TBtreeIter::ImplFileLine" [label="ImplFileLine",color="#CCFFCC"];
+"TBtreeIter::ImplFileName" [label="ImplFileName",color="#CCFFCC"];
+"TBtreeIter::IsA" [label="IsA",color="#CCFFCC"];
+"TBtreeIter::Next" [label="Next",color="#CCFFCC"];
+"TBtreeIter::Reset" [label="Reset",color="#CCFFCC"];
+"TBtreeIter::ShowMembers" [label="ShowMembers",color="#CCFFCC"];
+};
+subgraph "clusterFunc2TBtreeIter" {
+  color=white;
+  label="";
+"TBtreeIter::Streamer" [label="Streamer",color="#CCFFCC"];
+"TBtreeIter::StreamerNVirtual" [label="StreamerNVirtual",color="#CCFFCC"];
+"TBtreeIter::TBtreeIter" [label="TBtreeIter",color="#CCFFCC"];
+"TBtreeIter::operator!=" [label="operator!=",color="#CCFFCC"];
+"TBtreeIter::operator*" [label="operator*",color="#CCFFCC"];
+"TBtreeIter::operator=" [label="operator=",color="#CCFFCC"];
+"TBtreeIter::~TBtreeIter" [label="~TBtreeIter",color="#CCFFCC"];
+};
+subgraph "clusterFunc3TBtreeIter" {
+  color=white;
+  label="";
+};
+}
+subgraph "clusterTIterator" {
+  color=lightgray;
+  label="TIterator";
+  URL="./TIterator.html"
+subgraph "clusterData0TIterator" {
+  color=white;
+  label="";
+  "clusterNode0TIterator" [height=0,width=0,style=invis];
+"TIterator::fgIsA" [label="fgIsA",color="#FFCCCC"];
+  "clusterNode1TIterator" [height=0,width=0,style=invis];
+  "clusterNode2TIterator" [height=0,width=0,style=invis];
+};
+subgraph "clusterFunc0TIterator" {
+  color=white;
+  label="";
+  "clusterNode0TIterator" [height=0,width=0,style=invis];
+"TIterator::Class" [label="Class",color="#777777"];
+"TIterator::Class_Name" [label="Class_Name",color="#777777"];
+"TIterator::Class_Version" [label="Class_Version",color="#777777"];
+"TIterator::DeclFileLine" [label="DeclFileLine",color="#777777"];
+"TIterator::DeclFileName" [label="DeclFileName",color="#777777"];
+"TIterator::Dictionary" [label="Dictionary",color="#777777"];
+};
+subgraph "clusterFunc1TIterator" {
+  color=white;
+  label="";
+"TIterator::GetCollection" [label="GetCollection",color="#777777"];
+"TIterator::GetOption" [label="GetOption",color="#CCFFCC"];
+"TIterator::ImplFileLine" [label="ImplFileLine",color="#777777"];
+"TIterator::ImplFileName" [label="ImplFileName",color="#777777"];
+"TIterator::IsA" [label="IsA",color="#777777"];
+"TIterator::Next" [label="Next",color="#777777"];
+"TIterator::Reset" [label="Reset",color="#777777"];
+"TIterator::ShowMembers" [label="ShowMembers",color="#777777"];
+};
+subgraph "clusterFunc2TIterator" {
+  color=white;
+  label="";
+"TIterator::Streamer" [label="Streamer",color="#777777"];
+"TIterator::StreamerNVirtual" [label="StreamerNVirtual",color="#777777"];
+"TIterator::operator!=" [label="operator!=",color="#777777"];
+"TIterator::operator()" [label="operator()",color="#CCFFCC"];
+"TIterator::operator*" [label="operator*",color="#777777"];
+"TIterator::operator=" [label="operator=",color="#777777"];
+"TIterator::operator==" [label="operator==",color="#CCFFCC"];
+"TIterator::~TIterator" [label="~TIterator",color="#CCFFCC"];
+};
+subgraph "clusterFunc3TIterator" {
+  color=white;
+  label="";
+};
+}
+subgraph "clusteriterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" {
+  color=lightgray;
+  label="iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>";
+subgraph "clusterData0iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" {
+  color=white;
+  label="";
+  "clusterNode0iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" [height=0,width=0,style=invis];
+  "clusterNode1iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" [height=0,width=0,style=invis];
+  "clusterNode2iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" [height=0,width=0,style=invis];
+};
+}
+"TBtreeIter::fCurCursor" -> "TBtreeIter::fCursor" [style=invis,weight=100];
+"TBtreeIter::fCursor" -> "TBtreeIter::fTree" [style=invis,weight=100];
+"TBtreeIter::Class" -> "TBtreeIter::GetCollection" [style=invis,weight=100];
+"TBtreeIter::GetCollection" -> "TBtreeIter::Streamer" [style=invis,weight=100];
+"clusterNode0TBtreeIter" -> "clusterNode1TBtreeIter" [style=invis];
+"clusterNode1TBtreeIter" -> "clusterNode2TBtreeIter" [style=invis];
+  "clusterNode2TBtreeIter" ->  "clusterNode0TIterator" [ltail="clusterTBtreeIter",lhead="clusterTIterator"];
+  "clusterNode2TBtreeIter" ->  "clusterNode0iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" [ltail="clusterTBtreeIter",lhead="clusteriterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>",weight=0];
+"TIterator::Class" -> "TIterator::GetCollection" [style=invis,weight=100];
+"TIterator::GetCollection" -> "TIterator::Streamer" [style=invis,weight=100];
+"clusterNode0TIterator" -> "clusterNode1TIterator" [style=invis];
+"clusterNode1TIterator" -> "clusterNode2TIterator" [style=invis];
+"clusterNode0iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" -> "clusterNode1iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" [style=invis];
+"clusterNode1iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" -> "clusterNode2iterator<bidirectional_iterator_tag,TObject*,long,const TObject**,const TObject*&>" [style=invis];
+}

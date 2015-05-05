@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:29:01 2015            -->
+<!--   Date: Tue May  5 12:01:23 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -896,12 +896,12 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
             <a href="../TString.html">TString</a> libs(cdiClass-&gt;GetSharedLibs());
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posDepLibs = libs.Index(<span class="string">' '</span>);
             <a href="../TString.html">TString</a> thisLib(libs);
-            <span class="keyword">if</span> (posDepLibs != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+            <span class="keyword">if</span> (posDepLibs != <a href="../ListOfTypes.html#int">kNPOS</a>)
                thisLib.Remove(posDepLibs, thisLib.Length());
 
             {
                <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posExt = thisLib.First(<span class="string">'.'</span>);
-               <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+               <span class="keyword">if</span> (posExt != <a href="../ListOfTypes.html#int">kNPOS</a>)
                   thisLib.Remove(posExt, thisLib.Length());
             }
 
@@ -916,7 +916,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
                <a href="../TDocOutput.html#TDocOutput:fHtml" title="THtml* TDocOutput::fHtml">fHtml</a>-><a href="../THtml.html#THtml:GetLibraryDependencies" title="TList* THtml::GetLibraryDependencies()">GetLibraryDependencies</a>()-><a href="../TList.html#TList:Add" title="void TList::Add(TObject* obj) or overloads">Add</a>(libdeps);
             }
             libdeps-&gt;AddModule(module-&gt;<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
-            <span class="keyword">if</span> (posDepLibs != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+            <span class="keyword">if</span> (posDepLibs != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                std::string lib;
                <span class="keyword">for</span>(<a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> pos = posDepLibs + 1; libs[pos]; ++pos) {
                   <span class="keyword">if</span> (libs[pos] == <span class="string">' '</span>) {
@@ -1481,11 +1481,11 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
 
       <span class="comment">// do we have a link for the current name?</span>
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> cLink = author.First(<span class="string">'&lt;'</span>); <span class="comment">// look for link start tag</span>
-      <span class="keyword">if</span> (cLink != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (cLink != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          <span class="comment">// split NAME &lt;LINK&gt; POST</span>
          <span class="comment">// into  &lt;a href=<span class="string">"LINK"</span>&gt;NAME&lt;/a&gt; POST</span>
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> endLink = author.Index(<span class="string">"&gt;"</span>, cLink + 1);
-         <span class="keyword">if</span>(endLink == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+         <span class="keyword">if</span>(endLink == <a href="../ListOfTypes.html#int">kNPOS</a>)
             endLink = author.Length();
          authors += <span class="string">"&lt;a href=\""</span>;
          authors += author(cLink + 1,  endLink - (cLink + 1));
@@ -1637,7 +1637,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
 
    <a href="../TString.html">TString</a> encScope(name);
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posTemplate = encScope.Index(<span class="string">'&lt;'</span>);
-   <span class="keyword">if</span> (posTemplate != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <span class="keyword">if</span> (posTemplate != <a href="../ListOfTypes.html#int">kNPOS</a>) {
       <span class="comment">// strip default template params</span>
       name = <a href="../TDocOutput.html#TDocOutput:fHtml" title="THtml* TDocOutput::fHtml">fHtml</a>-><a href="../THtml.html#THtml:ShortType" title="const char* THtml::ShortType(const char* name)">ShortType</a>(name);
       <a href="../TString.html">TString</a> templateArgs = encScope(posTemplate, encScope.Length());
@@ -1648,7 +1648,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
       <span class="comment">// The rule: if the enclosing scope up to the N-th scope matches,</span>
       <span class="comment">// the name becomes -pN</span>
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posName = encScope.Last(<span class="string">':'</span>);
-      <span class="keyword">if</span> (posName != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (posName != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          <a href="../ListOfTypes.html#Int_t">Int_t</a> numDblColumn = encScope.CountChar(<span class="string">':'</span>);
          <span class="keyword">while</span> (numDblColumn &gt; 1) {
             encScope.Remove(posName + 1, encScope.Length());
@@ -1656,7 +1656,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
             templateArgs.ReplaceAll(encScope, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:Format" title="TString TString::Format(const char* fmt)">Format</a>(<span class="string">"-p%d"</span>, numDblColumn / 2));
             encScope.Remove(encScope.Length() - 2, 2);
             posName = encScope.Last(<span class="string">':'</span>);
-            <span class="keyword">if</span> (posName == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+            <span class="keyword">if</span> (posName == <a href="../ListOfTypes.html#int">kNPOS</a>)
                <span class="keyword">break</span>; <span class="comment">// should be handled by numDblColumn...</span>
          }
          name.Replace(posTemplate, name.Length(), templateArgs);
@@ -1673,7 +1673,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
       hash.Prepend(<span class="string">"-h"</span>);
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posDot = name.Last(<span class="string">'.'</span>);
       <a href="../TString.html">TString</a> ext;
-      <span class="keyword">if</span> (posDot != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+      <span class="keyword">if</span> (posDot != <a href="../ListOfTypes.html#int">kNPOS</a>)
          ext = name(posDot, name.Length());
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> namelen = 240 - hash.Length() - ext.Length();
       name = name(0, namelen) + hash + ext;
@@ -2151,9 +2151,9 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
       <span class="keyword">if</span> (line) {
 
          <span class="keyword">if</span> (!cls &amp;&amp; (
-            line.Index(<span class="string">"%CLASS%"</span>) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> ||
-            line.Index(<span class="string">"%INCFILE%"</span>) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> ||
-            line.Index(<span class="string">"%SRCFILE%"</span>) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>))
+            line.Index(<span class="string">"%CLASS%"</span>) != <a href="../ListOfTypes.html#int">kNPOS</a> ||
+            line.Index(<span class="string">"%INCFILE%"</span>) != <a href="../ListOfTypes.html#int">kNPOS</a> ||
+            line.Index(<span class="string">"%SRCFILE%"</span>) != <a href="../ListOfTypes.html#int">kNPOS</a>))
             <span class="keyword">continue</span>; <span class="comment">// skip class line for non-class files</span>
 
          <a href="../TString.html">TString</a> txt(line);
@@ -2264,7 +2264,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
 
       <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> siTag = 0; siTag &lt; (<a href="../ListOfTypes.html#Int_t">Int_t</a>) <a href="../TDocParser.html">TDocParser</a>::<a href="../TDocParser.html#TDocParser:kNumSourceInfos" title="const TDocParser::ESourceInfo TDocParser::kNumSourceInfos">kNumSourceInfos</a>; ++siTag) {
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> siPos = line.Index(templateSITags[siTag]);
-         <span class="keyword">if</span> (siPos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (siPos != <a href="../ListOfTypes.html#int">kNPOS</a>) {
             <span class="keyword">if</span> (siValues[siTag] &amp;&amp; siValues[siTag][0])
                line.Replace(siPos, strlen(templateSITags[siTag]), siValues[siTag]);
             <span class="keyword">else</span>
@@ -2384,7 +2384,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
             <a href="../TString.html">TString</a> link(name);
             link.ReplaceAll(<span class="string">"/"</span>, <span class="string">"_"</span>);
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posSlash = name.Last(<span class="string">'/'</span>);
-            <span class="keyword">if</span> (posSlash != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+            <span class="keyword">if</span> (posSlash != <a href="../ListOfTypes.html#int">kNPOS</a>)
                name.Remove(0, posSlash + 1);
             out &lt;&lt; <span class="string">"&lt;a href=\""</span> &lt;&lt; link &lt;&lt; <span class="string">"_Index.html\"&gt;"</span> &lt;&lt; name &lt;&lt; <span class="string">"&lt;/a&gt;"</span> &lt;&lt; endl;
          }
@@ -2446,7 +2446,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
       <a href="../TString.html">TString</a> modulePath;
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> pos = 0;
       <span class="keyword">while</span> (modulename.Tokenize(modulePart, pos, <span class="string">"/"</span>)) {
-         <span class="keyword">if</span> (pos == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; !classname)
+         <span class="keyword">if</span> (pos == <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; !classname)
             <span class="comment">// we are documenting the module itself, no need to link it:</span>
             <span class="keyword">break</span>;
          <span class="keyword">if</span> (modulePath.Length()) modulePath += <span class="string">"_"</span>;
@@ -2460,7 +2460,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
    <span class="keyword">else</span> <span class="keyword">if</span> (module) {
       entityName = module-&gt;<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>();
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posSlash = entityName.Last(<span class="string">'/'</span>);
-      <span class="keyword">if</span> (posSlash != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+      <span class="keyword">if</span> (posSlash != <a href="../ListOfTypes.html#int">kNPOS</a>)
          entityName.Remove(0, posSlash + 1);
       entityName.ToUpper();
    }
@@ -2520,7 +2520,7 @@ ClassImp(<a href="../TDocOutput.html">TDocOutput</a>);
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:29 </em><em>&raquo; Last generated: 2015-03-04 20:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

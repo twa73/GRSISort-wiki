@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:34:43 2015            -->
+<!--   Date: Tue May  5 12:07:16 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -149,12 +149,12 @@
 <a name="RdVpGB"></a>   <span class="keyword">void</span>         <a href="../TH2Poly.html#TH2Poly:SetNewBinAdded" title="void TH2Poly::SetNewBinAdded(Bool_t flag)">SetNewBinAdded</a>(<a href="../ListOfTypes.html#Bool_t">Bool_t</a> flag){<a href="../TH2Poly.html#TH2Poly:fNewBinAdded" title="Bool_t TH2Poly::fNewBinAdded">fNewBinAdded</a> = flag;}
 
 <span class="keyword">protected</span>:
-   <a href="../TList.html">TList</a>   *<a href="../TH2Poly.html#TH2Poly:fBins" title="TList* TH2Poly::fBins">fBins</a>;              <span class="comment">//List of bins.</span>
+   <a href="../TList.html">TList</a>   *<a href="../TH2Poly.html#TH2Poly:fBins" title="TList* TH2Poly::fBins">fBins</a>;              <span class="comment">//List of bins. The list owns the contained objects</span>
    <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TH2Poly.html#TH2Poly:fOverflow" title="Double_t TH2Poly::fOverflow">fOverflow</a>[9];       <span class="comment">//Overflow bins</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TH2Poly.html#TH2Poly:fCellX" title="Int_t TH2Poly::fCellX">fCellX</a>;             <span class="comment">//Number of partition cells in the x-direction of the histogram</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TH2Poly.html#TH2Poly:fCellY" title="Int_t TH2Poly::fCellY">fCellY</a>;             <span class="comment">//Number of partition cells in the y-direction of the histogram</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TH2Poly.html#TH2Poly:fNCells" title="Int_t TH2Poly::fNCells">fNCells</a>;            <span class="comment">//Number of partition cells: <a href="../TH2Poly.html#TH2Poly:fCellX" title="Int_t TH2Poly::fCellX">fCellX</a>*<a href="../TH2Poly.html#TH2Poly:fCellY" title="Int_t TH2Poly::fCellY">fCellY</a></span>
-   <a href="../TList.html">TList</a>   *<a href="../TH2Poly.html#TH2Poly:fCells" title="TList* TH2Poly::fCells">fCells</a>;             <span class="comment">//[<a href="../TH2Poly.html#TH2Poly:fNCells" title="Int_t TH2Poly::fNCells">fNCells</a>] The array of TLists that store the bins that intersect with each cell</span>
+   <a href="../TList.html">TList</a>   *<a href="../TH2Poly.html#TH2Poly:fCells" title="TList* TH2Poly::fCells">fCells</a>;             <span class="comment">//[<a href="../TH2Poly.html#TH2Poly:fNCells" title="Int_t TH2Poly::fNCells">fNCells</a>] The array of TLists that store the bins that intersect with each cell. List do not own the contained objects</span>
    <a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TH2Poly.html#TH2Poly:fStepX" title="Double_t TH2Poly::fStepX">fStepX</a>, <a href="../TH2Poly.html#TH2Poly:fStepY" title="Double_t TH2Poly::fStepY">fStepY</a>;     <span class="comment">//Dimensions of a partition cell</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  *<a href="../TH2Poly.html#TH2Poly:fIsEmpty" title="Bool_t* TH2Poly::fIsEmpty">fIsEmpty</a>;           <span class="comment">//[<a href="../TH2Poly.html#TH2Poly:fNCells" title="Int_t TH2Poly::fNCells">fNCells</a>] The array that returns <a href="../ListOfTypes.html#bool">true</a> if the cell at the given coordinate is empty</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  *<a href="../TH2Poly.html#TH2Poly:fCompletelyInside" title="Bool_t* TH2Poly::fCompletelyInside">fCompletelyInside</a>;  <span class="comment">//[<a href="../TH2Poly.html#TH2Poly:fNCells" title="Int_t TH2Poly::fNCells">fNCells</a>] The array that returns <a href="../ListOfTypes.html#bool">true</a> if the cell at the given coordinate is completely inside a bin</span>
@@ -165,7 +165,7 @@
    <span class="keyword">void</span>   <a href="../TH2Poly.html#TH2Poly:AddBinToPartition" title="void TH2Poly::AddBinToPartition(TH2PolyBin* bin)">AddBinToPartition</a>(<a href="../TH2PolyBin.html">TH2PolyBin</a> *bin);  <span class="comment">// Adds the input bin into the partition matrix</span>
    <span class="keyword">void</span>   <a href="../TH2Poly.html#TH2Poly:Initialize" title="void TH2Poly::Initialize(Double_t xlow,Double_t xup,Double_t ylow,Double_t yup,Int_t n,Int_t m)">Initialize</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> xlow, <a href="../ListOfTypes.html#Double_t">Double_t</a> xup, <a href="../ListOfTypes.html#Double_t">Double_t</a> ylow, <a href="../ListOfTypes.html#Double_t">Double_t</a> yup, <a href="../ListOfTypes.html#Int_t">Int_t</a> n, <a href="../ListOfTypes.html#Int_t">Int_t</a> m);
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TH2Poly.html#TH2Poly:IsIntersecting" title="Bool_t TH2Poly::IsIntersecting(TH2PolyBin* bin,Double_t xclipl,Double_t xclipr,Double_t yclipb,Double_t yclipt)">IsIntersecting</a>(<a href="../TH2PolyBin.html">TH2PolyBin</a> *bin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipl, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipr, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipb, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipt);
-   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TH2Poly.html#TH2Poly:IsIntersectingPolygon" title="Bool_t TH2Poly::IsIntersectingPolygon(Int_t bn,Double_t* x,Double_t* y,Double_t xclipl,Double_t xclipr,Double_t yclipb,Double_t yclipt)">IsIntersectingPolygon</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> bn, <a href="../ListOfTypes.html#Double_t">Double_t</a> *x, <a href="../ListOfTypes.html#Double_t">Double_t</a> *y, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipl, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipr, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipb, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipt);
+   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TH2Poly.html#TH2Poly:IsIntersectingPolygon" title="Bool_t TH2Poly::IsIntersectingPolygon(Int_t bn,Double_t* x,Double_t* y,Double_t xclipl,Double_t xclipr,Double_t yclipb,Double_t yclipt)">IsIntersectingPolygon</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> bn, <a href="../ListOfTypes.html#Double_t">Double_t</a> *x, <a href="../ListOfTypes.html#Double_t">Double_t</a> *y, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipl, <a href="../ListOfTypes.html#Double_t">Double_t</a> xclipr, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipb, <a href="../ListOfTypes.html#Double_t">Double_t</a> yclipt);  
 
    ClassDef(<a href="../TH2Poly.html">TH2Poly</a>,1)  <span class="comment">//2-Dim histogram with polygon bins</span>
 };
@@ -179,7 +179,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:34 </em><em>&raquo; Last generated: 2015-03-04 20:34</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:07 </em><em>&raquo; Last generated: 2015-05-05 12:07</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

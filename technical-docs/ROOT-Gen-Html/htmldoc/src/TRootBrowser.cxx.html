@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:00 2015            -->
+<!--   Date: Tue May  5 12:09:28 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -1154,7 +1154,7 @@ ClassImp(<a href="../TRootBrowser.html">TRootBrowser</a>)
    <span class="keyword">if</span> (name &amp;&amp; strlen(name)) {
       <a href="../TRootBrowser.html#TRootBrowser:SetTabTitle" title="void TRootBrowser::SetTabTitle(const char* title,Int_t pos=kRight,Int_t subpos=-1)">SetTabTitle</a>(name, <a href="../TRootBrowser.html#TRootBrowser:fEditPos" title="Int_t TRootBrowser::fEditPos">fEditPos</a>, <a href="../TRootBrowser.html#TRootBrowser:fEditSubPos" title="Int_t TRootBrowser::fEditSubPos">fEditSubPos</a>);
    }
-   <a href="../TRootBrowser.html#TRootBrowser:fEditTab" title="TGTab* TRootBrowser::fEditTab">fEditTab</a>-><a href="../TGTab.html#TGTab:Selected" title="void TGTab::Selected(Int_t id)">Selected</a>(<a href="../TRootBrowser.html#TRootBrowser:fEditSubPos" title="Int_t TRootBrowser::fEditSubPos">fEditSubPos</a>);
+   <span class="keyword">if</span> (<a href="../TRootBrowser.html#TRootBrowser:fEditTab" title="TGTab* TRootBrowser::fEditTab">fEditTab</a>) <a href="../TRootBrowser.html#TRootBrowser:fEditTab" title="TGTab* TRootBrowser::fEditTab">fEditTab</a>-><a href="../TGTab.html#TGTab:Selected" title="void TGTab::Selected(Int_t id)">Selected</a>(<a href="../TRootBrowser.html#TRootBrowser:fEditSubPos" title="Int_t TRootBrowser::fEditSubPos">fEditSubPos</a>);
    <a href="../TRootBrowser.html#TRootBrowser:fEditFrame" title="TGCompositeFrame* TRootBrowser::fEditFrame">fEditFrame</a> = <a href="../TRootBrowser.html#TRootBrowser:fEditTab" title="TGTab* TRootBrowser::fEditTab">fEditTab</a> = 0;
    <a href="../TRootBrowser.html#TRootBrowser:fEditPos" title="Int_t TRootBrowser::fEditPos">fEditPos</a> = <a href="../TRootBrowser.html#TRootBrowser:fEditSubPos" title="Int_t TRootBrowser::fEditSubPos">fEditSubPos</a> = -1;
 }
@@ -1289,7 +1289,7 @@ ClassImp(<a href="../TRootBrowser.html">TRootBrowser</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:37 </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

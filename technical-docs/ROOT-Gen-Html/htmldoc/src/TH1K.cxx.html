@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:34:34 2015            -->
+<!--   Date: Tue May  5 12:07:04 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -222,9 +222,9 @@ ClassImp(<a href="../TH1K.html">TH1K</a>)
       out&lt;&lt;<span class="string">"   for(int i=0;i&lt;"</span> &lt;&lt; <a href="../TH1K.html#TH1K:fNIn" title="Int_t TH1K::fNIn">fNIn</a> &lt;&lt; <span class="string">";i++)"</span>&lt;&lt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>()&lt;&lt;<span class="string">"-&gt;Fill(Arr[i]);"</span>;
       out&lt;&lt; endl;
    }
-   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),0,1001);
-   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),1,1,1);
-   <a href="../TAttMarker.html#TAttMarker:SaveMarkerAttributes" title="void TAttMarker::SaveMarkerAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t sizdef=1)">SaveMarkerAttributes</a>(out,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),1,1,1);
+   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),0,1001);
+   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),1,1,1);
+   <a href="../TAttMarker.html#TAttMarker:SaveMarkerAttributes" title="void TAttMarker::SaveMarkerAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t sizdef=1)">SaveMarkerAttributes</a>(out,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),1,1,1);
    fXaxis.SaveAttributes(out,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),<span class="string">"-&gt;GetXaxis()"</span>);
    fYaxis.SaveAttributes(out,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),<span class="string">"-&gt;GetYaxis()"</span>);
    fZaxis.SaveAttributes(out,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),<span class="string">"-&gt;GetZaxis()"</span>);
@@ -264,7 +264,7 @@ ClassImp(<a href="../TH1K.html">TH1K</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:34 </em><em>&raquo; Last generated: 2015-03-04 20:34</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:07 </em><em>&raquo; Last generated: 2015-05-05 12:07</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

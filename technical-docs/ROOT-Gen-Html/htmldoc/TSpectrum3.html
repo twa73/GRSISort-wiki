@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:26 2015            -->
+<!--   Date: Tue May  5 12:09:31 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TSpectrum3.h.html">header file</a>
 <a class="descrheadentry" href="src/TSpectrum3.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TSpectrum3_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -191,7 +191,7 @@ These NIM papers are also available as Postscript files from:
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSpectrum3:Search">Search</a>(<span class="keyword">const</span> <a href="./TH1.html">TH1</a>* hist, <a href="./ListOfTypes.html#Double_t">Double_t</a> sigma = 2, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">"goff"</span>, <a href="./ListOfTypes.html#Double_t">Double_t</a> threshold = 0.05)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSpectrum3:SearchFast">SearchFast</a>(<span class="keyword">const</span> <span class="keyword">float</span>*** source, <span class="keyword">float</span>*** dest, <a href="./ListOfTypes.html#Int_t">Int_t</a> ssizex, <a href="./ListOfTypes.html#Int_t">Int_t</a> ssizey, <a href="./ListOfTypes.html#Int_t">Int_t</a> ssizez, <a href="./ListOfTypes.html#Double_t">Double_t</a> sigma, <a href="./ListOfTypes.html#Double_t">Double_t</a> threshold, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> markov, <a href="./ListOfTypes.html#Int_t">Int_t</a> averWindow)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSpectrum3:SearchHighRes">SearchHighRes</a>(<span class="keyword">const</span> <span class="keyword">float</span>*** source, <span class="keyword">float</span>*** dest, <a href="./ListOfTypes.html#Int_t">Int_t</a> ssizex, <a href="./ListOfTypes.html#Int_t">Int_t</a> ssizey, <a href="./ListOfTypes.html#Int_t">Int_t</a> ssizez, <a href="./ListOfTypes.html#Double_t">Double_t</a> sigma, <a href="./ListOfTypes.html#Double_t">Double_t</a> threshold, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> backgroundRemove, <a href="./ListOfTypes.html#Int_t">Int_t</a> deconIterations, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> markov, <a href="./ListOfTypes.html#Int_t">Int_t</a> averWindow)</td></tr>
@@ -271,35 +271,33 @@ These NIM papers are also available as Postscript files from:
 </table></div>
 </div>
 <h2><a id="TSpectrum3:Class_Charts"></a>Class Charts</h2>
-<map name="MapTSpectrum3_Inh" id="MapTSpectrum3_Inh">
-<area shape="rect" id="node3" href="./TNamed.html" title="TNamed" alt="" coords="284,10,472,47"/>
-<area shape="rect" id="node4" href="./TObject.html" title="TObject" alt="" coords="3,10,190,47"/>
-</map>
-<map name="MapTSpectrum3_InhMem" id="MapTSpectrum3_InhMem">
-<area shape="rect" id="graph12" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph13" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph14" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph15" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph11" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph18" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph19" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph20" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph21" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph22" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph23" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph24" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph17" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTSpectrum3_Lib" id="MapTSpectrum3_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="424,127,539,175"/>
-</map>
-<div class="tabs">
-<a id="imgTSpectrum3_Inh" class="tabsel" href="inh/TSpectrum3_Inh.png" onclick="javascript:return SetImg('Charts','inh/TSpectrum3_Inh.png');">Inheritance</a>
-<a id="imgTSpectrum3_InhMem" class="tab" href="inhmem/TSpectrum3_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TSpectrum3_InhMem.png');">Inherited Members</a>
-<a id="imgTSpectrum3_Incl" class="tab" href="incl/TSpectrum3_Incl.png" onclick="javascript:return SetImg('Charts','incl/TSpectrum3_Incl.png');">Includes</a>
-<a id="imgTSpectrum3_Lib" class="tab" href="lib/TSpectrum3_Lib.png" onclick="javascript:return SetImg('Charts','lib/TSpectrum3_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTSpectrum3_Inh" src="inh/TSpectrum3_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TSpectrum3" href="./TSpectrum3.html">TSpectrum3</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSpectrum3:TSpectrum3" href="src/TSpectrum3.cxx.html#rM5DUC">TSpectrum3</a>()</span><br />
 <div class="funccomm"><pre> Constructor.
@@ -1442,7 +1440,7 @@ style='font-size:10.0pt'>search-&gt;Draw(&quot;&quot;);  </span></p>
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Miroslav+Morhac"> Miroslav Morhac   25/09/2006</a> </em><em>&raquo; Copyright   (C) 1995-2006, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/spectrum:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: root/spectrum:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

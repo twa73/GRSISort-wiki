@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:29:38 2015            -->
+<!--   Date: Tue May  5 12:01:30 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -356,7 +356,7 @@ ClassImp(<a href="../TGFontTypeComboBox.html">TGFontTypeComboBox</a>)
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetShadowGC" title="const TGGC&amp; TGFrame::GetShadowGC()">GetShadowGC</a>()(), 0, 0, 0, fHeight-2);
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetBlackGC" title="const TGGC&amp; TGFrame::GetBlackGC()">GetBlackGC</a>()(), 1, 1, fWidth-3, 1);
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetBlackGC" title="const TGGC&amp; TGFrame::GetBlackGC()">GetBlackGC</a>()(), 1, 1, 1, fHeight-3);
-
+         <span class="keyword">if</span> (<a href="../TGClient.html">gClient</a>-><a href="../TGClient.html#TGClient:GetStyle" title="UInt_t TGClient::GetStyle()">GetStyle</a>() &gt; 1) <span class="keyword">break</span>;
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetHilightGC" title="const TGGC&amp; TGFrame::GetHilightGC()">GetHilightGC</a>()(), 0, fHeight-1, fWidth-1, fHeight-1);
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetHilightGC" title="const TGGC&amp; TGFrame::GetHilightGC()">GetHilightGC</a>()(), fWidth-1, fHeight-1, fWidth-1, 0);
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetBckgndGC" title="const TGGC&amp; TGFrame::GetBckgndGC()">GetBckgndGC</a>()(),  1, fHeight-2, fWidth-2, fHeight-2);
@@ -899,7 +899,7 @@ ClassImp(<a href="../TGFontTypeComboBox.html">TGFontTypeComboBox</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:29 </em><em>&raquo; Last generated: 2015-03-04 20:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

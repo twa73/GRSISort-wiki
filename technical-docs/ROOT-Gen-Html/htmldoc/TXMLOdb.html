@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Thu Mar 12 13:31:01 2015            -->
+<!--   Date: Tue May  5 13:08:11 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -71,12 +71,12 @@ return false;}
 <tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:Class">Class</a>()</td></tr>
 <tr class="func"><td class="funcret"><a href="./TXMLNode.html">TXMLNode</a>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:FindNode">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./TXMLNode.html">TXMLNode</a>* node = 0)</td></tr>
 <tr class="func"><td class="funcret"><a href="./TXMLNode.html">TXMLNode</a>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:FindPath">FindPath</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, <a href="./TXMLNode.html">TXMLNode</a>* node = 0)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:GetNodeName">GetNodeName</a>(<a href="./TXMLNode.html">TXMLNode</a>*)</td></tr>
+<tr class="func"><td class="funcret">string</td><td class="funcname"><a class="funcname" href="#TXMLOdb:GetNodeName">GetNodeName</a>(<a href="./TXMLNode.html">TXMLNode</a>*)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TXMLOdb:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TXMLOdb.html">TXMLOdb</a>&amp;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TXMLOdb.html">TXMLOdb</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret">vector&lt;<span class="keyword">double</span>&gt;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadDoubleArray">ReadDoubleArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadInt">ReadInt</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, <span class="keyword">int</span> index = 0, <span class="keyword">int</span> defaultValue = 0xffffffff)</td></tr>
-<tr class="func"><td class="funcret">vector&lt;<span class="keyword">int</span>&gt;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadIntArray">ReadIntArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</td></tr>
+<tr class="func"><td class="funcret"><a href="./vector_int_.html">vector&lt;int&gt;</a></td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadIntArray">ReadIntArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</td></tr>
 <tr class="func"><td class="funcret">vector&lt;std::string&gt;</td><td class="funcname"><a class="funcname" href="#TXMLOdb:ReadStringArray">ReadStringArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TXMLOdb:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
@@ -97,7 +97,7 @@ return false;}
 </div>
 <h2><a id="TXMLOdb:Class_Charts"></a>Class Charts</h2>
 <map name="MapTXMLOdb_Lib" id="MapTXMLOdb_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="127,237,244,285"/>
 </map>
 <div class="tabs">
 <a id="imgTXMLOdb_Inh" class="tabsel" href="inh/TXMLOdb_Inh.png" onclick="javascript:return SetImg('Charts','inh/TXMLOdb_Inh.png');">Inheritance</a>
@@ -115,11 +115,11 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TXMLNode.html">TXMLNode</a> * <a class="funcname" name="TXMLOdb:FindPath" href="src/TXMLOdb.cxx.html#WWLrzB">FindPath</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, <a href="./TXMLNode.html">TXMLNode</a>* node = 0)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TXMLOdb:GetNodeName" href="src/TXMLOdb.cxx.html#KV6r5D">GetNodeName</a>(<a href="./TXMLNode.html">TXMLNode</a>* )</span><br />
+<div class="funcdoc"><span class="funcname">std::string <a class="funcname" name="TXMLOdb:GetNodeName" href="src/TXMLOdb.cxx.html#SkuPf">GetNodeName</a>(<a href="./TXMLNode.html">TXMLNode</a>* )</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TXMLOdb:ReadInt" href="src/TXMLOdb.cxx.html#qo0DDD">ReadInt</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path, <span class="keyword">int</span> index = 0, <span class="keyword">int</span> defaultValue = 0xffffffff)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname">std::vector&lt;<span class="keyword">int</span>&gt; <a class="funcname" name="TXMLOdb:ReadIntArray" href="src/TXMLOdb.cxx.html#ym_NuE">ReadIntArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</span><br />
+<div class="funcdoc"><span class="funcname">std::<a href="./vector_int_.html">vector&lt;int&gt;</a> <a class="funcname" name="TXMLOdb:ReadIntArray" href="src/TXMLOdb.cxx.html#ym_NuE">ReadIntArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname">std::vector&lt;std::string&gt; <a class="funcname" name="TXMLOdb:ReadStringArray" href="src/TXMLOdb.cxx.html#fxLSW">ReadStringArray</a>(<a href="./TXMLNode.html">TXMLNode</a>* node)</span><br />
 </div>
@@ -132,7 +132,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Thu Mar 12 13:31:01 2015 </em><em>&raquo; Last generated: 2015-03-12 13:31</em><br />
+<em>&raquo; Last changed: Tue May  5 13:08:13 2015 </em><em>&raquo; Last generated: 2015-05-05 13:08</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

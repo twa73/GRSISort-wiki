@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:30:42 2015            -->
+<!--   Date: Tue May  5 12:01:41 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -231,7 +231,7 @@ ClassImp(<a href="../TGPack.html">TGPack</a>);
 
    <span class="keyword">while</span> ((el = (<a href="../TGFrameElementPack.html">TGFrameElementPack</a> *) next()))
    {
-      <span class="keyword">if</span> ( ! el-&gt;fState &amp; kIsVisible)
+      <span class="keyword">if</span> ( ! (el-&gt;fState &amp; kIsVisible) )
          <span class="keyword">continue</span>;
 
       <span class="keyword">if</span> (el-&gt;fFrame == splitter)
@@ -624,7 +624,7 @@ ClassImp(<a href="../TGPack.html">TGPack</a>);
    {
       <a href="../TGFrameElement.html">TGFrameElement</a> *el = (<a href="../TGFrameElement.html">TGFrameElement</a>*) fList-&gt;At(1);
       <a href="../TGFrame.html">TGFrame</a>        *f  = el-&gt;fFrame;
-      <span class="keyword">if</span> ( ! el-&gt;fState &amp; kIsVisible)
+      <span class="keyword">if</span> ( ! (el-&gt;fState &amp; kIsVisible) )
          f-&gt;<a href="../TObject.html#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(kTempFrame);
       <a href="../TGPack.html#TGPack:RemoveFrameInternal" title="void TGPack::RemoveFrameInternal(TGFrame* f)">RemoveFrameInternal</a>(f);
       list.Add(f);
@@ -650,7 +650,7 @@ ClassImp(<a href="../TGPack.html">TGPack</a>);
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:30 </em><em>&raquo; Last generated: 2015-03-04 20:30</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

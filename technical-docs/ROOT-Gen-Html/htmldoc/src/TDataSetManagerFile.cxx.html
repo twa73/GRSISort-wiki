@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:52 2015            -->
+<!--   Date: Tue May  5 12:01:21 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -638,11 +638,11 @@ ClassImp(<a href="../TDataSetManagerFile.html">TDataSetManagerFile</a>)
    <span class="keyword">const</span> <span class="keyword">char</span> *dsEnt = 0;
    <span class="keyword">while</span> ((dsEnt = <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:GetDirEntry" title="const char* TSystem::GetDirEntry(void* dirp)">GetDirEntry</a>(userDir))) {
       <a href="../TString.html">TString</a> datasetFile(dsEnt);
-      <span class="keyword">if</span> (datasetFile.Index(rg) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (datasetFile.Index(rg) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          <a href="../TString.html">TString</a> datasetName(datasetFile(0, datasetFile.Length()-5));
 
          <span class="comment">// Check dataset name, if required</span>
-         <span class="keyword">if</span> (reds &amp;&amp; datasetName.Index(*reds) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">continue</span>;
+         <span class="keyword">if</span> (reds &amp;&amp; datasetName.Index(*reds) == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">continue</span>;
 
          <span class="keyword">if</span> (<a href="../ListOfTypes.html#Int_t">gDebug</a> &gt; 0)
             <a href="../TObject.html#TObject:Info" title="void TObject::Info(const char* method,const char* msgfmt)">Info</a>(<span class="string">"GetDataSets"</span>, <span class="string">"found dataset %s of user %s in group %s"</span>,
@@ -860,9 +860,9 @@ ClassImp(<a href="../TDataSetManagerFile.html">TDataSetManagerFile</a>)
                <span class="keyword">if</span> (!(os-&gt;GetString().Tokenize(dsn, from, <span class="string">" "</span>))) <span class="keyword">continue</span>;
                from = 0;
                <span class="comment">// Get group and apply filter on group</span>
-               <span class="keyword">if</span> (!(dsn.Tokenize(grp, from, <span class="string">"/"</span>)) || (reg &amp;&amp; (grp.Index(*reg) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>))) <span class="keyword">continue</span>;
+               <span class="keyword">if</span> (!(dsn.Tokenize(grp, from, <span class="string">"/"</span>)) || (reg &amp;&amp; (grp.Index(*reg) == <a href="../ListOfTypes.html#int">kNPOS</a>))) <span class="keyword">continue</span>;
                <span class="comment">// Get user and apply filter on user</span>
-               <span class="keyword">if</span> (!(dsn.Tokenize(usr, from, <span class="string">"/"</span>)) || (reu &amp;&amp; (usr.Index(*reu) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>))) <span class="keyword">continue</span>;
+               <span class="keyword">if</span> (!(dsn.Tokenize(usr, from, <span class="string">"/"</span>)) || (reu &amp;&amp; (usr.Index(*reu) == <a href="../ListOfTypes.html#int">kNPOS</a>))) <span class="keyword">continue</span>;
                <span class="comment">// Now get the info</span>
                <span class="keyword">if</span> (<a href="../TDataSetManagerFile.html#TDataSetManagerFile:FillLsDataSet" title="Int_t TDataSetManagerFile::FillLsDataSet(const char* group,const char* user,const char* dsName,TList* out,UInt_t option)">FillLsDataSet</a>(grp, usr, dsName, (<a href="../TList.html">TList</a> *)result, option) != 0) {
                   <span class="comment">// Use the standard way opening all the files</span>
@@ -880,7 +880,7 @@ ClassImp(<a href="../TDataSetManagerFile.html">TDataSetManagerFile</a>)
                   <span class="keyword">if</span> (strcmp(eg, <span class="string">"."</span>) == 0 || strcmp(eg, <span class="string">".."</span>) == 0)
                      <span class="keyword">continue</span>;
 
-                  <span class="keyword">if</span> (reg &amp;&amp; (<a href="../TString.html">TString</a>(eg).<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(*reg) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>))
+                  <span class="keyword">if</span> (reg &amp;&amp; (<a href="../TString.html">TString</a>(eg).<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(*reg) == <a href="../ListOfTypes.html#int">kNPOS</a>))
                      <span class="keyword">continue</span>;
 
                   <a href="../TString.html">TString</a> groupDirPath;
@@ -902,7 +902,7 @@ ClassImp(<a href="../TDataSetManagerFile.html">TDataSetManagerFile</a>)
                      <span class="keyword">if</span> (strcmp(eu, <span class="string">"."</span>) == 0 || strcmp(eu, <span class="string">".."</span>) == 0)
                         <span class="keyword">continue</span>;
 
-                     <span class="keyword">if</span> (reu &amp;&amp; (<a href="../TString.html">TString</a>(eu).<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(*reu) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>))
+                     <span class="keyword">if</span> (reu &amp;&amp; (<a href="../TString.html">TString</a>(eu).<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(*reu) == <a href="../ListOfTypes.html#int">kNPOS</a>))
                         <span class="keyword">continue</span>;
 
                      <span class="comment">// If we have the <a href="../TObject.html#TObject:ls" title="void TObject::ls(Option_t* option=&quot;&quot;)">ls</a>.macro use that</span>
@@ -1007,7 +1007,7 @@ ClassImp(<a href="../TDataSetManagerFile.html">TDataSetManagerFile</a>)
       <a href="../TObjString.html">TObjString</a> *o;
       <a href="../ListOfTypes.html#Int_t">Int_t</a> nf = 0;
       <span class="keyword">while</span> ((o = (<a href="../TObjString.html">TObjString</a> *) nxl())) {
-         <span class="keyword">if</span> (o-&gt;GetString().Index(reds) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (o-&gt;GetString().Index(reds) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
             out-&gt;Add(o-&gt;<a href="../TObject.html#TObject:Clone" title="TObject* TObject::Clone(const char* newname=&quot;&quot;)">Clone</a>());
             nf++;
             <span class="keyword">if</span> (!wc) <span class="keyword">break</span>;
@@ -1306,7 +1306,7 @@ ClassImp(<a href="../TDataSetManagerFile.html">TDataSetManagerFile</a>)
       <span class="comment">// Skip basic entries</span>
       <span class="keyword">if</span> (!strcmp(e,<span class="string">"."</span>) || !strcmp(e,<span class="string">".."</span>)) <span class="keyword">continue</span>;
       <span class="comment">// Apply regular expression, if requested</span>
-      <span class="keyword">if</span> (re &amp;&amp; <a href="../TString.html">TString</a>(e).<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(*re) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">continue</span>;
+      <span class="keyword">if</span> (re &amp;&amp; <a href="../TString.html">TString</a>(e).<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(*re) == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">continue</span>;
       <span class="comment">// Group directory</span>
       path.Form(<span class="string">"%s/%s"</span>, <a href="../TDataSetManagerFile.html#TDataSetManagerFile:fLocalCacheDir" title="TString TDataSetManagerFile::fLocalCacheDir">fLocalCacheDir</a>.<a href="../TString.html#TString:Data" title="const char* TString::Data()">Data</a>(), e);
       <span class="comment">// Get file information</span>
@@ -1373,7 +1373,7 @@ ClassImp(<a href="../TDataSetManagerFile.html">TDataSetManagerFile</a>)
       <span class="comment">// Skip basic entries</span>
       <span class="keyword">if</span> (!strcmp(e,<span class="string">"."</span>) || !strcmp(e,<span class="string">".."</span>)) <span class="keyword">continue</span>;
       <span class="comment">// Apply regular expression, if requested</span>
-      <span class="keyword">if</span> (re &amp;&amp; <a href="../TString.html">TString</a>(e).<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(*re) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">continue</span>;
+      <span class="keyword">if</span> (re &amp;&amp; <a href="../TString.html">TString</a>(e).<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(*re) == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">continue</span>;
       <span class="comment">// Group directory</span>
       path.Form(<span class="string">"%s/%s"</span>, <a href="../TDataSetManagerFile.html#TDataSetManagerFile:fLocalCacheDir" title="TString TDataSetManagerFile::fLocalCacheDir">fLocalCacheDir</a>.<a href="../TString.html#TString:Data" title="const char* TString::Data()">Data</a>(), e);
       <span class="comment">// Get file information</span>
@@ -2016,7 +2016,7 @@ ClassImp(<a href="../TDataSetManagerFile.html">TDataSetManagerFile</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:28 </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

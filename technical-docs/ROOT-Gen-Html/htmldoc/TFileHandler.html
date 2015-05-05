@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:29:19 2015            -->
+<!--   Date: Tue May  5 12:01:27 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TFileHandler.h.html">header file</a>
 <a class="descrheadentry" href="src/TFileHandler.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TFileHandler_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -199,7 +199,7 @@ Abstract base class for handling system events.
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFileHandler:ResetReadyMask">ResetReadyMask</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -276,44 +276,40 @@ Abstract base class for handling system events.
 </table></div>
 </div>
 <h2><a id="TFileHandler:Class_Charts"></a>Class Charts</h2>
-<map name="MapTFileHandler_Inh" id="MapTFileHandler_Inh">
-<area shape="rect" id="node3" href="./TSysEvtHandler.html" title="TSysEvtHandler" alt="" coords="278,21,462,57"/>
-<area shape="rect" id="node4" href="./TObject.html" title="TObject" alt="" coords="3,2,186,39"/>
-<area shape="rect" id="node5" href="./TQObject.html" title="TQObject" alt="" coords="3,39,186,75"/>
-</map>
-<map name="MapTFileHandler_InhMem" id="MapTFileHandler_InhMem">
-<area shape="rect" id="graph12" href="./TSysEvtHandler.html" alt="" coords="376,63,629,99"/>
-<area shape="rect" id="graph13" href="./TSysEvtHandler.html" alt="" coords="541,109,629,232"/>
-<area shape="rect" id="graph14" href="./TSysEvtHandler.html" alt="" coords="443,109,531,261"/>
-<area shape="rect" id="graph15" href="./TSysEvtHandler.html" alt="" coords="344,109,432,261"/>
-<area shape="rect" id="graph11" href="./TSysEvtHandler.html" title="TSysEvtHandler" alt="" coords="333,16,640,272"/>
-<area shape="rect" id="graph18" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph19" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph20" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph21" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph22" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph23" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph24" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph17" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-<area shape="rect" id="graph27" href="./TQObject.html" alt="" coords="224,699,312,735"/>
-<area shape="rect" id="graph28" href="./TQObject.html" alt="" coords="125,699,213,749"/>
-<area shape="rect" id="graph29" href="./TQObject.html" alt="" coords="27,699,115,749"/>
-<area shape="rect" id="graph30" href="./TQObject.html" alt="" coords="256,745,280,767"/>
-<area shape="rect" id="graph31" href="./TQObject.html" alt="" coords="224,777,312,1003"/>
-<area shape="rect" id="graph32" href="./TQObject.html" alt="" coords="125,777,213,1003"/>
-<area shape="rect" id="graph33" href="./TQObject.html" alt="" coords="27,777,115,1003"/>
-<area shape="rect" id="graph26" href="./TQObject.html" title="TQObject" alt="" coords="16,652,323,1013"/>
-</map>
-<map name="MapTFileHandler_Lib" id="MapTFileHandler_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTFileHandler_Inh" class="tabsel" href="inh/TFileHandler_Inh.png" onclick="javascript:return SetImg('Charts','inh/TFileHandler_Inh.png');">Inheritance</a>
-<a id="imgTFileHandler_InhMem" class="tab" href="inhmem/TFileHandler_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TFileHandler_InhMem.png');">Inherited Members</a>
-<a id="imgTFileHandler_Incl" class="tab" href="incl/TFileHandler_Incl.png" onclick="javascript:return SetImg('Charts','incl/TFileHandler_Incl.png');">Includes</a>
-<a id="imgTFileHandler_Lib" class="tab" href="lib/TFileHandler_Lib.png" onclick="javascript:return SetImg('Charts','lib/TFileHandler_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTFileHandler_Inh" src="inh/TFileHandler_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TQObject" href="./TQObject.html">TQObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TSysEvtHandler" href="./TSysEvtHandler.html">TSysEvtHandler</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TFileHandler" href="./TFileHandler.html">TFileHandler</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFileHandler:TFileHandler@1" href="src/TFileHandler.cxx.html#oCEfoE">TFileHandler</a>(<span class="keyword">int</span> fd, <span class="keyword">int</span> mask)</span><br />
 <div class="funccomm"><pre> Create a file descriptor event handler. If mask=<a href="./TFileHandler.html#TFileHandler:kRead" title="const enum TFileHandler:: TFileHandler::kRead">kRead</a> then we
@@ -406,7 +402,7 @@ Abstract base class for handling system events.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   16/09/95</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:29</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

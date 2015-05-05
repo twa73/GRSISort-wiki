@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:38 2015            -->
+<!--   Date: Tue May  5 12:01:19 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TCollection.h.html">header file</a>
 <a class="descrheadentry" href="src/TCollection.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TCollection_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -102,6 +102,7 @@ In a later release the collections may become templatized.
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCollection:AddVector">AddVector</a>(<a href="./TObject.html">TObject</a>* obj1)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TCollection:AssertClass">AssertClass</a>(<a href="./TClass.html">TClass</a>* cl) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TIter.html">TIter</a></td><td class="funcname"><a class="funcname" href="#TCollection:begin">begin</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCollection:Browse">Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TCollection:Capacity">Capacity</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TCollection:Class">Class</a>()</td></tr>
@@ -119,6 +120,7 @@ In a later release the collections may become templatized.
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DrawClone"><span class="baseclass">TObject::</span>DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCollection:Dump">Dump</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCollection:EmptyGarbageCollection">EmptyGarbageCollection</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./TIter.html">TIter</a></td><td class="funcname"><a class="funcname" href="#TCollection:end">end</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(<a href="./TMethod.html">TMethod</a>* method, <a href="./TObjArray.html">TObjArray</a>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
@@ -185,7 +187,7 @@ In a later release the collections may become templatized.
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCollection:RemoveAll">RemoveAll</a>(<a href="./TCollection.html">TCollection</a>* col)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCollection:SetCurrentCollection">SetCurrentCollection</a>()</td></tr>
@@ -267,48 +269,75 @@ In a later release the collections may become templatized.
 </table></div>
 </div>
 <h2><a id="TCollection:Class_Charts"></a>Class Charts</h2>
-<map name="MapTCollection_Inh" id="MapTCollection_Inh">
-<area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="1,94,86,111"/>
-<area shape="rect" id="node5" href="./TSeqCollection.html" title="TSeqCollection" alt="" coords="260,77,345,94"/>
-<area shape="rect" id="node6" href="./THashTable.html" title="THashTable" alt="" coords="260,94,345,111"/>
-<area shape="rect" id="node7" href="./TMap.html" title="TMap" alt="" coords="260,111,345,128"/>
-<area shape="rect" id="node8" href="./TObjArray.html" title="TObjArray" alt="" coords="387,18,472,35"/>
-<area shape="rect" id="node9" href="./TBtree.html" title="TBtree" alt="" coords="387,60,472,77"/>
-<area shape="rect" id="node10" href="./TList.html" title="TList" alt="" coords="387,77,472,94"/>
-<area shape="rect" id="node11" href="./TOrdCollection.html" title="TOrdCollection" alt="" coords="387,94,472,111"/>
-<area shape="rect" id="node12" href="./TRefArray.html" title="TRefArray" alt="" coords="387,111,472,128"/>
-<area shape="rect" id="node13" href="./ROOT__TSchemaMatch.html" title="ROOT::TSchemaMatch" alt="" coords="515,1,634,18"/>
-<area shape="rect" id="node14" href="./TClonesArray.html" title="TClonesArray" alt="" coords="532,18,617,35"/>
-<area shape="rect" id="node15" href="./TGridJobStatusList.html" title="TGridJobStatusList" alt="" coords="525,35,624,52"/>
-<area shape="rect" id="node16" href="./TGridResult.html" title="TGridResult" alt="" coords="532,52,617,68"/>
-<area shape="rect" id="node17" href="./THashList.html" title="THashList" alt="" coords="532,68,617,85"/>
-<area shape="rect" id="node18" href="./TProofOutputList.html" title="TProofOutputList" alt="" coords="529,85,620,102"/>
-<area shape="rect" id="node19" href="./TQCommand.html" title="TQCommand" alt="" coords="532,102,617,119"/>
-<area shape="rect" id="node20" href="./TQConnection.html" title="TQConnection" alt="" coords="532,119,617,136"/>
-<area shape="rect" id="node21" href="./TSortedList.html" title="TSortedList" alt="" coords="532,136,617,153"/>
-<area shape="rect" id="node22" href="./TQUndoManager.html" title="TQUndoManager" alt="" coords="677,102,767,119"/>
-<area shape="rect" id="node23" href="./TSelectorList.html" title="TSelectorList" alt="" coords="679,68,764,85"/>
-</map>
-<map name="MapTCollection_InhMem" id="MapTCollection_InhMem">
-<area shape="rect" id="graph12" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph13" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph14" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph15" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph16" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph17" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph18" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph11" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTCollection_Lib" id="MapTCollection_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTCollection_Inh" class="tabsel" href="inh/TCollection_Inh.png" onclick="javascript:return SetImg('Charts','inh/TCollection_Inh.png');">Inheritance</a>
-<a id="imgTCollection_InhMem" class="tab" href="inhmem/TCollection_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TCollection_InhMem.png');">Inherited Members</a>
-<a id="imgTCollection_Incl" class="tab" href="incl/TCollection_Incl.png" onclick="javascript:return SetImg('Charts','incl/TCollection_Incl.png');">Includes</a>
-<a id="imgTCollection_Lib" class="tab" href="lib/TCollection_Lib.png" onclick="javascript:return SetImg('Charts','lib/TCollection_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTCollection_Inh" src="inh/TCollection_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TCollection" href="./TCollection.html">TCollection</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="THashTable" href="./THashTable.html">THashTable</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TMap" href="./TMap.html">TMap</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TSeqCollection" href="./TSeqCollection.html">TSeqCollection</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TBtree" href="./TBtree.html">TBtree</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TList" href="./TList.html">TList</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#e7e7e7"><table><tr><td>
+<center><tt><a name="TGridJobStatusList" href="./TGridJobStatusList.html">TGridJobStatusList</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#e7e7e7"><table><tr><td>
+<center><tt><a name="TGridResult" href="./TGridResult.html">TGridResult</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#e7e7e7"><table><tr><td>
+<center><tt><a name="THashList" href="./THashList.html">THashList</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#dfdfdf"><table><tr><td>
+<center><tt><a name="TSelectorList" href="./TSelectorList.html">TSelectorList</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#e7e7e7"><table><tr><td>
+<center><tt><a name="TProofOutputList" href="./TProofOutputList.html">TProofOutputList</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td><td align="left">&nbsp;<a href="ClassHierarchy.html">[more...]</a></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCollection:AddAll" href="src/TCollection.cxx.html#BdIZtC">AddAll</a>(<span class="keyword">const</span> <a href="./TCollection.html">TCollection</a>* col)</span><br />
 <div class="funccomm"><pre> <a href="./TCollection.html#TCollection:Add" title="void TCollection::Add(TObject* obj)">Add</a> all objects from collection col to this collection.
@@ -510,6 +539,16 @@ In a later release the collections may become templatized.
  is called (depending on the collection).
 </pre></div>
 </div>
+<div class="funcdoc"><span class="funcname"><a href="./TIter.html">TIter</a> <a class="funcname" name="TCollection:begin" href="src/TCollection.h.html#tUuAaB">begin</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> ++(<a href="./TIter.html">TIter</a>(<span class="keyword">this</span>)); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TIter.html">TIter</a> <a class="funcname" name="TCollection:end" href="src/TCollection.h.html#m37m.D">end</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TIter.html">TIter</a>::<a href="./TIter.html#TIter:End" title="TIter TIter::End()">End</a>(); }</code></div>
+<div style="clear:both;"></div>
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TCollection:operator_" href="src/TCollection.h.html#l7j8CC">operator=</a>(<span class="keyword">const</span> <a href="./TCollection.html">TCollection</a>&amp; )</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">virtual</span> <a class="funcname" name="TCollection:_TCollection" href="src/TCollection.h.html#S60ktB">~TCollection</a>()</span><br />
@@ -596,7 +635,7 @@ In a later release the collections may become templatized.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   13/08/95</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/cont:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: root/cont:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

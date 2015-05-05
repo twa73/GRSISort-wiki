@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:43 2015            -->
+<!--   Date: Tue May  5 12:09:24 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -158,7 +158,7 @@ ClassImp(<a href="../TProofOutputFile.html">TProofOutputFile</a>)
    <a href="../TProofOutputFile.html#TProofOutputFile:fIsLocal" title="Bool_t TProofOutputFile::fIsLocal">fIsLocal</a> = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
    <a href="../TProofOutputFile.html#TProofOutputFile:fDir" title="TString TProofOutputFile::fDir">fDir</a> = u.GetUrl();
    <a href="../ListOfTypes.html#Int_t">Int_t</a> pos = <a href="../TProofOutputFile.html#TProofOutputFile:fDir" title="TString TProofOutputFile::fDir">fDir</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<a href="../TProofOutputFile.html#TProofOutputFile:fFileName" title="TString TProofOutputFile::fFileName">fFileName</a>);
-   <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <a href="../TProofOutputFile.html#TProofOutputFile:fDir" title="TString TProofOutputFile::fDir">fDir</a>.<a href="../TString.html#TString:Remove" title="TString&amp; TString::Remove(Ssiz_t pos) or overloads">Remove</a>(pos);
+   <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#int">kNPOS</a>) <a href="../TProofOutputFile.html#TProofOutputFile:fDir" title="TString TProofOutputFile::fDir">fDir</a>.<a href="../TString.html#TString:Remove" title="TString&amp; TString::Remove(Ssiz_t pos) or overloads">Remove</a>(pos);
    <a href="../TProofOutputFile.html#TProofOutputFile:fRawDir" title="TString TProofOutputFile::fRawDir">fRawDir</a> = <a href="../TProofOutputFile.html#TProofOutputFile:fDir" title="TString TProofOutputFile::fDir">fDir</a>;
 
    <span class="keyword">if</span> (<a href="../TProofOutputFile.html#TProofOutputFile:fDir" title="TString TProofOutputFile::fDir">fDir</a>.<a href="../TString.html#TString:BeginsWith" title="Bool_t TString::BeginsWith(const char* s,TString::ECaseCompare cmp=kExact) or overloads">BeginsWith</a>(<span class="string">"file:"</span>)) {
@@ -577,7 +577,7 @@ ClassImp(<a href="../TProofOutputFile.html">TProofOutputFile</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

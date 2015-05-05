@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Thu Mar 12 13:29:47 2015            -->
+<!--   Date: Tue May  5 12:01:25 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -38,13 +38,13 @@ ClassImp(<a href="../TEfficiencyCal.html">TEfficiencyCal</a>)
 }
 
 <a name="aLVfJ"></a><span class="keyword">void</span> <a href="../TEfficiencyCal.html">TEfficiencyCal</a>::<a href="../TEfficiencyCal.html#TEfficiencyCal:ScaleGraph" title="void TEfficiencyCal::ScaleGraph(Double_t scale_factor)">ScaleGraph</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> scale_factor){
-   <span class="keyword">if</span>(!<a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>()){
+   <span class="keyword">if</span>(!<a href="../TGraph.html#TGraph:GetN" title="Int_t TGraph::GetN()">GetN</a>()){
       <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"ScaleGraph"</span>,<span class="string">"Graph does not exist"</span>);
       <span class="keyword">return</span>;
    }
-   <span class="keyword">for</span>(<span class="keyword">int</span> i=0;i&lt;<a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>()-><a href="../TGraph.html#TGraph:GetN" title="Int_t TGraph::GetN()">GetN</a>();i++){ 
-      <a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>()-><a href="../TGraph.html#TGraph:GetY" title="Double_t* TGraph::GetY()">GetY</a>()[i] *= scale_factor;
-      <a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>()-><a href="../TGraphErrors.html#TGraphErrors:GetEY" title="Double_t* TGraphErrors::GetEY()">GetEY</a>()[i] *=scale_factor;
+   <span class="keyword">for</span>(<span class="keyword">int</span> i=0;i&lt;<a href="../TGraph.html#TGraph:GetN" title="Int_t TGraph::GetN()">GetN</a>();i++){ 
+      <a href="../TGraph.html#TGraph:GetY" title="Double_t* TGraph::GetY()">GetY</a>()[i] *= scale_factor;
+      <a href="../TGraphErrors.html#TGraphErrors:GetEY" title="Double_t* TGraphErrors::GetEY()">GetEY</a>()[i] *=scale_factor;
    }
 
    <a href="../TEfficiencyCal.html#TEfficiencyCal:fscale_factor" title="Double_t TEfficiencyCal::fscale_factor">fscale_factor</a> = scale_factor;
@@ -72,10 +72,10 @@ ClassImp(<a href="../TEfficiencyCal.html">TEfficiencyCal</a>)
    efficiency = area/intensity;
    d_efficiency = efficiency*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Sqrt" title="Double_t TMath::Sqrt(Double_t x)">Sqrt</a>(<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Power" title="LongDouble_t TMath::Power(LongDouble_t x,LongDouble_t y) or overloads">Power</a>(d_efficiency/efficiency,2.0) + <a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Power" title="LongDouble_t TMath::Power(LongDouble_t x,LongDouble_t y) or overloads">Power</a>(d_area/area,2.0));
 
-   <a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>()-><a href="../TGraph.html#TGraph:SetPoint" title="void TGraph::SetPoint(Int_t i,Double_t x,Double_t y)">SetPoint</a>(<a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>()-><a href="../TGraph.html#TGraph:GetN" title="Int_t TGraph::GetN()">GetN</a>(), energy, efficiency);
-   <a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>()-><a href="../TGraphErrors.html#TGraphErrors:SetPointError" title="void TGraphErrors::SetPointError(Double_t ex,Double_t ey) or overloads">SetPointError</a>(<a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>()-><a href="../TGraph.html#TGraph:GetN" title="Int_t TGraph::GetN()">GetN</a>()-1,d_energy,d_efficiency);
+   <a href="../TGraph.html#TGraph:SetPoint" title="void TGraph::SetPoint(Int_t i,Double_t x,Double_t y)">SetPoint</a>(<a href="../TGraph.html#TGraph:GetN" title="Int_t TGraph::GetN()">GetN</a>(), energy, efficiency);
+   <a href="../TGraphErrors.html#TGraphErrors:SetPointError" title="void TGraphErrors::SetPointError(Double_t ex,Double_t ey) or overloads">SetPointError</a>(<a href="../TGraph.html#TGraph:GetN" title="Int_t TGraph::GetN()">GetN</a>()-1,d_energy,d_efficiency);
 
-   <a href="../TCal.html#TCal:Graph" title="TGraphErrors* TCal::Graph()">Graph</a>()-><a href="../TGraph.html#TGraph:Sort" title="void TGraph::Sort(Bool_t (*)(const TGraph*, Int_t, Int_t) greater=&amp;TGraph::CompareX,Bool_t ascending=kTRUE,Int_t low=0,Int_t high=-1111)">Sort</a>(); <span class="comment">//This keeps the points in order of energy;</span>
+   <a href="../TGraph.html#TGraph:Sort" title="void TGraph::Sort(Bool_t (*)(const TGraph*, Int_t, Int_t) greater=&amp;TGraph::CompareX,Bool_t ascending=kTRUE,Int_t low=0,Int_t high=-1111)">Sort</a>(); <span class="comment">//This keeps the points in order of energy;</span>
 
 }
 
@@ -97,7 +97,7 @@ ClassImp(<a href="../TEfficiencyCal.html">TEfficiencyCal</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-12 13:29 </em><em>&raquo; Last generated: 2015-03-12 13:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

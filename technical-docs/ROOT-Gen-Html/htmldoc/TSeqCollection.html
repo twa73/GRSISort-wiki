@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:17 2015            -->
+<!--   Date: Tue May  5 12:09:30 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TSeqCollection.h.html">header file</a>
 <a class="descrheadentry" href="src/TSeqCollection.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TSeqCollection_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -91,6 +91,7 @@ an ordering relation, i.e. there is a first and last element.
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:AssertClass"><span class="baseclass">TCollection::</span>AssertClass</a>(<a href="./TClass.html">TClass</a>* cl) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TSeqCollection:At">At</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> idx) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TSeqCollection:Before">Before</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TIter.html">TIter</a></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:begin"><span class="baseclass">TCollection::</span>begin</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:Browse"><span class="baseclass">TCollection::</span>Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:Capacity"><span class="baseclass">TCollection::</span>Capacity</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TSeqCollection:Class">Class</a>()</td></tr>
@@ -108,6 +109,7 @@ an ordering relation, i.e. there is a first and last element.
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DrawClone"><span class="baseclass">TObject::</span>DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:Dump"><span class="baseclass">TCollection::</span>Dump</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:EmptyGarbageCollection"><span class="baseclass">TCollection::</span>EmptyGarbageCollection</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TIter.html">TIter</a></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:end"><span class="baseclass">TCollection::</span>end</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(<a href="./TMethod.html">TMethod</a>* method, <a href="./TObjArray.html">TObjArray</a>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
@@ -191,7 +193,7 @@ an ordering relation, i.e. there is a first and last element.
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSeqCollection:RemoveLast">RemoveLast</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:SetCurrentCollection"><span class="baseclass">TCollection::</span>SetCurrentCollection</a>()</td></tr>
@@ -263,54 +265,83 @@ an ordering relation, i.e. there is a first and last element.
 </table></div>
 </div>
 <h2><a id="TSeqCollection:Class_Charts"></a>Class Charts</h2>
-<map name="MapTSeqCollection_Inh" id="MapTSeqCollection_Inh">
-<area shape="rect" id="node3" href="./TCollection.html" title="TCollection" alt="" coords="125,75,207,91"/>
-<area shape="rect" id="node4" href="./TObject.html" title="TObject" alt="" coords="1,75,84,91"/>
-<area shape="rect" id="node6" href="./TObjArray.html" title="TObjArray" alt="" coords="399,17,482,34"/>
-<area shape="rect" id="node7" href="./TBtree.html" title="TBtree" alt="" coords="399,58,482,75"/>
-<area shape="rect" id="node8" href="./TList.html" title="TList" alt="" coords="399,75,482,91"/>
-<area shape="rect" id="node9" href="./TOrdCollection.html" title="TOrdCollection" alt="" coords="399,91,482,107"/>
-<area shape="rect" id="node10" href="./TRefArray.html" title="TRefArray" alt="" coords="399,107,482,123"/>
-<area shape="rect" id="node11" href="./ROOT__TSchemaMatch.html" title="ROOT::TSchemaMatch" alt="" coords="523,1,639,17"/>
-<area shape="rect" id="node12" href="./TClonesArray.html" title="TClonesArray" alt="" coords="540,17,622,34"/>
-<area shape="rect" id="node13" href="./TGridJobStatusList.html" title="TGridJobStatusList" alt="" coords="533,34,629,50"/>
-<area shape="rect" id="node14" href="./TGridResult.html" title="TGridResult" alt="" coords="540,50,622,66"/>
-<area shape="rect" id="node15" href="./THashList.html" title="THashList" alt="" coords="540,66,622,83"/>
-<area shape="rect" id="node16" href="./TProofOutputList.html" title="TProofOutputList" alt="" coords="537,83,625,99"/>
-<area shape="rect" id="node17" href="./TQCommand.html" title="TQCommand" alt="" coords="540,99,622,115"/>
-<area shape="rect" id="node18" href="./TQConnection.html" title="TQConnection" alt="" coords="540,115,622,131"/>
-<area shape="rect" id="node19" href="./TSortedList.html" title="TSortedList" alt="" coords="540,131,622,148"/>
-<area shape="rect" id="node20" href="./TQUndoManager.html" title="TQUndoManager" alt="" coords="680,99,767,115"/>
-<area shape="rect" id="node21" href="./TSelectorList.html" title="TSelectorList" alt="" coords="682,66,765,83"/>
-</map>
-<map name="MapTSeqCollection_InhMem" id="MapTSeqCollection_InhMem">
-<area shape="rect" id="graph9" href="./TCollection.html" alt="" coords="541,63,629,113"/>
-<area shape="rect" id="graph10" href="./TCollection.html" alt="" coords="443,63,531,143"/>
-<area shape="rect" id="graph11" href="./TCollection.html" alt="" coords="344,63,432,143"/>
-<area shape="rect" id="graph12" href="./TCollection.html" alt="" coords="573,124,597,145"/>
-<area shape="rect" id="graph13" href="./TCollection.html" alt="" coords="541,156,629,455"/>
-<area shape="rect" id="graph14" href="./TCollection.html" alt="" coords="443,153,531,467"/>
-<area shape="rect" id="graph15" href="./TCollection.html" alt="" coords="344,153,432,467"/>
-<area shape="rect" id="graph8" href="./TCollection.html" title="TCollection" alt="" coords="333,16,640,477"/>
-<area shape="rect" id="graph18" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph19" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph20" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph21" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph22" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph23" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph24" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph17" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTSeqCollection_Lib" id="MapTSeqCollection_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTSeqCollection_Inh" class="tabsel" href="inh/TSeqCollection_Inh.png" onclick="javascript:return SetImg('Charts','inh/TSeqCollection_Inh.png');">Inheritance</a>
-<a id="imgTSeqCollection_InhMem" class="tab" href="inhmem/TSeqCollection_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TSeqCollection_InhMem.png');">Inherited Members</a>
-<a id="imgTSeqCollection_Incl" class="tab" href="incl/TSeqCollection_Incl.png" onclick="javascript:return SetImg('Charts','incl/TSeqCollection_Incl.png');">Includes</a>
-<a id="imgTSeqCollection_Lib" class="tab" href="lib/TSeqCollection_Lib.png" onclick="javascript:return SetImg('Charts','lib/TSeqCollection_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTSeqCollection_Inh" src="inh/TSeqCollection_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TCollection" href="./TCollection.html">TCollection</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TSeqCollection" href="./TSeqCollection.html">TSeqCollection</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TBtree" href="./TBtree.html">TBtree</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TList" href="./TList.html">TList</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TGridJobStatusList" href="./TGridJobStatusList.html">TGridJobStatusList</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TGridResult" href="./TGridResult.html">TGridResult</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="THashList" href="./THashList.html">THashList</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#e7e7e7"><table><tr><td>
+<center><tt><a name="TSelectorList" href="./TSelectorList.html">TSelectorList</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TProofOutputList" href="./TProofOutputList.html">TProofOutputList</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TQCommand" href="./TQCommand.html">TQCommand</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#e7e7e7"><table><tr><td>
+<center><tt><a name="TQUndoManager" href="./TQUndoManager.html">TQUndoManager</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TQConnection" href="./TQConnection.html">TQConnection</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td><td align="left">&nbsp;<a href="ClassHierarchy.html">[more...]</a></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSeqCollection:IndexOf" href="src/TSeqCollection.cxx.html#wmlkuD">IndexOf</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) const</span><br />
 <div class="funccomm"><pre> Return index of object in collection. Returns -1 when object not found.
@@ -447,7 +478,7 @@ an ordering relation, i.e. there is a first and last element.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   04/08/95</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/cont:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: root/cont:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

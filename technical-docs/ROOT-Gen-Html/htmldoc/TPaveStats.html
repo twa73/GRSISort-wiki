@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:21 2015            -->
+<!--   Date: Tue May  5 12:09:21 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TPaveStats.h.html">header file</a>
 <a class="descrheadentry" href="src/TPaveStats.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TPaveStats_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -359,12 +359,12 @@ The following example show how to remove and add a line in a statistics box.
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttText.html#TAttText:ResetAttText"><span class="baseclass">TAttText::</span>ResetAttText</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* toption = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TPaveText.html#TPaveText:SaveLines"><span class="baseclass">TPaveText::</span>SaveLines</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TPaveStats:SavePrimitive">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TPaveStats:SaveStyle">SaveStyle</a>()<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttText.html#TAttText:SaveTextAttributes"><span class="baseclass">TAttText::</span>SaveTextAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> alidef = 12, <a href="./ListOfTypes.html#Float_t">Float_t</a> angdef = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> fondef = 61, <a href="./ListOfTypes.html#Float_t">Float_t</a> sizdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttText.html#TAttText:SaveTextAttributes"><span class="baseclass">TAttText::</span>SaveTextAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> alidef = 12, <a href="./ListOfTypes.html#Float_t">Float_t</a> angdef = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> fondef = 61, <a href="./ListOfTypes.html#Float_t">Float_t</a> sizdef = 1)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TPaveStats:SetAllWith">SetAllWith</a>(<span class="keyword">const</span> <span class="keyword">char</span>*, <a href="./ListOfTypes.html#Option_t">Option_t</a>*, <a href="./ListOfTypes.html#Double_t">Double_t</a>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBox.html#TBox:SetBBoxCenter"><span class="baseclass">TBox::</span>SetBBoxCenter</a>(<span class="keyword">const</span> <a href="./TPoint.html">TPoint</a>&amp; p)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBox.html#TBox:SetBBoxCenterX"><span class="baseclass">TBox::</span>SetBBoxCenterX</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a> x)</td></tr>
@@ -504,85 +504,77 @@ The following example show how to remove and add a line in a statistics box.
 </table></div>
 </div>
 <h2><a id="TPaveStats:Class_Charts"></a>Class Charts</h2>
-<map name="MapTPaveStats_Inh" id="MapTPaveStats_Inh">
-<area shape="rect" id="node3" href="./TPaveText.html" title="TPaveText" alt="" coords="493,45,603,67"/>
-<area shape="rect" id="node4" href="./TPave.html" title="TPave" alt="" coords="329,34,439,56"/>
-<area shape="rect" id="node5" href="./TAttText.html" title="TAttText" alt="" coords="329,56,439,77"/>
-<area shape="rect" id="node6" href="./TBox.html" title="TBox" alt="" coords="165,34,275,56"/>
-<area shape="rect" id="node7" href="./TObject.html" title="TObject" alt="" coords="2,1,111,23"/>
-<area shape="rect" id="node8" href="./TAttLine.html" title="TAttLine" alt="" coords="2,23,111,45"/>
-<area shape="rect" id="node9" href="./TAttFill.html" title="TAttFill" alt="" coords="2,45,111,66"/>
-<area shape="rect" id="node10" href="./TAttBBox2D.html" title="TAttBBox2D" alt="" coords="2,66,111,88"/>
-</map>
-<map name="MapTPaveStats_InhMem" id="MapTPaveStats_InhMem">
-<area shape="rect" id="graph12" href="./TPaveText.html" alt="" coords="1176,63,1264,99"/>
-<area shape="rect" id="graph13" href="./TPaveText.html" alt="" coords="1077,63,1165,113"/>
-<area shape="rect" id="graph14" href="./TPaveText.html" alt="" coords="979,63,1067,113"/>
-<area shape="rect" id="graph15" href="./TPaveText.html" alt="" coords="1208,109,1232,131"/>
-<area shape="rect" id="graph16" href="./TPaveText.html" alt="" coords="1176,141,1264,367"/>
-<area shape="rect" id="graph17" href="./TPaveText.html" alt="" coords="1077,141,1165,367"/>
-<area shape="rect" id="graph18" href="./TPaveText.html" alt="" coords="979,141,1067,367"/>
-<area shape="rect" id="graph11" href="./TPaveText.html" title="TPaveText" alt="" coords="968,16,1275,377"/>
-<area shape="rect" id="graph21" href="./TPave.html" alt="" coords="859,63,947,143"/>
-<area shape="rect" id="graph22" href="./TPave.html" alt="" coords="760,63,848,143"/>
-<area shape="rect" id="graph23" href="./TPave.html" alt="" coords="661,63,749,143"/>
-<area shape="rect" id="graph24" href="./TPave.html" alt="" coords="891,153,915,175"/>
-<area shape="rect" id="graph25" href="./TPave.html" alt="" coords="859,185,947,455"/>
-<area shape="rect" id="graph26" href="./TPave.html" alt="" coords="760,185,848,455"/>
-<area shape="rect" id="graph27" href="./TPave.html" alt="" coords="661,185,749,455"/>
-<area shape="rect" id="graph20" href="./TPave.html" title="TPave" alt="" coords="651,16,957,465"/>
-<area shape="rect" id="graph30" href="./TAttText.html" alt="" coords="859,853,947,904"/>
-<area shape="rect" id="graph31" href="./TAttText.html" alt="" coords="760,853,848,904"/>
-<area shape="rect" id="graph32" href="./TAttText.html" alt="" coords="661,853,749,904"/>
-<area shape="rect" id="graph33" href="./TAttText.html" alt="" coords="891,915,915,936"/>
-<area shape="rect" id="graph34" href="./TAttText.html" alt="" coords="859,947,947,1113"/>
-<area shape="rect" id="graph35" href="./TAttText.html" alt="" coords="760,932,848,1113"/>
-<area shape="rect" id="graph36" href="./TAttText.html" alt="" coords="661,932,749,1113"/>
-<area shape="rect" id="graph29" href="./TAttText.html" title="TAttText" alt="" coords="651,807,957,1124"/>
-<area shape="rect" id="graph39" href="./TBox.html" alt="" coords="541,63,629,113"/>
-<area shape="rect" id="graph40" href="./TBox.html" alt="" coords="443,63,531,128"/>
-<area shape="rect" id="graph41" href="./TBox.html" alt="" coords="344,63,432,128"/>
-<area shape="rect" id="graph42" href="./TBox.html" alt="" coords="573,124,597,145"/>
-<area shape="rect" id="graph43" href="./TBox.html" alt="" coords="541,156,629,381"/>
-<area shape="rect" id="graph44" href="./TBox.html" alt="" coords="443,139,531,393"/>
-<area shape="rect" id="graph45" href="./TBox.html" alt="" coords="344,139,432,393"/>
-<area shape="rect" id="graph38" href="./TBox.html" title="TBox" alt="" coords="333,16,640,404"/>
-<area shape="rect" id="graph48" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph49" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph50" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph51" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph52" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph53" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph54" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph47" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-<area shape="rect" id="graph57" href="./TAttLine.html" alt="" coords="224,699,312,749"/>
-<area shape="rect" id="graph58" href="./TAttLine.html" alt="" coords="125,699,213,749"/>
-<area shape="rect" id="graph59" href="./TAttLine.html" alt="" coords="59,699,83,720"/>
-<area shape="rect" id="graph60" href="./TAttLine.html" alt="" coords="224,760,312,897"/>
-<area shape="rect" id="graph61" href="./TAttLine.html" alt="" coords="125,760,213,927"/>
-<area shape="rect" id="graph62" href="./TAttLine.html" alt="" coords="27,760,115,927"/>
-<area shape="rect" id="graph56" href="./TAttLine.html" title="TAttLine" alt="" coords="16,652,323,937"/>
-<area shape="rect" id="graph65" href="./TAttFill.html" alt="" coords="27,995,312,1031"/>
-<area shape="rect" id="graph66" href="./TAttFill.html" alt="" coords="224,1041,312,1179"/>
-<area shape="rect" id="graph67" href="./TAttFill.html" alt="" coords="125,1041,213,1193"/>
-<area shape="rect" id="graph68" href="./TAttFill.html" alt="" coords="27,1041,115,1193"/>
-<area shape="rect" id="graph64" href="./TAttFill.html" title="TAttFill" alt="" coords="16,948,323,1204"/>
-<area shape="rect" id="graph71" href="./TAttBBox2D.html" alt="" coords="59,1261,312,1297"/>
-<area shape="rect" id="graph72" href="./TAttBBox2D.html" alt="" coords="224,1308,312,1431"/>
-<area shape="rect" id="graph73" href="./TAttBBox2D.html" alt="" coords="125,1308,213,1445"/>
-<area shape="rect" id="graph74" href="./TAttBBox2D.html" alt="" coords="27,1308,115,1445"/>
-<area shape="rect" id="graph70" href="./TAttBBox2D.html" title="TAttBBox2D" alt="" coords="16,1215,323,1456"/>
-</map>
-<map name="MapTPaveStats_Lib" id="MapTPaveStats_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="408,207,523,255"/>
-</map>
-<div class="tabs">
-<a id="imgTPaveStats_Inh" class="tabsel" href="inh/TPaveStats_Inh.png" onclick="javascript:return SetImg('Charts','inh/TPaveStats_Inh.png');">Inheritance</a>
-<a id="imgTPaveStats_InhMem" class="tab" href="inhmem/TPaveStats_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TPaveStats_InhMem.png');">Inherited Members</a>
-<a id="imgTPaveStats_Incl" class="tab" href="incl/TPaveStats_Incl.png" onclick="javascript:return SetImg('Charts','incl/TPaveStats_Incl.png');">Includes</a>
-<a id="imgTPaveStats_Lib" class="tab" href="lib/TPaveStats_Lib.png" onclick="javascript:return SetImg('Charts','lib/TPaveStats_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTPaveStats_Inh" src="inh/TPaveStats_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#dfdfdf" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#dfdfdf" align="right">
+<table><tr><td>
+<center><tt><a name="TAttLine" href="./TAttLine.html">TAttLine</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#dfdfdf" align="right">
+<table><tr><td>
+<center><tt><a name="TAttFill" href="./TAttFill.html">TAttFill</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#dfdfdf" align="right">
+<table><tr><td>
+<center><tt><a name="TAttBBox2D" href="./TAttBBox2D.html">TAttBBox2D</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TBox" href="./TBox.html">TBox</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TPave" href="./TPave.html">TPave</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TAttText" href="./TAttText.html">TAttText</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TPaveText" href="./TPaveText.html">TPaveText</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TPaveStats" href="./TPaveStats.html">TPaveStats</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TPaveStats:TPaveStats" href="src/TPaveStats.cxx.html#XmY.YE">TPaveStats</a>()</span><br />
 <div class="funccomm"><pre>
@@ -754,7 +746,7 @@ The following example show how to remove and add a line in a statistics box.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   15/03/99</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/graf:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: root/graf:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:42 2015            -->
+<!--   Date: Tue May  5 12:09:35 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TStyle.h.html">header file</a>
 <a class="descrheadentry" href="src/TStyle.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TStyle_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -290,12 +290,12 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttText.html#TAttText:ResetAttText"><span class="baseclass">TAttText::</span>ResetAttText</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* toption = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttMarker.html#TAttMarker:SaveMarkerAttributes"><span class="baseclass">TAttMarker::</span>SaveMarkerAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttMarker.html#TAttMarker:SaveMarkerAttributes"><span class="baseclass">TAttMarker::</span>SaveMarkerAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TStyle:SavePrimitive">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TStyle:SaveSource">SaveSource</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = 0)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttText.html#TAttText:SaveTextAttributes"><span class="baseclass">TAttText::</span>SaveTextAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> alidef = 12, <a href="./ListOfTypes.html#Float_t">Float_t</a> angdef = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> fondef = 61, <a href="./ListOfTypes.html#Float_t">Float_t</a> sizdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttText.html#TAttText:SaveTextAttributes"><span class="baseclass">TAttText::</span>SaveTextAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> alidef = 12, <a href="./ListOfTypes.html#Float_t">Float_t</a> angdef = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> fondef = 61, <a href="./ListOfTypes.html#Float_t">Float_t</a> sizdef = 1)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TStyle:SetAxisColor">SetAxisColor</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> color = 1, <a href="./ListOfTypes.html#Option_t">Option_t</a>* axis = <span class="string">"X"</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TStyle:SetBarOffset">SetBarOffset</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> baroff = 0.5)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TStyle:SetBarWidth">SetBarWidth</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> barwidth = 0.5)</td></tr>
@@ -617,66 +617,61 @@ return false;}
 </table></div>
 </div>
 <h2><a id="TStyle:Class_Charts"></a>Class Charts</h2>
-<map name="MapTStyle_Inh" id="MapTStyle_Inh">
-<area shape="rect" id="node3" href="./TNamed.html" title="TNamed" alt="" coords="289,2,479,40"/>
-<area shape="rect" id="node4" href="./TAttLine.html" title="TAttLine" alt="" coords="289,40,479,78"/>
-<area shape="rect" id="node5" href="./TAttFill.html" title="TAttFill" alt="" coords="289,78,479,116"/>
-<area shape="rect" id="node6" href="./TAttMarker.html" title="TAttMarker" alt="" coords="289,116,479,153"/>
-<area shape="rect" id="node7" href="./TAttText.html" title="TAttText" alt="" coords="289,153,479,191"/>
-<area shape="rect" id="node8" href="./TObject.html" title="TObject" alt="" coords="3,2,193,40"/>
-</map>
-<map name="MapTStyle_InhMem" id="MapTStyle_InhMem">
-<area shape="rect" id="graph12" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph13" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph14" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph15" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph11" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph18" href="./TAttLine.html" alt="" coords="541,372,629,423"/>
-<area shape="rect" id="graph19" href="./TAttLine.html" alt="" coords="443,372,531,423"/>
-<area shape="rect" id="graph20" href="./TAttLine.html" alt="" coords="376,372,400,393"/>
-<area shape="rect" id="graph21" href="./TAttLine.html" alt="" coords="541,433,629,571"/>
-<area shape="rect" id="graph22" href="./TAttLine.html" alt="" coords="443,433,531,600"/>
-<area shape="rect" id="graph23" href="./TAttLine.html" alt="" coords="344,433,432,600"/>
-<area shape="rect" id="graph17" href="./TAttLine.html" title="TAttLine" alt="" coords="333,325,640,611"/>
-<area shape="rect" id="graph26" href="./TAttFill.html" alt="" coords="344,723,629,759"/>
-<area shape="rect" id="graph27" href="./TAttFill.html" alt="" coords="541,769,629,907"/>
-<area shape="rect" id="graph28" href="./TAttFill.html" alt="" coords="443,769,531,921"/>
-<area shape="rect" id="graph29" href="./TAttFill.html" alt="" coords="344,769,432,921"/>
-<area shape="rect" id="graph25" href="./TAttFill.html" title="TAttFill" alt="" coords="333,676,640,932"/>
-<area shape="rect" id="graph32" href="./TAttMarker.html" alt="" coords="541,1100,629,1151"/>
-<area shape="rect" id="graph33" href="./TAttMarker.html" alt="" coords="443,1100,531,1151"/>
-<area shape="rect" id="graph34" href="./TAttMarker.html" alt="" coords="376,1100,400,1121"/>
-<area shape="rect" id="graph35" href="./TAttMarker.html" alt="" coords="541,1161,629,1313"/>
-<area shape="rect" id="graph36" href="./TAttMarker.html" alt="" coords="443,1161,531,1313"/>
-<area shape="rect" id="graph37" href="./TAttMarker.html" alt="" coords="344,1161,432,1313"/>
-<area shape="rect" id="graph31" href="./TAttMarker.html" title="TAttMarker" alt="" coords="333,1053,640,1324"/>
-<area shape="rect" id="graph40" href="./TAttText.html" alt="" coords="541,1601,629,1652"/>
-<area shape="rect" id="graph41" href="./TAttText.html" alt="" coords="443,1601,531,1652"/>
-<area shape="rect" id="graph42" href="./TAttText.html" alt="" coords="344,1601,432,1652"/>
-<area shape="rect" id="graph43" href="./TAttText.html" alt="" coords="573,1663,597,1684"/>
-<area shape="rect" id="graph44" href="./TAttText.html" alt="" coords="541,1695,629,1861"/>
-<area shape="rect" id="graph45" href="./TAttText.html" alt="" coords="443,1680,531,1861"/>
-<area shape="rect" id="graph46" href="./TAttText.html" alt="" coords="344,1680,432,1861"/>
-<area shape="rect" id="graph39" href="./TAttText.html" title="TAttText" alt="" coords="333,1555,640,1872"/>
-<area shape="rect" id="graph49" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph50" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph51" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph52" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph53" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph54" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph55" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph48" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTStyle_Lib" id="MapTStyle_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTStyle_Inh" class="tabsel" href="inh/TStyle_Inh.png" onclick="javascript:return SetImg('Charts','inh/TStyle_Inh.png');">Inheritance</a>
-<a id="imgTStyle_InhMem" class="tab" href="inhmem/TStyle_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TStyle_InhMem.png');">Inherited Members</a>
-<a id="imgTStyle_Incl" class="tab" href="incl/TStyle_Incl.png" onclick="javascript:return SetImg('Charts','incl/TStyle_Incl.png');">Includes</a>
-<a id="imgTStyle_Lib" class="tab" href="lib/TStyle_Lib.png" onclick="javascript:return SetImg('Charts','lib/TStyle_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTStyle_Inh" src="inh/TStyle_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TAttLine" href="./TAttLine.html">TAttLine</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TAttFill" href="./TAttFill.html">TAttFill</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TAttMarker" href="./TAttMarker.html">TAttMarker</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TAttText" href="./TAttText.html">TAttText</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TStyle" href="./TStyle.html">TStyle</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TStyle:TStyle" href="src/TStyle.cxx.html#eF5ck">TStyle</a>()</span><br />
 <div class="funccomm"><pre> Default constructor.
@@ -2112,7 +2107,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   12/12/94</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/base:$Id: 5214d7dc2746ceb518366bc6c4f4068b652d5241 $ </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: root/base:$Id: 5214d7dc2746ceb518366bc6c4f4068b652d5241 $ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

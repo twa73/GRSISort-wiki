@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Thu Mar 12 13:29:58 2015            -->
+<!--   Date: Tue May  5 12:01:42 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -63,7 +63,7 @@ std::map&lt;<span class="keyword">int</span>,<a href="../TGRSIStats.html">TGRSIS
 
 <a name="PH_QkB"></a><span class="keyword">void</span> <a href="../TGRSIStats.html">TGRSIStats</a>::<a href="../TGRSIStats.html#TGRSIStats:Print" title="void TGRSIStats::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) {
 <span class="comment">//Prints the stats for the current channel.</span>
-	printf( <span class="string">"Channel %i|%s deadtime = %f seconds\n"</span>,<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannel" title="TChannel* TChannel::GetChannel(unsigned int temp_address)">GetChannel</a>(<a href="../TGRSIStats.html#TGRSIStats:GetAddress" title="int TGRSIStats::GetAddress()">GetAddress</a>())-><a href="../TChannel.html#TChannel:GetNumber" title="int TChannel::GetNumber()">GetNumber</a>(),<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannel" title="TChannel* TChannel::GetChannel(unsigned int temp_address)">GetChannel</a>(<a href="../TGRSIStats.html#TGRSIStats:GetAddress" title="int TGRSIStats::GetAddress()">GetAddress</a>())-><a href="../TChannel.html#TChannel:GetChannelName" title="const char* TChannel::GetChannelName()">GetChannelName</a>(),<a href="../TGRSIStats.html#TGRSIStats:GetDeadTime" title="unsigned long TGRSIStats::GetDeadTime()">GetDeadTime</a>()*10*10E-9   );
+	printf( <span class="string">"Channel %i|%s deadtime = %f seconds\n"</span>,<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannel" title="TChannel *const TChannel::GetChannel(unsigned int temp_address)">GetChannel</a>(<a href="../TGRSIStats.html#TGRSIStats:GetAddress" title="int TGRSIStats::GetAddress()">GetAddress</a>())-><a href="../TChannel.html#TChannel:GetNumber" title="int TChannel::GetNumber()">GetNumber</a>(),<a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannel" title="TChannel *const TChannel::GetChannel(unsigned int temp_address)">GetChannel</a>(<a href="../TGRSIStats.html#TGRSIStats:GetAddress" title="int TGRSIStats::GetAddress()">GetAddress</a>())-><a href="../TChannel.html#TChannel:GetChannelName" title="const char* TChannel::GetChannelName()">GetChannelName</a>(),<a href="../TGRSIStats.html#TGRSIStats:GetDeadTime" title="unsigned long TGRSIStats::GetDeadTime()">GetDeadTime</a>()*10*10E-9   );
 }
 
 <a name="RfpE9"></a><span class="keyword">void</span> <a href="../TGRSIStats.html">TGRSIStats</a>::<a href="../TGRSIStats.html#TGRSIStats:Clear" title="void TGRSIStats::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) {
@@ -92,7 +92,7 @@ std::map&lt;<span class="keyword">int</span>,<a href="../TGRSIStats.html">TGRSIS
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-12 13:29 </em><em>&raquo; Last generated: 2015-03-12 13:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

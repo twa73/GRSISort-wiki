@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:40:20 2015            -->
+<!--   Date: Tue May  5 13:06:53 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -37,7 +37,7 @@
 <span class="comment">//  A specialized <a href="../TFileCacheRead.html">TFileCacheRead</a> object for a <a href="../TTree.html">TTree</a>                     //</span>
 <span class="comment">//  This class acts as a file cache, registering automatically the      //</span>
 <span class="comment">//  baskets from the branches being processed (<a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Draw" title="void TTree::Draw(Option_t* opt) or overloads">Draw</a> or           //</span>
-<span class="comment">//  <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> and TSelectors) when in the learning phase.          //</span>
+<span class="comment">//  <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> and TSelectors) when in the learning phase.          //</span>
 <span class="comment">//  The learning phase is by default 100 entries.                       //</span>
 <span class="comment">//  It can be changed via <a href="../TTreeCache.html">TTreeCache</a>::<a href="../TTreeCache.html#TTreeCache:SetLearnEntries" title="void TTreeCache::SetLearnEntries(Int_t n=10)">SetLearnEntries</a>.                  //</span>
 <span class="comment">//                                                                      //</span>
@@ -133,7 +133,7 @@
 <span class="comment">//  in the cache. The entry range is also known automatically.</span>
 <span class="comment">//</span>
 <span class="comment">//  -------------------------------------</span>
-<span class="comment">//  2- with <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> and TSelectors</span>
+<span class="comment">//  2- with <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> and TSelectors</span>
 <span class="comment">//  -------------------------------------</span>
 <span class="comment">//  You must enable the cache and tell the system which branches to cache</span>
 <span class="comment">//  and also specify the entry range. It is important to specify the entry range</span>
@@ -424,7 +424,7 @@ ClassImp(<a href="../TTreeCache.html">TTreeCache</a>)
          longname.Form(<span class="string">"%s.%s"</span>,<a href="../TTreeCache.html#TTreeCache:fTree" title="TTree* TTreeCache::fTree">fTree</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),branch-&gt;<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
          <span class="keyword">if</span> (strcmp(bname,branch-&gt;<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>()) 
              &amp;&amp; longname != bname
-             &amp;&amp; s.Index(re) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">continue</span>;
+             &amp;&amp; s.Index(re) == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">continue</span>;
       }
       nb++;
       <a href="../TTreeCache.html#TTreeCache:AddBranch" title="void TTreeCache::AddBranch(TBranch* b,Bool_t subgbranches=kFALSE) or overloads">AddBranch</a>(branch, subbranches);
@@ -541,7 +541,7 @@ ClassImp(<a href="../TTreeCache.html">TTreeCache</a>)
          longname.Form(<span class="string">"%s.%s"</span>,<a href="../TTreeCache.html#TTreeCache:fTree" title="TTree* TTreeCache::fTree">fTree</a>-><a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>(),branch-&gt;<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>());
          <span class="keyword">if</span> (strcmp(bname,branch-&gt;<a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>()) 
              &amp;&amp; longname != bname
-             &amp;&amp; s.Index(re) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">continue</span>;
+             &amp;&amp; s.Index(re) == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">continue</span>;
       }
       nb++;
       <a href="../TTreeCache.html#TTreeCache:DropBranch" title="void TTreeCache::DropBranch(TBranch* b,Bool_t subbranches=kFALSE) or overloads">DropBranch</a>(branch, subbranches);
@@ -1272,7 +1272,7 @@ ClassImp(<a href="../TTreeCache.html">TTreeCache</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
+<em>&raquo; Last changed: 2015-05-05 13:06 </em><em>&raquo; Last generated: 2015-05-05 13:06</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

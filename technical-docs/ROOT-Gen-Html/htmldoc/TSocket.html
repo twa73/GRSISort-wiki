@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:23 2015            -->
+<!--   Date: Tue May  5 12:09:31 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TSocket.h.html">header file</a>
 <a class="descrheadentry" href="src/TSocket.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TSocket_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -182,7 +182,7 @@ or TWinNTSystem).
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSocket:RecvRaw">RecvRaw</a>(<span class="keyword">void</span>* buffer, <a href="./ListOfTypes.html#Int_t">Int_t</a> length, ESendRecvOptions opt = kDefault)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSocket:Select">Select</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> interest = <a href="./TSocket.html#TSocket:kRead" title="const TSocket::EInterest TSocket::kRead">kRead</a>, <a href="./ListOfTypes.html#Long_t">Long_t</a> timeout = -1)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSocket:Send">Send</a>(<span class="keyword">const</span> <a href="./TMessage.html">TMessage</a>&amp; mess)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSocket:Send@1">Send</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> kind)</td></tr>
@@ -303,39 +303,53 @@ or TWinNTSystem).
 </table></div>
 </div>
 <h2><a id="TSocket:Class_Charts"></a>Class Charts</h2>
-<map name="MapTSocket_Inh" id="MapTSocket_Inh">
-<area shape="rect" id="node3" href="./TNamed.html" title="TNamed" alt="" coords="165,23,275,45"/>
-<area shape="rect" id="node4" href="./TObject.html" title="TObject" alt="" coords="2,23,111,45"/>
-<area shape="rect" id="node6" href="./TServerSocket.html" title="TServerSocket" alt="" coords="493,1,603,23"/>
-<area shape="rect" id="node7" href="./TPSocket.html" title="TPSocket" alt="" coords="493,23,603,45"/>
-<area shape="rect" id="node8" href="./TSSLSocket.html" title="TSSLSocket" alt="" coords="493,45,603,66"/>
-<area shape="rect" id="node9" href="./TPServerSocket.html" title="TPServerSocket" alt="" coords="657,1,766,23"/>
-</map>
-<map name="MapTSocket_InhMem" id="MapTSocket_InhMem">
-<area shape="rect" id="graph12" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph13" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph14" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph15" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph11" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph18" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph19" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph20" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph21" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph22" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph23" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph24" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph17" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTSocket_Lib" id="MapTSocket_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="397,127,512,175"/>
-</map>
-<div class="tabs">
-<a id="imgTSocket_Inh" class="tabsel" href="inh/TSocket_Inh.png" onclick="javascript:return SetImg('Charts','inh/TSocket_Inh.png');">Inheritance</a>
-<a id="imgTSocket_InhMem" class="tab" href="inhmem/TSocket_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TSocket_InhMem.png');">Inherited Members</a>
-<a id="imgTSocket_Incl" class="tab" href="incl/TSocket_Incl.png" onclick="javascript:return SetImg('Charts','incl/TSocket_Incl.png');">Includes</a>
-<a id="imgTSocket_Lib" class="tab" href="lib/TSocket_Lib.png" onclick="javascript:return SetImg('Charts','lib/TSocket_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTSocket_Inh" src="inh/TSocket_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TSocket" href="./TSocket.html">TSocket</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TPSocket" href="./TPSocket.html">TPSocket</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TSSLSocket" href="./TSSLSocket.html">TSSLSocket</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TServerSocket" href="./TServerSocket.html">TServerSocket</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TPServerSocket" href="./TPServerSocket.html">TPServerSocket</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSocket:TSocket@1" href="src/TSocket.cxx.html#tyhg.B">TSocket</a>(<a href="./TInetAddress.html">TInetAddress</a> address, <span class="keyword">const</span> <span class="keyword">char</span>* service, <a href="./ListOfTypes.html#Int_t">Int_t</a> tcpwindowsize = -1)</span><br />
 <div class="funccomm"><pre> Create a socket. Connect to the named service at address addr.
@@ -855,7 +869,7 @@ or TWinNTSystem).
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   18/12/96</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/net:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: root/net:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

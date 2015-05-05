@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:40:28 2015            -->
+<!--   Date: Tue May  5 13:07:15 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -706,7 +706,7 @@ cleanup:
    <span class="comment">// Recompute the path removing all relative directory jumps via '..'.</span>
 
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> slash = 0;
-   <span class="keyword">while</span> ( (slash = <a href="../TUrl.html#TUrl:fFile" title="TString TUrl::fFile">fFile</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">"/.."</span>) ) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <span class="keyword">while</span> ( (slash = <a href="../TUrl.html#TUrl:fFile" title="TString TUrl::fFile">fFile</a>.<a href="../TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(<span class="string">"/.."</span>) ) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
       <span class="comment">// find backwards the next <span class="string">'/'</span></span>
       <a href="../ListOfTypes.html#Bool_t">Bool_t</a> found = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
       <span class="keyword">for</span> (<span class="keyword">int</span> l = slash-1; l &gt;=0; l--) {
@@ -729,7 +729,7 @@ cleanup:
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
+<em>&raquo; Last changed: 2015-05-05 13:07 </em><em>&raquo; Last generated: 2015-05-05 13:07</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

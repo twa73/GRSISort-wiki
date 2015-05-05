@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:35:50 2015            -->
+<!--   Date: Tue May  5 12:09:16 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TMessageHandler.h.html">header file</a>
 <a class="descrheadentry" href="src/TMessageHandler.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TMessageHandler_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -205,7 +205,7 @@ All Root <span class="string">"Fatals"</span>    are logged as message 1004
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TMessageHandler:Removed">Removed</a>()<span class="funcprop"><abbr title="emits a signal">SIGNAL</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -283,44 +283,40 @@ All Root <span class="string">"Fatals"</span>    are logged as message 1004
 </table></div>
 </div>
 <h2><a id="TMessageHandler:Class_Charts"></a>Class Charts</h2>
-<map name="MapTMessageHandler_Inh" id="MapTMessageHandler_Inh">
-<area shape="rect" id="node3" href="./TNamed.html" title="TNamed" alt="" coords="254,2,423,35"/>
-<area shape="rect" id="node4" href="./TQObject.html" title="TQObject" alt="" coords="254,35,423,69"/>
-<area shape="rect" id="node5" href="./TObject.html" title="TObject" alt="" coords="2,2,170,35"/>
-</map>
-<map name="MapTMessageHandler_InhMem" id="MapTMessageHandler_InhMem">
-<area shape="rect" id="graph12" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph13" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph14" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph15" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph11" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph18" href="./TQObject.html" alt="" coords="541,344,629,380"/>
-<area shape="rect" id="graph19" href="./TQObject.html" alt="" coords="443,344,531,395"/>
-<area shape="rect" id="graph20" href="./TQObject.html" alt="" coords="344,344,432,395"/>
-<area shape="rect" id="graph21" href="./TQObject.html" alt="" coords="573,391,597,412"/>
-<area shape="rect" id="graph22" href="./TQObject.html" alt="" coords="541,423,629,648"/>
-<area shape="rect" id="graph23" href="./TQObject.html" alt="" coords="443,423,531,648"/>
-<area shape="rect" id="graph24" href="./TQObject.html" alt="" coords="344,423,432,648"/>
-<area shape="rect" id="graph17" href="./TQObject.html" title="TQObject" alt="" coords="333,297,640,659"/>
-<area shape="rect" id="graph27" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph28" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph29" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph30" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph31" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph32" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph33" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph26" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTMessageHandler_Lib" id="MapTMessageHandler_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTMessageHandler_Inh" class="tabsel" href="inh/TMessageHandler_Inh.png" onclick="javascript:return SetImg('Charts','inh/TMessageHandler_Inh.png');">Inheritance</a>
-<a id="imgTMessageHandler_InhMem" class="tab" href="inhmem/TMessageHandler_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TMessageHandler_InhMem.png');">Inherited Members</a>
-<a id="imgTMessageHandler_Incl" class="tab" href="incl/TMessageHandler_Incl.png" onclick="javascript:return SetImg('Charts','incl/TMessageHandler_Incl.png');">Includes</a>
-<a id="imgTMessageHandler_Lib" class="tab" href="lib/TMessageHandler_Lib.png" onclick="javascript:return SetImg('Charts','lib/TMessageHandler_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTMessageHandler_Inh" src="inh/TMessageHandler_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TQObject" href="./TQObject.html">TQObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TMessageHandler" href="./TMessageHandler.html">TMessageHandler</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TMessageHandler:TMessageHandler" href="src/TMessageHandler.cxx.html#MkNwkD">TMessageHandler</a>(<span class="keyword">const</span> <a href="./TClass.html">TClass</a>* cl, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> derived = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</span><br />
 <div class="funccomm"><pre> Create a new message handler for class cl and add it to the list
@@ -397,7 +393,7 @@ All Root <span class="string">"Fatals"</span>    are logged as message 1004
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   11/11/99</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:35</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

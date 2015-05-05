@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:15 2015            -->
+<!--   Date: Tue May  5 12:09:30 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TSelector.h.html">header file</a>
 <a class="descrheadentry" href="src/TSelector.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TSelector_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -62,7 +62,7 @@ return false;}
 <pre>
 
 A <a href="./TSelector.html">TSelector</a> object is used by the <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Draw" title="void TTree::Draw(Option_t* opt) or overloads">Draw</a>, <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Scan" title="Long64_t TTree::Scan(const char* varexp=&quot;&quot;,const char* selection=&quot;&quot;,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0)">Scan</a>,
-<a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> to navigate in a <a href="./TTree.html">TTree</a> and make selections.
+<a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> to navigate in a <a href="./TTree.html">TTree</a> and make selections.
 It contains the following main methods:
 
 <a href="./ListOfTypes.html#void">void</a> <a href="./TSelector.html">TSelector</a>::<a href="./TSelector.html#TSelector:Init" title="void TSelector::Init(TTree* )">Init</a>(<a href="./TTree.html">TTree</a> *t). Called every time a new <a href="./TTree.html">TTree</a> is
@@ -202,7 +202,7 @@ use fChain-&gt;GetTree()-&gt;<a href="./TSelector.html#TSelector:GetEntry" title
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSelector:ResetAbort">ResetAbort</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -282,32 +282,40 @@ use fChain-&gt;GetTree()-&gt;<a href="./TSelector.html#TSelector:GetEntry" title
 </table></div>
 </div>
 <h2><a id="TSelector:Class_Charts"></a>Class Charts</h2>
-<map name="MapTSelector_Inh" id="MapTSelector_Inh">
-<area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="3,39,187,75"/>
-<area shape="rect" id="node5" href="./TFragmentSelector.html" title="TFragmentSelector" alt="" coords="555,2,765,39"/>
-<area shape="rect" id="node6" href="./TSelVerifyDataSet.html" title="TSelVerifyDataSet" alt="" coords="556,39,764,75"/>
-<area shape="rect" id="node7" href="./TSelectorCint.html" title="TSelectorCint" alt="" coords="568,75,752,111"/>
-</map>
-<map name="MapTSelector_InhMem" id="MapTSelector_InhMem">
-<area shape="rect" id="graph12" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph13" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph14" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph15" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph16" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph17" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph18" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph11" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTSelector_Lib" id="MapTSelector_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="376,167,491,215"/>
-</map>
-<div class="tabs">
-<a id="imgTSelector_Inh" class="tabsel" href="inh/TSelector_Inh.png" onclick="javascript:return SetImg('Charts','inh/TSelector_Inh.png');">Inheritance</a>
-<a id="imgTSelector_InhMem" class="tab" href="inhmem/TSelector_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TSelector_InhMem.png');">Inherited Members</a>
-<a id="imgTSelector_Incl" class="tab" href="incl/TSelector_Incl.png" onclick="javascript:return SetImg('Charts','incl/TSelector_Incl.png');">Includes</a>
-<a id="imgTSelector_Lib" class="tab" href="lib/TSelector_Lib.png" onclick="javascript:return SetImg('Charts','lib/TSelector_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTSelector_Inh" src="inh/TSelector_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TSelector" href="./TSelector.html">TSelector</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TFragmentSelector" href="./TFragmentSelector.html">TFragmentSelector</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TSelVerifyDataSet" href="./TSelVerifyDataSet.html">TSelVerifyDataSet</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TSelectorCint" href="./TSelectorCint.html">TSelectorCint</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSelector:TSelector@1" href="src/TSelector.cxx.html#wibY_D">TSelector</a>()</span><br />
 <div class="funccomm"><pre> Default selector ctor.
@@ -388,7 +396,7 @@ use fChain-&gt;GetTree()-&gt;<a href="./TSelector.html#TSelector:GetEntry" title
 
  The processing can be stopped by calling <a href="./TSelector.html#TSelector:Abort" title="void TSelector::Abort(const char* why,TSelector::EAbort what=kAbortProcess)">Abort</a>().
 
- Use <a href="./TSelector.html#TSelector:fStatus" title="Long64_t TSelector::fStatus">fStatus</a> to set the return value of <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>().
+ Use <a href="./TSelector.html#TSelector:fStatus" title="Long64_t TSelector::fStatus">fStatus</a> to set the return value of <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>().
 
  The return value is currently not used.
 </pre></div>
@@ -492,7 +500,7 @@ use fChain-&gt;GetTree()-&gt;<a href="./TSelector.html#TSelector:GetEntry" title
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   05/02/97</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/tree:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: root/tree:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

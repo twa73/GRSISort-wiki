@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:30:00 2015            -->
+<!--   Date: Tue May  5 12:01:34 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -113,9 +113,9 @@ ClassImp(<a href="../TGVScrollBar.html">TGVScrollBar</a>)
    fState = kButtonUp;
    fPicD = 0;
    fStyle = 0;
-   <span class="keyword">if</span> (p &amp;&amp; p-&gt;<a href="../TObject.html#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TGScrollBar"</span>))
+   <span class="keyword">if</span> ((<a href="../TGClient.html">gClient</a>-><a href="../TGClient.html#TGClient:GetStyle" title="UInt_t TGClient::GetStyle()">GetStyle</a>() &gt; 1) || (p &amp;&amp; p-&gt;<a href="../TObject.html#TObject:InheritsFrom" title="Bool_t TObject::InheritsFrom(const char* classname) or overloads">InheritsFrom</a>(<span class="string">"TGScrollBar"</span>)))
       fStyle = <a href="../TGClient.html">gClient</a>-><a href="../TGClient.html#TGClient:GetStyle" title="UInt_t TGClient::GetStyle()">GetStyle</a>();
-   
+
    fBgndColor = fBackground;
    fHighColor = <a href="../TGClient.html">gClient</a>-><a href="../TGClient.html#TGClient:GetResourcePool" title="const TGResourcePool* TGClient::GetResourcePool()">GetResourcePool</a>()-><a href="../TGResourcePool.html#TGResourcePool:GetHighLightColor" title="Pixel_t TGResourcePool::GetHighLightColor()">GetHighLightColor</a>();
    <a href="../TGFrame.html#TGFrame:AddInput" title="void TGFrame::AddInput(UInt_t emask)">AddInput</a>(<a href="../ListOfTypes.html#Mask_t">kEnterWindowMask</a> | <a href="../ListOfTypes.html#Mask_t">kLeaveWindowMask</a>);
@@ -1014,7 +1014,7 @@ ClassImp(<a href="../TGVScrollBar.html">TGVScrollBar</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:30 </em><em>&raquo; Last generated: 2015-03-04 20:30</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

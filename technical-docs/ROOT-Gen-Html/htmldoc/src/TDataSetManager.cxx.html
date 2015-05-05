@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:51 2015            -->
+<!--   Date: Tue May  5 12:01:21 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -183,9 +183,9 @@ ClassImp(<a href="../TDataSetManager.html">TDataSetManager</a>)
       <a href="../TString.html">TString</a> opt(opts);
       <span class="comment">// If it contains the prefix <span class="string">"opt:"</span>, isolate the related field</span>
       <a href="../ListOfTypes.html#Int_t">Int_t</a> ip = opt.Index(<span class="string">"opt:"</span>);
-      <span class="keyword">if</span> (ip != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) opt.Remove(0, ip + 4);
+      <span class="keyword">if</span> (ip != <a href="../ListOfTypes.html#int">kNPOS</a>) opt.Remove(0, ip + 4);
       ip = opt.Index(<span class="string">" "</span>);
-      <span class="keyword">if</span> (ip != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) opt.Remove(ip);
+      <span class="keyword">if</span> (ip != <a href="../ListOfTypes.html#int">kNPOS</a>) opt.Remove(ip);
       <span class="comment">// Check the content, now</span>
       <span class="keyword">if</span> (opt.Contains(<span class="string">"Cq:"</span>) &amp;&amp; !opt.Contains(<span class="string">"-Cq:"</span>))
          <a href="../TObject.html#TObject:SetBit" title="void TObject::SetBit(UInt_t f,Bool_t set) or overloads">SetBit</a>(<a href="../TDataSetManager.html">TDataSetManager</a>::<a href="../TDataSetManager.html#TDataSetManager:kCheckQuota" title="const TDataSetManager::EDataSetStatusBits TDataSetManager::kCheckQuota">kCheckQuota</a>);
@@ -1177,8 +1177,8 @@ ClassImp(<a href="../TDataSetManager.html">TDataSetManager</a>)
          }
          <span class="comment">// Try all the directories</span>
          <a href="../TRegexp.html">TRegexp</a> reg(grp, <a href="../ListOfTypes.html#Bool_t">kTRUE</a>), reu(usr, <a href="../ListOfTypes.html#Bool_t">kTRUE</a>);
-         <span class="keyword">if</span> (u.Index(reg) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) grp = <span class="string">"*"</span>;
-         <span class="keyword">if</span> (u.Index(reu) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) usr = <span class="string">"*"</span>;
+         <span class="keyword">if</span> (u.Index(reg) == <a href="../ListOfTypes.html#int">kNPOS</a>) grp = <span class="string">"*"</span>;
+         <span class="keyword">if</span> (u.Index(reu) == <a href="../ListOfTypes.html#int">kNPOS</a>) usr = <span class="string">"*"</span>;
          <span class="comment">// Rebuild the uri</span>
          u.Form(<span class="string">"/%s/%s/%s"</span>, grp.Data(), usr.Data(), dsn.Data());
       }
@@ -2014,7 +2014,7 @@ ClassImp(<a href="../TDataSetManager.html">TDataSetManager</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:28 </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

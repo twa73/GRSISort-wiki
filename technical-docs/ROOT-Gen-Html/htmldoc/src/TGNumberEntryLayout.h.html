@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:30:41 2015            -->
+<!--   Date: Tue May  5 12:01:41 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -173,7 +173,7 @@
    <span class="keyword">virtual</span> <span class="keyword">void</span>   <a href="../TGNumberEntryLayout.html#TGNumberEntryLayout:Layout" title="void TGNumberEntryLayout::Layout()">Layout</a>();
    <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a> IsEditable() <span class="keyword">const</span> { <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kFALSE</a>; }
    <span class="keyword">virtual</span> <span class="keyword">void</span>   InvalidInput(<span class="keyword">const</span> <span class="keyword">char</span> *instr) { Emit(<span class="string">"InvalidInput(char*)"</span>, instr); }   <span class="comment">//*SIGNAL*</span>
-   <span class="keyword">virtual</span> <span class="keyword">void</span>   <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>);
+   <span class="keyword">virtual</span> <span class="keyword">void</span>   <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>);
 
    ClassDef(<a href="../TGNumberEntryField.html">TGNumberEntryField</a>,0)  <span class="comment">// A text entry field used by a <a href="../TGNumberEntry.html">TGNumberEntry</a></span>
 };
@@ -305,7 +305,7 @@
    <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a> IsEditable() <span class="keyword">const</span> { <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kFALSE</a>; }
 
    <a href="../ListOfTypes.html#UInt_t">UInt_t</a> GetDefaultHeight() <span class="keyword">const</span> { <span class="keyword">return</span> fNumericEntry-&gt;GetDefaultHeight(); }
-   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>);
+   <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(<a href="../ListOfTypes.html#ostream">ostream</a> &amp;out, <a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>);
    <span class="keyword">virtual</span> <a href="../TGLayoutManager.html">TGLayoutManager</a> *GetLayoutManager() <span class="keyword">const</span>;
 
    ClassDef(<a href="../TGNumberEntry.html">TGNumberEntry</a>,0)  <span class="comment">// Entry field widget for several numeric formats</span>
@@ -338,7 +338,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:30 </em><em>&raquo; Last generated: 2015-03-04 20:30</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

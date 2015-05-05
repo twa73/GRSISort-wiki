@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:29:40 2015            -->
+<!--   Date: Tue May  5 12:01:31 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -1709,7 +1709,7 @@ ClassImp(<a href="../TGContainer.html">TGContainer</a>)
    <span class="comment">// string.</span>
 
    <span class="keyword">if</span> (name.IsNull()) <span class="keyword">return</span> 0;
-   <span class="keyword">int</span> idx = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+   <span class="keyword">int</span> idx = <a href="../ListOfTypes.html#int">kNPOS</a>;
 
    <a href="../TGFrameElement.html">TGFrameElement</a> *el = 0;
    <a href="../TString.html">TString</a> str;
@@ -1737,7 +1737,7 @@ ClassImp(<a href="../TGContainer.html">TGContainer</a>)
       str = el-&gt;fFrame-&gt;<a href="../TObject.html#TObject:GetTitle" title="const char* TObject::GetTitle()">GetTitle</a>();
       idx = str.Index(name, 0, cmp);
 
-      <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          <span class="keyword">if</span> (subString) {
             <span class="keyword">return</span> el;
          } <span class="keyword">else</span> {
@@ -2224,7 +2224,7 @@ ClassImp(<a href="../TGContainer.html">TGContainer</a>)
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetShadowGC" title="const TGGC&amp; TGFrame::GetShadowGC()">GetShadowGC</a>()(), 0, 0, 0, fHeight-2);
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetBlackGC" title="const TGGC&amp; TGFrame::GetBlackGC()">GetBlackGC</a>()(), 1, 1, fWidth-3, 1);
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetBlackGC" title="const TGGC&amp; TGFrame::GetBlackGC()">GetBlackGC</a>()(), 1, 1, 1, fHeight-3);
-
+         <span class="keyword">if</span> (<a href="../TGClient.html">gClient</a>-><a href="../TGClient.html#TGClient:GetStyle" title="UInt_t TGClient::GetStyle()">GetStyle</a>() &gt; 1) <span class="keyword">break</span>;
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetHilightGC" title="const TGGC&amp; TGFrame::GetHilightGC()">GetHilightGC</a>()(), 0, fHeight-1, fWidth-1, fHeight-1);
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetHilightGC" title="const TGGC&amp; TGFrame::GetHilightGC()">GetHilightGC</a>()(), fWidth-1, fHeight-1, fWidth-1, 0);
          gVirtualX-&gt;DrawLine(fId, <a href="../TGFrame.html#TGFrame:GetBckgndGC" title="const TGGC&amp; TGFrame::GetBckgndGC()">GetBckgndGC</a>()(),  1, fHeight-2, fWidth-2, fHeight-2);
@@ -2492,7 +2492,7 @@ ClassImp(<a href="../TGContainer.html">TGContainer</a>)
        &lt;&lt; <span class="string">");"</span> &lt;&lt; endl;
 
    out &lt;&lt; <span class="string">"   "</span> &lt;&lt; cont-&gt;<a href="../TGWindow.html#TGWindow:GetName" title="const char* TGWindow::GetName()">GetName</a>() &lt;&lt; <span class="string">"-&gt;SetLayoutManager("</span>;
-   cont-&gt;<a href="../TGCompositeFrame.html#TGCompositeFrame:GetLayoutManager" title="TGLayoutManager* TGCompositeFrame::GetLayoutManager()">GetLayoutManager</a>()-><a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(out, option);
+   cont-&gt;<a href="../TGCompositeFrame.html#TGCompositeFrame:GetLayoutManager" title="TGLayoutManager* TGCompositeFrame::GetLayoutManager()">GetLayoutManager</a>()-><a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(out, option);
    out &lt;&lt; <span class="string">");"</span>&lt;&lt; endl;
 
    out &lt;&lt; <span class="string">"   "</span> &lt;&lt; cont-&gt;<a href="../TGWindow.html#TGWindow:GetName" title="const char* TGWindow::GetName()">GetName</a>() &lt;&lt; <span class="string">"-&gt;MapSubwindows();"</span> &lt;&lt; endl;
@@ -2549,7 +2549,7 @@ ClassImp(<a href="../TGContainer.html">TGContainer</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:29 </em><em>&raquo; Last generated: 2015-03-04 20:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

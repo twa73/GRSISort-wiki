@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:33:46 2015            -->
+<!--   Date: Tue May  5 12:05:26 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -1165,14 +1165,14 @@ next:
    <span class="keyword">if</span> (!<a href="../TGText.html#TGText:SetCurrentRow" title="Bool_t TGText::SetCurrentRow(Long_t row)">SetCurrentRow</a>(start.fY))
       <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
 
-   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> x = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+   <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> x = <a href="../ListOfTypes.html#int">kNPOS</a>;
 
    <span class="keyword">if</span> (direction) {
       <span class="keyword">while</span>(1) {
          <a href="../TString.html">TString</a> s = <a href="../TGText.html#TGText:fCurrent" title="TGTextLine* TGText::fCurrent">fCurrent</a>-><a href="../TGTextLine.html#TGTextLine:fString" title="char* TGTextLine::fString">fString</a>;
          x = s.Index(searchString, (<a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a>)start.fX,
                      caseSensitive ? <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kExact" title="const TString::ECaseCompare TString::kExact">kExact</a> : <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
-         <span class="keyword">if</span> (x != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (x != <a href="../ListOfTypes.html#int">kNPOS</a>) {
             foundPos-&gt;fX = x;
             foundPos-&gt;fY = <a href="../TGText.html#TGText:fCurrentRow" title="Long_t TGText::fCurrentRow">fCurrentRow</a>;
             <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kTRUE</a>;
@@ -1188,14 +1188,14 @@ next:
             x = s.Index(searchString, (<a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a>)i,
                         caseSensitive ? <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kExact" title="const TString::ECaseCompare TString::kExact">kExact</a> : <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
             <span class="keyword">if</span> (x &gt;= start.fX) {
-               x = <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>;
+               x = <a href="../ListOfTypes.html#int">kNPOS</a>;
                <span class="keyword">continue</span>;
             }
-            <span class="keyword">if</span> (x != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+            <span class="keyword">if</span> (x != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                <span class="keyword">break</span>;
             }
          }
-         <span class="keyword">if</span> (x != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (x != <a href="../ListOfTypes.html#int">kNPOS</a>) {
             foundPos-&gt;fX = x;
             foundPos-&gt;fY = <a href="../TGText.html#TGText:fCurrentRow" title="Long_t TGText::fCurrentRow">fCurrentRow</a>;
             <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kTRUE</a>;
@@ -1282,7 +1282,7 @@ next:
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:33 </em><em>&raquo; Last generated: 2015-03-04 20:33</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:05 </em><em>&raquo; Last generated: 2015-05-05 12:05</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

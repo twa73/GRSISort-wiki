@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:33 2015            -->
+<!--   Date: Tue May  5 12:09:22 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TProfile2D.h.html">header file</a>
 <a class="descrheadentry" href="src/TProfile2D.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TProfile2D_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -369,9 +369,9 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TH1.html#TH1:ResetStats"><span class="baseclass">TH1::</span>ResetStats</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttMarker.html#TAttMarker:SaveMarkerAttributes"><span class="baseclass">TAttMarker::</span>SaveMarkerAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttMarker.html#TAttMarker:SaveMarkerAttributes"><span class="baseclass">TAttMarker::</span>SaveMarkerAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TProfile2D:SavePrimitive">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TProfile2D:Scale">Scale</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> c1 = 1, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TArrayD.html#TArrayD:Set"><span class="baseclass">TArrayD::</span>Set</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> n)</td></tr>
@@ -480,6 +480,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./TH1.html#TH1:CheckConsistentSubAxes"><span class="baseclass">TH1::</span>CheckConsistentSubAxes</a>(<span class="keyword">const</span> <a href="./TAxis.html">TAxis</a>* a1, <a href="./ListOfTypes.html#Int_t">Int_t</a> firstBin1, <a href="./ListOfTypes.html#Int_t">Int_t</a> lastBin1, <span class="keyword">const</span> <a href="./TAxis.html">TAxis</a>* a2, <a href="./ListOfTypes.html#Int_t">Int_t</a> firstBin2 = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> lastBin2 = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./TH1.html#TH1:CheckEqualAxes"><span class="baseclass">TH1::</span>CheckEqualAxes</a>(<span class="keyword">const</span> <a href="./TAxis.html">TAxis</a>* a1, <span class="keyword">const</span> <a href="./TAxis.html">TAxis</a>* a2)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TH1.html#TH1:DoFillN"><span class="baseclass">TH1::</span>DoFillN</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> ntimes, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* x, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* w, <a href="./ListOfTypes.html#Int_t">Int_t</a> stride = 1)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TH2.html#TH2:DoFitSlices"><span class="baseclass">TH2::</span>DoFitSlices</a>(<span class="keyword">bool</span> onX, <a href="./TF1.html">TF1</a>* f1, <a href="./ListOfTypes.html#Int_t">Int_t</a> firstbin, <a href="./ListOfTypes.html#Int_t">Int_t</a> lastbin, <a href="./ListOfTypes.html#Int_t">Int_t</a> cut, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option, <a href="./TObjArray.html">TObjArray</a>* arr)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TH1.html#TH1:DoIntegral"><span class="baseclass">TH1::</span>DoIntegral</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> ix1, <a href="./ListOfTypes.html#Int_t">Int_t</a> ix2, <a href="./ListOfTypes.html#Int_t">Int_t</a> iy1, <a href="./ListOfTypes.html#Int_t">Int_t</a> iy2, <a href="./ListOfTypes.html#Int_t">Int_t</a> iz1, <a href="./ListOfTypes.html#Int_t">Int_t</a> iz2, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; err, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> doerr = <a href="./ListOfTypes.html#Bool_t">kFALSE</a>) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TProfile.html">TProfile</a>*</td><td class="funcname"><a class="funcname" href="#TProfile2D:DoProfile">DoProfile</a>(<span class="keyword">bool</span> onX, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> firstbin, <a href="./ListOfTypes.html#Int_t">Int_t</a> lastbin, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option) <span class="keyword">const</span></td></tr>
@@ -609,93 +610,93 @@ return false;}
 </table></div>
 </div>
 <h2><a id="TProfile2D:Class_Charts"></a>Class Charts</h2>
-<map name="MapTProfile2D_Inh" id="MapTProfile2D_Inh">
-<area shape="rect" id="node3" href="./TH2D.html" title="TH2D" alt="" coords="542,37,632,55"/>
-<area shape="rect" id="node4" href="./TH2.html" title="TH2" alt="" coords="407,28,497,46"/>
-<area shape="rect" id="node5" href="./TArrayD.html" title="TArrayD" alt="" coords="407,46,497,64"/>
-<area shape="rect" id="node6" href="./TH1.html" title="TH1" alt="" coords="271,28,361,46"/>
-<area shape="rect" id="node7" href="./TArray.html" title="TArray" alt="" coords="271,46,361,64"/>
-<area shape="rect" id="node8" href="./TNamed.html" title="TNamed" alt="" coords="136,1,226,19"/>
-<area shape="rect" id="node9" href="./TAttLine.html" title="TAttLine" alt="" coords="136,19,226,37"/>
-<area shape="rect" id="node10" href="./TAttFill.html" title="TAttFill" alt="" coords="136,37,226,55"/>
-<area shape="rect" id="node11" href="./TAttMarker.html" title="TAttMarker" alt="" coords="136,55,226,72"/>
-<area shape="rect" id="node12" href="./TObject.html" title="TObject" alt="" coords="1,1,91,19"/>
-</map>
-<map name="MapTProfile2D_InhMem" id="MapTProfile2D_InhMem">
-<area shape="rect" id="graph12" href="./TH2D.html" alt="" coords="1328,63,1581,99"/>
-<area shape="rect" id="graph13" href="./TH2D.html" alt="" coords="1493,109,1581,217"/>
-<area shape="rect" id="graph14" href="./TH2D.html" alt="" coords="1395,109,1483,247"/>
-<area shape="rect" id="graph15" href="./TH2D.html" alt="" coords="1296,109,1384,247"/>
-<area shape="rect" id="graph11" href="./TH2D.html" title="TH2D" alt="" coords="1285,16,1592,257"/>
-<area shape="rect" id="graph18" href="./TH2.html" alt="" coords="1176,63,1264,99"/>
-<area shape="rect" id="graph19" href="./TH2.html" alt="" coords="1077,63,1165,113"/>
-<area shape="rect" id="graph20" href="./TH2.html" alt="" coords="979,63,1067,113"/>
-<area shape="rect" id="graph21" href="./TH2.html" alt="" coords="1208,109,1232,131"/>
-<area shape="rect" id="graph22" href="./TH2.html" alt="" coords="1176,141,1264,411"/>
-<area shape="rect" id="graph23" href="./TH2.html" alt="" coords="1077,127,1165,411"/>
-<area shape="rect" id="graph24" href="./TH2.html" alt="" coords="979,127,1067,411"/>
-<area shape="rect" id="graph17" href="./TH2.html" title="TH2" alt="" coords="968,16,1275,421"/>
-<area shape="rect" id="graph27" href="./TArrayD.html" alt="" coords="1011,1417,1264,1453"/>
-<area shape="rect" id="graph28" href="./TArrayD.html" alt="" coords="1176,1464,1264,1601"/>
-<area shape="rect" id="graph29" href="./TArrayD.html" alt="" coords="1077,1464,1165,1616"/>
-<area shape="rect" id="graph30" href="./TArrayD.html" alt="" coords="979,1464,1067,1616"/>
-<area shape="rect" id="graph26" href="./TArrayD.html" title="TArrayD" alt="" coords="968,1371,1275,1627"/>
-<area shape="rect" id="graph33" href="./TH1.html" alt="" coords="859,63,947,275"/>
-<area shape="rect" id="graph34" href="./TH1.html" alt="" coords="760,63,848,289"/>
-<area shape="rect" id="graph35" href="./TH1.html" alt="" coords="661,63,749,289"/>
-<area shape="rect" id="graph36" href="./TH1.html" alt="" coords="891,285,915,307"/>
-<area shape="rect" id="graph37" href="./TH1.html" alt="" coords="859,317,947,1349"/>
-<area shape="rect" id="graph38" href="./TH1.html" alt="" coords="760,317,848,1349"/>
-<area shape="rect" id="graph39" href="./TH1.html" alt="" coords="661,317,749,1349"/>
-<area shape="rect" id="graph32" href="./TH1.html" title="TH1" alt="" coords="651,16,957,1360"/>
-<area shape="rect" id="graph42" href="./TArray.html" alt="" coords="693,1417,947,1453"/>
-<area shape="rect" id="graph43" href="./TArray.html" alt="" coords="859,1464,947,1572"/>
-<area shape="rect" id="graph44" href="./TArray.html" alt="" coords="760,1464,848,1601"/>
-<area shape="rect" id="graph45" href="./TArray.html" alt="" coords="661,1464,749,1601"/>
-<area shape="rect" id="graph41" href="./TArray.html" title="TArray" alt="" coords="651,1371,957,1612"/>
-<area shape="rect" id="graph48" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph49" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph50" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph51" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph47" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph54" href="./TAttLine.html" alt="" coords="541,405,629,456"/>
-<area shape="rect" id="graph55" href="./TAttLine.html" alt="" coords="443,405,531,456"/>
-<area shape="rect" id="graph56" href="./TAttLine.html" alt="" coords="376,405,400,427"/>
-<area shape="rect" id="graph57" href="./TAttLine.html" alt="" coords="541,467,629,604"/>
-<area shape="rect" id="graph58" href="./TAttLine.html" alt="" coords="443,467,531,633"/>
-<area shape="rect" id="graph59" href="./TAttLine.html" alt="" coords="344,467,432,633"/>
-<area shape="rect" id="graph53" href="./TAttLine.html" title="TAttLine" alt="" coords="333,359,640,644"/>
-<area shape="rect" id="graph62" href="./TAttFill.html" alt="" coords="344,825,629,861"/>
-<area shape="rect" id="graph63" href="./TAttFill.html" alt="" coords="541,872,629,1009"/>
-<area shape="rect" id="graph64" href="./TAttFill.html" alt="" coords="443,872,531,1024"/>
-<area shape="rect" id="graph65" href="./TAttFill.html" alt="" coords="344,872,432,1024"/>
-<area shape="rect" id="graph61" href="./TAttFill.html" title="TAttFill" alt="" coords="333,779,640,1035"/>
-<area shape="rect" id="graph68" href="./TAttMarker.html" alt="" coords="541,1340,629,1391"/>
-<area shape="rect" id="graph69" href="./TAttMarker.html" alt="" coords="443,1340,531,1391"/>
-<area shape="rect" id="graph70" href="./TAttMarker.html" alt="" coords="376,1340,400,1361"/>
-<area shape="rect" id="graph71" href="./TAttMarker.html" alt="" coords="541,1401,629,1553"/>
-<area shape="rect" id="graph72" href="./TAttMarker.html" alt="" coords="443,1401,531,1553"/>
-<area shape="rect" id="graph73" href="./TAttMarker.html" alt="" coords="344,1401,432,1553"/>
-<area shape="rect" id="graph67" href="./TAttMarker.html" title="TAttMarker" alt="" coords="333,1293,640,1564"/>
-<area shape="rect" id="graph76" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph77" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph78" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph79" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph80" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph81" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph82" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph75" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTProfile2D_Lib" id="MapTProfile2D_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="403,127,517,175"/>
-</map>
-<div class="tabs">
-<a id="imgTProfile2D_Inh" class="tabsel" href="inh/TProfile2D_Inh.png" onclick="javascript:return SetImg('Charts','inh/TProfile2D_Inh.png');">Inheritance</a>
-<a id="imgTProfile2D_InhMem" class="tab" href="inhmem/TProfile2D_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TProfile2D_InhMem.png');">Inherited Members</a>
-<a id="imgTProfile2D_Incl" class="tab" href="incl/TProfile2D_Incl.png" onclick="javascript:return SetImg('Charts','incl/TProfile2D_Incl.png');">Includes</a>
-<a id="imgTProfile2D_Lib" class="tab" href="lib/TProfile2D_Lib.png" onclick="javascript:return SetImg('Charts','lib/TProfile2D_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTProfile2D_Inh" src="inh/TProfile2D_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#dfdfdf" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#d7d7d7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#dfdfdf" align="right">
+<table><tr><td>
+<center><tt><a name="TAttLine" href="./TAttLine.html">TAttLine</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#dfdfdf" align="right">
+<table><tr><td>
+<center><tt><a name="TAttFill" href="./TAttFill.html">TAttFill</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#dfdfdf" align="right">
+<table><tr><td>
+<center><tt><a name="TAttMarker" href="./TAttMarker.html">TAttMarker</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TH1" href="./TH1.html">TH1</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TH2" href="./TH2.html">TH2</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td>
+<center><tt><a name="TArray" href="./TArray.html">TArray</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TArrayD" href="./TArrayD.html">TArrayD</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TH2D" href="./TH2D.html">TH2D</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TProfile2D" href="./TProfile2D.html">TProfile2D</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TProfile2D:TProfile2D" href="src/TProfile2D.cxx.html#S.ECTB">TProfile2D</a>()</span><br />
 <div class="funccomm"><pre>Default constructor for Profile2D histograms*-*-*-
@@ -1302,7 +1303,7 @@ be a multiple of the bin width.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   16/04/2000</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/hist:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: root/hist:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

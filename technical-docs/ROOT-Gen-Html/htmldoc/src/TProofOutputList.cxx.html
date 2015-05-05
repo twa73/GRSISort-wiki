@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:44 2015            -->
+<!--   Date: Tue May  5 12:09:24 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -113,7 +113,7 @@ ClassImp(<a href="../TProofOutputList.html">TProofOutputList</a>)
             <a href="../ListOfTypes.html#Bool_t">Bool_t</a> doadd = <a href="../ListOfTypes.html#Bool_t">kTRUE</a>;
             <span class="keyword">while</span> ((os = (<a href="../TObjString.html">TObjString</a> *) nxos())) {
                <a href="../TRegexp.html">TRegexp</a> rg(os-&gt;<a href="../TCollection.html#TCollection:GetName" title="const char* TCollection::GetName()">GetName</a>(), <a href="../ListOfTypes.html#Bool_t">kTRUE</a>);
-               <span class="keyword">if</span> (s.Index(rg) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+               <span class="keyword">if</span> (s.Index(rg) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                   doadd = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
                   <span class="keyword">break</span>;
                }
@@ -160,7 +160,7 @@ ClassImp(<a href="../TProofOutputList.html">TProofOutputList</a>)
             <a href="../ListOfTypes.html#Bool_t">Bool_t</a> doadd = <a href="../ListOfTypes.html#Bool_t">kTRUE</a>;
             <span class="keyword">while</span> ((os = (<a href="../TObjString.html">TObjString</a> *) nxos())) {
                <a href="../TRegexp.html">TRegexp</a> rg(os-&gt;<a href="../TCollection.html#TCollection:GetName" title="const char* TCollection::GetName()">GetName</a>());
-               <span class="keyword">if</span> (s.Index(rg) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {;
+               <span class="keyword">if</span> (s.Index(rg) != <a href="../ListOfTypes.html#int">kNPOS</a>) {;
                   doadd = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
                   <span class="keyword">break</span>;
                }
@@ -184,7 +184,7 @@ ClassImp(<a href="../TProofOutputList.html">TProofOutputList</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

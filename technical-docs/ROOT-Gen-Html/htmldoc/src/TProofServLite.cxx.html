@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:47 2015            -->
+<!--   Date: Tue May  5 12:09:26 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -399,7 +399,7 @@ ClassImp(<a href="../TProofServLite.html">TProofServLite</a>)
    <span class="keyword">if</span> (<a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:Getenv" title="const char* TSystem::Getenv(const char* env)">Getenv</a>(<span class="string">"ROOTPROOFLOGFILE"</span>)) {
       <a href="../TString.html">TString</a> logfile = <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:Getenv" title="const char* TSystem::Getenv(const char* env)">Getenv</a>(<span class="string">"ROOTPROOFLOGFILE"</span>);
       <a href="../ListOfTypes.html#Int_t">Int_t</a> iord = logfile.Index(<a href="../TString.html">TString</a>::<a href="../TString.html#TString:Format" title="TString TString::Format(const char* fmt)">Format</a>(<span class="string">"-%s"</span>, fOrdinal.Data()));
-      <span class="keyword">if</span> (iord != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) logfile.Remove(iord);
+      <span class="keyword">if</span> (iord != <a href="../ListOfTypes.html#int">kNPOS</a>) logfile.Remove(iord);
       logfile += <a href="../TString.html">TString</a>::<a href="../TString.html#TString:Format" title="TString TString::Format(const char* fmt)">Format</a>(<span class="string">"-%s.log"</span>, fSessionTag.Data());
       <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:Symlink" title="int TSystem::Symlink(const char* from,const char* to)">Symlink</a>(<a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:Getenv" title="const char* TSystem::Getenv(const char* env)">Getenv</a>(<span class="string">"ROOTPROOFLOGFILE"</span>), logfile);
    }
@@ -566,7 +566,7 @@ ClassImp(<a href="../TProofServLite.html">TProofServLite</a>)
    logfile.ReplaceAll(<span class="string">"-0.0"</span>, sord.Data());
    <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:Setenv" title="void TSystem::Setenv(const char* name,const char* value)">Setenv</a>(<span class="string">"ROOTPROOFLOGFILE"</span>, logfile);
    <a href="../ListOfTypes.html#Int_t">Int_t</a> iord = logfile.Index(sord.Data());
-   <span class="keyword">if</span> (iord != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) logfile.Remove(iord + sord.Length());
+   <span class="keyword">if</span> (iord != <a href="../ListOfTypes.html#int">kNPOS</a>) logfile.Remove(iord + sord.Length());
    logfile += <a href="../TString.html">TString</a>::<a href="../TString.html#TString:Format" title="TString TString::Format(const char* fmt)">Format</a>(<span class="string">"-%s.log"</span>, fSessionTag.Data());
    <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:Symlink" title="int TSystem::Symlink(const char* from,const char* to)">Symlink</a>(<a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:Getenv" title="const char* TSystem::Getenv(const char* env)">Getenv</a>(<span class="string">"ROOTPROOFLOGFILE"</span>), logfile);
 
@@ -637,7 +637,7 @@ ClassImp(<a href="../TProofServLite.html">TProofServLite</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

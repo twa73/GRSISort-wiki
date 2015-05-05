@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:39 2015            -->
+<!--   Date: Tue May  5 12:09:24 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -909,14 +909,14 @@ ClassImp(<a href="../TProofMgr.html">TProofMgr</a>)
 	   <span class="comment">// Basename sans 'extension' </span>
 	   <a href="../TString.html">TString</a> bs(<a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:BaseName" title="const char* TSystem::BaseName(const char* pathname)">BaseName</a>(furl-&gt;GetFile()));
 	   <a href="../ListOfTypes.html#Int_t">Int_t</a> idx = bs.Last(<span class="string">'.'</span>);
-	   <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) bs.Remove(idx);
+	   <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#int">kNPOS</a>) bs.Remove(idx);
 	   fdst.ReplaceAll(<span class="string">"&lt;bs&gt;"</span>, bs.Data());
 	 }
 	 <span class="keyword">if</span> (fdst.Contains(<span class="string">"&lt;ex&gt;"</span>)) { 
 	   <span class="comment">// 'Extension' - that is the last part after the last <span class="string">'.'</span></span>
 	   <a href="../TString.html">TString</a> ex(furl-&gt;GetFile());
 	   <a href="../ListOfTypes.html#Int_t">Int_t</a> idx = ex.Last(<span class="string">'.'</span>);
-	   <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) ex.Remove(0, idx+1);
+	   <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#int">kNPOS</a>) ex.Remove(0, idx+1);
 	   <span class="keyword">else</span>                       ex = <span class="string">""</span>;
 	   fdst.ReplaceAll(<span class="string">"&lt;ex&gt;"</span>, ex);
 	 }
@@ -1132,7 +1132,7 @@ ClassImp(<a href="../TProofDesc.html">TProofDesc</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

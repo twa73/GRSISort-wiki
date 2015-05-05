@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Thu Mar 12 13:29:55 2015            -->
+<!--   Date: Tue May  5 12:01:42 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TGRSIDetector.h.html">header file</a>
 <a class="descrheadentry" href="src/TGRSIDetector.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TGRSIDetector_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -138,12 +138,12 @@ This is an abstract class that contains the basic info
 <tr class="func"><td class="funcret"><a href="./TGRSIDetector.html">TGRSIDetector</a>&amp;</td><td class="funcname"><a class="funcname" href="#TGRSIDetector:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TGRSIDetector.html">TGRSIDetector</a>&amp;)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -195,43 +195,76 @@ This is an abstract class that contains the basic info
 </table></div>
 </div>
 <h2><a id="TGRSIDetector:Class_Charts"></a>Class Charts</h2>
-<map name="MapTGRSIDetector_Inh" id="MapTGRSIDetector_Inh">
-<area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="2,124,178,159"/>
-<area shape="rect" id="node5" href="./TCSM.html" title="TCSM" alt="" coords="590,2,766,37"/>
-<area shape="rect" id="node6" href="./TDescant.html" title="TDescant" alt="" coords="590,37,766,72"/>
-<area shape="rect" id="node7" href="./TGriffin.html" title="TGriffin" alt="" coords="590,72,766,107"/>
-<area shape="rect" id="node8" href="./TPaces.html" title="TPaces" alt="" coords="590,107,766,141"/>
-<area shape="rect" id="node9" href="./TSceptar.html" title="TSceptar" alt="" coords="590,141,766,176"/>
-<area shape="rect" id="node10" href="./TSharc.html" title="TSharc" alt="" coords="590,176,766,211"/>
-<area shape="rect" id="node11" href="./TTigress.html" title="TTigress" alt="" coords="590,211,766,246"/>
-<area shape="rect" id="node12" href="./TTriFoil.html" title="TTriFoil" alt="" coords="590,246,766,281"/>
-</map>
-<map name="MapTGRSIDetector_InhMem" id="MapTGRSIDetector_InhMem">
-<area shape="rect" id="graph9" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph10" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph11" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph12" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph13" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph14" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph15" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph8" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTGRSIDetector_Lib" id="MapTGRSIDetector_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
-</map>
-<div class="tabs">
-<a id="imgTGRSIDetector_Inh" class="tabsel" href="inh/TGRSIDetector_Inh.png" onclick="javascript:return SetImg('Charts','inh/TGRSIDetector_Inh.png');">Inheritance</a>
-<a id="imgTGRSIDetector_InhMem" class="tab" href="inhmem/TGRSIDetector_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TGRSIDetector_InhMem.png');">Inherited Members</a>
-<a id="imgTGRSIDetector_Incl" class="tab" href="incl/TGRSIDetector_Incl.png" onclick="javascript:return SetImg('Charts','incl/TGRSIDetector_Incl.png');">Includes</a>
-<a id="imgTGRSIDetector_Lib" class="tab" href="lib/TGRSIDetector_Lib.png" onclick="javascript:return SetImg('Charts','lib/TGRSIDetector_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTGRSIDetector_Inh" src="inh/TGRSIDetector_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TGRSIDetector" href="./TGRSIDetector.html">TGRSIDetector</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TCSM" href="./TCSM.html">TCSM</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TDescant" href="./TDescant.html">TDescant</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TGriffin" href="./TGriffin.html">TGriffin</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TPaces" href="./TPaces.html">TPaces</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TSceptar" href="./TSceptar.html">TSceptar</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TSharc" href="./TSharc.html">TSharc</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TTigress" href="./TTigress.html">TTigress</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TTip" href="./TTip.html">TTip</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TTriFoil" href="./TTriFoil.html">TTriFoil</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIDetector:_TGRSIDetector" href="src/TGRSIDetector.cxx.html#kAmxGC">~TGRSIDetector</a>()</span><br />
 <div class="funccomm"><pre>Default Destructor.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetector:Print" href="src/TGRSIDetector.cxx.html#jloTsB">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetector:Print" href="src/TGRSIDetector.cxx.html#x1lAfE">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
 <div class="funccomm"><pre> Default print statement for <a href="./TGRSIDetector.html">TGRSIDetector</a>. Currently does
  nothing
 </pre></div>
@@ -250,7 +283,7 @@ This is an abstract class that contains the basic info
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Thu Mar 12 13:29:55 2015 </em><em>&raquo; Last generated: 2015-03-12 13:29</em><br />
+<em>&raquo; Last changed: Tue May  5 12:01:42 2015 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

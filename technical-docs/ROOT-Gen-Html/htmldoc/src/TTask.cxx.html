@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:40:14 2015            -->
+<!--   Date: Tue May  5 13:06:31 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -362,7 +362,7 @@ ClassImp(<a href="../TTask.html">TTask</a>)
    <a href="../TIter.html">TIter</a> nextobj(<a href="../TTask.html#TTask:fTasks" title="TList* TTask::fTasks">fTasks</a>);
    <span class="keyword">while</span> ((obj = (<a href="../TObject.html">TObject</a> *) nextobj())) {
       <a href="../TString.html">TString</a> s = obj-&gt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>();
-      <span class="keyword">if</span> (s.Index(re) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">continue</span>;
+      <span class="keyword">if</span> (s.Index(re) == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">continue</span>;
       obj-&gt;<a href="../TTask.html#TTask:ls" title="void TTask::ls(Option_t* option=&quot;*&quot;)">ls</a>(option);
    }
    <a href="../TROOT.html">TROOT</a>::<a href="../TROOT.html#TROOT:DecreaseDirLevel" title="Int_t TROOT::DecreaseDirLevel()">DecreaseDirLevel</a>();
@@ -375,7 +375,7 @@ ClassImp(<a href="../TTask.html">TTask</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
+<em>&raquo; Last changed: 2015-05-05 13:06 </em><em>&raquo; Last generated: 2015-05-05 13:06</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:40:22 2015            -->
+<!--   Date: Tue May  5 13:06:59 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -130,8 +130,8 @@
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a>       fMaxEntries;        <span class="comment">//  Maximum number of entries in case of circular buffers</span>
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a>       fMaxEntryLoop;      <span class="comment">//  Maximum number of entries to process</span>
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a>       fMaxVirtualSize;    <span class="comment">//  Maximum total size of buffers kept in memory</span>
-   <a href="../ListOfTypes.html#Long64_t">Long64_t</a>       fAutoSave;          <span class="comment">//  Autosave tree when fAutoSave bytes produced</span>
-   <a href="../ListOfTypes.html#Long64_t">Long64_t</a>       fAutoFlush;         <span class="comment">//  Autoflush tree when fAutoFlush entries written</span>
+   <a href="../ListOfTypes.html#Long64_t">Long64_t</a>       fAutoSave;          <span class="comment">//  Autosave tree when fAutoSave entries written or -fAutoSave (compressed) bytes produced</span>
+   <a href="../ListOfTypes.html#Long64_t">Long64_t</a>       fAutoFlush;         <span class="comment">//  Autoflush tree when fAutoFlush entries written or -fAutoFlush (compressed) bytes produced</span>
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a>       fEstimate;          <span class="comment">//  Number of entries to estimate histogram limits</span>
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a>      *fClusterRangeEnd;   <span class="comment">//[fNClusterRange] Last entry of a cluster range.</span>
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a>      *fClusterSize;       <span class="comment">//[fNClusterRange] Number of entries in each cluster for a given range.</span>
@@ -514,7 +514,7 @@
    <span class="keyword">virtual</span> <span class="keyword">void</span>            ResetBranchAddresses();
    <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Long64_t">Long64_t</a>        Scan(<span class="keyword">const</span> <span class="keyword">char</span>* varexp = <span class="string">""</span>, <span class="keyword">const</span> <span class="keyword">char</span>* selection = <span class="string">""</span>, <a href="../ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>, <a href="../ListOfTypes.html#Long64_t">Long64_t</a> nentries = 1000000000, <a href="../ListOfTypes.html#Long64_t">Long64_t</a> firstentry = 0); <span class="comment">// *MENU*</span>
    <span class="keyword">virtual</span> <a href="../ListOfTypes.html#Bool_t">Bool_t</a>          SetAlias(<span class="keyword">const</span> <span class="keyword">char</span>* aliasName, <span class="keyword">const</span> <span class="keyword">char</span>* aliasFormula);
-   <span class="keyword">virtual</span> <span class="keyword">void</span>            SetAutoSave(<a href="../ListOfTypes.html#Long64_t">Long64_t</a> autos = 300000000);
+   <span class="keyword">virtual</span> <span class="keyword">void</span>            SetAutoSave(<a href="../ListOfTypes.html#Long64_t">Long64_t</a> autos = -300000000);
    <span class="keyword">virtual</span> <span class="keyword">void</span>            SetAutoFlush(<a href="../ListOfTypes.html#Long64_t">Long64_t</a> autof = -30000000);
    <span class="keyword">virtual</span> <span class="keyword">void</span>            SetBasketSize(<span class="keyword">const</span> <span class="keyword">char</span>* bname, <a href="../ListOfTypes.html#Int_t">Int_t</a> buffsize = 16000);
 <span class="cpp">#if !defined(__CINT__)</span>
@@ -634,7 +634,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
+<em>&raquo; Last changed: 2015-05-05 13:06 </em><em>&raquo; Last generated: 2015-05-05 13:06</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

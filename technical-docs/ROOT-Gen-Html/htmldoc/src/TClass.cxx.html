@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:34 2015            -->
+<!--   Date: Tue May  5 12:01:18 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -384,7 +384,7 @@ std::atomic&lt;<a href="../ListOfTypes.html#Int_t">Int_t</a>&gt; <a href="../TCl
       <span class="keyword">while</span> ( (*cursor)==<span class="string">'*'</span> ) ++cursor;
       <a href="../TString.html">TString</a> elname( cursor );
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> pos = elname.Index(<span class="string">"["</span>);
-      <span class="keyword">if</span> ( pos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> ) {
+      <span class="keyword">if</span> ( pos != <a href="../ListOfTypes.html#int">kNPOS</a> ) {
          elname.Remove( pos );
       }
       <a href="../TStreamerElement.html">TStreamerElement</a> *element = (<a href="../TStreamerElement.html">TStreamerElement</a>*)info-&gt;GetElements()-&gt;<a href="../TObject.html#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(elname.Data());
@@ -569,7 +569,7 @@ std::atomic&lt;<a href="../ListOfTypes.html#Int_t">Int_t</a>&gt; <a href="../TCl
    <span class="keyword">if</span> (cl != fRealDataClass) {
       <span class="keyword">if</span> (!fRealDataClass-&gt;<a href="../TClass.html#TClass:InheritsFrom" title="Bool_t TClass::InheritsFrom(const char* cl) or overloads">InheritsFrom</a>(cl)) {
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> dot = rname.Index(<span class="string">'.'</span>);
-         <span class="keyword">if</span> (dot == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (dot == <a href="../ListOfTypes.html#int">kNPOS</a>) {
             <span class="keyword">return</span>;
          }
          rname[dot] = '\0';
@@ -876,7 +876,7 @@ ClassImp(<a href="../TClass.html">TClass</a>)
       gInterpreter-&gt;InitializeDictionaries();
       gInterpreter-&gt;SetClassInfo(<span class="keyword">this</span>);
    }
-   <span class="keyword">if</span> (!silent &amp;&amp; !<a href="../TClass.html#TClass:fClassInfo" title="ClassInfo_t* TClass::fClassInfo">fClassInfo</a> &amp;&amp; fName.First(<span class="string">'@'</span>)==<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) 
+   <span class="keyword">if</span> (!silent &amp;&amp; !<a href="../TClass.html#TClass:fClassInfo" title="ClassInfo_t* TClass::fClassInfo">fClassInfo</a> &amp;&amp; fName.First(<span class="string">'@'</span>)==<a href="../ListOfTypes.html#int">kNPOS</a>) 
       ::<a href="../TObject.html#TObject:Warning" title="void TObject::Warning(const char* method,const char* msgfmt)">Warning</a>(<span class="string">"TClass::TClass"</span>, <span class="string">"no dictionary for class %s is available"</span>, name);
    <a href="../TObject.html#TObject:ResetBit" title="void TObject::ResetBit(UInt_t f)">ResetBit</a>(<a href="../TClass.html#TClass:kLoading" title="const enum TClass:: TClass::kLoading">kLoading</a>);
 
@@ -1078,7 +1078,7 @@ ClassImp(<a href="../TClass.html">TClass</a>)
          }
       }
    }
-   <span class="keyword">if</span> (!silent &amp;&amp; !<a href="../TClass.html#TClass:fClassInfo" title="ClassInfo_t* TClass::fClassInfo">fClassInfo</a> &amp;&amp; !isStl &amp;&amp; fName.First(<span class="string">'@'</span>)==<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+   <span class="keyword">if</span> (!silent &amp;&amp; !<a href="../TClass.html#TClass:fClassInfo" title="ClassInfo_t* TClass::fClassInfo">fClassInfo</a> &amp;&amp; !isStl &amp;&amp; fName.First(<span class="string">'@'</span>)==<a href="../ListOfTypes.html#int">kNPOS</a>)
       ::<a href="../TObject.html#TObject:Warning" title="void TObject::Warning(const char* method,const char* msgfmt)">Warning</a>(<span class="string">"TClass::TClass"</span>, <span class="string">"no dictionary for class %s is available"</span>, fName.Data());
 
    <a href="../TClass.html#TClass:fgClassCount" title="Int_t TClass::fgClassCount">fgClassCount</a>++;
@@ -5943,7 +5943,7 @@ ClassImp(<a href="../TClass.html">TClass</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:28 </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

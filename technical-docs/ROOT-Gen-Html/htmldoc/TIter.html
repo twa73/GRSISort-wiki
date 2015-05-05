@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:35:14 2015            -->
+<!--   Date: Tue May  5 12:08:33 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -109,6 +109,7 @@ In a later release the collections may become templatized.
 <tr class="func"><td class="funcret"><a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TIter:operator*">operator*</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TIter.html">TIter</a>&amp;</td><td class="funcname"><a class="funcname" href="#TIter:operator++">operator++</a>()</td></tr>
 <tr class="func"><td class="funcret"><a href="./TIter.html">TIter</a>&amp;</td><td class="funcname"><a class="funcname" href="#TIter:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TIter.html">TIter</a>&amp; rhs)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TIter:operator__">operator==</a>(<span class="keyword">const</span> <a href="./TIter.html">TIter</a>&amp; aIter) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TIter:Reset">Reset</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TIter:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TIter:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
@@ -132,7 +133,7 @@ In a later release the collections may become templatized.
 </div>
 <h2><a id="TIter:Class_Charts"></a>Class Charts</h2>
 <map name="MapTIter_Lib" id="MapTIter_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="335,5,452,53"/>
 </map>
 <div class="tabs">
 <a id="imgTIter_Inh" class="tabsel" href="inh/TIter_Inh.png" onclick="javascript:return SetImg('Charts','inh/TIter_Inh.png');">Inheritance</a>
@@ -207,14 +208,13 @@ In a later release the collections may become templatized.
 <div class="code"><code class="inlinecode">{ <a href="./TIter.html#TIter:Next" title="TObject* TIter::Next()">Next</a>(); <span class="keyword">return</span> *<span class="keyword">this</span>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TIter:operator!_" href="src/TIter.h.html#Ql20W">operator!=</a>(<span class="keyword">const</span> <a href="./TIter.html">TIter</a>&amp; aIter) const</span><br />
-
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> ((*<a href="./TIter.html#TIter:fIterator" title="TIterator* TIter::fIterator">fIterator</a>) != *(aIter.<a href="./TIter.html#TIter:fIterator" title="TIterator* TIter::fIterator">fIterator</a>)); }</code></div>
-<div style="clear:both;"></div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TIter:operator__" href="src/TIter.h.html#QVc_0C">operator==</a>(<span class="keyword">const</span> <a href="./TIter.html">TIter</a>&amp; aIter) const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./TObject.html">TObject</a>           * <a class="funcname" name="TIter:operator*" href="src/TIter.h.html#vP7pkC">operator*</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TIter:operator!_" href="src/TIter.h.html#EVc_0C">operator!=</a>(<span class="keyword">const</span> <a href="./TIter.html">TIter</a>&amp; aIter) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TObject.html">TObject</a>           * <a class="funcname" name="TIter:operator*" href="src/TIter.h.html#zGAzvD">operator*</a>() const</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> *(*<a href="./TIter.html#TIter:fIterator" title="TIterator* TIter::fIterator">fIterator</a>); }</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TIter.html#TIter:fIterator" title="TIterator* TIter::fIterator">fIterator</a> ? *(*<a href="./TIter.html#TIter:fIterator" title="TIterator* TIter::fIterator">fIterator</a>): nullptr; }</code></div>
 <div style="clear:both;"></div>
 </div>
 
@@ -222,7 +222,7 @@ In a later release the collections may become templatized.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   13/08/95</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/cont:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:35</em><br />
+<em>&raquo; Last changed: root/cont:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:08</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:40:20 2015            -->
+<!--   Date: Tue May  5 13:06:53 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -66,7 +66,7 @@ return false;}
 A specialized <a href="./TFileCacheRead.html">TFileCacheRead</a> object for a <a href="./TTree.html">TTree</a>
 This class acts as a file cache, registering automatically the
 baskets from the branches being processed (<a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Draw" title="void TTree::Draw(Option_t* opt) or overloads">Draw</a> or
-<a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> and TSelectors) when in the learning phase.
+<a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> and TSelectors) when in the learning phase.
 The learning phase is by default 100 entries.
 It can be changed via <a href="./TTreeCache.html">TTreeCache</a>::<a href="./TTreeCache.html#TTreeCache:SetLearnEntries" title="void TTreeCache::SetLearnEntries(Int_t n=10)">SetLearnEntries</a>.
 
@@ -162,7 +162,7 @@ referenced by the list are put in the cache.
   in the cache. The entry range is also known automatically.
 
 
-  2- with <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> and TSelectors
+  2- with <a href="./TTree.html">TTree</a>::<a href="./TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a> and TSelectors
 
   You must enable the cache and tell the system which branches to cache
   and also specify the entry range. It is important to specify the entry range
@@ -401,7 +401,7 @@ referenced by the list are put in the cache.
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTreeCache:ResetCache">ResetCache</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TFileCacheRead.html#TFileCacheRead:SecondPrefetch"><span class="baseclass">TFileCacheRead::</span>SecondPrefetch</a>(<a href="./ListOfTypes.html#Long64_t">Long64_t</a>, <a href="./ListOfTypes.html#Int_t">Int_t</a>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TFileCacheRead.html#TFileCacheRead:SecondSort"><span class="baseclass">TFileCacheRead::</span>SecondSort</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TTreeCache:SetAutoCreated">SetAutoCreated</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> val)</td></tr>
@@ -548,30 +548,30 @@ referenced by the list are put in the cache.
 </div>
 <h2><a id="TTreeCache:Class_Charts"></a>Class Charts</h2>
 <map name="MapTTreeCache_Inh" id="MapTTreeCache_Inh">
-<area shape="rect" id="node3" href="./TFileCacheRead.html" title="TFileCacheRead" alt="" coords="204,7,339,34"/>
-<area shape="rect" id="node4" href="./TObject.html" title="TObject" alt="" coords="2,7,137,34"/>
-<area shape="rect" id="node6" href="./TTreeCacheUnzip.html" title="TTreeCacheUnzip" alt="" coords="618,7,766,34"/>
+<area shape="rect" id="node2" href="./TFileCacheRead.html" title="TFileCacheRead" alt="" coords="205,6,341,32"/>
+<area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="2,6,138,32"/>
+<area shape="rect" id="node4" href="./TTreeCacheUnzip.html" title="TTreeCacheUnzip" alt="" coords="619,6,766,32"/>
 </map>
 <map name="MapTTreeCache_InhMem" id="MapTTreeCache_InhMem">
-<area shape="rect" id="graph12" href="./TFileCacheRead.html" alt="" coords="541,63,629,275"/>
-<area shape="rect" id="graph13" href="./TFileCacheRead.html" alt="" coords="443,63,531,304"/>
-<area shape="rect" id="graph14" href="./TFileCacheRead.html" alt="" coords="344,63,432,304"/>
-<area shape="rect" id="graph15" href="./TFileCacheRead.html" alt="" coords="573,285,597,307"/>
-<area shape="rect" id="graph16" href="./TFileCacheRead.html" alt="" coords="541,317,629,572"/>
-<area shape="rect" id="graph17" href="./TFileCacheRead.html" alt="" coords="443,317,531,572"/>
-<area shape="rect" id="graph18" href="./TFileCacheRead.html" alt="" coords="344,317,432,572"/>
-<area shape="rect" id="graph11" href="./TFileCacheRead.html" title="TFileCacheRead" alt="" coords="333,16,640,583"/>
-<area shape="rect" id="graph21" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph22" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph23" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph24" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph25" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph26" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph27" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph20" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
+<area shape="rect" id="clust11" href="./TFileCacheRead.html" alt="" coords="403,47,469,257"/>
+<area shape="rect" id="clust12" href="./TFileCacheRead.html" alt="" coords="325,47,392,289"/>
+<area shape="rect" id="clust13" href="./TFileCacheRead.html" alt="" coords="248,47,315,289"/>
+<area shape="rect" id="clust14" href="./TFileCacheRead.html" alt="" coords="435,272,437,275"/>
+<area shape="rect" id="clust15" href="./TFileCacheRead.html" alt="" coords="403,289,469,545"/>
+<area shape="rect" id="clust16" href="./TFileCacheRead.html" alt="" coords="325,289,392,545"/>
+<area shape="rect" id="clust17" href="./TFileCacheRead.html" alt="" coords="248,289,315,545"/>
+<area shape="rect" id="clust10" href="./TFileCacheRead.html" title="TFileCacheRead" alt="" coords="248,16,469,545"/>
+<area shape="rect" id="clust20" href="./TObject.html" alt="" coords="171,47,237,145"/>
+<area shape="rect" id="clust21" href="./TObject.html" alt="" coords="93,47,160,161"/>
+<area shape="rect" id="clust22" href="./TObject.html" alt="" coords="16,47,83,161"/>
+<area shape="rect" id="clust23" href="./TObject.html" alt="" coords="203,152,205,155"/>
+<area shape="rect" id="clust24" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust25" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust26" href="./TObject.html" alt="" coords="16,161,83,609"/>
+<area shape="rect" id="clust19" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
 </map>
 <map name="MapTTreeCache_Lib" id="MapTTreeCache_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="376,167,491,215"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="361,160,478,208"/>
 </map>
 <div class="tabs">
 <a id="imgTTreeCache_Inh" class="tabsel" href="inh/TTreeCache_Inh.png" onclick="javascript:return SetImg('Charts','inh/TTreeCache_Inh.png');">Inheritance</a>
@@ -800,7 +800,7 @@ see <a href="./TTreeCache.html#TTreeCache:SetLearnEntries" title="void TTreeCach
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   04/06/2006</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/tree:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
+<em>&raquo; Last changed: root/tree:$Id$ </em><em>&raquo; Last generated: 2015-05-05 13:06</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

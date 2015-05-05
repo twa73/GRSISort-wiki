@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:34:08 2015            -->
+<!--   Date: Tue May  5 12:06:10 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -165,7 +165,7 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGWindow:Resize">Resize</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> w, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> h)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGObject.html#TGObject:SaveAs"><span class="baseclass">TGObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGWindow:SetBackgroundColor">SetBackgroundColor</a>(<a href="./ListOfTypes.html#Pixel_t">Pixel_t</a> color)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGWindow:SetBackgroundPixmap">SetBackgroundPixmap</a>(<a href="./ListOfTypes.html#Pixmap_t">Pixmap_t</a> pixmap)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
@@ -252,140 +252,141 @@ return false;}
 </div>
 <h2><a id="TGWindow:Class_Charts"></a>Class Charts</h2>
 <map name="MapTGWindow_Inh" id="MapTGWindow_Inh">
-<area shape="rect" id="node3" href="./TGObject.html" title="TGObject" alt="" coords="88,540,146,551"/>
-<area shape="rect" id="node4" href="./TObject.html" title="TObject" alt="" coords="1,540,59,551"/>
-<area shape="rect" id="node6" href="./TGFrame.html" title="TGFrame" alt="" coords="263,540,321,551"/>
-<area shape="rect" id="node7" href="./TGCompositeFrame.html" title="TGCompositeFrame" alt="" coords="352,282,422,293"/>
-<area shape="rect" id="node8" href="./TGButton.html" title="TGButton" alt="" coords="358,419,416,431"/>
-<area shape="rect" id="node9" href="./TGCanvas.html" title="TGCanvas" alt="" coords="358,448,416,459"/>
-<area shape="rect" id="node10" href="./TGColorFrame.html" title="TGColorFrame" alt="" coords="358,459,416,471"/>
-<area shape="rect" id="node11" href="./TGColorPalette.html" title="TGColorPalette" alt="" coords="358,471,416,482"/>
-<area shape="rect" id="node12" href="./TGColorPick.html" title="TGColorPick" alt="" coords="358,482,416,494"/>
-<area shape="rect" id="node13" href="./TGDoubleSlider.html" title="TGDoubleSlider" alt="" coords="358,494,416,505"/>
-<area shape="rect" id="node14" href="./TGDragWindow.html" title="TGDragWindow" alt="" coords="358,505,416,517"/>
-<area shape="rect" id="node15" href="./TGLVEntry.html" title="TGLVEntry" alt="" coords="358,517,416,528"/>
-<area shape="rect" id="node16" href="./TGProgressBar.html" title="TGProgressBar" alt="" coords="358,528,416,540"/>
-<area shape="rect" id="node17" href="./TGScrollBar.html" title="TGScrollBar" alt="" coords="358,540,416,551"/>
-<area shape="rect" id="node18" href="./TGSlider.html" title="TGSlider" alt="" coords="358,551,416,563"/>
-<area shape="rect" id="node19" href="./TGSplitter.html" title="TGSplitter" alt="" coords="358,563,416,574"/>
-<area shape="rect" id="node20" href="./TGHorizontal3DLine.html" title="TGHorizontal3DLine" alt="" coords="350,574,424,585"/>
-<area shape="rect" id="node21" href="./TGIcon.html" title="TGIcon" alt="" coords="358,585,416,597"/>
-<area shape="rect" id="node22" href="./TGLBEntry.html" title="TGLBEntry" alt="" coords="358,597,416,608"/>
-<area shape="rect" id="node23" href="./TGLabel.html" title="TGLabel" alt="" coords="358,608,416,620"/>
-<area shape="rect" id="node24" href="./TGMdiContainer.html" title="TGMdiContainer" alt="" coords="357,620,417,631"/>
-<area shape="rect" id="node25" href="./TGMdiWinResizer.html" title="TGMdiWinResizer" alt="" coords="354,631,420,643"/>
-<area shape="rect" id="node26" href="./TGMenuTitle.html" title="TGMenuTitle" alt="" coords="358,643,416,654"/>
-<area shape="rect" id="node28" href="./TGMainFrame.html" title="TGMainFrame" alt="" coords="475,98,532,110"/>
-<area shape="rect" id="node29" href="./TG16ColorSelector.html" title="TG16ColorSelector" alt="" coords="470,173,537,184"/>
-<area shape="rect" id="node30" href="./TGGroupFrame.html" title="TGGroupFrame" alt="" coords="475,184,532,196"/>
-<area shape="rect" id="node31" href="./TGTextButton.html" title="TGTextButton" alt="" coords="475,402,532,413"/>
-<area shape="rect" id="node32" href="./TGColorPopup.html" title="TGColorPopup" alt="" coords="475,196,532,207"/>
-<area shape="rect" id="node33" href="./TGComboBox.html" title="TGComboBox" alt="" coords="475,207,532,219"/>
-<area shape="rect" id="node34" href="./TGComboBoxPopup.html" title="TGComboBoxPopup" alt="" coords="467,219,540,230"/>
-<area shape="rect" id="node35" href="./TGContainer.html" title="TGContainer" alt="" coords="475,230,532,241"/>
-<area shape="rect" id="node36" href="./TGDockButton.html" title="TGDockButton" alt="" coords="475,413,532,425"/>
-<area shape="rect" id="node37" href="./TGDockableFrame.html" title="TGDockableFrame" alt="" coords="470,241,536,253"/>
-<area shape="rect" id="node38" href="./TGDoubleHSlider.html" title="TGDoubleHSlider" alt="" coords="472,471,535,482"/>
-<area shape="rect" id="node39" href="./TGDoubleVSlider.html" title="TGDoubleVSlider" alt="" coords="472,482,535,494"/>
-<area shape="rect" id="node40" href="./TGFileItem.html" title="TGFileItem" alt="" coords="475,494,532,505"/>
-<area shape="rect" id="node41" href="./TGHProgressBar.html" title="TGHProgressBar" alt="" coords="474,505,533,517"/>
-<area shape="rect" id="node42" href="./TGHScrollBar.html" title="TGHScrollBar" alt="" coords="475,528,532,540"/>
-<area shape="rect" id="node43" href="./TGHSlider.html" title="TGHSlider" alt="" coords="475,551,532,563"/>
-<area shape="rect" id="node44" href="./TGHSplitter.html" title="TGHSplitter" alt="" coords="475,574,532,585"/>
-<area shape="rect" id="node45" href="./TGHorizontalFrame.html" title="TGHorizontalFrame" alt="" coords="469,253,538,264"/>
-<area shape="rect" id="node46" href="./TGView.html" title="TGView" alt="" coords="475,264,532,276"/>
-<area shape="rect" id="node47" href="./TGTextLBEntry.html" title="TGTextLBEntry" alt="" coords="475,608,532,620"/>
-<area shape="rect" id="node48" href="./TGPictureButton.html" title="TGPictureButton" alt="" coords="474,425,533,436"/>
-<area shape="rect" id="node49" href="./TGListBox.html" title="TGListBox" alt="" coords="475,276,532,287"/>
-<area shape="rect" id="node50" href="./TGListView.html" title="TGListView" alt="" coords="475,436,532,448"/>
-<area shape="rect" id="node51" href="./TGMdiButtons.html" title="TGMdiButtons" alt="" coords="475,287,532,299"/>
-<area shape="rect" id="node52" href="./TGMdiCornerWinResizer.html" title="TGMdiCornerWinResizer" alt="" coords="459,631,548,643"/>
-<area shape="rect" id="node53" href="./TGMdiDecorFrame.html" title="TGMdiDecorFrame" alt="" coords="469,299,537,310"/>
-<area shape="rect" id="node54" href="./TGMdiFrame.html" title="TGMdiFrame" alt="" coords="475,310,532,322"/>
-<area shape="rect" id="node55" href="./TGMdiHorizontalWinResizer.html" title="TGMdiHorizontalWinResizer" alt="" coords="453,643,554,654"/>
-<area shape="rect" id="node56" href="./TGMdiMainFrame.html" title="TGMdiMainFrame" alt="" coords="471,448,536,459"/>
-<area shape="rect" id="node57" href="./TGMdiMenuBar.html" title="TGMdiMenuBar" alt="" coords="474,322,533,333"/>
-<area shape="rect" id="node58" href="./TGMdiTitleBar.html" title="TGMdiTitleBar" alt="" coords="475,333,532,345"/>
-<area shape="rect" id="node59" href="./TGMdiTitleIcon.html" title="TGMdiTitleIcon" alt="" coords="475,597,532,608"/>
-<area shape="rect" id="node60" href="./TGMdiVerticalWinResizer.html" title="TGMdiVerticalWinResizer" alt="" coords="457,654,550,666"/>
-<area shape="rect" id="node61" href="./TGNumberEntry.html" title="TGNumberEntry" alt="" coords="474,345,533,356"/>
-<area shape="rect" id="node62" href="./TGPack.html" title="TGPack" alt="" coords="475,356,532,368"/>
-<area shape="rect" id="node63" href="./TGShapedFrame.html" title="TGShapedFrame" alt="" coords="474,368,533,379"/>
-<area shape="rect" id="node64" href="./TGShutter.html" title="TGShutter" alt="" coords="475,379,532,391"/>
-<area shape="rect" id="node66" href="./TGTreeLBEntry.html" title="TGTreeLBEntry" alt="" coords="475,620,532,631"/>
-<area shape="rect" id="node67" href="./TGVSplitter.html" title="TGVSplitter" alt="" coords="475,585,532,597"/>
-<area shape="rect" id="node68" href="./TGVProgressBar.html" title="TGVProgressBar" alt="" coords="474,517,533,528"/>
-<area shape="rect" id="node69" href="./TGVScrollBar.html" title="TGVScrollBar" alt="" coords="475,540,532,551"/>
-<area shape="rect" id="node70" href="./TGVSlider.html" title="TGVSlider" alt="" coords="475,563,532,574"/>
-<area shape="rect" id="node71" href="./TRootEmbeddedCanvas.html" title="TRootEmbeddedCanvas" alt="" coords="462,459,545,471"/>
-<area shape="rect" id="node72" href="./GRootBrowser.html" title="GRootBrowser" alt="" coords="597,35,655,47"/>
-<area shape="rect" id="node73" href="./GRootCanvas.html" title="GRootCanvas" alt="" coords="597,47,655,58"/>
-<area shape="rect" id="node74" href="./TGButtonGroup.html" title="TGButtonGroup" alt="" coords="597,161,655,173"/>
-<area shape="rect" id="node75" href="./TGCheckButton.html" title="TGCheckButton" alt="" coords="597,379,655,391"/>
-<area shape="rect" id="node76" href="./TGTransientFrame.html" title="TGTransientFrame" alt="" coords="594,58,659,69"/>
-<area shape="rect" id="node77" href="./TGCommandPlugin.html" title="TGCommandPlugin" alt="" coords="592,69,661,81"/>
-<area shape="rect" id="node78" href="./TGDockHideButton.html" title="TGDockHideButton" alt="" coords="592,413,661,425"/>
-<area shape="rect" id="node79" href="./TGFSComboBox.html" title="TGFSComboBox" alt="" coords="596,173,657,184"/>
-<area shape="rect" id="node80" href="./TGFileBrowser.html" title="TGFileBrowser" alt="" coords="597,81,655,92"/>
-<area shape="rect" id="node81" href="./TGLVContainer.html" title="TGLVContainer" alt="" coords="597,219,655,230"/>
-<area shape="rect" id="node82" href="./TGFontTypeComboBox.html" title="TGFontTypeComboBox" alt="" coords="585,184,668,196"/>
-<area shape="rect" id="node83" href="./TGHeaderFrame.html" title="TGHeaderFrame" alt="" coords="597,253,656,264"/>
-<area shape="rect" id="node84" href="./TGHtml.html" title="TGHtml" alt="" coords="597,287,655,299"/>
-<area shape="rect" id="node85" href="./TGHtmlBrowser.html" title="TGHtmlBrowser" alt="" coords="597,92,656,104"/>
-<area shape="rect" id="node86" href="./TGIconLBEntry.html" title="TGIconLBEntry" alt="" coords="597,603,655,614"/>
-<area shape="rect" id="node87" href="./TGImageMap.html" title="TGImageMap" alt="" coords="597,425,655,436"/>
-<area shape="rect" id="node88" href="./TGLBContainer.html" title="TGLBContainer" alt="" coords="597,230,655,241"/>
-<area shape="rect" id="node89" href="./TGLineLBEntry.html" title="TGLineLBEntry" alt="" coords="597,614,655,625"/>
-<area shape="rect" id="node90" href="./TGLineStyleComboBox.html" title="TGLineStyleComboBox" alt="" coords="585,196,668,207"/>
-<area shape="rect" id="node91" href="./TGLineWidthComboBox.html" title="TGLineWidthComboBox" alt="" coords="583,207,670,219"/>
-<area shape="rect" id="node92" href="./TGListTree.html" title="TGListTree" alt="" coords="597,241,655,253"/>
-<area shape="rect" id="node93" href="./TGMenuBar.html" title="TGMenuBar" alt="" coords="597,264,655,276"/>
-<area shape="rect" id="node94" href="./TGRadioButton.html" title="TGRadioButton" alt="" coords="597,391,655,402"/>
-<area shape="rect" id="node95" href="./TGSplitButton.html" title="TGSplitButton" alt="" coords="597,402,655,413"/>
-<area shape="rect" id="node96" href="./TGStatusBar.html" title="TGStatusBar" alt="" coords="597,276,655,287"/>
-<area shape="rect" id="node97" href="./TGTextView.html" title="TGTextView" alt="" coords="597,299,655,310"/>
-<area shape="rect" id="node98" href="./TGTextEditor.html" title="TGTextEditor" alt="" coords="597,104,655,115"/>
-<area shape="rect" id="node99" href="./TGTripleHSlider.html" title="TGTripleHSlider" alt="" coords="597,471,656,482"/>
-<area shape="rect" id="node100" href="./TGTripleVSlider.html" title="TGTripleVSlider" alt="" coords="597,482,656,494"/>
-<area shape="rect" id="node101" href="./TGVFileSplitter.html" title="TGVFileSplitter" alt="" coords="597,585,655,597"/>
-<area shape="rect" id="node102" href="./TRootBrowser.html" title="TRootBrowser" alt="" coords="597,115,655,127"/>
-<area shape="rect" id="node103" href="./TRootBrowserLite.html" title="TRootBrowserLite" alt="" coords="594,127,659,138"/>
-<area shape="rect" id="node104" href="./TRootCanvas.html" title="TRootCanvas" alt="" coords="597,138,655,150"/>
-<area shape="rect" id="node105" href="./TRootControlBar.html" title="TRootControlBar" alt="" coords="596,150,657,161"/>
-<area shape="rect" id="node106" href="./TGColorDialog.html" title="TGColorDialog" alt="" coords="704,1,762,12"/>
-<area shape="rect" id="node107" href="./TGColorSelect.html" title="TGColorSelect" alt="" coords="704,379,762,391"/>
-<area shape="rect" id="node108" href="./TGFileContainer.html" title="TGFileContainer" alt="" coords="704,219,762,230"/>
-<area shape="rect" id="node109" href="./TGFileDialog.html" title="TGFileDialog" alt="" coords="704,12,762,24"/>
-<area shape="rect" id="node110" href="./TGFontDialog.html" title="TGFontDialog" alt="" coords="704,24,762,35"/>
-<area shape="rect" id="node111" href="./TGGotoDialog.html" title="TGGotoDialog" alt="" coords="704,35,762,47"/>
-<area shape="rect" id="node112" href="./TGHButtonGroup.html" title="TGHButtonGroup" alt="" coords="701,156,765,167"/>
-<area shape="rect" id="node113" href="./TGInputDialog.html" title="TGInputDialog" alt="" coords="704,47,762,58"/>
-<area shape="rect" id="node114" href="./TGMsgBox.html" title="TGMsgBox" alt="" coords="704,58,762,69"/>
-<area shape="rect" id="node115" href="./TGPrintDialog.html" title="TGPrintDialog" alt="" coords="704,69,762,81"/>
-<area shape="rect" id="node116" href="./TGSearchDialog.html" title="TGSearchDialog" alt="" coords="704,81,762,92"/>
-<area shape="rect" id="node117" href="./TGTextEdit.html" title="TGTextEdit" alt="" coords="704,299,762,310"/>
-<area shape="rect" id="node118" href="./TGUndockedFrame.html" title="TGUndockedFrame" alt="" coords="699,92,767,104"/>
-<area shape="rect" id="node119" href="./TGVButtonGroup.html" title="TGVButtonGroup" alt="" coords="701,167,765,179"/>
-<area shape="rect" id="node120" href="./TRootDialog.html" title="TRootDialog" alt="" coords="704,104,762,115"/>
-<area shape="rect" id="node121" href="./TRootHelpDialog.html" title="TRootHelpDialog" alt="" coords="702,115,764,127"/>
+<area shape="rect" id="node2" href="./TGObject.html" title="TGObject" alt="" coords="88,510,146,521"/>
+<area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="1,510,59,521"/>
+<area shape="rect" id="node4" href="./TGFrame.html" title="TGFrame" alt="" coords="263,510,321,521"/>
+<area shape="rect" id="node5" href="./TGCompositeFrame.html" title="TGCompositeFrame" alt="" coords="352,261,421,272"/>
+<area shape="rect" id="node6" href="./TGButton.html" title="TGButton" alt="" coords="357,394,415,405"/>
+<area shape="rect" id="node7" href="./TGCanvas.html" title="TGCanvas" alt="" coords="357,421,415,432"/>
+<area shape="rect" id="node8" href="./TGColorFrame.html" title="TGColorFrame" alt="" coords="357,432,415,443"/>
+<area shape="rect" id="node9" href="./TGColorPalette.html" title="TGColorPalette" alt="" coords="357,443,415,454"/>
+<area shape="rect" id="node10" href="./TGColorPick.html" title="TGColorPick" alt="" coords="357,455,415,465"/>
+<area shape="rect" id="node11" href="./TGDoubleSlider.html" title="TGDoubleSlider" alt="" coords="357,466,415,476"/>
+<area shape="rect" id="node12" href="./TGDragWindow.html" title="TGDragWindow" alt="" coords="357,477,415,488"/>
+<area shape="rect" id="node13" href="./TGLVEntry.html" title="TGLVEntry" alt="" coords="357,488,415,499"/>
+<area shape="rect" id="node14" href="./TGProgressBar.html" title="TGProgressBar" alt="" coords="357,499,415,510"/>
+<area shape="rect" id="node15" href="./TGScrollBar.html" title="TGScrollBar" alt="" coords="357,510,415,521"/>
+<area shape="rect" id="node16" href="./TGSlider.html" title="TGSlider" alt="" coords="357,521,415,532"/>
+<area shape="rect" id="node17" href="./TGSplitter.html" title="TGSplitter" alt="" coords="357,532,415,543"/>
+<area shape="rect" id="node18" href="./TGHorizontal3DLine.html" title="TGHorizontal3DLine" alt="" coords="350,543,423,554"/>
+<area shape="rect" id="node19" href="./TGIcon.html" title="TGIcon" alt="" coords="357,554,415,565"/>
+<area shape="rect" id="node20" href="./TGLBEntry.html" title="TGLBEntry" alt="" coords="357,565,415,576"/>
+<area shape="rect" id="node21" href="./TGLabel.html" title="TGLabel" alt="" coords="357,576,415,587"/>
+<area shape="rect" id="node22" href="./TGMdiContainer.html" title="TGMdiContainer" alt="" coords="357,587,416,598"/>
+<area shape="rect" id="node23" href="./TGMdiWinResizer.html" title="TGMdiWinResizer" alt="" coords="354,598,419,609"/>
+<area shape="rect" id="node24" href="./TGMenuTitle.html" title="TGMenuTitle" alt="" coords="357,609,415,620"/>
+<area shape="rect" id="node26" href="./TGMainFrame.html" title="TGMainFrame" alt="" coords="473,95,531,106"/>
+<area shape="rect" id="node27" href="./TGTableHeaderFrame.html" title="TGTableHeaderFrame" alt="" coords="463,156,540,167"/>
+<area shape="rect" id="node28" href="./TG16ColorSelector.html" title="TG16ColorSelector" alt="" coords="468,167,535,178"/>
+<area shape="rect" id="node29" href="./TGGroupFrame.html" title="TGGroupFrame" alt="" coords="473,178,531,189"/>
+<area shape="rect" id="node30" href="./TGTextButton.html" title="TGTextButton" alt="" coords="473,377,531,388"/>
+<area shape="rect" id="node31" href="./TGColorPopup.html" title="TGColorPopup" alt="" coords="473,189,531,200"/>
+<area shape="rect" id="node32" href="./TGComboBox.html" title="TGComboBox" alt="" coords="473,200,531,211"/>
+<area shape="rect" id="node33" href="./TGComboBoxPopup.html" title="TGComboBoxPopup" alt="" coords="466,211,538,222"/>
+<area shape="rect" id="node34" href="./TGContainer.html" title="TGContainer" alt="" coords="473,222,531,233"/>
+<area shape="rect" id="node35" href="./TGDockButton.html" title="TGDockButton" alt="" coords="473,388,531,399"/>
+<area shape="rect" id="node36" href="./TGDockableFrame.html" title="TGDockableFrame" alt="" coords="469,233,534,244"/>
+<area shape="rect" id="node37" href="./TGDoubleHSlider.html" title="TGDoubleHSlider" alt="" coords="470,443,533,454"/>
+<area shape="rect" id="node38" href="./TGDoubleVSlider.html" title="TGDoubleVSlider" alt="" coords="470,455,533,465"/>
+<area shape="rect" id="node39" href="./TGFileItem.html" title="TGFileItem" alt="" coords="473,466,531,476"/>
+<area shape="rect" id="node40" href="./TGHProgressBar.html" title="TGHProgressBar" alt="" coords="472,477,531,488"/>
+<area shape="rect" id="node41" href="./TGHScrollBar.html" title="TGHScrollBar" alt="" coords="473,499,531,510"/>
+<area shape="rect" id="node42" href="./TGHSlider.html" title="TGHSlider" alt="" coords="473,521,531,532"/>
+<area shape="rect" id="node43" href="./TGHSplitter.html" title="TGHSplitter" alt="" coords="473,543,531,554"/>
+<area shape="rect" id="node44" href="./TGHorizontalFrame.html" title="TGHorizontalFrame" alt="" coords="467,244,536,255"/>
+<area shape="rect" id="node45" href="./TGView.html" title="TGView" alt="" coords="473,255,531,266"/>
+<area shape="rect" id="node46" href="./TGTextLBEntry.html" title="TGTextLBEntry" alt="" coords="473,576,531,587"/>
+<area shape="rect" id="node47" href="./TGPictureButton.html" title="TGPictureButton" alt="" coords="472,399,531,410"/>
+<area shape="rect" id="node48" href="./TGListBox.html" title="TGListBox" alt="" coords="473,266,531,277"/>
+<area shape="rect" id="node49" href="./TGListView.html" title="TGListView" alt="" coords="473,410,531,421"/>
+<area shape="rect" id="node50" href="./TGMdiButtons.html" title="TGMdiButtons" alt="" coords="473,277,531,288"/>
+<area shape="rect" id="node51" href="./TGMdiCornerWinResizer.html" title="TGMdiCornerWinResizer" alt="" coords="458,598,545,609"/>
+<area shape="rect" id="node52" href="./TGMdiDecorFrame.html" title="TGMdiDecorFrame" alt="" coords="468,289,535,299"/>
+<area shape="rect" id="node53" href="./TGMdiFrame.html" title="TGMdiFrame" alt="" coords="473,300,531,310"/>
+<area shape="rect" id="node54" href="./TGMdiHorizontalWinResizer.html" title="TGMdiHorizontalWinResizer" alt="" coords="452,609,552,620"/>
+<area shape="rect" id="node55" href="./TGMdiMainFrame.html" title="TGMdiMainFrame" alt="" coords="469,421,534,432"/>
+<area shape="rect" id="node56" href="./TGMdiMenuBar.html" title="TGMdiMenuBar" alt="" coords="473,311,531,322"/>
+<area shape="rect" id="node57" href="./TGMdiTitleBar.html" title="TGMdiTitleBar" alt="" coords="473,322,531,333"/>
+<area shape="rect" id="node58" href="./TGMdiTitleIcon.html" title="TGMdiTitleIcon" alt="" coords="473,565,531,576"/>
+<area shape="rect" id="node59" href="./TGMdiVerticalWinResizer.html" title="TGMdiVerticalWinResizer" alt="" coords="456,620,547,631"/>
+<area shape="rect" id="node60" href="./TGNumberEntry.html" title="TGNumberEntry" alt="" coords="472,333,531,344"/>
+<area shape="rect" id="node61" href="./TGPack.html" title="TGPack" alt="" coords="473,344,531,355"/>
+<area shape="rect" id="node62" href="./TGShapedFrame.html" title="TGShapedFrame" alt="" coords="472,355,531,366"/>
+<area shape="rect" id="node64" href="./TGTreeLBEntry.html" title="TGTreeLBEntry" alt="" coords="473,587,531,598"/>
+<area shape="rect" id="node65" href="./TGVSplitter.html" title="TGVSplitter" alt="" coords="473,554,531,565"/>
+<area shape="rect" id="node66" href="./TGVProgressBar.html" title="TGVProgressBar" alt="" coords="472,488,531,499"/>
+<area shape="rect" id="node67" href="./TGVScrollBar.html" title="TGVScrollBar" alt="" coords="473,510,531,521"/>
+<area shape="rect" id="node68" href="./TGVSlider.html" title="TGVSlider" alt="" coords="473,532,531,543"/>
+<area shape="rect" id="node69" href="./TRootEmbeddedCanvas.html" title="TRootEmbeddedCanvas" alt="" coords="461,432,543,443"/>
+<area shape="rect" id="node70" href="./TGLineLBEntry.html" title="TGLineLBEntry" alt="" coords="595,571,653,581"/>
+<area shape="rect" id="node71" href="./GRootBrowser.html" title="GRootBrowser" alt="" coords="595,34,653,45"/>
+<area shape="rect" id="node72" href="./GRootCanvas.html" title="GRootCanvas" alt="" coords="595,45,653,56"/>
+<area shape="rect" id="node73" href="./TGButtonGroup.html" title="TGButtonGroup" alt="" coords="595,156,653,167"/>
+<area shape="rect" id="node74" href="./TGCheckButton.html" title="TGCheckButton" alt="" coords="595,355,653,366"/>
+<area shape="rect" id="node75" href="./TGTransientFrame.html" title="TGTransientFrame" alt="" coords="591,56,656,67"/>
+<area shape="rect" id="node76" href="./TGCommandPlugin.html" title="TGCommandPlugin" alt="" coords="589,67,658,78"/>
+<area shape="rect" id="node77" href="./TGDockHideButton.html" title="TGDockHideButton" alt="" coords="589,388,658,399"/>
+<area shape="rect" id="node78" href="./TGFSComboBox.html" title="TGFSComboBox" alt="" coords="593,167,654,178"/>
+<area shape="rect" id="node79" href="./TGFileBrowser.html" title="TGFileBrowser" alt="" coords="595,78,653,89"/>
+<area shape="rect" id="node80" href="./TGLVContainer.html" title="TGLVContainer" alt="" coords="595,211,653,222"/>
+<area shape="rect" id="node81" href="./TGFontTypeComboBox.html" title="TGFontTypeComboBox" alt="" coords="582,178,665,189"/>
+<area shape="rect" id="node82" href="./TGHeaderFrame.html" title="TGHeaderFrame" alt="" coords="595,244,653,255"/>
+<area shape="rect" id="node83" href="./TGHtml.html" title="TGHtml" alt="" coords="595,277,653,288"/>
+<area shape="rect" id="node84" href="./TGHtmlBrowser.html" title="TGHtmlBrowser" alt="" coords="595,89,653,100"/>
+<area shape="rect" id="node85" href="./TGIconLBEntry.html" title="TGIconLBEntry" alt="" coords="595,582,653,593"/>
+<area shape="rect" id="node86" href="./TGImageMap.html" title="TGImageMap" alt="" coords="595,399,653,410"/>
+<area shape="rect" id="node87" href="./TGLBContainer.html" title="TGLBContainer" alt="" coords="595,222,653,233"/>
+<area shape="rect" id="node88" href="./TGLineStyleComboBox.html" title="TGLineStyleComboBox" alt="" coords="582,189,665,200"/>
+<area shape="rect" id="node89" href="./TGLineWidthComboBox.html" title="TGLineWidthComboBox" alt="" coords="580,200,667,211"/>
+<area shape="rect" id="node90" href="./TGListTree.html" title="TGListTree" alt="" coords="595,233,653,244"/>
+<area shape="rect" id="node91" href="./TGMenuBar.html" title="TGMenuBar" alt="" coords="595,255,653,266"/>
+<area shape="rect" id="node92" href="./TGRadioButton.html" title="TGRadioButton" alt="" coords="595,366,653,377"/>
+<area shape="rect" id="node93" href="./TGSplitButton.html" title="TGSplitButton" alt="" coords="595,377,653,388"/>
+<area shape="rect" id="node94" href="./TGStatusBar.html" title="TGStatusBar" alt="" coords="595,266,653,277"/>
+<area shape="rect" id="node95" href="./TGTextView.html" title="TGTextView" alt="" coords="595,289,653,299"/>
+<area shape="rect" id="node96" href="./TGTextEditor.html" title="TGTextEditor" alt="" coords="595,100,653,111"/>
+<area shape="rect" id="node97" href="./TGTripleHSlider.html" title="TGTripleHSlider" alt="" coords="594,443,653,454"/>
+<area shape="rect" id="node98" href="./TGTripleVSlider.html" title="TGTripleVSlider" alt="" coords="594,455,653,465"/>
+<area shape="rect" id="node99" href="./TGVFileSplitter.html" title="TGVFileSplitter" alt="" coords="595,554,653,565"/>
+<area shape="rect" id="node100" href="./TRootBrowser.html" title="TRootBrowser" alt="" coords="595,111,653,122"/>
+<area shape="rect" id="node101" href="./TRootBrowserLite.html" title="TRootBrowserLite" alt="" coords="591,123,656,133"/>
+<area shape="rect" id="node102" href="./TRootCanvas.html" title="TRootCanvas" alt="" coords="595,134,653,144"/>
+<area shape="rect" id="node103" href="./TRootControlBar.html" title="TRootControlBar" alt="" coords="593,145,654,156"/>
+<area shape="rect" id="node104" href="./TGColorDialog.html" title="TGColorDialog" alt="" coords="702,1,760,12"/>
+<area shape="rect" id="node105" href="./TGColorSelect.html" title="TGColorSelect" alt="" coords="702,355,760,366"/>
+<area shape="rect" id="node106" href="./TGFileContainer.html" title="TGFileContainer" alt="" coords="702,211,761,222"/>
+<area shape="rect" id="node107" href="./TGFileDialog.html" title="TGFileDialog" alt="" coords="702,12,760,23"/>
+<area shape="rect" id="node108" href="./TGFontDialog.html" title="TGFontDialog" alt="" coords="702,23,760,34"/>
+<area shape="rect" id="node109" href="./TGGotoDialog.html" title="TGGotoDialog" alt="" coords="702,34,760,45"/>
+<area shape="rect" id="node110" href="./TGHButtonGroup.html" title="TGHButtonGroup" alt="" coords="700,150,763,161"/>
+<area shape="rect" id="node111" href="./TGInputDialog.html" title="TGInputDialog" alt="" coords="702,45,760,56"/>
+<area shape="rect" id="node112" href="./TGMsgBox.html" title="TGMsgBox" alt="" coords="702,56,760,67"/>
+<area shape="rect" id="node113" href="./TGPrintDialog.html" title="TGPrintDialog" alt="" coords="702,67,760,78"/>
+<area shape="rect" id="node114" href="./TGSearchDialog.html" title="TGSearchDialog" alt="" coords="702,78,760,89"/>
+<area shape="rect" id="node115" href="./TGTextEdit.html" title="TGTextEdit" alt="" coords="702,283,760,294"/>
+<area shape="rect" id="node116" href="./TGTextViewostream.html" title="TGTextViewostream" alt="" coords="696,294,767,305"/>
+<area shape="rect" id="node117" href="./TGUndockedFrame.html" title="TGUndockedFrame" alt="" coords="698,89,765,100"/>
+<area shape="rect" id="node118" href="./TGVButtonGroup.html" title="TGVButtonGroup" alt="" coords="700,161,763,172"/>
+<area shape="rect" id="node119" href="./TRootDialog.html" title="TRootDialog" alt="" coords="702,100,760,111"/>
+<area shape="rect" id="node120" href="./TRootHelpDialog.html" title="TRootHelpDialog" alt="" coords="701,111,762,122"/>
 </map>
 <map name="MapTGWindow_InhMem" id="MapTGWindow_InhMem">
-<area shape="rect" id="graph12" href="./TGObject.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph13" href="./TGObject.html" alt="" coords="541,109,629,217"/>
-<area shape="rect" id="graph14" href="./TGObject.html" alt="" coords="443,109,531,232"/>
-<area shape="rect" id="graph15" href="./TGObject.html" alt="" coords="344,109,432,232"/>
-<area shape="rect" id="graph11" href="./TGObject.html" title="TGObject" alt="" coords="333,16,640,243"/>
-<area shape="rect" id="graph18" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph19" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph20" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph21" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph22" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph23" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph24" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph17" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
+<area shape="rect" id="clust11" href="./TGObject.html" alt="" coords="248,47,469,65"/>
+<area shape="rect" id="clust12" href="./TGObject.html" alt="" coords="403,65,469,161"/>
+<area shape="rect" id="clust13" href="./TGObject.html" alt="" coords="325,65,392,177"/>
+<area shape="rect" id="clust14" href="./TGObject.html" alt="" coords="248,65,315,177"/>
+<area shape="rect" id="clust10" href="./TGObject.html" title="TGObject" alt="" coords="248,16,469,177"/>
+<area shape="rect" id="clust17" href="./TObject.html" alt="" coords="171,47,237,145"/>
+<area shape="rect" id="clust18" href="./TObject.html" alt="" coords="93,47,160,161"/>
+<area shape="rect" id="clust19" href="./TObject.html" alt="" coords="16,47,83,161"/>
+<area shape="rect" id="clust20" href="./TObject.html" alt="" coords="203,152,205,155"/>
+<area shape="rect" id="clust21" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust22" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust23" href="./TObject.html" alt="" coords="16,161,83,609"/>
+<area shape="rect" id="clust16" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
 </map>
 <map name="MapTGWindow_Lib" id="MapTGWindow_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="397,207,512,255"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="381,199,499,247"/>
 </map>
 <div class="tabs">
 <a id="imgTGWindow_Inh" class="tabsel" href="inh/TGWindow_Inh.png" onclick="javascript:return SetImg('Charts','inh/TGWindow_Inh.png');">Inheritance</a>
@@ -448,7 +449,7 @@ return false;}
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TGWindow:GetName" href="src/TGWindow.cxx.html#RJ0ceC">GetName</a>() const</span><br />
-<div class="funccomm"><pre> Return unique name, used in <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> methods.
+<div class="funccomm"><pre> Return unique name, used in <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> methods.
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGWindow:TGWindow" href="src/TGWindow.h.html#WHLPGE">TGWindow</a>(<a href="./ListOfTypes.html#Window_t">Window_t</a> id)</span><br />
@@ -598,7 +599,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   28/12/97</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/gui:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:34</em><br />
+<em>&raquo; Last changed: root/gui:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:06</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

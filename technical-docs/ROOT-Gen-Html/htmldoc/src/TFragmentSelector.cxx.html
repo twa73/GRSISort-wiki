@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Thu Mar 12 13:29:51 2015            -->
+<!--   Date: Tue May  5 13:03:42 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -99,12 +99,12 @@
    <span class="comment">//</span>
    <span class="comment">// The processing can be stopped by calling <a href="../TSelector.html#TSelector:Abort" title="void TSelector::Abort(const char* why,TSelector::EAbort what=kAbortProcess)">Abort</a>().</span>
    <span class="comment">//</span>
-   <span class="comment">// Use fStatus to set the return value of <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Process" title="Long64_t TTree::Process(const char* filename,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>().</span>
+   <span class="comment">// Use fStatus to set the return value of <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Process" title="Long64_t TTree::Process(void* selector,Option_t* option=&quot;&quot;,Long64_t nentries=1000000000,Long64_t firstentry=0) or overloads">Process</a>().</span>
    <span class="comment">//</span>
    <span class="comment">// The return value is currently not used.</span>
 
    <a href="../TFragmentSelector.html#TFragmentSelector:fChain" title="TTree* TFragmentSelector::fChain">fChain</a>-><a href="../TTree.html#TTree:GetEntry" title="Int_t TTree::GetEntry(Long64_t entry=0,Int_t getall=0)">GetEntry</a>(entry);
-   <a href="../TChannel.html">TChannel</a> *channel = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannel" title="TChannel* TChannel::GetChannel(unsigned int temp_address)">GetChannel</a>(<a href="../TFragmentSelector.html#TFragmentSelector:fragment" title="TFragment* TFragmentSelector::fragment">fragment</a>-><a href="../TFragment.html#TFragment:ChannelAddress" title="UInt_t TFragment::ChannelAddress">ChannelAddress</a>);
+   <a href="../TChannel.html">TChannel</a> *channel = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannel" title="TChannel *const TChannel::GetChannel(unsigned int temp_address)">GetChannel</a>(<a href="../TFragmentSelector.html#TFragmentSelector:fragment" title="TFragment* TFragmentSelector::fragment">fragment</a>-><a href="../TFragment.html#TFragment:ChannelAddress" title="UInt_t TFragment::ChannelAddress">ChannelAddress</a>);
    <span class="keyword">if</span>(!channel){
       <span class="keyword">return</span> <span class="keyword">true</span>;   <span class="comment">// I think if we don't have a channel at this point (i.e. the channel</span>
                   <span class="comment">// was not defined a name/address/odb; we should drop the <a href="../TFragmentSelector.html#TFragmentSelector:fragment" title="TFragment* TFragmentSelector::fragment">fragment</a>.  </span>
@@ -167,7 +167,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-12 13:29 </em><em>&raquo; Last generated: 2015-03-12 13:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 13:03 </em><em>&raquo; Last generated: 2015-05-05 13:03</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

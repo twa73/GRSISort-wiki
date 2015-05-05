@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:35:49 2015            -->
+<!--   Date: Tue May  5 12:09:16 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TMessage.h.html">header file</a>
 <a class="descrheadentry" href="src/TMessage.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TMessage_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -260,6 +260,7 @@ serializer.
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ReadStaticArray@12"><span class="baseclass">TBufferFile::</span>ReadStaticArray</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ReadStaticArrayDouble32"><span class="baseclass">TBufferFile::</span>ReadStaticArrayDouble32</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d, <a href="./TStreamerElement.html">TStreamerElement</a>* ele = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ReadStaticArrayFloat16"><span class="baseclass">TBufferFile::</span>ReadStaticArrayFloat16</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>* f, <a href="./TStreamerElement.html">TStreamerElement</a>* ele = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ReadStdString"><span class="baseclass">TBufferFile::</span>ReadStdString</a>(string&amp; s)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ReadString"><span class="baseclass">TBufferFile::</span>ReadString</a>(<span class="keyword">char</span>* s, <a href="./ListOfTypes.html#Int_t">Int_t</a> max)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ReadTString"><span class="baseclass">TBufferFile::</span>ReadTString</a>(<a href="./TString.html">TString</a>&amp; s)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ReadUChar"><span class="baseclass">TBufferFile::</span>ReadUChar</a>(<a href="./ListOfTypes.html#UChar_t">UChar_t</a>&amp; c)</td></tr>
@@ -280,7 +281,7 @@ serializer.
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ResetMap"><span class="baseclass">TBufferFile::</span>ResetMap</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBuffer.html#TBuffer:SetBuffer"><span class="baseclass">TBuffer::</span>SetBuffer</a>(<span class="keyword">void</span>* buf, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> bufsiz = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> adopt = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>, <a href="./ListOfTypes.html#ReAllocCharFun_t">ReAllocCharFun_t</a> reallocfunc = 0)</td></tr>
@@ -376,6 +377,7 @@ serializer.
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:WriteObjectAny"><span class="baseclass">TBufferFile::</span>WriteObjectAny</a>(<span class="keyword">const</span> <span class="keyword">void</span>* obj, <span class="keyword">const</span> <a href="./TClass.html">TClass</a>* ptrClass)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="#TMessage:WriteProcessID">WriteProcessID</a>(<a href="./TProcessID.html">TProcessID</a>* pid)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:WriteShort"><span class="baseclass">TBufferFile::</span>WriteShort</a>(<a href="./ListOfTypes.html#Short_t">Short_t</a> h)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:WriteStdString"><span class="baseclass">TBufferFile::</span>WriteStdString</a>(<span class="keyword">const</span> string&amp; s)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:WriteString"><span class="baseclass">TBufferFile::</span>WriteString</a>(<span class="keyword">const</span> <span class="keyword">char</span>* s)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:WriteTString"><span class="baseclass">TBufferFile::</span>WriteTString</a>(<span class="keyword">const</span> <a href="./TString.html">TString</a>&amp; s)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:WriteUChar"><span class="baseclass">TBufferFile::</span>WriteUChar</a>(<a href="./ListOfTypes.html#UChar_t">UChar_t</a> c)</td></tr>
@@ -488,47 +490,41 @@ serializer.
 </table></div>
 </div>
 <h2><a id="TMessage:Class_Charts"></a>Class Charts</h2>
-<map name="MapTMessage_Inh" id="MapTMessage_Inh">
-<area shape="rect" id="node3" href="./TBufferFile.html" title="TBufferFile" alt="" coords="419,7,558,35"/>
-<area shape="rect" id="node4" href="./TBuffer.html" title="TBuffer" alt="" coords="210,7,349,35"/>
-<area shape="rect" id="node5" href="./TObject.html" title="TObject" alt="" coords="2,7,141,35"/>
-</map>
-<map name="MapTMessage_InhMem" id="MapTMessage_InhMem">
-<area shape="rect" id="graph12" href="./TBufferFile.html" alt="" coords="859,63,947,157"/>
-<area shape="rect" id="graph13" href="./TBufferFile.html" alt="" coords="760,63,848,172"/>
-<area shape="rect" id="graph14" href="./TBufferFile.html" alt="" coords="661,63,749,172"/>
-<area shape="rect" id="graph15" href="./TBufferFile.html" alt="" coords="891,168,915,189"/>
-<area shape="rect" id="graph16" href="./TBufferFile.html" alt="" coords="859,200,947,851"/>
-<area shape="rect" id="graph17" href="./TBufferFile.html" alt="" coords="760,185,848,851"/>
-<area shape="rect" id="graph18" href="./TBufferFile.html" alt="" coords="661,185,749,851"/>
-<area shape="rect" id="graph11" href="./TBufferFile.html" title="TBufferFile" alt="" coords="651,16,957,861"/>
-<area shape="rect" id="graph21" href="./TBuffer.html" alt="" coords="541,63,629,143"/>
-<area shape="rect" id="graph22" href="./TBuffer.html" alt="" coords="443,63,531,172"/>
-<area shape="rect" id="graph23" href="./TBuffer.html" alt="" coords="344,63,432,172"/>
-<area shape="rect" id="graph24" href="./TBuffer.html" alt="" coords="573,153,597,175"/>
-<area shape="rect" id="graph25" href="./TBuffer.html" alt="" coords="541,185,629,924"/>
-<area shape="rect" id="graph26" href="./TBuffer.html" alt="" coords="443,185,531,924"/>
-<area shape="rect" id="graph27" href="./TBuffer.html" alt="" coords="344,185,432,924"/>
-<area shape="rect" id="graph20" href="./TBuffer.html" title="TBuffer" alt="" coords="333,16,640,935"/>
-<area shape="rect" id="graph30" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph31" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph32" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph33" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph34" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph35" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph36" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph29" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTMessage_Lib" id="MapTMessage_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="397,127,512,175"/>
-</map>
-<div class="tabs">
-<a id="imgTMessage_Inh" class="tabsel" href="inh/TMessage_Inh.png" onclick="javascript:return SetImg('Charts','inh/TMessage_Inh.png');">Inheritance</a>
-<a id="imgTMessage_InhMem" class="tab" href="inhmem/TMessage_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TMessage_InhMem.png');">Inherited Members</a>
-<a id="imgTMessage_Incl" class="tab" href="incl/TMessage_Incl.png" onclick="javascript:return SetImg('Charts','incl/TMessage_Incl.png');">Includes</a>
-<a id="imgTMessage_Lib" class="tab" href="lib/TMessage_Lib.png" onclick="javascript:return SetImg('Charts','lib/TMessage_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTMessage_Inh" src="inh/TMessage_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TBuffer" href="./TBuffer.html">TBuffer</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TBufferFile" href="./TBufferFile.html">TBufferFile</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TMessage" href="./TMessage.html">TMessage</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TMessage:TMessage@2" href="src/TMessage.cxx.html#LLv6oC">TMessage</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> what = kMESS_ANY, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsiz = <a href="./TBuffer.html">TBuffer</a>::<a href="./TBuffer.html#TBuffer:kInitialSize" title="const enum TBuffer:: TBuffer::kInitialSize">kInitialSize</a>)</span><br />
 <div class="funccomm"><pre> Create a <a href="./TMessage.html">TMessage</a> object for storing objects. The <span class="string">"what"</span> integer
@@ -693,7 +689,7 @@ serializer.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   19/12/96</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/net:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:35</em><br />
+<em>&raquo; Last changed: root/net:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

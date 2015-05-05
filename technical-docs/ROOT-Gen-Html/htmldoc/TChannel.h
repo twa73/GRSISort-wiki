@@ -41,9 +41,9 @@
 class TChannel : public TNamed	{
 
   public:
-    static TChannel *GetChannel(unsigned int temp_address); 
-    static TChannel *GetChannelByNumber(int temp_numebr);
-    static TChannel *FindChannelByName(const char *name);
+    static TChannel * const GetChannel(unsigned int temp_address); 
+    static TChannel * const GetChannelByNumber(int temp_numebr);
+    static TChannel * const FindChannelByName(const char *name);
 
     TChannel();
     TChannel(const char*);
@@ -71,6 +71,8 @@ class TChannel : public TNamed	{
     int 	            number;
     int		         stream;
     int              userinfonumber;
+    bool             usecalfileint;
+
 
     std::vector<double> ENGCoefficients;  //Energy calibration coeffs (low to high order)
     double ENGChi2;                       //Chi2 of the energy calibration
@@ -86,6 +88,7 @@ class TChannel : public TNamed	{
     static std::map<unsigned int,TChannel*> *fChannelMap; //A map to all of the channels based on address
     static std::map<int,TChannel*> *fChannelNumberMap;    //A map of TChannels based on channel number
     static void UpdateChannelNumberMap();
+    static void UpdateChannelMap();
 	 void OverWriteChannel(TChannel*);
 	 void AppendChannel(TChannel*);
 
@@ -97,10 +100,11 @@ class TChannel : public TNamed	{
 	
 	 static void trim(std::string *, const std::string & trimChars = " \f\n\r\t\v");
 
+
   public:
-    inline void SetAddress(unsigned int tmpadd) 	  {address = tmpadd;}
+    void SetAddress(unsigned int tmpadd);
     inline void SetChannelName(const char *tmpname)  {channelname.assign(tmpname);} 
-    inline void SetNumber(int tmpnum)	              {number = tmpnum;}
+    inline void SetNumber(int tmpnum)	              {number = tmpnum; UpdateChannelNumberMap();}
     inline void SetIntegration(int tmpint)	        {integration = tmpint;}
     inline void SetStream(int tmpstream)	           {stream = tmpstream;}
     inline void SetUserInfoNumber(int tempinfo)      {userinfonumber = tempinfo;}
@@ -123,17 +127,21 @@ class TChannel : public TNamed	{
     double GetTIMEChi2() { return TIMEChi2; }
     double GetEFFChi2()  { return EFFChi2;} 
 
+    void SetUseCalFileIntegration(bool flag=true) {usecalfileint=flag;}
+    bool UseCalFileIntegration() { return usecalfileint; }
+
     std::vector<double> GetENGCoeff()  { return ENGCoefficients;}
     std::vector<double> GetCFDCoeff()  { return CFDCoefficients;}
     std::vector<double> GetLEDCoeff()  { return LEDCoefficients;}
     std::vector<double> GetTIMECoeff() { return TIMECoefficients;}
     std::vector<double> GetEFFCoeff()  { return EFFCoefficients;}
 
-    inline void AddENGCoefficient(double temp)  { ENGCoefficients.push_back(temp);}
-    inline void AddCFDCoefficient(double temp)  { CFDCoefficients.push_back(temp);}
-    inline void AddLEDCoefficient(double temp)  { LEDCoefficients.push_back(temp);}
+    inline void AddENGCoefficient(double temp)  { ENGCoefficients.push_back(temp); }
+    inline void AddCFDCoefficient(double temp)  { CFDCoefficients.push_back(temp); }
+    inline void AddLEDCoefficient(double temp)  { LEDCoefficients.push_back(temp); }
     inline void AddTIMECoefficient(double temp) { TIMECoefficients.push_back(temp);}
     inline void AddEFFCoefficient(double temp)  { EFFCoefficients.push_back(temp);}
+
 
     inline void SetENGChi2(double temp)  { ENGChi2 = temp; }
     inline void SetCFDChi2(double temp)  { CFDChi2 = temp; }
@@ -144,13 +152,19 @@ class TChannel : public TNamed	{
     //void CalibrateFragment(TFragment*);
 
     double CalibrateENG(double);
-    double CalibrateENG(int);
+    double CalibrateENG(int,int integration=0);
+    
     double CalibrateCFD(double);
     double CalibrateCFD(int);
+    
     double CalibrateLED(double);
     double CalibrateLED(int); 
+
     double CalibrateTIME(double);
     double CalibrateTIME(int);
+    inline double GetTZero(double tempd) { return CalibrateTIME(tempd); }
+    inline double GetTZero(int    tempi) { return CalibrateTIME(tempi); }
+
     double CalibrateEFF(double);
 
     void DestroyCalibrations();
@@ -167,12 +181,12 @@ class TChannel : public TNamed	{
     static void WriteCalFile(std::string outfilename = "");
     static void WriteCalBuffer(Option_t *opt ="");
 
-    virtual void Print(Option_t *opt = "");
+    virtual void Print(Option_t *opt = "") const;
     virtual void Clear(Option_t *opt = "");
     //static  void PrintAll(Option_t *opt = "");      
     std::string PrintToString(Option_t *opt="");
 
-    static int WriteToRoot(const char *name ="");
+    static int WriteToRoot(TFile *fileptr = 0);
 
   
   private:

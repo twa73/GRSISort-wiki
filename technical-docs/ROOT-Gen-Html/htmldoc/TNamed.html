@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:02 2015            -->
+<!--   Date: Tue May  5 12:09:18 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TNamed.h.html">header file</a>
 <a class="descrheadentry" href="src/TNamed.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TNamed_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -147,7 +147,7 @@ overridden by the derived classes.
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -209,131 +209,75 @@ overridden by the derived classes.
 </table></div>
 </div>
 <h2><a id="TNamed:Class_Charts"></a>Class Charts</h2>
-<map name="MapTNamed_Inh" id="MapTNamed_Inh">
-<area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="1,374,68,387"/>
-<area shape="rect" id="node5" href="./TVirtualX.html" title="TVirtualX" alt="" coords="234,8,301,21"/>
-<area shape="rect" id="node6" href="./TGuiFactory.html" title="TGuiFactory" alt="" coords="234,27,301,41"/>
-<area shape="rect" id="node7" href="./TMessageHandler.html" title="TMessageHandler" alt="" coords="231,67,304,81"/>
-<area shape="rect" id="node8" href="./TTree.html" title="TTree" alt="" coords="234,81,301,94"/>
-<area shape="rect" id="node9" href="./TDirectory.html" title="TDirectory" alt="" coords="234,121,301,134"/>
-<area shape="rect" id="node10" href="./TH1.html" title="TH1" alt="" coords="234,187,301,201"/>
-<area shape="rect" id="node11" href="./ROOT__THnBaseBrowsable.html" title="ROOT::THnBaseBrowsable" alt="" coords="212,320,323,334"/>
-<area shape="rect" id="node12" href="./ROOT__TSchemaRule__TSources.html" title="ROOT::TSchemaRule::TSources" alt="" coords="203,334,332,347"/>
-<area shape="rect" id="node13" href="./TAxis.html" title="TAxis" alt="" coords="234,347,301,360"/>
-<area shape="rect" id="node14" href="./TAxis3D.html" title="TAxis3D" alt="" coords="234,360,301,374"/>
-<area shape="rect" id="node15" href="./TShape.html" title="TShape" alt="" coords="234,374,301,387"/>
-<area shape="rect" id="node16" href="./TVirtualFitter.html" title="TVirtualFitter" alt="" coords="234,387,301,400"/>
-<area shape="rect" id="node17" href="./TDictionary.html" title="TDictionary" alt="" coords="234,433,301,447"/>
-<area shape="rect" id="node18" href="./TKey.html" title="TKey" alt="" coords="234,473,301,487"/>
-<area shape="rect" id="node19" href="./TBenchmark.html" title="TBenchmark" alt="" coords="234,487,301,500"/>
-<area shape="rect" id="node20" href="./TBranch.html" title="TBranch" alt="" coords="234,527,301,540"/>
-<area shape="rect" id="node21" href="./TBrowser.html" title="TBrowser" alt="" coords="234,540,301,553"/>
-<area shape="rect" id="node22" href="./TBrowserPlugin.html" title="TBrowserPlugin" alt="" coords="234,553,301,567"/>
-<area shape="rect" id="node23" href="./TCal.html" title="TCal" alt="" coords="234,580,301,593"/>
-<area shape="rect" id="node24" href="./TCalManager.html" title="TCalManager" alt="" coords="234,593,301,606"/>
-<area shape="rect" id="node26" href="./TGX11.html" title="TGX11" alt="" coords="372,1,439,14"/>
-<area shape="rect" id="node27" href="./TRootGuiFactory.html" title="TRootGuiFactory" alt="" coords="370,14,441,27"/>
-<area shape="rect" id="node28" href="./TChain.html" title="TChain" alt="" coords="372,41,439,54"/>
-<area shape="rect" id="node29" href="./TDirectoryFile.html" title="TDirectoryFile" alt="" coords="372,107,439,121"/>
-<area shape="rect" id="node30" href="./TH1D.html" title="TH1D" alt="" coords="372,134,439,147"/>
-<area shape="rect" id="node31" href="./GROOTGuiFactory.html" title="GROOTGuiFactory" alt="" coords="366,27,445,41"/>
-<area shape="rect" id="node32" href="./GTree.html" title="GTree" alt="" coords="372,54,439,67"/>
-<area shape="rect" id="node33" href="./TBRIK.html" title="TBRIK" alt="" coords="372,320,439,334"/>
-<area shape="rect" id="node34" href="./TBackCompFitter.html" title="TBackCompFitter" alt="" coords="370,387,442,400"/>
-<area shape="rect" id="node35" href="./TBaseClass.html" title="TBaseClass" alt="" coords="372,400,439,414"/>
-<area shape="rect" id="node36" href="./TBasket.html" title="TBasket" alt="" coords="372,493,439,507"/>
-<area shape="rect" id="node37" href="./TBranchClones.html" title="TBranchClones" alt="" coords="372,520,439,533"/>
-<area shape="rect" id="node38" href="./TBranchElement.html" title="TBranchElement" alt="" coords="372,533,440,547"/>
-<area shape="rect" id="node39" href="./TBranchObject.html" title="TBranchObject" alt="" coords="372,547,439,560"/>
-<area shape="rect" id="node40" href="./TBranchRef.html" title="TBranchRef" alt="" coords="372,560,439,573"/>
-<area shape="rect" id="node41" href="./TBranchSTL.html" title="TBranchSTL" alt="" coords="372,573,439,587"/>
-<area shape="rect" id="node42" href="./TTUBE.html" title="TTUBE" alt="" coords="372,334,439,347"/>
-<area shape="rect" id="node43" href="./TClass.html" title="TClass" alt="" coords="372,414,439,427"/>
-<area shape="rect" id="node44" href="./TDataMember.html" title="TDataMember" alt="" coords="372,427,439,440"/>
-<area shape="rect" id="node45" href="./TDataType.html" title="TDataType" alt="" coords="372,440,439,453"/>
-<area shape="rect" id="node46" href="./TEfficiencyCal.html" title="TEfficiencyCal" alt="" coords="372,587,439,600"/>
-<area shape="rect" id="node47" href="./TEnergyCal.html" title="TEnergyCal" alt="" coords="372,600,439,613"/>
-<area shape="rect" id="node48" href="./TFunction.html" title="TFunction" alt="" coords="372,453,439,467"/>
-<area shape="rect" id="node49" href="./TGainMatch.html" title="TGainMatch" alt="" coords="372,613,439,627"/>
-<area shape="rect" id="node50" href="./TGlobal.html" title="TGlobal" alt="" coords="372,467,439,480"/>
-<area shape="rect" id="node51" href="./TH1C.html" title="TH1C" alt="" coords="372,147,439,161"/>
-<area shape="rect" id="node52" href="./TH1F.html" title="TH1F" alt="" coords="372,161,439,174"/>
-<area shape="rect" id="node53" href="./TH1I.html" title="TH1I" alt="" coords="372,174,439,187"/>
-<area shape="rect" id="node54" href="./TH1K.html" title="TH1K" alt="" coords="372,187,439,201"/>
-<area shape="rect" id="node55" href="./TH1S.html" title="TH1S" alt="" coords="372,201,439,214"/>
-<area shape="rect" id="node56" href="./TH2.html" title="TH2" alt="" coords="372,214,439,227"/>
-<area shape="rect" id="node57" href="./TH3.html" title="TH3" alt="" coords="372,247,439,260"/>
-<area shape="rect" id="node58" href="./TKeyXML.html" title="TKeyXML" alt="" coords="372,507,439,520"/>
-<area shape="rect" id="node59" href="./TMethodArg.html" title="TMethodArg" alt="" coords="372,480,439,493"/>
-<area shape="rect" id="node60" href="./TNtuple.html" title="TNtuple" alt="" coords="372,67,439,81"/>
-<area shape="rect" id="node61" href="./TNtupleD.html" title="TNtupleD" alt="" coords="372,81,439,94"/>
-<area shape="rect" id="node62" href="./TPCON.html" title="TPCON" alt="" coords="372,347,439,360"/>
-<area shape="rect" id="node63" href="./TROOT.html" title="TROOT" alt="" coords="372,121,439,134"/>
-<area shape="rect" id="node64" href="./TSPHE.html" title="TSPHE" alt="" coords="372,360,439,374"/>
-<area shape="rect" id="node65" href="./TTreeSQL.html" title="TTreeSQL" alt="" coords="372,94,439,107"/>
-<area shape="rect" id="node66" href="./TXTRU.html" title="TXTRU" alt="" coords="372,374,439,387"/>
-<area shape="rect" id="node67" href="./TGX11TTF.html" title="TGX11TTF" alt="" coords="479,1,547,14"/>
-<area shape="rect" id="node68" href="./GChain.html" title="GChain" alt="" coords="479,34,547,48"/>
-<area shape="rect" id="node69" href="./TFile.html" title="TFile" alt="" coords="479,107,547,121"/>
-<area shape="rect" id="node70" href="./GH1D.html" title="GH1D" alt="" coords="479,121,547,134"/>
-<area shape="rect" id="node71" href="./TBasketSQL.html" title="TBasketSQL" alt="" coords="479,493,547,507"/>
-<area shape="rect" id="node72" href="./TCONE.html" title="TCONE" alt="" coords="479,360,547,374"/>
-<area shape="rect" id="node73" href="./TTUBS.html" title="TTUBS" alt="" coords="479,374,547,387"/>
-<area shape="rect" id="node74" href="./TELTU.html" title="TELTU" alt="" coords="479,387,547,400"/>
-<area shape="rect" id="node75" href="./TGTRA.html" title="TGTRA" alt="" coords="479,294,547,307"/>
-<area shape="rect" id="node76" href="./TH2C.html" title="TH2C" alt="" coords="479,147,547,161"/>
-<area shape="rect" id="node77" href="./TH2D.html" title="TH2D" alt="" coords="479,161,547,174"/>
-<area shape="rect" id="node78" href="./TH2F.html" title="TH2F" alt="" coords="479,174,547,187"/>
-<area shape="rect" id="node79" href="./TH2I.html" title="TH2I" alt="" coords="479,187,547,201"/>
-<area shape="rect" id="node80" href="./TH2Poly.html" title="TH2Poly" alt="" coords="479,201,547,214"/>
-<area shape="rect" id="node81" href="./TH2S.html" title="TH2S" alt="" coords="479,214,547,227"/>
-<area shape="rect" id="node82" href="./TH3C.html" title="TH3C" alt="" coords="479,227,547,240"/>
-<area shape="rect" id="node83" href="./TH3D.html" title="TH3D" alt="" coords="479,240,547,254"/>
-<area shape="rect" id="node84" href="./TH3F.html" title="TH3F" alt="" coords="479,254,547,267"/>
-<area shape="rect" id="node85" href="./TH3I.html" title="TH3I" alt="" coords="479,267,547,280"/>
-<area shape="rect" id="node86" href="./TH3S.html" title="TH3S" alt="" coords="479,280,547,294"/>
-<area shape="rect" id="node87" href="./THYPE.html" title="THYPE" alt="" coords="479,400,547,414"/>
-<area shape="rect" id="node88" href="./TMethod.html" title="TMethod" alt="" coords="479,453,547,467"/>
-<area shape="rect" id="node89" href="./TPARA.html" title="TPARA" alt="" coords="479,307,547,320"/>
-<area shape="rect" id="node90" href="./TPGON.html" title="TPGON" alt="" coords="479,414,547,427"/>
-<area shape="rect" id="node91" href="./TProfile.html" title="TProfile" alt="" coords="479,134,547,147"/>
-<area shape="rect" id="node92" href="./TProofChain.html" title="TProofChain" alt="" coords="479,48,547,61"/>
-<area shape="rect" id="node93" href="./TQClass.html" title="TQClass" alt="" coords="479,427,547,440"/>
-<area shape="rect" id="node94" href="./TTRAP.html" title="TTRAP" alt="" coords="479,320,547,334"/>
-<area shape="rect" id="node95" href="./TTRD1.html" title="TTRD1" alt="" coords="479,334,547,347"/>
-<area shape="rect" id="node96" href="./TTRD2.html" title="TTRD2" alt="" coords="479,347,547,360"/>
-<area shape="rect" id="node97" href="./GFile.html" title="GFile" alt="" coords="580,81,647,94"/>
-<area shape="rect" id="node98" href="./TCONS.html" title="TCONS" alt="" coords="580,367,647,380"/>
-<area shape="rect" id="node99" href="./TCTUB.html" title="TCTUB" alt="" coords="580,380,647,393"/>
-<area shape="rect" id="node100" href="./TMemFile.html" title="TMemFile" alt="" coords="580,94,647,107"/>
-<area shape="rect" id="node101" href="./TNetFile.html" title="TNetFile" alt="" coords="580,107,647,121"/>
-<area shape="rect" id="node102" href="./TProfile2D.html" title="TProfile2D" alt="" coords="580,161,647,174"/>
-<area shape="rect" id="node103" href="./TProfile3D.html" title="TProfile3D" alt="" coords="580,240,647,254"/>
-<area shape="rect" id="node104" href="./TWebFile.html" title="TWebFile" alt="" coords="580,121,647,134"/>
-<area shape="rect" id="node105" href="./TXMLFile.html" title="TXMLFile" alt="" coords="580,134,647,147"/>
-<area shape="rect" id="node106" href="./TParallelMergingFile.html" title="TParallelMergingFile" alt="" coords="681,94,767,107"/>
-<area shape="rect" id="node107" href="./TS3WebFile.html" title="TS3WebFile" alt="" coords="690,121,758,134"/>
-</map>
-<map name="MapTNamed_InhMem" id="MapTNamed_InhMem">
-<area shape="rect" id="graph9" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph10" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph11" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph12" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph13" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph14" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph15" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph8" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTNamed_Lib" id="MapTNamed_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTNamed_Inh" class="tabsel" href="inh/TNamed_Inh.png" onclick="javascript:return SetImg('Charts','inh/TNamed_Inh.png');">Inheritance</a>
-<a id="imgTNamed_InhMem" class="tab" href="inhmem/TNamed_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TNamed_InhMem.png');">Inherited Members</a>
-<a id="imgTNamed_Incl" class="tab" href="incl/TNamed_Incl.png" onclick="javascript:return SetImg('Charts','incl/TNamed_Incl.png');">Includes</a>
-<a id="imgTNamed_Lib" class="tab" href="lib/TNamed_Lib.png" onclick="javascript:return SetImg('Charts','lib/TNamed_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTNamed_Inh" src="inh/TNamed_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="GMemObj" href="./GMemObj.html">GMemObj</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="GPadObj" href="./GPadObj.html">GPadObj</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="ROOT::THnBaseBrowsable" href="./ROOT__THnBaseBrowsable.html">ROOT::THnBaseBrowsable</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="ROOT::TSchemaRule::TSources" href="./ROOT__TSchemaRule__TSources.html">ROOT::TSchemaRule::TSources</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TAxis" href="./TAxis.html">TAxis</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TAxis3D" href="./TAxis3D.html">TAxis3D</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TBenchmark" href="./TBenchmark.html">TBenchmark</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TBranch" href="./TBranch.html">TBranch</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TBranchClones" href="./TBranchClones.html">TBranchClones</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TBranchElement" href="./TBranchElement.html">TBranchElement</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td><td align="left">&nbsp;<a href="ClassHierarchy.html">[more...]</a></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TNamed:TNamed@3" href="src/TNamed.cxx.html#nWceJC">TNamed</a>(<span class="keyword">const</span> <a href="./TNamed.html">TNamed</a>&amp; named)</span><br />
 <div class="funccomm"><pre> <a href="./TNamed.html">TNamed</a> copy ctor.
@@ -441,7 +385,7 @@ overridden by the derived classes.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   26/12/94</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

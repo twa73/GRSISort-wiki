@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:35:23 2015            -->
+<!--   Date: Tue May  5 12:09:01 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -149,10 +149,10 @@ ClassImp(<a href="../TLegendEntry.html">TLegendEntry</a>)
    <span class="keyword">if</span> ( <a href="../TLegendEntry.html#TLegendEntry:fObject" title="TObject* TLegendEntry::fObject">fObject</a> ) objname = <a href="../TLegendEntry.html#TLegendEntry:fObject" title="TObject* TLegendEntry::fObject">fObject</a>-><a href="../TObject.html#TObject:GetName" title="const char* TObject::GetName()">GetName</a>();
    out &lt;&lt; name &lt;&lt; <span class="string">"-&gt;AddEntry("</span>&lt;&lt;quote&lt;&lt;objname&lt;&lt;quote&lt;&lt;<span class="string">","</span>&lt;&lt;quote&lt;&lt;
       <a href="../TLegendEntry.html#TLegendEntry:fLabel" title="TString TLegendEntry::fLabel">fLabel</a>.<a href="../TString.html#TString:Data" title="const char* TString::Data()">Data</a>()&lt;&lt;quote&lt;&lt;<span class="string">","</span>&lt;&lt;quote&lt;&lt;<a href="../TLegendEntry.html#TLegendEntry:fOption" title="TString TLegendEntry::fOption">fOption</a>.<a href="../TString.html#TString:Data" title="const char* TString::Data()">Data</a>()&lt;&lt;quote&lt;&lt;<span class="string">");"</span>&lt;&lt;endl;
-   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out,<span class="string">"entry"</span>,0,0);
-   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out,<span class="string">"entry"</span>,0,0,0);
-   <a href="../TAttMarker.html#TAttMarker:SaveMarkerAttributes" title="void TAttMarker::SaveMarkerAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t sizdef=1)">SaveMarkerAttributes</a>(out,<span class="string">"entry"</span>,0,0,0);
-   <a href="../TAttText.html#TAttText:SaveTextAttributes" title="void TAttText::SaveTextAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t alidef=12,Float_t angdef=0,Int_t coldef=1,Int_t fondef=61,Float_t sizdef=1)">SaveTextAttributes</a>(out,<span class="string">"entry"</span>,0,0,0,0,0);
+   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out,<span class="string">"entry"</span>,0,0);
+   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out,<span class="string">"entry"</span>,0,0,0);
+   <a href="../TAttMarker.html#TAttMarker:SaveMarkerAttributes" title="void TAttMarker::SaveMarkerAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t sizdef=1)">SaveMarkerAttributes</a>(out,<span class="string">"entry"</span>,0,0,0);
+   <a href="../TAttText.html#TAttText:SaveTextAttributes" title="void TAttText::SaveTextAttributes(ostream&amp; out,const char* name,Int_t alidef=12,Float_t angdef=0,Int_t coldef=1,Int_t fondef=61,Float_t sizdef=1)">SaveTextAttributes</a>(out,<span class="string">"entry"</span>,0,0,0,0,0);
 }
 
 
@@ -186,7 +186,7 @@ ClassImp(<a href="../TLegendEntry.html">TLegendEntry</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:35 </em><em>&raquo; Last generated: 2015-03-04 20:35</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

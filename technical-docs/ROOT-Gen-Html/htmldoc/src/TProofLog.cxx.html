@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:41 2015            -->
+<!--   Date: Tue May  5 12:09:24 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -63,10 +63,10 @@ ClassImp(<a href="../TProofLog.html">TProofLog</a>)
    <span class="comment">// Extract real starting time</span>
    <a href="../TString.html">TString</a> st(stag);
    <a href="../ListOfTypes.html#Int_t">Int_t</a> idx = st.Index(<span class="string">'-'</span>);
-   <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#int">kNPOS</a>) {
       st.Remove(0, idx+1);
       idx = st.Index(<span class="string">'-'</span>);
-      <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (idx != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          st.Remove(idx);
          <span class="keyword">if</span> (st.IsDigit()) {
             <a href="../TProofLog.html#TProofLog:fStartTime" title="TDatime TProofLog::fStartTime">fStartTime</a>.<a href="../TDatime.html#TDatime:Set" title="void TDatime::Set() or overloads">Set</a>(st.Atoi());
@@ -511,7 +511,7 @@ ClassImp(<a href="../TProofLog.html">TProofLog</a>)
    <span class="comment">// Separate out the submaster path, if any</span>
    <a href="../TString.html">TString</a> path(<a href="../TNamed.html#TNamed:GetTitle" title="const char* TNamed::GetTitle()">GetTitle</a>());
    <a href="../ListOfTypes.html#Int_t">Int_t</a> ic = path.Index(<span class="string">","</span>);
-   <span class="keyword">if</span> (ic != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <span class="keyword">if</span> (ic != <a href="../ListOfTypes.html#int">kNPOS</a>) {
       <a href="../TString.html">TString</a> subm(path);
       path.Remove(0, ic+1);
       subm.Remove(ic);
@@ -608,7 +608,7 @@ ClassImp(<a href="../TProofLog.html">TProofLog</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

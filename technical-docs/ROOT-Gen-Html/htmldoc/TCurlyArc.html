@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:46 2015            -->
+<!--   Date: Tue May  5 12:01:20 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TCurlyArc.h.html">header file</a>
 <a class="descrheadentry" href="src/TCurlyArc.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TCurlyArc_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -181,8 +181,8 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:ResetAttLine"><span class="baseclass">TAttLine::</span>ResetAttLine</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttFill.html#TAttFill:SaveFillAttributes"><span class="baseclass">TAttFill::</span>SaveFillAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1001)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TAttLine.html#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCurlyArc:SavePrimitive">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TCurlyLine.html#TCurlyLine:SetAmplitude"><span class="baseclass">TCurlyLine::</span>SetAmplitude</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TCurlyArc:SetBBoxCenter">SetBBoxCenter</a>(<span class="keyword">const</span> <a href="./TPoint.html">TPoint</a>&amp; p)</td></tr>
@@ -311,67 +311,62 @@ return false;}
 </table></div>
 </div>
 <h2><a id="TCurlyArc:Class_Charts"></a>Class Charts</h2>
-<map name="MapTCurlyArc_Inh" id="MapTCurlyArc_Inh">
-<area shape="rect" id="node3" href="./TCurlyLine.html" title="TCurlyLine" alt="" coords="419,43,558,71"/>
-<area shape="rect" id="node4" href="./TPolyLine.html" title="TPolyLine" alt="" coords="210,29,349,57"/>
-<area shape="rect" id="node5" href="./TAttBBox2D.html" title="TAttBBox2D" alt="" coords="210,57,349,84"/>
-<area shape="rect" id="node6" href="./TObject.html" title="TObject" alt="" coords="2,2,141,29"/>
-<area shape="rect" id="node7" href="./TAttLine.html" title="TAttLine" alt="" coords="2,29,141,57"/>
-<area shape="rect" id="node8" href="./TAttFill.html" title="TAttFill" alt="" coords="2,57,141,84"/>
-</map>
-<map name="MapTCurlyArc_InhMem" id="MapTCurlyArc_InhMem">
-<area shape="rect" id="graph12" href="./TCurlyLine.html" alt="" coords="859,63,947,143"/>
-<area shape="rect" id="graph13" href="./TCurlyLine.html" alt="" coords="760,63,848,143"/>
-<area shape="rect" id="graph14" href="./TCurlyLine.html" alt="" coords="661,63,749,143"/>
-<area shape="rect" id="graph15" href="./TCurlyLine.html" alt="" coords="891,153,915,175"/>
-<area shape="rect" id="graph16" href="./TCurlyLine.html" alt="" coords="859,185,947,411"/>
-<area shape="rect" id="graph17" href="./TCurlyLine.html" alt="" coords="760,156,848,411"/>
-<area shape="rect" id="graph18" href="./TCurlyLine.html" alt="" coords="661,156,749,411"/>
-<area shape="rect" id="graph11" href="./TCurlyLine.html" title="TCurlyLine" alt="" coords="651,16,957,421"/>
-<area shape="rect" id="graph21" href="./TPolyLine.html" alt="" coords="541,63,629,99"/>
-<area shape="rect" id="graph22" href="./TPolyLine.html" alt="" coords="443,63,531,128"/>
-<area shape="rect" id="graph23" href="./TPolyLine.html" alt="" coords="344,63,432,128"/>
-<area shape="rect" id="graph24" href="./TPolyLine.html" alt="" coords="573,109,597,131"/>
-<area shape="rect" id="graph25" href="./TPolyLine.html" alt="" coords="541,141,629,337"/>
-<area shape="rect" id="graph26" href="./TPolyLine.html" alt="" coords="443,139,531,349"/>
-<area shape="rect" id="graph27" href="./TPolyLine.html" alt="" coords="344,139,432,349"/>
-<area shape="rect" id="graph20" href="./TPolyLine.html" title="TPolyLine" alt="" coords="333,16,640,360"/>
-<area shape="rect" id="graph30" href="./TAttBBox2D.html" alt="" coords="376,713,629,749"/>
-<area shape="rect" id="graph31" href="./TAttBBox2D.html" alt="" coords="541,760,629,883"/>
-<area shape="rect" id="graph32" href="./TAttBBox2D.html" alt="" coords="443,760,531,897"/>
-<area shape="rect" id="graph33" href="./TAttBBox2D.html" alt="" coords="344,760,432,897"/>
-<area shape="rect" id="graph29" href="./TAttBBox2D.html" title="TAttBBox2D" alt="" coords="333,667,640,908"/>
-<area shape="rect" id="graph36" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph37" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph38" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph39" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph40" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph41" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph42" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph35" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-<area shape="rect" id="graph45" href="./TAttLine.html" alt="" coords="224,699,312,749"/>
-<area shape="rect" id="graph46" href="./TAttLine.html" alt="" coords="125,699,213,749"/>
-<area shape="rect" id="graph47" href="./TAttLine.html" alt="" coords="59,699,83,720"/>
-<area shape="rect" id="graph48" href="./TAttLine.html" alt="" coords="224,760,312,897"/>
-<area shape="rect" id="graph49" href="./TAttLine.html" alt="" coords="125,760,213,927"/>
-<area shape="rect" id="graph50" href="./TAttLine.html" alt="" coords="27,760,115,927"/>
-<area shape="rect" id="graph44" href="./TAttLine.html" title="TAttLine" alt="" coords="16,652,323,937"/>
-<area shape="rect" id="graph53" href="./TAttFill.html" alt="" coords="27,995,312,1031"/>
-<area shape="rect" id="graph54" href="./TAttFill.html" alt="" coords="224,1041,312,1179"/>
-<area shape="rect" id="graph55" href="./TAttFill.html" alt="" coords="125,1041,213,1193"/>
-<area shape="rect" id="graph56" href="./TAttFill.html" alt="" coords="27,1041,115,1193"/>
-<area shape="rect" id="graph52" href="./TAttFill.html" title="TAttFill" alt="" coords="16,948,323,1204"/>
-</map>
-<map name="MapTCurlyArc_Lib" id="MapTCurlyArc_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="408,207,523,255"/>
-</map>
-<div class="tabs">
-<a id="imgTCurlyArc_Inh" class="tabsel" href="inh/TCurlyArc_Inh.png" onclick="javascript:return SetImg('Charts','inh/TCurlyArc_Inh.png');">Inheritance</a>
-<a id="imgTCurlyArc_InhMem" class="tab" href="inhmem/TCurlyArc_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TCurlyArc_InhMem.png');">Inherited Members</a>
-<a id="imgTCurlyArc_Incl" class="tab" href="incl/TCurlyArc_Incl.png" onclick="javascript:return SetImg('Charts','incl/TCurlyArc_Incl.png');">Includes</a>
-<a id="imgTCurlyArc_Lib" class="tab" href="lib/TCurlyArc_Lib.png" onclick="javascript:return SetImg('Charts','lib/TCurlyArc_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTCurlyArc_Inh" src="inh/TCurlyArc_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td>
+<center><tt><a name="TAttLine" href="./TAttLine.html">TAttLine</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td>
+<center><tt><a name="TAttFill" href="./TAttFill.html">TAttFill</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TPolyLine" href="./TPolyLine.html">TPolyLine</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TAttBBox2D" href="./TAttBBox2D.html">TAttBBox2D</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TCurlyLine" href="./TCurlyLine.html">TCurlyLine</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TCurlyArc" href="./TCurlyArc.html">TCurlyArc</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TCurlyArc:TCurlyArc" href="src/TCurlyArc.cxx.html#pZNnF">TCurlyArc</a>()</span><br />
 <div class="funccomm"><pre> Default constructor
@@ -517,7 +512,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Otto+Schaile"> Otto Schaile   20/11/99</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/graf:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: root/graf:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

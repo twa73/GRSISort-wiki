@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:29:01 2015            -->
+<!--   Date: Tue May  5 12:01:23 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -145,7 +145,7 @@ ClassImp(<a href="../TDocDirective.html">TDocDirective</a>);
          <span class="keyword">continue</span>;
 
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posAssign = param.Index(<span class="string">'='</span>);
-      <span class="keyword">if</span> (posAssign != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (posAssign != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          <a href="../TString.html">TString</a> value(param(posAssign + 1, param.Length()));
          value = value.Strip(<a href="../TString.html">TString</a>::<a href="../TString.html#TString:kBoth" title="const TString::EStripType TString::kBoth">kBoth</a>);
          <span class="keyword">if</span> (value[0] == <span class="string">'\''</span>)
@@ -190,15 +190,15 @@ ClassImp(<a href="../TDocHtmlDirective.html">TDocHtmlDirective</a>);
    <a href="../TPRegexp.html">TPRegexp</a> pretag(<span class="string">"&lt;/?[pP][rR][eE][ &gt;]"</span>);
    <a href="../TSubString.html">TSubString</a> iLine(line);
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posPre = iLine.String().Index(pretag, iLine.Start());
-   <span class="keyword">if</span> (posPre == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+   <span class="keyword">if</span> (posPre == <a href="../ListOfTypes.html#int">kNPOS</a>)
       fText += line;
    <span class="keyword">else</span> {
       <span class="comment">// remove &lt;pre&gt; in fVerbatim environments, and </span>
       <span class="comment">// &lt;/pre&gt; in !fVerbatim environments.</span>
-      <span class="keyword">while</span> (posPre != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; posPre &gt; 0) {
+      <span class="keyword">while</span> (posPre != <a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; posPre &gt; 0) {
          <a href="../ListOfTypes.html#Bool_t">Bool_t</a> isOpen = line[posPre + 1 - line.Start()] != <span class="string">'/'</span>;
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posClose = iLine.String().Index(<span class="string">"&gt;"</span>, posPre);
-         <span class="keyword">if</span> (posClose ==<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">break</span>; <span class="comment">// aka oops.</span>
+         <span class="keyword">if</span> (posClose ==<a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">break</span>; <span class="comment">// aka oops.</span>
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> len = posClose - posPre;
 
          <span class="keyword">if</span> (fVerbatim) {
@@ -376,7 +376,7 @@ ClassImp(<a href="../TDocMacroDirective.html">TDocMacroDirective</a>);
       <a href="../TString.html">TString</a> params;
       <span class="keyword">if</span> (filename.EndsWith(<span class="string">")"</span>)) {
          <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> posOpen = filename.Last(<span class="string">'('</span>);
-         <span class="keyword">if</span> (posOpen != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+         <span class="keyword">if</span> (posOpen != <a href="../ListOfTypes.html#int">kNPOS</a>) {
             params = filename(posOpen, filename.Length());
             filename.Remove(posOpen, filename.Length());
          }
@@ -701,7 +701,7 @@ ClassImp(<a href="../TDocLatexDirective.html">TDocLatexDirective</a>);
          <span class="keyword">else</span> {
             <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> prevStart = 0;
             <span class="keyword">for</span> (<a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> pos = 0; pos &lt; str.Length(); ++pos) {
-               <span class="keyword">if</span> (fSeparator.Index(str[pos]) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+               <span class="keyword">if</span> (fSeparator.Index(str[pos]) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
                   split-&gt;Add(<span class="keyword">new</span> <a href="../TObjString.html">TObjString</a>(<a href="../TString.html">TString</a>(str(prevStart, pos - prevStart))));
                   split-&gt;Add(<span class="keyword">new</span> <a href="../TObjString.html">TObjString</a>(<a href="../TString.html">TString</a>(str(pos, 1))));
                   prevStart = pos + 1;
@@ -887,7 +887,7 @@ ClassImp(<a href="../TDocLatexDirective.html">TDocLatexDirective</a>);
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:29 </em><em>&raquo; Last generated: 2015-03-04 20:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:34:14 2015            -->
+<!--   Date: Tue May  5 12:06:24 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -832,7 +832,7 @@ End_Macro */</span>
    <span class="comment">// in case of option *, set marker style to 3 (star) and replace</span>
    <span class="comment">// * option by option P.</span>
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> pos;
-   <span class="keyword">if</span> ((pos = opt.Index(<span class="string">"*"</span>)) != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+   <span class="keyword">if</span> ((pos = opt.Index(<span class="string">"*"</span>)) != <a href="../ListOfTypes.html#int">kNPOS</a>) {
       <a href="../TAttMarker.html#TAttMarker:SetMarkerStyle" title="void TAttMarker::SetMarkerStyle(Style_t mstyle=1)">SetMarkerStyle</a>(3);
       opt.Replace(pos, 1, <span class="string">"p"</span>);
    }
@@ -2148,9 +2148,9 @@ End_Macro */</span>
    out &lt;&lt; <span class="string">"   graph-&gt;SetName("</span> &lt;&lt; quote &lt;&lt; <a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>() &lt;&lt; quote &lt;&lt; <span class="string">");"</span> &lt;&lt; endl;
    out &lt;&lt; <span class="string">"   graph-&gt;SetTitle("</span> &lt;&lt; quote &lt;&lt; <a href="../TNamed.html#TNamed:GetTitle" title="const char* TNamed::GetTitle()">GetTitle</a>() &lt;&lt; quote &lt;&lt; <span class="string">");"</span> &lt;&lt; endl;
 
-   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out, <span class="string">"graph"</span>, 0, 1001);
-   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out, <span class="string">"graph"</span>, 1, 1, 1);
-   <a href="../TAttMarker.html#TAttMarker:SaveMarkerAttributes" title="void TAttMarker::SaveMarkerAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t sizdef=1)">SaveMarkerAttributes</a>(out, <span class="string">"graph"</span>, 1, 1, 1);
+   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out, <span class="string">"graph"</span>, 0, 1001);
+   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out, <span class="string">"graph"</span>, 1, 1, 1);
+   <a href="../TAttMarker.html#TAttMarker:SaveMarkerAttributes" title="void TAttMarker::SaveMarkerAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t sizdef=1)">SaveMarkerAttributes</a>(out, <span class="string">"graph"</span>, 1, 1, 1);
 
    <span class="keyword">if</span> (<a href="../TGraph.html#TGraph:fNpoints" title="Int_t TGraph::fNpoints">fNpoints</a> &gt;= 1) {
       <a href="../ListOfTypes.html#streamsize">streamsize</a> prec = out.precision();
@@ -2675,7 +2675,7 @@ L170:
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:34 </em><em>&raquo; Last generated: 2015-03-04 20:34</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:06 </em><em>&raquo; Last generated: 2015-05-05 12:06</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

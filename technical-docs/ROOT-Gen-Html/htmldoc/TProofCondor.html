@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:38 2015            -->
+<!--   Date: Tue May  5 12:09:23 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TProofCondor.h.html">header file</a>
 <a class="descrheadentry" href="src/TProofCondor.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TProofCondor_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -339,7 +339,7 @@ messages to all slaves, it collects results, etc.
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:Retrieve@1"><span class="baseclass">TProof::</span>Retrieve</a>(<span class="keyword">const</span> <span class="keyword">char</span>* queryref, <span class="keyword">const</span> <span class="keyword">char</span>* path = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SavePerfTree"><span class="baseclass">TProof::</span>SavePerfTree</a>(<span class="keyword">const</span> <span class="keyword">char</span>* pf = 0, <span class="keyword">const</span> <span class="keyword">char</span>* qref = 0)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SendDataSetStatus"><span class="baseclass">TProof::</span>SendDataSetStatus</a>(<span class="keyword">const</span> <span class="keyword">char</span>* msg, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> n, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> tot, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> st)</td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SendingLogToWindow"><span class="baseclass">TProof::</span>SendingLogToWindow</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SendLogToWindow"><span class="baseclass">TProof::</span>SendLogToWindow</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> mode)</td></tr>
@@ -423,6 +423,7 @@ messages to all slaves, it collects results, etc.
 <tr class="funcinh"><td class="funcret"><a href="./TSlave.html">TSlave</a>*</td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:CreateSlave"><span class="baseclass">TProof::</span>CreateSlave</a>(<span class="keyword">const</span> <span class="keyword">char</span>* url, <span class="keyword">const</span> <span class="keyword">char</span>* ord, <a href="./ListOfTypes.html#Int_t">Int_t</a> perf, <span class="keyword">const</span> <span class="keyword">char</span>* image, <span class="keyword">const</span> <span class="keyword">char</span>* workdir)</td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./TSlave.html">TSlave</a>*</td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:CreateSubmaster"><span class="baseclass">TProof::</span>CreateSubmaster</a>(<span class="keyword">const</span> <span class="keyword">char</span>* url, <span class="keyword">const</span> <span class="keyword">char</span>* ord, <span class="keyword">const</span> <span class="keyword">char</span>* image, <span class="keyword">const</span> <span class="keyword">char</span>* msd)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TList.html">TList</a>*</td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:GetEnabledPackages"><span class="baseclass">TProof::</span>GetEnabledPackages</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:GetFileInCmd"><span class="baseclass">TProof::</span>GetFileInCmd</a>(<span class="keyword">const</span> <span class="keyword">char</span>* cmd, <a href="./TString.html">TString</a>&amp; fn)</td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:GetInputData"><span class="baseclass">TProof::</span>GetInputData</a>(<a href="./TList.html">TList</a>* input, <span class="keyword">const</span> <span class="keyword">char</span>* cachedir, <a href="./TString.html">TString</a>&amp; emsg)</td></tr>
 <tr class="func"><td class="funcret"><a href="./TString.html">TString</a></td><td class="funcname"><a class="funcname" href="#TProofCondor:GetJobAd">GetJobAd</a>()</td></tr>
@@ -438,6 +439,7 @@ messages to all slaves, it collects results, etc.
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:InitMembers"><span class="baseclass">TProof::</span>InitMembers</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TVirtualProofPlayer.html">TVirtualProofPlayer</a>*</td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:MakePlayer"><span class="baseclass">TProof::</span>MakePlayer</a>(<span class="keyword">const</span> <span class="keyword">char</span>* player = 0, <a href="./TSocket.html">TSocket</a>* s = 0)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:PollForNewWorkers"><span class="baseclass">TProof::</span>PollForNewWorkers</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:PrepareInputDataFile"><span class="baseclass">TProof::</span>PrepareInputDataFile</a>(<a href="./TString.html">TString</a>&amp; dataFile)</td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:RemoveWorkers"><span class="baseclass">TProof::</span>RemoveWorkers</a>(<a href="./TList.html">TList</a>* wrks)</td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SaveInputData"><span class="baseclass">TProof::</span>SaveInputData</a>(<a href="./TQueryResult.html">TQueryResult</a>* qr, <span class="keyword">const</span> <span class="keyword">char</span>* cachedir, <a href="./TString.html">TString</a>&amp; emsg)</td></tr>
@@ -448,6 +450,7 @@ messages to all slaves, it collects results, etc.
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SetDSet"><span class="baseclass">TProof::</span>SetDSet</a>(<a href="./TDSet.html">TDSet</a>* dset)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SetFeedback"><span class="baseclass">TProof::</span>SetFeedback</a>(<a href="./TString.html">TString</a>&amp; opt, <a href="./TString.html">TString</a>&amp; optfb, <a href="./ListOfTypes.html#Int_t">Int_t</a> action)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SetPlayer"><span class="baseclass">TProof::</span>SetPlayer</a>(<a href="./TVirtualProofPlayer.html">TVirtualProofPlayer</a>* player)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SetupWorkersEnv"><span class="baseclass">TProof::</span>SetupWorkersEnv</a>(<a href="./TList.html">TList</a>* wrks, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> increasingpool = <a href="./ListOfTypes.html#Bool_t">kFALSE</a>)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SlaveStartupThread"><span class="baseclass">TProof::</span>SlaveStartupThread</a>(<span class="keyword">void</span>* arg)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TProofCondor:StartSlaves">StartSlaves</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a>)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TProof.html#TProof:SystemCmd"><span class="baseclass">TProof::</span>SystemCmd</a>(<span class="keyword">const</span> <span class="keyword">char</span>* cmd, <a href="./ListOfTypes.html#Int_t">Int_t</a> fdout)</td></tr>
@@ -549,8 +552,10 @@ messages to all slaves, it collects results, etc.
 <tr class="datainh"><td class="datatype"><a href="./TProofMgr.html">TProofMgr</a>*</td><td class="dataname"><a href="./TProof.html#TProof:fManager"><span class="baseclass">TProof::</span>fManager</a></td><td class="datadesc">manager to which this session belongs (if any)</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a href="./TProof.html#TProof:fMasterServ"><span class="baseclass">TProof::</span>fMasterServ</a></td><td class="datadesc">true if we are a master server</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./TString.html">TString</a></td><td class="dataname"><a href="./TNamed.html#TNamed:fName"><span class="baseclass">TNamed::</span>fName</a></td><td class="datadesc">object identifier</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a href="./TProof.html#TProof:fPrepTime"><span class="baseclass">TProof::</span>fPrepTime</a></td><td class="datadesc">Preparation time</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a href="./TProof.html#TProof:fProtocol"><span class="baseclass">TProof::</span>fProtocol</a></td><td class="datadesc">remote PROOF server protocol version number</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./TProof.html">TProof</a>::EQueryMode</td><td class="dataname"><a href="./TProof.html#TProof:fQueryMode"><span class="baseclass">TProof::</span>fQueryMode</a></td><td class="datadesc">default query mode</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TStopwatch.html">TStopwatch</a></td><td class="dataname"><a href="./TProof.html#TProof:fQuerySTW"><span class="baseclass">TProof::</span>fQuerySTW</a></td><td class="datadesc">Stopwatch to measure query times</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./TList.html">TList</a>*</td><td class="dataname"><a href="./TProof.html#TProof:fRunningDSets"><span class="baseclass">TProof::</span>fRunningDSets</a></td><td class="datadesc">Temporary datasets used for async running</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./TSelector.html">TSelector</a>*</td><td class="dataname"><a href="./TProof.html#TProof:fSelector"><span class="baseclass">TProof::</span>fSelector</a></td><td class="datadesc">Selector to be processed, if any</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./TProofMgr.html">TProofMgr</a>::EServType</td><td class="dataname"><a href="./TProof.html#TProof:fServType"><span class="baseclass">TProof::</span>fServType</a></td><td class="datadesc">type of server: proofd, XrdProofd</td></tr>
@@ -572,53 +577,48 @@ messages to all slaves, it collects results, etc.
 </table></div>
 </div>
 <h2><a id="TProofCondor:Class_Charts"></a>Class Charts</h2>
-<map name="MapTProofCondor_Inh" id="MapTProofCondor_Inh">
-<area shape="rect" id="node3" href="./TProof.html" title="TProof" alt="" coords="401,15,534,41"/>
-<area shape="rect" id="node4" href="./TNamed.html" title="TNamed" alt="" coords="201,2,335,28"/>
-<area shape="rect" id="node5" href="./TQObject.html" title="TQObject" alt="" coords="201,28,335,54"/>
-<area shape="rect" id="node6" href="./TObject.html" title="TObject" alt="" coords="2,2,135,28"/>
-</map>
-<map name="MapTProofCondor_InhMem" id="MapTProofCondor_InhMem">
-<area shape="rect" id="graph9" href="./TProof.html" alt="" coords="859,63,947,1037"/>
-<area shape="rect" id="graph10" href="./TProof.html" alt="" coords="760,63,848,1067"/>
-<area shape="rect" id="graph11" href="./TProof.html" alt="" coords="661,63,749,1067"/>
-<area shape="rect" id="graph12" href="./TProof.html" alt="" coords="891,1048,915,1069"/>
-<area shape="rect" id="graph13" href="./TProof.html" alt="" coords="859,1080,947,2523"/>
-<area shape="rect" id="graph14" href="./TProof.html" alt="" coords="760,1077,848,2535"/>
-<area shape="rect" id="graph15" href="./TProof.html" alt="" coords="661,1077,749,2535"/>
-<area shape="rect" id="graph8" href="./TProof.html" title="TProof" alt="" coords="651,16,957,2545"/>
-<area shape="rect" id="graph18" href="./TNamed.html" alt="" coords="344,63,629,99"/>
-<area shape="rect" id="graph19" href="./TNamed.html" alt="" coords="541,109,629,276"/>
-<area shape="rect" id="graph20" href="./TNamed.html" alt="" coords="443,109,531,276"/>
-<area shape="rect" id="graph21" href="./TNamed.html" alt="" coords="344,109,432,276"/>
-<area shape="rect" id="graph17" href="./TNamed.html" title="TNamed" alt="" coords="333,16,640,287"/>
-<area shape="rect" id="graph24" href="./TQObject.html" alt="" coords="541,1287,629,1323"/>
-<area shape="rect" id="graph25" href="./TQObject.html" alt="" coords="443,1287,531,1337"/>
-<area shape="rect" id="graph26" href="./TQObject.html" alt="" coords="344,1287,432,1337"/>
-<area shape="rect" id="graph27" href="./TQObject.html" alt="" coords="573,1333,597,1355"/>
-<area shape="rect" id="graph28" href="./TQObject.html" alt="" coords="541,1365,629,1591"/>
-<area shape="rect" id="graph29" href="./TQObject.html" alt="" coords="443,1365,531,1591"/>
-<area shape="rect" id="graph30" href="./TQObject.html" alt="" coords="344,1365,432,1591"/>
-<area shape="rect" id="graph23" href="./TQObject.html" title="TQObject" alt="" coords="333,1240,640,1601"/>
-<area shape="rect" id="graph33" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph34" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph35" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph36" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph37" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph38" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph39" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph32" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTProofCondor_Lib" id="MapTProofCondor_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="416,247,531,295"/>
-</map>
-<div class="tabs">
-<a id="imgTProofCondor_Inh" class="tabsel" href="inh/TProofCondor_Inh.png" onclick="javascript:return SetImg('Charts','inh/TProofCondor_Inh.png');">Inheritance</a>
-<a id="imgTProofCondor_InhMem" class="tab" href="inhmem/TProofCondor_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TProofCondor_InhMem.png');">Inherited Members</a>
-<a id="imgTProofCondor_Incl" class="tab" href="incl/TProofCondor_Incl.png" onclick="javascript:return SetImg('Charts','incl/TProofCondor_Incl.png');">Includes</a>
-<a id="imgTProofCondor_Lib" class="tab" href="lib/TProofCondor_Lib.png" onclick="javascript:return SetImg('Charts','lib/TProofCondor_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTProofCondor_Inh" src="inh/TProofCondor_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TNamed" href="./TNamed.html">TNamed</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TQObject" href="./TQObject.html">TQObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TProof" href="./TProof.html">TProof</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TProofCondor" href="./TProofCondor.html">TProofCondor</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TProofCondor:TProofCondor" href="src/TProofCondor.cxx.html#jR5tlC">TProofCondor</a>(<span class="keyword">const</span> <span class="keyword">char</span>* masterurl, <span class="keyword">const</span> <span class="keyword">char</span>* conffile = kPROOF_ConfFile, <span class="keyword">const</span> <span class="keyword">char</span>* confdir = kPROOF_ConfDir, <a href="./ListOfTypes.html#Int_t">Int_t</a> loglevel = 0, <span class="keyword">const</span> <span class="keyword">char</span>* alias = 0, <a href="./TProofMgr.html">TProofMgr</a>* mgr = 0)</span><br />
 <div class="funccomm"><pre> Start proof using condor
@@ -650,7 +650,7 @@ messages to all slaves, it collects results, etc.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   13/02/97</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/proof:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: root/proof:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

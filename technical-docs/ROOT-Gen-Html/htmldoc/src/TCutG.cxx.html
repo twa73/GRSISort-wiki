@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:48 2015            -->
+<!--   Date: Tue May  5 12:01:20 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -394,9 +394,9 @@ ClassImp(<a href="../TCutG.html">TCutG</a>)
    out&lt;&lt;<span class="string">"   cutg-&gt;SetVarY("</span>&lt;&lt;quote&lt;&lt;<a href="../TCutG.html#TCutG:GetVarY" title="const char* TCutG::GetVarY()">GetVarY</a>()&lt;&lt;quote&lt;&lt;<span class="string">");"</span>&lt;&lt;endl;
    out&lt;&lt;<span class="string">"   cutg-&gt;SetTitle("</span>&lt;&lt;quote&lt;&lt;<a href="../TNamed.html#TNamed:GetTitle" title="const char* TNamed::GetTitle()">GetTitle</a>()&lt;&lt;quote&lt;&lt;<span class="string">");"</span>&lt;&lt;endl;
 
-   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out,<span class="string">"cutg"</span>,0,1001);
-   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out,<span class="string">"cutg"</span>,1,1,1);
-   <a href="../TAttMarker.html#TAttMarker:SaveMarkerAttributes" title="void TAttMarker::SaveMarkerAttributes(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t sizdef=1)">SaveMarkerAttributes</a>(out,<span class="string">"cutg"</span>,1,1,1);
+   <a href="../TAttFill.html#TAttFill:SaveFillAttributes" title="void TAttFill::SaveFillAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1001)">SaveFillAttributes</a>(out,<span class="string">"cutg"</span>,0,1001);
+   <a href="../TAttLine.html#TAttLine:SaveLineAttributes" title="void TAttLine::SaveLineAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t widdef=1)">SaveLineAttributes</a>(out,<span class="string">"cutg"</span>,1,1,1);
+   <a href="../TAttMarker.html#TAttMarker:SaveMarkerAttributes" title="void TAttMarker::SaveMarkerAttributes(ostream&amp; out,const char* name,Int_t coldef=1,Int_t stydef=1,Int_t sizdef=1)">SaveMarkerAttributes</a>(out,<span class="string">"cutg"</span>,1,1,1);
 
    <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> i=0;i&lt;fNpoints;i++) {
       out&lt;&lt;<span class="string">"   cutg-&gt;SetPoint("</span>&lt;&lt;i&lt;&lt;<span class="string">","</span>&lt;&lt;fX[i]&lt;&lt;<span class="string">","</span>&lt;&lt;fY[i]&lt;&lt;<span class="string">");"</span>&lt;&lt;endl;
@@ -465,7 +465,7 @@ ClassImp(<a href="../TCutG.html">TCutG</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:28 </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

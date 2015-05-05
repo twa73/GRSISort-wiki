@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:24 2015            -->
+<!--   Date: Tue May  5 12:01:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TBufferXML.h.html">header file</a>
 <a class="descrheadentry" href="src/TBufferXML.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TBufferXML_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -136,6 +136,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:GetGlobalWriteParam"><span class="baseclass">TBufferFile::</span>GetGlobalWriteParam</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TVirtualStreamerInfo.html">TVirtualStreamerInfo</a>*</td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:GetInfo"><span class="baseclass">TBufferFile::</span>GetInfo</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TBufferXML:GetIOVersion">GetIOVersion</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TProcessID.html">TProcessID</a>*</td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:GetLastProcessID"><span class="baseclass">TBufferFile::</span>GetLastProcessID</a>(<a href="./TRefTable.html">TRefTable</a>* reftable) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:GetMapCount"><span class="baseclass">TBufferFile::</span>GetMapCount</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:GetMappedObject"><span class="baseclass">TBufferFile::</span>GetMappedObject</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> tag, <span class="keyword">void</span>*&amp; ptr, <a href="./TClass.html">TClass</a>*&amp; ClassPtr) <span class="keyword">const</span></td></tr>
@@ -267,6 +268,7 @@ return false;}
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TBufferXML:ReadStaticArray@12">ReadStaticArray</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TBufferXML:ReadStaticArrayDouble32">ReadStaticArrayDouble32</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d, <a href="./TStreamerElement.html">TStreamerElement</a>* ele = 0)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TBufferXML:ReadStaticArrayFloat16">ReadStaticArrayFloat16</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>* f, <a href="./TStreamerElement.html">TStreamerElement</a>* ele = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TBufferXML:ReadStdString">ReadStdString</a>(string&amp; s)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ReadString"><span class="baseclass">TBufferFile::</span>ReadString</a>(<span class="keyword">char</span>* s, <a href="./ListOfTypes.html#Int_t">Int_t</a> max)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TBufferXML:ReadTString">ReadTString</a>(<a href="./TString.html">TString</a>&amp; s)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TBufferXML:ReadUChar">ReadUChar</a>(<a href="./ListOfTypes.html#UChar_t">UChar_t</a>&amp; c)</td></tr>
@@ -286,7 +288,7 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:ResetMap"><span class="baseclass">TBufferFile::</span>ResetMap</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBuffer.html#TBuffer:SetBuffer"><span class="baseclass">TBuffer::</span>SetBuffer</a>(<span class="keyword">void</span>* buf, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> bufsiz = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> adopt = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>, <a href="./ListOfTypes.html#ReAllocCharFun_t">ReAllocCharFun_t</a> reallocfunc = 0)</td></tr>
@@ -299,6 +301,7 @@ return false;}
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TBufferXML:SetFloatFormat">SetFloatFormat</a>(<span class="keyword">const</span> <span class="keyword">char</span>* fmt = <span class="string">"%e"</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:SetGlobalReadParam"><span class="baseclass">TBufferFile::</span>SetGlobalReadParam</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> mapsize)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:SetGlobalWriteParam"><span class="baseclass">TBufferFile::</span>SetGlobalWriteParam</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> mapsize)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TBufferXML:SetIOVersion">SetIOVersion</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> v)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TXMLSetup.html#TXMLSetup:SetNameSpaceBase"><span class="baseclass">TXMLSetup::</span>SetNameSpaceBase</a>(<span class="keyword">const</span> <span class="keyword">char</span>* namespacebase)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBuffer.html#TBuffer:SetParent"><span class="baseclass">TBuffer::</span>SetParent</a>(<a href="./TObject.html">TObject</a>* parent)</td></tr>
@@ -380,6 +383,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:WriteObjectAny"><span class="baseclass">TBufferFile::</span>WriteObjectAny</a>(<span class="keyword">const</span> <span class="keyword">void</span>* obj, <span class="keyword">const</span> <a href="./TClass.html">TClass</a>* ptrClass)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:WriteProcessID"><span class="baseclass">TBufferFile::</span>WriteProcessID</a>(<a href="./TProcessID.html">TProcessID</a>* pid)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TBufferXML:WriteShort">WriteShort</a>(<a href="./ListOfTypes.html#Short_t">Short_t</a> s)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TBufferXML:WriteStdString">WriteStdString</a>(<span class="keyword">const</span> string&amp; s)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TBufferFile.html#TBufferFile:WriteString"><span class="baseclass">TBufferFile::</span>WriteString</a>(<span class="keyword">const</span> <span class="keyword">char</span>* s)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TBufferXML:WriteTString">WriteTString</a>(<span class="keyword">const</span> <a href="./TString.html">TString</a>&amp; s)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TBufferXML:WriteUChar">WriteUChar</a>(<a href="./ListOfTypes.html#UChar_t">UChar_t</a> c)</td></tr>
@@ -536,6 +540,7 @@ return false;}
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TBufferXML:fErrorFlag"></a>fErrorFlag</td><td class="datadesc">!</td></tr>
 <tr class="data"><td class="datatype"><a href="./TClass.html">TClass</a>*</td><td class="dataname"><a name="TBufferXML:fExpectedBaseClass"></a>fExpectedBaseClass</td><td class="datadesc">!   pointer to class, which should be stored as parent of current</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a name="TBufferXML:fExpectedChain"></a>fExpectedChain</td><td class="datadesc">!   flag to resolve situation when several elements of same basic type stored as FastArray</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TBufferXML:fIOVersion"></a>fIOVersion</td><td class="datadesc">!   indicates format of ROOT xml file</td></tr>
 <tr class="data"><td class="datatype"><a href="./TObjArray.html">TObjArray</a>*</td><td class="dataname"><a name="TBufferXML:fIdArray"></a>fIdArray</td><td class="datadesc">!</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./TStreamerInfo.html">TStreamerInfo</a>*</td><td class="dataname"><a href="./TBufferFile.html#TBufferFile:fInfo"><span class="baseclass">TBufferFile::</span>fInfo</a></td><td class="datadesc">Pointer to TStreamerInfo object writing/reading the buffer</td></tr>
 <tr class="datainh"><td class="datatype">vector&lt;<a href="./TStreamerInfo.html">TStreamerInfo</a>*&gt;</td><td class="dataname"><a href="./TBufferFile.html#TBufferFile:fInfoStack"><span class="baseclass">TBufferFile::</span>fInfoStack</a></td><td class="datadesc">Stack of pointers to the TStreamerInfos</td></tr>
@@ -565,56 +570,48 @@ return false;}
 </table></div>
 </div>
 <h2><a id="TBufferXML:Class_Charts"></a>Class Charts</h2>
-<map name="MapTBufferXML_Inh" id="MapTBufferXML_Inh">
-<area shape="rect" id="node3" href="./TBufferFile.html" title="TBufferFile" alt="" coords="407,2,542,28"/>
-<area shape="rect" id="node4" href="./TXMLSetup.html" title="TXMLSetup" alt="" coords="407,28,542,55"/>
-<area shape="rect" id="node5" href="./TBuffer.html" title="TBuffer" alt="" coords="204,2,339,28"/>
-<area shape="rect" id="node6" href="./TObject.html" title="TObject" alt="" coords="2,2,137,28"/>
-</map>
-<map name="MapTBufferXML_InhMem" id="MapTBufferXML_InhMem">
-<area shape="rect" id="graph12" href="./TBufferFile.html" alt="" coords="859,63,947,157"/>
-<area shape="rect" id="graph13" href="./TBufferFile.html" alt="" coords="760,63,848,172"/>
-<area shape="rect" id="graph14" href="./TBufferFile.html" alt="" coords="661,63,749,172"/>
-<area shape="rect" id="graph15" href="./TBufferFile.html" alt="" coords="891,168,915,189"/>
-<area shape="rect" id="graph16" href="./TBufferFile.html" alt="" coords="859,200,947,851"/>
-<area shape="rect" id="graph17" href="./TBufferFile.html" alt="" coords="760,185,848,851"/>
-<area shape="rect" id="graph18" href="./TBufferFile.html" alt="" coords="661,185,749,851"/>
-<area shape="rect" id="graph11" href="./TBufferFile.html" title="TBufferFile" alt="" coords="651,16,957,861"/>
-<area shape="rect" id="graph21" href="./TXMLSetup.html" alt="" coords="859,919,947,969"/>
-<area shape="rect" id="graph22" href="./TXMLSetup.html" alt="" coords="760,919,848,999"/>
-<area shape="rect" id="graph23" href="./TXMLSetup.html" alt="" coords="661,919,749,999"/>
-<area shape="rect" id="graph24" href="./TXMLSetup.html" alt="" coords="891,980,915,1001"/>
-<area shape="rect" id="graph25" href="./TXMLSetup.html" alt="" coords="859,1012,947,1208"/>
-<area shape="rect" id="graph26" href="./TXMLSetup.html" alt="" coords="760,1012,848,1208"/>
-<area shape="rect" id="graph27" href="./TXMLSetup.html" alt="" coords="661,1012,749,1208"/>
-<area shape="rect" id="graph20" href="./TXMLSetup.html" title="TXMLSetup" alt="" coords="651,872,957,1219"/>
-<area shape="rect" id="graph30" href="./TBuffer.html" alt="" coords="541,63,629,143"/>
-<area shape="rect" id="graph31" href="./TBuffer.html" alt="" coords="443,63,531,172"/>
-<area shape="rect" id="graph32" href="./TBuffer.html" alt="" coords="344,63,432,172"/>
-<area shape="rect" id="graph33" href="./TBuffer.html" alt="" coords="573,153,597,175"/>
-<area shape="rect" id="graph34" href="./TBuffer.html" alt="" coords="541,185,629,924"/>
-<area shape="rect" id="graph35" href="./TBuffer.html" alt="" coords="443,185,531,924"/>
-<area shape="rect" id="graph36" href="./TBuffer.html" alt="" coords="344,185,432,924"/>
-<area shape="rect" id="graph29" href="./TBuffer.html" title="TBuffer" alt="" coords="333,16,640,935"/>
-<area shape="rect" id="graph39" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph40" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph41" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph42" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph43" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph44" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph45" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph38" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTBufferXML_Lib" id="MapTBufferXML_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="392,87,507,135"/>
-</map>
-<div class="tabs">
-<a id="imgTBufferXML_Inh" class="tabsel" href="inh/TBufferXML_Inh.png" onclick="javascript:return SetImg('Charts','inh/TBufferXML_Inh.png');">Inheritance</a>
-<a id="imgTBufferXML_InhMem" class="tab" href="inhmem/TBufferXML_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TBufferXML_InhMem.png');">Inherited Members</a>
-<a id="imgTBufferXML_Incl" class="tab" href="incl/TBufferXML_Incl.png" onclick="javascript:return SetImg('Charts','incl/TBufferXML_Incl.png');">Includes</a>
-<a id="imgTBufferXML_Lib" class="tab" href="lib/TBufferXML_Lib.png" onclick="javascript:return SetImg('Charts','lib/TBufferXML_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTBufferXML_Inh" src="inh/TBufferXML_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TBuffer" href="./TBuffer.html">TBuffer</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TBufferFile" href="./TBufferFile.html">TBufferFile</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td>
+<center><tt><a name="TXMLSetup" href="./TXMLSetup.html">TXMLSetup</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TBufferXML" href="./TBufferXML.html">TBufferXML</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TBufferXML:TBufferXML@2" href="src/TBufferXML.cxx.html#zr8kxB">TBufferXML</a>()</span><br />
 <div class="funccomm"><pre> Default constructor
@@ -886,11 +883,11 @@ return false;}
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TClass.html">TClass</a>* <a class="funcname" name="TBufferXML:ReadClass" href="src/TBufferXML.cxx.html#VDhOAD">ReadClass</a>(<span class="keyword">const</span> <a href="./TClass.html">TClass</a>* cl = 0, <a href="./ListOfTypes.html#UInt_t">UInt_t</a>* objTag = 0)</span><br />
-<div class="funccomm"><pre> suppressed function of <a href="./TBuffer.html">TBuffer</a>
+<div class="funccomm"><pre> function to read class from buffer, used in old-style streamers
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:WriteClass" href="src/TBufferXML.cxx.html#YW0Pe">WriteClass</a>(<span class="keyword">const</span> <a href="./TClass.html">TClass</a>* cl)</span><br />
-<div class="funccomm"><pre> suppressed function of <a href="./TBuffer.html">TBuffer</a>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:WriteClass" href="src/TBufferXML.cxx.html#rj3_kE">WriteClass</a>(<span class="keyword">const</span> <a href="./TClass.html">TClass</a>* cl)</span><br />
+<div class="funccomm"><pre> function to write class into buffer, used in old-style streamers
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TBufferXML:CheckByteCount" href="src/TBufferXML.cxx.html#CPwf3B">CheckByteCount</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> startpos, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> bcnt, <span class="keyword">const</span> <a href="./TClass.html">TClass</a>* clss)</span><br />
@@ -1384,8 +1381,12 @@ return false;}
 <div class="funccomm"><pre> Reads array of characters from buffer
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:ReadTString" href="src/TBufferXML.cxx.html#YCslHB">ReadTString</a>(<a href="./TString.html">TString</a>&amp; s)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:ReadTString" href="src/TBufferXML.cxx.html#CF4YaC">ReadTString</a>(<a href="./TString.html">TString</a>&amp; s)</span><br />
 <div class="funccomm"><pre> Reads a <a href="./TString.html">TString</a>
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:ReadStdString" href="src/TBufferXML.cxx.html#nJNHc">ReadStdString</a>(string&amp; s)</span><br />
+<div class="funccomm"><pre> Reads a std::string
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:WriteBool" href="src/TBufferXML.cxx.html#RwvtlB">WriteBool</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> b)</span><br />
@@ -1444,7 +1445,11 @@ return false;}
 <div class="funccomm"><pre> Writes array of characters to buffer
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:WriteTString" href="src/TBufferXML.cxx.html#BtxtfD">WriteTString</a>(<span class="keyword">const</span> <a href="./TString.html">TString</a>&amp; s)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:WriteTString" href="src/TBufferXML.cxx.html#oVow5">WriteTString</a>(<span class="keyword">const</span> <a href="./TString.html">TString</a>&amp; s)</span><br />
+<div class="funccomm"><pre> Writes a <a href="./TString.html">TString</a>
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:WriteStdString" href="src/TBufferXML.cxx.html#YCXMZ">WriteStdString</a>(<span class="keyword">const</span> string&amp; s)</span><br />
 <div class="funccomm"><pre> Writes a <a href="./TString.html">TString</a>
 </pre></div>
 </div>
@@ -1594,6 +1599,16 @@ return false;}
 <div class="funccomm"><pre>
 </pre></div>
 </div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TBufferXML:GetIOVersion" href="src/TBufferXML.h.html#ox8WNB">GetIOVersion</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TBufferXML.html#TBufferXML:fIOVersion" title="Int_t TBufferXML::fIOVersion">fIOVersion</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:SetIOVersion" href="src/TBufferXML.h.html#wATXY">SetIOVersion</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> v)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TBufferXML.html#TBufferXML:fIOVersion" title="Int_t TBufferXML::fIOVersion">fIOVersion</a> = v; }</code></div>
+<div style="clear:both;"></div>
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TBufferXML:SetXML" href="src/TBufferXML.h.html#JXM0jB">SetXML</a>(<a href="./TXMLEngine.html">TXMLEngine</a>* xml)</span><br />
 
 <div class="code"><code class="inlinecode">{ <a href="./TBufferXML.html#TBufferXML:fXML" title="TXMLEngine* TBufferXML::fXML">fXML</a> = xml; }</code></div>
@@ -1604,7 +1619,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Sergey+Linev"> Sergey Linev  10.05.2004</a> </em><em>&raquo; Copyright   (C) 1995-2004, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/xml:$Id: d90d66e8fd2aa9daa4b05bcba9166aee1e2b2e7f $ </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: root/xml:$Id: d90d66e8fd2aa9daa4b05bcba9166aee1e2b2e7f $ </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

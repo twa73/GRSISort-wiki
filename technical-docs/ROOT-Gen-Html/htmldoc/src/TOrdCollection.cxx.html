@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:09 2015            -->
+<!--   Date: Tue May  5 12:09:19 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -39,7 +39,7 @@
 <span class="comment">// less space than a <a href="../TList.html">TList</a> (since there is no need for the prev and     //</span>
 <span class="comment">// next pointers), but it is more costly to insert objects (since it    //</span>
 <span class="comment">// has to create a gap by copying object pointers). <a href="../TOrdCollection.html">TOrdCollection</a>      //</span>
-<span class="comment">// is better than <a href="../TList.html">TList</a> when objects are only added at the end of the   //</span>
+<span class="comment">// is better than <a href="../TList.html">TList</a> when objects are only added at the <a href="../TCollection.html#TCollection:end" title="TIter TCollection::end()">end</a> of the   //</span>
 <span class="comment">// collection since no copying needs to be done.                        //</span>
 <span class="comment">//Begin_Html</span>
 /*
@@ -126,7 +126,7 @@ ClassImp(<a href="../TOrdCollection.html">TOrdCollection</a>)
 <span class="comment">//______________________________________________________________________________</span>
 <a name="qB6y5D"></a><span class="keyword">void</span> <a href="../TOrdCollection.html">TOrdCollection</a>::<a href="../TOrdCollection.html#TOrdCollection:AddLast" title="void TOrdCollection::AddLast(TObject* obj)">AddLast</a>(<a href="../TObject.html">TObject</a> *obj)
 {
-   <span class="comment">// <a href="../TSeqCollection.html#TSeqCollection:Add" title="void TSeqCollection::Add(TObject* obj)">Add</a> object at the end of the collection.</span>
+   <span class="comment">// <a href="../TSeqCollection.html#TSeqCollection:Add" title="void TSeqCollection::Add(TObject* obj)">Add</a> object at the <a href="../TCollection.html#TCollection:end" title="TIter TCollection::end()">end</a> of the collection.</span>
 
    <a href="../TOrdCollection.html#TOrdCollection:AddAt" title="void TOrdCollection::AddAt(TObject* obj,Int_t idx)">AddAt</a>(obj, fSize);
 }
@@ -314,7 +314,7 @@ ClassImp(<a href="../TOrdCollection.html">TOrdCollection</a>)
 <a name="zNMeMD"></a><span class="keyword">void</span> <a href="../TOrdCollection.html">TOrdCollection</a>::<a href="../TOrdCollection.html#TOrdCollection:MoveGapTo" title="void TOrdCollection::MoveGapTo(Int_t newGapStart)">MoveGapTo</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> start)
 {
    <span class="comment">// Move gap to new position. Gap needs to be moved when objects are</span>
-   <span class="comment">// inserted not at the end.</span>
+   <span class="comment">// inserted not at the <a href="../TCollection.html#TCollection:end" title="TIter TCollection::end()">end</a>.</span>
 
    <a href="../ListOfTypes.html#Int_t">Int_t</a> i;
 
@@ -600,7 +600,7 @@ ClassImp(<a href="../TOrdCollectionIter.html">TOrdCollectionIter</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

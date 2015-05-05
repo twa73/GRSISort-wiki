@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:30 2015            -->
+<!--   Date: Tue May  5 12:01:18 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -1695,7 +1695,7 @@ End_Html */</span>
 
    <span class="comment">// Now recursively scan all pads of this canvas</span>
    <a href="../TCanvas.html#TCanvas:cd" title="TVirtualPad* TCanvas::cd(Int_t subpadnumber=0)">cd</a>();
-   <a href="../TPad.html">TPad</a>::<a href="../TPad.html#TPad:SavePrimitive" title="void TPad::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(out,option);
+   <a href="../TPad.html">TPad</a>::<a href="../TPad.html#TPad:SavePrimitive" title="void TPad::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(out,option);
 }
 
 <span class="comment">//______________________________________________________________________________</span>
@@ -1820,7 +1820,7 @@ End_Html */</span>
    <span class="comment">//   Now recursively scan all pads of this canvas</span>
    <a href="../TCanvas.html#TCanvas:cd" title="TVirtualPad* TCanvas::cd(Int_t subpadnumber=0)">cd</a>();
    <span class="keyword">if</span> (invalid) <a href="../TPad.html#TPad:SetName" title="void TPad::SetName(const char* name)">SetName</a>(<span class="string">"c1"</span>);
-   <a href="../TPad.html">TPad</a>::<a href="../TPad.html#TPad:SavePrimitive" title="void TPad::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(out,option);
+   <a href="../TPad.html">TPad</a>::<a href="../TPad.html#TPad:SavePrimitive" title="void TPad::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>(out,option);
    <span class="comment">//   <a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a> canvas options related to pad editor</span>
    out&lt;&lt;<span class="string">"   "</span>&lt;&lt;<a href="../TPad.html#TPad:GetName" title="const char* TPad::GetName()">GetName</a>()&lt;&lt;<span class="string">"-&gt;SetSelected("</span>&lt;&lt;<a href="../TPad.html#TPad:GetName" title="const char* TPad::GetName()">GetName</a>()&lt;&lt;<span class="string">");"</span>&lt;&lt;endl;
    <span class="keyword">if</span> (<a href="../TCanvas.html#TCanvas:GetShowToolBar" title="Bool_t TCanvas::GetShowToolBar()">GetShowToolBar</a>()) {
@@ -2322,7 +2322,7 @@ End_Html */</span>
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:28 </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

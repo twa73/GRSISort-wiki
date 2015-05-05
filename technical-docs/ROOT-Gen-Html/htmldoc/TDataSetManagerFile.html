@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:28:52 2015            -->
+<!--   Date: Tue May  5 12:01:21 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TDataSetManagerFile.h.html">header file</a>
 <a class="descrheadentry" href="src/TDataSetManagerFile.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TDataSetManagerFile_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -169,7 +169,7 @@ files under a specific directory path
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TDataSetManagerFile:RemoveDataSet@1">RemoveDataSet</a>(<span class="keyword">const</span> <span class="keyword">char</span>* uri)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TDataSetManagerFile:ScanDataSet@1">ScanDataSet</a>(<span class="keyword">const</span> <span class="keyword">char</span>* uri, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> option = kReopen|kDebug)</td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TDataSetManager.html#TDataSetManager:ScanFile"><span class="baseclass">TDataSetManager::</span>ScanFile</a>(<a href="./TFileInfo.html">TFileInfo</a>* fileinfo, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> notify)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
@@ -321,38 +321,33 @@ files under a specific directory path
 </table></div>
 </div>
 <h2><a id="TDataSetManagerFile:Class_Charts"></a>Class Charts</h2>
-<map name="MapTDataSetManagerFile_Inh" id="MapTDataSetManagerFile_Inh">
-<area shape="rect" id="node3" href="./TDataSetManager.html" title="TDataSetManager" alt="" coords="235,8,402,39"/>
-<area shape="rect" id="node4" href="./TObject.html" title="TObject" alt="" coords="2,8,157,39"/>
-</map>
-<map name="MapTDataSetManagerFile_InhMem" id="MapTDataSetManagerFile_InhMem">
-<area shape="rect" id="graph12" href="./TDataSetManager.html" alt="" coords="541,63,629,289"/>
-<area shape="rect" id="graph13" href="./TDataSetManager.html" alt="" coords="443,63,531,319"/>
-<area shape="rect" id="graph14" href="./TDataSetManager.html" alt="" coords="344,63,432,319"/>
-<area shape="rect" id="graph15" href="./TDataSetManager.html" alt="" coords="573,300,597,321"/>
-<area shape="rect" id="graph16" href="./TDataSetManager.html" alt="" coords="541,332,629,616"/>
-<area shape="rect" id="graph17" href="./TDataSetManager.html" alt="" coords="443,332,531,616"/>
-<area shape="rect" id="graph18" href="./TDataSetManager.html" alt="" coords="344,332,432,616"/>
-<area shape="rect" id="graph11" href="./TDataSetManager.html" title="TDataSetManager" alt="" coords="333,16,640,627"/>
-<area shape="rect" id="graph21" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph22" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph23" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph24" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph25" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph26" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph27" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph20" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTDataSetManagerFile_Lib" id="MapTDataSetManagerFile_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="416,247,531,295"/>
-</map>
-<div class="tabs">
-<a id="imgTDataSetManagerFile_Inh" class="tabsel" href="inh/TDataSetManagerFile_Inh.png" onclick="javascript:return SetImg('Charts','inh/TDataSetManagerFile_Inh.png');">Inheritance</a>
-<a id="imgTDataSetManagerFile_InhMem" class="tab" href="inhmem/TDataSetManagerFile_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TDataSetManagerFile_InhMem.png');">Inherited Members</a>
-<a id="imgTDataSetManagerFile_Incl" class="tab" href="incl/TDataSetManagerFile_Incl.png" onclick="javascript:return SetImg('Charts','incl/TDataSetManagerFile_Incl.png');">Includes</a>
-<a id="imgTDataSetManagerFile_Lib" class="tab" href="lib/TDataSetManagerFile_Lib.png" onclick="javascript:return SetImg('Charts','lib/TDataSetManagerFile_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTDataSetManagerFile_Inh" src="inh/TDataSetManagerFile_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TDataSetManager" href="./TDataSetManager.html">TDataSetManager</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TDataSetManagerFile" href="./TDataSetManagerFile.html">TDataSetManagerFile</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDataSetManagerFile:TDataSetManagerFile@1" href="src/TDataSetManagerFile.cxx.html#uYIWLC">TDataSetManagerFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* group, <span class="keyword">const</span> <span class="keyword">char</span>* user, <span class="keyword">const</span> <span class="keyword">char</span>* ins)</span><br />
 <div class="funccomm"><pre>
@@ -597,7 +592,7 @@ files under a specific directory path
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Jan+Fiete+Grosse-Oetringhaus"> Jan Fiete Grosse-Oetringhaus</a>, <a href="http://consult.cern.ch/xwho/people?"> 08.08.07</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/proof:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:28</em><br />
+<em>&raquo; Last changed: root/proof:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

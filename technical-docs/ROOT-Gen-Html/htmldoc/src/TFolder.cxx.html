@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:29:23 2015            -->
+<!--   Date: Tue May  5 12:01:27 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -414,10 +414,10 @@ ClassImp(<a href="../TFolder.html">TFolder</a>)
 
    <a href="../TString.html">TString</a> opt = option;
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> dump = opt.Index(<span class="string">"dump"</span>, 0, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
-   <span class="keyword">if</span> (dump != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+   <span class="keyword">if</span> (dump != <a href="../ListOfTypes.html#int">kNPOS</a>)
       opt.<a href="../TFolder.html#TFolder:Remove" title="void TFolder::Remove(TObject* obj)">Remove</a>(dump, 4);
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> print = opt.Index(<span class="string">"print"</span>, 0, <a href="../TString.html">TString</a>::<a href="../TString.html#TString:kIgnoreCase" title="const TString::ECaseCompare TString::kIgnoreCase">kIgnoreCase</a>);
-   <span class="keyword">if</span> (print != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+   <span class="keyword">if</span> (print != <a href="../ListOfTypes.html#int">kNPOS</a>)
       opt.<a href="../TFolder.html#TFolder:Remove" title="void TFolder::Remove(TObject* obj)">Remove</a>(print, 5);
    opt = opt.Strip(<a href="../TString.html">TString</a>::<a href="../TString.html#TString:kBoth" title="const TString::EStripType TString::kBoth">kBoth</a>);
    <span class="keyword">if</span> (opt == <span class="string">""</span>)
@@ -428,10 +428,10 @@ ClassImp(<a href="../TFolder.html">TFolder</a>)
    <a href="../TIter.html">TIter</a> nextobj(<a href="../TFolder.html#TFolder:fFolders" title="TCollection* TFolder::fFolders">fFolders</a>);
    <span class="keyword">while</span> ((obj = (<a href="../TObject.html">TObject</a> *) nextobj())) {
       <a href="../TString.html">TString</a> s = obj-&gt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>();
-      <span class="keyword">if</span> (s.Index(re) == <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) <span class="keyword">continue</span>;
-      <span class="keyword">if</span> (dump != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+      <span class="keyword">if</span> (s.Index(re) == <a href="../ListOfTypes.html#int">kNPOS</a>) <span class="keyword">continue</span>;
+      <span class="keyword">if</span> (dump != <a href="../ListOfTypes.html#int">kNPOS</a>)
          obj-&gt;<a href="../TObject.html#TObject:Dump" title="void TObject::Dump()">Dump</a>();
-      <span class="keyword">if</span> (print != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>)
+      <span class="keyword">if</span> (print != <a href="../ListOfTypes.html#int">kNPOS</a>)
          obj-&gt;<a href="../TNamed.html#TNamed:Print" title="void TNamed::Print(Option_t* option=&quot;&quot;)">Print</a>(option);
       obj-&gt;<a href="../TFolder.html#TFolder:ls" title="void TFolder::ls(Option_t* option=&quot;&quot;)">ls</a>(option);
    }
@@ -513,7 +513,7 @@ ClassImp(<a href="../TFolder.html">TFolder</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:29 </em><em>&raquo; Last generated: 2015-03-04 20:29</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:01 </em><em>&raquo; Last generated: 2015-05-05 12:01</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

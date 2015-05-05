@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:40:23 2015            -->
+<!--   Date: Tue May  5 13:07:01 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -192,7 +192,7 @@ ClassImp(<a href="../TTreeSQL.html">TTreeSQL</a>)
          */</span>
       }
    }
-   <span class="keyword">return</span> <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(name, address, leaflist, bufsize);
+   <span class="keyword">return</span> <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(name, address, leaflist, bufsize);
 }
 
 <span class="comment">//______________________________________________________________________________</span>
@@ -424,7 +424,7 @@ ClassImp(<a href="../TTreeSQL.html">TTreeSQL</a>)
       }
       branchName = row-&gt;GetField(0);
       <a href="../ListOfTypes.html#Int_t">Int_t</a> pos;
-      <span class="keyword">if</span> ((pos=branchName.Index(<span class="string">"__"</span>))!=<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> ((pos=branchName.Index(<span class="string">"__"</span>))!=<a href="../ListOfTypes.html#int">kNPOS</a>) {
          leafName = branchName(pos+2,branchName.Length());
          branchName.Remove(pos);
       } <span class="keyword">else</span> {
@@ -434,7 +434,7 @@ ClassImp(<a href="../TTreeSQL.html">TTreeSQL</a>)
          <span class="keyword">if</span> (prevBranch != branchName) {
             <span class="comment">// new branch let's flush.</span>
             <span class="keyword">if</span> (decl.Length()) decl.Remove(decl.Length()-1);
-            br = <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(prevBranch,0,decl);
+            br = <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(prevBranch,0,decl);
             br-&gt;ResetAddress();
 
             (br-&gt;GetBasketEntry())[0] = 0;
@@ -489,7 +489,7 @@ ClassImp(<a href="../TTreeSQL.html">TTreeSQL</a>)
    <span class="comment">// new branch let's flush.</span>
    <span class="keyword">if</span> (decl.Length()) decl.Remove(decl.Length()-1);
    <span class="keyword">if</span> (prevBranch.Length()) {
-      br = <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="Int_t TTree::Branch(TCollection* list,Int_t bufsize=32000,Int_t splitlevel=99,const char* name=&quot;&quot;) or overloads">Branch</a>(prevBranch,0,decl);
+      br = <a href="../TTree.html">TTree</a>::<a href="../TTree.html#TTree:Branch" title="TBranch* TTree::Branch(const char* name,const char* classname,void** obj,Int_t bufsize=32000,Int_t splitlevel=99) or overloads">Branch</a>(prevBranch,0,decl);
       br-&gt;ResetAddress();
 
       (br-&gt;GetBasketEntry())[0] = 0;
@@ -831,7 +831,7 @@ ClassImp(<a href="../TTreeSQL.html">TTreeSQL</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:40 </em><em>&raquo; Last generated: 2015-03-04 20:40</em><br />
+<em>&raquo; Last changed: 2015-05-05 13:07 </em><em>&raquo; Last generated: 2015-05-05 13:07</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

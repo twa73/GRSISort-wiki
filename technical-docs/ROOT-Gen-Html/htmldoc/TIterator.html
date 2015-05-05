@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:35:14 2015            -->
+<!--   Date: Tue May  5 12:08:34 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -86,6 +86,7 @@ for collection iterators.
 <tr class="func"><td class="funcret"><a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TIterator:operator()">operator()</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TIterator:operator*">operator*</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TIterator.html">TIterator</a>&amp;</td><td class="funcname"><a class="funcname" href="#TIterator:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TIterator.html">TIterator</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TIterator:operator__">operator==</a>(<span class="keyword">const</span> <a href="./TIterator.html">TIterator</a>&amp; other) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TIterator:Reset">Reset</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TIterator:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TIterator:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
@@ -95,17 +96,17 @@ for collection iterators.
 </div>
 <h2><a id="TIterator:Class_Charts"></a>Class Charts</h2>
 <map name="MapTIterator_Inh" id="MapTIterator_Inh">
-<area shape="rect" id="node3" href="./TBtreeIter.html" title="TBtreeIter" alt="" coords="454,3,733,59"/>
-<area shape="rect" id="node4" href="./THashTableIter.html" title="THashTableIter" alt="" coords="454,59,733,114"/>
-<area shape="rect" id="node5" href="./TListIter.html" title="TListIter" alt="" coords="454,114,733,169"/>
-<area shape="rect" id="node6" href="./TMapIter.html" title="TMapIter" alt="" coords="454,169,733,224"/>
-<area shape="rect" id="node7" href="./TObjArrayIter.html" title="TObjArrayIter" alt="" coords="454,224,733,280"/>
-<area shape="rect" id="node8" href="./TOrdCollectionIter.html" title="TOrdCollectionIter" alt="" coords="434,280,752,335"/>
-<area shape="rect" id="node9" href="./TRefArrayIter.html" title="TRefArrayIter" alt="" coords="454,335,733,390"/>
-<area shape="rect" id="node10" href="./TTreeFriendLeafIter.html" title="TTreeFriendLeafIter" alt="" coords="423,390,764,446"/>
+<area shape="rect" id="node2" href="./TBtreeIter.html" title="TBtreeIter" alt="" coords="454,4,735,57"/>
+<area shape="rect" id="node3" href="./TTreeFriendLeafIter.html" title="TTreeFriendLeafIter" alt="" coords="425,58,764,110"/>
+<area shape="rect" id="node4" href="./TListIter.html" title="TListIter" alt="" coords="454,111,735,164"/>
+<area shape="rect" id="node5" href="./TMapIter.html" title="TMapIter" alt="" coords="454,165,735,218"/>
+<area shape="rect" id="node6" href="./THashTableIter.html" title="THashTableIter" alt="" coords="454,219,735,271"/>
+<area shape="rect" id="node7" href="./TObjArrayIter.html" title="TObjArrayIter" alt="" coords="454,272,735,325"/>
+<area shape="rect" id="node8" href="./TOrdCollectionIter.html" title="TOrdCollectionIter" alt="" coords="436,326,753,379"/>
+<area shape="rect" id="node9" href="./TRefArrayIter.html" title="TRefArrayIter" alt="" coords="454,380,735,432"/>
 </map>
 <map name="MapTIterator_Lib" id="MapTIterator_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="335,5,452,53"/>
 </map>
 <div class="tabs">
 <a id="imgTIterator_Inh" class="tabsel" href="inh/TIterator_Inh.png" onclick="javascript:return SetImg('Charts','inh/TIterator_Inh.png');">Inheritance</a>
@@ -153,12 +154,17 @@ for collection iterators.
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TIterator.html#TIterator:Next" title="TObject* TIterator::Next()">Next</a>(); }</code></div>
 <div style="clear:both;"></div>
 </div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TIterator:operator__" href="src/TIterator.h.html#OxVsFE">operator==</a>(<span class="keyword">const</span> <a href="./TIterator.html">TIterator</a>&amp; other) const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> !(*<span class="keyword">this</span> != other); }</code></div>
+<div style="clear:both;"></div>
+</div>
 
 <br />
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   13/08/95</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/cont:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:35</em><br />
+<em>&raquo; Last changed: root/cont:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:08</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

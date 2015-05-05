@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:37:41 2015            -->
+<!--   Date: Tue May  5 12:09:35 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TString.h.html">header file</a>
 <a class="descrheadentry" href="src/TString.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TString_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -305,22 +305,37 @@ root [2] s2
 </table></div>
 </div>
 <h2><a id="TString:Class_Charts"></a>Class Charts</h2>
-<map name="MapTString_Inh" id="MapTString_Inh">
-<area shape="rect" id="node3" href="./TGString.html" title="TGString" alt="" coords="289,2,479,40"/>
-<area shape="rect" id="node4" href="./TStringLong.html" title="TStringLong" alt="" coords="289,40,479,78"/>
-<area shape="rect" id="node5" href="./TStringToken.html" title="TStringToken" alt="" coords="289,78,479,116"/>
-<area shape="rect" id="node6" href="./TGHotString.html" title="TGHotString" alt="" coords="575,2,765,40"/>
-</map>
-<map name="MapTString_Lib" id="MapTString_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTString_Inh" class="tabsel" href="inh/TString_Inh.png" onclick="javascript:return SetImg('Charts','inh/TString_Inh.png');">Inheritance</a>
-<a id="imgTString_InhMem" class="tab" href="inhmem/TString_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TString_InhMem.png');">Inherited Members</a>
-<a id="imgTString_Incl" class="tab" href="incl/TString_Incl.png" onclick="javascript:return SetImg('Charts','incl/TString_Incl.png');">Includes</a>
-<a id="imgTString_Lib" class="tab" href="lib/TString_Lib.png" onclick="javascript:return SetImg('Charts','lib/TString_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTString_Inh" src="inh/TString_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td>
+<center><big><b><tt><a name="TString" href="./TString.html">TString</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TGString" href="./TGString.html">TGString</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TGHotString" href="./TGHotString.html">TGHotString</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TStringLong" href="./TStringLong.html">TStringLong</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TStringToken" href="./TStringToken.html">TStringToken</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TString:TString@1" href="src/TString.cxx.html#Cw8hI">TString</a>()</span><br />
 <div class="funccomm"><pre> <a href="./TString.html">TString</a> default ctor.
@@ -839,22 +854,22 @@ root [2] s2
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TString:Contains@1" href="src/TString.h.html#z7uEGE">Contains</a>(<span class="keyword">const</span> <a href="./TString.html">TString</a>&amp; pat, <a href="./TString.html">TString</a>::ECaseCompare cmp = <a href="./TString.html#TString:kExact" title="const TString::ECaseCompare TString::kExact">kExact</a>) const</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(pat.<a href="./TString.html#TString:Data" title="const char* TString::Data()">Data</a>(), pat.<a href="./TString.html#TString:Length" title="Ssiz_t TString::Length()">Length</a>(), (<a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a>)0, cmp) != <a href="./ListOfTypes.html#Ssiz_t">kNPOS</a>; }</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(pat.<a href="./TString.html#TString:Data" title="const char* TString::Data()">Data</a>(), pat.<a href="./TString.html#TString:Length" title="Ssiz_t TString::Length()">Length</a>(), (<a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a>)0, cmp) != <a href="./ListOfTypes.html#int">kNPOS</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TString:Contains" href="src/TString.h.html#RPia4D">Contains</a>(<span class="keyword">const</span> <span class="keyword">char</span>* s, <a href="./TString.html">TString</a>::ECaseCompare cmp = <a href="./TString.html#TString:kExact" title="const TString::ECaseCompare TString::kExact">kExact</a>) const</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(s, s ? strlen(s) : 0, (<a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a>)0, cmp) != <a href="./ListOfTypes.html#Ssiz_t">kNPOS</a>; }</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(s, s ? strlen(s) : 0, (<a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a>)0, cmp) != <a href="./ListOfTypes.html#int">kNPOS</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TString:Contains@2" href="src/TString.h.html#Rrk2.">Contains</a>(<span class="keyword">const</span> <a href="./TRegexp.html">TRegexp</a>&amp; pat) const</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(pat, (<a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a>)0) != <a href="./ListOfTypes.html#Ssiz_t">kNPOS</a>; }</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(pat, (<a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a>)0) != <a href="./ListOfTypes.html#int">kNPOS</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TString:Contains@3" href="src/TString.h.html#P73ikC">Contains</a>(<a href="./TPRegexp.html">TPRegexp</a>&amp; pat) const</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(pat, (<a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a>)0) != <a href="./ListOfTypes.html#Ssiz_t">kNPOS</a>; }</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TString.html#TString:Index" title="Ssiz_t TString::Index(const char* s,Ssiz_t i=0,TString::ECaseCompare cmp=kExact) or overloads">Index</a>(pat, (<a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a>)0) != <a href="./ListOfTypes.html#int">kNPOS</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TString:EqualTo" href="src/TString.h.html#YRHuGD">EqualTo</a>(<span class="keyword">const</span> <span class="keyword">char</span>* cs, <a href="./TString.html">TString</a>::ECaseCompare cmp = <a href="./TString.html#TString:kExact" title="const TString::ECaseCompare TString::kExact">kExact</a>) const</span><br />
@@ -1007,7 +1022,7 @@ root [2] s2
 <div class="funccomm"><pre> For detecting null substrings
 </pre></div>
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> fBegin == <a href="./ListOfTypes.html#Ssiz_t">kNPOS</a>; }</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> fBegin == <a href="./ListOfTypes.html#int">kNPOS</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a> <a class="funcname" name="TString:Align" href="src/TString.h.html#kREPHB">Align</a>(<a href="./ListOfTypes.html#Ssiz_t">Ssiz_t</a> s)</span><br />
@@ -1159,7 +1174,7 @@ root [2] s2
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   04/08/95</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:37</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

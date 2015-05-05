@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:51 2015            -->
+<!--   Date: Tue May  5 12:09:26 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TQUndoManager.h.html">header file</a>
 <a class="descrheadentry" href="src/TQUndoManager.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TQUndoManager_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -116,7 +116,7 @@ com-&gt;<a href="./TQUndoManager.html#TQUndoManager:Undo" title="void TQUndoMana
 
 4. Merged commands
 
-It possible to group several commands together so an end user
+It possible to group several commands together so an <a href="./TCollection.html#TCollection:end" title="TIter TCollection::end()">end</a> user
 can undo and redo them with one command.
 
 <a href="./TQCommand.html">TQCommand</a> *update = new <a href="./TQCommand.html">TQCommand</a>(gPad, <span class="string">"Modified()"</span>);
@@ -182,6 +182,7 @@ Use <a href="./TQUndoManager.html">TQUndoManager</a>::<a href="./TQUndoManager.h
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:AssertClass"><span class="baseclass">TCollection::</span>AssertClass</a>(<a href="./TClass.html">TClass</a>* cl) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TList.html#TList:At"><span class="baseclass">TList::</span>At</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> idx) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TList.html#TList:Before"><span class="baseclass">TList::</span>Before</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TIter.html">TIter</a></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:begin"><span class="baseclass">TCollection::</span>begin</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TQObject.html#TQObject:BlockAllSignals"><span class="baseclass">TQObject::</span>BlockAllSignals</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> b)</td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TQObject.html#TQObject:BlockSignals"><span class="baseclass">TQObject::</span>BlockSignals</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> b)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:Browse"><span class="baseclass">TCollection::</span>Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
@@ -236,6 +237,7 @@ Use <a href="./TQUndoManager.html">TQUndoManager</a>::<a href="./TQUndoManager.h
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TQObject.html#TQObject:EmitVA"><span class="baseclass">TQObject::</span>EmitVA</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Int_t">Int_t</a> nargs)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TQObject.html#TQObject:EmitVA@1"><span class="baseclass">TQObject::</span>EmitVA</a>(<span class="keyword">const</span> <span class="keyword">char</span>* signal, <a href="./ListOfTypes.html#Int_t">Int_t</a> nargs, va_list va)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:EmptyGarbageCollection"><span class="baseclass">TCollection::</span>EmptyGarbageCollection</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TIter.html">TIter</a></td><td class="funcname"><a class="funcname" href="./TCollection.html#TCollection:end"><span class="baseclass">TCollection::</span>end</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(<a href="./TMethod.html">TMethod</a>* method, <a href="./TObjArray.html">TObjArray</a>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
@@ -355,7 +357,7 @@ Use <a href="./TQUndoManager.html">TQUndoManager</a>::<a href="./TQUndoManager.h
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TList.html#TList:RemoveLast"><span class="baseclass">TList::</span>RemoveLast</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TQCommand.html#TQCommand:SetArgs"><span class="baseclass">TQCommand::</span>SetArgs</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> nargs)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
@@ -473,71 +475,64 @@ Use <a href="./TQUndoManager.html">TQUndoManager</a>::<a href="./TQUndoManager.h
 </table></div>
 </div>
 <h2><a id="TQUndoManager:Class_Charts"></a>Class Charts</h2>
-<map name="MapTQUndoManager_Inh" id="MapTQUndoManager_Inh">
-<area shape="rect" id="node3" href="./TQCommand.html" title="TQCommand" alt="" coords="512,10,597,26"/>
-<area shape="rect" id="node4" href="./TList.html" title="TList" alt="" coords="384,1,469,18"/>
-<area shape="rect" id="node5" href="./TQObject.html" title="TQObject" alt="" coords="384,18,469,35"/>
-<area shape="rect" id="node6" href="./TSeqCollection.html" title="TSeqCollection" alt="" coords="257,1,342,18"/>
-<area shape="rect" id="node7" href="./TCollection.html" title="TCollection" alt="" coords="129,1,214,18"/>
-<area shape="rect" id="node8" href="./TObject.html" title="TObject" alt="" coords="1,1,86,18"/>
-</map>
-<map name="MapTQUndoManager_InhMem" id="MapTQUndoManager_InhMem">
-<area shape="rect" id="graph12" href="./TQCommand.html" alt="" coords="1493,63,1581,128"/>
-<area shape="rect" id="graph13" href="./TQCommand.html" alt="" coords="1395,63,1483,157"/>
-<area shape="rect" id="graph14" href="./TQCommand.html" alt="" coords="1296,63,1384,157"/>
-<area shape="rect" id="graph15" href="./TQCommand.html" alt="" coords="1525,139,1549,160"/>
-<area shape="rect" id="graph16" href="./TQCommand.html" alt="" coords="1493,171,1581,425"/>
-<area shape="rect" id="graph17" href="./TQCommand.html" alt="" coords="1395,168,1483,452"/>
-<area shape="rect" id="graph18" href="./TQCommand.html" alt="" coords="1296,168,1384,452"/>
-<area shape="rect" id="graph11" href="./TQCommand.html" title="TQCommand" alt="" coords="1285,16,1592,463"/>
-<area shape="rect" id="graph21" href="./TList.html" alt="" coords="1176,63,1264,99"/>
-<area shape="rect" id="graph22" href="./TList.html" alt="" coords="1077,63,1165,113"/>
-<area shape="rect" id="graph23" href="./TList.html" alt="" coords="979,63,1067,113"/>
-<area shape="rect" id="graph24" href="./TList.html" alt="" coords="1208,109,1232,131"/>
-<area shape="rect" id="graph25" href="./TList.html" alt="" coords="1176,141,1264,381"/>
-<area shape="rect" id="graph26" href="./TList.html" alt="" coords="1077,141,1165,381"/>
-<area shape="rect" id="graph27" href="./TList.html" alt="" coords="979,141,1067,381"/>
-<area shape="rect" id="graph20" href="./TList.html" title="TList" alt="" coords="968,16,1275,392"/>
-<area shape="rect" id="graph30" href="./TQObject.html" alt="" coords="1176,449,1264,485"/>
-<area shape="rect" id="graph31" href="./TQObject.html" alt="" coords="1077,449,1165,500"/>
-<area shape="rect" id="graph32" href="./TQObject.html" alt="" coords="979,449,1067,500"/>
-<area shape="rect" id="graph33" href="./TQObject.html" alt="" coords="1208,496,1232,517"/>
-<area shape="rect" id="graph34" href="./TQObject.html" alt="" coords="1176,528,1264,753"/>
-<area shape="rect" id="graph35" href="./TQObject.html" alt="" coords="1077,528,1165,753"/>
-<area shape="rect" id="graph36" href="./TQObject.html" alt="" coords="979,528,1067,753"/>
-<area shape="rect" id="graph29" href="./TQObject.html" title="TQObject" alt="" coords="968,403,1275,764"/>
-<area shape="rect" id="graph39" href="./TSeqCollection.html" alt="" coords="693,63,947,99"/>
-<area shape="rect" id="graph40" href="./TSeqCollection.html" alt="" coords="859,109,947,305"/>
-<area shape="rect" id="graph41" href="./TSeqCollection.html" alt="" coords="760,109,848,320"/>
-<area shape="rect" id="graph42" href="./TSeqCollection.html" alt="" coords="661,109,749,320"/>
-<area shape="rect" id="graph38" href="./TSeqCollection.html" title="TSeqCollection" alt="" coords="651,16,957,331"/>
-<area shape="rect" id="graph45" href="./TCollection.html" alt="" coords="541,63,629,113"/>
-<area shape="rect" id="graph46" href="./TCollection.html" alt="" coords="443,63,531,143"/>
-<area shape="rect" id="graph47" href="./TCollection.html" alt="" coords="344,63,432,143"/>
-<area shape="rect" id="graph48" href="./TCollection.html" alt="" coords="573,124,597,145"/>
-<area shape="rect" id="graph49" href="./TCollection.html" alt="" coords="541,156,629,455"/>
-<area shape="rect" id="graph50" href="./TCollection.html" alt="" coords="443,153,531,467"/>
-<area shape="rect" id="graph51" href="./TCollection.html" alt="" coords="344,153,432,467"/>
-<area shape="rect" id="graph44" href="./TCollection.html" title="TCollection" alt="" coords="333,16,640,477"/>
-<area shape="rect" id="graph54" href="./TObject.html" alt="" coords="224,63,312,172"/>
-<area shape="rect" id="graph55" href="./TObject.html" alt="" coords="125,63,213,187"/>
-<area shape="rect" id="graph56" href="./TObject.html" alt="" coords="27,63,115,187"/>
-<area shape="rect" id="graph57" href="./TObject.html" alt="" coords="256,183,280,204"/>
-<area shape="rect" id="graph58" href="./TObject.html" alt="" coords="224,215,312,631"/>
-<area shape="rect" id="graph59" href="./TObject.html" alt="" coords="125,200,213,631"/>
-<area shape="rect" id="graph60" href="./TObject.html" alt="" coords="27,200,115,631"/>
-<area shape="rect" id="graph53" href="./TObject.html" title="TObject" alt="" coords="16,16,323,641"/>
-</map>
-<map name="MapTQUndoManager_Lib" id="MapTQUndoManager_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTQUndoManager_Inh" class="tabsel" href="inh/TQUndoManager_Inh.png" onclick="javascript:return SetImg('Charts','inh/TQUndoManager_Inh.png');">Inheritance</a>
-<a id="imgTQUndoManager_InhMem" class="tab" href="inhmem/TQUndoManager_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TQUndoManager_InhMem.png');">Inherited Members</a>
-<a id="imgTQUndoManager_Incl" class="tab" href="incl/TQUndoManager_Incl.png" onclick="javascript:return SetImg('Charts','incl/TQUndoManager_Incl.png');">Includes</a>
-<a id="imgTQUndoManager_Lib" class="tab" href="lib/TQUndoManager_Lib.png" onclick="javascript:return SetImg('Charts','lib/TQUndoManager_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTQUndoManager_Inh" src="inh/TQUndoManager_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td><table><tr>
+<td bgcolor="#f7f7f7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#e7e7e7" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#dfdfdf" align="right">
+<table><tr><td><table><tr>
+<td bgcolor="#d7d7d7" align="right">
+<table><tr><td>
+<center><tt><a name="TObject" href="./TObject.html">TObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TCollection" href="./TCollection.html">TCollection</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TSeqCollection" href="./TSeqCollection.html">TSeqCollection</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TList" href="./TList.html">TList</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr><tr>
+<td bgcolor="#efefef" align="right">
+<table><tr><td>
+<center><tt><a name="TQObject" href="./TQObject.html">TQObject</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><tt><a name="TQCommand" href="./TQCommand.html">TQCommand</a></tt></center>
+</td>
+</tr></table>
+</td>
+</tr></table></td>
+<td>&larr;</td><td>
+<center><big><b><tt><a name="TQUndoManager" href="./TQUndoManager.html">TQUndoManager</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td></td>
+</tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TQUndoManager:TQUndoManager" href="src/TQUndoManager.cxx.html#DEAP1C">TQUndoManager</a>()</span><br />
 <div class="funccomm"><pre> Constructor
@@ -616,7 +611,7 @@ Use <a href="./TQUndoManager.html">TQUndoManager</a>::<a href="./TQUndoManager.h
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Valeriy+Onuchin"> Valeriy Onuchin   04/27/2004</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

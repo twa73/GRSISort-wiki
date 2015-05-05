@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:08 2015            -->
+<!--   Date: Tue May  5 12:09:19 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -41,7 +41,7 @@ return false;}
 <span class="descrtitle">Source:</span>
 <a class="descrheadentry" href="src/TObject.h.html">header file</a>
 <a class="descrheadentry" href="src/TObject.cxx.html">source file</a>
-
+<a class="descrheadentry" href="TObject_Tree.pdf">inheritance tree (.pdf)</a> 
 </div></div>
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Sections:</span>
@@ -149,7 +149,7 @@ class hierarchies (watch out for overlaps).
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:RecursiveRemove">RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ResetBit">ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SaveAs">SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SavePrimitive">SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SavePrimitive">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit@1">SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit">SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDrawOption">SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -209,318 +209,67 @@ class hierarchies (watch out for overlaps).
 </table></div>
 </div>
 <h2><a id="TObject:Class_Charts"></a>Class Charts</h2>
-<map name="MapTObject_Inh" id="MapTObject_Inh">
-<area shape="rect" id="node3" href="./TVirtualPad.html" title="TVirtualPad" alt="" coords="91,186,142,196"/>
-<area shape="rect" id="node4" href="./TObjString.html" title="TObjString" alt="" coords="91,337,142,347"/>
-<area shape="rect" id="node5" href="./TNamed.html" title="TNamed" alt="" coords="91,347,142,357"/>
-<area shape="rect" id="node6" href="./TGClient.html" title="TGClient" alt="" coords="91,693,142,703"/>
-<area shape="rect" id="node7" href="./TSysEvtHandler.html" title="TSysEvtHandler" alt="" coords="91,703,142,713"/>
-<area shape="rect" id="node8" href="./THtml.html" title="THtml" alt="" coords="91,733,142,743"/>
-<area shape="rect" id="node9" href="./TGObject.html" title="TGObject" alt="" coords="91,743,142,753"/>
-<area shape="rect" id="node10" href="./TCollection.html" title="TCollection" alt="" coords="91,774,142,784"/>
-<area shape="rect" id="node11" href="./ROOT__TSchemaRule.html" title="ROOT::TSchemaRule" alt="" coords="83,784,150,794"/>
-<area shape="rect" id="node12" href="./ROOT__TSchemaRuleSet.html" title="ROOT::TSchemaRuleSet" alt="" coords="78,794,154,804"/>
-<area shape="rect" id="node13" href="./TAnalysisTreeBuilder.html" title="TAnalysisTreeBuilder" alt="" coords="83,804,150,814"/>
-<area shape="rect" id="node14" href="./TApplication.html" title="TApplication" alt="" coords="91,814,142,824"/>
-<area shape="rect" id="node15" href="./TEllipse.html" title="TEllipse" alt="" coords="91,826,142,836"/>
-<area shape="rect" id="node16" href="./TArchiveFile.html" title="TArchiveFile" alt="" coords="91,836,142,846"/>
-<area shape="rect" id="node17" href="./TArchiveMember.html" title="TArchiveMember" alt="" coords="89,846,143,857"/>
-<area shape="rect" id="node18" href="./TLine.html" title="TLine" alt="" coords="91,857,142,867"/>
-<area shape="rect" id="node19" href="./TBinomialEfficiencyFitter.html" title="TBinomialEfficiencyFitter" alt="" coords="77,867,156,877"/>
-<area shape="rect" id="node20" href="./TBits.html" title="TBits" alt="" coords="91,877,142,887"/>
-<area shape="rect" id="node21" href="./TBox.html" title="TBox" alt="" coords="91,892,142,902"/>
-<area shape="rect" id="node22" href="./TBuffer.html" title="TBuffer" alt="" coords="91,902,142,912"/>
-<area shape="rect" id="node24" href="./TPad.html" title="TPad" alt="" coords="205,36,255,46"/>
-<area shape="rect" id="node25" href="./TVirtualX.html" title="TVirtualX" alt="" coords="205,51,255,61"/>
-<area shape="rect" id="node26" href="./TGuiFactory.html" title="TGuiFactory" alt="" coords="205,68,255,78"/>
-<area shape="rect" id="node27" href="./TSignalHandler.html" title="TSignalHandler" alt="" coords="205,678,255,688"/>
-<area shape="rect" id="node28" href="./TFileHandler.html" title="TFileHandler" alt="" coords="205,688,255,698"/>
-<area shape="rect" id="node29" href="./TMessageHandler.html" title="TMessageHandler" alt="" coords="202,99,257,109"/>
-<area shape="rect" id="node30" href="./TTree.html" title="TTree" alt="" coords="205,109,255,119"/>
-<area shape="rect" id="node31" href="./TDirectory.html" title="TDirectory" alt="" coords="205,139,255,149"/>
-<area shape="rect" id="node32" href="./TH1.html" title="TH1" alt="" coords="205,189,255,199"/>
-<area shape="rect" id="node33" href="./TGWindow.html" title="TGWindow" alt="" coords="205,718,255,728"/>
-<area shape="rect" id="node34" href="./ROOT__THnBaseBrowsable.html" title="ROOT::THnBaseBrowsable" alt="" coords="188,297,272,307"/>
-<area shape="rect" id="node35" href="./TSeqCollection.html" title="TSeqCollection" alt="" coords="205,759,255,769"/>
-<area shape="rect" id="node36" href="./ROOT__TSchemaRule__TSources.html" title="ROOT::TSchemaRule::TSources" alt="" coords="181,307,279,317"/>
-<area shape="rect" id="node37" href="./TApplicationRemote.html" title="TApplicationRemote" alt="" coords="198,789,261,799"/>
-<area shape="rect" id="node38" href="./TApplicationServer.html" title="TApplicationServer" alt="" coords="200,799,260,809"/>
-<area shape="rect" id="node39" href="./TArc.html" title="TArc" alt="" coords="205,839,255,849"/>
-<area shape="rect" id="node40" href="./TArrow.html" title="TArrow" alt="" coords="205,879,255,889"/>
-<area shape="rect" id="node41" href="./TAxis.html" title="TAxis" alt="" coords="205,317,255,327"/>
-<area shape="rect" id="node42" href="./TAxis3D.html" title="TAxis3D" alt="" coords="205,327,255,337"/>
-<area shape="rect" id="node43" href="./TShape.html" title="TShape" alt="" coords="205,337,255,347"/>
-<area shape="rect" id="node44" href="./TVirtualFitter.html" title="TVirtualFitter" alt="" coords="205,347,255,357"/>
-<area shape="rect" id="node45" href="./TDictionary.html" title="TDictionary" alt="" coords="205,382,255,392"/>
-<area shape="rect" id="node46" href="./TKey.html" title="TKey" alt="" coords="205,412,255,422"/>
-<area shape="rect" id="node47" href="./TBenchmark.html" title="TBenchmark" alt="" coords="205,422,255,432"/>
-<area shape="rect" id="node48" href="./TBranch.html" title="TBranch" alt="" coords="205,452,255,462"/>
-<area shape="rect" id="node49" href="./TBrowser.html" title="TBrowser" alt="" coords="205,462,255,472"/>
-<area shape="rect" id="node50" href="./TBrowserPlugin.html" title="TBrowserPlugin" alt="" coords="205,472,255,482"/>
-<area shape="rect" id="node51" href="./TBufferFile.html" title="TBufferFile" alt="" coords="205,934,255,944"/>
-<area shape="rect" id="node52" href="./TCal.html" title="TCal" alt="" coords="205,492,255,502"/>
-<area shape="rect" id="node53" href="./TCalManager.html" title="TCalManager" alt="" coords="205,502,255,512"/>
-<area shape="rect" id="node55" href="./TCrown.html" title="TCrown" alt="" coords="205,849,255,859"/>
-<area shape="rect" id="node56" href="./TPave.html" title="TPave" alt="" coords="205,899,255,909"/>
-<area shape="rect" id="node57" href="./TWbox.html" title="TWbox" alt="" coords="205,909,255,919"/>
-<area shape="rect" id="node58" href="./TGApplication.html" title="TGApplication" alt="" coords="205,809,255,819"/>
-<area shape="rect" id="node59" href="./TGFontPool.html" title="TGFontPool" alt="" coords="205,728,255,738"/>
-<area shape="rect" id="node60" href="./TGGCPool.html" title="TGGCPool" alt="" coords="205,738,255,749"/>
-<area shape="rect" id="node61" href="./TRint.html" title="TRint" alt="" coords="205,819,255,829"/>
-<area shape="rect" id="node62" href="./TGResourcePool.html" title="TGResourcePool" alt="" coords="204,749,256,759"/>
-<area shape="rect" id="node63" href="./TGaxis.html" title="TGaxis" alt="" coords="205,889,255,899"/>
-<area shape="rect" id="node64" href="./THashTable.html" title="THashTable" alt="" coords="205,769,255,779"/>
-<area shape="rect" id="node65" href="./TMap.html" title="TMap" alt="" coords="205,779,255,789"/>
-<area shape="rect" id="node66" href="./TTimer.html" title="TTimer" alt="" coords="205,698,255,708"/>
-<area shape="rect" id="node67" href="./TProofServ.html" title="TProofServ" alt="" coords="205,829,255,839"/>
-<area shape="rect" id="node68" href="./TStdExceptionHandler.html" title="TStdExceptionHandler" alt="" coords="196,708,264,718"/>
-<area shape="rect" id="node69" href="./TZIPFile.html" title="TZIPFile" alt="" coords="205,859,255,869"/>
-<area shape="rect" id="node70" href="./TZIPMember.html" title="TZIPMember" alt="" coords="205,869,255,879"/>
-<area shape="rect" id="node71" href="./TGX11.html" title="TGX11" alt="" coords="310,48,361,58"/>
-<area shape="rect" id="node72" href="./TRootGuiFactory.html" title="TRootGuiFactory" alt="" coords="309,58,362,68"/>
-<area shape="rect" id="node73" href="./TCanvas.html" title="TCanvas" alt="" coords="310,13,361,23"/>
-<area shape="rect" id="node74" href="./TChain.html" title="TChain" alt="" coords="310,78,361,89"/>
-<area shape="rect" id="node75" href="./TDirectoryFile.html" title="TDirectoryFile" alt="" coords="310,129,361,139"/>
-<area shape="rect" id="node76" href="./TH1D.html" title="TH1D" alt="" coords="310,149,361,159"/>
-<area shape="rect" id="node77" href="./GROOTGuiFactory.html" title="GROOTGuiFactory" alt="" coords="306,68,366,78"/>
-<area shape="rect" id="node78" href="./TGFrame.html" title="TGFrame" alt="" coords="310,658,361,668"/>
-<area shape="rect" id="node79" href="./GTree.html" title="GTree" alt="" coords="310,89,361,99"/>
-<area shape="rect" id="node80" href="./TObjArray.html" title="TObjArray" alt="" coords="310,759,361,769"/>
-<area shape="rect" id="node81" href="./TBRIK.html" title="TBRIK" alt="" coords="310,294,361,304"/>
-<area shape="rect" id="node82" href="./TBackCompFitter.html" title="TBackCompFitter" alt="" coords="308,347,363,357"/>
-<area shape="rect" id="node83" href="./TBaseClass.html" title="TBaseClass" alt="" coords="310,357,361,367"/>
-<area shape="rect" id="node84" href="./TBasket.html" title="TBasket" alt="" coords="310,427,361,437"/>
-<area shape="rect" id="node85" href="./TBranchClones.html" title="TBranchClones" alt="" coords="310,447,361,457"/>
-<area shape="rect" id="node86" href="./TBranchElement.html" title="TBranchElement" alt="" coords="310,457,361,467"/>
-<area shape="rect" id="node87" href="./TBranchObject.html" title="TBranchObject" alt="" coords="310,467,361,477"/>
-<area shape="rect" id="node88" href="./TBranchRef.html" title="TBranchRef" alt="" coords="310,477,361,487"/>
-<area shape="rect" id="node89" href="./TBranchSTL.html" title="TBranchSTL" alt="" coords="310,487,361,498"/>
-<area shape="rect" id="node90" href="./TBtree.html" title="TBtree" alt="" coords="310,769,361,779"/>
-<area shape="rect" id="node91" href="./TBufferSQL.html" title="TBufferSQL" alt="" coords="310,929,361,939"/>
-<area shape="rect" id="node92" href="./TBufferXML.html" title="TBufferXML" alt="" coords="310,939,361,949"/>
-<area shape="rect" id="node93" href="./TButton.html" title="TButton" alt="" coords="310,28,361,38"/>
-<area shape="rect" id="node94" href="./TTUBE.html" title="TTUBE" alt="" coords="310,307,361,317"/>
-<area shape="rect" id="node95" href="./TClass.html" title="TClass" alt="" coords="310,367,361,377"/>
-<area shape="rect" id="node96" href="./TDataMember.html" title="TDataMember" alt="" coords="310,377,361,387"/>
-<area shape="rect" id="node97" href="./TDataType.html" title="TDataType" alt="" coords="310,387,361,397"/>
-<area shape="rect" id="node98" href="./TPaveText.html" title="TPaveText" alt="" coords="310,879,361,889"/>
-<area shape="rect" id="node99" href="./TEfficiencyCal.html" title="TEfficiencyCal" alt="" coords="310,498,361,508"/>
-<area shape="rect" id="node100" href="./TEnergyCal.html" title="TEnergyCal" alt="" coords="310,508,361,518"/>
-<area shape="rect" id="node101" href="./TFrame.html" title="TFrame" alt="" coords="310,909,361,919"/>
-<area shape="rect" id="node102" href="./TFunction.html" title="TFunction" alt="" coords="310,397,361,407"/>
-<area shape="rect" id="node103" href="./TGRSIint.html" title="TGRSIint" alt="" coords="310,819,361,829"/>
-<area shape="rect" id="node104" href="./TGainMatch.html" title="TGainMatch" alt="" coords="310,518,361,528"/>
-<area shape="rect" id="node105" href="./TGlobal.html" title="TGlobal" alt="" coords="310,407,361,417"/>
-<area shape="rect" id="node106" href="./TList.html" title="TList" alt="" coords="310,789,361,799"/>
-<area shape="rect" id="node107" href="./TH1C.html" title="TH1C" alt="" coords="310,159,361,169"/>
-<area shape="rect" id="node108" href="./TH1F.html" title="TH1F" alt="" coords="310,169,361,179"/>
-<area shape="rect" id="node109" href="./TH1I.html" title="TH1I" alt="" coords="310,179,361,189"/>
-<area shape="rect" id="node110" href="./TH1K.html" title="TH1K" alt="" coords="310,189,361,199"/>
-<area shape="rect" id="node111" href="./TH1S.html" title="TH1S" alt="" coords="310,199,361,209"/>
-<area shape="rect" id="node112" href="./TH2.html" title="TH2" alt="" coords="310,209,361,219"/>
-<area shape="rect" id="node113" href="./TH3.html" title="TH3" alt="" coords="310,234,361,244"/>
-<area shape="rect" id="node114" href="./TKeyXML.html" title="TKeyXML" alt="" coords="310,437,361,447"/>
-<area shape="rect" id="node115" href="./TLegend.html" title="TLegend" alt="" coords="310,889,361,899"/>
-<area shape="rect" id="node116" href="./TMessage.html" title="TMessage" alt="" coords="310,949,361,959"/>
-<area shape="rect" id="node117" href="./TMethodArg.html" title="TMethodArg" alt="" coords="310,417,361,427"/>
-<area shape="rect" id="node118" href="./TNtuple.html" title="TNtuple" alt="" coords="310,99,361,109"/>
-<area shape="rect" id="node119" href="./TNtupleD.html" title="TNtupleD" alt="" coords="310,109,361,119"/>
-<area shape="rect" id="node120" href="./TOrdCollection.html" title="TOrdCollection" alt="" coords="310,799,361,809"/>
-<area shape="rect" id="node121" href="./TPCON.html" title="TPCON" alt="" coords="310,317,361,327"/>
-<area shape="rect" id="node122" href="./TPaveLabel.html" title="TPaveLabel" alt="" coords="310,899,361,909"/>
-<area shape="rect" id="node123" href="./TProcessEventTimer.html" title="TProcessEventTimer" alt="" coords="304,648,367,658"/>
-<area shape="rect" id="node124" href="./TProofServLite.html" title="TProofServLite" alt="" coords="310,829,361,839"/>
-<area shape="rect" id="node125" href="./TROOT.html" title="TROOT" alt="" coords="310,139,361,149"/>
-<area shape="rect" id="node126" href="./TRefArray.html" title="TRefArray" alt="" coords="310,809,361,819"/>
-<area shape="rect" id="node127" href="./TSPHE.html" title="TSPHE" alt="" coords="310,327,361,337"/>
-<area shape="rect" id="node128" href="./TSlider.html" title="TSlider" alt="" coords="310,38,361,48"/>
-<area shape="rect" id="node129" href="./TSliderBox.html" title="TSliderBox" alt="" coords="310,919,361,929"/>
-<area shape="rect" id="node130" href="./TTreeSQL.html" title="TTreeSQL" alt="" coords="310,119,361,129"/>
-<area shape="rect" id="node131" href="./TXTRU.html" title="TXTRU" alt="" coords="310,337,361,347"/>
-<area shape="rect" id="node132" href="./TGX11TTF.html" title="TGX11TTF" alt="" coords="403,48,453,58"/>
-<area shape="rect" id="node133" href="./GCanvas.html" title="GCanvas" alt="" coords="403,1,453,11"/>
-<area shape="rect" id="node134" href="./GChain.html" title="GChain" alt="" coords="403,74,453,84"/>
-<area shape="rect" id="node135" href="./TFile.html" title="TFile" alt="" coords="403,129,453,139"/>
-<area shape="rect" id="node136" href="./GH1D.html" title="GH1D" alt="" coords="403,139,453,149"/>
-<area shape="rect" id="node137" href="./TGCompositeFrame.html" title="TGCompositeFrame" alt="" coords="397,427,459,437"/>
-<area shape="rect" id="node138" href="./ROOT__TSchemaMatch.html" title="ROOT::TSchemaMatch" alt="" coords="392,759,464,769"/>
-<area shape="rect" id="node139" href="./TBasketSQL.html" title="TBasketSQL" alt="" coords="403,417,453,427"/>
-<area shape="rect" id="node140" href="./TCONE.html" title="TCONE" alt="" coords="403,319,453,329"/>
-<area shape="rect" id="node141" href="./TTUBS.html" title="TTUBS" alt="" coords="403,329,453,340"/>
-<area shape="rect" id="node142" href="./TClonesArray.html" title="TClonesArray" alt="" coords="403,769,453,779"/>
-<area shape="rect" id="node143" href="./TDialogCanvas.html" title="TDialogCanvas" alt="" coords="403,11,453,21"/>
-<area shape="rect" id="node144" href="./TDiamond.html" title="TDiamond" alt="" coords="403,869,453,879"/>
-<area shape="rect" id="node145" href="./TELTU.html" title="TELTU" alt="" coords="403,340,453,350"/>
-<area shape="rect" id="node146" href="./TGButton.html" title="TGButton" alt="" coords="403,543,453,553"/>
-<area shape="rect" id="node147" href="./TGCanvas.html" title="TGCanvas" alt="" coords="403,568,453,578"/>
-<area shape="rect" id="node148" href="./TGColorFrame.html" title="TGColorFrame" alt="" coords="403,578,453,588"/>
-<area shape="rect" id="node149" href="./TGColorPalette.html" title="TGColorPalette" alt="" coords="403,588,453,598"/>
-<area shape="rect" id="node150" href="./TGColorPick.html" title="TGColorPick" alt="" coords="403,598,453,608"/>
-<area shape="rect" id="node151" href="./TGDoubleSlider.html" title="TGDoubleSlider" alt="" coords="403,608,453,618"/>
-<area shape="rect" id="node152" href="./TGDragWindow.html" title="TGDragWindow" alt="" coords="402,618,454,628"/>
-<area shape="rect" id="node153" href="./TGLVEntry.html" title="TGLVEntry" alt="" coords="403,628,453,638"/>
-<area shape="rect" id="node154" href="./TGProgressBar.html" title="TGProgressBar" alt="" coords="403,638,453,648"/>
-<area shape="rect" id="node155" href="./TGScrollBar.html" title="TGScrollBar" alt="" coords="403,648,453,658"/>
-<area shape="rect" id="node156" href="./TGSlider.html" title="TGSlider" alt="" coords="403,658,453,668"/>
-<area shape="rect" id="node157" href="./TGSplitter.html" title="TGSplitter" alt="" coords="403,668,453,678"/>
-<area shape="rect" id="node158" href="./TGHorizontal3DLine.html" title="TGHorizontal3DLine" alt="" coords="396,678,460,688"/>
-<area shape="rect" id="node159" href="./TGIcon.html" title="TGIcon" alt="" coords="403,688,453,698"/>
-<area shape="rect" id="node160" href="./TGLBEntry.html" title="TGLBEntry" alt="" coords="403,698,453,708"/>
-<area shape="rect" id="node161" href="./TGLabel.html" title="TGLabel" alt="" coords="403,708,453,718"/>
-<area shape="rect" id="node162" href="./TGMdiContainer.html" title="TGMdiContainer" alt="" coords="402,718,454,728"/>
-<area shape="rect" id="node163" href="./TGMdiWinResizer.html" title="TGMdiWinResizer" alt="" coords="399,728,457,738"/>
-<area shape="rect" id="node164" href="./TGMenuTitle.html" title="TGMenuTitle" alt="" coords="403,738,453,749"/>
-<area shape="rect" id="node166" href="./TGTRA.html" title="TGTRA" alt="" coords="403,269,453,279"/>
-<area shape="rect" id="node167" href="./TGridJobStatusList.html" title="TGridJobStatusList" alt="" coords="399,779,457,789"/>
-<area shape="rect" id="node168" href="./TGridResult.html" title="TGridResult" alt="" coords="403,789,453,799"/>
-<area shape="rect" id="node169" href="./TGroupButton.html" title="TGroupButton" alt="" coords="403,31,453,41"/>
-<area shape="rect" id="node170" href="./TH2C.html" title="TH2C" alt="" coords="403,159,453,169"/>
-<area shape="rect" id="node171" href="./TH2D.html" title="TH2D" alt="" coords="403,169,453,179"/>
-<area shape="rect" id="node172" href="./TH2F.html" title="TH2F" alt="" coords="403,179,453,189"/>
-<area shape="rect" id="node173" href="./TH2I.html" title="TH2I" alt="" coords="403,189,453,199"/>
-<area shape="rect" id="node174" href="./TH2Poly.html" title="TH2Poly" alt="" coords="403,199,453,209"/>
-<area shape="rect" id="node175" href="./TH2S.html" title="TH2S" alt="" coords="403,209,453,219"/>
-<area shape="rect" id="node176" href="./TH3C.html" title="TH3C" alt="" coords="403,219,453,229"/>
-<area shape="rect" id="node177" href="./TH3D.html" title="TH3D" alt="" coords="403,229,453,239"/>
-<area shape="rect" id="node178" href="./TH3F.html" title="TH3F" alt="" coords="403,239,453,249"/>
-<area shape="rect" id="node179" href="./TH3I.html" title="TH3I" alt="" coords="403,249,453,259"/>
-<area shape="rect" id="node180" href="./TH3S.html" title="TH3S" alt="" coords="403,259,453,269"/>
-<area shape="rect" id="node181" href="./THYPE.html" title="THYPE" alt="" coords="403,350,453,360"/>
-<area shape="rect" id="node182" href="./THashList.html" title="THashList" alt="" coords="403,799,453,809"/>
-<area shape="rect" id="node183" href="./TInspectCanvas.html" title="TInspectCanvas" alt="" coords="403,21,453,31"/>
-<area shape="rect" id="node184" href="./TMethod.html" title="TMethod" alt="" coords="403,397,453,407"/>
-<area shape="rect" id="node185" href="./TPARA.html" title="TPARA" alt="" coords="403,279,453,289"/>
-<area shape="rect" id="node186" href="./TPGON.html" title="TPGON" alt="" coords="403,360,453,370"/>
-<area shape="rect" id="node187" href="./TPaveClass.html" title="TPaveClass" alt="" coords="403,899,453,909"/>
-<area shape="rect" id="node188" href="./TPaveStats.html" title="TPaveStats" alt="" coords="403,879,453,889"/>
-<area shape="rect" id="node189" href="./TPavesText.html" title="TPavesText" alt="" coords="403,889,453,899"/>
-<area shape="rect" id="node190" href="./TProfile.html" title="TProfile" alt="" coords="403,149,453,159"/>
-<area shape="rect" id="node191" href="./TProofChain.html" title="TProofChain" alt="" coords="403,84,453,94"/>
-<area shape="rect" id="node192" href="./TProofOutputList.html" title="TProofOutputList" alt="" coords="401,809,455,819"/>
-<area shape="rect" id="node193" href="./TQClass.html" title="TQClass" alt="" coords="403,370,453,380"/>
-<area shape="rect" id="node194" href="./TQCommand.html" title="TQCommand" alt="" coords="403,819,453,829"/>
-<area shape="rect" id="node195" href="./TQConnection.html" title="TQConnection" alt="" coords="403,829,453,839"/>
-<area shape="rect" id="node196" href="./TSortedList.html" title="TSortedList" alt="" coords="403,839,453,849"/>
-<area shape="rect" id="node197" href="./TTRAP.html" title="TTRAP" alt="" coords="403,289,453,299"/>
-<area shape="rect" id="node198" href="./TTRD1.html" title="TTRD1" alt="" coords="403,299,453,309"/>
-<area shape="rect" id="node199" href="./TTRD2.html" title="TTRD2" alt="" coords="403,309,453,319"/>
-<area shape="rect" id="node200" href="./GFile.html" title="GFile" alt="" coords="508,109,559,119"/>
-<area shape="rect" id="node201" href="./TGMainFrame.html" title="TGMainFrame" alt="" coords="508,277,559,287"/>
-<area shape="rect" id="node202" href="./TCONS.html" title="TCONS" alt="" coords="508,257,559,267"/>
-<area shape="rect" id="node203" href="./TCTUB.html" title="TCTUB" alt="" coords="508,267,559,277"/>
-<area shape="rect" id="node204" href="./TG16ColorSelector.html" title="TG16ColorSelector" alt="" coords="504,327,563,337"/>
-<area shape="rect" id="node205" href="./TGGroupFrame.html" title="TGGroupFrame" alt="" coords="508,337,559,347"/>
-<area shape="rect" id="node206" href="./TGTextButton.html" title="TGTextButton" alt="" coords="508,528,559,538"/>
-<area shape="rect" id="node207" href="./TGColorPopup.html" title="TGColorPopup" alt="" coords="508,347,559,357"/>
-<area shape="rect" id="node208" href="./TGComboBox.html" title="TGComboBox" alt="" coords="508,357,559,367"/>
-<area shape="rect" id="node209" href="./TGComboBoxPopup.html" title="TGComboBoxPopup" alt="" coords="501,367,565,377"/>
-<area shape="rect" id="node210" href="./TGContainer.html" title="TGContainer" alt="" coords="508,377,559,387"/>
-<area shape="rect" id="node211" href="./TGDockButton.html" title="TGDockButton" alt="" coords="508,538,559,548"/>
-<area shape="rect" id="node212" href="./TGDockableFrame.html" title="TGDockableFrame" alt="" coords="504,387,562,397"/>
-<area shape="rect" id="node213" href="./TGDoubleHSlider.html" title="TGDoubleHSlider" alt="" coords="505,588,561,598"/>
-<area shape="rect" id="node214" href="./TGDoubleVSlider.html" title="TGDoubleVSlider" alt="" coords="505,598,561,608"/>
-<area shape="rect" id="node215" href="./TGFileItem.html" title="TGFileItem" alt="" coords="508,608,559,618"/>
-<area shape="rect" id="node216" href="./TGHProgressBar.html" title="TGHProgressBar" alt="" coords="507,618,559,628"/>
-<area shape="rect" id="node217" href="./TGHScrollBar.html" title="TGHScrollBar" alt="" coords="508,638,559,648"/>
-<area shape="rect" id="node218" href="./TGHSlider.html" title="TGHSlider" alt="" coords="508,658,559,668"/>
-<area shape="rect" id="node219" href="./TGHSplitter.html" title="TGHSplitter" alt="" coords="508,678,559,688"/>
-<area shape="rect" id="node220" href="./TGHorizontalFrame.html" title="TGHorizontalFrame" alt="" coords="503,397,564,407"/>
-<area shape="rect" id="node221" href="./TGView.html" title="TGView" alt="" coords="508,407,559,417"/>
-<area shape="rect" id="node222" href="./TGTextLBEntry.html" title="TGTextLBEntry" alt="" coords="508,708,559,718"/>
-<area shape="rect" id="node223" href="./TGPictureButton.html" title="TGPictureButton" alt="" coords="507,548,559,558"/>
-<area shape="rect" id="node224" href="./TGListBox.html" title="TGListBox" alt="" coords="508,417,559,427"/>
-<area shape="rect" id="node225" href="./TGListView.html" title="TGListView" alt="" coords="508,558,559,568"/>
-<area shape="rect" id="node226" href="./TGMdiButtons.html" title="TGMdiButtons" alt="" coords="508,427,559,437"/>
-<area shape="rect" id="node227" href="./TGMdiCornerWinResizer.html" title="TGMdiCornerWinResizer" alt="" coords="494,728,572,738"/>
-<area shape="rect" id="node228" href="./TGMdiDecorFrame.html" title="TGMdiDecorFrame" alt="" coords="503,437,563,447"/>
-<area shape="rect" id="node229" href="./TGMdiFrame.html" title="TGMdiFrame" alt="" coords="508,447,559,457"/>
-<area shape="rect" id="node230" href="./TGMdiHorizontalWinResizer.html" title="TGMdiHorizontalWinResizer" alt="" coords="489,738,577,749"/>
-<area shape="rect" id="node231" href="./TGMdiMainFrame.html" title="TGMdiMainFrame" alt="" coords="505,568,562,578"/>
-<area shape="rect" id="node232" href="./TGMdiMenuBar.html" title="TGMdiMenuBar" alt="" coords="508,457,559,467"/>
-<area shape="rect" id="node233" href="./TGMdiTitleBar.html" title="TGMdiTitleBar" alt="" coords="508,467,559,477"/>
-<area shape="rect" id="node234" href="./TGMdiTitleIcon.html" title="TGMdiTitleIcon" alt="" coords="508,698,559,708"/>
-<area shape="rect" id="node235" href="./TGMdiVerticalWinResizer.html" title="TGMdiVerticalWinResizer" alt="" coords="493,749,574,759"/>
-<area shape="rect" id="node236" href="./TGNumberEntry.html" title="TGNumberEntry" alt="" coords="507,477,559,487"/>
-<area shape="rect" id="node237" href="./TGPack.html" title="TGPack" alt="" coords="508,487,559,498"/>
-<area shape="rect" id="node238" href="./TGShapedFrame.html" title="TGShapedFrame" alt="" coords="507,498,559,508"/>
-<area shape="rect" id="node239" href="./TGShutter.html" title="TGShutter" alt="" coords="508,508,559,518"/>
-<area shape="rect" id="node241" href="./TGTreeLBEntry.html" title="TGTreeLBEntry" alt="" coords="508,718,559,728"/>
-<area shape="rect" id="node242" href="./TGVSplitter.html" title="TGVSplitter" alt="" coords="508,688,559,698"/>
-<area shape="rect" id="node243" href="./TGVProgressBar.html" title="TGVProgressBar" alt="" coords="507,628,559,638"/>
-<area shape="rect" id="node244" href="./TGVScrollBar.html" title="TGVScrollBar" alt="" coords="508,648,559,658"/>
-<area shape="rect" id="node245" href="./TGVSlider.html" title="TGVSlider" alt="" coords="508,668,559,678"/>
-<area shape="rect" id="node246" href="./TMemFile.html" title="TMemFile" alt="" coords="508,119,559,129"/>
-<area shape="rect" id="node247" href="./TNetFile.html" title="TNetFile" alt="" coords="508,129,559,139"/>
-<area shape="rect" id="node248" href="./TProfile2D.html" title="TProfile2D" alt="" coords="508,169,559,179"/>
-<area shape="rect" id="node249" href="./TProfile3D.html" title="TProfile3D" alt="" coords="508,229,559,239"/>
-<area shape="rect" id="node250" href="./TQUndoManager.html" title="TQUndoManager" alt="" coords="506,819,560,829"/>
-<area shape="rect" id="node251" href="./TRootEmbeddedCanvas.html" title="TRootEmbeddedCanvas" alt="" coords="497,578,569,588"/>
-<area shape="rect" id="node252" href="./TWebFile.html" title="TWebFile" alt="" coords="508,139,559,149"/>
-<area shape="rect" id="node253" href="./TSelectorList.html" title="TSelectorList" alt="" coords="508,799,559,809"/>
-<area shape="rect" id="node254" href="./TXMLFile.html" title="TXMLFile" alt="" coords="508,149,559,159"/>
-<area shape="rect" id="node255" href="./GRootBrowser.html" title="GRootBrowser" alt="" coords="615,211,666,222"/>
-<area shape="rect" id="node256" href="./GRootCanvas.html" title="GRootCanvas" alt="" coords="615,222,666,232"/>
-<area shape="rect" id="node257" href="./TGButtonGroup.html" title="TGButtonGroup" alt="" coords="615,322,666,332"/>
-<area shape="rect" id="node258" href="./TGCheckButton.html" title="TGCheckButton" alt="" coords="615,508,666,518"/>
-<area shape="rect" id="node259" href="./TGTransientFrame.html" title="TGTransientFrame" alt="" coords="612,232,670,242"/>
-<area shape="rect" id="node260" href="./TGCommandPlugin.html" title="TGCommandPlugin" alt="" coords="611,242,671,252"/>
-<area shape="rect" id="node261" href="./TGDockHideButton.html" title="TGDockHideButton" alt="" coords="610,538,671,548"/>
-<area shape="rect" id="node262" href="./TGFSComboBox.html" title="TGFSComboBox" alt="" coords="614,332,667,342"/>
-<area shape="rect" id="node263" href="./TGFileBrowser.html" title="TGFileBrowser" alt="" coords="615,252,666,262"/>
-<area shape="rect" id="node264" href="./TGLVContainer.html" title="TGLVContainer" alt="" coords="615,372,666,382"/>
-<area shape="rect" id="node265" href="./TGFontTypeComboBox.html" title="TGFontTypeComboBox" alt="" coords="604,342,677,352"/>
-<area shape="rect" id="node266" href="./TGHeaderFrame.html" title="TGHeaderFrame" alt="" coords="615,402,666,412"/>
-<area shape="rect" id="node267" href="./TGHtml.html" title="TGHtml" alt="" coords="615,432,666,442"/>
-<area shape="rect" id="node268" href="./TGHtmlBrowser.html" title="TGHtmlBrowser" alt="" coords="615,262,666,272"/>
-<area shape="rect" id="node269" href="./TGIconLBEntry.html" title="TGIconLBEntry" alt="" coords="615,703,666,713"/>
-<area shape="rect" id="node270" href="./TGImageMap.html" title="TGImageMap" alt="" coords="615,548,666,558"/>
-<area shape="rect" id="node271" href="./TGLBContainer.html" title="TGLBContainer" alt="" coords="615,382,666,392"/>
-<area shape="rect" id="node272" href="./TGLineLBEntry.html" title="TGLineLBEntry" alt="" coords="615,713,666,723"/>
-<area shape="rect" id="node273" href="./TGLineStyleComboBox.html" title="TGLineStyleComboBox" alt="" coords="604,352,677,362"/>
-<area shape="rect" id="node274" href="./TGLineWidthComboBox.html" title="TGLineWidthComboBox" alt="" coords="603,362,679,372"/>
-<area shape="rect" id="node275" href="./TGListTree.html" title="TGListTree" alt="" coords="615,392,666,402"/>
-<area shape="rect" id="node276" href="./TGMenuBar.html" title="TGMenuBar" alt="" coords="615,412,666,422"/>
-<area shape="rect" id="node277" href="./TGRadioButton.html" title="TGRadioButton" alt="" coords="615,518,666,528"/>
-<area shape="rect" id="node278" href="./TGSplitButton.html" title="TGSplitButton" alt="" coords="615,528,666,538"/>
-<area shape="rect" id="node279" href="./TGStatusBar.html" title="TGStatusBar" alt="" coords="615,422,666,432"/>
-<area shape="rect" id="node280" href="./TGTextView.html" title="TGTextView" alt="" coords="615,442,666,452"/>
-<area shape="rect" id="node281" href="./TGTextEditor.html" title="TGTextEditor" alt="" coords="615,272,666,282"/>
-<area shape="rect" id="node282" href="./TGTripleHSlider.html" title="TGTripleHSlider" alt="" coords="615,588,667,598"/>
-<area shape="rect" id="node283" href="./TGTripleVSlider.html" title="TGTripleVSlider" alt="" coords="615,598,667,608"/>
-<area shape="rect" id="node284" href="./TGVFileSplitter.html" title="TGVFileSplitter" alt="" coords="615,688,666,698"/>
-<area shape="rect" id="node285" href="./TParallelMergingFile.html" title="TParallelMergingFile" alt="" coords="609,119,673,129"/>
-<area shape="rect" id="node286" href="./TRootBrowser.html" title="TRootBrowser" alt="" coords="615,282,666,292"/>
-<area shape="rect" id="node287" href="./TRootBrowserLite.html" title="TRootBrowserLite" alt="" coords="612,292,669,302"/>
-<area shape="rect" id="node288" href="./TRootCanvas.html" title="TRootCanvas" alt="" coords="615,302,666,312"/>
-<area shape="rect" id="node289" href="./TRootControlBar.html" title="TRootControlBar" alt="" coords="614,312,667,322"/>
-<area shape="rect" id="node290" href="./TS3WebFile.html" title="TS3WebFile" alt="" coords="615,139,666,149"/>
-<area shape="rect" id="node291" href="./TGColorDialog.html" title="TGColorDialog" alt="" coords="709,181,760,191"/>
-<area shape="rect" id="node292" href="./TGColorSelect.html" title="TGColorSelect" alt="" coords="709,508,760,518"/>
-<area shape="rect" id="node293" href="./TGFileContainer.html" title="TGFileContainer" alt="" coords="708,372,760,382"/>
-<area shape="rect" id="node294" href="./TGFileDialog.html" title="TGFileDialog" alt="" coords="709,191,760,201"/>
-<area shape="rect" id="node295" href="./TGFontDialog.html" title="TGFontDialog" alt="" coords="709,201,760,211"/>
-<area shape="rect" id="node296" href="./TGGotoDialog.html" title="TGGotoDialog" alt="" coords="709,211,760,222"/>
-<area shape="rect" id="node297" href="./TGHButtonGroup.html" title="TGHButtonGroup" alt="" coords="707,317,762,327"/>
-<area shape="rect" id="node298" href="./TGInputDialog.html" title="TGInputDialog" alt="" coords="709,222,760,232"/>
-<area shape="rect" id="node299" href="./TGMsgBox.html" title="TGMsgBox" alt="" coords="709,232,760,242"/>
-<area shape="rect" id="node300" href="./TGPrintDialog.html" title="TGPrintDialog" alt="" coords="709,242,760,252"/>
-<area shape="rect" id="node301" href="./TGSearchDialog.html" title="TGSearchDialog" alt="" coords="709,252,760,262"/>
-<area shape="rect" id="node302" href="./TGTextEdit.html" title="TGTextEdit" alt="" coords="709,442,760,452"/>
-<area shape="rect" id="node303" href="./TGUndockedFrame.html" title="TGUndockedFrame" alt="" coords="704,262,764,272"/>
-<area shape="rect" id="node304" href="./TGVButtonGroup.html" title="TGVButtonGroup" alt="" coords="707,327,762,337"/>
-<area shape="rect" id="node305" href="./TRootDialog.html" title="TRootDialog" alt="" coords="709,272,760,282"/>
-<area shape="rect" id="node306" href="./TRootHelpDialog.html" title="TRootHelpDialog" alt="" coords="707,282,761,292"/>
-</map>
-<map name="MapTObject_Lib" id="MapTObject_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="349,7,464,55"/>
-</map>
-<div class="tabs">
-<a id="imgTObject_Inh" class="tabsel" href="inh/TObject_Inh.png" onclick="javascript:return SetImg('Charts','inh/TObject_Inh.png');">Inheritance</a>
-<a id="imgTObject_InhMem" class="tab" href="inhmem/TObject_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TObject_InhMem.png');">Inherited Members</a>
-<a id="imgTObject_Incl" class="tab" href="incl/TObject_Incl.png" onclick="javascript:return SetImg('Charts','incl/TObject_Incl.png');">Includes</a>
-<a id="imgTObject_Lib" class="tab" href="lib/TObject_Lib.png" onclick="javascript:return SetImg('Charts','lib/TObject_Lib.png');">Libraries</a><br/>
-</div><div class="classcharts"><div class="classchartswidth"></div>
-<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTObject_Inh" src="inh/TObject_Inh.png"/></div>
+<!--INHERITANCE TREE-->
+<table><tr><td width="10%"></td><td width="70%"><a href="ClassHierarchy.html">Inheritance Chart</a>:</td></tr><tr class="inhtree"><td width="10%"></td><td width="70%"><table class="inhtree"><tr><td>
+<table width="100%" border="0" cellpadding ="0" cellspacing="2"><tr>
+<td>
+<center><big><b><tt><a name="TObject" href="./TObject.html">TObject</a></tt></b></big></center>
+</td>
+<td><table><tr>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="GMarker" href="./GMarker.html">GMarker</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="ROOT::TSchemaRule" href="./ROOT__TSchemaRule.html">ROOT::TSchemaRule</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="ROOT::TSchemaRuleSet" href="./ROOT__TSchemaRuleSet.html">ROOT::TSchemaRuleSet</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TAnalysisTreeBuilder" href="./TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#f7f7f7"><table><tr><td>
+<center><tt><a name="TApplication" href="./TApplication.html">TApplication</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TApplicationRemote" href="./TApplicationRemote.html">TApplicationRemote</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TApplicationServer" href="./TApplicationServer.html">TApplicationServer</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TGApplication" href="./TGApplication.html">TGApplication</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr><tr>
+<td bgcolor="#efefef"><table><tr><td>
+<center><tt><a name="TProofServ" href="./TProofServ.html">TProofServ</a></tt></center></td>
+<td>&larr;</td><td><table><tr>
+<td bgcolor="#e7e7e7"><table><tr><td>
+<center><tt><a name="TProofServLite" href="./TProofServLite.html">TProofServLite</a></tt></center></td>
+<td></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td>
+</tr></table></td><td align="left">&nbsp;<a href="ClassHierarchy.html">[more...]</a></td>
+</tr></table>
+</td></tr></table></td></tr></table>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TObject:TObject" href="src/TObject.cxx.html#LEDPjD">TObject</a>()</span><br />
 <div class="funccomm"><pre> <a href="./TObject.html">TObject</a> constructor. It sets the two data words of <a href="./TObject.html">TObject</a> to their
@@ -784,14 +533,14 @@ class hierarchies (watch out for overlaps).
  if (filename contains <span class="string">".root"</span> the object is saved in filename (root binary file)
  if (filename contains <span class="string">".xml"</span>  the object is saved in filename (xml ascii file)
   otherwise the object is written to filename as a CINT/C++ script.
-  The C++ code to rebuild this object is generated via <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>().
-  The option parameter is passed to <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>. By default it is
+  The C++ code to rebuild this object is generated via <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>().
+  The option parameter is passed to <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>. By default it is
   en empty string. It can be used to specify the <a href="./TObject.html#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a> option
-  in the code generated by <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>.
+  in the code generated by <a href="./TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a>.
  The function is available via the object context menu.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SavePrimitive" href="src/TObject.cxx.html#L8H9yD">SavePrimitive</a>(basic_ostream&lt;<span class="keyword">char</span>,char_traits&lt;<span class="keyword">char</span>&gt; &gt;&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TObject:SavePrimitive" href="src/TObject.cxx.html#L8H9yD">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
 <div class="funccomm"><pre> Save a primitive as a C++ statement(s) on output stream <span class="string">"out"</span>.
 </pre></div>
 </div>
@@ -1032,7 +781,7 @@ class hierarchies (watch out for overlaps).
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   26/12/94</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:36:05 2015            -->
+<!--   Date: Tue May  5 12:09:18 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -306,7 +306,7 @@ std::list&lt;<a href="../TVirtualBranchBrowsable.html">TVirtualBranchBrowsable</
    <span class="keyword">else</span> {
       scope=fBranch-&gt;<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>();
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> pos = scope.First(<span class="string">'['</span>);
-      <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) {
+      <span class="keyword">if</span> (pos != <a href="../ListOfTypes.html#int">kNPOS</a>) {
          scope.Remove(pos);
       }
       <span class="keyword">if</span> (!scope.EndsWith(<span class="string">"."</span>)) scope+=<span class="string">"."</span>;
@@ -809,9 +809,9 @@ ClassImp(<a href="../TCollectionPropertyBrowsable.html">TCollectionPropertyBrows
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> lastDot=scope.Last(<span class="string">'.'</span>);
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> lastArrow=scope.Last(<span class="string">'&gt;'</span>); <span class="comment">// assuming there's no branch name containing <span class="string">"&gt;"</span>...</span>
    <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> lastPart=lastDot;
-   <span class="keyword">if</span> (lastPart==<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> || (lastArrow!=<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a> &amp;&amp; lastPart&lt;lastArrow))
+   <span class="keyword">if</span> (lastPart==<a href="../ListOfTypes.html#int">kNPOS</a> || (lastArrow!=<a href="../ListOfTypes.html#int">kNPOS</a> &amp;&amp; lastPart&lt;lastArrow))
       lastPart=lastArrow;
-   <span class="keyword">if</span> (lastPart==<a href="../ListOfTypes.html#Ssiz_t">kNPOS</a>) lastPart=0;
+   <span class="keyword">if</span> (lastPart==<a href="../ListOfTypes.html#int">kNPOS</a>) lastPart=0;
    <span class="keyword">else</span> lastPart++;
 
    <a href="../TString.html">TString</a> size_title(<span class="string">"size of "</span>);
@@ -966,7 +966,7 @@ ClassImp(<a href="../TCollectionMethodBrowsable.html">TCollectionMethodBrowsable
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:36 </em><em>&raquo; Last generated: 2015-03-04 20:36</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:09 </em><em>&raquo; Last generated: 2015-05-05 12:09</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

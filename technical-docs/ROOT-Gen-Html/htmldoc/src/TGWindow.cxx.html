@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Mar  4 20:34:08 2015            -->
+<!--   Date: Tue May  5 12:06:11 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -89,7 +89,7 @@ ClassImp(<a href="../TGUnknownWindowHandler.html">TGUnknownWindowHandler</a>)
       }
       <a href="../TGWindow.html#TGWindow:fNeedRedraw" title="Bool_t TGWindow::fNeedRedraw">fNeedRedraw</a> = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
 
-      <span class="comment">// name will be used in <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> methods</span>
+      <span class="comment">// name will be used in <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> methods</span>
       <a href="../TGWindow.html#TGWindow:fgCounter" title="Int_t TGWindow::fgCounter">fgCounter</a>++;
       <a href="../TGWindow.html#TGWindow:fName" title="TString TGWindow::fName">fName</a> = <span class="string">"frame"</span>;
       <a href="../TGWindow.html#TGWindow:fName" title="TString TGWindow::fName">fName</a> += <a href="../TGWindow.html#TGWindow:fgCounter" title="Int_t TGWindow::fgCounter">fgCounter</a>;
@@ -115,7 +115,7 @@ ClassImp(<a href="../TGUnknownWindowHandler.html">TGUnknownWindowHandler</a>)
    <a href="../TGWindow.html#TGWindow:fEditDisabled" title="UInt_t TGWindow::fEditDisabled">fEditDisabled</a> = (fId != gVirtualX-&gt;GetDefaultRootWindow()) &amp;&amp; <a href="../TGWindow.html#TGWindow:fParent" title="const TGWindow* TGWindow::fParent">fParent</a> ?
                     <a href="../TGWindow.html#TGWindow:fParent" title="const TGWindow* TGWindow::fParent">fParent</a>-><a href="../TGWindow.html#TGWindow:fEditDisabled" title="UInt_t TGWindow::fEditDisabled">fEditDisabled</a> : <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
 
-   <span class="comment">// name used in <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> methods</span>
+   <span class="comment">// name used in <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> methods</span>
    <a href="../TGWindow.html#TGWindow:fgCounter" title="Int_t TGWindow::fgCounter">fgCounter</a>++;
    <a href="../TGWindow.html#TGWindow:fName" title="TString TGWindow::fName">fName</a> = <span class="string">"frame"</span>;
    <a href="../TGWindow.html#TGWindow:fName" title="TString TGWindow::fName">fName</a> += <a href="../TGWindow.html#TGWindow:fgCounter" title="Int_t TGWindow::fgCounter">fgCounter</a>;
@@ -239,7 +239,7 @@ ClassImp(<a href="../TGUnknownWindowHandler.html">TGUnknownWindowHandler</a>)
 <span class="comment">//______________________________________________________________________________</span>
 <a name="RJ0ceC"></a><span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TGWindow.html">TGWindow</a>::<a href="../TGWindow.html#TGWindow:GetName" title="const char* TGWindow::GetName()">GetName</a>()<span class="keyword">const</span>
 {
-   <span class="comment">// Return unique name, used in <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(basic_ostream&lt;char,char_traits&lt;char&gt; &gt;&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> methods.</span>
+   <span class="comment">// Return unique name, used in <a href="../TObject.html#TObject:SavePrimitive" title="void TObject::SavePrimitive(ostream&amp; out,Option_t* option=&quot;&quot;)">SavePrimitive</a> methods.</span>
 
    <a href="../TGWindow.html">TGWindow</a> *w = (<a href="../TGWindow.html">TGWindow</a>*)<span class="keyword">this</span>;
 
@@ -270,7 +270,7 @@ ClassImp(<a href="../TGUnknownWindowHandler.html">TGUnknownWindowHandler</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-03-04 20:34 </em><em>&raquo; Last generated: 2015-03-04 20:34</em><br />
+<em>&raquo; Last changed: 2015-05-05 12:06 </em><em>&raquo; Last generated: 2015-05-05 12:06</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
