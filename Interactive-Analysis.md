@@ -20,7 +20,7 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 |        | All normal root commands/interactions.|
 | **m**  | Toggle on marker mode; when on, the histogram will remember and display the last four clicks as marks on the histogram.|
 | **p**  | If the 1d hist was made using the global ProjectionX/ProjectionY; gating the original 2D matrix this histogram came from is possible by placing markers around the gate and pressing p.  The gates spectra is immediately drawn. |
-| **B** | Cycle through types of automatic background subtraction used when projecting with **p**.  Current types include: No subtraction, Fraction of the total (height set with **b**), subtract gate from the 3rd marker (gate size set to the distance between marker 1 and 2). |
+| **B** | Cycle through types of automatic background subtraction used when projecting with **p**.  Current types include: No subtraction, Fraction of the total, subtract gate from the 3rd marker (gate size set to the distance between marker 1 and 2). |
 | **b** | Set the background, how it is set depends on **B**.|
 | **M**  | Toggle off marker mode.|
 | **n**  | Remove all markers / functions drawn on the histogram.|
