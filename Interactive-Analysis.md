@@ -9,9 +9,10 @@ In addition to the many libraries in TGRSIAnalysis to make analysis easier, GRSI
 To take advantage of these features all one has to do is start GRSISort!  They are implemented when examining and natural root classes, whether the where draw from a tree, made fresh or load from a file.
  
   * **GlobalFunctions** <br>
-    * ProjectionX(TH2*,low=0,high=-1)  Helper function, only passing a TH2 returns the total Projection along the x-axis.  Additionally, using this function allows GROOT to remember which matrix the return total projection belongs too.  This allows one to use the 'p' command (shown in TH1 commands below) to gate along the returned axis.  If low/high arguments are int bin numbers are use, else axis values are used.
-    * ProjectionY(TH2*,low=0,high=-1)  Helper function, only passing a TH2 returns the total Projection along the y-axis.  Additionally, using this function allows GROOT to remember which matrix the return total projection belongs too.  This allows one to use the 'p' command (shown in TH1 commands below) to gate along the returned axis.  If low/high arguments are int bin numbers are use, else axis values are used.
-
+    * **ProjectionX(TH2*,low=0,high=-1)**  Helper function, only passing a TH2 returns the total Projection along the x-axis.  Additionally, using this function allows GROOT to remember which matrix the return total projection belongs too.  This allows one to use the 'p' command (shown in TH1 commands below) to gate along the returned axis.  If low/high arguments are int bin numbers are use, else axis values are used.
+    * **ProjectionY(TH2*,low=0,high=-1)**  Helper function, only passing a TH2 returns the total Projection along the y-axis.  Additionally, using this function allows GROOT to remember which matrix the return total projection belongs too.  This allows one to use the 'p' command (shown in TH1 commands below) to gate along the returned axis.  If low/high arguments are int bin numbers are use, else axis values are used.
+    * **SaveAll(cons char *Filename, Option_t *opt="recreate")** Open a file with the filename and option given.  Save all objects currently managed by GRootObjectManager.  After saving, returns to the original working TDirectory.
+    
   * **GCanvas** <br>  The most notable difference, is the replacement of the TCanvas with GCanvas.  This replacement is done naturally - no changes from either existing ROOT scripts or GRSISort scripts are needed to take advantage of the GCanvas default behavior.  As of right now, the major changes are only for 1d histograms however, however global histogram management and 2d histogram commands are on the way.
 
 ## TH1 Commands
@@ -20,6 +21,8 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 |        | All normal root commands/interactions.|
 | **m**  | Toggle on marker mode; when on, the histogram will remember and display the last four clicks as marks on the histogram.|
 | **p**  | If the 1d hist was made using the global ProjectionX/ProjectionY; gating the original 2D matrix this histogram came from is possible by placing markers around the gate and pressing p.  The gates spectra is immediately drawn. |
+| **B** | Cycle through types of automatic background subtraction used when projecting with **p**.  Current types include: No subtraction, Fraction of the total, subtract gate from the 3rd marker (gate size set to the distance between marker 1 and 2). |
+| **b** | Set the background, how it is set depends on **B**.|
 | **M**  | Toggle off marker mode.|
 | **n**  | Remove all markers / functions drawn on the histogram.|
 | **N**  | Remove all markers and the LAST function drawn on the histogram.|

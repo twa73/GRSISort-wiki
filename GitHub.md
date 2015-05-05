@@ -2,6 +2,8 @@
 
 The way you use git and GitHub will depend on how you plan on interacting with the GRSISort code. If you plan on simply using the code, you should look at the User section. If you plan on developing the code (fixing issues or adding functionality), or just modifying the code for your own use, you should look at the Developer section.
 
+GitHub has a good [glossary](https://help.github.com/articles/github-glossary/) of commonly used terms.
+
 ##User
 
 As a user, you will use git and GitHub to make sure that your local version (on your personal computer) is up-to-date with the online repository (on GitHub). The instructions for setting up your local version are well documented on the [[Setting Up GRSISort|Setting-up-GRSISort]] page.
