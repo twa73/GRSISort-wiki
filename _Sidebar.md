@@ -31,8 +31,8 @@
 - [[Cal Files|CalFiles]]
 
 [**Technical Documentation**](Technical-Documentation)
-- <a href="https://rawgit.com/wiki/r3dunlop/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/GRSISORT_Index.html" target="_blank">GRSISort Classes</a>
-- <a href="https://rawgit.com/wiki/pcbend/GRSISort/technical-docs/GRIFFIN_Event_Format.pdf">GRIFFIN Event Format</a>
+- <a href="https://rawgit.com/wiki/GriffinCollaboration/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/GRSISORT_Index.html" target="_blank">GRSISort Classes</a>
+- <a href="https://rawgit.com/wiki/GriffinCollaboration/GRSISort/technical-docs/GRIFFIN_Event_Format.pdf">GRIFFIN Event Format</a>
 - [[Comments for HTML Docs | Html-How-To ]]
 
 **Useful resources**  
