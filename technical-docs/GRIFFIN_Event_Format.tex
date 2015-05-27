@@ -2,8 +2,10 @@
 \usepackage{graphicx,amssymb,amstext,amsmath,geometry}
 \usepackage{color,rotating}
 \usepackage{tikz}
-\usetikzlibrary{positioning,shapes,shadows,arrows}
+%\usetikzlibrary{positioning,shapes,shadows,arrows}
+%\usetikzlibrary{shapes,shadows,arrows}
 \usepackage{pdflscape,caption}
+\listfiles
 
 \newcommand\etc{\textsl{etc}}
 \newcommand\eg{\textsl{eg.}\ }
@@ -67,7 +69,7 @@ Detectors counting at a high rate will register multiple hits during a fixed eva
 \newpage
 \begin{landscape}
 \begin{table}
-\caption{GRIFFIN GRIF-16 Event Format written to disk:}
+\caption{GRIFFIN GRIF-16 Event Format written to disk, bank GRF2:}
 \begin{tabular*}{\textwidth}{p{0.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|c}
 \cline{2-7}
 I & Packet Type (4) {\bf 0x8} & Pile-Up Type (2) & Data Type (3) & Num. Filter Patterns (3) & Address (16) & Det. Type (4) & 4~bytes\\
@@ -106,6 +108,15 @@ XIII & Packet Type (4) {\bf 0xe} & \multicolumn{2}{c|}{Event Trailer (10)} & \mu
 \end{tabular*}
 \end{table}
 \end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bank version information}
+Over the lifetime of the data acquisition system, the data format is expected to change. Care will be taken to make these changes backward compatible, but occasionally, this will not be possible. In that case, the bank name will be used to track the data format used. This document will be maintained with the current data format. Differences between the current data format and the older data formats will be detailed in this section. The current bank name is GRF2.
+
+\begin{itemize}
+\item GRF2: current bank name
+\item GRF1: different header format than GRF2. Header word contains the following information (bit size): Packet Type (4), Number Filter Patterns (4), Data Type (3), Pile-Up Type (3), Address (14), Detector Type (4).
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pile-Up Type}
@@ -465,7 +476,7 @@ The format from this digitizer will be similar to that of the GRIF-16 but additi
 \newpage
 \begin{landscape}
 \begin{table}
-\caption{GRIFFIN GRIF-4G Event Format written to disk:}
+\caption{GRIFFIN GRIF-4G Event Format written to disk, bank GRF2:}
 \begin{tabular*}{\textwidth}{p{0.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|c}
 \cline{2-7}
 I & Packet Type (4) {\bf 0x8} & Pile-Up Type (2) & Data Type (3) & Num. Filter Patterns (3) & Address (16) & Det. Type (4) & 4~bytes\\
@@ -499,6 +510,15 @@ XI & Packet Type (4) {\bf 0xe} & \multicolumn{2}{c|}{Event Trailer (10)} & \mult
 \end{tabular*}
 \end{table}
 \end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bank version information}
+Over the lifetime of the data acquisition system, the data format is expected to change. Care will be taken to make these changes backward compatible, but occasionally, this will not be possible. In that case, the bank name will be used to track the data format used. This document will be maintained with the current data format. Differences between the current data format and the older data formats will be detailed in this section. The current bank name is GRF2.
+
+\begin{itemize}
+\item GRF2: current bank name
+\item GRF1: different header format than GRF2. Header word contains the following information (bit size): Packet Type (4), Number Filter Patterns (4), Data Type (3), Pile-Up Type (3), Address (14), Detector Type (4).
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pile-Up Type}
