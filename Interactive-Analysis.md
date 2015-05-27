@@ -35,7 +35,8 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 | **F**  | Ryan D's TPeak Fit (proper skewd gaus for gamma-rays with automatic bg) with full output.   |
 | **g**  | Simple Gaus fit between the last to marks, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED** |
 | **G**  | Gaus fit with linear background, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED** |
-| **S**  | Toggle histogram Stats on/off. |
+| **s**  | Show peak values. |
+| **S**  | Remove peak values. |
 | **l**  | Make y-axis linear. |
 | **L**  | Make y-axis logarithmic. |
 | **F10**  | Print any TPeaks currently displayed on the histogram to <histname>.fits. If file already exists, the file is destroyed and recreated. |
