@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:16:41 2015            -->
+<!--   Date: Sun May 31 23:45:04 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -38,12 +38,12 @@
 <span class="comment">//                                                                      //</span>
 <span class="comment">// <a href="../TParallelMergingFile.html">TParallelMergingFile</a>                                                 //</span>
 <span class="comment">//                                                                      //</span>
-<span class="comment">// Specialization of <a href="../TMemFile.html">TMemFile</a> to connect to a parallel <a href="../TFile.html">file</a> merger.     //</span>
+<span class="comment">// Specialization of <a href="../TMemFile.html">TMemFile</a> to connect to a parallel file merger.     //</span>
 <span class="comment">// Upon a call to <a href="../TParallelMergingFile.html#TParallelMergingFile:UploadAndReset" title="Bool_t TParallelMergingFile::UploadAndReset()">UploadAndReset</a>, the content already written to the    //</span>
-<span class="comment">// <a href="../TFile.html">file</a> is upload to the server and the object implementing the function//</span>
+<span class="comment">// file is upload to the server and the object implementing the function//</span>
 <span class="comment">// <a href="../TMemFile.html#TMemFile:ResetAfterMerge" title="void TMemFile::ResetAfterMerge(TFileMergeInfo* )">ResetAfterMerge</a> (like <a href="../TTree.html">TTree</a>) are reset.                              //</span>
-<span class="comment">// The parallel <a href="../TFile.html">file</a> merger will then collate the information coming    //</span>
-<span class="comment">// from this client and any other client in to the <a href="../TFile.html">file</a> described by    //</span>
+<span class="comment">// The parallel file merger will then collate the information coming    //</span>
+<span class="comment">// from this client and any other client in to the file described by    //</span>
 <span class="comment">// the filename of this object.                                         //</span>
 <span class="comment">//                                                                      //</span>
 <span class="comment">//////////////////////////////////////////////////////////////////////////</span>
@@ -65,9 +65,9 @@
 <span class="keyword">class</span> <a href="../TParallelMergingFile.html">TParallelMergingFile</a> : <span class="keyword">public</span> <a href="../TMemFile.html">TMemFile</a> 
 {
 <span class="keyword">private</span>:
-   <a href="../TSocket.html">TSocket</a> *<a href="../TParallelMergingFile.html#TParallelMergingFile:fSocket" title="TSocket* TParallelMergingFile::fSocket">fSocket</a>;         <span class="comment">// Socket to the parallel <a href="../TFile.html">file</a> merger server.</span>
+   <a href="../TSocket.html">TSocket</a> *<a href="../TParallelMergingFile.html#TParallelMergingFile:fSocket" title="TSocket* TParallelMergingFile::fSocket">fSocket</a>;         <span class="comment">// Socket to the parallel file merger server.</span>
    <a href="../TUrl.html">TUrl</a>     <a href="../TParallelMergingFile.html#TParallelMergingFile:fServerLocation" title="TUrl TParallelMergingFile::fServerLocation">fServerLocation</a>; <span class="comment">// Url of the server.</span>
-   <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TParallelMergingFile.html#TParallelMergingFile:fServerIdx" title="Int_t TParallelMergingFile::fServerIdx">fServerIdx</a>;      <span class="comment">// Index of this socket/<a href="../TFile.html">file</a> on the server.</span>
+   <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TParallelMergingFile.html#TParallelMergingFile:fServerIdx" title="Int_t TParallelMergingFile::fServerIdx">fServerIdx</a>;      <span class="comment">// Index of this socket/file on the server.</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../TParallelMergingFile.html#TParallelMergingFile:fServerVersion" title="Int_t TParallelMergingFile::fServerVersion">fServerVersion</a>;  <span class="comment">// Protocol version used by the server.</span>
    <a href="../TArrayC.html">TArrayC</a> *<a href="../TParallelMergingFile.html#TParallelMergingFile:fClassSent" title="TArrayC* TParallelMergingFile::fClassSent">fClassSent</a>;      <span class="comment">// Record which StreamerInfo we already sent.</span>
    <a href="../TMessage.html">TMessage</a> <a href="../TParallelMergingFile.html#TParallelMergingFile:fMessage" title="TMessage TParallelMergingFile::fMessage">fMessage</a>;
@@ -94,7 +94,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:16 </em><em>&raquo; Last generated: 2015-05-31 22:16</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:45 </em><em>&raquo; Last generated: 2015-05-31 23:45</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

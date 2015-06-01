@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:11:08 2015            -->
+<!--   Date: Sun May 31 23:41:18 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -125,11 +125,11 @@
 };
 
 <span class="keyword">enum</span> EFileModeMask {
-   kS_IFMT   = 0170000,   <span class="comment">// bitmask for the <a href="../TFile.html">file</a> type bitfields</span>
+   kS_IFMT   = 0170000,   <span class="comment">// bitmask for the file type bitfields</span>
    kS_IFSOCK = 0140000,   <span class="comment">// socket</span>
    kS_IFLNK  = 0120000,   <span class="comment">// symbolic link</span>
-   kS_IFOFF  = 0110000,   <span class="comment">// offline <a href="../TFile.html">file</a></span>
-   kS_IFREG  = 0100000,   <span class="comment">// regular <a href="../TFile.html">file</a></span>
+   kS_IFOFF  = 0110000,   <span class="comment">// offline file</span>
+   kS_IFREG  = 0100000,   <span class="comment">// regular file</span>
    kS_IFBLK  = 0060000,   <span class="comment">// block device</span>
    kS_IFDIR  = 0040000,   <span class="comment">// directory</span>
    kS_IFCHR  = 0020000,   <span class="comment">// character device</span>
@@ -137,7 +137,7 @@
    kS_ISUID  = 0004000,   <span class="comment">// set UID bit</span>
    kS_ISGID  = 0002000,   <span class="comment">// set GID bit</span>
    kS_ISVTX  = 0001000,   <span class="comment">// sticky bit</span>
-   kS_IRWXU  = 00700,     <span class="comment">// mask for <a href="../TFile.html">file</a> owner permissions</span>
+   kS_IRWXU  = 00700,     <span class="comment">// mask for file owner permissions</span>
    kS_IRUSR  = 00400,     <span class="comment">// owner has read permission</span>
    kS_IWUSR  = 00200,     <span class="comment">// owner has write permission</span>
    kS_IXUSR  = 00100,     <span class="comment">// owner has execute permission</span>
@@ -169,7 +169,7 @@
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a> <a href="../FileStat_t.html#FileStat_t:fSize" title="Long64_t FileStat_t::fSize">fSize</a>;         <span class="comment">// total size in bytes</span>
    <a href="../ListOfTypes.html#Long_t">Long_t</a>   <a href="../FileStat_t.html#FileStat_t:fMtime" title="Long_t FileStat_t::fMtime">fMtime</a>;        <span class="comment">// modification date</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>   <a href="../FileStat_t.html#FileStat_t:fIsLink" title="Bool_t FileStat_t::fIsLink">fIsLink</a>;       <span class="comment">// symbolic link</span>
-   <a href="../TString.html">TString</a>  <a href="../FileStat_t.html#FileStat_t:fUrl" title="TString FileStat_t::fUrl">fUrl</a>;          <span class="comment">// end point url of <a href="../TFile.html">file</a></span>
+   <a href="../TString.html">TString</a>  <a href="../FileStat_t.html#FileStat_t:fUrl" title="TString FileStat_t::fUrl">fUrl</a>;          <span class="comment">// end point url of file</span>
 <a name="sEiQ6C"></a>   <a href="../FileStat_t.html">FileStat_t</a>() : <a href="../FileStat_t.html#FileStat_t:fDev" title="Long_t FileStat_t::fDev">fDev</a>(0), <a href="../FileStat_t.html#FileStat_t:fIno" title="Long_t FileStat_t::fIno">fIno</a>(0), <a href="../FileStat_t.html#FileStat_t:fMode" title="Int_t FileStat_t::fMode">fMode</a>(0), <a href="../FileStat_t.html#FileStat_t:fUid" title="Int_t FileStat_t::fUid">fUid</a>(0), <a href="../FileStat_t.html#FileStat_t:fGid" title="Int_t FileStat_t::fGid">fGid</a>(0), <a href="../FileStat_t.html#FileStat_t:fSize" title="Long64_t FileStat_t::fSize">fSize</a>(0),
                   <a href="../FileStat_t.html#FileStat_t:fMtime" title="Long_t FileStat_t::fMtime">fMtime</a>(0), <a href="../FileStat_t.html#FileStat_t:fIsLink" title="Bool_t FileStat_t::fIsLink">fIsLink</a>(<a href="../ListOfTypes.html#Bool_t">kFALSE</a>), <a href="../FileStat_t.html#FileStat_t:fUrl" title="TString FileStat_t::fUrl">fUrl</a>(<span class="string">""</span>) { }
 };
@@ -245,7 +245,7 @@
    <a href="../TString.html">TString</a>   fStdErrTty;   <span class="comment">// tty associated with stderr, if any (e.g. from ttyname(...))</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>     fStdOutDup;   <span class="comment">// Duplicated descriptor for stdout</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>     fStdErrDup;   <span class="comment">// Duplicated descriptor for stderr</span>
-   <a href="../ListOfTypes.html#Int_t">Int_t</a>     fReadOffSet;  <span class="comment">// Offset where to start reading the <a href="../TFile.html">file</a> (used by ShowOutput(...))</span>
+   <a href="../ListOfTypes.html#Int_t">Int_t</a>     fReadOffSet;  <span class="comment">// Offset where to start reading the file (used by ShowOutput(...))</span>
    <a href="../RedirectHandle_t.html">RedirectHandle_t</a>(<span class="keyword">const</span> <span class="keyword">char</span> *n = 0) : <a href="../RedirectHandle_t.html#RedirectHandle_t:fFile" title="TString RedirectHandle_t::fFile">fFile</a>(n), fStdOutTty(), fStdErrTty(), fStdOutDup(-1),
                                          fStdErrDup(-1), fReadOffSet(-1) { }
    <span class="keyword">void</span> Reset() { fFile = <span class="string">""</span>; fStdOutTty = <span class="string">""</span>; fStdErrTty = <span class="string">""</span>;
@@ -313,7 +313,7 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gSystemMutex;
 
    <a href="../TSeqCollection.html">TSeqCollection</a>  *fTimers;           <span class="comment">//List of timers</span>
    <a href="../TSeqCollection.html">TSeqCollection</a>  *fSignalHandler;    <span class="comment">//List of signal handlers</span>
-   <a href="../TSeqCollection.html">TSeqCollection</a>  *fFileHandler;      <span class="comment">//List of <a href="../TFile.html">file</a> handlers</span>
+   <a href="../TSeqCollection.html">TSeqCollection</a>  *fFileHandler;      <span class="comment">//List of file handlers</span>
    <a href="../TSeqCollection.html">TSeqCollection</a>  *fStdExceptionHandler; <span class="comment">//List of std::exception handlers</span>
    <a href="../TSeqCollection.html">TSeqCollection</a>  *fOnExitList;       <span class="comment">//List of items to be cleaned-up on exit</span>
 
@@ -337,7 +337,7 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gSystemMutex;
    <a href="../TString.html">TString</a>          fLinkdefSuffix;    <span class="comment">//Default suffix for linkdef files to be used by ACLiC (see EACLiCProperties)</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>            fAclicProperties;  <span class="comment">//Various boolean flag for change ACLiC's behavior.</span>
    <a href="../TSeqCollection.html">TSeqCollection</a>  *fCompiled;         <span class="comment">//List of shared libs from compiled macros to be deleted</span>
-   <a href="../TSeqCollection.html">TSeqCollection</a>  *fHelpers;          <span class="comment">//List of helper classes for alternative <a href="../TFile.html">file</a>/directory access</span>
+   <a href="../TSeqCollection.html">TSeqCollection</a>  *fHelpers;          <span class="comment">//List of helper classes for alternative file/directory access</span>
 
    <a href="../TString.html">TString</a> &amp;GetLastErrorString();             <span class="comment">//Last system error message (thread local).</span>
    <span class="keyword">const</span> <a href="../TString.html">TString</a> &amp;GetLastErrorString() <span class="keyword">const</span>; <span class="comment">//Last system error message (thread local).</span>
@@ -460,12 +460,12 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gSystemMutex;
    <span class="keyword">int</span>                     GetPathInfo(<span class="keyword">const</span> <span class="keyword">char</span> *path, <a href="../ListOfTypes.html#Long_t">Long_t</a> *id, <a href="../ListOfTypes.html#Long64_t">Long64_t</a> *size, <a href="../ListOfTypes.html#Long_t">Long_t</a> *flags, <a href="../ListOfTypes.html#Long_t">Long_t</a> *modtime);
    <span class="keyword">virtual</span> <span class="keyword">int</span>             GetPathInfo(<span class="keyword">const</span> <span class="keyword">char</span> *path, <a href="../FileStat_t.html">FileStat_t</a> &amp;buf);
    <span class="keyword">virtual</span> <span class="keyword">int</span>             GetFsInfo(<span class="keyword">const</span> <span class="keyword">char</span> *path, <a href="../ListOfTypes.html#Long_t">Long_t</a> *id, <a href="../ListOfTypes.html#Long_t">Long_t</a> *bsize, <a href="../ListOfTypes.html#Long_t">Long_t</a> *blocks, <a href="../ListOfTypes.html#Long_t">Long_t</a> *bfree);
-   <span class="keyword">virtual</span> <span class="keyword">int</span>             Chmod(<span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TFile.html">file</a>, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> mode);
+   <span class="keyword">virtual</span> <span class="keyword">int</span>             Chmod(<span class="keyword">const</span> <span class="keyword">char</span> *file, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> mode);
    <span class="keyword">virtual</span> <span class="keyword">int</span>             Umask(<a href="../ListOfTypes.html#Int_t">Int_t</a> mask);
-   <span class="keyword">virtual</span> <span class="keyword">int</span>             Utime(<span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TFile.html">file</a>, <a href="../ListOfTypes.html#Long_t">Long_t</a> modtime, <a href="../ListOfTypes.html#Long_t">Long_t</a> actime);
+   <span class="keyword">virtual</span> <span class="keyword">int</span>             Utime(<span class="keyword">const</span> <span class="keyword">char</span> *file, <a href="../ListOfTypes.html#Long_t">Long_t</a> modtime, <a href="../ListOfTypes.html#Long_t">Long_t</a> actime);
    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keyword">char</span>     *UnixPathName(<span class="keyword">const</span> <span class="keyword">char</span> *unixpathname);
-   <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keyword">char</span>     *FindFile(<span class="keyword">const</span> <span class="keyword">char</span> *search, <a href="../TString.html">TString</a>&amp; <a href="../TFile.html">file</a>, EAccessMode mode = kFileExists);
-   <span class="keyword">virtual</span> <span class="keyword">char</span>           *Which(<span class="keyword">const</span> <span class="keyword">char</span> *search, <span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TFile.html">file</a>, EAccessMode mode = kFileExists);
+   <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keyword">char</span>     *FindFile(<span class="keyword">const</span> <span class="keyword">char</span> *search, <a href="../TString.html">TString</a>&amp; file, EAccessMode mode = kFileExists);
+   <span class="keyword">virtual</span> <span class="keyword">char</span>           *Which(<span class="keyword">const</span> <span class="keyword">char</span> *search, <span class="keyword">const</span> <span class="keyword">char</span> *file, EAccessMode mode = kFileExists);
    <span class="keyword">virtual</span> <a href="../TList.html">TList</a>          *GetVolumes(<a href="../ListOfTypes.html#Option_t">Option_t</a> *) <span class="keyword">const</span> { <span class="keyword">return</span> 0; }
 
    <span class="comment">//---- Users &amp; Groups</span>
@@ -582,7 +582,7 @@ R__EXTERN <a href="../TFileHandler.html">TFileHandler</a> *gXDisplay;  <span cla
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:11 </em><em>&raquo; Last generated: 2015-05-31 22:11</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:41 </em><em>&raquo; Last generated: 2015-05-31 23:41</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

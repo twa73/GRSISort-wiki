@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:16:53 2015            -->
+<!--   Date: Sun May 31 23:45:14 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -56,7 +56,7 @@
 
 <span class="keyword">private</span>:
    <a href="../TSQLServer.html">TSQLServer</a>  *<a href="../TSQLMonitoringWriter.html#TSQLMonitoringWriter:fDB" title="TSQLServer* TSQLMonitoringWriter::fDB">fDB</a>;              <span class="comment">// SQL database where to write</span>
-   <a href="../TString.html">TString</a>      <a href="../TSQLMonitoringWriter.html#TSQLMonitoringWriter:fTable" title="TString TSQLMonitoringWriter::fTable">fTable</a>;           <span class="comment">// SQL <a href="../TGTable.html">table</a> name</span>
+   <a href="../TString.html">TString</a>      <a href="../TSQLMonitoringWriter.html#TSQLMonitoringWriter:fTable" title="TString TSQLMonitoringWriter::fTable">fTable</a>;           <span class="comment">// SQL table name</span>
 
    <a href="../ListOfTypes.html#Long64_t">Long64_t</a>     <a href="../TSQLMonitoringWriter.html#TSQLMonitoringWriter:fMaxBulkSize" title="Long64_t TSQLMonitoringWriter::fMaxBulkSize">fMaxBulkSize</a>;     <span class="comment">// Max packet size for insertions</span>
 
@@ -66,7 +66,7 @@
 <a name="zOj_jD"></a>   <a href="../TSQLMonitoringWriter.html">TSQLMonitoringWriter</a>&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> <a href="../TSQLMonitoringWriter.html">TSQLMonitoringWriter</a>&amp;); <span class="comment">// not implemented</span>
 
 <span class="keyword">public</span>:
-<a name="WEDpXD"></a>   <a href="../TSQLMonitoringWriter.html">TSQLMonitoringWriter</a>(<span class="keyword">const</span> <span class="keyword">char</span> *serv, <span class="keyword">const</span> <span class="keyword">char</span> *user, <span class="keyword">const</span> <span class="keyword">char</span> *pass, <span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TGTable.html">table</a>);
+<a name="WEDpXD"></a>   <a href="../TSQLMonitoringWriter.html">TSQLMonitoringWriter</a>(<span class="keyword">const</span> <span class="keyword">char</span> *serv, <span class="keyword">const</span> <span class="keyword">char</span> *user, <span class="keyword">const</span> <span class="keyword">char</span> *pass, <span class="keyword">const</span> <span class="keyword">char</span> *table);
 <a name="qrlBMC"></a>   <span class="keyword">virtual</span> <a href="../TSQLMonitoringWriter.html#TSQLMonitoringWriter:_TSQLMonitoringWriter" title="void TSQLMonitoringWriter::~TSQLMonitoringWriter()">~TSQLMonitoringWriter</a>();
 
 <a name="xBmelE"></a>   <a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TSQLMonitoringWriter.html#TSQLMonitoringWriter:SendParameters" title="Bool_t TSQLMonitoringWriter::SendParameters(TList* values,const char* )">SendParameters</a>(<a href="../TList.html">TList</a> *values, <span class="keyword">const</span> <span class="keyword">char</span> * <span class="comment">/*identifier*/</span>);
@@ -85,7 +85,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:16 </em><em>&raquo; Last generated: 2015-05-31 22:16</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:45 </em><em>&raquo; Last generated: 2015-05-31 23:45</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

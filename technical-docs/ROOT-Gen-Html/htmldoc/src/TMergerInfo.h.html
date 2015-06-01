@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:16:10 2015            -->
+<!--   Date: Sun May 31 23:44:35 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -152,7 +152,7 @@
 <span class="comment">// 23 -&gt; 24: Merging optimization</span>
 <span class="comment">// 24 -&gt; 25: Handling of 'data' dir; group information</span>
 <span class="comment">// 25 -&gt; 26: Use new <a href="../TProofProgressInfo.html">TProofProgressInfo</a> class</span>
-<span class="comment">// 26 -&gt; 27: Use new <a href="../TFile.html">file</a> for updating the session status</span>
+<span class="comment">// 26 -&gt; 27: Use new file for updating the session status</span>
 <span class="comment">// 27 -&gt; 28: Support for multi-datasets, fix global pack dirs, fix AskStatistics,</span>
 <span class="comment">//           package download, dataset caching</span>
 <span class="comment">// 28 -&gt; 29: Support for config parameters in EnablePackage, idle-timeout</span>
@@ -167,21 +167,21 @@
 <span class="comment">// PROOF magic constants</span>
 <span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>       kPROOF_Protocol        = 36;            <span class="comment">// protocol version number</span>
 <span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>       kPROOF_Port            = 1093;          <span class="comment">// IANA registered PROOF port</span>
-<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_ConfFile        = <span class="string">"proof.conf"</span>;  <span class="comment">// default config <a href="../TFile.html">file</a></span>
+<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_ConfFile        = <span class="string">"proof.conf"</span>;  <span class="comment">// default config file</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_ConfDir         = <span class="string">"/usr/local/root"</span>;  <span class="comment">// default config dir</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_WorkDir         = <span class="string">".proof"</span>;      <span class="comment">// default working directory</span>
-<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_CacheDir        = <span class="string">"cache"</span>;       <span class="comment">// <a href="../TFile.html">file</a> cache dir, under WorkDir</span>
+<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_CacheDir        = <span class="string">"cache"</span>;       <span class="comment">// file cache dir, under WorkDir</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_PackDir         = <span class="string">"packages"</span>;    <span class="comment">// package dir, under WorkDir</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_PackDownloadDir = <span class="string">"downloaded"</span>;  <span class="comment">// subdir with downloaded PARs, under PackDir</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_QueryDir        = <span class="string">"queries"</span>;     <span class="comment">// query dir, under WorkDir</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_DataSetDir      = <span class="string">"datasets"</span>;    <span class="comment">// dataset dir, under WorkDir</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_DataDir         = <span class="string">"data"</span>;        <span class="comment">// dir for produced data, under WorkDir</span>
-<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_CacheLockFile   = <span class="string">"proof-cache-lock-"</span>;   <span class="comment">// cache lock <a href="../TFile.html">file</a></span>
-<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_PackageLockFile = <span class="string">"proof-package-lock-"</span>; <span class="comment">// package lock <a href="../TFile.html">file</a></span>
-<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_QueryLockFile   = <span class="string">"proof-query-lock-"</span>;   <span class="comment">// query lock <a href="../TFile.html">file</a></span>
+<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_CacheLockFile   = <span class="string">"proof-cache-lock-"</span>;   <span class="comment">// cache lock file</span>
+<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_PackageLockFile = <span class="string">"proof-package-lock-"</span>; <span class="comment">// package lock file</span>
+<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_QueryLockFile   = <span class="string">"proof-query-lock-"</span>;   <span class="comment">// query lock file</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_TerminateWorker = <span class="string">"+++ terminating +++"</span>; <span class="comment">// signal worker termination in MarkBad</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_WorkerIdleTO    = <span class="string">"+++ idle-timeout +++"</span>; <span class="comment">// signal worker idle timeout in MarkBad</span>
-<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_InputDataFile   = <span class="string">"inputdata.root"</span>;      <span class="comment">// Default input data <a href="../TFile.html">file</a> name</span>
+<span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_InputDataFile   = <span class="string">"inputdata.root"</span>;      <span class="comment">// Default input data file name</span>
 <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">const</span> kPROOF_MissingFiles    = <span class="string">"MissingFiles"</span>;  <span class="comment">// Missingfile list name</span>
 <span class="keyword">const</span> <a href="../ListOfTypes.html#Long64_t">Long64_t</a>    kPROOF_DynWrkPollInt_s = 10;  <span class="comment">// minimum number of seconds between two polls for dyn wrks</span>
 
@@ -538,9 +538,9 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
    <a href="../TString.html">TString</a>         fActiveSlavesSaved;<span class="comment">// comma-separated list of active slaves (before last call to</span>
                                       <span class="comment">// SetParallel or Activate/DeactivateWorkers)</span>
    <a href="../TList.html">TList</a>          *fInactiveSlaves;  <span class="comment">//list of inactive slaves (good but not used for processing)</span>
-   <a href="../TList.html">TList</a>          *fUniqueSlaves;    <span class="comment">//list of all active slaves with unique <a href="../TFile.html">file</a> systems</span>
-   <a href="../TList.html">TList</a>          *fAllUniqueSlaves;  <span class="comment">//list of all active slaves with unique <a href="../TFile.html">file</a> systems, including all submasters</span>
-   <a href="../TList.html">TList</a>          *fNonUniqueMasters; <span class="comment">//list of all active masters with a nonunique <a href="../TFile.html">file</a> system</span>
+   <a href="../TList.html">TList</a>          *fUniqueSlaves;    <span class="comment">//list of all active slaves with unique file systems</span>
+   <a href="../TList.html">TList</a>          *fAllUniqueSlaves;  <span class="comment">//list of all active slaves with unique file systems, including all submasters</span>
+   <a href="../TList.html">TList</a>          *fNonUniqueMasters; <span class="comment">//list of all active masters with a nonunique file system</span>
    <a href="../TMonitor.html">TMonitor</a>       *fActiveMonitor;   <span class="comment">//monitor activity on all active slave sockets</span>
    <a href="../TMonitor.html">TMonitor</a>       *fUniqueMonitor;   <span class="comment">//monitor activity on all unique slave sockets</span>
    <a href="../TMonitor.html">TMonitor</a>       *fAllUniqueMonitor; <span class="comment">//monitor activity on all unique slave sockets, including all submasters</span>
@@ -555,11 +555,11 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
    <a href="../TList.html">TList</a>          *fFeedback;        <span class="comment">//list of names to be returned as feedback</span>
    <a href="../TList.html">TList</a>          *fChains;          <span class="comment">//chains with this proof set</span>
    <span class="keyword">struct</span> MD5Mod_t {
-      <a href="../TMD5.html">TMD5</a>   fMD5;                   <span class="comment">//<a href="../TFile.html">file</a>'s md5</span>
-      <a href="../ListOfTypes.html#Long_t">Long_t</a> fModtime;               <span class="comment">//<a href="../TFile.html">file</a>'s modification time</span>
+      <a href="../TMD5.html">TMD5</a>   fMD5;                   <span class="comment">//file's md5</span>
+      <a href="../ListOfTypes.html#Long_t">Long_t</a> fModtime;               <span class="comment">//file's modification time</span>
    };
    <span class="keyword">typedef</span> std::map&lt;<a href="../TString.html">TString</a>, MD5Mod_t&gt; FileMap_t;
-   FileMap_t       fFileMap;         <span class="comment">//map keeping track of a <a href="../TFile.html">file</a>'s md5 and mod time</span>
+   FileMap_t       fFileMap;         <span class="comment">//map keeping track of a file's md5 and mod time</span>
    <a href="../TDSet.html">TDSet</a>          *fDSet;            <span class="comment">//current <a href="../TDSet.html">TDSet</a> being validated</span>
 
    <a href="../ListOfTypes.html#Int_t">Int_t</a>           fNotIdle;         <span class="comment">//Number of non-idle sub-nodes</span>
@@ -568,9 +568,9 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>          fIsWaiting;       <span class="comment">//<a href="../ListOfTypes.html#bool">true</a> if queries have been enqueued</span>
 
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>          fRedirLog;        <span class="comment">//redirect received log info</span>
-   <a href="../TString.html">TString</a>         fLogFileName;     <span class="comment">//name of the temp <a href="../TFile.html">file</a> for redirected logs</span>
-   FILE           *fLogFileW;        <span class="comment">//temp <a href="../TFile.html">file</a> to redirect logs</span>
-   FILE           *fLogFileR;        <span class="comment">//temp <a href="../TFile.html">file</a> to read redirected logs</span>
+   <a href="../TString.html">TString</a>         fLogFileName;     <span class="comment">//name of the temp file for redirected logs</span>
+   FILE           *fLogFileW;        <span class="comment">//temp file to redirect logs</span>
+   FILE           *fLogFileR;        <span class="comment">//temp file to read redirected logs</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>          fLogToWindowOnly; <span class="comment">//send log to window only</span>
    
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>          fSaveLogToMacro;  <span class="comment">// Whether to save received logs to <a href="../TMacro.html">TMacro</a> fMacroLog (use with care)</span>
@@ -595,7 +595,7 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
    <a href="../TList.html">TList</a>          *fEnabledPackagesOnClient; <span class="comment">//list of packages enabled on client</span>
    <a href="../TList.html">TList</a>          *fEnabledPackagesOnCluster;  <span class="comment">//list of enabled packages</span>
 
-   <a href="../TList.html">TList</a>          *fInputData;       <span class="comment">//Input data objects sent over via <a href="../TFile.html">file</a></span>
+   <a href="../TList.html">TList</a>          *fInputData;       <span class="comment">//Input data objects sent over via file</span>
    <a href="../TString.html">TString</a>         fInputDataFile;   <span class="comment">//File with input data objects</span>
 
    <a href="../TProofOutputList.html">TProofOutputList</a> fOutputList;     <span class="comment">// <a href="../TList.html">TList</a> implementation filtering <a href="../TObject.html#TObject:ls" title="void TObject::ls(Option_t* option=&quot;&quot;)">ls</a>(...) and <a href="../TObject.html#TObject:Print" title="void TObject::Print(Option_t* option=&quot;&quot;)">Print</a>(...)</span>
@@ -604,7 +604,7 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
 
    <a href="../TVirtualMutex.html">TVirtualMutex</a>  *fCloseMutex;      <span class="comment">// Avoid crashes in MarkBad or alike while closing</span>
 
-   <a href="../TList.html">TList</a>          *fLoadedMacros;    <span class="comment">// List of loaded macros (just <a href="../TFile.html">file</a> names)</span>
+   <a href="../TList.html">TList</a>          *fLoadedMacros;    <span class="comment">// List of loaded macros (just file names)</span>
    <span class="keyword">static</span> <a href="../TList.html">TList</a>   *fgProofEnvList;   <span class="comment">// List of TNameds defining environment</span>
                                      <span class="comment">// variables to pass to proofserv</span>
 
@@ -628,11 +628,11 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
 
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>          fMasterServ;     <span class="comment">//<a href="../ListOfTypes.html#bool">true</a> if we are a master server</span>
    <a href="../TUrl.html">TUrl</a>            fUrl;            <span class="comment">//Url of the master</span>
-   <a href="../TString.html">TString</a>         fConfFile;       <span class="comment">//<a href="../TFile.html">file</a> containing config information</span>
+   <a href="../TString.html">TString</a>         fConfFile;       <span class="comment">//file containing config information</span>
    <a href="../TString.html">TString</a>         fConfDir;        <span class="comment">//directory containing cluster config information</span>
    <a href="../TString.html">TString</a>         fImage;          <span class="comment">//master's image name</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>           fProtocol;       <span class="comment">//remote PROOF server protocol version number</span>
-   <a href="../TList.html">TList</a>          *fSlaves;         <span class="comment">//list of all slave servers as in config <a href="../TFile.html">file</a></span>
+   <a href="../TList.html">TList</a>          *fSlaves;         <span class="comment">//list of all slave servers as in config file</span>
    <a href="../TList.html">TList</a>          *fTerminatedSlaveInfos; <span class="comment">//list of unique infos of terminated slaves</span>
    <a href="../TList.html">TList</a>          *fBadSlaves;      <span class="comment">//dead slaves (subset of all slaves)</span>
    <a href="../TMonitor.html">TMonitor</a>       *fAllMonitor;     <span class="comment">//monitor activity on all valid slave sockets</span>
@@ -668,7 +668,7 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    SendCommand(<span class="keyword">const</span> <span class="keyword">char</span> *cmd, ESlaves list = kActive);
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    SendCurrentState(ESlaves list = kActive);
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    SendCurrentState(<a href="../TList.html">TList</a> *list);
-   <a href="../ListOfTypes.html#Bool_t">Bool_t</a>   CheckFile(<span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TFile.html">file</a>, <a href="../TSlave.html">TSlave</a> *sl, <a href="../ListOfTypes.html#Long_t">Long_t</a> modtime, <a href="../ListOfTypes.html#Int_t">Int_t</a> cpopt = (kCp | kCpBin));
+   <a href="../ListOfTypes.html#Bool_t">Bool_t</a>   CheckFile(<span class="keyword">const</span> <span class="keyword">char</span> *file, <a href="../TSlave.html">TSlave</a> *sl, <a href="../ListOfTypes.html#Long_t">Long_t</a> modtime, <a href="../ListOfTypes.html#Int_t">Int_t</a> cpopt = (kCp | kCpBin));
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    SendObject(<span class="keyword">const</span> <a href="../TObject.html">TObject</a> *obj, ESlaves list = kActive);
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    SendGroupView();
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    SendInitialState();
@@ -701,8 +701,8 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    Broadcast(<span class="keyword">const</span> <span class="keyword">char</span> *mess, <a href="../ListOfTypes.html#Int_t">Int_t</a> kind = kMESS_STRING, ESlaves list = kActive);
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    Broadcast(<a href="../ListOfTypes.html#Int_t">Int_t</a> kind, <a href="../TList.html">TList</a> *slaves) { <span class="keyword">return</span> Broadcast(0, kind, slaves); }
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    Broadcast(<a href="../ListOfTypes.html#Int_t">Int_t</a> kind, ESlaves list = kActive) { <span class="keyword">return</span> Broadcast(0, kind, list); }
-   <a href="../ListOfTypes.html#Int_t">Int_t</a>    BroadcastFile(<span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TFile.html">file</a>, <a href="../ListOfTypes.html#Int_t">Int_t</a> opt, <span class="keyword">const</span> <span class="keyword">char</span> *rfile, <a href="../TList.html">TList</a> *wrks);
-   <a href="../ListOfTypes.html#Int_t">Int_t</a>    BroadcastFile(<span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TFile.html">file</a>, <a href="../ListOfTypes.html#Int_t">Int_t</a> opt, <span class="keyword">const</span> <span class="keyword">char</span> *rfile = 0, ESlaves list = kAllUnique);
+   <a href="../ListOfTypes.html#Int_t">Int_t</a>    BroadcastFile(<span class="keyword">const</span> <span class="keyword">char</span> *file, <a href="../ListOfTypes.html#Int_t">Int_t</a> opt, <span class="keyword">const</span> <span class="keyword">char</span> *rfile, <a href="../TList.html">TList</a> *wrks);
+   <a href="../ListOfTypes.html#Int_t">Int_t</a>    BroadcastFile(<span class="keyword">const</span> <span class="keyword">char</span> *file, <a href="../ListOfTypes.html#Int_t">Int_t</a> opt, <span class="keyword">const</span> <span class="keyword">char</span> *rfile = 0, ESlaves list = kAllUnique);
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    BroadcastGroupPriority(<span class="keyword">const</span> <span class="keyword">char</span> *grp, <a href="../ListOfTypes.html#Int_t">Int_t</a> priority, ESlaves list = kAllUnique);
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    BroadcastGroupPriority(<span class="keyword">const</span> <span class="keyword">char</span> *grp, <a href="../ListOfTypes.html#Int_t">Int_t</a> priority, <a href="../TList.html">TList</a> *workers);
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    BroadcastObject(<span class="keyword">const</span> <a href="../TObject.html">TObject</a> *obj, <a href="../ListOfTypes.html#Int_t">Int_t</a> kind, <a href="../TList.html">TList</a> *slaves);
@@ -815,12 +815,12 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
 
    <span class="keyword">void</span> PrepareInputDataFile(<a href="../TString.html">TString</a> &amp;dataFile);
    <span class="keyword">virtual</span> <span class="keyword">void</span>  SendInputDataFile();
-   <a href="../ListOfTypes.html#Int_t">Int_t</a> SendFile(<span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TFile.html">file</a>, <a href="../ListOfTypes.html#Int_t">Int_t</a> opt = (kBinary | kForward | kCp | kCpBin),
+   <a href="../ListOfTypes.html#Int_t">Int_t</a> SendFile(<span class="keyword">const</span> <span class="keyword">char</span> *file, <a href="../ListOfTypes.html#Int_t">Int_t</a> opt = (kBinary | kForward | kCp | kCpBin),
                   <span class="keyword">const</span> <span class="keyword">char</span> *rfile = 0, <a href="../TSlave.html">TSlave</a> *sl = 0);
    
    <span class="comment">// Fast enable/disable feedback from Process</span>
    <span class="keyword">void</span> SetFeedback(<a href="../TString.html">TString</a> &amp;opt, <a href="../TString.html">TString</a> &amp;optfb, <a href="../ListOfTypes.html#Int_t">Int_t</a> action);
-   <span class="comment">// Output <a href="../TFile.html">file</a> handling during Process</span>
+   <span class="comment">// Output file handling during Process</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a> HandleOutputOptions(<a href="../TString.html">TString</a> &amp;opt, <a href="../TString.html">TString</a> &amp;target, <a href="../ListOfTypes.html#Int_t">Int_t</a> action);
 
    <span class="keyword">static</span> <span class="keyword">void</span> *SlaveStartupThread(<span class="keyword">void</span> *arg);
@@ -914,7 +914,7 @@ R__EXTERN <a href="../TVirtualMutex.html">TVirtualMutex</a> *gProofMutex;
 
    <span class="comment">//-- cache and package management</span>
    <span class="keyword">virtual</span> <span class="keyword">void</span>  ShowCache(<a href="../ListOfTypes.html#Bool_t">Bool_t</a> all = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>);
-   <span class="keyword">virtual</span> <span class="keyword">void</span>  ClearCache(<span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TFile.html">file</a> = 0);
+   <span class="keyword">virtual</span> <span class="keyword">void</span>  ClearCache(<span class="keyword">const</span> <span class="keyword">char</span> *file = 0);
    <a href="../TList.html">TList</a>        *GetListOfPackages();
    <a href="../TList.html">TList</a>        *GetListOfEnabledPackages();
    <span class="keyword">void</span>          ShowPackages(<a href="../ListOfTypes.html#Bool_t">Bool_t</a> all = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>, <a href="../ListOfTypes.html#Bool_t">Bool_t</a> redirlog = <a href="../ListOfTypes.html#Bool_t">kFALSE</a>);
@@ -1152,7 +1152,7 @@ R__EXTERN <a href="../TProof.html">TProof</a> *<a href="../TProof.html">gProof</
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:16 </em><em>&raquo; Last generated: 2015-05-31 22:16</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:44 </em><em>&raquo; Last generated: 2015-05-31 23:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

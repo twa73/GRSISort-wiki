@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:16:40 2015            -->
+<!--   Date: Sun May 31 23:45:02 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -39,7 +39,7 @@
 <span class="comment">// <a href="../TMap.html">TMap</a>                                                                 //</span>
 <span class="comment">//                                                                      //</span>
 <span class="comment">// <a href="../TMap.html">TMap</a> implements an associative array of (key,value) pairs using a    //</span>
-<span class="comment">// hash <a href="../TGTable.html">table</a> for efficient retrieval (therefore <a href="../TMap.html">TMap</a> does not conserve //</span>
+<span class="comment">// hash table for efficient retrieval (therefore <a href="../TMap.html">TMap</a> does not conserve //</span>
 <span class="comment">// the order of the entries). The hash value is calculated              //</span>
 <span class="comment">// using the value returned by the keys <a href="../TPair.html#TPair:Hash" title="ULong_t TPair::Hash()">Hash</a>() function. Both key and   //</span>
 <span class="comment">// value need to inherit from <a href="../TObject.html">TObject</a>.                                  //</span>
@@ -67,7 +67,7 @@
 <span class="keyword">friend</span> <span class="keyword">class</span>  <a href="../TMapIter.html">TMapIter</a>;
 
 <span class="keyword">private</span>:
-   <a href="../THashTable.html">THashTable</a>   *fTable;     <span class="comment">//<a href="../TPair.html#TPair:Hash" title="ULong_t TPair::Hash()">Hash</a> <a href="../TGTable.html">table</a> used to store <a href="../TPair.html">TPair</a>'s</span>
+   <a href="../THashTable.html">THashTable</a>   *fTable;     <span class="comment">//<a href="../TPair.html#TPair:Hash" title="ULong_t TPair::Hash()">Hash</a> table used to store <a href="../TPair.html">TPair</a>'s</span>
 
    <a href="../TMap.html">TMap</a>(<span class="keyword">const</span> <a href="../TMap.html">TMap</a>&amp; map);             <span class="comment">// not implemented</span>
 <a name="Hm6EMC"></a>   <a href="../TMap.html">TMap</a>&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> <a href="../TMap.html">TMap</a>&amp; map);  <span class="comment">// not implemented</span>
@@ -208,7 +208,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:16 </em><em>&raquo; Last generated: 2015-05-31 22:16</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:45 </em><em>&raquo; Last generated: 2015-05-31 23:45</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

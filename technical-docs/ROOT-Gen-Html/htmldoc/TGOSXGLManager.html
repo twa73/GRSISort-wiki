@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:14:35 2015            -->
+<!--   Date: Sun May 31 23:43:11 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -151,7 +151,7 @@ return false;}
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGOSXGLManager:ResizeOffScreenDevice">ResizeOffScreenDevice</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> devInd, <a href="./ListOfTypes.html#Int_t">Int_t</a> x, <a href="./ListOfTypes.html#Int_t">Int_t</a> y, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> w, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> h)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGOSXGLManager:SelectManip">SelectManip</a>(<a href="./TVirtualGLManip.html">TVirtualGLManip</a>* manip, <span class="keyword">const</span> <a href="./TGLCamera.html">TGLCamera</a>* camera, <span class="keyword">const</span> <a href="./TGLRect.html">TGLRect</a>* rect, <span class="keyword">const</span> <a href="./TGLBoundingBox.html">TGLBoundingBox</a>* sceneBox)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGOSXGLManager:SelectManip">SelectManip</a>(<a href="./TVirtualGLManip.html">TVirtualGLManip</a>* manip, <span class="keyword">const</span> TGLCamera* camera, <span class="keyword">const</span> TGLRect* rect, <span class="keyword">const</span> TGLBoundingBox* sceneBox)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGOSXGLManager:SelectOffScreenDevice">SelectOffScreenDevice</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> devInd)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
@@ -296,7 +296,7 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGOSXGLManager:ReadGLBuffer" href="src/TGOSXGLManager.h.html#zZxTwC">ReadGLBuffer</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> devInd)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGOSXGLManager:SelectManip" href="src/TGOSXGLManager.h.html#Of1A1E">SelectManip</a>(<a href="./TVirtualGLManip.html">TVirtualGLManip</a>* manip, <span class="keyword">const</span> <a href="./TGLCamera.html">TGLCamera</a>* camera, <span class="keyword">const</span> <a href="./TGLRect.html">TGLRect</a>* rect, <span class="keyword">const</span> <a href="./TGLBoundingBox.html">TGLBoundingBox</a>* sceneBox)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGOSXGLManager:SelectManip" href="src/TGOSXGLManager.h.html#Of1A1E">SelectManip</a>(<a href="./TVirtualGLManip.html">TVirtualGLManip</a>* manip, <span class="keyword">const</span> TGLCamera* camera, <span class="keyword">const</span> TGLRect* rect, <span class="keyword">const</span> TGLBoundingBox* sceneBox)</span><br />
 <div class="funccomm"><pre>Used by our OpenGL viewer.
 In the past we had to implement this functions to deal with mt-issues on Windows.
 </pre></div>
@@ -323,7 +323,7 @@ In the past we had to implement this functions to deal with mt-issues on Windows
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Sun May 31 22:14:36 2015 </em><em>&raquo; Last generated: 2015-05-31 22:14</em><br />
+<em>&raquo; Last changed: Sun May 31 23:43:13 2015 </em><em>&raquo; Last generated: 2015-05-31 23:43</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

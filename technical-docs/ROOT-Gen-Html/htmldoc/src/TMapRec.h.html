@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:15:33 2015            -->
+<!--   Date: Sun May 31 23:44:01 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -38,7 +38,7 @@
 <span class="comment">//                                                                      //</span>
 <span class="comment">// <a href="../TMapFile.html">TMapFile</a>                                                             //</span>
 <span class="comment">//                                                                      //</span>
-<span class="comment">// This class implements a shared memory region mapped to a <a href="../TFile.html">file</a>.       //</span>
+<span class="comment">// This class implements a shared memory region mapped to a file.       //</span>
 <span class="comment">// Objects can be placed into this shared memory area using the Add()   //</span>
 <span class="comment">// member function. Whenever the mapped object(s) change(s) call        //</span>
 <span class="comment">// Update() to put a fresh copy in the shared memory. This extra        //</span>
@@ -46,7 +46,7 @@
 <span class="comment">// virtual pointers between processes (the vtbl ptr points to the       //</span>
 <span class="comment">// originators unique address space and can not be used by the          //</span>
 <span class="comment">// consumer process(es)). Consumer processes can map the memory region  //</span>
-<span class="comment">// from this <a href="../TFile.html">file</a> and access the objects stored in it via the Get()     //</span>
+<span class="comment">// from this file and access the objects stored in it via the Get()     //</span>
 <span class="comment">// method (which returns a copy of the object stored in the shared      //</span>
 <span class="comment">// memory with correct vtbl ptr set). Only objects of classes with a    //</span>
 <span class="comment">// Streamer() member function defined can be shared.                    //</span>
@@ -77,10 +77,10 @@
 <span class="keyword">friend</span> <span class="keyword">class</span> <a href="../TMapRec.html">TMapRec</a>;
 
 <span class="keyword">private</span>:
-   <a href="../ListOfTypes.html#Int_t">Int_t</a>       fFd;             <span class="comment">//Descriptor of mapped <a href="../TFile.html">file</a></span>
-   <a href="../ListOfTypes.html#Int_t">Int_t</a>       fVersion;        <span class="comment">//<a href="../ROOT.html">ROOT</a> version (or -1 for shadow map <a href="../TFile.html">file</a>)</span>
-   <span class="keyword">char</span>       *<a href="../TMapRec.html#TMapRec:fName" title="char* TMapRec::fName">fName</a>;           <span class="comment">//Name of mapped <a href="../TFile.html">file</a></span>
-   <span class="keyword">char</span>       *fTitle;          <span class="comment">//Title of mapped <a href="../TFile.html">file</a></span>
+   <a href="../ListOfTypes.html#Int_t">Int_t</a>       fFd;             <span class="comment">//Descriptor of mapped file</span>
+   <a href="../ListOfTypes.html#Int_t">Int_t</a>       fVersion;        <span class="comment">//<a href="../ROOT.html">ROOT</a> version (or -1 for shadow map file)</span>
+   <span class="keyword">char</span>       *<a href="../TMapRec.html#TMapRec:fName" title="char* TMapRec::fName">fName</a>;           <span class="comment">//Name of mapped file</span>
+   <span class="keyword">char</span>       *fTitle;          <span class="comment">//Title of mapped file</span>
    <span class="keyword">char</span>       *fOption;         <span class="comment">//Directory creation options</span>
    <span class="keyword">void</span>       *fMmallocDesc;    <span class="comment">//Pointer to mmalloc descriptor</span>
    <a href="../ListOfTypes.html#ULong_t">ULong_t</a>     fBaseAddr;       <span class="comment">//Base address of mapped memory region</span>
@@ -90,7 +90,7 @@
    <a href="../ListOfTypes.html#Long_t">Long_t</a>      fOffset;         <span class="comment">//Offset in bytes for region mapped by reader</span>
    <a href="../TDirectory.html">TDirectory</a> *fDirectory;      <span class="comment">//Pointer to directory associated to this mapfile</span>
    <a href="../TList.html">TList</a>      *fBrowseList;     <span class="comment">//List of KeyMapFile objects</span>
-   <a href="../ListOfTypes.html#Bool_t">Bool_t</a>      fWritable;       <span class="comment">//TRUE if mapped <a href="../TFile.html">file</a> opened in RDWR mode</span>
+   <a href="../ListOfTypes.html#Bool_t">Bool_t</a>      fWritable;       <span class="comment">//TRUE if mapped file opened in RDWR mode</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>       fSemaphore;      <span class="comment">//Modification semaphore (or getpid() for WIN32)</span>
    <a href="../ListOfTypes.html#ULong_t">ULong_t</a>     fhSemaphore;     <span class="comment">//HANDLE of WIN32 Mutex object to implement semaphore</span>
    <a href="../TObject.html">TObject</a>    *fGetting;        <span class="comment">//Don't deadlock in update mode, when from Get() Add() is called</span>
@@ -169,7 +169,7 @@
 <span class="comment">// <a href="../TMapRec.html">TMapRec</a>                                                              //</span>
 <span class="comment">//                                                                      //</span>
 <span class="comment">// A <a href="../TMapFile.html">TMapFile</a> contains a list of <a href="../TMapRec.html">TMapRec</a> objects which keep track of    //</span>
-<span class="comment">// the actual objects stored in the mapped <a href="../TFile.html">file</a>.                        //</span>
+<span class="comment">// the actual objects stored in the mapped file.                        //</span>
 <span class="comment">//                                                                      //</span>
 <span class="comment">//////////////////////////////////////////////////////////////////////////</span>
 
@@ -204,7 +204,7 @@
 <span class="keyword">inline</span> <span class="keyword">void</span> *<a href="../TMapFile.html">TMapFile</a>::<a href="../TMapFile.html#TMapFile:GetBreakval" title="void* TMapFile::GetBreakval()">GetBreakval</a>() <span class="keyword">const</span>
 {
    <span class="comment">// Return the current location in the memory region for this malloc heap which</span>
-   <span class="comment">// represents the end of memory in use. Returns 0 if map <a href="../TFile.html">file</a> was closed.</span>
+   <span class="comment">// represents the end of memory in use. Returns 0 if map file was closed.</span>
 
    <span class="keyword">if</span> (!fMmallocDesc) <span class="keyword">return</span> 0;
    <span class="keyword">return</span> (<span class="keyword">void</span> *)((<span class="keyword">struct</span> mdesc *)fMmallocDesc)-&gt;breakval;
@@ -238,7 +238,7 @@ R__EXTERN <span class="keyword">void</span> *gMmallocDesc;  <span class="comment
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:15 </em><em>&raquo; Last generated: 2015-05-31 22:15</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:44 </em><em>&raquo; Last generated: 2015-05-31 23:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:14:17 2015            -->
+<!--   Date: Sun May 31 23:43:06 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -38,15 +38,15 @@
 <span class="comment">//                                                                      //</span>
 <span class="comment">// <a href="../TGFileDialog.html">TGFileDialog</a>                                                         //</span>
 <span class="comment">//                                                                      //</span>
-<span class="comment">// This class creates a <a href="../TFile.html">file</a> selection dialog. It contains a combo box  //</span>
+<span class="comment">// This class creates a file selection dialog. It contains a combo box  //</span>
 <span class="comment">// to select the desired directory. A listview with the different       //</span>
 <span class="comment">// files in the current directory and a combo box with which you can    //</span>
-<span class="comment">// select a filter (on <a href="../TFile.html">file</a> extensions).                                //</span>
-<span class="comment">// When creating a <a href="../TFile.html">file</a> dialog one passes a pointer to a <a href="../TGFileInfo.html">TGFileInfo</a>     //</span>
+<span class="comment">// select a filter (on file extensions).                                //</span>
+<span class="comment">// When creating a file dialog one passes a pointer to a <a href="../TGFileInfo.html">TGFileInfo</a>     //</span>
 <span class="comment">// object. In this object you can set the <a href="../TGFileInfo.html#TGFileInfo:fFileTypes" title="const char** TGFileInfo::fFileTypes">fFileTypes</a> and <a href="../TGFileInfo.html#TGFileInfo:fIniDir" title="char* TGFileInfo::fIniDir">fIniDir</a> to     //</span>
-<span class="comment">// specify the list of <a href="../TFile.html">file</a> types for the filter combo box and the      //</span>
+<span class="comment">// specify the list of file types for the filter combo box and the      //</span>
 <span class="comment">// initial directory. When the <a href="../TGFileDialog.html">TGFileDialog</a> ctor returns the selected   //</span>
-<span class="comment">// <a href="../TFile.html">file</a> name can be found in the <a href="../TGFileInfo.html">TGFileInfo</a>::<a href="../TGFileInfo.html#TGFileInfo:fFilename" title="char* TGFileInfo::fFilename">fFilename</a> field and the    //</span>
+<span class="comment">// file name can be found in the <a href="../TGFileInfo.html">TGFileInfo</a>::<a href="../TGFileInfo.html#TGFileInfo:fFilename" title="char* TGFileInfo::fFilename">fFilename</a> field and the    //</span>
 <span class="comment">// selected directory in <a href="../TGFileInfo.html">TGFileInfo</a>::<a href="../TGFileInfo.html#TGFileInfo:fIniDir" title="char* TGFileInfo::fIniDir">fIniDir</a>. The <a href="../TGFileInfo.html#TGFileInfo:fFilename" title="char* TGFileInfo::fFilename">fFilename</a> and         //</span>
 <span class="comment">// <a href="../TGFileInfo.html#TGFileInfo:fIniDir" title="char* TGFileInfo::fIniDir">fIniDir</a> are deleted by the <a href="../TGFileInfo.html">TGFileInfo</a> dtor.                          //</span>
 <span class="comment">//                                                                      //</span>
@@ -81,13 +81,13 @@
 <a name="lOmTCB"></a>   <a href="../TGFileInfo.html">TGFileInfo</a>&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> <a href="../TGFileInfo.html">TGFileInfo</a>&amp;);   <span class="comment">// not implemented</span>
 
 <span class="keyword">public</span>:
-   <span class="keyword">char</span>         *<a href="../TGFileInfo.html#TGFileInfo:fFilename" title="char* TGFileInfo::fFilename">fFilename</a>;            <span class="comment">// selected <a href="../TFile.html">file</a> name</span>
+   <span class="keyword">char</span>         *<a href="../TGFileInfo.html#TGFileInfo:fFilename" title="char* TGFileInfo::fFilename">fFilename</a>;            <span class="comment">// selected file name</span>
    <span class="keyword">char</span>         *<a href="../TGFileInfo.html#TGFileInfo:fIniDir" title="char* TGFileInfo::fIniDir">fIniDir</a>;              <span class="comment">// on input: initial directory, on output: new directory</span>
-   <span class="keyword">const</span> <span class="keyword">char</span>  **<a href="../TGFileInfo.html#TGFileInfo:fFileTypes" title="const char** TGFileInfo::fFileTypes">fFileTypes</a>;           <span class="comment">// <a href="../TFile.html">file</a> types used to filter selectable files</span>
-   <a href="../ListOfTypes.html#Int_t">Int_t</a>         <a href="../TGFileInfo.html#TGFileInfo:fFileTypeIdx" title="Int_t TGFileInfo::fFileTypeIdx">fFileTypeIdx</a>;         <span class="comment">// selected <a href="../TFile.html">file</a> type, index in <a href="../TGFileInfo.html#TGFileInfo:fFileTypes" title="const char** TGFileInfo::fFileTypes">fFileTypes</a></span>
-   <a href="../ListOfTypes.html#Bool_t">Bool_t</a>        <a href="../TGFileInfo.html#TGFileInfo:fOverwrite" title="Bool_t TGFileInfo::fOverwrite">fOverwrite</a>;           <span class="comment">// if <a href="../ListOfTypes.html#bool">true</a> overwrite the <a href="../TFile.html">file</a> with existing name on save</span>
-   <a href="../ListOfTypes.html#Bool_t">Bool_t</a>        <a href="../TGFileInfo.html#TGFileInfo:fMultipleSelection" title="Bool_t TGFileInfo::fMultipleSelection">fMultipleSelection</a>;   <span class="comment">// if <a href="../ListOfTypes.html#bool">true</a>, allow multiple <a href="../TFile.html">file</a> selection</span>
-   <a href="../TList.html">TList</a>        *<a href="../TGFileInfo.html#TGFileInfo:fFileNamesList" title="TList* TGFileInfo::fFileNamesList">fFileNamesList</a>;       <span class="comment">// list of selected <a href="../TFile.html">file</a> names</span>
+   <span class="keyword">const</span> <span class="keyword">char</span>  **<a href="../TGFileInfo.html#TGFileInfo:fFileTypes" title="const char** TGFileInfo::fFileTypes">fFileTypes</a>;           <span class="comment">// file types used to filter selectable files</span>
+   <a href="../ListOfTypes.html#Int_t">Int_t</a>         <a href="../TGFileInfo.html#TGFileInfo:fFileTypeIdx" title="Int_t TGFileInfo::fFileTypeIdx">fFileTypeIdx</a>;         <span class="comment">// selected file type, index in <a href="../TGFileInfo.html#TGFileInfo:fFileTypes" title="const char** TGFileInfo::fFileTypes">fFileTypes</a></span>
+   <a href="../ListOfTypes.html#Bool_t">Bool_t</a>        <a href="../TGFileInfo.html#TGFileInfo:fOverwrite" title="Bool_t TGFileInfo::fOverwrite">fOverwrite</a>;           <span class="comment">// if <a href="../ListOfTypes.html#bool">true</a> overwrite the file with existing name on save</span>
+   <a href="../ListOfTypes.html#Bool_t">Bool_t</a>        <a href="../TGFileInfo.html#TGFileInfo:fMultipleSelection" title="Bool_t TGFileInfo::fMultipleSelection">fMultipleSelection</a>;   <span class="comment">// if <a href="../ListOfTypes.html#bool">true</a>, allow multiple file selection</span>
+   <a href="../TList.html">TList</a>        *<a href="../TGFileInfo.html#TGFileInfo:fFileNamesList" title="TList* TGFileInfo::fFileNamesList">fFileNamesList</a>;       <span class="comment">// list of selected file names</span>
 
 <a name="MSgajC"></a>   <a href="../TGFileInfo.html">TGFileInfo</a>() : <a href="../TGFileInfo.html#TGFileInfo:fFilename" title="char* TGFileInfo::fFilename">fFilename</a>(0), <a href="../TGFileInfo.html#TGFileInfo:fIniDir" title="char* TGFileInfo::fIniDir">fIniDir</a>(0), <a href="../TGFileInfo.html#TGFileInfo:fFileTypes" title="const char** TGFileInfo::fFileTypes">fFileTypes</a>(0), <a href="../TGFileInfo.html#TGFileInfo:fFileTypeIdx" title="Int_t TGFileInfo::fFileTypeIdx">fFileTypeIdx</a>(0),
                   <a href="../TGFileInfo.html#TGFileInfo:fOverwrite" title="Bool_t TGFileInfo::fOverwrite">fOverwrite</a>(<a href="../ListOfTypes.html#Bool_t">kFALSE</a>), <a href="../TGFileInfo.html#TGFileInfo:fMultipleSelection" title="Bool_t TGFileInfo::fMultipleSelection">fMultipleSelection</a>(0), <a href="../TGFileInfo.html#TGFileInfo:fFileNamesList" title="TList* TGFileInfo::fFileNamesList">fFileNamesList</a>(0) { }
@@ -100,25 +100,25 @@
 <span class="keyword">class</span> <a href="../TGFileDialog.html">TGFileDialog</a> : <span class="keyword">public</span> <a href="../TGTransientFrame.html">TGTransientFrame</a> {
 
 <span class="keyword">protected</span>:
-   <a href="../TGTextBuffer.html">TGTextBuffer</a>      *fTbfname;  <span class="comment">// text buffer of <a href="../TFile.html">file</a> name</span>
-   <a href="../TGTextEntry.html">TGTextEntry</a>       *fName;     <span class="comment">// <a href="../TFile.html">file</a> name text entry</span>
-   <a href="../TGComboBox.html">TGComboBox</a>        *fTypes;    <span class="comment">// <a href="../TFile.html">file</a> type combo box</span>
-   <a href="../TGFSComboBox.html">TGFSComboBox</a>      *fTreeLB;   <span class="comment">// <a href="../TFile.html">file</a> system path combo box</span>
+   <a href="../TGTextBuffer.html">TGTextBuffer</a>      *fTbfname;  <span class="comment">// text buffer of file name</span>
+   <a href="../TGTextEntry.html">TGTextEntry</a>       *fName;     <span class="comment">// file name text entry</span>
+   <a href="../TGComboBox.html">TGComboBox</a>        *fTypes;    <span class="comment">// file type combo box</span>
+   <a href="../TGFSComboBox.html">TGFSComboBox</a>      *fTreeLB;   <span class="comment">// file system path combo box</span>
    <a href="../TGPictureButton.html">TGPictureButton</a>   *fCdup;     <span class="comment">// top toolbar button</span>
    <a href="../TGPictureButton.html">TGPictureButton</a>   *fNewf;     <span class="comment">// top toolbar button</span>
    <a href="../TGPictureButton.html">TGPictureButton</a>   *fList;     <span class="comment">// top toolbar button</span>
    <a href="../TGPictureButton.html">TGPictureButton</a>   *fDetails;  <span class="comment">// top toolbar button</span>
-   <a href="../TGCheckButton.html">TGCheckButton</a>     *fCheckB;   <span class="comment">// set on/off <a href="../TFile.html">file</a> overwriting for Open dialog</span>
-                                 <span class="comment">// OR set on/off multiple <a href="../TFile.html">file</a> selection for SaveAs dialog</span>
+   <a href="../TGCheckButton.html">TGCheckButton</a>     *fCheckB;   <span class="comment">// set on/off file overwriting for Open dialog</span>
+                                 <span class="comment">// OR set on/off multiple file selection for SaveAs dialog</span>
    <span class="keyword">const</span> <a href="../TGPicture.html">TGPicture</a>   *fPcdup;    <span class="comment">// picture for fCdup</span>
    <span class="keyword">const</span> <a href="../TGPicture.html">TGPicture</a>   *fPnewf;    <span class="comment">// picture for fNewf</span>
    <span class="keyword">const</span> <a href="../TGPicture.html">TGPicture</a>   *fPlist;    <span class="comment">// picture for fList</span>
    <span class="keyword">const</span> <a href="../TGPicture.html">TGPicture</a>   *fPdetails; <span class="comment">// picture for fDetails</span>
    <a href="../TGTextButton.html">TGTextButton</a>      *fOk;       <span class="comment">// ok button</span>
    <a href="../TGTextButton.html">TGTextButton</a>      *fCancel;   <span class="comment">// cancel button</span>
-   <a href="../TGListView.html">TGListView</a>        *fFv;       <span class="comment">// <a href="../TFile.html">file</a> list view</span>
-   <a href="../TGFileContainer.html">TGFileContainer</a>   *fFc;       <span class="comment">// <a href="../TFile.html">file</a> list view container (containing the files)</span>
-   <a href="../TGFileInfo.html">TGFileInfo</a>        *fFileInfo; <span class="comment">// <a href="../TFile.html">file</a> info passed to this dialog</span>
+   <a href="../TGListView.html">TGListView</a>        *fFv;       <span class="comment">// file list view</span>
+   <a href="../TGFileContainer.html">TGFileContainer</a>   *fFc;       <span class="comment">// file list view container (containing the files)</span>
+   <a href="../TGFileInfo.html">TGFileInfo</a>        *fFileInfo; <span class="comment">// file info passed to this dialog</span>
 
 <span class="keyword">private</span>:
    <a href="../TGFileDialog.html">TGFileDialog</a>(<span class="keyword">const</span> <a href="../TGFileDialog.html">TGFileDialog</a>&amp;);              <span class="comment">// not implemented</span>
@@ -144,7 +144,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:14 </em><em>&raquo; Last generated: 2015-05-31 22:14</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:43 </em><em>&raquo; Last generated: 2015-05-31 23:43</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

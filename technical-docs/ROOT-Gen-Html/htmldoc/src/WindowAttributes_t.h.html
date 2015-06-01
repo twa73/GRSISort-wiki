@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:18:53 2015            -->
+<!--   Date: Sun May 31 23:45:34 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -29,9 +29,9 @@
  * For the list of contributors see $ROOTSYS/README/CREDITS.             *
  *************************************************************************/</span>
 
-<span class="comment">// The current heuristics used by CINT to avoid parsing header <a href="../TFile.html">file</a> for</span>
+<span class="comment">// The current heuristics used by CINT to avoid parsing header file for</span>
 <span class="comment">// which it already has a (compiled) dictionary, is to compare the header</span>
-<span class="comment">// <a href="../TFile.html">file</a> name to the list of class names.  CINT will skip the #inclusion</span>
+<span class="comment">// file name to the list of class names.  CINT will skip the #inclusion</span>
 <span class="comment">// of headers for compiled classes if they have the same name as a known class.</span>
 <span class="comment">// Since GuiTypes.h does not declare any class named 'GuiTypes', upon</span>
 <span class="comment">// seeing #include <span class="string">"GuiTypes.h"</span> in an interpreted script, CINT will parse</span>
@@ -346,7 +346,7 @@
 <span class="keyword">const</span> <a href="../ListOfTypes.html#Mask_t">Mask_t</a> <a href="../ListOfTypes.html#Mask_t">kGCArcMode</a>           = BIT(22);
 
 <span class="keyword">struct</span> <a href="../ColorStruct_t.html">ColorStruct_t</a> {
-   <a href="../ListOfTypes.html#ULong_t">ULong_t</a>   fPixel;    <span class="comment">// color pixel value (index in color <a href="../TGTable.html">table</a>)</span>
+   <a href="../ListOfTypes.html#ULong_t">ULong_t</a>   fPixel;    <span class="comment">// color pixel value (index in color table)</span>
    <a href="../ListOfTypes.html#UShort_t">UShort_t</a>  fRed;      <span class="comment">// red component (0..65535)</span>
    <a href="../ListOfTypes.html#UShort_t">UShort_t</a>  fGreen;    <span class="comment">// green component (0..65535)</span>
    <a href="../ListOfTypes.html#UShort_t">UShort_t</a>  fBlue;     <span class="comment">// blue component (0..65535)</span>
@@ -415,7 +415,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:18 </em><em>&raquo; Last generated: 2015-05-31 22:18</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:45 </em><em>&raquo; Last generated: 2015-05-31 23:45</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

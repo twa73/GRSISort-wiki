@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:18:37 2015            -->
+<!--   Date: Sun May 31 23:45:30 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -39,7 +39,7 @@
 <span class="comment">// <a href="../TWebFile.html">TWebFile</a>                                                             //</span>
 <span class="comment">//                                                                      //</span>
 <span class="comment">// A <a href="../TWebFile.html">TWebFile</a> is like a normal <a href="../TFile.html">TFile</a> except that it reads its data      //</span>
-<span class="comment">// via a standard apache web server. A <a href="../TWebFile.html">TWebFile</a> is a read-only <a href="../TFile.html">file</a>.    //</span>
+<span class="comment">// via a standard apache web server. A <a href="../TWebFile.html">TWebFile</a> is a read-only file.    //</span>
 <span class="comment">//                                                                      //</span>
 <span class="comment">//////////////////////////////////////////////////////////////////////////</span>
 
@@ -66,7 +66,7 @@
    <a href="../TWebFile.html">TWebFile</a>() : <a href="../TWebFile.html#TWebFile:fSocket" title="TSocket* TWebFile::fSocket">fSocket</a>(0) { }
 
 <span class="keyword">protected</span>:
-   <span class="keyword">mutable</span> <a href="../ListOfTypes.html#Long64_t">Long64_t</a>  fSize;             <span class="comment">// <a href="../TFile.html">file</a> size</span>
+   <span class="keyword">mutable</span> <a href="../ListOfTypes.html#Long64_t">Long64_t</a>  fSize;             <span class="comment">// file size</span>
    <a href="../TSocket.html">TSocket</a>          *fSocket;           <span class="comment">// socket for HTTP/1.1 (stays alive between calls)</span>
    <a href="../TUrl.html">TUrl</a>              fProxy;            <span class="comment">// proxy URL</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>            fHasModRoot;       <span class="comment">// <a href="../ListOfTypes.html#bool">true</a> if server has mod_root installed</span>
@@ -111,7 +111,7 @@
    <span class="keyword">static</span> <span class="keyword">void</span>        SetProxy(<span class="keyword">const</span> <span class="keyword">char</span> *url);
    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">char</span> *GetProxy();
 
-   ClassDef(<a href="../TWebFile.html">TWebFile</a>,2)  <span class="comment">//A <a href="../ROOT.html">ROOT</a> <a href="../TFile.html">file</a> that reads via a http server</span>
+   ClassDef(<a href="../TWebFile.html">TWebFile</a>,2)  <span class="comment">//A <a href="../ROOT.html">ROOT</a> file that reads via a http server</span>
 };
 
 
@@ -146,7 +146,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:18 </em><em>&raquo; Last generated: 2015-05-31 22:18</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:45 </em><em>&raquo; Last generated: 2015-05-31 23:45</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

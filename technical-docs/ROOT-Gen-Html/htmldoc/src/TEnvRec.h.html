@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:14:11 2015            -->
+<!--   Date: Sun May 31 23:43:01 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -40,14 +40,14 @@
 <span class="comment">//                                                                      //</span>
 <span class="comment">// The <a href="../TEnv.html">TEnv</a> class reads config files, by default named .rootrc. Three   //</span>
 <span class="comment">// types of config files are read: global, user and local files. The    //</span>
-<span class="comment">// global <a href="../TFile.html">file</a> is $ROOTSYS/etc/system&lt;name&gt; (or ROOTETCDIR/system&lt;name&gt;)//</span>
-<span class="comment">// the user <a href="../TFile.html">file</a> is $HOME/&lt;name&gt; and the local <a href="../TFile.html">file</a> is ./&lt;name&gt;.        //</span>
+<span class="comment">// global file is $ROOTSYS/etc/system&lt;name&gt; (or ROOTETCDIR/system&lt;name&gt;)//</span>
+<span class="comment">// the user file is $HOME/&lt;name&gt; and the local file is ./&lt;name&gt;.        //</span>
 <span class="comment">// By setting the shell variable ROOTENV_NO_HOME=1 the reading of       //</span>
-<span class="comment">// the $HOME/&lt;name&gt; resource <a href="../TFile.html">file</a> will be skipped. This might be useful //</span>
-<span class="comment">// in case the home directory resides on an automounted remote <a href="../TFile.html">file</a>     //</span>
-<span class="comment">// system and one wants to avoid this <a href="../TFile.html">file</a> system from being mounted.   //</span>
+<span class="comment">// the $HOME/&lt;name&gt; resource file will be skipped. This might be useful //</span>
+<span class="comment">// in case the home directory resides on an automounted remote file     //</span>
+<span class="comment">// system and one wants to avoid this file system from being mounted.   //</span>
 <span class="comment">//                                                                      //</span>
-<span class="comment">// The format of the .rootrc <a href="../TFile.html">file</a> is similar to the .Xdefaults format:  //</span>
+<span class="comment">// The format of the .rootrc file is similar to the .Xdefaults format:  //</span>
 <span class="comment">//                                                                      //</span>
 <span class="comment">//   [+]&lt;SystemName&gt;.&lt;RootName|ProgName&gt;.&lt;name&gt;[(type)]:  &lt;value&gt;       //</span>
 <span class="comment">//                                                                      //</span>
@@ -149,8 +149,8 @@
 <span class="keyword">class</span> <a href="../TEnv.html">TEnv</a> : <span class="keyword">public</span> <a href="../TObject.html">TObject</a> {
 
 <span class="keyword">private</span>:
-   <a href="../THashList.html">THashList</a>        *fTable;     <span class="comment">// hash <a href="../TGTable.html">table</a> containing env records</span>
-   <a href="../TString.html">TString</a>           fRcName;    <span class="comment">// resource <a href="../TFile.html">file</a> base name</span>
+   <a href="../THashList.html">THashList</a>        *fTable;     <span class="comment">// hash table containing env records</span>
+   <a href="../TString.html">TString</a>           fRcName;    <span class="comment">// resource file base name</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>            fIgnoreDup; <span class="comment">// ignore duplicates, don't issue warning</span>
 
    <a href="../TEnv.html">TEnv</a>(<span class="keyword">const</span> <a href="../TEnv.html">TEnv</a>&amp;);            <span class="comment">// not implemented</span>
@@ -203,7 +203,7 @@ R__EXTERN <a href="../TEnv.html">TEnv</a> *<a href="../TEnv.html">gEnv</a>;
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:14 </em><em>&raquo; Last generated: 2015-05-31 22:14</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:43 </em><em>&raquo; Last generated: 2015-05-31 23:43</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

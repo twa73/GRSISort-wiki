@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:16:40 2015            -->
+<!--   Date: Sun May 31 23:45:02 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -63,12 +63,12 @@ return false;}
 
 <a href="./TParallelMergingFile.html">TParallelMergingFile</a>
 
-Specialization of <a href="./TMemFile.html">TMemFile</a> to connect to a parallel <a href="./TFile.html">file</a> merger.
+Specialization of <a href="./TMemFile.html">TMemFile</a> to connect to a parallel file merger.
 Upon a call to <a href="./TParallelMergingFile.html#TParallelMergingFile:UploadAndReset" title="Bool_t TParallelMergingFile::UploadAndReset()">UploadAndReset</a>, the content already written to the
- <a href="./TFile.html">file</a> is upload to the server and the object implementing the function
+ file is upload to the server and the object implementing the function
 <a href="./TMemFile.html#TMemFile:ResetAfterMerge" title="void TMemFile::ResetAfterMerge(TFileMergeInfo* )">ResetAfterMerge</a> (like <a href="./TTree.html">TTree</a>) are reset.
-The parallel <a href="./TFile.html">file</a> merger will then collate the information coming
-from this client and any other client in to the <a href="./TFile.html">file</a> described by
+The parallel file merger will then collate the information coming
+from this client and any other client in to the file described by
 the filename of this object.
 
 
@@ -604,7 +604,7 @@ the filename of this object.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Philippe+Canal+October"> Philippe Canal October 2011.</a> </em><em>&raquo; Copyright   (C) 1995-2011, Rene Brun, Fons Rademakers and al.           *</em><br />
-<em>&raquo; Last changed: root/net:$Id$ </em><em>&raquo; Last generated: 2015-05-31 22:16</em><br />
+<em>&raquo; Last changed: root/net:$Id$ </em><em>&raquo; Last generated: 2015-05-31 23:45</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

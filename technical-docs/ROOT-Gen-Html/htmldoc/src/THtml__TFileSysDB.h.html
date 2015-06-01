@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:15:18 2015            -->
+<!--   Date: Sun May 31 23:43:48 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -111,7 +111,7 @@
    };
 
    <span class="comment">//______________________________________________________________</span>
-   <span class="comment">// Helper class to translate between <a href="../TFile.html">file</a> names and their</span>
+   <span class="comment">// Helper class to translate between file names and their</span>
    <span class="comment">// version used for documentation. Can be derived from and thus</span>
    <span class="comment">// replaced by the user; see <a href="../THtml.html">THtml</a>::<a href="../THtml.html#THtml:SetPathDefinition" title="void THtml::SetPathDefinition(const THtml::TPathDefinition&amp; pd)">SetPathDefinition</a>().</span>
    <span class="keyword">class</span> TPathDefinition: <span class="keyword">public</span> THelperBase {
@@ -150,7 +150,7 @@
       <a href="../TString.html">TString</a>      fName; <span class="comment">// name of the element</span>
       <a href="../THtml__TFileSysDir.html#THtml__TFileSysDir:TFileSysDir" title="THtml::TFileSysDir THtml::TFileSysDir::TFileSysDir(const char* name,THtml::TFileSysDir* parent)">TFileSysDir</a>* fParent; <span class="comment">// parent directory</span>
       <a href="../ListOfTypes.html#Int_t">Int_t</a>        fLevel; <span class="comment">// level of directory</span>
-      ClassDef(<a href="../THtml__TFileSysEntry.html#THtml__TFileSysEntry:TFileSysEntry" title="THtml::TFileSysEntry THtml::TFileSysEntry::TFileSysEntry(const char* name,THtml::TFileSysDir* parent) or overloads">TFileSysEntry</a>, 0); <span class="comment">// an entry of the local <a href="../TFile.html">file</a> system</span>
+      ClassDef(<a href="../THtml__TFileSysEntry.html#THtml__TFileSysEntry:TFileSysEntry" title="THtml::TFileSysEntry THtml::TFileSysEntry::TFileSysEntry(const char* name,THtml::TFileSysDir* parent) or overloads">TFileSysEntry</a>, 0); <span class="comment">// an entry of the local file system</span>
    };
 
    <span class="comment">//______________________________________________________________</span>
@@ -168,7 +168,7 @@
    <span class="keyword">protected</span>:
       <a href="../TList.html">TList</a> fFiles;
       <a href="../TList.html">TList</a> fDirs;
-      ClassDef(<a href="../THtml__TFileSysDir.html#THtml__TFileSysDir:TFileSysDir" title="THtml::TFileSysDir THtml::TFileSysDir::TFileSysDir(const char* name,THtml::TFileSysDir* parent)">TFileSysDir</a>, 0); <span class="comment">// an directory of the local <a href="../TFile.html">file</a> system</span>
+      ClassDef(<a href="../THtml__TFileSysDir.html#THtml__TFileSysDir:TFileSysDir" title="THtml::TFileSysDir THtml::TFileSysDir::TFileSysDir(const char* name,THtml::TFileSysDir* parent)">TFileSysDir</a>, 0); <span class="comment">// an directory of the local file system</span>
    };
 
    <span class="comment">//______________________________________________________________</span>
@@ -186,7 +186,7 @@
             fullname += fName;
       }
 
-      ClassDef(TFileSysRoot, 0); <span class="comment">// an root directory of the local <a href="../TFile.html">file</a> system</span>
+      ClassDef(TFileSysRoot, 0); <span class="comment">// an root directory of the local file system</span>
    };
 
    <span class="comment">//______________________________________________________________</span>
@@ -210,7 +210,7 @@
       <a href="../THashTable.html">THashTable</a> <a href="../THtml__TFileSysDB.html#THtml__TFileSysDB:fEntries" title="THashTable THtml::TFileSysDB::fEntries">fEntries</a>; <span class="comment">// hash map of all filenames without paths</span>
       <a href="../TString.html">TString</a>  <a href="../THtml__TFileSysDB.html#THtml__TFileSysDB:fIgnorePath" title="TString THtml::TFileSysDB::fIgnorePath">fIgnorePath</a>; <span class="comment">// regexp of path to ignore while building entry tree</span>
       <a href="../ListOfTypes.html#Int_t">Int_t</a>    <a href="../THtml__TFileSysDB.html#THtml__TFileSysDB:fMaxLevel" title="Int_t THtml::TFileSysDB::fMaxLevel">fMaxLevel</a>; <span class="comment">// maximum level of directory nesting</span>
-      ClassDef(<a href="../THtml__TFileSysDB.html#THtml__TFileSysDB:TFileSysDB" title="THtml::TFileSysDB THtml::TFileSysDB::TFileSysDB(const char* path,const char* ignr,Int_t maxdirlevel)">TFileSysDB</a>, 0); <span class="comment">// instance of <a href="../TFile.html">file</a> system data</span>
+      ClassDef(<a href="../THtml__TFileSysDB.html#THtml__TFileSysDB:TFileSysDB" title="THtml::TFileSysDB THtml::TFileSysDB::TFileSysDB(const char* path,const char* ignr,Int_t maxdirlevel)">TFileSysDB</a>, 0); <span class="comment">// instance of file system data</span>
    };
 
 
@@ -297,8 +297,8 @@
    <span class="keyword">void</span>          SetAuthorTag(<span class="keyword">const</span> <span class="keyword">char</span>* tag) { fDocSyntax.fAuthorTag = tag; }
    <span class="keyword">void</span>          SetLastUpdateTag(<span class="keyword">const</span> <span class="keyword">char</span>* tag) { fDocSyntax.fLastUpdateTag = tag; }
    <span class="keyword">void</span>          SetCopyrightTag(<span class="keyword">const</span> <span class="keyword">char</span>* tag) { fDocSyntax.fCopyrightTag = tag; }
-   <span class="keyword">void</span>          SetHeader(<span class="keyword">const</span> <span class="keyword">char</span>* <a href="../TFile.html">file</a>) { fOutputStyle.fHeader = <a href="../TFile.html">file</a>; }
-   <span class="keyword">void</span>          SetFooter(<span class="keyword">const</span> <span class="keyword">char</span>* <a href="../TFile.html">file</a>) { fOutputStyle.fFooter = <a href="../TFile.html">file</a>; }
+   <span class="keyword">void</span>          SetHeader(<span class="keyword">const</span> <span class="keyword">char</span>* file) { fOutputStyle.fHeader = file; }
+   <span class="keyword">void</span>          SetFooter(<span class="keyword">const</span> <span class="keyword">char</span>* file) { fOutputStyle.fFooter = file; }
    <span class="keyword">void</span>          SetHomepage(<span class="keyword">const</span> <span class="keyword">char</span>* url) { fLinkInfo.fHomepage = url; }
    <span class="keyword">void</span>          SetSearchStemURL(<span class="keyword">const</span> <span class="keyword">char</span>* url) { fLinkInfo.fSearchStemURL = url; }
    <span class="keyword">void</span>          SetSearchEngine(<span class="keyword">const</span> <span class="keyword">char</span>* url) { fLinkInfo.fSearchEngine = url; }
@@ -398,8 +398,8 @@
    };
 
    <span class="keyword">struct</span> OutputStyle_t {
-      <a href="../TString.html">TString</a>        fHeader;          <span class="comment">// header <a href="../TFile.html">file</a> name</span>
-      <a href="../TString.html">TString</a>        fFooter;          <span class="comment">// footerer <a href="../TFile.html">file</a> name</span>
+      <a href="../TString.html">TString</a>        fHeader;          <span class="comment">// header file name</span>
+      <a href="../TString.html">TString</a>        fFooter;          <span class="comment">// footerer file name</span>
       <a href="../TString.html">TString</a>        fCharset;         <span class="comment">// Charset for doc pages</span>
    };
 
@@ -439,11 +439,11 @@
    DocEntityInfo_t fDocEntityInfo;  <span class="comment">// data for documented entities</span>
    <span class="keyword">mutable</span> TPathDefinition *fPathDef; <span class="comment">// object translating classes to module names</span>
    <span class="keyword">mutable</span> TModuleDefinition *fModuleDef; <span class="comment">// object translating classes to module names</span>
-   <span class="keyword">mutable</span> TFileDefinition* fFileDef; <span class="comment">// object translating classes to <a href="../TFile.html">file</a> names</span>
+   <span class="keyword">mutable</span> TFileDefinition* fFileDef; <span class="comment">// object translating classes to file names</span>
    <span class="keyword">mutable</span> <a href="../THtml__TFileSysDB.html#THtml__TFileSysDB:TFileSysDB" title="THtml::TFileSysDB THtml::TFileSysDB::TFileSysDB(const char* path,const char* ignr,Int_t maxdirlevel)">TFileSysDB</a>    *fLocalFiles; <span class="comment">// files found locally for a given source path</span>
    <a href="../ListOfTypes.html#Bool_t">Bool_t</a>  fBatch; <span class="comment">// Whether to enable GUI output</span>
 
-   ClassDef(<a href="../THtml.html">THtml</a>,0)  <span class="comment">//Convert class(es) into HTML <a href="../TFile.html">file</a>(s)</span>
+   ClassDef(<a href="../THtml.html">THtml</a>,0)  <span class="comment">//Convert class(es) into HTML file(s)</span>
 };
 
 R__EXTERN <a href="../THtml.html">THtml</a> *<a href="../THtml.html">gHtml</a>;
@@ -457,7 +457,7 @@ R__EXTERN <a href="../THtml.html">THtml</a> *<a href="../THtml.html">gHtml</a>;
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-05-31 22:15 </em><em>&raquo; Last generated: 2015-05-31 22:15</em><br />
+<em>&raquo; Last changed: 2015-05-31 23:43 </em><em>&raquo; Last generated: 2015-05-31 23:43</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

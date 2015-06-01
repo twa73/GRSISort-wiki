@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:14:14 2015            -->
+<!--   Date: Sun May 31 23:43:03 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -318,7 +318,7 @@ non-gui graphics, etc. etc.
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGCocoa:QueryPointer@1">QueryPointer</a>(<a href="./ListOfTypes.html#Window_t">Window_t</a> wid, <a href="./ListOfTypes.html#Window_t">Window_t</a>&amp; rootw, <a href="./ListOfTypes.html#Window_t">Window_t</a>&amp; childw, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; root_x, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; root_y, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; win_x, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; win_y, <a href="./ListOfTypes.html#UInt_t">UInt_t</a>&amp; mask)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGCocoa:RaiseWindow">RaiseWindow</a>(<a href="./ListOfTypes.html#Window_t">Window_t</a> wid)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
-<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Pixmap_t">Pixmap_t</a></td><td class="funcname"><a class="funcname" href="#TGCocoa:ReadGIF">ReadGIF</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> x0, <a href="./ListOfTypes.html#Int_t">Int_t</a> y0, <span class="keyword">const</span> <span class="keyword">char</span>* <a href="./TFile.html">file</a>, <a href="./ListOfTypes.html#Window_t">Window_t</a> wid)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Pixmap_t">Pixmap_t</a></td><td class="funcname"><a class="funcname" href="#TGCocoa:ReadGIF">ReadGIF</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> x0, <a href="./ListOfTypes.html#Int_t">Int_t</a> y0, <span class="keyword">const</span> <span class="keyword">char</span>* file, <a href="./ListOfTypes.html#Window_t">Window_t</a> wid)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGCocoa:ReadPictureDataFromFile">ReadPictureDataFromFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <span class="keyword">char</span>*** ret_data)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGCocoa:ReconfigureDisplay">ReconfigureDisplay</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
@@ -1054,7 +1054,7 @@ Names here are total mess, but this comes from <a href="./TVirtualX.html">TVirtu
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TGCocoa:GetDoubleBuffer" href="src/TGCocoa.h.html#KqCdqD">GetDoubleBuffer</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> wid)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Pixmap_t">Pixmap_t</a> <a class="funcname" name="TGCocoa:ReadGIF" href="src/TGCocoa.h.html#EKusu">ReadGIF</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> x0, <a href="./ListOfTypes.html#Int_t">Int_t</a> y0, <span class="keyword">const</span> <span class="keyword">char</span>* <a href="./TFile.html">file</a>, <a href="./ListOfTypes.html#Window_t">Window_t</a> wid)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Pixmap_t">Pixmap_t</a> <a class="funcname" name="TGCocoa:ReadGIF" href="src/TGCocoa.h.html#EKusu">ReadGIF</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> x0, <a href="./ListOfTypes.html#Int_t">Int_t</a> y0, <span class="keyword">const</span> <span class="keyword">char</span>* file, <a href="./ListOfTypes.html#Window_t">Window_t</a> wid)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TGCocoa:RequestLocator" href="src/TGCocoa.h.html#m9uIbB">RequestLocator</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> mode, <a href="./ListOfTypes.html#Int_t">Int_t</a> ctyp, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; x, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; y)</span><br />
 </div>
@@ -1144,7 +1144,7 @@ Names here are total mess, but this comes from <a href="./TVirtualX.html">TVirtu
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGCocoa:SetApplicationIcon" href="src/TGCocoa.h.html#j1KAKE">SetApplicationIcon</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGCocoa:TGCocoa@2" href="src/TGCocoa.h.html#YVwc4D">TGCocoa</a>(<span class="keyword">const</span> <a href="./TGCocoa.html">TGCocoa</a>&amp; rhs)</span><br />
-<div class="funccomm"><pre>I'd prefer to use = delete syntax from C++0x11, but this <a href="./TFile.html">file</a> is processed by CINT.
+<div class="funccomm"><pre>I'd prefer to use = delete syntax from C++0x11, but this file is processed by CINT.
 </pre></div>
 </div>
 
@@ -1152,7 +1152,7 @@ Names here are total mess, but this comes from <a href="./TVirtualX.html">TVirtu
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Timur+Pocheptsov"> Timur Pocheptsov   22/11/2011</a> </em><em>&raquo; Copyright   (C) 1995-2012, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/graf2d:$Id$ </em><em>&raquo; Last generated: 2015-05-31 22:14</em><br />
+<em>&raquo; Last changed: root/graf2d:$Id$ </em><em>&raquo; Last generated: 2015-05-31 23:43</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

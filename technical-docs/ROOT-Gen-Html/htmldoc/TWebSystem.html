@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:18:36 2015            -->
+<!--   Date: Sun May 31 23:45:29 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -64,7 +64,7 @@ return false;}
 <a href="./TWebFile.html">TWebFile</a>
 
 A <a href="./TWebFile.html">TWebFile</a> is like a normal <a href="./TFile.html">TFile</a> except that it reads its data
-via a standard apache web server. A <a href="./TWebFile.html">TWebFile</a> is a read-only <a href="./TFile.html">file</a>.
+via a standard apache web server. A <a href="./TWebFile.html">TWebFile</a> is a read-only file.
 
 
 </pre></div>
@@ -97,7 +97,7 @@ via a standard apache web server. A <a href="./TWebFile.html">TWebFile</a> is a 
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:cd"><span class="baseclass">TSystem::</span>cd</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:ChangeDirectory"><span class="baseclass">TSystem::</span>ChangeDirectory</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:Chmod"><span class="baseclass">TSystem::</span>Chmod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* <a href="./TFile.html">file</a>, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> mode)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:Chmod"><span class="baseclass">TSystem::</span>Chmod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* file, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> mode)</td></tr>
 <tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TWebSystem:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:CleanCompiledMacros"><span class="baseclass">TSystem::</span>CleanCompiledMacros</a>()</td></tr>
@@ -132,7 +132,7 @@ via a standard apache web server. A <a href="./TWebFile.html">TWebFile</a> is a 
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:ExpandPathName@1"><span class="baseclass">TSystem::</span>ExpandPathName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* path)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:FillBuffer"><span class="baseclass">TNamed::</span>FillBuffer</a>(<span class="keyword">char</span>*&amp; buffer)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:FindFile"><span class="baseclass">TSystem::</span>FindFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* search, <a href="./TString.html">TString</a>&amp; <a href="./TFile.html">file</a>, EAccessMode mode = kFileExists)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:FindFile"><span class="baseclass">TSystem::</span>FindFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* search, <a href="./TString.html">TString</a>&amp; file, EAccessMode mode = kFileExists)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TWebSystem:FreeDirectory">FreeDirectory</a>(<span class="keyword">void</span>* dirp)</td></tr>
@@ -323,9 +323,9 @@ via a standard apache web server. A <a href="./TWebFile.html">TWebFile</a> is a 
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:Unload"><span class="baseclass">TSystem::</span>Unload</a>(<span class="keyword">const</span> <span class="keyword">char</span>* module)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:Unsetenv"><span class="baseclass">TSystem::</span>Unsetenv</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:UseCurrentStyle"><span class="baseclass">TObject::</span>UseCurrentStyle</a>()</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:Utime"><span class="baseclass">TSystem::</span>Utime</a>(<span class="keyword">const</span> <span class="keyword">char</span>* <a href="./TFile.html">file</a>, <a href="./ListOfTypes.html#Long_t">Long_t</a> modtime, <a href="./ListOfTypes.html#Long_t">Long_t</a> actime)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:Utime"><span class="baseclass">TSystem::</span>Utime</a>(<span class="keyword">const</span> <span class="keyword">char</span>* file, <a href="./ListOfTypes.html#Long_t">Long_t</a> modtime, <a href="./ListOfTypes.html#Long_t">Long_t</a> actime)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:Which"><span class="baseclass">TSystem::</span>Which</a>(<span class="keyword">const</span> <span class="keyword">char</span>* search, <span class="keyword">const</span> <span class="keyword">char</span>* <a href="./TFile.html">file</a>, EAccessMode mode = kFileExists)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:Which"><span class="baseclass">TSystem::</span>Which</a>(<span class="keyword">const</span> <span class="keyword">char</span>* search, <span class="keyword">const</span> <span class="keyword">char</span>* file, EAccessMode mode = kFileExists)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TSystem.html#TSystem:WorkingDirectory"><span class="baseclass">TSystem::</span>WorkingDirectory</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
@@ -507,7 +507,7 @@ via a standard apache web server. A <a href="./TWebFile.html">TWebFile</a> is a 
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   17/01/97</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/net:$Id$ </em><em>&raquo; Last generated: 2015-05-31 22:18</em><br />
+<em>&raquo; Last changed: root/net:$Id$ </em><em>&raquo; Last generated: 2015-05-31 23:45</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

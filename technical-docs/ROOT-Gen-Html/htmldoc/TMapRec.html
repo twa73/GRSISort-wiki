@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Sun May 31 22:15:31 2015            -->
+<!--   Date: Sun May 31 23:44:00 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -63,7 +63,7 @@ return false;}
 
 <a href="./TMapFile.html">TMapFile</a>
 
-This class implements a shared memory region mapped to a <a href="./TFile.html">file</a>.
+This class implements a shared memory region mapped to a file.
 Objects can be placed into this shared memory area using the Add()
 member function. Whenever the mapped object(s) change(s) call
 Update() to put a fresh copy in the shared memory. This extra
@@ -71,7 +71,7 @@ step is necessary since it is not possible to share objects with
 virtual pointers between processes (the vtbl ptr points to the
 originators unique address space and can not be used by the
 consumer process(es)). Consumer processes can map the memory region
-from this <a href="./TFile.html">file</a> and access the objects stored in it via the Get()
+from this file and access the objects stored in it via the Get()
 method (which returns a copy of the object stored in the shared
 memory with correct vtbl ptr set). Only objects of classes with a
 Streamer() member function defined can be shared.
@@ -167,7 +167,7 @@ Streamer() member function defined can be shared.
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Fons+Rademakers"> Fons Rademakers   08/07/97</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
-<em>&raquo; Last changed: root/io:$Id$ </em><em>&raquo; Last generated: 2015-05-31 22:15</em><br />
+<em>&raquo; Last changed: root/io:$Id$ </em><em>&raquo; Last generated: 2015-05-31 23:44</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
