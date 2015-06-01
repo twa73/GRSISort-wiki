@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Sun May 31 18:28:11 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TGTable - source file</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="../ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="../ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<div id="codeAndLineNumbers"><pre class="listing">
+<span class="comment">// Author: Roel Aaij 21/07/2007</span>
+
+<span class="comment">/*************************************************************************
+ * Copyright (C) 1995-2007, Rene Brun and Fons Rademakers.               *
+ * All rights reserved.                                                  *
+ *                                                                       *
+ * For the licensing terms see $ROOTSYS/LICENSE.                         *
+ * For the list of contributors see $ROOTSYS/README/CREDITS.             *
+ *************************************************************************/</span>
+
+<span class="cpp">#include "<a href="../TGCanvas.h">TGCanvas.h</a>"</span>
+<span class="cpp">#include "<a href="../TGFrame.h">TGFrame.h</a>"</span>
+<span class="cpp">#include "<a href="../TClass.h">TClass.h</a>"</span>
+<span class="cpp">#include "<a href="../TGWindow.h">TGWindow.h</a>"</span>
+<span class="cpp">#include "<a href="../TGResourcePool.h">TGResourcePool.h</a>"</span>
+<span class="cpp">#include "<a href="../Riostream.h">Riostream.h</a>"</span>
+<span class="cpp">#include "<a href="../TSystem.h">TSystem.h</a>"</span>
+<span class="cpp">#include "<a href="../TImage.h">TImage.h</a>"</span>
+<span class="cpp">#include "<a href="../TEnv.h">TEnv.h</a>"</span>
+<span class="cpp">#include "<a href="../TGToolTip.h">TGToolTip.h</a>"</span>
+<span class="cpp">#include "<a href="../TGWidget.h">TGWidget.h</a>"</span>
+<span class="cpp">#include "<a href="../TGPicture.h">TGPicture.h</a>"</span>
+<span class="cpp">#include "<a href="../TRandom3.h">TRandom3.h</a>"</span>
+<span class="cpp">#include "<a href="../TVirtualTableInterface.h">TVirtualTableInterface.h</a>"</span>
+<span class="cpp">#include "<a href="../TGTable.h">TGTable.h</a>"</span>
+<span class="cpp">#include "<a href="../TGTableCell.h">TGTableCell.h</a>"</span>
+<span class="cpp">#include "<a href="../TGTableHeader.h">TGTableHeader.h</a>"</span>
+<span class="cpp">#include "<a href="../TObjArray.h">TObjArray.h</a>"</span>
+<span class="cpp">#include "<a href="../TGTableContainer.h">TGTableContainer.h</a>"</span>
+<span class="cpp">#include "<a href="../TGScrollBar.h">TGScrollBar.h</a>"</span>
+<span class="cpp">#include "<a href="../TGButton.h">TGButton.h</a>"</span>
+<span class="cpp">#include "<a href="../TGNumberEntry.h">TGNumberEntry.h</a>"</span>
+<span class="cpp">#include "<a href="../TGTextEntry.h">TGTextEntry.h</a>"</span>
+<span class="cpp">#include "<a href="../TGLabel.h">TGLabel.h</a>"</span>
+<span class="cpp">#include "<a href="../TColor.h">TColor.h</a>"</span>
+
+ClassImp(<a href="../TGTable.html">TGTable</a>)
+ClassImp(<a href="../TTableRange.html">TTableRange</a>)
+
+<span class="comment">//______________________________________________________________________________</span>
+<span class="comment">/* Begin_Html
+&lt;center&gt;&lt;h2&gt;TGTable&lt;/h2&gt;&lt;/center&gt;
+&lt;br&gt;&lt;br&gt;                                                                    
+TGTable implements a table widget to display data in rows and       
+columns. The data is supplied by a TVirtualTableInterface.          
+&lt;br&gt;&lt;br&gt;
+The table is a TGCanvas to make use of already available viewport   
+functionality and drawing optimizations.                            
+&lt;br&gt;&lt;br&gt;
+The top left cell in a table has coordinates (0,0)                  
+&lt;br&gt;&lt;br&gt;
+A TObjArray is used internally to ensure little overhead and fast   
+acces to cells.                                                     
+&lt;br&gt;&lt;br&gt;
+If the data source has more rows than the default 50 rows of cells in
+memory, buttons at the bottom of the table can be used to load the
+next or previous chunk of data.
+&lt;br&gt;&lt;br&gt;
+At the top of the table, a frame is visible that shows the coordinates
+of the top left cell currently in memmory in row,column. The amount of
+rows and columns is also shown in rows x columns. These values can be
+edited to move to a different area of the data source or to resize the
+table. Tab will switch between the enties, return will move to the
+currently entered range and resize the table if needed. Clicking the
+goto button has the same effect.
+&lt;br&gt;&lt;br&gt;
+A TGTable is created by first creating an appropriate               
+TVirtualTableInterface from the data that needs visualization and   
+then creating the TGTable using this interface.                     
+&lt;br&gt;&lt;br&gt;
+A simple macro to use a TGTable with a TGSimpleTableInterface:
+End_Html
+Begin_Macro(source, gui)
+{
+   // Create an array to hold a bunch of numbers
+   Int_t i = 0, j = 0;
+   UInt_t nrows = 6, ncolumns = 5;
+   Double_t** data = new Double_t*[nrows];
+   for (i = 0; i &lt; nrows; i++) {
+      data[i] = new Double_t[ncolumns];
+      for (j = 0; j &lt; ncolumns; j++) {
+         data[i][j] = 10 * i + j;
+      }
+   }
+
+   // Create a main frame to contain the table
+   TGMainFrame* mainframe = new TGMainFrame(0, 400, 200);
+   mainframe-&gt;SetCleanup(kDeepCleanup) ;
+
+   // Create an interface
+   TGSimpleTableInterface *iface = new TGSimpleTableInterface(data, 6, 5); 
+
+   // Create the table
+   TGTable *table = new TGTable(mainframe, 999, iface); 
+
+   // Add the table to the main frame
+   mainframe-&gt;AddFrame(table, new TGLayoutHints(kLHintsExpandX | kLHintsExpandY));
+
+   //Update data
+   data[5][1] = 3.01; 
+   //update the table view
+   table-&gt;Update(); 
+
+   // Layout and map the main frame
+   mainframe-&gt;SetWindowName("Tree Table Test") ;
+   mainframe-&gt;MapSubwindows() ;
+   mainframe-&gt;Layout();
+   mainframe-&gt;Resize() ;
+   mainframe-&gt;MapWindow() ;
+
+   return mainframe;
+}
+End_Macro
+Begin_Html
+
+It is also possible to visualise data from a tree. A simple macro
+showing the use of a TTreeTableInterface follows.
+End_Html
+Begin_Macro(source, gui)
+{
+   // Open a root file.
+   TFile *file = new TFile("$ROOTSYS/tutorials/hsimple.root");
+   // Load a tree from the file
+   TNtuple *ntuple = (TNtuple *)file.Get("ntuple");
+
+   // Create an interface
+   TTreeTableInterface *iface = new TTreeTableInterface(ntuple); 
+
+   // Create a main frame to contain the table
+   TGMainFrame* mainframe = new TGMainFrame(0, 400, 200);
+   mainframe-&gt;SetCleanup(kDeepCleanup) ;
+
+   // Create the table
+   TGTable *table = new TGTable(mainframe, 999, iface, 10, 6); 
+
+   // Add the table to the main frame
+   mainframe-&gt;AddFrame(table, new TGLayoutHints(kLHintsExpandX | kLHintsExpandY));
+
+   // Set a selection
+   iface-&gt;SetSelection("px &gt; 0.");
+   // Add a column
+   iface-&gt;AddColumn("(px+py)/(px-py)", 0);
+   //update the table view
+   table-&gt;Update(); 
+
+   // Layout and map the main frame
+   mainframe-&gt;SetWindowName("Tree Table Test") ;
+   mainframe-&gt;MapSubwindows() ;
+   mainframe-&gt;Layout();
+   mainframe-&gt;Resize() ;
+   mainframe-&gt;MapWindow() ;
+
+   return mainframe;
+}

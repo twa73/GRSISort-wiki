@@ -1,0 +1,593 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Sun May 31 22:17:44 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TUnfoldSys</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TUnfoldSys','libHist','TUnfoldSys.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TUnfoldSys.h.html">header file</a>
+<a class="descrheadentry" href="src/TUnfoldSys.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TUnfoldSys:description">class description</a> 
+<a class="descrheadentry" href="#TUnfoldSys:Function_Members">function members</a>
+<a class="descrheadentry" href="#TUnfoldSys:Data_Members">data members</a>
+<a class="descrheadentry" href="#TUnfoldSys:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./HIST_Index.html">HIST</a>
+ &#187; <a class="locationlevel" href="./HIST_HIST_Index.html">HIST</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TUnfoldSys</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TUnfoldSys:description"></a>class TUnfoldSys: public <a href="./TUnfold.html">TUnfold</a></h1>
+<div class="classdescr">
+<pre>
+
+  <a href="./TUnfoldSys.html">TUnfoldSys</a> : public <a href="./TUnfold.html">TUnfold</a>
+
+  <a href="./TUnfold.html">TUnfold</a> is used to decompose a measurement y into several sources x
+  given the measurement uncertainties and a matrix of migrations A
+
+  <a href="./TUnfoldSys.html">TUnfoldSys</a> adds error propagation of systematic errors to <a href="./TUnfold.html">TUnfold</a>
+  Also, background sources (with errors) can be subtracted.
+
+
+  * For most applications, it is better to use <a href="./TUnfoldDensity.html">TUnfoldDensity</a> *
+  * instead of using <a href="./TUnfoldSys.html">TUnfoldSys</a> or <a href="./TUnfold.html">TUnfold</a>                    *
+
+
+  If you use this software, please consider the following citation
+       S.Schmitt, JINST 7 (2012) T10003 [arXiv:1205.6201]
+
+  More documentation and updates are available on
+      http://www.desy.de/~sschmitt
+
+
+  The following sources of systematic error are considered in <a href="./TUnfoldSys.html">TUnfoldSys</a>
+
+  (a) uncorrelated errors on the input matrix histA, taken as the
+      errors provided with the histogram.
+      These are typically statistical errors from finite Monte Carlo samples
+
+  (b) correlated shifts of the input matrix histA. These shifts are taken
+      as one-sigma effects when switchig on a given error soure.
+      several such error sources may be defined
+
+  (c) a systematic error on the regularisation parameter tau
+
+  (d) uncorrelated errors on background sources, taken as the errors
+      provided with the background histograms
+
+  (e) scale errors on background sources
+
+ In addition there is the (statistical) uncertainty of the input vector (i)
+
+ Source (a) is providede with the original histogram histA
+     <a href="./TUnfoldSys.html">TUnfoldSys</a>(histA,...)
+
+ Sources (b) are added by calls to
+     <a href="./TUnfoldSys.html#TUnfoldSys:AddSysError" title="void TUnfoldSys::AddSysError(const TH2* sysError,const char* name,TUnfold::EHistMap histmap,TUnfoldSys::ESysErrMode mode)">AddSysError</a>()
+
+ The systematic uncertainty on tau (c) is set by
+     <a href="./TUnfoldSys.html#TUnfoldSys:SetTauError" title="void TUnfoldSys::SetTauError(Double_t delta_tau)">SetTauError</a>()
+
+ Backgound sources causing errors of type (d) and (e) are added by
+     <a href="./TUnfoldSys.html#TUnfoldSys:SubtractBackground" title="void TUnfoldSys::SubtractBackground(const TH1* hist_bgr,const char* name,Double_t scale=1.0,Double_t scale_error=0.0)">SubtractBackground</a>()
+
+
+ NOTE:
+
+    Systematic errors (a), (b), (c) are propagated to the result
+       AFTER unfolding
+
+    Background errors (d) and (e) are added to the data errors
+       BEFORE unfolding
+
+ For this reason:
+  errors of type (d) and (e) are INCLUDED in the standard error matrix
+  and other methods provided by the base class <a href="./TUnfold.html">TUnfold</a>:
+      <a href="./TUnfold.html#TUnfold:GetOutput" title="void TUnfold::GetOutput(TH1* output,const Int_t* binMap=0)">GetOutput</a>()
+      <a href="./TUnfold.html#TUnfold:GetEmatrix" title="void TUnfold::GetEmatrix(TH2* ematrix,const Int_t* binMap=0)">GetEmatrix</a>()
+
+  whereas errors of type (a), (b), (c) are NOT INCLUDED in the methods
+  provided by the base class <a href="./TUnfold.html">TUnfold</a>.
+
+ Accessing error matrices:
+
+  The error sources (b),(c) and (e) propagate to shifts of the result.
+  These shifts may be accessed as histograms using the methods
+     <a href="./TUnfoldSys.html#TUnfoldSys:GetDeltaSysSource" title="Bool_t TUnfoldSys::GetDeltaSysSource(TH1* hist_delta,const char* source,const Int_t* binMap=0)">GetDeltaSysSource</a>()            corresponds to (b)
+     <a href="./TUnfoldSys.html#TUnfoldSys:GetDeltaSysTau" title="Bool_t TUnfoldSys::GetDeltaSysTau(TH1* delta,const Int_t* binMap=0)">GetDeltaSysTau</a>()               corresponds to (c)
+     <a href="./TUnfoldSys.html#TUnfoldSys:GetDeltaSysBackgroundScale" title="Bool_t TUnfoldSys::GetDeltaSysBackgroundScale(TH1* delta,const char* source,const Int_t* binMap=0)">GetDeltaSysBackgroundScale</a>()   corresponds to (e)
+  The error sources (a) and (d) originate from many uncorrelated errors,
+  which in general are NOT uncorrelated on the result vector.
+  Thus, there is no corresponding shift of the output vector, only error
+  matrices are available
+
+  Method to get error matrix       corresponds to error sources
+
+   <a href="./TUnfoldSys.html#TUnfoldSys:GetEmatrixSysUncorr" title="void TUnfoldSys::GetEmatrixSysUncorr(TH2* ematrix,const Int_t* binMap=0,Bool_t clearEmat=kTRUE)">GetEmatrixSysUncorr</a>()             (a)
+   <a href="./TUnfoldSys.html#TUnfoldSys:GetEmatrixSysSource" title="void TUnfoldSys::GetEmatrixSysSource(TH2* ematrix,const char* source,const Int_t* binMap=0,Bool_t clearEmat=kTRUE)">GetEmatrixSysSource</a>()             (b)
+   <a href="./TUnfoldSys.html#TUnfoldSys:GetEmatrixSysTau" title="void TUnfoldSys::GetEmatrixSysTau(TH2* ematrix,const Int_t* binMap=0,Bool_t clearEmat=kTRUE)">GetEmatrixSysTau</a>()                (c)
+   <a href="./TUnfoldSys.html#TUnfoldSys:GetEmatrixSysBackgroundUncorr" title="void TUnfoldSys::GetEmatrixSysBackgroundUncorr(TH2* ematrix,const char* source,const Int_t* binMap=0,Bool_t clearEmat=kTRUE)">GetEmatrixSysBackgroundUncorr</a>()   (d)
+   <a href="./TUnfoldSys.html#TUnfoldSys:GetEmatrixSysBackgroundScale" title="void TUnfoldSys::GetEmatrixSysBackgroundScale(TH2* ematrix,const char* source,const Int_t* binMap=0,Bool_t clearEmat=kTRUE)">GetEmatrixSysBackgroundScale</a>()    (e)
+   <a href="./TUnfoldSys.html#TUnfoldSys:GetEmatrixInput" title="void TUnfoldSys::GetEmatrixInput(TH2* ematrix,const Int_t* binMap=0,Bool_t clearEmat=kTRUE)">GetEmatrixInput</a>()                 (i)
+   <a href="./TUnfold.html#TUnfold:GetEmatrix" title="void TUnfold::GetEmatrix(TH2* ematrix,const Int_t* binMap=0)">GetEmatrix</a>()                      (i)+(d)+(e)
+   <a href="./TUnfoldSys.html#TUnfoldSys:GetEmatrixTotal" title="void TUnfoldSys::GetEmatrixTotal(TH2* ematrix,const Int_t* binMap=0)">GetEmatrixTotal</a>()                 (i)+(a)+(b)+(c)+(d)+(e)
+
+  <a href="./TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a> matrices can be added to existing histograms.
+  This is useful to retreive the sum of several error matrices.
+  If the last argument of the GetEmatrixXXX() methods is set to <a href="./ListOfTypes.html#Bool_t">kFALSE</a>,
+  the histogram is not cleared, but the error matrix is simply added to the
+  existing histogram
+
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TUnfoldSys:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:TUnfoldSys@2">TUnfoldSys</a>(<span class="keyword">const</span> <a href="./TUnfoldSys.html">TUnfoldSys</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:TUnfoldSys@1">TUnfoldSys</a>(<span class="keyword">const</span> <a href="./TH2.html">TH2</a>* hist_A, <a href="./TUnfold.html">TUnfold</a>::EHistMap histmap, <a href="./TUnfold.html">TUnfold</a>::ERegMode regmode = kRegModeSize, <a href="./TUnfold.html">TUnfold</a>::EConstraint constraint = kEConstraintArea)</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TUnfoldSys:_TUnfoldSys">~TUnfoldSys</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:AddSysError">AddSysError</a>(<span class="keyword">const</span> <a href="./TH2.html">TH2</a>* sysError, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./TUnfold.html">TUnfold</a>::EHistMap histmap, <a href="./TUnfoldSys.html">TUnfoldSys</a>::ESysErrMode mode)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TUnfoldSys:Class">Class</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Clear"><span class="baseclass">TObject::</span>Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Clone"><span class="baseclass">TObject::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Compare"><span class="baseclass">TObject::</span>Compare</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Copy"><span class="baseclass">TObject::</span>Copy</a>(<a href="./TObject.html">TObject</a>&amp; object) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DistancetoPrimitive"><span class="baseclass">TObject::</span>DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:DoUnfold@2"><span class="baseclass">TUnfold::</span>DoUnfold</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> tau)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:DoUnfold@1"><span class="baseclass">TUnfold::</span>DoUnfold</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> tau, <span class="keyword">const</span> <a href="./TH1.html">TH1</a>* hist_y, <a href="./ListOfTypes.html#Double_t">Double_t</a> scaleBias = 0.0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Draw"><span class="baseclass">TObject::</span>Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DrawClass"><span class="baseclass">TObject::</span>DrawClass</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DrawClone"><span class="baseclass">TObject::</span>DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Dump"><span class="baseclass">TObject::</span>Dump</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(<a href="./TMethod.html">TMethod</a>* method, <a href="./TObjArray.html">TObjArray</a>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ExecuteEvent"><span class="baseclass">TObject::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetBackground">GetBackground</a>(<a href="./TH1.html">TH1</a>* bgr, <span class="keyword">const</span> <span class="keyword">char</span>* bgrSource = 0, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> includeError = 3, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearHist = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetBias"><span class="baseclass">TUnfold::</span>GetBias</a>(<a href="./TH1.html">TH1</a>* bias, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetChi2A"><span class="baseclass">TUnfold::</span>GetChi2A</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetChi2L"><span class="baseclass">TUnfold::</span>GetChi2L</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetChi2Sys">GetChi2Sys</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetDeltaSysBackgroundScale">GetDeltaSysBackgroundScale</a>(<a href="./TH1.html">TH1</a>* delta, <span class="keyword">const</span> <span class="keyword">char</span>* source, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetDeltaSysSource">GetDeltaSysSource</a>(<a href="./TH1.html">TH1</a>* hist_delta, <span class="keyword">const</span> <span class="keyword">char</span>* source, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetDeltaSysTau">GetDeltaSysTau</a>(<a href="./TH1.html">TH1</a>* delta, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetEmatrix"><span class="baseclass">TUnfold::</span>GetEmatrix</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetEmatrixInput">GetEmatrixInput</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetEmatrixSysBackgroundScale">GetEmatrixSysBackgroundScale</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <span class="keyword">char</span>* source, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetEmatrixSysBackgroundUncorr">GetEmatrixSysBackgroundUncorr</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <span class="keyword">char</span>* source, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetEmatrixSysSource">GetEmatrixSysSource</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <span class="keyword">char</span>* source, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetEmatrixSysTau">GetEmatrixSysTau</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetEmatrixSysUncorr">GetEmatrixSysUncorr</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetEmatrixTotal">GetEmatrixTotal</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetEpsMatrix"><span class="baseclass">TUnfold::</span>GetEpsMatrix</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetFoldedOutput"><span class="baseclass">TUnfold::</span>GetFoldedOutput</a>(<a href="./TH1.html">TH1</a>* folded, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetInput"><span class="baseclass">TUnfold::</span>GetInput</a>(<a href="./TH1.html">TH1</a>* inputData, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetInputInverseEmatrix"><span class="baseclass">TUnfold::</span>GetInputInverseEmatrix</a>(<a href="./TH2.html">TH2</a>* ematrix)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetL"><span class="baseclass">TUnfold::</span>GetL</a>(<a href="./TH2.html">TH2</a>* l) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetLcurveX"><span class="baseclass">TUnfold::</span>GetLcurveX</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetLcurveY"><span class="baseclass">TUnfold::</span>GetLcurveY</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetLsquared"><span class="baseclass">TUnfold::</span>GetLsquared</a>(<a href="./TH2.html">TH2</a>* lsquared) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetName"><span class="baseclass">TObject::</span>GetName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetNdf"><span class="baseclass">TUnfold::</span>GetNdf</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetNormalisationVector"><span class="baseclass">TUnfold::</span>GetNormalisationVector</a>(<a href="./TH1.html">TH1</a>* s, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetNpar"><span class="baseclass">TUnfold::</span>GetNpar</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetNr"><span class="baseclass">TUnfold::</span>GetNr</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetOutput"><span class="baseclass">TUnfold::</span>GetOutput</a>(<a href="./TH1.html">TH1</a>* output, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetProbabilityMatrix"><span class="baseclass">TUnfold::</span>GetProbabilityMatrix</a>(<a href="./TH2.html">TH2</a>* A, <a href="./TUnfold.html">TUnfold</a>::EHistMap histmap) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetRhoAvg"><span class="baseclass">TUnfold::</span>GetRhoAvg</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetRhoI"><span class="baseclass">TUnfold::</span>GetRhoI</a>(<a href="./TH1.html">TH1</a>* rhoi, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./TH2.html">TH2</a>* invEmat = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetRhoIJ"><span class="baseclass">TUnfold::</span>GetRhoIJ</a>(<a href="./TH2.html">TH2</a>* rhoij, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetRhoItotal">GetRhoItotal</a>(<a href="./TH1.html">TH1</a>* rhoi, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./TH2.html">TH2</a>* invEmat = 0)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetRhoMax"><span class="baseclass">TUnfold::</span>GetRhoMax</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetTau"><span class="baseclass">TUnfold::</span>GetTau</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetTUnfoldVersion"><span class="baseclass">TUnfold::</span>GetTUnfoldVersion</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(<a href="./TTimer.html">TTimer</a>* timer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <a href="./TClass.html">TClass</a>* cl) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Inspect"><span class="baseclass">TObject::</span>Inspect</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:InvertBit"><span class="baseclass">TObject::</span>InvertBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TUnfoldSys:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:IsEqual"><span class="baseclass">TObject::</span>IsEqual</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:IsFolder"><span class="baseclass">TObject::</span>IsFolder</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:IsOnHeap"><span class="baseclass">TObject::</span>IsOnHeap</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:IsSortable"><span class="baseclass">TObject::</span>IsSortable</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:IsZombie"><span class="baseclass">TObject::</span>IsZombie</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ls"><span class="baseclass">TObject::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Notify"><span class="baseclass">TObject::</span>Notify</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Obsolete"><span class="baseclass">TObject::</span>Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_delete"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_delete@1"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_delete[]"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_delete[]@1"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_new"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TUnfoldSys.html">TUnfoldSys</a>&amp;</td><td class="funcname"><a class="funcname" href="#TUnfoldSys:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TUnfoldSys.html">TUnfoldSys</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Print"><span class="baseclass">TObject::</span>Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:RegularizeBins"><span class="baseclass">TUnfold::</span>RegularizeBins</a>(<span class="keyword">int</span> start, <span class="keyword">int</span> step, <span class="keyword">int</span> nbin, <a href="./TUnfold.html">TUnfold</a>::ERegMode regmode)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:RegularizeBins2D"><span class="baseclass">TUnfold::</span>RegularizeBins2D</a>(<span class="keyword">int</span> start_bin, <span class="keyword">int</span> step1, <span class="keyword">int</span> nbin1, <span class="keyword">int</span> step2, <span class="keyword">int</span> nbin2, <a href="./TUnfold.html">TUnfold</a>::ERegMode regmode)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:RegularizeCurvature"><span class="baseclass">TUnfold::</span>RegularizeCurvature</a>(<span class="keyword">int</span> left_bin, <span class="keyword">int</span> center_bin, <span class="keyword">int</span> right_bin, <a href="./ListOfTypes.html#Double_t">Double_t</a> scale_left = 1.0, <a href="./ListOfTypes.html#Double_t">Double_t</a> scale_right = 1.0)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:RegularizeDerivative"><span class="baseclass">TUnfold::</span>RegularizeDerivative</a>(<span class="keyword">int</span> left_bin, <span class="keyword">int</span> right_bin, <a href="./ListOfTypes.html#Double_t">Double_t</a> scale = 1.0)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:RegularizeSize"><span class="baseclass">TUnfold::</span>RegularizeSize</a>(<span class="keyword">int</span> bin, <a href="./ListOfTypes.html#Double_t">Double_t</a> scale = 1.0)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:ScanLcurve"><span class="baseclass">TUnfold::</span>ScanLcurve</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> nPoint, <a href="./ListOfTypes.html#Double_t">Double_t</a> tauMin, <a href="./ListOfTypes.html#Double_t">Double_t</a> tauMax, <a href="./TGraph.html">TGraph</a>** lCurve, <a href="./TSpline.html">TSpline</a>** logTauX = 0, <a href="./TSpline.html">TSpline</a>** logTauY = 0)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:SetBias"><span class="baseclass">TUnfold::</span>SetBias</a>(<span class="keyword">const</span> <a href="./TH1.html">TH1</a>* bias)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:SetConstraint"><span class="baseclass">TUnfold::</span>SetConstraint</a>(<a href="./TUnfold.html">TUnfold</a>::EConstraint constraint)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:SetEpsMatrix"><span class="baseclass">TUnfold::</span>SetEpsMatrix</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> eps)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:SetInput">SetInput</a>(<span class="keyword">const</span> <a href="./TH1.html">TH1</a>* hist_y, <a href="./ListOfTypes.html#Double_t">Double_t</a> scaleBias = 0.0, <a href="./ListOfTypes.html#Double_t">Double_t</a> oneOverZeroError = 0.0, <span class="keyword">const</span> <a href="./TH2.html">TH2</a>* hist_vyy = 0, <span class="keyword">const</span> <a href="./TH2.html">TH2</a>* hist_vyy_inv = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:SetTauError">SetTauError</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> delta_tau)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:StreamerNVirtual">StreamerNVirtual</a>(<a href="./TBuffer.html">TBuffer</a>&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:SubtractBackground">SubtractBackground</a>(<span class="keyword">const</span> <a href="./TH1.html">TH1</a>* hist_bgr, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Double_t">Double_t</a> scale = 1.0, <a href="./ListOfTypes.html#Double_t">Double_t</a> scale_error = 0.0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SysError"><span class="baseclass">TObject::</span>SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:TestBit"><span class="baseclass">TObject::</span>TestBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:TestBits"><span class="baseclass">TObject::</span>TestBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:UseCurrentStyle"><span class="baseclass">TObject::</span>UseCurrentStyle</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:TUnfoldSys">TUnfoldSys</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:AddMSparse"><span class="baseclass">TUnfold::</span>AddMSparse</a>(<a href="./TMatrixDSparse.html">TMatrixDSparse</a>* dest, <a href="./ListOfTypes.html#Double_t">Double_t</a> f, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* src) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:AddRegularisationCondition@1"><span class="baseclass">TUnfold::</span>AddRegularisationCondition</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> nEle, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* indices, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* rowData)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:AddRegularisationCondition"><span class="baseclass">TUnfold::</span>AddRegularisationCondition</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i0, <a href="./ListOfTypes.html#Double_t">Double_t</a> f0, <a href="./ListOfTypes.html#Int_t">Int_t</a> i1 = -1, <a href="./ListOfTypes.html#Double_t">Double_t</a> f1 = 0., <a href="./ListOfTypes.html#Int_t">Int_t</a> i2 = -1, <a href="./ListOfTypes.html#Double_t">Double_t</a> f2 = 0.)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:ClearHistogram"><span class="baseclass">TUnfold::</span>ClearHistogram</a>(<a href="./TH1.html">TH1</a>* h, <a href="./ListOfTypes.html#Double_t">Double_t</a> x = 0.) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:ClearResults">ClearResults</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:CreateSparseMatrix"><span class="baseclass">TUnfold::</span>CreateSparseMatrix</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> nrow, <a href="./ListOfTypes.html#Int_t">Int_t</a> ncol, <a href="./ListOfTypes.html#Int_t">Int_t</a> nele, <a href="./ListOfTypes.html#Int_t">Int_t</a>* row, <a href="./ListOfTypes.html#Int_t">Int_t</a>* col, <a href="./ListOfTypes.html#Double_t">Double_t</a>* data) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:DeleteMatrix"><span class="baseclass">TUnfold::</span>DeleteMatrix</a>(<a href="./TMatrixD.html">TMatrixD</a>** m)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:DeleteMatrix@1"><span class="baseclass">TUnfold::</span>DeleteMatrix</a>(<a href="./TMatrixDSparse.html">TMatrixDSparse</a>** m)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:DoBackgroundSubtraction">DoBackgroundSubtraction</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:DoUnfold"><span class="baseclass">TUnfold::</span>DoUnfold</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:ErrorMatrixToHist"><span class="baseclass">TUnfold::</span>ErrorMatrixToHist</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* emat, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> doClear) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetAx"><span class="baseclass">TUnfold::</span>GetAx</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetBinFromRow"><span class="baseclass">TUnfold::</span>GetBinFromRow</a>(<span class="keyword">int</span> ix) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetDXDAM"><span class="baseclass">TUnfold::</span>GetDXDAM</a>(<span class="keyword">int</span> i) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetDXDAZ"><span class="baseclass">TUnfold::</span>GetDXDAZ</a>(<span class="keyword">int</span> i) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetDXDtauSquared"><span class="baseclass">TUnfold::</span>GetDXDtauSquared</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetDXDY"><span class="baseclass">TUnfold::</span>GetDXDY</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetE"><span class="baseclass">TUnfold::</span>GetE</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetEinv"><span class="baseclass">TUnfold::</span>GetEinv</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetEmatrixFromVyy">GetEmatrixFromVyy</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* vyy, <a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetNx"><span class="baseclass">TUnfold::</span>GetNx</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetNy"><span class="baseclass">TUnfold::</span>GetNy</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TString.html">TString</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetOutputBinName"><span class="baseclass">TUnfold::</span>GetOutputBinName</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> iBinX) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetRhoIFromMatrix"><span class="baseclass">TUnfold::</span>GetRhoIFromMatrix</a>(<a href="./TH1.html">TH1</a>* rhoi, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* eOrig, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap, <a href="./TH2.html">TH2</a>* invEmat) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetRowFromBin"><span class="baseclass">TUnfold::</span>GetRowFromBin</a>(<span class="keyword">int</span> ix) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetSummedErrorMatrixXX">GetSummedErrorMatrixXX</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="#TUnfoldSys:GetSummedErrorMatrixYY">GetSummedErrorMatrixYY</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetVxx"><span class="baseclass">TUnfold::</span>GetVxx</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetVxxInv"><span class="baseclass">TUnfold::</span>GetVxxInv</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetVyyInv"><span class="baseclass">TUnfold::</span>GetVyyInv</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./TMatrixD.html">TMatrixD</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:GetX"><span class="baseclass">TUnfold::</span>GetX</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:InvertMSparseSymmPos"><span class="baseclass">TUnfold::</span>InvertMSparseSymmPos</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* A, <a href="./ListOfTypes.html#Int_t">Int_t</a>* rank) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:MultiplyMSparseM"><span class="baseclass">TUnfold::</span>MultiplyMSparseM</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* a, <span class="keyword">const</span> <a href="./TMatrixD.html">TMatrixD</a>* b) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:MultiplyMSparseMSparse"><span class="baseclass">TUnfold::</span>MultiplyMSparseMSparse</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* a, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* b) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:MultiplyMSparseMSparseTranspVector"><span class="baseclass">TUnfold::</span>MultiplyMSparseMSparseTranspVector</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m1, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m2, <span class="keyword">const</span> TMatrixTBase&lt;<a href="./ListOfTypes.html#Double_t">Double_t</a>&gt;* v) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="./TUnfold.html#TUnfold:MultiplyMSparseTranspMSparse"><span class="baseclass">TUnfold::</span>MultiplyMSparseTranspMSparse</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* a, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* b) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="#TUnfoldSys:PrepareCorrEmat">PrepareCorrEmat</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m1, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m2, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* dsys)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:PrepareSysError">PrepareSysError</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="funcname"><a class="funcname" href="#TUnfoldSys:PrepareUncorrEmat">PrepareUncorrEmat</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m1, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m2)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:ScaleColumnsByVector">ScaleColumnsByVector</a>(<a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m, <span class="keyword">const</span> TMatrixTBase&lt;<a href="./ListOfTypes.html#Double_t">Double_t</a>&gt;* v) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:VectorMapToHist">VectorMapToHist</a>(<a href="./TH1.html">TH1</a>* hist_delta, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* delta, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap)</td></tr>
+
+</table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TUnfoldSys:InitTUnfoldSys">InitTUnfoldSys</a>()</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TUnfoldSys:Data_Members"></a>Data Members</h2>
+<div class="access" id="enumpubl"><b>public:</b>
+<table class="data" id="tabenumpubl" cellspacing="0">
+<tr class="data"><td class="datatype">enum ESysErrMode { </td><td class="dataname"><a name="TUnfoldSys:kSysErrModeMatrix"></a>kSysErrModeMatrix</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TUnfoldSys:kSysErrModeShift"></a>kSysErrModeShift</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TUnfoldSys:kSysErrModeRelative"></a>kSysErrModeRelative</td><td></td></tr>
+<tr class="data"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TUnfold::</span>EConstraint { </td><td class="dataname"><a href="./TUnfold.html#TUnfold:kEConstraintNone">kEConstraintNone</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TUnfold.html#TUnfold:kEConstraintArea">kEConstraintArea</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TUnfold::</span>ERegMode { </td><td class="dataname"><a href="./TUnfold.html#TUnfold:kRegModeNone">kRegModeNone</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TUnfold.html#TUnfold:kRegModeSize">kRegModeSize</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TUnfold.html#TUnfold:kRegModeDerivative">kRegModeDerivative</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TUnfold.html#TUnfold:kRegModeCurvature">kRegModeCurvature</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TUnfold.html#TUnfold:kRegModeMixed">kRegModeMixed</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TUnfold::</span>EHistMap { </td><td class="dataname"><a href="./TUnfold.html#TUnfold:kHistMapOutputHoriz">kHistMapOutputHoriz</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TUnfold.html#TUnfold:kHistMapOutputVert">kHistMapOutputVert</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span>EStatusBits { </td><td class="dataname"><a href="./TObject.html#TObject:kCanDelete">kCanDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kMustCleanup">kMustCleanup</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kObjInCanvas">kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kIsReferenced">kIsReferenced</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kHasUUID">kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kCannotPick">kCannotPick</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kNoContextMenu">kNoContextMenu</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kInvalidObject">kInvalidObject</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span><i>[unnamed]</i> { </td><td class="dataname"><a href="./TObject.html#TObject:kIsOnHeap">kIsOnHeap</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kNotDeleted">kNotDeleted</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kZombie">kZombie</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kBitMask">kBitMask</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kSingleKey">kSingleKey</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kOverwrite">kOverwrite</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kWriteDelete">kWriteDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+
+</table></div>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="datainh"><td class="datatype"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="dataname"><a href="./TUnfold.html#TUnfold:fA"><span class="baseclass">TUnfold::</span>fA</a></td><td class="datadesc">Input: matrix</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMatrixD.html">TMatrixD</a>*</td><td class="dataname"><a name="TUnfoldSys:fAoutside"></a>fAoutside</td><td class="datadesc">Input: underflow/overflow bins</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMap.html">TMap</a>*</td><td class="dataname"><a name="TUnfoldSys:fBgrErrScaleIn"></a>fBgrErrScaleIn</td><td class="datadesc">Input: background sources correlated error</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMap.html">TMap</a>*</td><td class="dataname"><a name="TUnfoldSys:fBgrErrUncorrInSq"></a>fBgrErrUncorrInSq</td><td class="datadesc">Input: uncorr error squared from bgr sources</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMap.html">TMap</a>*</td><td class="dataname"><a name="TUnfoldSys:fBgrIn"></a>fBgrIn</td><td class="datadesc">Input: size of background sources</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a href="./TUnfold.html#TUnfold:fBiasScale"><span class="baseclass">TUnfold::</span>fBiasScale</a></td><td class="datadesc">Input: scale factor for the bias</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TUnfold.html">TUnfold</a>::EConstraint</td><td class="dataname"><a href="./TUnfold.html#TUnfold:fConstraint"><span class="baseclass">TUnfold::</span>fConstraint</a></td><td class="datadesc">Input: type of constraint to use</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMatrixD.html">TMatrixD</a>*</td><td class="dataname"><a name="TUnfoldSys:fDAinColRelSq"></a>fDAinColRelSq</td><td class="datadesc">Input: normalized column err.sq. (inp.matr.)</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="dataname"><a name="TUnfoldSys:fDAinRelSq"></a>fDAinRelSq</td><td class="datadesc">Input: normalized errors from input matrix</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMap.html">TMap</a>*</td><td class="dataname"><a name="TUnfoldSys:fDeltaCorrAx"></a>fDeltaCorrAx</td><td class="datadesc">Result: syst.shift from fSysIn on fAx</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMap.html">TMap</a>*</td><td class="dataname"><a name="TUnfoldSys:fDeltaCorrX"></a>fDeltaCorrX</td><td class="datadesc">Result: syst.shift from fSysIn on fX</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="dataname"><a name="TUnfoldSys:fDeltaSysTau"></a>fDeltaSysTau</td><td class="datadesc">Result: systematic shift from tau</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="TUnfoldSys:fDtau"></a>fDtau</td><td class="datadesc">Input: error on tau</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="dataname"><a name="TUnfoldSys:fEmatUncorrAx"></a>fEmatUncorrAx</td><td class="datadesc">Result: syst.error from fDA2 on fAx</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="dataname"><a name="TUnfoldSys:fEmatUncorrX"></a>fEmatUncorrX</td><td class="datadesc">Result: syst.error from fDA2 on fX</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TArrayI.html">TArrayI</a></td><td class="dataname"><a href="./TUnfold.html#TUnfold:fHistToX"><span class="baseclass">TUnfold::</span>fHistToX</a></td><td class="datadesc">Input: histogram bins -&gt; matrix indices</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="dataname"><a href="./TUnfold.html#TUnfold:fL"><span class="baseclass">TUnfold::</span>fL</a></td><td class="datadesc">Input: regularisation conditions</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TUnfold.html">TUnfold</a>::ERegMode</td><td class="dataname"><a href="./TUnfold.html#TUnfold:fRegMode"><span class="baseclass">TUnfold::</span>fRegMode</a></td><td class="datadesc">Input: type of regularisation</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TArrayD.html">TArrayD</a></td><td class="dataname"><a href="./TUnfold.html#TUnfold:fSumOverY"><span class="baseclass">TUnfold::</span>fSumOverY</a></td><td class="datadesc">Input: sum of all columns</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMap.html">TMap</a>*</td><td class="dataname"><a name="TUnfoldSys:fSysIn"></a>fSysIn</td><td class="datadesc">Input: correlated errors</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a href="./TUnfold.html#TUnfold:fTauSquared"><span class="baseclass">TUnfold::</span>fTauSquared</a></td><td class="datadesc">Input: regularisation parameter</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="dataname"><a href="./TUnfold.html#TUnfold:fVyy"><span class="baseclass">TUnfold::</span>fVyy</a></td><td class="datadesc">Input: covariance matrix for y</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMatrixDSparse.html">TMatrixDSparse</a>*</td><td class="dataname"><a name="TUnfoldSys:fVyyData"></a>fVyyData</td><td class="datadesc">Input: error on fY prior to bgr subtraction</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TMatrixD.html">TMatrixD</a>*</td><td class="dataname"><a href="./TUnfold.html#TUnfold:fX0"><span class="baseclass">TUnfold::</span>fX0</a></td><td class="datadesc">Input: x0</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TArrayI.html">TArrayI</a></td><td class="dataname"><a href="./TUnfold.html#TUnfold:fXToHist"><span class="baseclass">TUnfold::</span>fXToHist</a></td><td class="datadesc">Input: matrix indices -&gt; histogram bins</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TMatrixD.html">TMatrixD</a>*</td><td class="dataname"><a href="./TUnfold.html#TUnfold:fY"><span class="baseclass">TUnfold::</span>fY</a></td><td class="datadesc">Input: y</td></tr>
+<tr class="data"><td class="datatype"><a href="./TMatrixD.html">TMatrixD</a>*</td><td class="dataname"><a name="TUnfoldSys:fYData"></a>fYData</td><td class="datadesc">Input: fY prior to bgr subtraction</td></tr>
+
+</table></div>
+</div>
+<h2><a id="TUnfoldSys:Class_Charts"></a>Class Charts</h2>
+<map name="MapTUnfoldSys_Inh" id="MapTUnfoldSys_Inh">
+<area shape="rect" id="node2" href="./TUnfold.html" title="TUnfold" alt="" coords="209,7,347,32"/>
+<area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="2,7,140,32"/>
+<area shape="rect" id="node4" href="./TUnfoldDensity.html" title="TUnfoldDensity" alt="" coords="628,7,766,32"/>
+</map>
+<map name="MapTUnfoldSys_InhMem" id="MapTUnfoldSys_InhMem">
+<area shape="rect" id="clust11" href="./TUnfold.html" alt="" coords="403,47,469,241"/>
+<area shape="rect" id="clust12" href="./TUnfold.html" alt="" coords="325,47,392,273"/>
+<area shape="rect" id="clust13" href="./TUnfold.html" alt="" coords="248,47,315,273"/>
+<area shape="rect" id="clust14" href="./TUnfold.html" alt="" coords="435,256,437,259"/>
+<area shape="rect" id="clust15" href="./TUnfold.html" alt="" coords="403,273,469,689"/>
+<area shape="rect" id="clust16" href="./TUnfold.html" alt="" coords="325,273,392,705"/>
+<area shape="rect" id="clust17" href="./TUnfold.html" alt="" coords="248,273,315,705"/>
+<area shape="rect" id="clust10" href="./TUnfold.html" title="TUnfold" alt="" coords="248,16,469,705"/>
+<area shape="rect" id="clust26" href="./TObject.html" alt="" coords="16,161,83,609"/>
+<area shape="rect" id="clust20" href="./TObject.html" alt="" coords="171,47,237,145"/>
+<area shape="rect" id="clust21" href="./TObject.html" alt="" coords="93,47,160,161"/>
+<area shape="rect" id="clust22" href="./TObject.html" alt="" coords="16,47,83,161"/>
+<area shape="rect" id="clust23" href="./TObject.html" alt="" coords="203,152,205,155"/>
+<area shape="rect" id="clust24" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust25" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust19" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
+</map>
+<map name="MapTUnfoldSys_Lib" id="MapTUnfoldSys_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="387,121,504,169"/>
+</map>
+<div class="tabs">
+<a id="imgTUnfoldSys_Inh" class="tabsel" href="inh/TUnfoldSys_Inh.png" onclick="javascript:return SetImg('Charts','inh/TUnfoldSys_Inh.png');">Inheritance</a>
+<a id="imgTUnfoldSys_InhMem" class="tab" href="inhmem/TUnfoldSys_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TUnfoldSys_InhMem.png');">Inherited Members</a>
+<a id="imgTUnfoldSys_Incl" class="tab" href="incl/TUnfoldSys_Incl.png" onclick="javascript:return SetImg('Charts','incl/TUnfoldSys_Incl.png');">Includes</a>
+<a id="imgTUnfoldSys_Lib" class="tab" href="lib/TUnfoldSys_Lib.png" onclick="javascript:return SetImg('Charts','lib/TUnfoldSys_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTUnfoldSys_Inh" src="inh/TUnfoldSys_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TUnfoldSys:TUnfoldSys@2" href="src/TUnfoldSys.cxx.html#hEOnOD">TUnfoldSys</a>(<span class="keyword">const</span> <a href="./TUnfoldSys.html">TUnfoldSys</a>&amp; )</span><br />
+<div class="funccomm"><pre> set all pointers to zero
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:DoBackgroundSubtraction" href="src/TUnfoldSys.cxx.html#nJ_NUB">DoBackgroundSubtraction</a>(<span class="keyword">void</span>)</span><br />
+<div class="funccomm"><pre> performs background subtraction
+ fY = <a href="./TUnfoldSys.html#TUnfoldSys:fYData" title="TMatrixD* TUnfoldSys::fYData">fYData</a> - <a href="./TUnfoldSys.html#TUnfoldSys:fBgrIn" title="TMap* TUnfoldSys::fBgrIn">fBgrIn</a>
+ fVyy = <a href="./TUnfoldSys.html#TUnfoldSys:fVyyData" title="TMatrixDSparse* TUnfoldSys::fVyyData">fVyyData</a> + fBgrErrUncorr^2 + fBgrErrCorr * fBgrErrCorr#
+ fVyyinv = fVyy^(-1)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TUnfoldSys:SetInput" href="src/TUnfoldSys.cxx.html#GJELD">SetInput</a>(<span class="keyword">const</span> <a href="./TH1.html">TH1</a>* hist_y, <a href="./ListOfTypes.html#Double_t">Double_t</a> scaleBias = 0.0, <a href="./ListOfTypes.html#Double_t">Double_t</a> oneOverZeroError = 0.0, <span class="keyword">const</span> <a href="./TH2.html">TH2</a>* hist_vyy = 0, <span class="keyword">const</span> <a href="./TH2.html">TH2</a>* hist_vyy_inv = 0)</span><br />
+<div class="funccomm"><pre> Define the input data for subsequent calls to <a href="./TUnfold.html#TUnfold:DoUnfold" title="Double_t TUnfold::DoUnfold() or overloads">DoUnfold</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>)
+  input:   input distribution with errors
+  scaleBias:  scale factor applied to the bias
+  oneOverZeroError: for bins with zero error, this number defines 1/error.
+ Return value: number of bins with bad error
+                 +10000*number of unconstrained output bins
+         Note: return values&gt;=10000 are fatal errors,
+               for the given input, the unfolding can not be done!
+ Calls the <a href="./TUnfoldSys.html#TUnfoldSys:SetInput" title="Int_t TUnfoldSys::SetInput(const TH1* hist_y,Double_t scaleBias=0.0,Double_t oneOverZeroError=0.0,const TH2* hist_vyy=0,const TH2* hist_vyy_inv=0)">SetInput</a> method of the base class, then renames the input
+ vectors fY and fVyy, then performs the background subtraction
+ Data members modified:
+   <a href="./TUnfoldSys.html#TUnfoldSys:fYData" title="TMatrixD* TUnfoldSys::fYData">fYData</a>,fY,<a href="./TUnfoldSys.html#TUnfoldSys:fVyyData" title="TMatrixDSparse* TUnfoldSys::fVyyData">fVyyData</a>,fVyy,fVyyinvData,fVyyinv
+ and those modified by <a href="./TUnfold.html">TUnfold</a>::<a href="./TUnfold.html#TUnfold:SetInput" title="Int_t TUnfold::SetInput(const TH1* hist_y,Double_t scaleBias=0.0,Double_t oneOverZeroError=0.0,const TH2* hist_vyy=0,const TH2* hist_vyy_inv=0)">SetInput</a>()
+ and those modified by <a href="./TUnfoldSys.html#TUnfoldSys:DoBackgroundSubtraction" title="void TUnfoldSys::DoBackgroundSubtraction()">DoBackgroundSubtraction</a>()
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:InitTUnfoldSys" href="src/TUnfoldSys.cxx.html#dZHiBE">InitTUnfoldSys</a>(<span class="keyword">void</span>)</span><br />
+<div class="funccomm"><pre> initialize pointers and TMaps
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TUnfoldSys:_TUnfoldSys" href="src/TUnfoldSys.cxx.html#pk_2t">~TUnfoldSys</a>(<span class="keyword">void</span>)</span><br />
+<div class="funccomm"><pre> delete all data members
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:ClearResults" href="src/TUnfoldSys.cxx.html#k07YLC">ClearResults</a>(<span class="keyword">void</span>)</span><br />
+<div class="funccomm"><pre> clear all data members which depend on the unfolding results
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:PrepareSysError" href="src/TUnfoldSys.cxx.html#eGrENE">PrepareSysError</a>(<span class="keyword">void</span>)</span><br />
+<div class="funccomm"><pre> calculations required for syst.error
+ data members modified
+    <a href="./TUnfoldSys.html#TUnfoldSys:fEmatUncorrX" title="TMatrixDSparse* TUnfoldSys::fEmatUncorrX">fEmatUncorrX</a>, <a href="./TUnfoldSys.html#TUnfoldSys:fEmatUncorrAx" title="TMatrixDSparse* TUnfoldSys::fEmatUncorrAx">fEmatUncorrAx</a>, <a href="./TUnfoldSys.html#TUnfoldSys:fDeltaCorrX" title="TMap* TUnfoldSys::fDeltaCorrX">fDeltaCorrX</a>, <a href="./TUnfoldSys.html#TUnfoldSys:fDeltaCorrAx" title="TMap* TUnfoldSys::fDeltaCorrAx">fDeltaCorrAx</a>
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:SetTauError" href="src/TUnfoldSys.cxx.html#YAtMXE">SetTauError</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> delta_tau)</span><br />
+<div class="funccomm"><pre> set uncertainty on tau
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TUnfoldSys:GetDeltaSysSource" href="src/TUnfoldSys.cxx.html#q2pXEE">GetDeltaSysSource</a>(<a href="./TH1.html">TH1</a>* hist_delta, <span class="keyword">const</span> <span class="keyword">char</span>* source, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0)</span><br />
+<div class="funccomm"><pre> calculate systematic shift from a given source
+    ematrix: output
+    source: name of the error source
+    binMap: see method <a href="./TUnfold.html#TUnfold:GetEmatrix" title="void TUnfold::GetEmatrix(TH2* ematrix,const Int_t* binMap=0)">GetEmatrix</a>()
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TUnfoldSys:GetDeltaSysTau" href="src/TUnfoldSys.cxx.html#fDTC7D">GetDeltaSysTau</a>(<a href="./TH1.html">TH1</a>* delta, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0)</span><br />
+<div class="funccomm"><pre> calculate systematic shift from tau variation
+    ematrix: output
+    binMap: see method <a href="./TUnfold.html#TUnfold:GetEmatrix" title="void TUnfold::GetEmatrix(TH2* ematrix,const Int_t* binMap=0)">GetEmatrix</a>()
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:GetEmatrixTotal" href="src/TUnfoldSys.cxx.html#hH1fu">GetEmatrixTotal</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0)</span><br />
+<div class="funccomm"><pre> get total error including statistical error
+    ematrix: output
+    binMap: see method <a href="./TUnfold.html#TUnfold:GetEmatrix" title="void TUnfold::GetEmatrix(TH2* ematrix,const Int_t* binMap=0)">GetEmatrix</a>()
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TMatrixDSparse.html">TMatrixDSparse</a> * <a class="funcname" name="TUnfoldSys:GetSummedErrorMatrixYY" href="src/TUnfoldSys.cxx.html#w6SB6C">GetSummedErrorMatrixYY</a>(<span class="keyword">void</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TMatrixDSparse.html">TMatrixDSparse</a> * <a class="funcname" name="TUnfoldSys:GetSummedErrorMatrixXX" href="src/TUnfoldSys.cxx.html#ocQB6C">GetSummedErrorMatrixXX</a>(<span class="keyword">void</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TUnfoldSys:GetChi2Sys" href="src/TUnfoldSys.cxx.html#K3OoFB">GetChi2Sys</a>(<span class="keyword">void</span>)</span><br />
+<div class="funccomm"><pre> calculate total chi**2 including systematic errors
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:GetRhoItotal" href="src/TUnfoldSys.cxx.html#fTHoHB">GetRhoItotal</a>(<a href="./TH1.html">TH1</a>* rhoi, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./TH2.html">TH2</a>* invEmat = 0)</span><br />
+<div class="funccomm"><pre> get global correlation coefficients including systematic,statistical,background,tau errors
+    rhoi: output histogram
+    binMap: for each global bin, indicate in which histogram bin
+            to store its content
+    invEmat: output histogram for inverse of error matrix
+              (pointer may zero if inverse is not requested)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TUnfoldSys:TUnfoldSys@2" href="src/TUnfoldSys.h.html#Ixn83B">TUnfoldSys</a>(<span class="keyword">const</span> <a href="./TUnfoldSys.html">TUnfoldSys</a>&amp; )</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TMatrixDSparse.html">TMatrixDSparse</a> * <a class="funcname" name="TUnfoldSys:PrepareUncorrEmat" href="src/TUnfoldSys.h.html#ddnhHD">PrepareUncorrEmat</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m1, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m2)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TMatrixDSparse.html">TMatrixDSparse</a> * <a class="funcname" name="TUnfoldSys:PrepareCorrEmat" href="src/TUnfoldSys.h.html#uKIQAC">PrepareCorrEmat</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m1, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m2, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* dsys)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:ScaleColumnsByVector" href="src/TUnfoldSys.h.html#iCjDtC">ScaleColumnsByVector</a>(<a href="./TMatrixDSparse.html">TMatrixDSparse</a>* m, <span class="keyword">const</span> TMatrixTBase&lt;<a href="./ListOfTypes.html#Double_t">Double_t</a>&gt;* v) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:VectorMapToHist" href="src/TUnfoldSys.h.html#g_S29D">VectorMapToHist</a>(<a href="./TH1.html">TH1</a>* hist_delta, <span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* delta, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:GetEmatrixFromVyy" href="src/TUnfoldSys.h.html#Nti06E">GetEmatrixFromVyy</a>(<span class="keyword">const</span> <a href="./TMatrixDSparse.html">TMatrixDSparse</a>* vyy, <a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TUnfoldSys:TUnfoldSys@1" href="src/TUnfoldSys.h.html#wUQKV">TUnfoldSys</a>(<span class="keyword">const</span> <a href="./TH2.html">TH2</a>* hist_A, <a href="./TUnfold.html">TUnfold</a>::EHistMap histmap, <a href="./TUnfold.html">TUnfold</a>::ERegMode regmode = kRegModeSize, <a href="./TUnfold.html">TUnfold</a>::EConstraint constraint = kEConstraintArea)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:AddSysError" href="src/TUnfoldSys.h.html#jm9mMC">AddSysError</a>(<span class="keyword">const</span> <a href="./TH2.html">TH2</a>* sysError, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./TUnfold.html">TUnfold</a>::EHistMap histmap, <a href="./TUnfoldSys.html">TUnfoldSys</a>::ESysErrMode mode)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:SubtractBackground" href="src/TUnfoldSys.h.html#nfpLxB">SubtractBackground</a>(<span class="keyword">const</span> <a href="./TH1.html">TH1</a>* hist_bgr, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Double_t">Double_t</a> scale = 1.0, <a href="./ListOfTypes.html#Double_t">Double_t</a> scale_error = 0.0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TUnfoldSys:GetDeltaSysBackgroundScale" href="src/TUnfoldSys.h.html#qB2F2C">GetDeltaSysBackgroundScale</a>(<a href="./TH1.html">TH1</a>* delta, <span class="keyword">const</span> <span class="keyword">char</span>* source, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:GetEmatrixSysUncorr" href="src/TUnfoldSys.h.html#cGSjVD">GetEmatrixSysUncorr</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:GetEmatrixSysSource" href="src/TUnfoldSys.h.html#DYr1FE">GetEmatrixSysSource</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <span class="keyword">char</span>* source, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:GetEmatrixSysBackgroundScale" href="src/TUnfoldSys.h.html#yKML.D">GetEmatrixSysBackgroundScale</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <span class="keyword">char</span>* source, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TUnfoldSys:GetEmatrixInput" href="src/TUnfoldSys.h.html#IcqJiE">GetEmatrixInput</a>(<a href="./TH2.html">TH2</a>* ematrix, <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>* binMap = 0, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> clearEmat = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</span><br />
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+
+<em>&raquo; Last changed: Sun May 31 22:17:45 2015 </em><em>&raquo; Last generated: 2015-05-31 22:17</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

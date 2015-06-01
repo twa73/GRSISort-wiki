@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Sun May 31 18:27:14 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TAttLine</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TAttLine','libCore','TAttLine.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TAttLine.h.html">header file</a>
+<a class="descrheadentry" href="src/TAttLine.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TAttLine:description">class description</a> 
+<a class="descrheadentry" href="#TAttLine:Function_Members">function members</a>
+<a class="descrheadentry" href="#TAttLine:Data_Members">data members</a>
+<a class="descrheadentry" href="#TAttLine:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./CORE_Index.html">CORE</a>
+ &#187; <a class="locationlevel" href="./CORE_BASE_Index.html">BASE</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TAttLine</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TAttLine:description"></a>class TAttLine</h1>
+<div class="classdescr">
+<pre>
+
+</pre><!-- TDocHtmlDirective start --><center><h2>Line Attributes class</h2></center>
+This class is used (in general by secondary inheritance)
+by many other classes (graphics, histograms). It holds all the line attributes.
+<h3>Line attributes</h3>
+Line attributes are:
+<ul>
+<li><a href="#L1">Line Color.</a></li>
+<li><a href="#L2">Line Width.</a></li>
+<li><a href="#L3">Line Style.</a></li>
+</ul>
+<a name="L1"></a><h3>Line Color</h3>
+The line color is a color index (integer) pointing in the ROOT
+color table.
+The line color of any class inheriting from <tt>TAttLine</tt> can
+be changed using the method <tt>SetLineColor</tt> and retrieved using the
+method <tt>GetLineColor</tt>.
+The following table shows the first 50 default colors.
+<!-- TDocHtmlDirective end --><pre>
+</pre><div class="tabs">
+<a id="MACRO_TAttLine_1_c_A0" class="tabsel" href="MACRO_TAttLine_1_c.gif" onclick="javascript:return SetDiv('MACRO_TAttLine_1_c',0);">Picture</a>
+<a id="MACRO_TAttLine_1_c_A1" class="tab" href="#" onclick="javascript:return SetDiv('MACRO_TAttLine_1_c',1);">Source</a>
+<br /></div><div class="tabcontent">
+<div id="MACRO_TAttLine_1_c_0" class="tabvisible"><span class="macro"><img class="macro" alt="output of MACRO_TAttLine_1_c" title="MACRO" src="MACRO_TAttLine_1_c.gif" /></span></div>
+<div id="MACRO_TAttLine_1_c_1" class="tabhidden"><div class="listing"><pre class="code">{
+   <a href="./TCanvas.html">TCanvas</a> *c = <span class="keyword">new</span> <a href="./TCanvas.html">TCanvas</a>(<span class="string">"c"</span>,<span class="string">"Line colors"</span>,0,0,500,200);
+   c.DrawColorTable();
+   <span class="keyword">return</span> c;
+}</pre></div></div><div class="clear"></div></div><pre>
+
+</pre><!-- TDocHtmlDirective start --><h4>Color transparency</h4>
+<tt>SetLineColorAlpha()</tt>, allows to set a transparent color.
+In the following example the line color of the histogram <tt>histo</tt>
+is set to blue with a transparency of 35%. The color <tt>kBlue</tt>
+itself remains fully opaque. 
+<p>
+<pre>
+histo->SetLineColorAlpha(kBlue, 0.35);
+</pre>
+<p>  
+The transparency is available on all platforms when the <tt>flagOpenGL.CanvasPreferGL</tt> is set to <tt>1</tt>
+in <tt>$ROOTSYS/etc/system.rootrc</tt>, or on Mac with the Cocoa backend. On the file output
+it is visible with PDF, PNG, Gif, JPEG, SVG ... but not PostScript.
+<a name="L2"></a><h3>Line Width</h3>
+The line width is expressed in pixel units.
+The line width of any class inheriting from <tt>TAttLine</tt> can
+be changed using the method <tt>SetLineWidth</tt> and retrieved using the
+method <tt>GetLineWidth</tt>.
+The following picture shows the line widths from 1 to 10 pixels.
+<!-- TDocHtmlDirective end --><pre>
+</pre><div class="tabs">
+<a id="MACRO_TAttLine_3_Lw_A0" class="tabsel" href="MACRO_TAttLine_3_Lw.gif" onclick="javascript:return SetDiv('MACRO_TAttLine_3_Lw',0);">Picture</a>
+<a id="MACRO_TAttLine_3_Lw_A1" class="tab" href="#" onclick="javascript:return SetDiv('MACRO_TAttLine_3_Lw',1);">Source</a>
+<br /></div><div class="tabcontent">
+<div id="MACRO_TAttLine_3_Lw_0" class="tabvisible"><span class="macro"><img class="macro" alt="output of MACRO_TAttLine_3_Lw" title="MACRO" src="MACRO_TAttLine_3_Lw.gif" /></span></div>
+<div id="MACRO_TAttLine_3_Lw_1" class="tabhidden"><div class="listing"><pre class="code">{
+   <a href="./TCanvas.html">TCanvas</a> *Lw = <span class="keyword">new</span> <a href="./TCanvas.html">TCanvas</a>(<span class="string">"Lw"</span>,<span class="string">"test"</span>,500,200);
+   <a href="./TText.html">TText</a>  t;
+   t.SetTextAlign(32);
+   t.SetTextSize(0.08);
+   <a href="./ListOfTypes.html#Int_t">Int_t</a> i=1;
+   <span class="keyword">for</span> (<span class="keyword">float</span> s=0.1; s&lt;1.0 ; s+=0.092) {
+      <a href="./TLine.html">TLine</a> *lh = <span class="keyword">new</span> <a href="./TLine.html">TLine</a>(0.15,s,.85,s);
+      lh-&gt;<a href="./TAttLine.html#TAttLine:SetLineWidth" title="void TAttLine::SetLineWidth(Width_t lwidth)">SetLineWidth</a>(i);
+      t.DrawText(0.1,s,Form(<span class="string">"%d"</span>,i++));
+      lh-&gt;Draw();
+   }
+   <span class="keyword">return</span> Lw;
+}</pre></div></div><div class="clear"></div></div><pre>
+
+</pre><!-- TDocHtmlDirective start --><a name="L3"></a><h3>Line Style</h3>
+Line styles are identified via integer numbers. The line style of any class
+inheriting from <tt>TAttLine</tt> can be changed using the method
+<tt>SetLineStyle</tt> and retrieved using the method <tt>GetLineStyle</tt>.
+<br>
+The first 10 line styles are predefined as shown on the following picture:
+<!-- TDocHtmlDirective end --><pre>
+</pre><div class="tabs">
+<a id="MACRO_TAttLine_5_Ls_A0" class="tabsel" href="MACRO_TAttLine_5_Ls.gif" onclick="javascript:return SetDiv('MACRO_TAttLine_5_Ls',0);">Picture</a>
+<a id="MACRO_TAttLine_5_Ls_A1" class="tab" href="#" onclick="javascript:return SetDiv('MACRO_TAttLine_5_Ls',1);">Source</a>
+<br /></div><div class="tabcontent">
+<div id="MACRO_TAttLine_5_Ls_0" class="tabvisible"><span class="macro"><img class="macro" alt="output of MACRO_TAttLine_5_Ls" title="MACRO" src="MACRO_TAttLine_5_Ls.gif" /></span></div>
+<div id="MACRO_TAttLine_5_Ls_1" class="tabhidden"><div class="listing"><pre class="code">{
+   <a href="./TCanvas.html">TCanvas</a> *Ls = <span class="keyword">new</span> <a href="./TCanvas.html">TCanvas</a>(<span class="string">"Ls"</span>,<span class="string">"test"</span>,500,200);
+   <a href="./TText.html">TText</a>  t;
+   t.SetTextAlign(32);
+   t.SetTextSize(0.08);
+   <a href="./ListOfTypes.html#Int_t">Int_t</a> i=1;
+   <span class="keyword">for</span> (<span class="keyword">float</span> s=0.1; s&lt;1.0 ; s+=0.092) {
+      <a href="./TLine.html">TLine</a> *lh = <span class="keyword">new</span> <a href="./TLine.html">TLine</a>(0.15,s,.85,s);
+      lh-&gt;<a href="./TAttLine.html#TAttLine:SetLineStyle" title="void TAttLine::SetLineStyle(Style_t lstyle)">SetLineStyle</a>(i);
+      t.DrawText(0.1,s,Form(<span class="string">"%d"</span>,i++));
+      lh-&gt;Draw();
+   }
+   <span class="keyword">return</span> Ls;
+}</pre></div></div><div class="clear"></div></div><pre>
+
+</pre><!-- TDocHtmlDirective start -->Additional line styles can be defined using <tt>TStyle::SetLineStyleString</tt>.
+<br>For example the line style number 11 can be defined as follow:
+<pre>
+   gStyle->SetLineStyleString(11,"400 200");
+</pre>
+Existing line styles (1 to 10) can be redefined using the same method.
+<!-- TDocHtmlDirective end --><pre> 
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TAttLine:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TAttLine:TAttLine">TAttLine</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TAttLine:TAttLine@2">TAttLine</a>(<span class="keyword">const</span> <a href="./TAttLine.html">TAttLine</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TAttLine:TAttLine@1">TAttLine</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> lcolor, <a href="./ListOfTypes.html#Style_t">Style_t</a> lstyle, <a href="./ListOfTypes.html#Width_t">Width_t</a> lwidth)</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TAttLine:_TAttLine">~TAttLine</a>()</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TAttLine:Class">Class</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:Copy">Copy</a>(<a href="./TAttLine.html">TAttLine</a>&amp; attline) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TAttLine:DistancetoLine">DistancetoLine</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py, <a href="./ListOfTypes.html#Double_t">Double_t</a> xp1, <a href="./ListOfTypes.html#Double_t">Double_t</a> yp1, <a href="./ListOfTypes.html#Double_t">Double_t</a> xp2, <a href="./ListOfTypes.html#Double_t">Double_t</a> yp2)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Color_t">Color_t</a></td><td class="funcname"><a class="funcname" href="#TAttLine:GetLineColor">GetLineColor</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Style_t">Style_t</a></td><td class="funcname"><a class="funcname" href="#TAttLine:GetLineStyle">GetLineStyle</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Width_t">Width_t</a></td><td class="funcname"><a class="funcname" href="#TAttLine:GetLineWidth">GetLineWidth</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TAttLine:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:Modify">Modify</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./TAttLine.html">TAttLine</a>&amp;</td><td class="funcname"><a class="funcname" href="#TAttLine:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TAttLine.html">TAttLine</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:ResetAttLine">ResetAttLine</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SaveLineAttributes">SaveLineAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineAttributes">SetLineAttributes</a>()<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineColor">SetLineColor</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> lcolor)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineColorAlpha">SetLineColorAlpha</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> lcolor, <a href="./ListOfTypes.html#Float_t">Float_t</a> lalpha)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineStyle">SetLineStyle</a>(<a href="./ListOfTypes.html#Style_t">Style_t</a> lstyle)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineWidth">SetLineWidth</a>(<a href="./ListOfTypes.html#Width_t">Width_t</a> lwidth)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:StreamerNVirtual">StreamerNVirtual</a>(<a href="./TBuffer.html">TBuffer</a>&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TAttLine:Data_Members"></a>Data Members</h2>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Color_t">Color_t</a></td><td class="dataname"><a name="TAttLine:fLineColor"></a>fLineColor</td><td class="datadesc">line color</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Style_t">Style_t</a></td><td class="dataname"><a name="TAttLine:fLineStyle"></a>fLineStyle</td><td class="datadesc">line style</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Width_t">Width_t</a></td><td class="dataname"><a name="TAttLine:fLineWidth"></a>fLineWidth</td><td class="datadesc">line width</td></tr>
+
+</table></div>
+</div>
+<h2><a id="TAttLine:Class_Charts"></a>Class Charts</h2>
+<map name="MapTAttLine_Inh" id="MapTAttLine_Inh">
+<area shape="rect" id="node2" href="./TPolyLine3D.html" title="TPolyLine3D" alt="" coords="161,31,265,51"/>
+<area shape="rect" id="node3" href="./TPieSlice.html" title="TPieSlice" alt="" coords="161,71,265,91"/>
+<area shape="rect" id="node4" href="./TVirtualPad.html" title="TVirtualPad" alt="" coords="161,91,265,111"/>
+<area shape="rect" id="node5" href="./TVirtualX.html" title="TVirtualX" alt="" coords="161,111,265,131"/>
+<area shape="rect" id="node6" href="./TTree.html" title="TTree" alt="" coords="161,131,265,150"/>
+<area shape="rect" id="node7" href="./TH1.html" title="TH1" alt="" coords="161,240,265,260"/>
+<area shape="rect" id="node8" href="./TEllipse.html" title="TEllipse" alt="" coords="161,399,265,419"/>
+<area shape="rect" id="node9" href="./TBox.html" title="TBox" alt="" coords="161,449,265,468"/>
+<area shape="rect" id="node10" href="./TLine.html" title="TLine" alt="" coords="161,488,265,508"/>
+<area shape="rect" id="node11" href="./TShape.html" title="TShape" alt="" coords="161,558,265,578"/>
+<area shape="rect" id="node12" href="./TGraph.html" title="TGraph" alt="" coords="161,618,265,637"/>
+<area shape="rect" id="node13" href="./TPolyLine.html" title="TPolyLine" alt="" coords="161,638,265,657"/>
+<area shape="rect" id="node14" href="./TEfficiency.html" title="TEfficiency" alt="" coords="161,658,265,677"/>
+<area shape="rect" id="node15" href="./TF1.html" title="TF1" alt="" coords="161,678,265,697"/>
+<area shape="rect" id="node16" href="./TGraph2D.html" title="TGraph2D" alt="" coords="161,697,265,717"/>
+<area shape="rect" id="node17" href="./TGraphPolargram.html" title="TGraphPolargram" alt="" coords="158,717,269,737"/>
+<area shape="rect" id="node18" href="./TLatex.html" title="TLatex" alt="" coords="161,737,265,757"/>
+<area shape="rect" id="node19" href="./TMarker3DBox.html" title="TMarker3DBox" alt="" coords="161,757,265,777"/>
+<area shape="rect" id="node20" href="./TVirtualPS.html" title="TVirtualPS" alt="" coords="161,797,265,816"/>
+<area shape="rect" id="node21" href="./TLegendEntry.html" title="TLegendEntry" alt="" coords="161,816,265,836"/>
+<area shape="rect" id="node23" href="./TWbox.html" title="TWbox" alt="" coords="336,419,440,439"/>
+<area shape="rect" id="node24" href="./THelix.html" title="THelix" alt="" coords="336,21,440,41"/>
+<area shape="rect" id="node25" href="./TPad.html" title="TPad" alt="" coords="336,41,440,61"/>
+<area shape="rect" id="node26" href="./TGCocoa.html" title="TGCocoa" alt="" coords="336,61,440,81"/>
+<area shape="rect" id="node27" href="./TChain.html" title="TChain" alt="" coords="336,81,440,101"/>
+<area shape="rect" id="node28" href="./TH1D.html" title="TH1D" alt="" coords="336,161,440,180"/>
+<area shape="rect" id="node29" href="./TArc.html" title="TArc" alt="" coords="336,379,440,399"/>
+<area shape="rect" id="node30" href="./TArrow.html" title="TArrow" alt="" coords="336,469,440,488"/>
+<area shape="rect" id="node31" href="./TBRIK.html" title="TBRIK" alt="" coords="336,508,440,528"/>
+<area shape="rect" id="node32" href="./TGraphErrors.html" title="TGraphErrors" alt="" coords="336,608,440,627"/>
+<area shape="rect" id="node33" href="./TTUBE.html" title="TTUBE" alt="" coords="336,528,440,548"/>
+<area shape="rect" id="node34" href="./TCrown.html" title="TCrown" alt="" coords="336,399,440,419"/>
+<area shape="rect" id="node35" href="./TCurlyLine.html" title="TCurlyLine" alt="" coords="336,707,440,727"/>
+<area shape="rect" id="node36" href="./TCutG.html" title="TCutG" alt="" coords="336,628,440,647"/>
+<area shape="rect" id="node37" href="./TPave.html" title="TPave" alt="" coords="336,449,440,468"/>
+<area shape="rect" id="node38" href="./TF12.html" title="TF12" alt="" coords="336,727,440,747"/>
+<area shape="rect" id="node39" href="./TF2.html" title="TF2" alt="" coords="336,747,440,767"/>
+<area shape="rect" id="node40" href="./TGraph2DErrors.html" title="TGraph2DErrors" alt="" coords="335,767,440,786"/>
+<area shape="rect" id="node41" href="./TGraphAsymmErrors.html" title="TGraphAsymmErrors" alt="" coords="321,648,454,667"/>
+<area shape="rect" id="node42" href="./TGraphBentErrors.html" title="TGraphBentErrors" alt="" coords="330,667,445,687"/>
+<area shape="rect" id="node43" href="./TH1C.html" title="TH1C" alt="" coords="336,180,440,200"/>
+<area shape="rect" id="node44" href="./TH1F.html" title="TH1F" alt="" coords="336,200,440,220"/>
+<area shape="rect" id="node45" href="./TH1I.html" title="TH1I" alt="" coords="336,220,440,240"/>
+<area shape="rect" id="node46" href="./TH1K.html" title="TH1K" alt="" coords="336,240,440,260"/>
+<area shape="rect" id="node47" href="./TH1S.html" title="TH1S" alt="" coords="336,260,440,280"/>
+<area shape="rect" id="node48" href="./TH2.html" title="TH2" alt="" coords="336,280,440,299"/>
+<area shape="rect" id="node49" href="./TGaxis.html" title="TGaxis" alt="" coords="336,488,440,508"/>
+<area shape="rect" id="node50" href="./TGraphQQ.html" title="TGraphQQ" alt="" coords="336,687,440,707"/>
+<area shape="rect" id="node51" href="./TH3.html" title="TH3" alt="" coords="336,320,440,339"/>
+<area shape="rect" id="node52" href="./TImageDump.html" title="TImageDump" alt="" coords="336,787,440,806"/>
+<area shape="rect" id="node53" href="./TNtuple.html" title="TNtuple" alt="" coords="336,101,440,120"/>
+<area shape="rect" id="node54" href="./TNtupleD.html" title="TNtupleD" alt="" coords="336,121,440,140"/>
+<area shape="rect" id="node55" href="./TPCON.html" title="TPCON" alt="" coords="336,548,440,568"/>
+<area shape="rect" id="node56" href="./TPDF.html" title="TPDF" alt="" coords="336,807,440,826"/>
+<area shape="rect" id="node57" href="./TSPHE.html" title="TSPHE" alt="" coords="336,568,440,588"/>
+<area shape="rect" id="node58" href="./TPostScript.html" title="TPostScript" alt="" coords="336,827,440,846"/>
+<area shape="rect" id="node59" href="./TTeXDump.html" title="TTeXDump" alt="" coords="336,846,440,866"/>
+<area shape="rect" id="node60" href="./TSVG.html" title="TSVG" alt="" coords="336,866,440,886"/>
+<area shape="rect" id="node61" href="./TTreeSQL.html" title="TTreeSQL" alt="" coords="336,141,440,160"/>
+<area shape="rect" id="node62" href="./TXTRU.html" title="TXTRU" alt="" coords="336,588,440,607"/>
+<area shape="rect" id="node63" href="./TFrame.html" title="TFrame" alt="" coords="506,389,610,409"/>
+<area shape="rect" id="node64" href="./TProfile.html" title="TProfile" alt="" coords="506,150,610,170"/>
+<area shape="rect" id="node65" href="./TProofChain.html" title="TProofChain" alt="" coords="506,81,610,101"/>
+<area shape="rect" id="node66" href="./TSlider.html" title="TSlider" alt="" coords="506,1,610,21"/>
+<area shape="rect" id="node67" href="./TSliderBox.html" title="TSliderBox" alt="" coords="506,409,610,428"/>
+<area shape="rect" id="node68" href="./TGQuartz.html" title="TGQuartz" alt="" coords="506,61,610,81"/>
+<area shape="rect" id="node69" href="./TCanvas.html" title="TCanvas" alt="" coords="506,21,610,41"/>
+<area shape="rect" id="node70" href="./TTUBS.html" title="TTUBS" alt="" coords="506,588,610,607"/>
+<area shape="rect" id="node71" href="./TButton.html" title="TButton" alt="" coords="506,41,610,61"/>
+<area shape="rect" id="node72" href="./TCONE.html" title="TCONE" alt="" coords="506,608,610,627"/>
+<area shape="rect" id="node73" href="./TCurlyArc.html" title="TCurlyArc" alt="" coords="506,707,610,727"/>
+<area shape="rect" id="node74" href="./TELTU.html" title="TELTU" alt="" coords="506,628,610,647"/>
+<area shape="rect" id="node75" href="./TPaveText.html" title="TPaveText" alt="" coords="506,429,610,448"/>
+<area shape="rect" id="node76" href="./TF3.html" title="TF3" alt="" coords="506,747,610,767"/>
+<area shape="rect" id="node77" href="./TGTRA.html" title="TGTRA" alt="" coords="506,488,610,508"/>
+<area shape="rect" id="node78" href="./TGraphPolar.html" title="TGraphPolar" alt="" coords="506,687,610,707"/>
+<area shape="rect" id="node79" href="./TH2C.html" title="TH2C" alt="" coords="506,170,610,190"/>
+<area shape="rect" id="node80" href="./TH2D.html" title="TH2D" alt="" coords="506,190,610,210"/>
+<area shape="rect" id="node81" href="./TH2F.html" title="TH2F" alt="" coords="506,210,610,230"/>
+<area shape="rect" id="node82" href="./TH2I.html" title="TH2I" alt="" coords="506,230,610,249"/>
+<area shape="rect" id="node83" href="./TH2S.html" title="TH2S" alt="" coords="506,250,610,269"/>
+<area shape="rect" id="node84" href="./TH3C.html" title="TH3C" alt="" coords="506,290,610,309"/>
+<area shape="rect" id="node85" href="./TH3D.html" title="TH3D" alt="" coords="506,310,610,329"/>
+<area shape="rect" id="node86" href="./TH3F.html" title="TH3F" alt="" coords="506,329,610,349"/>
+<area shape="rect" id="node87" href="./TH3I.html" title="TH3I" alt="" coords="506,349,610,369"/>
+<area shape="rect" id="node88" href="./TH3S.html" title="TH3S" alt="" coords="506,369,610,389"/>
+<area shape="rect" id="node89" href="./THYPE.html" title="THYPE" alt="" coords="506,648,610,667"/>
+<area shape="rect" id="node90" href="./TH2Poly.html" title="TH2Poly" alt="" coords="506,270,610,289"/>
+<area shape="rect" id="node91" href="./TLegend.html" title="TLegend" alt="" coords="506,449,610,468"/>
+<area shape="rect" id="node92" href="./TPARA.html" title="TPARA" alt="" coords="506,508,610,528"/>
+<area shape="rect" id="node93" href="./TPGON.html" title="TPGON" alt="" coords="506,667,610,687"/>
+<area shape="rect" id="node94" href="./TPaveLabel.html" title="TPaveLabel" alt="" coords="506,469,610,488"/>
+<area shape="rect" id="node95" href="./TTRAP.html" title="TTRAP" alt="" coords="506,528,610,548"/>
+<area shape="rect" id="node96" href="./TTRD1.html" title="TTRD1" alt="" coords="506,548,610,568"/>
+<area shape="rect" id="node97" href="./TTRD2.html" title="TTRD2" alt="" coords="506,568,610,588"/>
+<area shape="rect" id="node98" href="./TCTUB.html" title="TCTUB" alt="" coords="662,578,767,597"/>
+<area shape="rect" id="node99" href="./TProfile2D.html" title="TProfile2D" alt="" coords="662,190,767,210"/>
+<area shape="rect" id="node100" href="./TProfile3D.html" title="TProfile3D" alt="" coords="662,310,767,329"/>
+<area shape="rect" id="node101" href="./TPaveStats.html" title="TPaveStats" alt="" coords="662,409,767,428"/>
+<area shape="rect" id="node102" href="./TPavesText.html" title="TPavesText" alt="" coords="662,429,767,448"/>
+<area shape="rect" id="node103" href="./TCONS.html" title="TCONS" alt="" coords="662,598,767,617"/>
+<area shape="rect" id="node104" href="./TDialogCanvas.html" title="TDialogCanvas" alt="" coords="662,1,767,21"/>
+<area shape="rect" id="node105" href="./TDiamond.html" title="TDiamond" alt="" coords="662,449,767,468"/>
+<area shape="rect" id="node106" href="./TGroupButton.html" title="TGroupButton" alt="" coords="662,41,767,61"/>
+<area shape="rect" id="node107" href="./TInspectCanvas.html" title="TInspectCanvas" alt="" coords="662,21,767,41"/>
+<area shape="rect" id="node108" href="./TPaveClass.html" title="TPaveClass" alt="" coords="662,469,767,488"/>
+</map>
+<map name="MapTAttLine_Lib" id="MapTAttLine_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="335,5,452,53"/>
+</map>
+<div class="tabs">
+<a id="imgTAttLine_Inh" class="tabsel" href="inh/TAttLine_Inh.png" onclick="javascript:return SetImg('Charts','inh/TAttLine_Inh.png');">Inheritance</a>
+<a id="imgTAttLine_InhMem" class="tab" href="inhmem/TAttLine_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TAttLine_InhMem.png');">Inherited Members</a>
+<a id="imgTAttLine_Incl" class="tab" href="incl/TAttLine_Incl.png" onclick="javascript:return SetImg('Charts','incl/TAttLine_Incl.png');">Includes</a>
+<a id="imgTAttLine_Lib" class="tab" href="lib/TAttLine_Lib.png" onclick="javascript:return SetImg('Charts','lib/TAttLine_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTAttLine_Inh" src="inh/TAttLine_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAttLine:TAttLine" href="src/TAttLine.cxx.html#d2cYuB">TAttLine</a>()</span><br />
+<div class="funccomm"><pre> AttLine default constructor.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAttLine:TAttLine@1" href="src/TAttLine.cxx.html#bIjbOE">TAttLine</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> lcolor, <a href="./ListOfTypes.html#Style_t">Style_t</a> lstyle, <a href="./ListOfTypes.html#Width_t">Width_t</a> lwidth)</span><br />
+<div class="funccomm"><pre> AttLine normal constructor.
+ Line attributes are taking from the argument list
+   color : must be one of the valid color index
+   style : 1=solid, 2=dash, 3=dash-dot, 4=dot-dot. New styles can be
+           defined using <a href="./TStyle.html">TStyle</a>::<a href="./TStyle.html#TStyle:SetLineStyleString" title="void TStyle::SetLineStyleString(Int_t i,const char* text)">SetLineStyleString</a>.
+   width : expressed in pixel units
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAttLine:_TAttLine" href="src/TAttLine.cxx.html#nLCxnD">~TAttLine</a>()</span><br />
+<div class="funccomm"><pre> AttLine destructor.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttLine:Copy" href="src/TAttLine.cxx.html#Qfhzo">Copy</a>(<a href="./TAttLine.html">TAttLine</a>&amp; attline) const</span><br />
+<div class="funccomm"><pre> <a href="./TAttLine.html#TAttLine:Copy" title="void TAttLine::Copy(TAttLine&amp; attline)">Copy</a> this line attributes to a new <a href="./TAttLine.html">TAttLine</a>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TAttLine:DistancetoLine" href="src/TAttLine.cxx.html#ucOpjC">DistancetoLine</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py, <a href="./ListOfTypes.html#Double_t">Double_t</a> xp1, <a href="./ListOfTypes.html#Double_t">Double_t</a> yp1, <a href="./ListOfTypes.html#Double_t">Double_t</a> xp2, <a href="./ListOfTypes.html#Double_t">Double_t</a> yp2)</span><br />
+<div class="funccomm"><pre> Compute distance from point px,py to a line.
+ Compute the closest distance of approach from point px,py to this line.
+ The distance is computed in pixels units.
+
+ Algorithm:
+
+   A(x1,y1)         P                             B(x2,y2)
+   -----------------+------------------------------
+                    |
+                    |
+                    |
+                    |
+                   M(x,y)
+
+ Let us call  a = distance AM     A=a**2
+              b = distance BM     B=b**2
+              c = distance AB     C=c**2
+              d = distance PM     D=d**2
+              u = distance AP     U=u**2
+              v = distance BP     V=v**2     c = u + v
+
+ D = A - U
+ D = B - V  = B -(c-u)**2
+    ==&gt; u = (A -B +C)/2c
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttLine:Modify" href="src/TAttLine.cxx.html#rY8CkE">Modify</a>()</span><br />
+<div class="funccomm"><pre> Change current line attributes if necessary.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttLine:ResetAttLine" href="src/TAttLine.cxx.html#Soiax">ResetAttLine</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Reset this line attributes to default values.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttLine:SaveLineAttributes" href="src/TAttLine.cxx.html#NeKUEB">SaveLineAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</span><br />
+<div class="funccomm"><pre> Save line attributes as C++ statement(s) on output stream out.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttLine:SetLineAttributes" href="src/TAttLine.cxx.html#nwgDx">SetLineAttributes</a>()</span><br />
+<div class="funccomm"><pre> Invoke the DialogCanvas Line attributes.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttLine:SetLineColorAlpha" href="src/TAttLine.cxx.html#gZgtJD">SetLineColorAlpha</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> lcolor, <a href="./ListOfTypes.html#Float_t">Float_t</a> lalpha)</span><br />
+<div class="funccomm"><pre> Set a transparent line color. lalpha defines the percentage of
+ the color opacity from 0. (fully transparent) to 1. (fully opaque).
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAttLine:TAttLine" href="src/TAttLine.h.html#mQGuZC">TAttLine</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Color_t">Color_t</a> <a class="funcname" name="TAttLine:GetLineColor" href="src/TAttLine.h.html#kd3TGE">GetLineColor</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./TAttLine.html#TAttLine:fLineColor" title="Color_t TAttLine::fLineColor">fLineColor</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Style_t">Style_t</a> <a class="funcname" name="TAttLine:GetLineStyle" href="src/TAttLine.h.html#MZmC2">GetLineStyle</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./TAttLine.html#TAttLine:fLineStyle" title="Style_t TAttLine::fLineStyle">fLineStyle</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Width_t">Width_t</a> <a class="funcname" name="TAttLine:GetLineWidth" href="src/TAttLine.h.html#F3ipDE">GetLineWidth</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./TAttLine.html#TAttLine:fLineWidth" title="Width_t TAttLine::fLineWidth">fLineWidth</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttLine:SetLineColor" href="src/TAttLine.h.html#L_gZjE">SetLineColor</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> lcolor)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TAttLine.html#TAttLine:fLineColor" title="Color_t TAttLine::fLineColor">fLineColor</a> = lcolor;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttLine:SetLineStyle" href="src/TAttLine.h.html#ZwIpQC">SetLineStyle</a>(<a href="./ListOfTypes.html#Style_t">Style_t</a> lstyle)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TAttLine.html#TAttLine:fLineStyle" title="Style_t TAttLine::fLineStyle">fLineStyle</a> = lstyle;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAttLine:SetLineWidth" href="src/TAttLine.h.html#CXBFEC">SetLineWidth</a>(<a href="./ListOfTypes.html#Width_t">Width_t</a> lwidth)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TAttLine.html#TAttLine:fLineWidth" title="Width_t TAttLine::fLineWidth">fLineWidth</a> = lwidth;}</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+<em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Rene+Brun"> Rene Brun   28/11/94</a> </em><em>&raquo; Copyright   (C) 1995-2000, Rene Brun and Fons Rademakers.               *</em><br />
+<em>&raquo; Last changed: root/base:$Id$ </em><em>&raquo; Last generated: 2015-05-31 18:27</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

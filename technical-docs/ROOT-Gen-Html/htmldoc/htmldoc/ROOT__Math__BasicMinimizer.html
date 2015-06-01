@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Sun May 31 22:11:40 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>ROOT::Math::BasicMinimizer</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class ROOT::Math::BasicMinimizer','libMathCore','Math/BasicMinimizer.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/ROOT__Math__BasicMinimizer.h.html">header file</a>
+<a class="descrheadentry"> </a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#ROOT__Math__BasicMinimizer:description">class description</a> 
+<a class="descrheadentry" href="#ROOT__Math__BasicMinimizer:Function_Members">function members</a>
+<a class="descrheadentry" href="#ROOT__Math__BasicMinimizer:Data_Members">data members</a>
+<a class="descrheadentry" href="#ROOT__Math__BasicMinimizer:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./MATH_Index.html">MATH</a>
+ &#187; <a class="locationlevel" href="./MATH_MATHCORE_Index.html">MATHCORE</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">ROOT::Math::BasicMinimizer</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="ROOT__Math__BasicMinimizer:description"></a>class ROOT::Math::BasicMinimizer: public <a href="./ROOT__Math__Minimizer.html">ROOT::Math::Minimizer</a></h1>
+<div class="classdescr">
+<pre>
+
+   Base Minimizer class, which defines the basic funcionality of various minimizer
+   implementations (apart from Minuit and Minuit2)
+   It provides support for storing parameter values, step size,
+   parameter transofrmation etc.. in case real minimizer impelmentations do not provide
+   such functionality.
+   This is an internal class and should not be used directly by the user
+
+   @ingroup MultiMin
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="ROOT__Math__BasicMinimizer:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:_BasicMinimizer">~BasicMinimizer</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__BasicMinimizer.html">BasicMinimizer</a></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:BasicMinimizer">BasicMinimizer</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Clear"><span class="baseclass">ROOT::Math::Minimizer::</span>Clear</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Contour"><span class="baseclass">ROOT::Math::Minimizer::</span>Contour</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">unsigned</span> <span class="keyword">int</span> jvar, <span class="keyword">unsigned</span> <span class="keyword">int</span>&amp; npoints, <span class="keyword">double</span>* xi, <span class="keyword">double</span>* xj)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Correlation"><span class="baseclass">ROOT::Math::Minimizer::</span>Correlation</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> i, <span class="keyword">unsigned</span> <span class="keyword">int</span> j) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:CovMatrix"><span class="baseclass">ROOT::Math::Minimizer::</span>CovMatrix</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">unsigned</span> <span class="keyword">int</span> jvar) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:CovMatrixStatus"><span class="baseclass">ROOT::Math::Minimizer::</span>CovMatrixStatus</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Edm"><span class="baseclass">ROOT::Math::Minimizer::</span>Edm</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:ErrorDef"><span class="baseclass">ROOT::Math::Minimizer::</span>ErrorDef</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">double</span>*</td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Errors"><span class="baseclass">ROOT::Math::Minimizer::</span>Errors</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:FixVariable">FixVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:GetCovMatrix"><span class="baseclass">ROOT::Math::Minimizer::</span>GetCovMatrix</a>(<span class="keyword">double</span>* covMat) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:GetHessianMatrix"><span class="baseclass">ROOT::Math::Minimizer::</span>GetHessianMatrix</a>(<span class="keyword">double</span>* hMat) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:GetMinosError"><span class="baseclass">ROOT::Math::Minimizer::</span>GetMinosError</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span>&amp; errLow, <span class="keyword">double</span>&amp; errUp, <span class="keyword">int</span> option = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:GetVariableSettings">GetVariableSettings</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <a href="./ROOT.html">ROOT</a>::Fit::ParameterSettings&amp; varObj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:GlobalCC"><span class="baseclass">ROOT::Math::Minimizer::</span>GlobalCC</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGradFunction.html">IMultiGradFunction</a>*</td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:GradObjFunction">GradObjFunction</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Hesse"><span class="baseclass">ROOT::Math::Minimizer::</span>Hesse</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:IsFixedVariable">IsFixedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:IsValidError"><span class="baseclass">ROOT::Math::Minimizer::</span>IsValidError</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:MaxFunctionCalls"><span class="baseclass">ROOT::Math::Minimizer::</span>MaxFunctionCalls</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:MaxIterations"><span class="baseclass">ROOT::Math::Minimizer::</span>MaxIterations</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">double</span>*</td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:MinGradient"><span class="baseclass">ROOT::Math::Minimizer::</span>MinGradient</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:Minimize">Minimize</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:MinValue">MinValue</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:NCalls"><span class="baseclass">ROOT::Math::Minimizer::</span>NCalls</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:NDim">NDim</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:NFree">NFree</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:NIterations"><span class="baseclass">ROOT::Math::Minimizer::</span>NIterations</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:NPar">NPar</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGenFunction.html">IMultiGenFunction</a>*</td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:ObjFunction">ObjFunction</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__MinimizerOptions.html">MinimizerOptions</a></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Options"><span class="baseclass">ROOT::Math::Minimizer::</span>Options</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Precision"><span class="baseclass">ROOT::Math::Minimizer::</span>Precision</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:PrintLevel"><span class="baseclass">ROOT::Math::Minimizer::</span>PrintLevel</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:PrintResult">PrintResult</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:PrintResults"><span class="baseclass">ROOT::Math::Minimizer::</span>PrintResults</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:ProvidesError"><span class="baseclass">ROOT::Math::Minimizer::</span>ProvidesError</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:ReleaseVariable">ReleaseVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Scan"><span class="baseclass">ROOT::Math::Minimizer::</span>Scan</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">unsigned</span> <span class="keyword">int</span>&amp; nstep, <span class="keyword">double</span>* x, <span class="keyword">double</span>* y, <span class="keyword">double</span> xmin = 0, <span class="keyword">double</span> xmax = 0)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetDefaultOptions"><span class="baseclass">ROOT::Math::Minimizer::</span>SetDefaultOptions</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetErrorDef"><span class="baseclass">ROOT::Math::Minimizer::</span>SetErrorDef</a>(<span class="keyword">double</span> up)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetFixedVariable">SetFixedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">const</span> string&amp;, <span class="keyword">double</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetFunction">SetFunction</a>(<span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGenFunction.html">IMultiGenFunction</a>&amp; func)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetFunction@1">SetFunction</a>(<span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGradFunction.html">IMultiGradFunction</a>&amp; func)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetLimitedVariable">SetLimitedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">const</span> string&amp; name, <span class="keyword">double</span> val, <span class="keyword">double</span> step, <span class="keyword">double</span>, <span class="keyword">double</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetLowerLimitedVariable">SetLowerLimitedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">const</span> string&amp; name, <span class="keyword">double</span> val, <span class="keyword">double</span> step, <span class="keyword">double</span> lower)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetMaxFunctionCalls"><span class="baseclass">ROOT::Math::Minimizer::</span>SetMaxFunctionCalls</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> maxfcn)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetMaxIterations"><span class="baseclass">ROOT::Math::Minimizer::</span>SetMaxIterations</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> maxiter)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetOptions"><span class="baseclass">ROOT::Math::Minimizer::</span>SetOptions</a>(<span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__MinimizerOptions.html">MinimizerOptions</a>&amp; opt)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetPrecision"><span class="baseclass">ROOT::Math::Minimizer::</span>SetPrecision</a>(<span class="keyword">double</span> prec)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetPrintLevel"><span class="baseclass">ROOT::Math::Minimizer::</span>SetPrintLevel</a>(<span class="keyword">int</span> level)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetStrategy"><span class="baseclass">ROOT::Math::Minimizer::</span>SetStrategy</a>(<span class="keyword">int</span> strategyLevel)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetTolerance"><span class="baseclass">ROOT::Math::Minimizer::</span>SetTolerance</a>(<span class="keyword">double</span> tol)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetUpperLimitedVariable">SetUpperLimitedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">const</span> string&amp; name, <span class="keyword">double</span> val, <span class="keyword">double</span> step, <span class="keyword">double</span> upper)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetValidError"><span class="baseclass">ROOT::Math::Minimizer::</span>SetValidError</a>(<span class="keyword">bool</span> on)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetVariable">SetVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">const</span> string&amp; name, <span class="keyword">double</span> val, <span class="keyword">double</span> step)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:SetVariableInitialRange"><span class="baseclass">ROOT::Math::Minimizer::</span>SetVariableInitialRange</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">double</span>, <span class="keyword">double</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetVariableLimits">SetVariableLimits</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> lower, <span class="keyword">double</span> upper)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetVariableLowerLimit">SetVariableLowerLimit</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> lower)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetVariableStepSize">SetVariableStepSize</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> step)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetVariableUpperLimit">SetVariableUpperLimit</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> upper)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetVariableValue">SetVariableValue</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> val)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetVariableValues">SetVariableValues</a>(<span class="keyword">const</span> <span class="keyword">double</span>* x)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Status"><span class="baseclass">ROOT::Math::Minimizer::</span>Status</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">double</span>*</td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:StepSizes">StepSizes</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Strategy"><span class="baseclass">ROOT::Math::Minimizer::</span>Strategy</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:Tolerance"><span class="baseclass">ROOT::Math::Minimizer::</span>Tolerance</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__MinimTransformFunction.html">MinimTransformFunction</a>*</td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:TransformFunction">TransformFunction</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:VariableIndex">VariableIndex</a>(<span class="keyword">const</span> string&amp; name) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual string</td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:VariableName">VariableName</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">double</span>*</td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:X">X</a>() <span class="keyword">const</span></td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:CheckDimension">CheckDimension</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:CheckObjFunction">CheckObjFunction</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__MinimTransformFunction.html">MinimTransformFunction</a>*</td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:CreateTransformation">CreateTransformation</a>(vector&lt;<span class="keyword">double</span>&gt;&amp; startValues, <span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGradFunction.html">IMultiGradFunction</a>* func = 0)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetFinalValues">SetFinalValues</a>(<span class="keyword">const</span> <span class="keyword">double</span>* x)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:SetMinValue">SetMinValue</a>(<span class="keyword">double</span> val)</td></tr>
+
+</table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret"><a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__BasicMinimizer.html">BasicMinimizer</a></td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:BasicMinimizer@1">BasicMinimizer</a>(<span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__BasicMinimizer.html">BasicMinimizer</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__BasicMinimizer.html">BasicMinimizer</a>&amp;</td><td class="funcname"><a class="funcname" href="#ROOT__Math__BasicMinimizer:operator_">operator=</a>(<span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__BasicMinimizer.html">BasicMinimizer</a>&amp; rhs)</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="ROOT__Math__BasicMinimizer:Data_Members"></a>Data Members</h2>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="datainh"><td class="datatype"><a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__MinimizerOptions.html">MinimizerOptions</a></td><td class="dataname"><a href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:fOptions"><span class="baseclass">ROOT::Math::Minimizer::</span>fOptions</a></td><td class="datadesc">minimizer options</td></tr>
+<tr class="datainh"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:fStatus"><span class="baseclass">ROOT::Math::Minimizer::</span>fStatus</a></td><td class="datadesc">status of minimizer    </td></tr>
+<tr class="datainh"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a href="./ROOT__Math__Minimizer.html#ROOT__Math__Minimizer:fValidError"><span class="baseclass">ROOT::Math::Minimizer::</span>fValidError</a></td><td class="datadesc">flag to control if errors have been validated (Hesse has been run in case of Minuit)</td></tr>
+
+</table></div>
+<div class="access" id="datapriv"><b>private:</b>
+<table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype">map&lt;<span class="keyword">unsigned</span> <span class="keyword">int</span>,std::pair&lt;<span class="keyword">double</span>,<span class="keyword">double</span>&gt; &gt;</td><td class="dataname"><a name="ROOT__Math__BasicMinimizer:fBounds"></a>fBounds</td><td class="datadesc">map specifying the bound using as key the parameter index</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="dataname"><a name="ROOT__Math__BasicMinimizer:fDim"></a>fDim</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="ROOT__Math__BasicMinimizer:fMinVal"></a>fMinVal</td><td></td></tr>
+<tr class="data"><td class="datatype">vector&lt;std::string&gt;</td><td class="dataname"><a name="ROOT__Math__BasicMinimizer:fNames"></a>fNames</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGenFunction.html">IMultiGenFunction</a>*</td><td class="dataname"><a name="ROOT__Math__BasicMinimizer:fObjFunc"></a>fObjFunc</td><td></td></tr>
+<tr class="data"><td class="datatype">vector&lt;<span class="keyword">double</span>&gt;</td><td class="dataname"><a name="ROOT__Math__BasicMinimizer:fSteps"></a>fSteps</td><td></td></tr>
+<tr class="data"><td class="datatype">vector&lt;<span class="keyword">double</span>&gt;</td><td class="dataname"><a name="ROOT__Math__BasicMinimizer:fValues"></a>fValues</td><td></td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::EMinimVariableType&gt;</td><td class="dataname"><a name="ROOT__Math__BasicMinimizer:fVarTypes"></a>fVarTypes</td><td class="datadesc">vector specifyng the type of variables</td></tr>
+
+</table></div>
+</div>
+<h2><a id="ROOT__Math__BasicMinimizer:Class_Charts"></a>Class Charts</h2>
+<map name="MapROOT__Math__BasicMinimizer_Inh" id="MapROOT__Math__BasicMinimizer_Inh">
+<area shape="rect" id="node2" href="./ROOT__Math__Minimizer.html" title="ROOT::Math::Minimizer" alt="" coords="2,8,252,40"/>
+</map>
+<map name="MapROOT__Math__BasicMinimizer_InhMem" id="MapROOT__Math__BasicMinimizer_InhMem">
+<area shape="rect" id="clust11" href="./ROOT__Math__Minimizer.html" alt="" coords="16,47,237,65"/>
+<area shape="rect" id="clust12" href="./ROOT__Math__Minimizer.html" alt="" coords="171,65,237,385"/>
+<area shape="rect" id="clust13" href="./ROOT__Math__Minimizer.html" alt="" coords="93,65,160,417"/>
+<area shape="rect" id="clust14" href="./ROOT__Math__Minimizer.html" alt="" coords="16,65,83,417"/>
+<area shape="rect" id="clust10" href="./ROOT__Math__Minimizer.html" title="ROOT::Math::Minimizer" alt="" coords="16,16,237,417"/>
+</map>
+<map name="MapROOT__Math__BasicMinimizer_Lib" id="MapROOT__Math__BasicMinimizer_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="392,44,509,92"/>
+</map>
+<div class="tabs">
+<a id="imgROOT__Math__BasicMinimizer_Inh" class="tabsel" href="inh/ROOT__Math__BasicMinimizer_Inh.png" onclick="javascript:return SetImg('Charts','inh/ROOT__Math__BasicMinimizer_Inh.png');">Inheritance</a>
+<a id="imgROOT__Math__BasicMinimizer_InhMem" class="tab" href="inhmem/ROOT__Math__BasicMinimizer_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/ROOT__Math__BasicMinimizer_InhMem.png');">Inherited Members</a>
+<a id="imgROOT__Math__BasicMinimizer_Incl" class="tab" href="incl/ROOT__Math__BasicMinimizer_Incl.png" onclick="javascript:return SetImg('Charts','incl/ROOT__Math__BasicMinimizer_Incl.png');">Includes</a>
+<a id="imgROOT__Math__BasicMinimizer_Lib" class="tab" href="lib/ROOT__Math__BasicMinimizer_Lib.png" onclick="javascript:return SetImg('Charts','lib/ROOT__Math__BasicMinimizer_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapROOT__Math__BasicMinimizer_Inh" src="inh/ROOT__Math__BasicMinimizer_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ROOT__Math__BasicMinimizer:BasicMinimizer" href="src/ROOT__Math__BasicMinimizer.h.html#ZzuSBB">BasicMinimizer</a>()</span><br />
+<div class="funccomm"><pre>
+      Default constructor
+
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">virtual</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:_BasicMinimizer" href="src/ROOT__Math__BasicMinimizer.h.html#vA7wvB">~BasicMinimizer</a>()</span><br />
+<div class="funccomm"><pre>
+      Destructor
+
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ROOT__Math__BasicMinimizer:BasicMinimizer@1" href="src/ROOT__Math__BasicMinimizer.h.html#pbyEH">BasicMinimizer</a>(<span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__BasicMinimizer.html">BasicMinimizer</a>&amp; )</span><br />
+<div class="funccomm"><pre> usually copying is non trivial, so we make this unaccessible
+
+      Copy constructor
+
+</pre></div>
+
+<div class="code"><code class="inlinecode">{}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetFunction" href="src/ROOT__Math__BasicMinimizer.h.html#OBlJXD">SetFunction</a>(<span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGenFunction.html">IMultiGenFunction</a>&amp; func)</span><br />
+<div class="funccomm"><pre> set the function to minimize
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetFunction@1" href="src/ROOT__Math__BasicMinimizer.h.html#rON21D">SetFunction</a>(<span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGradFunction.html">IMultiGradFunction</a>&amp; func)</span><br />
+<div class="funccomm"><pre> set gradient the function to minimize
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetVariable" href="src/ROOT__Math__BasicMinimizer.h.html#J_d26">SetVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">const</span> string&amp; name, <span class="keyword">double</span> val, <span class="keyword">double</span> step)</span><br />
+<div class="funccomm"><pre> set free variable
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetLowerLimitedVariable" href="src/ROOT__Math__BasicMinimizer.h.html#tpnj1B">SetLowerLimitedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">const</span> string&amp; name, <span class="keyword">double</span> val, <span class="keyword">double</span> step, <span class="keyword">double</span> lower)</span><br />
+<div class="funccomm"><pre> set lower limit variable  (override if minimizer supports them )
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetUpperLimitedVariable" href="src/ROOT__Math__BasicMinimizer.h.html#LFWGoC">SetUpperLimitedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">const</span> string&amp; name, <span class="keyword">double</span> val, <span class="keyword">double</span> step, <span class="keyword">double</span> upper)</span><br />
+<div class="funccomm"><pre> set upper limit variable (override if minimizer supports them )
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetLimitedVariable" href="src/ROOT__Math__BasicMinimizer.h.html#QV8EID">SetLimitedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">const</span> string&amp; name, <span class="keyword">double</span> val, <span class="keyword">double</span> step, <span class="keyword">double</span> , <span class="keyword">double</span> )</span><br />
+<div class="funccomm"><pre> set upper/lower limited variable (override if minimizer supports them )
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetFixedVariable" href="src/ROOT__Math__BasicMinimizer.h.html#oZ.dR">SetFixedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> , <span class="keyword">const</span> string&amp; , <span class="keyword">double</span> )</span><br />
+<div class="funccomm"><pre> set fixed variable (override if minimizer supports them )
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetVariableValue" href="src/ROOT__Math__BasicMinimizer.h.html#KEKgUB">SetVariableValue</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> val)</span><br />
+<div class="funccomm"><pre> set the value of an existing variable
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetVariableValues" href="src/ROOT__Math__BasicMinimizer.h.html#nBa40">SetVariableValues</a>(<span class="keyword">const</span> <span class="keyword">double</span>* x)</span><br />
+<div class="funccomm"><pre> set the values of all existing variables (array must be dimensioned to the size of existing parameters)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetVariableStepSize" href="src/ROOT__Math__BasicMinimizer.h.html#XVGH1C">SetVariableStepSize</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> step)</span><br />
+<div class="funccomm"><pre> set the step size of an already existing variable
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetVariableLowerLimit" href="src/ROOT__Math__BasicMinimizer.h.html#wxQwEC">SetVariableLowerLimit</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> lower)</span><br />
+<div class="funccomm"><pre> set the lower-limit of an already existing variable
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetVariableUpperLimit" href="src/ROOT__Math__BasicMinimizer.h.html#cj.vsE">SetVariableUpperLimit</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> upper)</span><br />
+<div class="funccomm"><pre> set the upper-limit of an already existing variable
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetVariableLimits" href="src/ROOT__Math__BasicMinimizer.h.html#BlpY2E">SetVariableLimits</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <span class="keyword">double</span> lower, <span class="keyword">double</span> upper)</span><br />
+<div class="funccomm"><pre> set the limits of an already existing variable
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:FixVariable" href="src/ROOT__Math__BasicMinimizer.h.html#ALBcyE">FixVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar)</span><br />
+<div class="funccomm"><pre> fix an existing variable
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:ReleaseVariable" href="src/ROOT__Math__BasicMinimizer.h.html#zSE3vE">ReleaseVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar)</span><br />
+<div class="funccomm"><pre> release an existing variable
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:IsFixedVariable" href="src/ROOT__Math__BasicMinimizer.h.html#fjLPfE">IsFixedVariable</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar) const</span><br />
+<div class="funccomm"><pre> query if an existing variable is fixed (i.e. considered constant in the minimization)
+ note that by default all variables are not fixed
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:GetVariableSettings" href="src/ROOT__Math__BasicMinimizer.h.html#FLx.LD">GetVariableSettings</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar, <a href="./ROOT.html">ROOT</a>::Fit::ParameterSettings&amp; varObj) const</span><br />
+<div class="funccomm"><pre> get variable settings in a variable object (like <a href="./ROOT.html">ROOT</a>::Fit::ParamsSettings)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname">std::string <a class="funcname" name="ROOT__Math__BasicMinimizer:VariableName" href="src/ROOT__Math__BasicMinimizer.h.html#jGkPAE">VariableName</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> ivar) const</span><br />
+<div class="funccomm"><pre> get name of variables (override if minimizer support storing of variable names)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:VariableIndex" href="src/ROOT__Math__BasicMinimizer.h.html#MQKyjC">VariableIndex</a>(<span class="keyword">const</span> string&amp; name) const</span><br />
+<div class="funccomm"><pre> get index of variable given a variable given a name
+ return -1 if variable is not found
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:Minimize" href="src/ROOT__Math__BasicMinimizer.h.html#kmLkpB">Minimize</a>()</span><br />
+<div class="funccomm"><pre> method to perform the minimization
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:MinValue" href="src/ROOT__Math__BasicMinimizer.h.html#yoOBXC">MinValue</a>() const</span><br />
+<div class="funccomm"><pre> return minimum function value
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ROOT__Math__BasicMinimizer.html#ROOT__Math__BasicMinimizer:fMinVal" title="double ROOT::Math::BasicMinimizer::fMinVal">fMinVal</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">double</span> * <a class="funcname" name="ROOT__Math__BasicMinimizer:X" href="src/ROOT__Math__BasicMinimizer.h.html#XvuRnC">X</a>() const</span><br />
+<div class="funccomm"><pre> return  pointer to <a href="./ROOT__Math__BasicMinimizer.html#ROOT__Math__BasicMinimizer:X" title="const double* ROOT::Math::BasicMinimizer::X()">X</a> values at the minimum
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ROOT__Math__BasicMinimizer.html#ROOT__Math__BasicMinimizer:fValues" title="vector&lt;double&gt; ROOT::Math::BasicMinimizer::fValues">fValues</a>.front(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">unsigned</span> <span class="keyword">int</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:NDim" href="src/ROOT__Math__BasicMinimizer.h.html#aQbklD">NDim</a>() const</span><br />
+<div class="funccomm"><pre> number of dimensions
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ROOT__Math__BasicMinimizer.html#ROOT__Math__BasicMinimizer:fDim" title="unsigned int ROOT::Math::BasicMinimizer::fDim">fDim</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">unsigned</span> <span class="keyword">int</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:NFree" href="src/ROOT__Math__BasicMinimizer.h.html#fX.fKB">NFree</a>() const</span><br />
+<div class="funccomm"><pre> number of free variables (real dimension of the problem)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">unsigned</span> <span class="keyword">int</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:NPar" href="src/ROOT__Math__BasicMinimizer.h.html#MjheGE">NPar</a>() const</span><br />
+<div class="funccomm"><pre> total number of parameter defined
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ROOT__Math__BasicMinimizer.html#ROOT__Math__BasicMinimizer:fValues" title="vector&lt;double&gt; ROOT::Math::BasicMinimizer::fValues">fValues</a>.size(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGenFunction.html">IMultiGenFunction</a> * <a class="funcname" name="ROOT__Math__BasicMinimizer:ObjFunction" href="src/ROOT__Math__BasicMinimizer.h.html#Ju5u0">ObjFunction</a>() const</span><br />
+<div class="funccomm"><pre> return pointer to used objective function
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ROOT__Math__BasicMinimizer.html#ROOT__Math__BasicMinimizer:fObjFunc" title="const ROOT::Math::IMultiGenFunction* ROOT::Math::BasicMinimizer::fObjFunc">fObjFunc</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGradFunction.html">IMultiGradFunction</a> * <a class="funcname" name="ROOT__Math__BasicMinimizer:GradObjFunction" href="src/ROOT__Math__BasicMinimizer.h.html#GAeq2C">GradObjFunction</a>() const</span><br />
+<div class="funccomm"><pre> return pointer to used gradient object function  (NULL if gradient is not supported)
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:PrintResult" href="src/ROOT__Math__BasicMinimizer.h.html#lOi6SD">PrintResult</a>() const</span><br />
+<div class="funccomm"><pre> print result of minimization
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">double</span> * <a class="funcname" name="ROOT__Math__BasicMinimizer:StepSizes" href="src/ROOT__Math__BasicMinimizer.h.html#zlTRVC">StepSizes</a>() const</span><br />
+<div class="funccomm"><pre> accessor methods
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ROOT__Math__BasicMinimizer.html#ROOT__Math__BasicMinimizer:fSteps" title="vector&lt;double&gt; ROOT::Math::BasicMinimizer::fSteps">fSteps</a>.front(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:CheckDimension" href="src/ROOT__Math__BasicMinimizer.h.html#plhh9">CheckDimension</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:CheckObjFunction" href="src/ROOT__Math__BasicMinimizer.h.html#UtaJQD">CheckObjFunction</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">MinimTransformFunction * <a class="funcname" name="ROOT__Math__BasicMinimizer:CreateTransformation" href="src/ROOT__Math__BasicMinimizer.h.html#iPq1QD">CreateTransformation</a>(vector&lt;<span class="keyword">double</span>&gt;&amp; startValues, <span class="keyword">const</span> <a href="./ROOT.html">ROOT</a>::<a href="./ROOT__Math.html">Math</a>::<a href="./ROOT__Math__IMultiGradFunction.html">IMultiGradFunction</a>* func = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetFinalValues" href="src/ROOT__Math__BasicMinimizer.h.html#uQNsVE">SetFinalValues</a>(<span class="keyword">const</span> <span class="keyword">double</span>* x)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ROOT__Math__BasicMinimizer:SetMinValue" href="src/ROOT__Math__BasicMinimizer.h.html#FI021E">SetMinValue</a>(<span class="keyword">double</span> val)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./ROOT__Math__BasicMinimizer.html#ROOT__Math__BasicMinimizer:fMinVal" title="double ROOT::Math::BasicMinimizer::fMinVal">fMinVal</a> = val; }</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+<em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?L.+Moneta+Oct"> L. Moneta Oct 2012</a> </em><em>&raquo; Copyright   (c) 2006  LCG ROOT Math Team, CERN/PH-SFT                *</em><br />
+<em>&raquo; Last changed: root/mathmore:$Id$ </em><em>&raquo; Last generated: 2015-05-31 22:11</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>
