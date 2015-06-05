@@ -20,7 +20,7 @@ The strategy used by GRSISort is to unpack the MIDAS file and convert the inform
 
 Currently accepted flags for the midas sort:
   * __--suppress_error__,   suppresses errors from failed data parsing appearing in stdout
-  * __--log_error__,        sends errors from failed data parsing to file, will not send errors if supress error option is also used!
+  * __--log_errors__,        sends errors from failed data parsing to file, will not send errors if supress error option is also used!
   * __--no_waveforms__,     does not add the wave form stored for each event in the mid file to the fragment tree
   * __-q__,                quits the grsi environment after completing the midas sort
   * __--work_harder__,      inputting a `<macro>.C` file, runs that macro on the sorted file
