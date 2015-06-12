@@ -50,7 +50,18 @@ When sorting the fragment tree, you can read in a [calibration file](CalFiles) a
 ```c++
 grsisort -flags <midasfile>.mid <calibrationfile>.cal
 ```
-A sample calibration file can be found in the users director and is called *NewGrifCal.cal*
+A sample calibration file can be found in the users directory and is called *NewGrifCal.cal*
+
+##Displaying parameters of fragment tree
+You can list the parameters included in the fragment tree with:
+```c++
+FragmentTree->Print()
+```
+
+Alternatively, you view them in a graphical interface with:
+```c++
+FragmentTree->StartViewer()
+```
 
 ##Viewing histograms within `grsisort`
 After sorting the data and creating a fragment tree, you can view histograms by running the command:
