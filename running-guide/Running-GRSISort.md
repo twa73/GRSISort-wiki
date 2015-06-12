@@ -64,9 +64,9 @@ FragmentTree->StartViewer()
 ```
 
 ##Viewing histograms within `grsisort`
-After sorting the data and creating a fragment tree, you can view histograms by running the command:
+After sorting the data and creating a fragment tree, you can create histograms by running the command:
 ```c++
-FragmentTree->Draw("<variable> >> <histogramName>", "<cuts>", "<displayOptions>")
+FragmentTree->Draw("<variable> >> <histogramName>(<xbins>,<xmin>,<xmax>)", "<cuts>", "<displayOptions>")
 ```
 
 Here is an example that displays a 1D histogram of calibrated energy of all detectors:
