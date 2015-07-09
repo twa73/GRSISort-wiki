@@ -19,5 +19,44 @@ Once a calibration from a cal file is active, access to the various calibrations
 
 Finally, if you would like to create a new calibration file from a fragment tree you can run the command `TChannel::WriteCalFile("<calibrationfile>.cal")`.
 
-#### ODB #
+## Cal File Format #
+Calibration files are in a plain-text format that is easily modifiable. The labels are case-insensitive, but colons must be used to separate labels from values. Lines that begin with `//` are comments.
+
+The file is a listing of calibration parameters for individual mnemonics, like the listing below for the blue crystal in GRIFFIN clover 1:
+```
+GRG01BN00A	{
+Name:      GRG01BN00A
+Number:    1
+Address:   0x00000000
+Digitizer: 
+EngCoeff:  -0.743423	1.419230	
+Integration: 0
+ENGChi2:     0.000000
+EffCoeff:  
+EFFChi2:   0.000000
+TIMECoeff:  0.000000	271.279000	-0.739159	
+}
+```
+``Name`` sets the mnemonic for the data from the address listed with ``Address``. If this calibration file is read in while sorting a MIDAS file to a `FragmentTree`, `Number` will be the `ChannelNumber` assigned to this address in the `FragmentTree`.
+
+Beyond these three primary numbers, any additional lines will set calibration values for this channel.
+- `EngCoeff` sets the energy calibration coefficients, assuming a polynomial calibration from charge to energy. The first value is the zeroth-order coefficient (offset, set to `-0.743423` in the example above), the second is the first-order coefficient (slope, set to `1.419230` in the example above), etc.
+- `Integration` sets the integration parameter that is used in the energy calibration.
+- `TIMECoeff` or `Walk` sets the coefficients for the low-energy walk correction of the form t<sub>diff</sub> = a<sub>0</sub>+a<sub>1</sub>E<sup>a<sub>2</sub></sup>. In the example above, a<sub>0</sub> is 0, a<sub>1</sub> is 271.279, and a<sub>2</sub> is -0.739159.
+
+Other possible calibration parameters include:
+- `Number`
+- `Stream`
+- `Digitizer`
+- `EngChi2`
+- `CFDChi2`
+- `LEDChi2`
+- `TimeChi2`
+- `EffChi2`
+- `LEDCoeff`
+- `CFDCoeff`
+- `EffCoeff`
+- `FileInt`
+
+## ODB #
 Using **odbgains.C** on a cal file writes a bash script that will allows easy setting of the odb gains parameters for GRIFFIN.
