@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:04:51 2015            -->
+<!--   Date: Wed Aug  5 15:17:28 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -33,7 +33,7 @@
   <span class="keyword">public</span>:
     <a href="../GMarker.html">GMarker</a>():<a href="../GMarker.html#GMarker:x" title="int GMarker::x">x</a>(-1),y(-1),linex(0),liney(0),localx(0.0),localy(0.0) { }
     <a href="../GMarker.html">GMarker</a>(<span class="keyword">const</span> <a href="../GMarker.html">GMarker</a> &amp;m) { ((<a href="../GMarker.html">GMarker</a>&amp;)m).<a href="../GMarker.html#GMarker:Copy" title="void GMarker::Copy(TObject&amp; object)">Copy</a>(*<span class="keyword">this</span>); }
-    ~GMarker() { <span class="keyword">if</span>(linex) linex-&gt;<a href="../TCanvas.html#TCanvas:Delete" title="void TCanvas::Delete(Option_t* =&quot;&quot;)">Delete</a>(); <span class="keyword">if</span>(liney) liney-&gt;<a href="../TCanvas.html#TCanvas:Delete" title="void TCanvas::Delete(Option_t* =&quot;&quot;)">Delete</a>(); }
+    <span class="keyword">virtual</span> ~GMarker() { <span class="keyword">if</span>(linex) linex-&gt;<a href="../TCanvas.html#TCanvas:Delete" title="void TCanvas::Delete(Option_t* =&quot;&quot;)">Delete</a>(); <span class="keyword">if</span>(liney) liney-&gt;<a href="../TCanvas.html#TCanvas:Delete" title="void TCanvas::Delete(Option_t* =&quot;&quot;)">Delete</a>(); }
     <span class="keyword">int</span> x;
     <span class="keyword">int</span> y;
     <span class="keyword">double</span> localx;
@@ -135,7 +135,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:04 </em><em>&raquo; Last generated: 2015-06-01 00:04</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:17 </em><em>&raquo; Last generated: 2015-08-05 15:17</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

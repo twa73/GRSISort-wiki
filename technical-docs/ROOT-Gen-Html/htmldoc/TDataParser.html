@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:07:24 2015            -->
+<!--   Date: Wed Aug  5 15:19:26 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -195,8 +195,8 @@ be implemented.
 <div class="funccomm"><pre>Sets the Timestamp of a Tigress Event
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TDataParser:GriffinDataToFragment" href="src/TDataParser.cxx.html#dI7xhE">GriffinDataToFragment</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>* data, <span class="keyword">int</span> size, <span class="keyword">int</span> bank, <span class="keyword">unsigned</span> <span class="keyword">int</span> midasserialnumber = 0, <a href="./ListOfTypes.html#time_t">time_t</a> midastime = 0)</span><br />
-<div class="funccomm"><pre>Converts a Griffin flavoured MIDAS file into a <a href="./TFragment.html">TFragment</a>
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TDataParser:GriffinDataToFragment" href="src/TDataParser.cxx.html#VS_xhE">GriffinDataToFragment</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a>* data, <span class="keyword">int</span> size, <span class="keyword">int</span> bank, <span class="keyword">unsigned</span> <span class="keyword">int</span> midasserialnumber = 0, <a href="./ListOfTypes.html#time_t">time_t</a> midastime = 0)</span><br />
+<div class="funccomm"><pre>Converts a Griffin flavoured MIDAS file into a <a href="./TFragment.html">TFragment</a> and returns the number of words processed (or the negative index of the word it failed on)
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TDataParser:SetGRIFHeader" href="src/TDataParser.cxx.html#fbEbPD">SetGRIFHeader</a>(<a href="./ListOfTypes.html#uint32_t">uint32_t</a> , <a href="./TFragment.html">TFragment</a>* , <span class="keyword">int</span> )</span><br />
@@ -277,7 +277,7 @@ EventFrag-&gt;MidasId = midasserialnumber;
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Jun  1 00:07:27 2015 </em><em>&raquo; Last generated: 2015-06-01 00:07</em><br />
+<em>&raquo; Last changed: Wed Aug  5 15:19:27 2015 </em><em>&raquo; Last generated: 2015-08-05 15:19</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

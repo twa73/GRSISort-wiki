@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:07:09 2015            -->
+<!--   Date: Wed Aug  5 15:19:16 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -95,7 +95,7 @@
     <span class="keyword">bool</span>             <a href="../TChannel.html#TChannel:usecalfileint" title="bool TChannel::usecalfileint">usecalfileint</a>;
 
 
-    std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TChannel.html#TChannel:ENGCoefficients" title="vector&lt;double&gt; TChannel::ENGCoefficients">ENGCoefficients</a>;  <span class="comment">//Energy calibration coeffs (low to high order)</span>
+    std::vector&lt;<a href="../ListOfTypes.html#Float_t">Float_t</a>&gt; <a href="../TChannel.html#TChannel:ENGCoefficients" title="vector&lt;Float_t&gt; TChannel::ENGCoefficients">ENGCoefficients</a>;  <span class="comment">//Energy calibration coeffs (low to high order)</span>
     <span class="keyword">double</span> <a href="../TChannel.html#TChannel:ENGChi2" title="double TChannel::ENGChi2">ENGChi2</a>;                       <span class="comment">//Chi2 of the energy calibration</span>
     std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TChannel.html#TChannel:CFDCoefficients" title="vector&lt;double&gt; TChannel::CFDCoefficients">CFDCoefficients</a>;  <span class="comment">//CFD calibration coeffs (low to high order)</span>
     <span class="keyword">double</span> <a href="../TChannel.html#TChannel:CFDChi2" title="double TChannel::CFDChi2">CFDChi2</a>;                       <span class="comment">//Chi2 of the CFD calibration</span>
@@ -113,7 +113,7 @@
 	 <span class="keyword">void</span> <a href="../TChannel.html#TChannel:OverWriteChannel" title="void TChannel::OverWriteChannel(TChannel* )">OverWriteChannel</a>(<a href="../TChannel.html">TChannel</a>*);
 	 <span class="keyword">void</span> <a href="../TChannel.html#TChannel:AppendChannel" title="void TChannel::AppendChannel(TChannel* )">AppendChannel</a>(<a href="../TChannel.html">TChannel</a>*);
 
-<a name="gv4qCE"></a>    <span class="keyword">void</span> <a href="../TChannel.html#TChannel:SetENGCoefficients" title="void TChannel::SetENGCoefficients(vector&lt;double&gt; tmp)">SetENGCoefficients</a>(std::vector&lt;<span class="keyword">double</span>&gt; tmp) { <a href="../TChannel.html#TChannel:ENGCoefficients" title="vector&lt;double&gt; TChannel::ENGCoefficients">ENGCoefficients</a> = tmp; }
+<a name="Viq0TC"></a>    <span class="keyword">void</span> <a href="../TChannel.html#TChannel:SetENGCoefficients" title="void TChannel::SetENGCoefficients(vector&lt;Float_t&gt; tmp)">SetENGCoefficients</a>(std::vector&lt;<a href="../ListOfTypes.html#Float_t">Float_t</a>&gt; tmp) { <a href="../TChannel.html#TChannel:ENGCoefficients" title="vector&lt;Float_t&gt; TChannel::ENGCoefficients">ENGCoefficients</a> = tmp; }
 <a name="JIgr6D"></a>    <span class="keyword">void</span> <a href="../TChannel.html#TChannel:SetCFDCoefficients" title="void TChannel::SetCFDCoefficients(vector&lt;double&gt; tmp)">SetCFDCoefficients</a>(std::vector&lt;<span class="keyword">double</span>&gt; tmp) { <a href="../TChannel.html#TChannel:CFDCoefficients" title="vector&lt;double&gt; TChannel::CFDCoefficients">CFDCoefficients</a> = tmp; }
 <a name="hq9x8D"></a>    <span class="keyword">void</span> <a href="../TChannel.html#TChannel:SetLEDCoefficients" title="void TChannel::SetLEDCoefficients(vector&lt;double&gt; tmp)">SetLEDCoefficients</a>(std::vector&lt;<span class="keyword">double</span>&gt; tmp) { <a href="../TChannel.html#TChannel:LEDCoefficients" title="vector&lt;double&gt; TChannel::LEDCoefficients">LEDCoefficients</a> = tmp; }
 <a name="v5Pem"></a>    <span class="keyword">void</span> <a href="../TChannel.html#TChannel:SetTIMECoefficients" title="void TChannel::SetTIMECoefficients(vector&lt;double&gt; tmp)">SetTIMECoefficients</a>(std::vector&lt;<span class="keyword">double</span>&gt; tmp){ <a href="../TChannel.html#TChannel:TIMECoefficients" title="vector&lt;double&gt; TChannel::TIMECoefficients">TIMECoefficients</a> = tmp; }
@@ -151,13 +151,13 @@
 <a name="Rj1e0B"></a>    <span class="keyword">void</span> <a href="../TChannel.html#TChannel:SetUseCalFileIntegration" title="void TChannel::SetUseCalFileIntegration(bool flag=true)">SetUseCalFileIntegration</a>(<span class="keyword">bool</span> flag=<span class="keyword">true</span>) {<a href="../TChannel.html#TChannel:usecalfileint" title="bool TChannel::usecalfileint">usecalfileint</a>=flag;}
 <a name="CwwnXE"></a>    <span class="keyword">bool</span> <a href="../TChannel.html#TChannel:UseCalFileIntegration" title="bool TChannel::UseCalFileIntegration()">UseCalFileIntegration</a>() { <span class="keyword">return</span> <a href="../TChannel.html#TChannel:usecalfileint" title="bool TChannel::usecalfileint">usecalfileint</a>; }
 
-<a name="VtyWNE"></a>    std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TChannel.html#TChannel:GetENGCoeff" title="vector&lt;double&gt; TChannel::GetENGCoeff()">GetENGCoeff</a>()  { <span class="keyword">return</span> <a href="../TChannel.html#TChannel:ENGCoefficients" title="vector&lt;double&gt; TChannel::ENGCoefficients">ENGCoefficients</a>;}
+<a name="w9ND5E"></a>    std::vector&lt;<a href="../ListOfTypes.html#Float_t">Float_t</a>&gt; <a href="../TChannel.html#TChannel:GetENGCoeff" title="vector&lt;Float_t&gt; TChannel::GetENGCoeff()">GetENGCoeff</a>() { <span class="keyword">return</span> <a href="../TChannel.html#TChannel:ENGCoefficients" title="vector&lt;Float_t&gt; TChannel::ENGCoefficients">ENGCoefficients</a>;}
 <a name="xOo0vB"></a>    std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TChannel.html#TChannel:GetCFDCoeff" title="vector&lt;double&gt; TChannel::GetCFDCoeff()">GetCFDCoeff</a>()  { <span class="keyword">return</span> <a href="../TChannel.html#TChannel:CFDCoefficients" title="vector&lt;double&gt; TChannel::CFDCoefficients">CFDCoefficients</a>;}
 <a name="N73qCC"></a>    std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TChannel.html#TChannel:GetLEDCoeff" title="vector&lt;double&gt; TChannel::GetLEDCoeff()">GetLEDCoeff</a>()  { <span class="keyword">return</span> <a href="../TChannel.html#TChannel:LEDCoefficients" title="vector&lt;double&gt; TChannel::LEDCoefficients">LEDCoefficients</a>;}
 <a name="bnGW1D"></a>    std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TChannel.html#TChannel:GetTIMECoeff" title="vector&lt;double&gt; TChannel::GetTIMECoeff()">GetTIMECoeff</a>() { <span class="keyword">return</span> <a href="../TChannel.html#TChannel:TIMECoefficients" title="vector&lt;double&gt; TChannel::TIMECoefficients">TIMECoefficients</a>;}
 <a name="pAf_vB"></a>    std::vector&lt;<span class="keyword">double</span>&gt; <a href="../TChannel.html#TChannel:GetEFFCoeff" title="vector&lt;double&gt; TChannel::GetEFFCoeff()">GetEFFCoeff</a>()  { <span class="keyword">return</span> <a href="../TChannel.html#TChannel:EFFCoefficients" title="vector&lt;double&gt; TChannel::EFFCoefficients">EFFCoefficients</a>;}
 
-<a name="YHfEKE"></a>    <span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TChannel.html#TChannel:AddENGCoefficient" title="void TChannel::AddENGCoefficient(double temp)">AddENGCoefficient</a>(<span class="keyword">double</span> temp)  { <a href="../TChannel.html#TChannel:ENGCoefficients" title="vector&lt;double&gt; TChannel::ENGCoefficients">ENGCoefficients</a>.push_back(temp); }
+<a name="sKK.hC"></a>    <span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TChannel.html#TChannel:AddENGCoefficient" title="void TChannel::AddENGCoefficient(Float_t temp)">AddENGCoefficient</a>(<a href="../ListOfTypes.html#Float_t">Float_t</a> temp)  { <a href="../TChannel.html#TChannel:ENGCoefficients" title="vector&lt;Float_t&gt; TChannel::ENGCoefficients">ENGCoefficients</a>.push_back(temp); }
 <a name="E0ofRE"></a>    <span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TChannel.html#TChannel:AddCFDCoefficient" title="void TChannel::AddCFDCoefficient(double temp)">AddCFDCoefficient</a>(<span class="keyword">double</span> temp)  { <a href="../TChannel.html#TChannel:CFDCoefficients" title="vector&lt;double&gt; TChannel::CFDCoefficients">CFDCoefficients</a>.push_back(temp); }
 <a name="H0nfBE"></a>    <span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TChannel.html#TChannel:AddLEDCoefficient" title="void TChannel::AddLEDCoefficient(double temp)">AddLEDCoefficient</a>(<span class="keyword">double</span> temp)  { <a href="../TChannel.html#TChannel:LEDCoefficients" title="vector&lt;double&gt; TChannel::LEDCoefficients">LEDCoefficients</a>.push_back(temp); }
 <a name="unNGs"></a>    <span class="keyword">inline</span> <span class="keyword">void</span> <a href="../TChannel.html#TChannel:AddTIMECoefficient" title="void TChannel::AddTIMECoefficient(double temp)">AddTIMECoefficient</a>(<span class="keyword">double</span> temp) { <a href="../TChannel.html#TChannel:TIMECoefficients" title="vector&lt;double&gt; TChannel::TIMECoefficients">TIMECoefficients</a>.push_back(temp);}
@@ -172,8 +172,8 @@
 
     <span class="comment">//<a href="../ListOfTypes.html#void">void</a> CalibrateFragment(<a href="../TFragment.html">TFragment</a>*);</span>
 
-    <span class="keyword">double</span> <a href="../TChannel.html#TChannel:CalibrateENG" title="double TChannel::CalibrateENG(double ) or overloads">CalibrateENG</a>(<span class="keyword">double</span>);
-    <span class="keyword">double</span> <a href="../TChannel.html#TChannel:CalibrateENG" title="double TChannel::CalibrateENG(double ) or overloads">CalibrateENG</a>(<span class="keyword">int</span>,<span class="keyword">int</span> <a href="../TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a>=0);
+    <a href="../ListOfTypes.html#Float_t">Float_t</a> <a href="../TChannel.html#TChannel:CalibrateENG" title="Float_t TChannel::CalibrateENG(Float_t ) or overloads">CalibrateENG</a>(<a href="../ListOfTypes.html#Float_t">Float_t</a>);
+    <a href="../ListOfTypes.html#Float_t">Float_t</a> <a href="../TChannel.html#TChannel:CalibrateENG" title="Float_t TChannel::CalibrateENG(Float_t ) or overloads">CalibrateENG</a>(<span class="keyword">int</span>,<span class="keyword">int</span> <a href="../TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a>=0);
     
     <span class="keyword">double</span> <a href="../TChannel.html#TChannel:CalibrateCFD" title="double TChannel::CalibrateCFD(double ) or overloads">CalibrateCFD</a>(<span class="keyword">double</span>);
     <span class="keyword">double</span> <a href="../TChannel.html#TChannel:CalibrateCFD" title="double TChannel::CalibrateCFD(double ) or overloads">CalibrateCFD</a>(<span class="keyword">int</span>);
@@ -229,7 +229,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:07 </em><em>&raquo; Last generated: 2015-06-01 00:07</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:19 </em><em>&raquo; Last generated: 2015-08-05 15:19</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

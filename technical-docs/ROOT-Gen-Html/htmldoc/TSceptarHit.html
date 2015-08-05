@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:11:08 2015            -->
+<!--   Date: Wed Aug  5 15:22:19 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -58,7 +58,15 @@ return false;}
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="TSceptarHit:description"></a>class TSceptarHit: public <a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a></h1>
 <div class="classdescr">
-<h4>This class is also known as (typedefs to this class)</h4>vector&lt;<a href="./TSceptarHit.html">TSceptarHit</a>,allocator&lt;<a href="./TSceptarHit.html">TSceptarHit</a>&gt; &gt;::value_type</div>
+<pre>
+
+<a href="./TSceptarHit.html">TSceptarHit</a>
+
+ This is class that contains the information about a sceptar
+hit. This class is used to find energy, time, etc.
+
+
+</pre><h4>This class is also known as (typedefs to this class)</h4>vector&lt;<a href="./TSceptarHit.html">TSceptarHit</a>,allocator&lt;<a href="./TSceptarHit.html">TSceptarHit</a>&gt; &gt;::value_type</div>
 </div></div>
 
 <div id="functions">
@@ -69,8 +77,13 @@ return false;}
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TSceptarHit:TSceptarHit@1">TSceptarHit</a>(<span class="keyword">const</span> <a href="./TSceptarHit.html">TSceptarHit</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TSceptarHit:_TSceptarHit">~TSceptarHit</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TSceptarHit:AnalyzeWaveform">AnalyzeWaveform</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSceptarHit:CalculateCfd">CalculateCfd</a>(<span class="keyword">double</span> attenuation, <span class="keyword">int</span> delay, <span class="keyword">int</span> halfsmoothingwindow, <span class="keyword">int</span> interpolation_steps)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSceptarHit:CalculateCfdAndMonitor">CalculateCfdAndMonitor</a>(<span class="keyword">double</span> attenuation, <span class="keyword">int</span> delay, <span class="keyword">int</span> halfsmoothingwindow, <span class="keyword">int</span> interpolation_steps, vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;&amp; monitor)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="funcname"><a class="funcname" href="#TSceptarHit:CalculateCfdMonitor">CalculateCfdMonitor</a>(<span class="keyword">double</span> attenuation, <span class="keyword">int</span> delay, <span class="keyword">int</span> halfsmoothingwindow)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="funcname"><a class="funcname" href="#TSceptarHit:CalculateSmoothedWaveform">CalculateSmoothedWaveform</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> halfsmoothingwindow)</td></tr>
 <tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TSceptarHit:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSceptarHit:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
@@ -78,6 +91,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Compare"><span class="baseclass">TObject::</span>Compare</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:CompareEnergy"><span class="baseclass">TGRSIDetectorHit::</span>CompareEnergy</a>(<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>* lhs, <a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>* rhs)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSceptarHit:Copy">Copy</a>(<a href="./TSceptarHit.html">TSceptarHit</a>&amp;) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:CopyFragment"><span class="baseclass">TGRSIDetectorHit::</span>CopyFragment</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp;)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DistancetoPrimitive"><span class="baseclass">TObject::</span>DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Draw"><span class="baseclass">TObject::</span>Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
@@ -92,13 +106,15 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetAddress"><span class="baseclass">TGRSIDetectorHit::</span>GetAddress</a>() <span class="keyword">const</span></td></tr>
-<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetCfd"><span class="baseclass">TGRSIDetectorHit::</span>GetCfd</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetCfd"><span class="baseclass">TGRSIDetectorHit::</span>GetCfd</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./TChannel.html">TChannel</a>*</td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetChannel"><span class="baseclass">TGRSIDetectorHit::</span>GetChannel</a>() <span class="keyword">const</span></td></tr>
-<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetCharge"><span class="baseclass">TGRSIDetectorHit::</span>GetCharge</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetCharge"><span class="baseclass">TGRSIDetectorHit::</span>GetCharge</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetDetector"><span class="baseclass">TGRSIDetectorHit::</span>GetDetector</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetDetector@1"><span class="baseclass">TGRSIDetectorHit::</span>GetDetector</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetEnergy"><span class="baseclass">TGRSIDetectorHit::</span>GetEnergy</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetEnergy@1"><span class="baseclass">TGRSIDetectorHit::</span>GetEnergy</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TSceptarHit:GetFilterPattern">GetFilterPattern</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetName"><span class="baseclass">TObject::</span>GetName</a>() <span class="keyword">const</span></td></tr>
@@ -106,11 +122,11 @@ return false;}
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TVector3.html">TVector3</a></td><td class="funcname"><a class="funcname" href="#TSceptarHit:GetPosition">GetPosition</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> dist = 0) <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TSceptarHit:GetTime">GetTime</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetTime"><span class="baseclass">TGRSIDetectorHit::</span>GetTime</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetTimeStamp"><span class="baseclass">TGRSIDetectorHit::</span>GetTimeStamp</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="funcname"><a class="funcname" href="#TSceptarHit:GetWaveform">GetWaveform</a>()</td></tr>
-<tr class="funcinh"><td class="funcret">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetWaveForm"><span class="baseclass">TGRSIDetectorHit::</span>GetWaveForm</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:GetWaveform"><span class="baseclass">TGRSIDetectorHit::</span>GetWaveform</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(<a href="./TTimer.html">TTimer</a>* timer)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TSceptarHit:InFilter">InFilter</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a>)</td></tr>
@@ -149,16 +165,16 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetAddress"><span class="baseclass">TGRSIDetectorHit::</span>SetAddress</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#UInt_t">UInt_t</a>&amp; temp_address)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetCfd"><span class="baseclass">TGRSIDetectorHit::</span>SetCfd</a>(<span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">int</span>&amp; x)</td></tr>
-<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetCharge"><span class="baseclass">TGRSIDetectorHit::</span>SetCharge</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#UInt_t">UInt_t</a>&amp; temp_charge)</td></tr>
-<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetDetector"><span class="baseclass">TGRSIDetectorHit::</span>SetDetector</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetCfd"><span class="baseclass">TGRSIDetectorHit::</span>SetCfd</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; x)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetCharge"><span class="baseclass">TGRSIDetectorHit::</span>SetCharge</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Float_t">Float_t</a>&amp; temp_charge)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetDetector"><span class="baseclass">TGRSIDetectorHit::</span>SetDetector</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> det)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
-<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetEnergy"><span class="baseclass">TGRSIDetectorHit::</span>SetEnergy</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetEnergy"><span class="baseclass">TGRSIDetectorHit::</span>SetEnergy</a>(<span class="keyword">double</span> en)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSceptarHit:SetFilterPattern">SetFilterPattern</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetPosition"><span class="baseclass">TGRSIDetectorHit::</span>SetPosition</a>(<span class="keyword">const</span> <a href="./TVector3.html">TVector3</a>&amp; temp_pos)</td></tr>
-<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetPosition@1"><span class="baseclass">TGRSIDetectorHit::</span>SetPosition</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> temp_pos = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TVector3.html">TVector3</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetPosition@1"><span class="baseclass">TGRSIDetectorHit::</span>SetPosition</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> temp_pos = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetTime"><span class="baseclass">TGRSIDetectorHit::</span>SetTime</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#ULong_t">ULong_t</a>&amp; x)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSceptarHit:SetWaveform">SetWaveform</a>(vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt; x)</td></tr>
@@ -177,7 +193,13 @@ return false;}
 <div class="access" id="funcprot"><b>protected:</b>
 <table class="func" id="tabfuncprot" cellspacing="0">
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:IsCrystalSet"><span class="baseclass">TGRSIDetectorHit::</span>IsCrystalSet</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:IsDetSet"><span class="baseclass">TGRSIDetectorHit::</span>IsDetSet</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:IsEnergySet"><span class="baseclass">TGRSIDetectorHit::</span>IsEnergySet</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:IsPosSet"><span class="baseclass">TGRSIDetectorHit::</span>IsPosSet</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:IsSubDetSet"><span class="baseclass">TGRSIDetectorHit::</span>IsSubDetSet</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetFlag"><span class="baseclass">TGRSIDetectorHit::</span>SetFlag</a>(<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>::Ebitflag, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
 
 </table></div>
 </div>
@@ -186,6 +208,12 @@ return false;}
 <h2><a name="TSceptarHit:Data_Members"></a>Data Members</h2>
 <div class="access" id="enumpubl"><b>public:</b>
 <table class="data" id="tabenumpubl" cellspacing="0">
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TGRSIDetectorHit::</span>Ebitflag { </td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:kIsDetSet">kIsDetSet</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:kIsEnergySet">kIsEnergySet</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:kIsPositionSet">kIsPositionSet</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:kIsSubDetSet">kIsSubDetSet</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:kIsAllSet">kIsAllSet</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
 <tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span>EStatusBits { </td><td class="dataname"><a href="./TObject.html#TObject:kCanDelete">kCanDelete</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kMustCleanup">kMustCleanup</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kObjInCanvas">kObjInCanvas</a></td><td></td></tr>
@@ -208,22 +236,19 @@ return false;}
 <div class="access" id="dataprot"><b>protected:</b>
 <table class="data" id="tabdataprot" cellspacing="0">
 <tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:address"><span class="baseclass">TGRSIDetectorHit::</span>address</a></td><td class="datadesc">address of the the channel in the DAQ.</td></tr>
-<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:cfd"><span class="baseclass">TGRSIDetectorHit::</span>cfd</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:charge"><span class="baseclass">TGRSIDetectorHit::</span>charge</a></td><td class="datadesc">charge collected from the hit</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:cfd"><span class="baseclass">TGRSIDetectorHit::</span>cfd</a></td><td class="datadesc">CFD time of the Hit</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:charge"><span class="baseclass">TGRSIDetectorHit::</span>charge</a></td><td class="datadesc">charge collected from the hit</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:detector"><span class="baseclass">TGRSIDetectorHit::</span>detector</a></td><td class="datadesc">! Detector Number</td></tr>
 <tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:energy"><span class="baseclass">TGRSIDetectorHit::</span>energy</a></td><td class="datadesc">! Energy of the Hit.</td></tr>
-<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:is_det_set"><span class="baseclass">TGRSIDetectorHit::</span>is_det_set</a></td><td class="datadesc">!</td></tr>
-<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:is_energy_set"><span class="baseclass">TGRSIDetectorHit::</span>is_energy_set</a></td><td class="datadesc">!</td></tr>
-<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:is_pos_set"><span class="baseclass">TGRSIDetectorHit::</span>is_pos_set</a></td><td class="datadesc">!</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#UChar_t">UChar_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:fbitflags"><span class="baseclass">TGRSIDetectorHit::</span>fbitflags</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype"><a href="./TVector3.html">TVector3</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:position"><span class="baseclass">TGRSIDetectorHit::</span>position</a></td><td class="datadesc">! Position of hit detector.</td></tr>
-<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:time"><span class="baseclass">TGRSIDetectorHit::</span>time</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:waveform"><span class="baseclass">TGRSIDetectorHit::</span>waveform</a></td><td class="datadesc">!</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:time"><span class="baseclass">TGRSIDetectorHit::</span>time</a></td><td class="datadesc">Timsstamp given to hit</td></tr>
+<tr class="datainh"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="dataname"><a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:waveform"><span class="baseclass">TGRSIDetectorHit::</span>waveform</a></td><td></td></tr>
 
 </table></div>
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TSceptarHit:filter"></a>filter</td><td></td></tr>
-<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="dataname"><a name="TSceptarHit:waveform"></a>waveform</td><td class="datadesc">!</td></tr>
 
 </table></div>
 </div>
@@ -233,14 +258,14 @@ return false;}
 <area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="3,9,186,43"/>
 </map>
 <map name="MapTSceptarHit_InhMem" id="MapTSceptarHit_InhMem">
-<area shape="rect" id="clust8" href="./TGRSIDetectorHit.html" alt="" coords="403,47,469,113"/>
-<area shape="rect" id="clust9" href="./TGRSIDetectorHit.html" alt="" coords="325,47,392,113"/>
-<area shape="rect" id="clust10" href="./TGRSIDetectorHit.html" alt="" coords="248,47,315,113"/>
-<area shape="rect" id="clust11" href="./TGRSIDetectorHit.html" alt="" coords="435,113,437,116"/>
-<area shape="rect" id="clust12" href="./TGRSIDetectorHit.html" alt="" coords="403,116,469,308"/>
-<area shape="rect" id="clust13" href="./TGRSIDetectorHit.html" alt="" coords="325,116,392,308"/>
-<area shape="rect" id="clust14" href="./TGRSIDetectorHit.html" alt="" coords="248,116,315,308"/>
-<area shape="rect" id="clust7" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="248,16,469,308"/>
+<area shape="rect" id="clust8" href="./TGRSIDetectorHit.html" alt="" coords="403,47,469,129"/>
+<area shape="rect" id="clust9" href="./TGRSIDetectorHit.html" alt="" coords="325,47,392,129"/>
+<area shape="rect" id="clust10" href="./TGRSIDetectorHit.html" alt="" coords="248,47,315,129"/>
+<area shape="rect" id="clust11" href="./TGRSIDetectorHit.html" alt="" coords="435,129,437,132"/>
+<area shape="rect" id="clust12" href="./TGRSIDetectorHit.html" alt="" coords="403,132,469,356"/>
+<area shape="rect" id="clust13" href="./TGRSIDetectorHit.html" alt="" coords="325,129,392,369"/>
+<area shape="rect" id="clust14" href="./TGRSIDetectorHit.html" alt="" coords="248,129,315,369"/>
+<area shape="rect" id="clust7" href="./TGRSIDetectorHit.html" title="TGRSIDetectorHit" alt="" coords="248,16,469,369"/>
 <area shape="rect" id="clust17" href="./TObject.html" alt="" coords="171,47,237,145"/>
 <area shape="rect" id="clust18" href="./TObject.html" alt="" coords="93,47,160,161"/>
 <area shape="rect" id="clust19" href="./TObject.html" alt="" coords="16,47,83,161"/>
@@ -262,8 +287,7 @@ return false;}
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTSceptarHit_Inh" src="inh/TSceptarHit_Inh.png"/></div>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSceptarHit:TSceptarHit" href="src/TSceptarHit.cxx.html#ZmXoUE">TSceptarHit</a>()</span><br />
-<div class="funccomm"><pre><a href="./TSceptarHit.html#TSceptarHit:Class" title="TClass* TSceptarHit::Class()">Class</a>()-><a href="./TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<a href="./ListOfTypes.html#bool">true</a>);
-<a href="./TSceptarHit.html#TSceptarHit:Class" title="TClass* TSceptarHit::Class()">Class</a>()-><a href="./TClass.html#TClass:AddRule" title="Bool_t TClass::AddRule(const char* rule)">AddRule</a>(<span class="string">"TSceptarHit waveform attributes=NotOwner"</span>);
+<div class="funccomm"><pre>Default Constructor
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSceptarHit:_TSceptarHit" href="src/TSceptarHit.cxx.html#XBx3MC">~TSceptarHit</a>()</span><br />
@@ -272,47 +296,72 @@ return false;}
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSceptarHit:TSceptarHit@1" href="src/TSceptarHit.cxx.html#ltud9">TSceptarHit</a>(<span class="keyword">const</span> <a href="./TSceptarHit.html">TSceptarHit</a>&amp; )</span><br />
+<div class="funccomm"><pre><a href="./TSceptarHit.html#TSceptarHit:Copy" title="void TSceptarHit::Copy(TSceptarHit&amp; )">Copy</a> Constructor
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSceptarHit:Copy" href="src/TSceptarHit.cxx.html#bn_C1C">Copy</a>(<a href="./TSceptarHit.html">TSceptarHit</a>&amp; ) const</span><br />
+<div class="funccomm"><pre>Copies a <a href="./TSceptarHit.html">TSceptarHit</a>
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TVector3.html">TVector3</a> <a class="funcname" name="TSceptarHit:GetPosition" href="src/TSceptarHit.cxx.html#qN4XpD">GetPosition</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> dist = 0) const</span><br />
+<div class="funccomm"><pre>Gets the position of the current <a href="./TSceptarHit.html">TSceptarHit</a>
+This position returns is of the center of the paddle
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TSceptarHit:InFilter" href="src/TSceptarHit.cxx.html#Rh6I_C">InFilter</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> )</span><br />
 <div class="funccomm"><pre> check if the desired <a href="./TSceptarHit.html#TSceptarHit:filter" title="Int_t TSceptarHit::filter">filter</a> is in wanted <a href="./TSceptarHit.html#TSceptarHit:filter" title="Int_t TSceptarHit::filter">filter</a>;
  return the answer;
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TSceptarHit:GetTime" href="src/TSceptarHit.cxx.html#VVnrB">GetTime</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
-</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSceptarHit:Clear" href="src/TSceptarHit.cxx.html#agaIkD">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre>Clears the SceptarHit
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSceptarHit:Print" href="src/TSceptarHit.cxx.html#H.lVJE">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
+<div class="funccomm"><pre>Prints the SceptarHit. Returns:
+Detector
+Energy
+Time
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TSceptarHit:AnalyzeWaveform" href="src/TSceptarHit.cxx.html#NUOApC">AnalyzeWaveform</a>()</span><br />
+<div class="funccomm"><pre>Calculates the cfd time from the waveform
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSceptarHit:CalculateCfd" href="src/TSceptarHit.cxx.html#ECbNSC">CalculateCfd</a>(<span class="keyword">double</span> attenuation, <span class="keyword">int</span> delay, <span class="keyword">int</span> halfsmoothingwindow, <span class="keyword">int</span> interpolation_steps)</span><br />
+<div class="funccomm"><pre>Used when calculating the CFD from the waveform
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSceptarHit:CalculateCfdAndMonitor" href="src/TSceptarHit.cxx.html#wj7BwE">CalculateCfdAndMonitor</a>(<span class="keyword">double</span> attenuation, <span class="keyword">int</span> delay, <span class="keyword">int</span> halfsmoothingwindow, <span class="keyword">int</span> interpolation_steps, vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;&amp; monitor)</span><br />
+<div class="funccomm"><pre>Used when calculating the CFD from the waveform
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt; <a class="funcname" name="TSceptarHit:CalculateSmoothedWaveform" href="src/TSceptarHit.cxx.html#yzUnMB">CalculateSmoothedWaveform</a>(<span class="keyword">unsigned</span> <span class="keyword">int</span> halfsmoothingwindow)</span><br />
+<div class="funccomm"><pre>Used when calculating the CFD from the waveform
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt; <a class="funcname" name="TSceptarHit:CalculateCfdMonitor" href="src/TSceptarHit.cxx.html#ysPEUE">CalculateCfdMonitor</a>(<span class="keyword">double</span> attenuation, <span class="keyword">int</span> delay, <span class="keyword">int</span> halfsmoothingwindow)</span><br />
+<div class="funccomm"><pre>Used when calculating the CFD from the waveform
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSceptarHit:SetFilterPattern" href="src/TSceptarHit.h.html#u6gVFC">SetFilterPattern</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x)</span><br />
-<div class="funccomm"><pre> <a href="./ListOfTypes.html#void">void</a> SetHit();
+<div class="funccomm"><pre>    std::vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt; waveform;
+ <a href="./ListOfTypes.html#void">void</a> SetHit();
 		
 </pre></div>
 
 <div class="code"><code class="inlinecode">{ <a href="./TSceptarHit.html#TSceptarHit:filter" title="Int_t TSceptarHit::filter">filter</a>   = x; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSceptarHit:SetWaveform" href="src/TSceptarHit.h.html#CJtrNE">SetWaveform</a>(vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt; x)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSceptarHit:SetWaveform" href="src/TSceptarHit.h.html#VD6nE">SetWaveform</a>(vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt; x)</span><br />
 <div class="funccomm"><pre>   inline <a href="./ListOfTypes.html#void">void</a> <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:SetPosition" title="void TGRSIDetectorHit::SetPosition(const TVector3&amp; temp_pos) or overloads">SetPosition</a>(<a href="./TVector3.html">TVector3</a> x)          { position = x; }   //!
 </pre></div>
-
-<div class="code"><code class="inlinecode">{ <a href="./TSceptarHit.html#TSceptarHit:waveform" title="vector&lt;Short_t&gt; TSceptarHit::waveform">waveform</a> = x; }</code></div>
-<div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSceptarHit:GetFilterPattern" href="src/TSceptarHit.h.html#ERVb1E">GetFilterPattern</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TSceptarHit:GetFilterPattern" href="src/TSceptarHit.h.html#PcQ.kC">GetFilterPattern</a>() const</span><br />
 <div class="funccomm"><pre>		
 </pre></div>
 
-<div class="code"><code class="inlinecode">{   <span class="keyword">return</span> <a href="./TSceptarHit.html#TSceptarHit:filter" title="Int_t TSceptarHit::filter">filter</a>;   }</code></div>
-<div style="clear:both;"></div>
-</div>
-<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt; <a class="funcname" name="TSceptarHit:GetWaveform" href="src/TSceptarHit.h.html#yAxkUC">GetWaveform</a>()</span><br />
-
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSceptarHit.html#TSceptarHit:waveform" title="vector&lt;Short_t&gt; TSceptarHit::waveform">waveform</a>; }</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSceptarHit.html#TSceptarHit:filter" title="Int_t TSceptarHit::filter">filter</a>;   }</code></div>
 <div style="clear:both;"></div>
 </div>
 
@@ -320,7 +369,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Jun  1 00:11:09 2015 </em><em>&raquo; Last generated: 2015-06-01 00:11</em><br />
+<em>&raquo; Last changed: Wed Aug  5 15:22:20 2015 </em><em>&raquo; Last generated: 2015-08-05 15:22</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:07:07 2015            -->
+<!--   Date: Wed Aug  5 15:19:15 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -83,7 +83,7 @@ read out of the ODB information in the MIDAS file.
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:AddCFDCoefficient">AddCFDCoefficient</a>(<span class="keyword">double</span> temp)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:AddChannel">AddChannel</a>(<a href="./TChannel.html">TChannel</a>*, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:AddEFFCoefficient">AddEFFCoefficient</a>(<span class="keyword">double</span> temp)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:AddENGCoefficient">AddENGCoefficient</a>(<span class="keyword">double</span> temp)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:AddENGCoefficient">AddENGCoefficient</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> temp)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:AddLEDCoefficient">AddLEDCoefficient</a>(<span class="keyword">double</span> temp)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:AddTIMECoefficient">AddTIMECoefficient</a>(<span class="keyword">double</span> temp)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
@@ -91,8 +91,8 @@ read out of the ODB information in the MIDAS file.
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateCFD">CalibrateCFD</a>(<span class="keyword">double</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateCFD@1">CalibrateCFD</a>(<span class="keyword">int</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateEFF">CalibrateEFF</a>(<span class="keyword">double</span>)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateENG">CalibrateENG</a>(<span class="keyword">double</span>)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateENG@1">CalibrateENG</a>(<span class="keyword">int</span>, <span class="keyword">int</span> <a href="./TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a> = 0)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateENG">CalibrateENG</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateENG@1">CalibrateENG</a>(<span class="keyword">int</span>, <span class="keyword">int</span> <a href="./TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a> = 0)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateLED">CalibrateLED</a>(<span class="keyword">double</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateLED@1">CalibrateLED</a>(<span class="keyword">int</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:CalibrateTIME">CalibrateTIME</a>(<span class="keyword">double</span>)</td></tr>
@@ -139,7 +139,7 @@ read out of the ODB information in the MIDAS file.
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:GetEFFChi2">GetEFFChi2</a>()</td></tr>
 <tr class="func"><td class="funcret">vector&lt;<span class="keyword">double</span>&gt;</td><td class="funcname"><a class="funcname" href="#TChannel:GetEFFCoeff">GetEFFCoeff</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:GetENGChi2">GetENGChi2</a>()</td></tr>
-<tr class="func"><td class="funcret">vector&lt;<span class="keyword">double</span>&gt;</td><td class="funcname"><a class="funcname" href="#TChannel:GetENGCoeff">GetENGCoeff</a>()</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<a href="./ListOfTypes.html#Float_t">Float_t</a>&gt;</td><td class="funcname"><a class="funcname" href="#TChannel:GetENGCoeff">GetENGCoeff</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TChannel:GetIntegration">GetIntegration</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TChannel:GetLEDChi2">GetLEDChi2</a>()</td></tr>
@@ -251,7 +251,7 @@ read out of the ODB information in the MIDAS file.
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SaveToSelf">SaveToSelf</a>(<span class="keyword">const</span> <span class="keyword">char</span>*)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SetCFDCoefficients">SetCFDCoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SetEFFCoefficients">SetEFFCoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SetENGCoefficients">SetENGCoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SetENGCoefficients">SetENGCoefficients</a>(vector&lt;<a href="./ListOfTypes.html#Float_t">Float_t</a>&gt; tmp)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SetLEDCoefficients">SetLEDCoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:SetTIMECoefficients">SetTIMECoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</td></tr>
 <tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TChannel:trim">trim</a>(string*, <span class="keyword">const</span> string&amp; trimChars = <span class="string">" \f\n\r\t\v"</span>)</td></tr>
@@ -297,7 +297,7 @@ read out of the ODB information in the MIDAS file.
 <tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TChannel:EFFChi2"></a>EFFChi2</td><td class="datadesc">Chi2 of Efficiency calibration</td></tr>
 <tr class="data"><td class="datatype">vector&lt;<span class="keyword">double</span>&gt;</td><td class="dataname"><a name="TChannel:EFFCoefficients"></a>EFFCoefficients</td><td class="datadesc">Efficiency calibration coeffs (low to high order)</td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TChannel:ENGChi2"></a>ENGChi2</td><td class="datadesc">Chi2 of the energy calibration</td></tr>
-<tr class="data"><td class="datatype">vector&lt;<span class="keyword">double</span>&gt;</td><td class="dataname"><a name="TChannel:ENGCoefficients"></a>ENGCoefficients</td><td class="datadesc">Energy calibration coeffs (low to high order)</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Float_t">Float_t</a>&gt;</td><td class="dataname"><a name="TChannel:ENGCoefficients"></a>ENGCoefficients</td><td class="datadesc">Energy calibration coeffs (low to high order)</td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TChannel:LEDChi2"></a>LEDChi2</td><td class="datadesc">Chi2 of LED calibration</td></tr>
 <tr class="data"><td class="datatype">vector&lt;<span class="keyword">double</span>&gt;</td><td class="dataname"><a name="TChannel:LEDCoefficients"></a>LEDCoefficients</td><td class="datadesc">LED calibration coeffs (low to high order)</td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TChannel:TIMEChi2"></a>TIMEChi2</td><td class="datadesc">Chi2 of the Time calibration</td></tr>
@@ -426,7 +426,7 @@ Options:
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:DestroyENGCal" href="src/TChannel.cxx.html#Ao4gGD">DestroyENGCal</a>()</span><br />
-<div class="funccomm"><pre>Erases the <a href="./TChannel.html#TChannel:ENGCoefficients" title="vector&lt;double&gt; TChannel::ENGCoefficients">ENGCoefficients</a> vector
+<div class="funccomm"><pre>Erases the <a href="./TChannel.html#TChannel:ENGCoefficients" title="vector&lt;Float_t&gt; TChannel::ENGCoefficients">ENGCoefficients</a> vector
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:DestroyCFDCal" href="src/TChannel.cxx.html#XP5gGD">DestroyCFDCal</a>()</span><br />
@@ -449,7 +449,7 @@ Options:
 <div class="funccomm"><pre>Erases all Cal vectors
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TChannel:CalibrateENG@1" href="src/TChannel.cxx.html#ZsRbED">CalibrateENG</a>(<span class="keyword">int</span> , <span class="keyword">int</span> <a href="./TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a> = 0)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="TChannel:CalibrateENG@1" href="src/TChannel.cxx.html#jfGpG">CalibrateENG</a>(<span class="keyword">int</span> , <span class="keyword">int</span> <a href="./TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a> = 0)</span><br />
 <div class="funccomm"><pre>Returns the calibrated energy of the channel when a charge is passed to it.
 This is done by first adding a random <a href="./TChannel.html#TChannel:number" title="int TChannel::number">number</a> between 0 and 1 to the charge
 bin. This is then taken and divided by the <a href="./TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a> parameter. The
@@ -457,7 +457,7 @@ polynomial energy calibration formula is then applied to get the calibrated
 energy.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TChannel:CalibrateENG" href="src/TChannel.cxx.html#GKDhGC">CalibrateENG</a>(<span class="keyword">double</span> )</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="TChannel:CalibrateENG" href="src/TChannel.cxx.html#UAEF7">CalibrateENG</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> )</span><br />
 <div class="funccomm"><pre>Returns the calibrated energy. The polynomial energy calibration formula is
 applied to get the calibrated energy. This function does not use the
 <a href="./TChannel.html#TChannel:integration" title="int TChannel::integration">integration</a> parameter.
@@ -566,9 +566,9 @@ is closed. Returns the <a href="./TChannel.html#TChannel:number" title="int TCha
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:UpdateChannelMap" href="src/TChannel.h.html#hhtkq">UpdateChannelMap</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:SetENGCoefficients" href="src/TChannel.h.html#gv4qCE">SetENGCoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:SetENGCoefficients" href="src/TChannel.h.html#Viq0TC">SetENGCoefficients</a>(vector&lt;<a href="./ListOfTypes.html#Float_t">Float_t</a>&gt; tmp)</span><br />
 
-<div class="code"><code class="inlinecode">{ <a href="./TChannel.html#TChannel:ENGCoefficients" title="vector&lt;double&gt; TChannel::ENGCoefficients">ENGCoefficients</a> = tmp; }</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./TChannel.html#TChannel:ENGCoefficients" title="vector&lt;Float_t&gt; TChannel::ENGCoefficients">ENGCoefficients</a> = tmp; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:SetCFDCoefficients" href="src/TChannel.h.html#JIgr6D">SetCFDCoefficients</a>(vector&lt;<span class="keyword">double</span>&gt; tmp)</span><br />
@@ -698,9 +698,9 @@ is closed. Returns the <a href="./TChannel.html#TChannel:number" title="int TCha
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TChannel.html#TChannel:usecalfileint" title="bool TChannel::usecalfileint">usecalfileint</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname">std::vector&lt;<span class="keyword">double</span>&gt; <a class="funcname" name="TChannel:GetENGCoeff" href="src/TChannel.h.html#VtyWNE">GetENGCoeff</a>()</span><br />
+<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./ListOfTypes.html#Float_t">Float_t</a>&gt; <a class="funcname" name="TChannel:GetENGCoeff" href="src/TChannel.h.html#w9ND5E">GetENGCoeff</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TChannel.html#TChannel:ENGCoefficients" title="vector&lt;double&gt; TChannel::ENGCoefficients">ENGCoefficients</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TChannel.html#TChannel:ENGCoefficients" title="vector&lt;Float_t&gt; TChannel::ENGCoefficients">ENGCoefficients</a>;}</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname">std::vector&lt;<span class="keyword">double</span>&gt; <a class="funcname" name="TChannel:GetCFDCoeff" href="src/TChannel.h.html#xOo0vB">GetCFDCoeff</a>()</span><br />
@@ -723,9 +723,9 @@ is closed. Returns the <a href="./TChannel.html#TChannel:number" title="int TCha
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TChannel.html#TChannel:EFFCoefficients" title="vector&lt;double&gt; TChannel::EFFCoefficients">EFFCoefficients</a>;}</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:AddENGCoefficient" href="src/TChannel.h.html#YHfEKE">AddENGCoefficient</a>(<span class="keyword">double</span> temp)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:AddENGCoefficient" href="src/TChannel.h.html#sKK.hC">AddENGCoefficient</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a> temp)</span><br />
 
-<div class="code"><code class="inlinecode">{ <a href="./TChannel.html#TChannel:ENGCoefficients" title="vector&lt;double&gt; TChannel::ENGCoefficients">ENGCoefficients</a>.push_back(temp); }</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./TChannel.html#TChannel:ENGCoefficients" title="vector&lt;Float_t&gt; TChannel::ENGCoefficients">ENGCoefficients</a>.push_back(temp); }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TChannel:AddCFDCoefficient" href="src/TChannel.h.html#E0ofRE">AddCFDCoefficient</a>(<span class="keyword">double</span> temp)</span><br />
@@ -788,7 +788,7 @@ is closed. Returns the <a href="./TChannel.html#TChannel:number" title="int TCha
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Jun  1 00:07:09 2015 </em><em>&raquo; Last generated: 2015-06-01 00:07</em><br />
+<em>&raquo; Last changed: Wed Aug  5 15:19:16 2015 </em><em>&raquo; Last generated: 2015-08-05 15:19</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

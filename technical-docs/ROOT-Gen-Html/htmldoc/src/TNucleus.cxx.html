@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:10:44 2015            -->
+<!--   Date: Wed Aug  5 15:21:59 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -153,7 +153,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
   <span class="keyword">int</span> i = 0,n,z;
   <span class="keyword">double</span> emass;
   <span class="keyword">char</span> tmp[256];
-  <a href="../ListOfTypes.html#ifstream">ifstream</a> mass_file;
+  std::<a href="../ListOfTypes.html#ifstream">ifstream</a> mass_file;
   mass_file.open(MassFile,std::<a href="../ListOfTypes.html#ios">ios</a>::in);
   <span class="keyword">while</span>(!mass_file.bad() &amp;&amp; !mass_file.eof() &amp;&amp; i &lt; 3008){
     mass_file&gt;&gt;n;
@@ -314,7 +314,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
    path +=  name;
 
    printf(<span class="string">"path = %s\n"</span>,path.c_str());
-   <a href="../ListOfTypes.html#ifstream">ifstream</a> sourcefile;
+	std::<a href="../ListOfTypes.html#ifstream">ifstream</a> sourcefile;
    sourcefile.open(path.c_str());
    <span class="keyword">if</span>(!sourcefile.is_open()) {
       printf(<span class="string">"unable to set source data for %s.\n"</span>,<a href="../TNamed.html#TNamed:GetName" title="const char* TNamed::GetName()">GetName</a>());
@@ -395,7 +395,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
 
 <a name="jB7pgE"></a><span class="keyword">void</span> <a href="../TNucleus.html">TNucleus</a>::<a href="../TNucleus.html#TNucleus:WriteSourceFile" title="void TNucleus::WriteSourceFile(string outfilename=&quot;&quot;)">WriteSourceFile</a>(std::string outfilename){
    <span class="keyword">if</span>(outfilename.length() &gt; 0) {
-     <a href="../ListOfTypes.html#ofstream">ofstream</a> sourceout;
+	  std::<a href="../ListOfTypes.html#ofstream">ofstream</a> sourceout;
      sourceout.open(outfilename.c_str());
      <span class="keyword">for</span>(<span class="keyword">int</span> i=0; i &lt; <a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.<a href="../TCollection.html#TCollection:GetSize" title="Int_t TCollection::GetSize()">GetSize</a>(); i++)   {
         std::string transtr = ((<a href="../TGRSITransition.html">TGRSITransition</a>*)(<a href="../TNucleus.html#TNucleus:TransitionList" title="TList TNucleus::TransitionList">TransitionList</a>.<a href="../TList.html#TList:At" title="TObject* TList::At(Int_t idx)">At</a>(i)))-&gt;PrintToString();
@@ -418,7 +418,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:10 </em><em>&raquo; Last generated: 2015-06-01 00:10</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:22 </em><em>&raquo; Last generated: 2015-08-05 15:22</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:08:27 2015            -->
+<!--   Date: Wed Aug  5 15:20:04 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -285,7 +285,7 @@ ClassImp(<a href="../TGRSIint.html">TGRSIint</a>)
           <span class="keyword">char</span> key = sargv[c];
           <span class="keyword">switch</span>(toupper(key)) {
             <span class="keyword">case</span> <span class="string">'A'</span>:
-      		  printf(DBLUE <span class="string">"Atempting to make analysis trees."</span> RESET_COLOR <span class="string">"\n"</span>);
+      		  printf(DBLUE <span class="string">"Attempting to make analysis trees."</span> RESET_COLOR <span class="string">"\n"</span>);
          	  <a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:SetMakeAnalysisTree" title="void TGRSIOptions::SetMakeAnalysisTree(bool flag=true)">SetMakeAnalysisTree</a>();
 		        <span class="keyword">break</span>;
             <span class="keyword">case</span> <span class="string">'Q'</span>:
@@ -344,7 +344,7 @@ ClassImp(<a href="../TGRSIint.html">TGRSIint</a>)
           <a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:SetProgressDialog" title="void TGRSIOptions::SetProgressDialog(bool flag=true)">SetProgressDialog</a>(<span class="keyword">false</span>);
        } <span class="keyword">else</span> <span class="keyword">if</span>((temp.compare(<span class="string">"bad_frags"</span>)==0)     || (temp.compare(<span class="string">"write_bad_frags"</span>)==0) ||
                  (temp.compare(<span class="string">"bad_fragments"</span>)==0) || (temp.compare(<span class="string">"write_bad_fragments"</span>)==0)) {
-          printf(DBLUE <span class="string">"    failed fragements being written too BadFragmentTree."</span> RESET_COLOR <span class="string">"\n"</span>);
+          printf(DBLUE <span class="string">"    failed fragements being written to BadFragmentTree."</span> RESET_COLOR <span class="string">"\n"</span>);
           <a href="../TGRSIOptions.html">TGRSIOptions</a>::<a href="../TGRSIOptions.html#TGRSIOptions:SetWriteBadFrags" title="void TGRSIOptions::SetWriteBadFrags(bool flag=true)">SetWriteBadFrags</a>(<span class="keyword">true</span>);
        } <span class="keyword">else</span> <span class="keyword">if</span>(temp.compare(<span class="string">"help"</span>)==0) {
           <a href="../TGRSIint.html#TGRSIint:fPrintHelp" title="bool TGRSIint::fPrintHelp">fPrintHelp</a> = <span class="keyword">true</span>;
@@ -365,7 +365,7 @@ ClassImp(<a href="../TGRSIint.html">TGRSIint</a>)
                 pwd = argv[i]; 
                 argv[i]= null;
              <span class="comment">//} </span>
-               printf(<span class="string">"\tOption %s is a directory, ignoing for now.\n"</span>,pwd.c_str()); 
+               printf(<span class="string">"\tOption %s is a directory, ignoring for now.\n"</span>,pwd.c_str());
           } <span class="keyword">else</span> <span class="keyword">if</span> (size &gt; 0) {
              <span class="comment">// if file add to list of files to be processed</span>
              <a href="../TGRSIint.html#TGRSIint:FileAutoDetect" title="bool TGRSIint::FileAutoDetect(string filename,long filesize)">FileAutoDetect</a>(argv[i],size);
@@ -374,7 +374,7 @@ ClassImp(<a href="../TGRSIint.html">TGRSIint</a>)
              printf(<span class="string">"file %s has size 0, skipping\n"</span>, dir);
           }
        } <span class="keyword">else</span> {
-          <span class="comment">//file does not exsist... assuming output file.</span>
+          <span class="comment">//file does not exist... assuming output file.</span>
           <a href="../TGRSIint.html#TGRSIint:FileAutoDetect" title="bool TGRSIint::FileAutoDetect(string filename,long filesize)">FileAutoDetect</a>(argv[i],-1);
           argv[i] = null;
        }   
@@ -471,7 +471,7 @@ ClassImp(<a href="../TGRSIint.html">TGRSIint</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:08 </em><em>&raquo; Last generated: 2015-06-01 00:08</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:20 </em><em>&raquo; Last generated: 2015-08-05 15:20</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

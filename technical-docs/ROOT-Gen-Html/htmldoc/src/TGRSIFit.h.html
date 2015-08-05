@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:08:20 2015            -->
+<!--   Date: Wed Aug  5 15:19:56 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -49,9 +49,9 @@
    <span class="comment">//<a href="../TGRSIFit.html">TGRSIFit</a>(const <a href="../ListOfTypes.html#char">char</a> *name,<a href="../ListOfTypes.html#Double_t">Double_t</a> (*fcn)(<a href="../ListOfTypes.html#Double_t">Double_t</a> *, <a href="../ListOfTypes.html#Double_t">Double_t</a> *), <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name, fcn, xmin, xmax, npar){};</span>
    <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* formula, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin = 0, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax = 1) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,formula,xmin,xmax){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); } 
    <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,xmin,xmax,npar){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
-   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* fcn, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name, fcn,xmin,xmax,npar){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
+   <span class="comment">//<a href="../TGRSIFit.html">TGRSIFit</a>(const <a href="../ListOfTypes.html#char">char</a>* name, <a href="../ListOfTypes.html#void">void</a>* fcn, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name, fcn,xmin,xmax,npar){this-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }</span>
    <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="../ROOT.html">ROOT</a>::<a href="../ROOT__Math.html">Math</a>::<a href="../ROOT__Math__ParamFunctor.html">ParamFunctor</a> f, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin = 0, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax = 1, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar = 0) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,f,xmin,xmax,npar){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
-   <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">void</span>* ptr, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar, <span class="keyword">const</span> <span class="keyword">char</span>* className) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,ptr, xmin, xmax, npar, className){<span class="keyword">this</span>-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }
+   <span class="comment">//<a href="../TGRSIFit.html">TGRSIFit</a>(const <a href="../ListOfTypes.html#char">char</a>* name, <a href="../ListOfTypes.html#void">void</a>* ptr, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmin, <a href="../ListOfTypes.html#Double_t">Double_t</a> xmax, <a href="../ListOfTypes.html#Int_t">Int_t</a> npar, const <a href="../ListOfTypes.html#char">char</a>* className) : <a href="../TF1.html#TF1:TF1" title="TF1 TF1::TF1() or overloads">TF1</a>(name,ptr, xmin, xmax, npar, className){this-&gt;<a href="../TGRSIFit.html#TGRSIFit:Clear" title="void TGRSIFit::Clear()">Clear</a>(); }</span>
 
    <a href="../TGRSIFit.html">TGRSIFit</a>(<span class="keyword">const</span> <a href="../TGRSIFit.html">TGRSIFit</a> &amp;copy);
   
@@ -89,7 +89,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:08 </em><em>&raquo; Last generated: 2015-06-01 00:08</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:19 </em><em>&raquo; Last generated: 2015-08-05 15:19</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:11:49 2015            -->
+<!--   Date: Wed Aug  5 15:23:04 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -71,7 +71,7 @@ public:
       // Create a <span class="string">"beautified"</span> version of this source file.
       // It will be called htmldoc/htmlex.C.html.
       GetHtml()-&gt;SetMacroPath(<span class="string">"$(ROOTSYS)/macros/"</span>);
-      GetHtml()-&gt;SetSourceDir(<span class="string">"$(GRSISYS)/util"</span>);
+      GetHtml()-&gt;SetSourceDir(<span class="string">"$(GRSISYS)/util:$(GRSISYS)/scripts"</span>);
       GetHtml()-&gt;Convert(<span class="string">"html_generator.C"</span>, <span class="string">"Generates HTML Documentation"</span>, <span class="string">"./htmldoc/"</span>, <span class="string">"./"</span>);
       GetHtml()-&gt;Convert(<span class="string">"DroppedData.C"</span>,<span class="string">"Calculates Dropped Events"</span>,<span class="string">"./htmldoc/"</span>,<span class="string">"./"</span>);
    }
@@ -180,7 +180,7 @@ private:
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:11 </em><em>&raquo; Last generated: 2015-06-01 00:11</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:23 </em><em>&raquo; Last generated: 2015-08-05 15:23</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:05:04 2015            -->
+<!--   Date: Wed Aug  5 15:15:42 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -392,10 +392,10 @@ ClassImp(<a href="../GRootBrowser.html">GRootBrowser</a>)
    <span class="comment">// plugins executed in the current one.</span>
 
    <a href="../ListOfTypes.html#Int_t">Int_t</a> loop = 1;
-   <a href="../TBrowserPlugin.html">TBrowserPlugin</a> *plugin = 0;
+   <a href="../GBrowserPlugin.html">GBrowserPlugin</a> *plugin = 0;
    <a href="../TBrowser.html">TBrowser</a> *b = <span class="keyword">new</span> <a href="../TBrowser.html">TBrowser</a>();
    <a href="../TIter.html">TIter</a> next(&amp;<a href="../GRootBrowser.html#GRootBrowser:fPlugins" title="TList GRootBrowser::fPlugins">fPlugins</a>);
-   <span class="keyword">while</span> ((plugin = (<a href="../TBrowserPlugin.html">TBrowserPlugin</a> *)next())) {
+   <span class="keyword">while</span> ((plugin = (<a href="../GBrowserPlugin.html">GBrowserPlugin</a> *)next())) {
       <span class="keyword">if</span> (loop &gt; <a href="../GRootBrowser.html#GRootBrowser:fNbInitPlugins" title="Int_t GRootBrowser::fNbInitPlugins">fNbInitPlugins</a>)
          b-&gt;<a href="../GRootBrowser.html#GRootBrowser:ExecPlugin" title="Long_t GRootBrowser::ExecPlugin(const char* name=0,const char* fname=0,const char* cmd=0,Int_t pos=kRight,Int_t subpos=-1)">ExecPlugin</a>(plugin-&gt;<a href="../TGWindow.html#TGWindow:GetName" title="const char* TGWindow::GetName()">GetName</a>(), <span class="string">""</span>, plugin-&gt;fCommand.Data(), plugin-&gt;fTab,
                        plugin-&gt;fSubTab);
@@ -559,21 +559,21 @@ ClassImp(<a href="../GRootBrowser.html">GRootBrowser</a>)
    <span class="comment">// and tab element <span class="string">"subpos"</span>.</span>
 
    <a href="../ListOfTypes.html#Long_t">Long_t</a> retval = 0;
-   <a href="../TBrowserPlugin.html">TBrowserPlugin</a> *p;
+   <a href="../GBrowserPlugin.html">GBrowserPlugin</a> *p;
    <a href="../TString.html">TString</a> command, pname;
    <a href="../GRootBrowser.html#GRootBrowser:StartEmbedding" title="void GRootBrowser::StartEmbedding(Int_t pos=kRight,Int_t subpos=-1)">StartEmbedding</a>(pos, subpos);
    <span class="keyword">if</span> (cmd &amp;&amp; strlen(cmd)) {
       command = cmd;
       <span class="keyword">if</span> (name) pname = name;
       <span class="keyword">else</span> pname = <a href="../TString.html">TString</a>::<a href="../TString.html#TString:Format" title="TString TString::Format(const char* fmt)">Format</a>(<span class="string">"Plugin %d"</span>, <a href="../GRootBrowser.html#GRootBrowser:fPlugins" title="TList GRootBrowser::fPlugins">fPlugins</a>.<a href="../TCollection.html#TCollection:GetSize" title="Int_t TCollection::GetSize()">GetSize</a>());
-      p = <span class="keyword">new</span> <a href="../TBrowserPlugin.html">TBrowserPlugin</a>(pname.Data(), command.Data(), pos, subpos);
+      p = <span class="keyword">new</span> <a href="../GBrowserPlugin.html">GBrowserPlugin</a>(pname.Data(), command.Data(), pos, subpos);
    }
    <span class="keyword">else</span> <span class="keyword">if</span> (fname &amp;&amp; strlen(fname)) {
       pname = name ? name : <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:BaseName" title="const char* TSystem::BaseName(const char* pathname)">BaseName</a>(fname);
       <a href="../ListOfTypes.html#Ssiz_t">Ssiz_t</a> t = pname.Last(<span class="string">'.'</span>);
       <span class="keyword">if</span> (t &gt; 0) pname.Remove(t);
       command.Form(<span class="string">"gROOT-&gt;Macro(\"%s\");"</span>, <a href="../TSystem.html">gSystem</a>-><a href="../TSystem.html#TSystem:UnixPathName" title="const char* TSystem::UnixPathName(const char* unixpathname)">UnixPathName</a>(fname));
-      p = <span class="keyword">new</span> <a href="../TBrowserPlugin.html">TBrowserPlugin</a>(pname.Data(), command.Data(), pos, subpos);
+      p = <span class="keyword">new</span> <a href="../GBrowserPlugin.html">GBrowserPlugin</a>(pname.Data(), command.Data(), pos, subpos);
    }
    <span class="keyword">else</span> <span class="keyword">return</span> 0;
    <a href="../GRootBrowser.html#GRootBrowser:fPlugins" title="TList GRootBrowser::fPlugins">fPlugins</a>.<a href="../TList.html#TList:Add" title="void TList::Add(TObject* obj) or overloads">Add</a>(p);
@@ -1042,7 +1042,7 @@ ClassImp(<a href="../GRootBrowser.html">GRootBrowser</a>)
 {
    <span class="comment">// Set text <span class="string">"title"</span> of Tab <span class="string">"subpos"</span> in <a href="../TGTab.html">TGTab</a> <span class="string">"pos"</span>.</span>
 
-   <a href="../TBrowserPlugin.html">TBrowserPlugin</a> *p = 0;
+   <a href="../GBrowserPlugin.html">GBrowserPlugin</a> *p = 0;
    <a href="../TGTab.html">TGTab</a> *edit = <a href="../GRootBrowser.html#GRootBrowser:GetTab" title="TGTab* GRootBrowser::GetTab(Int_t pos)">GetTab</a>(pos);
    <span class="keyword">if</span> (!edit) <span class="keyword">return</span>;
    <span class="keyword">if</span> (subpos == -1)
@@ -1052,7 +1052,7 @@ ClassImp(<a href="../GRootBrowser.html">GRootBrowser</a>)
    <span class="keyword">if</span> (el) {
       el-&gt;SetText(<span class="keyword">new</span> <a href="../TGString.html">TGString</a>(title));
       edit-&gt;<a href="../TGCompositeFrame.html#TGCompositeFrame:Layout" title="void TGCompositeFrame::Layout()">Layout</a>();
-      <span class="keyword">if</span> ((p = (<a href="../TBrowserPlugin.html">TBrowserPlugin</a> *)<a href="../GRootBrowser.html#GRootBrowser:fPlugins" title="TList GRootBrowser::fPlugins">fPlugins</a>.<a href="../TList.html#TList:FindObject" title="TObject* TList::FindObject(const char* name) or overloads">FindObject</a>(title)))
+      <span class="keyword">if</span> ((p = (<a href="../GBrowserPlugin.html">GBrowserPlugin</a> *)<a href="../GRootBrowser.html#GRootBrowser:fPlugins" title="TList GRootBrowser::fPlugins">fPlugins</a>.<a href="../TList.html#TList:FindObject" title="TObject* TList::FindObject(const char* name) or overloads">FindObject</a>(title)))
          p-&gt;<a href="../TGWindow.html#TGWindow:SetName" title="void TGWindow::SetName(const char* name)">SetName</a>(title);
    }
 }
@@ -1289,7 +1289,7 @@ ClassImp(<a href="../GRootBrowser.html">GRootBrowser</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:05 </em><em>&raquo; Last generated: 2015-06-01 00:05</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:15 </em><em>&raquo; Last generated: 2015-08-05 15:15</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

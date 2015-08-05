@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:09:27 2015            -->
+<!--   Date: Wed Aug  5 15:20:53 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -37,7 +37,7 @@ ClassImp(<a href="../TKinematics.html">TKinematics</a>);
 <span class="comment">//</span>
 <span class="comment">//////////////////////////////////////////////////////////////////</span>
 
-<a name="q1VubB"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=NULL,const char* recoil=NULL,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<span class="keyword">double</span> beame, <span class="keyword">const</span> <span class="keyword">char</span> *beam, <span class="keyword">const</span> <span class="keyword">char</span> *targ, <span class="keyword">const</span> <span class="keyword">char</span> *ejec, <span class="keyword">const</span> <span class="keyword">char</span> *reco, <span class="keyword">const</span> <span class="keyword">char</span> *name){
+<a name="q1VubB"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=0,const char* recoil=0,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<span class="keyword">double</span> beame, <span class="keyword">const</span> <span class="keyword">char</span> *beam, <span class="keyword">const</span> <span class="keyword">char</span> *targ, <span class="keyword">const</span> <span class="keyword">char</span> *ejec, <span class="keyword">const</span> <span class="keyword">char</span> *reco, <span class="keyword">const</span> <span class="keyword">char</span> *name){
   <a href="../TKinematics.html#TKinematics:InitKin" title="void TKinematics::InitKin()">InitKin</a>();
 
 	<a href="../TNucleus.html">TNucleus</a> *b,*t,*e,*r;
@@ -68,7 +68,7 @@ ClassImp(<a href="../TKinematics.html">TKinematics</a>);
   <a href="../TKinematics.html#TKinematics:Cm2LabSpline" title="TSpline3* TKinematics::Cm2LabSpline">Cm2LabSpline</a> = 0;
 }
 
-<a name="tMBh3"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=NULL,const char* recoil=NULL,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<a href="../TNucleus.html">TNucleus</a>* projectile, <a href="../TNucleus.html">TNucleus</a>* target, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span> *name){
+<a name="tMBh3"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=0,const char* recoil=0,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<a href="../TNucleus.html">TNucleus</a>* projectile, <a href="../TNucleus.html">TNucleus</a>* target, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span> *name){
 <span class="comment">// By not providing the ejectile (only prociding projectile, target, and beam energy) elestic scattering is assumed</span>
   <a href="../TKinematics.html#TKinematics:InitKin" title="void TKinematics::InitKin()">InitKin</a>();
   <a href="../TKinematics.html#TKinematics:fParticle" title="TNucleus* TKinematics::fParticle">fParticle</a>[0] = projectile;
@@ -85,7 +85,7 @@ ClassImp(<a href="../TKinematics.html">TKinematics</a>);
   <a href="../TKinematics.html#TKinematics:Cm2LabSpline" title="TSpline3* TKinematics::Cm2LabSpline">Cm2LabSpline</a> = 0;
 }
 
-<a name="Xz.5YB"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=NULL,const char* recoil=NULL,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<a href="../TNucleus.html">TNucleus</a>* projectile, <a href="../TNucleus.html">TNucleus</a>* target, <a href="../TNucleus.html">TNucleus</a>* recoil, <a href="../TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span> *name){
+<a name="Xz.5YB"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=0,const char* recoil=0,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<a href="../TNucleus.html">TNucleus</a>* projectile, <a href="../TNucleus.html">TNucleus</a>* target, <a href="../TNucleus.html">TNucleus</a>* recoil, <a href="../TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">const</span> <span class="keyword">char</span> *name){
 <span class="comment">// Kinematics using the provided projectile, target, recoil, and ejectile, as well as beam energy</span>
   <a href="../TKinematics.html#TKinematics:InitKin" title="void TKinematics::InitKin()">InitKin</a>();
   <a href="../TKinematics.html#TKinematics:fParticle" title="TNucleus* TKinematics::fParticle">fParticle</a>[0] = projectile;
@@ -104,7 +104,7 @@ ClassImp(<a href="../TKinematics.html">TKinematics</a>);
 <span class="comment">//  printf(<span class="string">"\e[1;31m"</span> <span class="string">"M[0] = %.01f \tM[1] = %.01f \tM[2] = %.01f \tM[3] = %.01f \t\n\n\n "</span> <span class="string">"\e[m"</span>,<a href="../TKinematics.html#TKinematics:fM" title="double TKinematics::fM">fM</a>[0],<a href="../TKinematics.html#TKinematics:fM" title="double TKinematics::fM">fM</a>[1],<a href="../TKinematics.html#TKinematics:fM" title="double TKinematics::fM">fM</a>[2],<a href="../TKinematics.html#TKinematics:fM" title="double TKinematics::fM">fM</a>[3]);</span>
 }
 
-<a name="BTabED"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=NULL,const char* recoil=NULL,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<a href="../TNucleus.html">TNucleus</a>* projectile, <a href="../TNucleus.html">TNucleus</a>* target, <a href="../TNucleus.html">TNucleus</a>* recoil, <a href="../TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">double</span> ex3, <span class="keyword">const</span> <span class="keyword">char</span> *name){
+<a name="BTabED"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=0,const char* recoil=0,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<a href="../TNucleus.html">TNucleus</a>* projectile, <a href="../TNucleus.html">TNucleus</a>* target, <a href="../TNucleus.html">TNucleus</a>* recoil, <a href="../TNucleus.html">TNucleus</a>* ejectile, <span class="keyword">double</span> ebeam, <span class="keyword">double</span> ex3, <span class="keyword">const</span> <span class="keyword">char</span> *name){
 <span class="comment">// Kinematics using the provided projectile, target, recoil, ejectile, beam energy, and excited state of the recoil</span>
   <a href="../TKinematics.html#TKinematics:InitKin" title="void TKinematics::InitKin()">InitKin</a>();
   <a href="../TKinematics.html#TKinematics:fParticle" title="TNucleus* TKinematics::fParticle">fParticle</a>[0] = projectile;
@@ -123,7 +123,7 @@ ClassImp(<a href="../TKinematics.html">TKinematics</a>);
 }
 
 
-<a name="o2ZZjE"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=NULL,const char* recoil=NULL,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<span class="keyword">const</span> <span class="keyword">char</span> *beam, <span class="keyword">const</span> <span class="keyword">char</span> *targ, <span class="keyword">const</span> <span class="keyword">char</span> *ejec, <span class="keyword">const</span> <span class="keyword">char</span> *reco, <span class="keyword">double</span> ebeam, <span class="keyword">double</span> ex3, <span class="keyword">const</span> <span class="keyword">char</span> *name){
+<a name="o2ZZjE"></a><a href="../TKinematics.html">TKinematics</a>::<a href="../TKinematics.html#TKinematics:TKinematics" title="TKinematics TKinematics::TKinematics(double beame,const char* projectile,const char* target,const char* ejectile=0,const char* recoil=0,const char* name=&quot;&quot;) or overloads">TKinematics</a>(<span class="keyword">const</span> <span class="keyword">char</span> *beam, <span class="keyword">const</span> <span class="keyword">char</span> *targ, <span class="keyword">const</span> <span class="keyword">char</span> *ejec, <span class="keyword">const</span> <span class="keyword">char</span> *reco, <span class="keyword">double</span> ebeam, <span class="keyword">double</span> ex3, <span class="keyword">const</span> <span class="keyword">char</span> *name){
   <a href="../TKinematics.html#TKinematics:InitKin" title="void TKinematics::InitKin()">InitKin</a>();
 	<a href="../TNucleus.html">TNucleus</a> *b,*t,*e,*r;
 
@@ -902,7 +902,7 @@ ClassImp(<a href="../TKinematics.html">TKinematics</a>);
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:09 </em><em>&raquo; Last generated: 2015-06-01 00:09</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:20 </em><em>&raquo; Last generated: 2015-08-05 15:20</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

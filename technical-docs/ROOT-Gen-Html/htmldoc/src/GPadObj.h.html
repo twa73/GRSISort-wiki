@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:05:03 2015            -->
+<!--   Date: Wed Aug  5 15:15:41 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -40,7 +40,7 @@
 <span class="keyword">class</span> <a href="../GPadObj.html">GPadObj</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a> {
   <span class="keyword">public</span>:
 <a name="pT9DSD"></a>     <a href="../GPadObj.html">GPadObj</a>(<a href="../TObject.html">TObject</a>*obj,<a href="../ListOfTypes.html#Int_t">Int_t</a> pnum=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
-     <a href="../GPadObj.html#GPadObj:_GPadObj" title="void GPadObj::~GPadObj()">~GPadObj</a>();
+     <span class="keyword">virtual</span> <a href="../GPadObj.html#GPadObj:_GPadObj" title="void GPadObj::~GPadObj()">~GPadObj</a>();
 
    <span class="keyword">private</span>:
       <span class="comment">//PadObj(); </span>
@@ -58,7 +58,7 @@
   <span class="keyword">public</span>:
     <a href="../GMemObj.html">GMemObj</a>(<a href="../TObject.html">TObject</a> *obj, <a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
     <a href="../GMemObj.html">GMemObj</a>(<span class="keyword">const</span> <a href="../GMemObj.html">GMemObj</a> &amp;obj) { ((<a href="../GMemObj.html">GMemObj</a>&amp;)obj).<a href="../GMemObj.html#GMemObj:Copy" title="void GMemObj::Copy(TObject&amp; object)">Copy</a>(*<span class="keyword">this</span>); }
-    ~GMemObj();
+    <span class="keyword">virtual</span> ~GMemObj();
 
     <span class="keyword">void</span> <a href="../TNamed.html#TNamed:Copy" title="void TNamed::Copy(TObject&amp; named)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;object) <span class="keyword">const</span>;
 
@@ -150,7 +150,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:05 </em><em>&raquo; Last generated: 2015-06-01 00:05</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:15 </em><em>&raquo; Last generated: 2015-08-05 15:15</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

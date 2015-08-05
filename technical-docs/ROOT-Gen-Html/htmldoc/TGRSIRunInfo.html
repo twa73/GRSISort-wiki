@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:08:23 2015            -->
+<!--   Date: Wed Aug  5 15:19:59 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -146,7 +146,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:ParseInputData">ParseInputData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* inputdata = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"q"</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
 <tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIRunInfo:ReadInfoFile">ReadInfoFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
@@ -253,34 +253,34 @@ return false;}
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TGRSIRunInfo:fAddBackWindow"></a>fAddBackWindow</td><td class="datadesc">Time used to build Addback-Ge-Events for TIGRESS/GRIFFIN.   (default =150 ns (15.0))</td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">long</span></td><td class="dataname"><a name="TGRSIRunInfo:fBuildWindow"></a>fBuildWindow</td><td class="datadesc">if building with a window(GRIFFIN) this is the size of the window. (default = 2us (200))</td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fCSM"></a>fCSM</td><td></td></tr>
-<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fCalFile"></a>fCalFile</td><td></td></tr>
-<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fCalFileName"></a>fCalFileName</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fDante"></a>fDante</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fDescant"></a>fDescant</td><td></td></tr>
-<tr class="data"><td class="datatype">static <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>*</td><td class="dataname"><a name="TGRSIRunInfo:fGRSIRunInfo"></a>fGRSIRunInfo</td><td></td></tr>
-<tr class="data"><td class="datatype">static string</td><td class="dataname"><a name="TGRSIRunInfo:fGRSIVersion"></a>fGRSIVersion</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fGriffin"></a>fGriffin</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fCSM"></a>fCSM</td><td class="datadesc">flag for CSM on/off</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fCalFile"></a>fCalFile</td><td class="datadesc">Cal File to load into Cal of tree</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fCalFileName"></a>fCalFileName</td><td class="datadesc">Name of calfile that generated cal</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fDante"></a>fDante</td><td class="datadesc">flag for LaBr on/off</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fDescant"></a>fDescant</td><td class="datadesc">flag for Descant on/off</td></tr>
+<tr class="data"><td class="datatype">static <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>*</td><td class="dataname"><a name="TGRSIRunInfo:fGRSIRunInfo"></a>fGRSIRunInfo</td><td class="datadesc">Static pointer to TGRSIRunInfo</td></tr>
+<tr class="data"><td class="datatype">static string</td><td class="dataname"><a name="TGRSIRunInfo:fGRSIVersion"></a>fGRSIVersion</td><td class="datadesc">The version of GRSISort that generated the file</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fGriffin"></a>fGriffin</td><td class="datadesc">flag for Griffin on/off</td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TGRSIRunInfo:fHPGeArrayPosition"></a>fHPGeArrayPosition</td><td class="datadesc">Position of the HPGe Array (default = 110.0 mm );</td></tr>
-<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fMajorIndex"></a>fMajorIndex</td><td></td></tr>
-<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fMinorIndex"></a>fMinorIndex</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRunInfo:fNumberOfTrueSystems"></a>fNumberOfTrueSystems</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fPaces"></a>fPaces</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fRf"></a>fRf</td><td></td></tr>
-<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fRunInfoFile"></a>fRunInfoFile</td><td></td></tr>
-<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fRunInfoFileName"></a>fRunInfoFileName</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRunInfo:fRunNumber"></a>fRunNumber</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fS3"></a>fS3</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fSceptar"></a>fSceptar</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fSharc"></a>fSharc</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fSpice"></a>fSpice</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRunInfo:fSubRunNumber"></a>fSubRunNumber</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fTigress"></a>fTigress</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fTip"></a>fTip</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fTriFoil"></a>fTriFoil</td><td></td></tr>
-<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fXMLODBFile"></a>fXMLODBFile</td><td></td></tr>
-<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fXMLODBFileName"></a>fXMLODBFileName</td><td></td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fZeroDegree"></a>fZeroDegree</td><td></td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fMajorIndex"></a>fMajorIndex</td><td class="datadesc">The Major index to order events during building</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fMinorIndex"></a>fMinorIndex</td><td class="datadesc">The Minor index to order events during building</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRunInfo:fNumberOfTrueSystems"></a>fNumberOfTrueSystems</td><td class="datadesc">The number of detection systems in the array</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fPaces"></a>fPaces</td><td class="datadesc">flag for Paces on/off </td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fRf"></a>fRf</td><td class="datadesc">flag for RF on/off</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fRunInfoFile"></a>fRunInfoFile</td><td class="datadesc">The contents of the run infor file</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fRunInfoFileName"></a>fRunInfoFileName</td><td class="datadesc">The name of the Run info file</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRunInfo:fRunNumber"></a>fRunNumber</td><td class="datadesc">The current run number</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fS3"></a>fS3</td><td class="datadesc">flag for S3 on/off</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fSceptar"></a>fSceptar</td><td class="datadesc">flag for Sceptar on/off</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fSharc"></a>fSharc</td><td class="datadesc">flag for Sharc on/off</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fSpice"></a>fSpice</td><td class="datadesc">flag for Spice on/off</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRunInfo:fSubRunNumber"></a>fSubRunNumber</td><td class="datadesc">The current sub run number</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fTigress"></a>fTigress</td><td class="datadesc">flag for Tigress on/off</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fTip"></a>fTip</td><td class="datadesc">flag for Tip on/off</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fTriFoil"></a>fTriFoil</td><td class="datadesc">flag for TriFoil on/off</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fXMLODBFile"></a>fXMLODBFile</td><td class="datadesc">The odb</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TGRSIRunInfo:fXMLODBFileName"></a>fXMLODBFileName</td><td class="datadesc">Name of XML Odb file</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSIRunInfo:fZeroDegree"></a>fZeroDegree</td><td class="datadesc">flag for Zero Degree Scintillator on/off</td></tr>
 
 </table></div>
 </div>
@@ -310,15 +310,28 @@ return false;}
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTGRSIRunInfo_Inh" src="inh/TGRSIRunInfo_Inh.png"/></div>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:Streamer" href="src/TGRSIRunInfo.cxx.html#GcSXu">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp; )</span><br />
+<div class="funccomm"><pre><a href="./TGRSIRunInfo.html#TGRSIRunInfo:Streamer" title="void TGRSIRunInfo::Streamer(TBuffer&amp; )">Streamer</a> for <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>. Allows us to write all of the run info
+to disk like a string. This way there isn't any compatibility issues
+between different <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a> classes written by different users.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TGRSIRunInfo.html">TGRSIRunInfo</a> * <a class="funcname" name="TGRSIRunInfo:Get" href="src/TGRSIRunInfo.cxx.html#psB01B">Get</a>()</span><br />
+<div class="funccomm"><pre>The Getter for the singleton <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>. This makes it
+so there is only even one instance of the run info during
+a session and it can be accessed from anywhere during that
+session.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:SetInfoFromFile" href="src/TGRSIRunInfo.cxx.html#O4iBMC">SetInfoFromFile</a>(<a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>* temp)</span><br />
+<div class="funccomm"><pre>Sets the <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a> to the info passes as tmp.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIRunInfo:TGRSIRunInfo" href="src/TGRSIRunInfo.cxx.html#RITvv">TGRSIRunInfo</a>()</span><br />
-<div class="funccomm"><pre>if(<a href="./TGRSIRunInfo.html#TGRSIRunInfo:fNumberOfTrueSystems" title="int TGRSIRunInfo::fNumberOfTrueSystems">fNumberOfTrueSystems</a>&gt;0)
-   <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>::<a href="./TGRSIRunInfo.html#TGRSIRunInfo:Get" title="TGRSIRunInfo* TGRSIRunInfo::Get()">Get</a>() = this;
-else
+<div class="funccomm"><pre>Default ctor for <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>. The default values are:
+
+<a href="./TGRSIRunInfo.html#TGRSIRunInfo:fHPGeArrayPosition" title="double TGRSIRunInfo::fHPGeArrayPosition">fHPGeArrayPosition</a> = 110.0;
+<a href="./TGRSIRunInfo.html#TGRSIRunInfo:fBuildWindow" title="long TGRSIRunInfo::fBuildWindow">fBuildWindow</a>       = 200;
+<a href="./TGRSIRunInfo.html#TGRSIRunInfo:fAddBackWindow" title="double TGRSIRunInfo::fAddBackWindow">fAddBackWindow</a>     = 15.0;
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIRunInfo:_TGRSIRunInfo" href="src/TGRSIRunInfo.cxx.html#wpZRID">~TGRSIRunInfo</a>()</span><br />
@@ -326,20 +339,32 @@ else
 <div class="code"><code class="inlinecode">{ }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:Print" href="src/TGRSIRunInfo.cxx.html#CE_5WC">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:Print" href="src/TGRSIRunInfo.cxx.html#qUp8zB">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
+<div class="funccomm"><pre>Prints the <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>. Options:
+ a: <a href="./TGRSIRunInfo.html#TGRSIRunInfo:Print" title="void TGRSIRunInfo::Print(Option_t* opt=&quot;&quot;)">Print</a> out more details.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:Clear" href="src/TGRSIRunInfo.cxx.html#C6hnRB">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre>Clears the <a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>. Currently, there are no available
+options.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:SetRunInfo" href="src/TGRSIRunInfo.cxx.html#ySAn6">SetRunInfo</a>(<span class="keyword">int</span> runnum = 0, <span class="keyword">int</span> subrunnum = -1)</span><br />
+<div class="funccomm"><pre>Sets the run info. This figures out what systems are available.
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:SetAnalysisTreeBranches" href="src/TGRSIRunInfo.cxx.html#E4LY7B">SetAnalysisTreeBranches</a>(<a href="./TTree.html">TTree</a>* )</span><br />
-
-<div class="code"><code class="inlinecode">{  }</code></div>
-<div style="clear:both;"></div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:SetAnalysisTreeBranches" href="src/TGRSIRunInfo.cxx.html#O6SA6D">SetAnalysisTreeBranches</a>(<a href="./TTree.html">TTree</a>* )</span><br />
+<div class="funccomm"><pre>Currently does nothing.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGRSIRunInfo:ReadInfoFile" href="src/TGRSIRunInfo.cxx.html#TNSPyE">ReadInfoFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre><a href="./TObject.html#TObject:Read" title="Int_t TObject::Read(const char* name)">Read</a> in a run info file. These files have the extension .info.
+An example can be found in the <span class="string">"examples"</span> directory.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGRSIRunInfo:ParseInputData" href="src/TGRSIRunInfo.cxx.html#B8CHZ">ParseInputData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* inputdata = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"q"</span>)</span><br />
+<div class="funccomm"><pre>A helper function to parse the run info file.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRunInfo:trim" href="src/TGRSIRunInfo.cxx.html#pMiyFC">trim</a>(string* , <span class="keyword">const</span> string&amp; trimChars = <span class="string">" \f\n\r\t\v"</span>)</span><br />
 <div class="funccomm"><pre>Removes the the string <span class="string">"trimCars"</span> from  the string 'line'
@@ -634,7 +659,7 @@ else
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Jun  1 00:08:24 2015 </em><em>&raquo; Last generated: 2015-06-01 00:08</em><br />
+<em>&raquo; Last changed: Wed Aug  5 15:20:00 2015 </em><em>&raquo; Last generated: 2015-08-05 15:20</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

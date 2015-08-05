@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:11:08 2015            -->
+<!--   Date: Wed Aug  5 15:22:19 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -59,15 +59,15 @@
      <a href="../TSceptar.html">TSceptar</a>&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> <a href="../TSceptar.html">TSceptar</a>&amp;);  <span class="comment">//!</span>
 
    <span class="keyword">private</span>: 
-     TSceptarData *<a href="../TSceptar.html#TSceptar:sceptardata" title="TSceptarData* TSceptar::sceptardata">sceptardata</a>;                                               <span class="comment">//!  Used to build GRIFFIN Hits</span>
-     std::vector &lt;<a href="../TSceptarHit.html">TSceptarHit</a>&gt; <a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>;                                  <span class="comment">//   The set of crystal hits</span>
-
-<span class="comment">//     static <a href="../ListOfTypes.html#bool">bool</a> fSetWave;		                                                //  Flag for Waveforms ON/OFF</span>
+     TSceptarData *<a href="../TSceptar.html#TSceptar:sceptardata" title="TSceptarData* TSceptar::sceptardata">sceptardata</a>;                                               <span class="comment">//!  Used to build SCEPTAR Hits</span>
+     std::vector &lt;<a href="../TSceptarHit.html">TSceptarHit</a>&gt; <a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>;                                  <span class="comment">//   The set of sceptar hits</span>
+      
+     <span class="keyword">static</span> <span class="keyword">bool</span> <a href="../TSceptar.html#TSceptar:fSetWave" title="bool TSceptar::fSetWave">fSetWave</a>;		                                                <span class="comment">//  Flag for Waveforms ON/OFF</span>
 
      <span class="keyword">bool</span> <a href="../TSceptar.html#TSceptar:beta" title="bool TSceptar::beta">beta</a>;                                                               <span class="comment">//   Is there a sceptar hit?</span>
 
    <span class="keyword">public</span>:
-<span class="comment">//     static <a href="../ListOfTypes.html#bool">bool</a> SetWave()      { return fSetWave;  }	                        //!</span>
+<a name="As.Z3B"></a>     <span class="keyword">static</span> <span class="keyword">bool</span> <a href="../TSceptar.html#TSceptar:SetWave" title="bool TSceptar::SetWave()">SetWave</a>()      { <span class="keyword">return</span> <a href="../TSceptar.html#TSceptar:fSetWave" title="bool TSceptar::fSetWave">fSetWave</a>;  }	                        <span class="comment">//!</span>
 <a name="z82VxD"></a>     <span class="keyword">void</span> <a href="../TSceptar.html#TSceptar:SetBeta" title="void TSceptar::SetBeta(bool flag=true)">SetBeta</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>) { <a href="../TSceptar.html#TSceptar:beta" title="bool TSceptar::beta">beta</a> = flag; }                          <span class="comment">//!</span>
 <a name="xoiqwB"></a>     <span class="keyword">bool</span> <a href="../TSceptar.html#TSceptar:Beta" title="bool TSceptar::Beta()">Beta</a>()                {<span class="keyword">return</span> <a href="../TSceptar.html#TSceptar:beta" title="bool TSceptar::beta">beta</a>;}                                <span class="comment">//!  </span>
 
@@ -97,7 +97,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:11 </em><em>&raquo; Last generated: 2015-06-01 00:11</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:22 </em><em>&raquo; Last generated: 2015-08-05 15:22</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

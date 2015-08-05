@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:07:53 2015            -->
+<!--   Date: Wed Aug  5 15:19:41 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -75,7 +75,7 @@ return false;}
 <h2><a id="TFragmentSelector:Function_Members"></a>Function Members (Methods)</h2>
 <div class="access" id="funcpubl"><b>public:</b>
 <table class="func" id="tabfuncpubl" cellspacing="0">
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TFragmentSelector:TFragmentSelector">TFragmentSelector</a>(<span class="keyword">int</span> runnumber = 0, <span class="keyword">int</span> subrunnumber = 0, <a href="./TTree.html">TTree</a>* = 0)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TFragmentSelector:TFragmentSelector">TFragmentSelector</a>(<span class="keyword">int</span> runNumber = 0, <span class="keyword">int</span> subRunNumber = 0, <a href="./TTree.html">TTree</a>* = 0)</td></tr>
 <tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TFragmentSelector:_TFragmentSelector">~TFragmentSelector</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TSelector.html#TSelector:Abort"><span class="baseclass">TSelector::</span>Abort</a>(<span class="keyword">const</span> <span class="keyword">char</span>* why, <a href="./TSelector.html">TSelector</a>::EAbort what = kAbortProcess)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
@@ -220,7 +220,7 @@ return false;}
 <div class="access" id="datapubl"><b>public:</b>
 <table class="data" id="tabdatapubl" cellspacing="0">
 <tr class="data"><td class="datatype"><a href="./TTree.html">TTree</a>*</td><td class="dataname"><a name="TFragmentSelector:fChain"></a>fChain</td><td class="datadesc">!pointer to the analyzed TTree or TChain</td></tr>
-<tr class="data"><td class="datatype"><a href="./TFragment.html">TFragment</a>*</td><td class="dataname"><a name="TFragmentSelector:fragment"></a>fragment</td><td class="datadesc">The Current fragment being sent to the fragment selector</td></tr>
+<tr class="data"><td class="datatype"><a href="./TFragment.html">TFragment</a>*</td><td class="dataname"><a name="TFragmentSelector:fragment"></a>fragment</td><td></td></tr>
 
 </table></div>
 <div class="access" id="dataprot"><b>protected:</b>
@@ -235,8 +235,8 @@ return false;}
 </table></div>
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
-<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TFragmentSelector:frunnumber"></a>frunnumber</td><td class="datadesc">The current run number</td></tr>
-<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TFragmentSelector:fsubrunnumber"></a>fsubrunnumber</td><td class="datadesc">The current subrun number</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TFragmentSelector:fRunNumber"></a>fRunNumber</td><td class="datadesc">The current run number</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TFragmentSelector:fSubRunNumber"></a>fSubRunNumber</td><td class="datadesc">The current subrun number</td></tr>
 
 </table></div>
 </div>
@@ -246,21 +246,21 @@ return false;}
 <area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="2,8,168,39"/>
 </map>
 <map name="MapTFragmentSelector_InhMem" id="MapTFragmentSelector_InhMem">
-<area shape="rect" id="clust11" href="./TSelector.html" alt="" coords="403,65,469,100"/>
-<area shape="rect" id="clust13" href="./TSelector.html" alt="" coords="248,65,315,132"/>
-<area shape="rect" id="clust14" href="./TSelector.html" alt="" coords="435,115,437,117"/>
-<area shape="rect" id="clust15" href="./TSelector.html" alt="" coords="403,132,469,340"/>
-<area shape="rect" id="clust16" href="./TSelector.html" alt="" coords="325,132,392,340"/>
-<area shape="rect" id="clust17" href="./TSelector.html" alt="" coords="248,132,315,340"/>
-<area shape="rect" id="clust12" href="./TSelector.html" alt="" coords="325,65,392,132"/>
-<area shape="rect" id="clust10" href="./TSelector.html" title="TSelector" alt="" coords="248,35,469,340"/>
-<area shape="rect" id="clust26" href="./TObject.html" alt="" coords="16,47,83,495"/>
-<area shape="rect" id="clust22" href="./TObject.html" alt="" coords="16,495,83,609"/>
-<area shape="rect" id="clust23" href="./TObject.html" alt="" coords="203,47,205,49"/>
-<area shape="rect" id="clust24" href="./TObject.html" alt="" coords="171,49,237,484"/>
-<area shape="rect" id="clust25" href="./TObject.html" alt="" coords="93,47,160,495"/>
-<area shape="rect" id="clust20" href="./TObject.html" alt="" coords="171,497,237,593"/>
-<area shape="rect" id="clust21" href="./TObject.html" alt="" coords="93,495,160,609"/>
+<area shape="rect" id="clust11" href="./TSelector.html" alt="" coords="403,47,469,81"/>
+<area shape="rect" id="clust12" href="./TSelector.html" alt="" coords="325,47,392,113"/>
+<area shape="rect" id="clust13" href="./TSelector.html" alt="" coords="248,47,315,113"/>
+<area shape="rect" id="clust14" href="./TSelector.html" alt="" coords="435,96,437,99"/>
+<area shape="rect" id="clust15" href="./TSelector.html" alt="" coords="403,113,469,321"/>
+<area shape="rect" id="clust16" href="./TSelector.html" alt="" coords="325,113,392,321"/>
+<area shape="rect" id="clust17" href="./TSelector.html" alt="" coords="248,113,315,321"/>
+<area shape="rect" id="clust10" href="./TSelector.html" title="TSelector" alt="" coords="248,16,469,321"/>
+<area shape="rect" id="clust20" href="./TObject.html" alt="" coords="171,47,237,145"/>
+<area shape="rect" id="clust21" href="./TObject.html" alt="" coords="93,47,160,161"/>
+<area shape="rect" id="clust22" href="./TObject.html" alt="" coords="16,47,83,161"/>
+<area shape="rect" id="clust23" href="./TObject.html" alt="" coords="203,152,205,155"/>
+<area shape="rect" id="clust24" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust25" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust26" href="./TObject.html" alt="" coords="16,161,83,609"/>
 <area shape="rect" id="clust19" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
 </map>
 <map name="MapTFragmentSelector_Lib" id="MapTFragmentSelector_Lib">
@@ -336,55 +336,8 @@ return false;}
  user if needed. The return value is currently not used.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragmentSelector:TFragmentSelector" href="src/TFragmentSelector.h.html#c9kqNC">TFragmentSelector</a>(<span class="keyword">int</span> runnumber = 0, <span class="keyword">int</span> subrunnumber = 0, <a href="./TTree.html">TTree</a>*  = 0)</span><br />
-<div class="funccomm"><pre>
-   <a href="./ListOfTypes.html#Long_t">Long_t</a>          MidasTimeStamp;
-   <a href="./ListOfTypes.html#UInt_t">UInt_t</a>          MidasId;
-   <a href="./ListOfTypes.html#ULong_t">ULong_t</a>         TriggerId;
-   <a href="./ListOfTypes.html#UInt_t">UInt_t</a>          FragmentId;
-   <a href="./ListOfTypes.html#Int_t">Int_t</a>           TriggerBitPattern;
-   <a href="./ListOfTypes.html#Int_t">Int_t</a>           ChannelNumber;
-   <a href="./ListOfTypes.html#Int_t">Int_t</a>           ChannelAddress;
-   std::vector&lt;int32_t&gt; Cfd;
-   std::vector&lt;int32_t&gt; Led;
-   std::vector&lt;int32_t&gt; Charge;
-   <a href="./ListOfTypes.html#Int_t">Int_t</a>           TimeStampLow;
-   <a href="./ListOfTypes.html#Int_t">Int_t</a>           TimeStampHigh;
-   <a href="./ListOfTypes.html#Int_t">Int_t</a>           TimeToTrig;
-   <a href="./ListOfTypes.html#UInt_t">UInt_t</a>          PPG;
-   <a href="./ListOfTypes.html#UShort_t">UShort_t</a>        DeadTime;
-   <a href="./ListOfTypes.html#UShort_t">UShort_t</a>        NumberOfFilters;
-   <a href="./ListOfTypes.html#UShort_t">UShort_t</a>        NumberOfPileups;
-   <a href="./ListOfTypes.html#UShort_t">UShort_t</a>        DataType;
-   <a href="./ListOfTypes.html#UShort_t">UShort_t</a>        DetectorType;
-   <a href="./ListOfTypes.html#UInt_t">UInt_t</a>          ChannelId;
-   std::vector&lt;<a href="./ListOfTypes.html#unsigned">unsigned</a> <a href="./ListOfTypes.html#short">short</a>&gt; KValue;
-   std::vector&lt;int16_t&gt; wavebuffer;
-
-   // List of branches
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_MidasTimeStamp;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_MidasId;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_TriggerId;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_FragmentId;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_TriggerBitPattern;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_ChannelNumber;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_ChannelAddress;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_Cfd;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_Led;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_Charge;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_TimeStampLow;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_TimeStampHigh;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_TimeToTrig;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_PPG;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_DeadTime;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_NumberOfFilters;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_NumberOfPileups;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_DataType;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_DetectorType;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_ChannelId;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_KValue;   //!
-   <a href="./TBranch.html">TBranch</a>        *b_TFragment_wavebuffer;   //!
-
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragmentSelector:TFragmentSelector" href="src/TFragmentSelector.h.html#JTRuxC">TFragmentSelector</a>(<span class="keyword">int</span> runNumber = 0, <span class="keyword">int</span> subRunNumber = 0, <a href="./TTree.html">TTree</a>*  = 0)</span><br />
+<div class="funccomm"><pre>EDIT: add run and subrun numbers
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">virtual</span> <a class="funcname" name="TFragmentSelector:_TFragmentSelector" href="src/TFragmentSelector.h.html#JtfaS">~TFragmentSelector</a>()</span><br />
@@ -427,7 +380,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Mon Jun  1 00:07:56 2015 </em><em>&raquo; Last generated: 2015-06-01 00:07</em><br />
+<em>&raquo; Last changed: Wed Aug  5 15:19:42 2015 </em><em>&raquo; Last generated: 2015-08-05 15:19</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

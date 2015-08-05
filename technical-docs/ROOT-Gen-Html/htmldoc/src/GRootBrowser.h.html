@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Mon Jun  1 00:05:06 2015            -->
+<!--   Date: Wed Aug  5 15:15:44 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -51,28 +51,28 @@
 
 <span class="comment">//_____________________________________________________________________________</span>
 <span class="comment">//</span>
-<span class="comment">// <a href="../TBrowserPlugin.html">TBrowserPlugin</a></span>
+<span class="comment">// <a href="../GBrowserPlugin.html">GBrowserPlugin</a></span>
 <span class="comment">//</span>
 <span class="comment">// Helper class used to manage plugins (command or macro to be executed).</span>
 <span class="comment">//_____________________________________________________________________________</span>
 
-<span class="keyword">class</span> <a href="../TBrowserPlugin.html">TBrowserPlugin</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a>
+<span class="keyword">class</span> <a href="../GBrowserPlugin.html">GBrowserPlugin</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a>
 {
 <span class="keyword">public</span>:
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    fTab;             <span class="comment">// Tab number</span>
    <a href="../ListOfTypes.html#Int_t">Int_t</a>    fSubTab;          <span class="comment">// Tab element number</span>
    <a href="../TString.html">TString</a>  fCommand;         <span class="comment">// Command to be executed</span>
 
-   <a href="../TBrowserPlugin.html">TBrowserPlugin</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">const</span> <span class="keyword">char</span> *cmd = <span class="string">""</span>, <a href="../ListOfTypes.html#Int_t">Int_t</a> tab = 1,
+   <a href="../GBrowserPlugin.html">GBrowserPlugin</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">const</span> <span class="keyword">char</span> *cmd = <span class="string">""</span>, <a href="../ListOfTypes.html#Int_t">Int_t</a> tab = 1,
                   <a href="../ListOfTypes.html#Int_t">Int_t</a> sub = -1) : <a href="../TNamed.html">TNamed</a>(name, cmd), fTab(tab),
       fSubTab(sub), fCommand(cmd) { }
-   <span class="keyword">virtual</span> ~TBrowserPlugin() {}
+   <span class="keyword">virtual</span> ~GBrowserPlugin() {}
 
    <span class="keyword">void</span>     <a href="../GRootBrowser.html#GRootBrowser:SetTab" title="void GRootBrowser::SetTab(Int_t pos=kRight,Int_t subpos=-1)">SetTab</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> tab) { fTab = tab; }
    <span class="keyword">void</span>     SetSubTab(<a href="../ListOfTypes.html#Int_t">Int_t</a> sub) { fSubTab = sub; }
    <span class="keyword">void</span>     SetCommand(<span class="keyword">const</span> <span class="keyword">char</span> *cmd) { fCommand = cmd; }
 
-   ClassDef(<a href="../TBrowserPlugin.html">TBrowserPlugin</a>, 0)  <span class="comment">// basic plugin description class</span>
+   ClassDef(<a href="../GBrowserPlugin.html">GBrowserPlugin</a>, 0)  <span class="comment">// basic plugin description class</span>
 };
 
 <span class="keyword">class</span> <a href="../GRootBrowser.html">GRootBrowser</a> : <span class="keyword">public</span> <a href="../TGMainFrame.html">TGMainFrame</a>, <span class="keyword">public</span> <a href="../TBrowserImp.html">TBrowserImp</a> {
@@ -217,7 +217,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-06-01 00:05 </em><em>&raquo; Last generated: 2015-06-01 00:05</em><br />
+<em>&raquo; Last changed: 2015-08-05 15:15 </em><em>&raquo; Last generated: 2015-08-05 15:15</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
