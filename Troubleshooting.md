@@ -45,10 +45,35 @@ Error: cannot open file "gnu/stubs.h" /usr/include/features.h:399:
 Error: cannot open file "bits/wchar.h" /usr/include/stdint.h:27:
 Error: cannot open file "bits/wordsize.h" /usr/include/stdint.h:28:
 ```
-To rectify this problem you need to update your c++ libraries
-- Try installing the `stdlibc-dev` package (`sudo apt-get install stdlibc-dev-i386` on Ubuntu). 
-- If you still recieve an error about standard C libraries, such as `ofstream`, you should install `libc6-dev`.
-- Also, `g++-multilibs` has been shown to help.
+You're missing the 32 bit libc dev package:
+
+On **Ubuntu** it's called `libc6-dev-i386` - do `sudo apt-get install libc6-dev-i386`. See below for extra instructions for Ubuntu 12.04.
+
+On **Red Hat** distros, the package name is `glibc-devel.i686` 
+
+On **CentOS 5.8**, the package name is `glibc-devel.i386`
+
+On **CentOS 6 / 7**, the package name is `glibc-devel.i686`.
+
+On **SLES** it's called `glibc-devel-32bit` - do `zypper in glibc-devel-32bit`
+
+Are you using Ubuntu 12.04? There is a known problem that puts the files in a non standard location. You'll also need to do:
+```bash
+export LIBRARY_PATH=/usr/lib/$(gcc -print-multiarch)
+export C_INCLUDE_PATH=/usr/include/$(gcc -print-multiarch)
+export CPLUS_INCLUDE_PATH=/usr/include/$(gcc -print-multiarch)
+```
+
+If you encounter the problem:
+```bash
+.... /usr/bin/ld: cannot find -lstdc++ ....
+```
+
+On **Ubuntu** you will need to do  `sudo apt-get install g++-multilib`
+
+On **CentOS 5** you will need to do `yum install libstdc++-devel.i386`
+
+On **CentOS 6** you will need to do `yum install libstdc++-devel.i686`
 
 ####XML
 - If you have any problems with XML, etc. Please make sure you followed the ROOT download instructions very carefully including the installation of packages such as `libxml2-dev`.
