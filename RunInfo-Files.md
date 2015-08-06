@@ -10,6 +10,7 @@ or
 ```
 grsisort -a fragment04242_000.root mycal.cal myruninfo.info
 ```
+The last .info file input on the command line is the one that GRSISort uses.
 
 # RunInfo file format #
 An [example RunInfo file](https://github.com/GRIFFINCollaboration/GRSISort/blob/master/util/grsiruninfoexample.info) is located in the `util` directory and is copied here:
