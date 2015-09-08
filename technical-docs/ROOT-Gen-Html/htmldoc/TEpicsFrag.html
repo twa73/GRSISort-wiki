@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Aug  5 15:49:24 2015            -->
+<!--   Date: Tue Sep  8 11:10:40 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -63,7 +63,7 @@ return false;}
 <a href="./TEpicsFrag.html">TEpicsFrag</a>
 
 This <a href="./TEpicsFrag.html#TEpicsFrag:Class" title="TClass* TEpicsFrag::Class()">Class</a> should contain all the information found in
-NOT typeid 1 midas events.
+NOT typeid 1 midas events. aka Epics (scaler) Events.
 
 
 
@@ -195,11 +195,11 @@ NOT typeid 1 midas events.
 </table></div>
 <div class="access" id="datapubl"><b>public:</b>
 <table class="data" id="tabdatapubl" cellspacing="0">
-<tr class="data"><td class="datatype">vector&lt;<span class="keyword">float</span>&gt;</td><td class="dataname"><a name="TEpicsFrag:Data"></a>Data</td><td></td></tr>
+<tr class="data"><td class="datatype">vector&lt;<span class="keyword">float</span>&gt;</td><td class="dataname"><a name="TEpicsFrag:Data"></a>Data</td><td class="datadesc">The data in the scaler</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="TEpicsFrag:MidasId"></a>MidasId</td><td class="datadesc">-&gt;  MIDAS ID</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#time_t">time_t</a></td><td class="dataname"><a name="TEpicsFrag:MidasTimeStamp"></a>MidasTimeStamp</td><td class="datadesc">-&gt;  Timestamp of the MIDAS event  </td></tr>
-<tr class="data"><td class="datatype">vector&lt;std::string&gt;</td><td class="dataname"><a name="TEpicsFrag:Name"></a>Name</td><td></td></tr>
-<tr class="data"><td class="datatype">vector&lt;std::string&gt;</td><td class="dataname"><a name="TEpicsFrag:Unit"></a>Unit</td><td></td></tr>
+<tr class="data"><td class="datatype">vector&lt;std::string&gt;</td><td class="dataname"><a name="TEpicsFrag:Name"></a>Name</td><td class="datadesc">The name of hte scaler</td></tr>
+<tr class="data"><td class="datatype">vector&lt;std::string&gt;</td><td class="dataname"><a name="TEpicsFrag:Unit"></a>Unit</td><td class="datadesc">The Scaler unit</td></tr>
 
 </table></div>
 </div>
@@ -229,6 +229,8 @@ NOT typeid 1 midas events.
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTEpicsFrag_Inh" src="inh/TEpicsFrag_Inh.png"/></div>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TEpicsFrag:TEpicsFrag" href="src/TEpicsFrag.cxx.html#yceneD">TEpicsFrag</a>()</span><br />
+<div class="funccomm"><pre>Default Constructor.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TEpicsFrag:_TEpicsFrag" href="src/TEpicsFrag.cxx.html#xscV9">~TEpicsFrag</a>()</span><br />
 
@@ -236,8 +238,13 @@ NOT typeid 1 midas events.
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TEpicsFrag:Clear" href="src/TEpicsFrag.cxx.html#aELX5B">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre>Clears the <a href="./TEpicsFrag.html">TEpicsFrag</a>.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TEpicsFrag:Print" href="src/TEpicsFrag.cxx.html#DKancB">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
+<div class="funccomm"><pre>Prints the <a href="./TEpicsFrag.html">TEpicsFrag</a>. This includes Midas information as well the data
+kep inside of the scaler.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TEpicsFrag:TEpicsFrag" href="src/TEpicsFrag.h.html#L9t0l">TEpicsFrag</a>()</span><br />
 </div>
@@ -256,7 +263,7 @@ NOT typeid 1 midas events.
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Wed Aug  5 15:49:25 2015 </em><em>&raquo; Last generated: 2015-08-05 15:49</em><br />
+<em>&raquo; Last changed: Tue Sep  8 11:10:41 2015 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

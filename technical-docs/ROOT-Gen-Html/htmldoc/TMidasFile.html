@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Aug  5 15:51:37 2015            -->
+<!--   Date: Tue Sep  8 11:12:51 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -58,7 +58,15 @@ return false;}
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="TMidasFile:description"></a>class TMidasFile: public <a href="./TObject.html">TObject</a></h1>
 <div class="classdescr">
-</div>
+<pre>
+
+<a href="./TMidasFile.html">TMidasFile</a>
+
+This <a href="./TMidasFile.html#TMidasFile:Class" title="TClass* TMidasFile::Class()">Class</a> is used to read and write MIDAS files in the
+root framework. It reads and writes TMidasEvents.
+
+
+</pre></div>
 </div></div>
 
 <div id="functions">
@@ -237,8 +245,12 @@ return false;}
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTMidasFile_Inh" src="inh/TMidasFile_Inh.png"/></div>
 <h2>Function documentation</h2>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TMidasFile:TMidasFile" href="src/TMidasFile.cxx.html#ajsvK">TMidasFile</a>()</span><br />
+<div class="funccomm"><pre>Default Constructor
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TMidasFile:_TMidasFile" href="src/TMidasFile.cxx.html#K9oNbE">~TMidasFile</a>()</span><br />
+<div class="funccomm"><pre>Default dtor. It closes the read in midas file as well as the output midas file.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TMidasFile:Open" href="src/TMidasFile.cxx.html#S4GxAE">Open</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename)</span><br />
 <div class="funccomm"><pre> <a href="./TMidasFile.html#TMidasFile:Open" title="bool TMidasFile::Open(const char* filename)">Open</a> a midas .mid file with given file name.
@@ -279,18 +291,37 @@ return false;}
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TMidasFile:WriteBuffer" href="src/TMidasFile.cxx.html#m85qf">WriteBuffer</a>()</span><br />
+<div class="funccomm"><pre>Writes a buffer of TMidasEvents to the output file.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TMidasFile:Write" href="src/TMidasFile.cxx.html#xkhfoC">Write</a>(<a href="./TMidasEvent.html">TMidasEvent</a>* event, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre>Writes an individual <a href="./TMidasEvent.html">TMidasEvent</a> to the output <a href="./TMidasFile.html">TMidasFile</a>. This will
+write to a zipped file if the output file is defined as a zipped file.
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TMidasFile:SetMaxBufferSize" href="src/TMidasFile.cxx.html#I4wFkB">SetMaxBufferSize</a>(<span class="keyword">int</span> maxsize)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TMidasFile:SetMaxBufferSize" href="src/TMidasFile.cxx.html#jp.aME">SetMaxBufferSize</a>(<span class="keyword">int</span> maxsize)</span><br />
+<div class="funccomm"><pre>Sets the maximum buffer size for the TMidasEvents to be written to
+an output <a href="./TMidasFile.html">TMidasFile</a>.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TMidasFile:Close" href="src/TMidasFile.cxx.html#jwiwhB">Close</a>()</span><br />
+<div class="funccomm"><pre>Closes the input midas file. Use <a href="./TMidasFile.html#TMidasFile:OutClose" title="void TMidasFile::OutClose()">OutClose</a>() to close the output
+Midas File.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TMidasFile:OutClose" href="src/TMidasFile.cxx.html#foSmtD">OutClose</a>()</span><br />
+<div class="funccomm"><pre>Closes the output midas file. Use <a href="./TMidasFile.html#TMidasFile:Close" title="void TMidasFile::Close()">Close</a>() to close the read-in midas file
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TMidasFile:GetRunNumber" href="src/TMidasFile.cxx.html#pPEYbD">GetRunNumber</a>()</span><br />
+<div class="funccomm"><pre>Parse the run number from the current <a href="./TMidasFile.html">TMidasFile</a>. This assumes a format of
+run#####_###.mid or run#####.mid.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TMidasFile:GetSubRunNumber" href="src/TMidasFile.cxx.html#p.GzDC">GetSubRunNumber</a>()</span><br />
+<div class="funccomm"><pre>Parse the sub run number from the current <a href="./TMidasFile.html">TMidasFile</a>. This assumes a format of
+run#####_###.mid or run#####.mid.
+</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TMidasFile:TMidasFile" href="src/TMidasFile.h.html#cbQCXD">TMidasFile</a>()</span><br />
 </div>
@@ -316,7 +347,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Wed Aug  5 15:51:38 2015 </em><em>&raquo; Last generated: 2015-08-05 15:51</em><br />
+<em>&raquo; Last changed: Tue Sep  8 11:12:52 2015 </em><em>&raquo; Last generated: 2015-09-08 11:12</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

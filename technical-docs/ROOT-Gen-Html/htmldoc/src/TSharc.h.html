@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Aug  5 15:52:26 2015            -->
+<!--   Date: Tue Sep  8 11:13:51 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -64,7 +64,7 @@
 
     <span class="comment">//TSharcData *GetData() { return &amp;<a href="../TSharc.html#TSharc:data" title="TSharcData* TSharc::data">data</a>; }  //!</span>
     <span class="keyword">void</span> <a href="../TSharc.html#TSharc:FillData" title="void TSharc::FillData(TFragment* ,TChannel* ,MNEMONIC* )">FillData</a>(<a href="../TFragment.html">TFragment</a>*,<a href="../TChannel.html">TChannel</a>*,MNEMONIC*);           <span class="comment">//! Collects the fragments to make front/back/pad coinc.</span>
-    <span class="keyword">void</span> <a href="../TSharc.html#TSharc:BuildHits" title="void TSharc::BuildHits(TGRSIDetectorData* sd=0,Option_t* =&quot;&quot;)">BuildHits</a>(TGRSIDetectorData *sd=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>); <span class="comment">//! Builds the fragments into sharchits.</span>
+    <span class="keyword">void</span> <a href="../TSharc.html#TSharc:BuildHits" title="void TSharc::BuildHits(TDetectorData* sd=0,Option_t* =&quot;&quot;)">BuildHits</a>(TDetectorData *sd=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>); <span class="comment">//! Builds the fragments into sharchits.</span>
 
   <span class="keyword">protected</span>:
 <a name="VR0lVB"></a>    <span class="keyword">void</span> <a href="../TSharc.html#TSharc:PushBackHit" title="void TSharc::PushBackHit(TGRSIDetectorHit* sharchit)">PushBackHit</a>(<a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>* sharchit) { <a href="../TSharc.html#TSharc:sharc_hits" title="vector&lt;TSharcHit&gt; TSharc::sharc_hits">sharc_hits</a>.<a href="../vector_TSharcHit_.html#vector_TSharcHit_:push_back" title="void vector&lt;TSharcHit,allocator&lt;TSharcHit&gt; &gt;::push_back(const TSharcHit&amp; x)">push_back</a>(*((<a href="../TSharcHit.html">TSharcHit</a>*)sharchit)); };
@@ -123,7 +123,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-08-05 15:52 </em><em>&raquo; Last generated: 2015-08-05 15:52</em><br />
+<em>&raquo; Last changed: 2015-09-08 11:13 </em><em>&raquo; Last generated: 2015-09-08 11:13</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

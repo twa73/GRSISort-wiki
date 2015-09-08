@@ -22,14 +22,14 @@
  * The info is written ok at the end of the fragment tree process.
  * After reading the TGRSIRunInfo object from a TFile, the static function
  *
- *   TGRSIRunInfo::SetInfoFromFile(ptr_to_runinfo);
+ *   TGRSIRunInfo::ReadInfoFromFile(ptr_to_runinfo);
  *
  * must be called for any of teh functions here to work.
  *
  * Live example:
  
  root [1] TGRSIRunInfo *info = (TGRSIRunInfo*)_file0->Get("TGRSIRunInfo")
- root [2] TGRSIRunInfo::SetInfoFromFile(info);
+ root [2] TGRSIRunInfo::ReadInfoFromFile(info);
  root [3] info->Print()
    TGRSIRunInfo Status:
    RunNumber:    29038
@@ -57,6 +57,7 @@
 #include <TObject.h>
 #include <TTree.h>
 #include <TFile.h>
+#include <TKey.h>
 
 #include "TChannel.h"
 
@@ -71,7 +72,8 @@ class TGRSIRunInfo : public TObject {
                         // order to write this class to a tree.
                         // pcb.
       
-      static void SetInfoFromFile(TGRSIRunInfo *temp);
+      static void SetRunInfo(TGRSIRunInfo *temp);
+      static Bool_t ReadInfoFromFile(TFile *tempf = 0);
 
       static const char* GetGRSIVersion() { return fGRSIVersion.c_str(); } 
       static void ClearGRSIVersion() { fGRSIVersion.clear(); } 
@@ -89,6 +91,14 @@ class TGRSIRunInfo : public TObject {
 
       static inline int  RunNumber() { return fGRSIRunInfo->fRunNumber; }
       static inline int  SubRunNumber() { return fGRSIRunInfo->fSubRunNumber; }
+
+      static inline void   SetRunStart(double tmp)  { fGRSIRunInfo->fRunStart = tmp; }
+      static inline void   SetRunStop(double tmp)   { fGRSIRunInfo->fRunStop = tmp; }
+      static inline void   SetRunLength(double tmp) { fGRSIRunInfo->fRunLength = tmp; }
+
+      static inline double RunStart()  { return fGRSIRunInfo->fRunStart; }
+      static inline double RunStop()   { return fGRSIRunInfo->fRunStop; }
+      static inline double RunLength() { return fGRSIRunInfo->fRunLength; }
 
       static inline void SetMajorIndex(const char *tmpstr) { fGRSIRunInfo->fMajorIndex.assign(tmpstr); }
       static inline void SetMinorIndex(const char *tmpstr) { fGRSIRunInfo->fMinorIndex.assign(tmpstr); }
@@ -124,6 +134,9 @@ class TGRSIRunInfo : public TObject {
       static const char* GetXMLODBFileName() { return fGRSIRunInfo->fXMLODBFileName.c_str(); }
       static const char* GetXMLODBFileData() { return fGRSIRunInfo->fXMLODBFile.c_str(); }
 
+      static const char* GetRunInfoFileName() { return fGRSIRunInfo->fRunInfoFileName.c_str(); }
+      static const char* GetRunInfoFileData() { return fGRSIRunInfo->fRunInfoFile.c_str(); }
+
       static Bool_t  ReadInfoFile(const char *filename = "");
       static Bool_t  ParseInputData(const char *inputdata = "",Option_t *opt = "q");
 
@@ -152,11 +165,17 @@ class TGRSIRunInfo : public TObject {
       inline void SetBuildWindow(const long int t_bw)    { fBuildWindow = t_bw; } 
       inline void SetAddBackWindow(const double   t_abw) { fAddBackWindow = t_abw; } 
 
+      inline void SetMovingWindow(const bool flag)       {fIsMovingWindow = flag; }
+      static inline bool IsMovingWindow()                { return Get()->fIsMovingWindow; }
+
       static inline long int BuildWindow()    { return Get()->fBuildWindow; }
       static inline double   AddBackWindow()  { return Get()->fAddBackWindow; }
 
       inline void SetHPGeArrayPosition(const int arr_pos) { fHPGeArrayPosition = arr_pos; }
       static inline int  HPGeArrayPosition()  { return Get()->fHPGeArrayPosition; }
+
+      Long64_t Merge(TCollection *list);
+      void Add(TGRSIRunInfo* runinfo) { fRunStart = 0.; fRunStop = 0.; fRunLength += runinfo->RunLength(); }
 
    private:
       static TGRSIRunInfo *fGRSIRunInfo; //Static pointer to TGRSIRunInfo
@@ -164,6 +183,10 @@ class TGRSIRunInfo : public TObject {
 
       int fRunNumber;                     //The current run number
       int fSubRunNumber;                  //The current sub run number
+
+      double fRunStart;                      //The start  of the current run in seconds
+      double fRunStop;                       //The stop   of the current run in seconds
+      double fRunLength;                     //The length of the current run in seconds
 
       int fNumberOfTrueSystems;           //The number of detection systems in the array
 
@@ -217,11 +240,12 @@ class TGRSIRunInfo : public TObject {
       /////////////////////////////////////////////////
 
       std::string fRunInfoFileName; //The name of the Run info file
-      std::string fRunInfoFile;     //The contents of the run infor file
+      std::string fRunInfoFile;     //The contents of the run info file
 	   static void trim(std::string *, const std::string & trimChars = " \f\n\r\t\v");
 
       long int fBuildWindow;          // if building with a window(GRIFFIN) this is the size of the window. (default = 2us (200))
       double   fAddBackWindow;        // Time used to build Addback-Ge-Events for TIGRESS/GRIFFIN.   (default =150 ns (15.0))
+      bool     fIsMovingWindow;       // if set to true the event building window moves. Static otherwise.
       
       double  fHPGeArrayPosition;        // Position of the HPGe Array (default = 110.0 mm );
   
@@ -230,7 +254,7 @@ class TGRSIRunInfo : public TObject {
       void Print(Option_t *opt = "") const;
       void Clear(Option_t *opt = "");
 
-   ClassDef(TGRSIRunInfo,3);  //Contains the run-dependent information.
+   ClassDef(TGRSIRunInfo,5);  //Contains the run-dependent information.
 };
 
 #endif

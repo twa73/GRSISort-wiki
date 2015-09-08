@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Aug  5 15:48:52 2015            -->
+<!--   Date: Tue Sep  8 11:10:05 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -70,7 +70,7 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAnalysisTreeBuilder:BuildActiveAnalysisTreeBranches">BuildActiveAnalysisTreeBranches</a>(map&lt;<span class="keyword">const</span> <span class="keyword">char</span>*,<a href="./TGRSIDetector.html">TGRSIDetector</a>*&gt;*)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAnalysisTreeBuilder:BuildActiveAnalysisTreeBranches">BuildActiveAnalysisTreeBranches</a>(map&lt;std::string,<a href="./TDetector.html">TDetector</a>*&gt;*)</td></tr>
 <tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TAnalysisTreeBuilder:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Clear"><span class="baseclass">TObject::</span>Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
@@ -90,8 +90,8 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(<a href="./TMethod.html">TMethod</a>* method, <a href="./TObjArray.html">TObjArray</a>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ExecuteEvent"><span class="baseclass">TObject::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAnalysisTreeBuilder:FillAnalysisTree">FillAnalysisTree</a>(map&lt;<span class="keyword">const</span> <span class="keyword">char</span>*,<a href="./TGRSIDetector.html">TGRSIDetector</a>*&gt;*)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAnalysisTreeBuilder:FillWriteQueue">FillWriteQueue</a>(map&lt;<span class="keyword">const</span> <span class="keyword">char</span>*,<a href="./TGRSIDetector.html">TGRSIDetector</a>*&gt;*)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAnalysisTreeBuilder:FillAnalysisTree">FillAnalysisTree</a>(map&lt;std::string,<a href="./TDetector.html">TDetector</a>*&gt;*)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAnalysisTreeBuilder:FillWriteQueue">FillWriteQueue</a>(map&lt;std::string,<a href="./TDetector.html">TDetector</a>*&gt;*)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <a href="./TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>*</td><td class="funcname"><a class="funcname" href="#TAnalysisTreeBuilder:Get">Get</a>()</td></tr>
@@ -209,7 +209,7 @@ return false;}
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype">static <span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="dataname"><a name="TAnalysisTreeBuilder:MEM_SIZE"></a>MEM_SIZE</td><td class="datadesc">Sets the minimum amount of memory used to hold the frament tree</td></tr>
-<tr class="data"><td class="datatype">TCSM*</td><td class="dataname"><a name="TAnalysisTreeBuilder:csm"></a>csm</td><td class="datadesc">A pointer to the CSM Mother Class</td></tr>
+<tr class="data"><td class="datatype"><a href="./TCSM.html">TCSM</a>*</td><td class="dataname"><a name="TAnalysisTreeBuilder:csm"></a>csm</td><td class="datadesc">A pointer to the CSM Mother Class</td></tr>
 <tr class="data"><td class="datatype"><a href="./TDescant.html">TDescant</a>*</td><td class="dataname"><a name="TAnalysisTreeBuilder:descant"></a>descant</td><td class="datadesc">A pointer to the Descant Mother Class</td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">int</span></td><td class="dataname"><a name="TAnalysisTreeBuilder:fAnalysisIn"></a>fAnalysisIn</td><td></td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">int</span></td><td class="dataname"><a name="TAnalysisTreeBuilder:fAnalysisOut"></a>fAnalysisOut</td><td></td></tr>
@@ -219,6 +219,7 @@ return false;}
 <tr class="data"><td class="datatype"><a href="./TFile.html">TFile</a>*</td><td class="dataname"><a name="TAnalysisTreeBuilder:fCurrentFragFile"></a>fCurrentFragFile</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TFragment.html">TFragment</a>*</td><td class="dataname"><a name="TAnalysisTreeBuilder:fCurrentFragPtr"></a>fCurrentFragPtr</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TTree.html">TTree</a>*</td><td class="dataname"><a name="TAnalysisTreeBuilder:fCurrentFragTree"></a>fCurrentFragTree</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TPPG.html">TPPG</a>*</td><td class="dataname"><a name="TAnalysisTreeBuilder:fCurrentPPG"></a>fCurrentPPG</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TGRSIRunInfo.html">TGRSIRunInfo</a>*</td><td class="dataname"><a name="TAnalysisTreeBuilder:fCurrentRunInfo"></a>fCurrentRunInfo</td><td></td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">long</span></td><td class="dataname"><a name="TAnalysisTreeBuilder:fEntries"></a>fEntries</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TChain.html">TChain</a>*</td><td class="dataname"><a name="TAnalysisTreeBuilder:fFragmentChain"></a>fFragmentChain</td><td></td></tr>
@@ -240,11 +241,11 @@ return false;}
 <map name="MapTAnalysisTreeBuilder_InhMem" id="MapTAnalysisTreeBuilder_InhMem">
 <area shape="rect" id="clust11" href="./TObject.html" alt="" coords="171,47,237,145"/>
 <area shape="rect" id="clust12" href="./TObject.html" alt="" coords="93,47,160,161"/>
-<area shape="rect" id="clust16" href="./TObject.html" alt="" coords="93,161,160,609"/>
-<area shape="rect" id="clust17" href="./TObject.html" alt="" coords="16,161,83,609"/>
 <area shape="rect" id="clust13" href="./TObject.html" alt="" coords="16,47,83,161"/>
 <area shape="rect" id="clust14" href="./TObject.html" alt="" coords="203,152,205,155"/>
 <area shape="rect" id="clust15" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust16" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust17" href="./TObject.html" alt="" coords="16,161,83,609"/>
 <area shape="rect" id="clust10" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
 </map>
 <map name="MapTAnalysisTreeBuilder_Lib" id="MapTAnalysisTreeBuilder_Lib">
@@ -265,11 +266,6 @@ return false;}
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAnalysisTreeBuilder:TAnalysisTreeBuilder" href="src/TAnalysisTreeBuilder.cxx.html#soNu5E">TAnalysisTreeBuilder</a>()</span><br />
 <div class="funccomm"><pre>The Default ctor for the analysis tree builder
 </pre></div>
-</div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAnalysisTreeBuilder:_TAnalysisTreeBuilder" href="src/TAnalysisTreeBuilder.cxx.html#B49mOB">~TAnalysisTreeBuilder</a>()</span><br />
-
-<div class="code"><code class="inlinecode">{ }</code></div>
-<div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:StartMakeAnalysisTree" href="src/TAnalysisTreeBuilder.cxx.html#gBlFJE">StartMakeAnalysisTree</a>(<span class="keyword">int</span> argc = 1, <span class="keyword">char</span>** argv = 0)</span><br />
 <div class="funccomm"><pre>Sets up a fragment chain from the list of fragment files sent to
@@ -308,8 +304,6 @@ It then takes the sorted fragments and puts them into the eventQ.
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:SetupFragmentTree" href="src/TAnalysisTreeBuilder.cxx.html#HRNnZ">SetupFragmentTree</a>()</span><br />
-<div class="funccomm"><pre>Set up the fragment Tree to be sorted on time stamps or trigger Id's. This also reads the the run info out of the fragment tree.
-</pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:SetupOutFile" href="src/TAnalysisTreeBuilder.cxx.html#Wxqwv">SetupOutFile</a>()</span><br />
 <div class="funccomm"><pre>Sets up the anaysistree.root file to write the created events into
@@ -329,11 +323,11 @@ that tells you which detector systems were found in the RunInfo.
 <div class="funccomm"><pre>Clears the current analysis tree branches.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:BuildActiveAnalysisTreeBranches" href="src/TAnalysisTreeBuilder.cxx.html#WDIvgC">BuildActiveAnalysisTreeBranches</a>(map&lt;<span class="keyword">const</span> <span class="keyword">char</span>*,<a href="./TGRSIDetector.html">TGRSIDetector</a>*&gt;* )</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:BuildActiveAnalysisTreeBranches" href="src/TAnalysisTreeBuilder.cxx.html#wGyO0C">BuildActiveAnalysisTreeBranches</a>(map&lt;std::string,<a href="./TDetector.html">TDetector</a>*&gt;* )</span><br />
 <div class="funccomm"><pre>Build the hits in each of the detectors.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:FillWriteQueue" href="src/TAnalysisTreeBuilder.cxx.html#ojEePD">FillWriteQueue</a>(map&lt;<span class="keyword">const</span> <span class="keyword">char</span>*,<a href="./TGRSIDetector.html">TGRSIDetector</a>*&gt;* )</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:FillWriteQueue" href="src/TAnalysisTreeBuilder.cxx.html#Xz0p4">FillWriteQueue</a>(map&lt;std::string,<a href="./TDetector.html">TDetector</a>*&gt;* )</span><br />
 <div class="funccomm"><pre>Fill the write Q with the built hits in each of the detectors.
 </pre></div>
 </div>
@@ -342,7 +336,7 @@ that tells you which detector systems were found in the RunInfo.
 of the built events in the write Q.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:FillAnalysisTree" href="src/TAnalysisTreeBuilder.cxx.html#fkQH6C">FillAnalysisTree</a>(map&lt;<span class="keyword">const</span> <span class="keyword">char</span>*,<a href="./TGRSIDetector.html">TGRSIDetector</a>*&gt;* )</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:FillAnalysisTree" href="src/TAnalysisTreeBuilder.cxx.html#RPL7aB">FillAnalysisTree</a>(map&lt;std::string,<a href="./TDetector.html">TDetector</a>*&gt;* )</span><br />
 <div class="funccomm"><pre>Fill the analysis Tree with the built events. Each detector gets its own branch in the analysis tree
 </pre></div>
 </div>
@@ -363,6 +357,18 @@ This is important because different detector systems will need different experim
 <div class="funccomm"><pre>Prints the current status for each of the threads in the TAnalysisTree Building process
 </pre></div>
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TAnalysisTreeBuilder:operator_" href="src/TAnalysisTreeBuilder.h.html#qf0O4D">operator=</a>(<span class="keyword">const</span> <a href="./TAnalysisTreeBuilder.html">TAnalysisTreeBuilder</a>&amp; )</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TObject.html#TObject:MayNotUse" title="void TObject::MayNotUse(const char* method)">MayNotUse</a>(__PRETTY_FUNCTION__); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">virtual</span> <a class="funcname" name="TAnalysisTreeBuilder:_TAnalysisTreeBuilder" href="src/TAnalysisTreeBuilder.h.html#MwAwdE">~TAnalysisTreeBuilder</a>()</span><br />
+<div class="funccomm"><pre>virtual <a href="./TAnalysisTreeBuilder.html#TAnalysisTreeBuilder:_TAnalysisTreeBuilder" title="void TAnalysisTreeBuilder::~TAnalysisTreeBuilder()">~TAnalysisTreeBuilder</a>();
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ std::<a href="./ListOfTypes.html#ostream">cout</a> &lt;&lt; std::endl &lt;&lt; <span class="string">"In analysis tree builder dstor."</span> &lt;&lt; std::endl; }</code></div>
+<div style="clear:both;"></div>
+</div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TAnalysisTreeBuilder:TAnalysisTreeBuilder" href="src/TAnalysisTreeBuilder.h.html#ZAonfB">TAnalysisTreeBuilder</a>()</span><br />
 </div>
 
@@ -370,7 +376,7 @@ This is important because different detector systems will need different experim
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Wed Aug  5 15:48:53 2015 </em><em>&raquo; Last generated: 2015-08-05 15:48</em><br />
+<em>&raquo; Last changed: Tue Sep  8 11:10:07 2015 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

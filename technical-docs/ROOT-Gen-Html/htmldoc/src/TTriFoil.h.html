@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Aug  5 15:52:44 2015            -->
+<!--   Date: Tue Sep  8 11:14:10 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -42,7 +42,7 @@
 	
 	<span class="keyword">public</span>:
 		<a href="../TTriFoil.html">TTriFoil</a>();
-<a name="sHyh2D"></a>		<span class="keyword">virtual</span> <a href="../TTriFoil.html#TTriFoil:_TTriFoil" title="void TTriFoil::~TTriFoil()">~TTriFoil</a>();
+		<span class="keyword">virtual</span> <a href="../TTriFoil.html#TTriFoil:_TTriFoil" title="void TTriFoil::~TTriFoil()">~TTriFoil</a>();
       <a href="../TTriFoil.html">TTriFoil</a>(<span class="keyword">const</span> <a href="../TTriFoil.html">TTriFoil</a>&amp; rhs);
 
 <a name="dCtY0"></a>		std::vector&lt;<a href="../ListOfTypes.html#Short_t">Short_t</a>&gt; <a href="../TTriFoil.html#TTriFoil:GetWave" title="vector&lt;Short_t&gt; TTriFoil::GetWave()">GetWave</a>() { <span class="keyword">return</span> <a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>;	};
@@ -52,12 +52,12 @@
 <a name="ZlTz0D"></a>		<span class="keyword">bool</span> <a href="../TTriFoil.html#TTriFoil:HasWave" title="bool TTriFoil::HasWave()">HasWave</a>() <span class="keyword">const</span> { <span class="keyword">return</span> !<a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>.empty(); };
 <a name="Zk8qkC"></a>      <a href="../ListOfTypes.html#time_t">time_t</a> <a href="../TTriFoil.html#TTriFoil:GetTimeStamp" title="time_t TTriFoil::GetTimeStamp()">GetTimeStamp</a>() <span class="keyword">const</span> {<span class="keyword">return</span> <a href="../TTriFoil.html#TTriFoil:timestamp" title="time_t TTriFoil::timestamp">timestamp</a>;}
 
-<a name="GvU4xE"></a>		<span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:BuildHits" title="void TTriFoil::BuildHits(TGRSIDetectorData* data=0,Option_t* =&quot;&quot;)">BuildHits</a>(TGRSIDetectorData *<a href="../TTriFoil.html#TTriFoil:data" title="TTriFoilData* TTriFoil::data">data</a>=0, <a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>);	<span class="comment">//!</span>
-<a name="lAk8bE"></a>		<span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:FillData" title="void TTriFoil::FillData(TFragment* ,TChannel* ,MNEMONIC* )">FillData</a>(<a href="../TFragment.html">TFragment</a>*,<a href="../TChannel.html">TChannel</a>*,MNEMONIC*);	<span class="comment">//!</span>
+		<span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:BuildHits" title="void TTriFoil::BuildHits(TDetectorData* data=0,Option_t* =&quot;&quot;)">BuildHits</a>(TDetectorData *<a href="../TTriFoil.html#TTriFoil:data" title="TTriFoilData* TTriFoil::data">data</a>=0, <a href="../ListOfTypes.html#Option_t">Option_t</a> * = <span class="string">""</span>);	<span class="comment">//!</span>
+		<span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:FillData" title="void TTriFoil::FillData(TFragment* ,TChannel* ,MNEMONIC* )">FillData</a>(<a href="../TFragment.html">TFragment</a>*,<a href="../TChannel.html">TChannel</a>*,MNEMONIC*);	<span class="comment">//!</span>
 
-<a name="TDzo5C"></a>		<span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:Clear" title="void TTriFoil::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>); 	<span class="comment">//!</span>
-<a name="U8kRmC"></a>		<span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:Print" title="void TTriFoil::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>; 	<span class="comment">//!</span>
-<a name="mSg8FC"></a>      <span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:Copy" title="void TTriFoil::Copy(TTriFoil&amp; rhs)">Copy</a>(<a href="../TTriFoil.html">TTriFoil</a> &amp;rhs) <span class="keyword">const</span>;
+		<span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:Clear" title="void TTriFoil::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>); 	<span class="comment">//!</span>
+		<span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:Print" title="void TTriFoil::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>; 	<span class="comment">//!</span>
+      <span class="keyword">void</span> <a href="../TTriFoil.html#TTriFoil:Copy" title="void TTriFoil::Copy(TTriFoil&amp; rhs)">Copy</a>(<a href="../TTriFoil.html">TTriFoil</a> &amp;rhs) <span class="keyword">const</span>;
 
 		
 	
@@ -84,7 +84,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-08-05 15:52 </em><em>&raquo; Last generated: 2015-08-05 15:52</em><br />
+<em>&raquo; Last changed: 2015-09-08 11:14 </em><em>&raquo; Last generated: 2015-09-08 11:14</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

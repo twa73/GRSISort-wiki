@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Aug  5 15:49:46 2015            -->
+<!--   Date: Tue Sep  8 11:11:03 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -105,6 +105,8 @@ hits. This is where the <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:positi
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetCfd">GetCfd</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./TChannel.html">TChannel</a>*</td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetChannel">GetChannel</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetCharge">GetCharge</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#uint16_t">uint16_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetCycleTimeStamp">GetCycleTimeStamp</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#uint16_t">uint16_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetCycleTimeStamp@1">GetCycleTimeStamp</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetDetector">GetDetector</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetDetector@1">GetDetector</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
@@ -118,6 +120,8 @@ hits. This is where the <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:positi
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TVector3.html">TVector3</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetPosition">GetPosition</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> dist = 0) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TVector3.html">TVector3</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetPosition@1">GetPosition</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> dist = 0)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#uint16_t">uint16_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetPPGStatus">GetPPGStatus</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#uint16_t">uint16_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetPPGStatus@1">GetPPGStatus</a>()</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetTime">GetTime</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:GetTimeStamp">GetTimeStamp</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
@@ -169,6 +173,7 @@ hits. This is where the <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:positi
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:SetPosition">SetPosition</a>(<span class="keyword">const</span> <a href="./TVector3.html">TVector3</a>&amp; temp_pos)</td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./TVector3.html">TVector3</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:SetPosition@1">SetPosition</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> temp_pos = 0)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:SetPPGPtr">SetPPGPtr</a>(<a href="./TPPG.html">TPPG</a>* ptr)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:SetTime">SetTime</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#ULong_t">ULong_t</a>&amp; x)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:SetWaveform">SetWaveform</a>(vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt; x)</td></tr>
@@ -187,10 +192,10 @@ hits. This is where the <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:positi
 <div class="access" id="funcprot"><b>protected:</b>
 <table class="func" id="tabfuncprot" cellspacing="0">
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:IsCrystalSet">IsCrystalSet</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:IsDetSet">IsDetSet</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:IsEnergySet">IsEnergySet</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:IsPosSet">IsPosSet</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:IsPPGSet">IsPPGSet</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:IsSubDetSet">IsSubDetSet</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetectorHit:SetFlag">SetFlag</a>(<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>::Ebitflag, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
@@ -206,6 +211,10 @@ hits. This is where the <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:positi
 <tr class="data"><td class="datatype"></td><td class="dataname"><a name="TGRSIDetectorHit:kIsEnergySet"></a>kIsEnergySet</td><td></td></tr>
 <tr class="data"><td class="datatype"></td><td class="dataname"><a name="TGRSIDetectorHit:kIsPositionSet"></a>kIsPositionSet</td><td></td></tr>
 <tr class="data"><td class="datatype"></td><td class="dataname"><a name="TGRSIDetectorHit:kIsSubDetSet"></a>kIsSubDetSet</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TGRSIDetectorHit:kIsPPGSet"></a>kIsPPGSet</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TGRSIDetectorHit:kBit5"></a>kBit5</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TGRSIDetectorHit:kBit6"></a>kBit6</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="TGRSIDetectorHit:kBit7"></a>kBit7</td><td></td></tr>
 <tr class="data"><td class="datatype"></td><td class="dataname"><a name="TGRSIDetectorHit:kIsAllSet"></a>kIsAllSet</td><td></td></tr>
 <tr class="data"><td class="datatype">};</td><td></td><td></td></tr>
 <tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span>EStatusBits { </td><td class="dataname"><a href="./TObject.html#TObject:kCanDelete">kCanDelete</a></td><td></td></tr>
@@ -234,6 +243,9 @@ hits. This is where the <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:positi
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="TGRSIDetectorHit:charge"></a>charge</td><td class="datadesc">charge collected from the hit</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a name="TGRSIDetectorHit:detector"></a>detector</td><td class="datadesc">! Detector Number</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="TGRSIDetectorHit:energy"></a>energy</td><td class="datadesc">! Energy of the Hit.</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="dataname"><a name="TGRSIDetectorHit:fCycleTimeStamp"></a>fCycleTimeStamp</td><td class="datadesc">!</td></tr>
+<tr class="data"><td class="datatype">static <a href="./TPPG.html">TPPG</a>*</td><td class="dataname"><a name="TGRSIDetectorHit:fPPG"></a>fPPG</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#uint16_t">uint16_t</a></td><td class="dataname"><a name="TGRSIDetectorHit:fPPGStatus"></a>fPPGStatus</td><td class="datadesc">! </td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#UChar_t">UChar_t</a></td><td class="dataname"><a name="TGRSIDetectorHit:fbitflags"></a>fbitflags</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TVector3.html">TVector3</a></td><td class="dataname"><a name="TGRSIDetectorHit:position"></a>position</td><td class="datadesc">! Position of hit detector.</td></tr>
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="dataname"><a name="TGRSIDetectorHit:time"></a>time</td><td class="datadesc">Timsstamp given to hit</td></tr>
@@ -243,15 +255,16 @@ hits. This is where the <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:positi
 </div>
 <h2><a id="TGRSIDetectorHit:Class_Charts"></a>Class Charts</h2>
 <map name="MapTGRSIDetectorHit_Inh" id="MapTGRSIDetectorHit_Inh">
-<area shape="rect" id="node2" href="./TObject.html" title="TObject" alt="" coords="2,114,169,145"/>
-<area shape="rect" id="node3" href="./TCrystalHit.html" title="TCrystalHit" alt="" coords="599,2,766,34"/>
-<area shape="rect" id="node4" href="./TDescantHit.html" title="TDescantHit" alt="" coords="599,34,766,65"/>
-<area shape="rect" id="node5" href="./TGriffinHit.html" title="TGriffinHit" alt="" coords="599,66,766,97"/>
-<area shape="rect" id="node6" href="./TSceptarHit.html" title="TSceptarHit" alt="" coords="599,98,766,129"/>
-<area shape="rect" id="node7" href="./TPacesHit.html" title="TPacesHit" alt="" coords="599,130,766,161"/>
-<area shape="rect" id="node8" href="./TSharcHit.html" title="TSharcHit" alt="" coords="599,162,766,193"/>
-<area shape="rect" id="node9" href="./TTigressHit.html" title="TTigressHit" alt="" coords="599,193,766,225"/>
-<area shape="rect" id="node10" href="./TTipHit.html" title="TTipHit" alt="" coords="599,225,766,257"/>
+<area shape="rect" id="node2" href="./TObject.html" title="TObject" alt="" coords="2,130,169,161"/>
+<area shape="rect" id="node3" href="./TTipHit.html" title="TTipHit" alt="" coords="599,2,766,34"/>
+<area shape="rect" id="node4" href="./TCSMHit.html" title="TCSMHit" alt="" coords="599,34,766,65"/>
+<area shape="rect" id="node5" href="./TCrystalHit.html" title="TCrystalHit" alt="" coords="599,66,766,97"/>
+<area shape="rect" id="node6" href="./TDescantHit.html" title="TDescantHit" alt="" coords="599,98,766,129"/>
+<area shape="rect" id="node7" href="./TGriffinHit.html" title="TGriffinHit" alt="" coords="599,130,766,161"/>
+<area shape="rect" id="node8" href="./TPacesHit.html" title="TPacesHit" alt="" coords="599,162,766,193"/>
+<area shape="rect" id="node9" href="./TSceptarHit.html" title="TSceptarHit" alt="" coords="599,193,766,225"/>
+<area shape="rect" id="node10" href="./TSharcHit.html" title="TSharcHit" alt="" coords="599,225,766,257"/>
+<area shape="rect" id="node11" href="./TTigressHit.html" title="TTigressHit" alt="" coords="599,257,766,288"/>
 </map>
 <map name="MapTGRSIDetectorHit_InhMem" id="MapTGRSIDetectorHit_InhMem">
 <area shape="rect" id="clust11" href="./TObject.html" alt="" coords="171,47,237,145"/>
@@ -320,6 +333,14 @@ Currently prints nothing.
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIDetectorHit:CompareEnergy" href="src/TGRSIDetectorHit.cxx.html#Q.1dL">CompareEnergy</a>(<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>* lhs, <a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>* rhs)</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#uint16_t">uint16_t</a> <a class="funcname" name="TGRSIDetectorHit:GetPPGStatus" href="src/TGRSIDetectorHit.cxx.html#zXSEBC">GetPPGStatus</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#uint16_t">uint16_t</a> <a class="funcname" name="TGRSIDetectorHit:GetPPGStatus@1" href="src/TGRSIDetectorHit.cxx.html#i0yUlD">GetPPGStatus</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#uint16_t">uint16_t</a> <a class="funcname" name="TGRSIDetectorHit:GetCycleTimeStamp" href="src/TGRSIDetectorHit.cxx.html#NQiJx">GetCycleTimeStamp</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#uint16_t">uint16_t</a> <a class="funcname" name="TGRSIDetectorHit:GetCycleTimeStamp@1" href="src/TGRSIDetectorHit.cxx.html#QhCNgB">GetCycleTimeStamp</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetectorHit:CopyFragment" href="src/TGRSIDetectorHit.cxx.html#p6d7V">CopyFragment</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp; )</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetectorHit:SetFlag" href="src/TGRSIDetectorHit.cxx.html#ddpBUC">SetFlag</a>(<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>::Ebitflag , <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</span><br />
@@ -327,6 +348,11 @@ Currently prints nothing.
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGRSIDetectorHit:TGRSIDetectorHit" href="src/TGRSIDetectorHit.h.html#FVhAEC">TGRSIDetectorHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; fAddress = 0xffffffff)</span><br />
 
 <div class="code"><code class="inlinecode">{ <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:address" title="UInt_t TGRSIDetectorHit::address">address</a>=fAddress; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetectorHit:SetPPGPtr" href="src/TGRSIDetectorHit.h.html#bFqzhB">SetPPGPtr</a>(<a href="./TPPG.html">TPPG</a>* ptr)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:fPPG" title="TPPG* TGRSIDetectorHit::fPPG">fPPG</a> = ptr; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetectorHit:SetPosition" href="src/TGRSIDetectorHit.h.html#lbiLXD">SetPosition</a>(<span class="keyword">const</span> <a href="./TVector3.html">TVector3</a>&amp; temp_pos)</span><br />
@@ -418,14 +444,14 @@ static <a href="./ListOfTypes.html#bool">bool</a> <a href="./TObject.html#TObjec
 <div class="code"><code class="inlinecode">{<span class="keyword">return</span> (<a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:fbitflags" title="UChar_t TGRSIDetectorHit::fbitflags">fbitflags</a> &amp; <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:kIsEnergySet" title="const TGRSIDetectorHit::Ebitflag TGRSIDetectorHit::kIsEnergySet">kIsEnergySet</a>);}</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGRSIDetectorHit:IsSubDetSet" href="src/TGRSIDetectorHit.h.html#M33dsB">IsSubDetSet</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGRSIDetectorHit:IsSubDetSet" href="src/TGRSIDetectorHit.h.html#w63dsB">IsSubDetSet</a>() const</span><br />
 
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> (<a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:fbitflags" title="UChar_t TGRSIDetectorHit::fbitflags">fbitflags</a> * <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:kIsSubDetSet" title="const TGRSIDetectorHit::Ebitflag TGRSIDetectorHit::kIsSubDetSet">kIsSubDetSet</a>);}</code></div>
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> (<a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:fbitflags" title="UChar_t TGRSIDetectorHit::fbitflags">fbitflags</a> &amp; <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:kIsSubDetSet" title="const TGRSIDetectorHit::Ebitflag TGRSIDetectorHit::kIsSubDetSet">kIsSubDetSet</a>);}</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGRSIDetectorHit:IsCrystalSet" href="src/TGRSIDetectorHit.h.html#ajj00B">IsCrystalSet</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGRSIDetectorHit:IsPPGSet" href="src/TGRSIDetectorHit.h.html#Vy7yQC">IsPPGSet</a>() const</span><br />
 
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:IsSubDetSet" title="Bool_t TGRSIDetectorHit::IsSubDetSet()">IsSubDetSet</a>();}</code></div>
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> (<a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:fbitflags" title="UChar_t TGRSIDetectorHit::fbitflags">fbitflags</a> &amp; <a href="./TGRSIDetectorHit.html#TGRSIDetectorHit:kIsPPGSet" title="const TGRSIDetectorHit::Ebitflag TGRSIDetectorHit::kIsPPGSet">kIsPPGSet</a>);}</code></div>
 <div style="clear:both;"></div>
 </div>
 
@@ -433,7 +459,7 @@ static <a href="./ListOfTypes.html#bool">bool</a> <a href="./TObject.html#TObjec
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Wed Aug  5 15:49:48 2015 </em><em>&raquo; Last generated: 2015-08-05 15:49</em><br />
+<em>&raquo; Last changed: Tue Sep  8 11:11:05 2015 </em><em>&raquo; Last generated: 2015-09-08 11:11</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

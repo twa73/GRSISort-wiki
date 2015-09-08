@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Aug  5 15:52:04 2015            -->
+<!--   Date: Tue Sep  8 11:13:22 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -43,12 +43,12 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
 <span class="comment">//</span>
 <span class="comment">/////////////////////////////////////////////////////////////////</span>
 
-<span class="comment">//const <a href="../ListOfTypes.html#char">char</a> *<a href="../TNucleus.html">TNucleus</a>::<a href="../TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a> = <span class="string">"/home/tiguser/packages/GRSISort/libraries/TGRSIAnalysis/TNucleus/SourceData/mass.dat"</span>;</span>
+<span class="comment">//const <a href="../ListOfTypes.html#char">char</a> *<a href="../TNucleus.html">TNucleus</a>::<a href="../TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a> = <span class="string">"/home/tiguser/packages/GRSISort/libraries/TGRSIAnalysis/SourceData/mass.dat"</span>;</span>
 
 <span class="keyword">static</span> <span class="keyword">double</span> amu = 931.494043;
 <span class="comment">//static <a href="../ListOfTypes.html#double">double</a> MeV2Kg = 1.77777778e-30;</span>
 
-<span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TNucleus.html">TNucleus</a>::<a href="../TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a> = <span class="string">"/libraries/TGRSIAnalysis/TNucleus/SourceData/mass.dat"</span>;
+<span class="keyword">const</span> <span class="keyword">char</span> *<a href="../TNucleus.html">TNucleus</a>::<a href="../TNucleus.html#TNucleus:massfile" title="const char* TNucleus::massfile">massfile</a> = <span class="string">"/libraries/TGRSIAnalysis/SourceData/mass.dat"</span>;
 
 
 <a name="w4gXgB"></a><a href="../TNucleus.html">TNucleus</a>::<a href="../TNucleus.html#TNucleus:TNucleus" title="TNucleus TNucleus::TNucleus() or overloads">TNucleus</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name){
@@ -310,7 +310,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
       name[0] = name[0]-<span class="string">'A'</span>+<span class="string">'a'</span>; 
    name = name + Form(<span class="string">"%i"</span>,<a href="../TNucleus.html#TNucleus:GetA" title="int TNucleus::GetA()">GetA</a>()) + <span class="string">".sou"</span>;
    std::string path = getenv(<span class="string">"GRSISYS"</span>);
-	path +=  <span class="string">"/libraries/TGRSIAnalysis/TNucleus/SourceData/"</span>;
+	path +=  <span class="string">"/libraries/TGRSIAnalysis/SourceData/"</span>;
    path +=  name;
 
    printf(<span class="string">"path = %s\n"</span>,path.c_str());
@@ -418,7 +418,7 @@ ClassImp(<a href="../TNucleus.html">TNucleus</a>);
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-08-05 15:52 </em><em>&raquo; Last generated: 2015-08-05 15:52</em><br />
+<em>&raquo; Last changed: 2015-09-08 11:13 </em><em>&raquo; Last generated: 2015-09-08 11:13</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Aug  5 15:49:45 2015            -->
+<!--   Date: Tue Sep  8 11:11:02 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -56,7 +56,7 @@ return false;}
  &#187; <a class="locationlevel" href="./GRSISORT_Index.html">GRSISORT</a>
  &#187; <a class="locationlevel" href="#TopOfPage">TGRSIDetector</a>
 </div>
-<div class="dropshadow"><div class="withshadow"><h1><a name="TGRSIDetector:description"></a>class TGRSIDetector: public <a href="./TObject.html">TObject</a></h1>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TGRSIDetector:description"></a>class TGRSIDetector: public <a href="./TDetector.html">TDetector</a></h1>
 <div class="classdescr">
 <pre>
 
@@ -81,7 +81,7 @@ This is an abstract class that contains the basic info
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:AddHit">AddHit</a>(<a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>* hit, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:BuildHits">BuildHits</a>(TGRSIDetectorData* data = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:BuildHits">BuildHits</a>(TDetectorData* data = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TGRSIDetector:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIDetector:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
@@ -198,25 +198,31 @@ This is an abstract class that contains the basic info
 </div>
 <h2><a id="TGRSIDetector:Class_Charts"></a>Class Charts</h2>
 <map name="MapTGRSIDetector_Inh" id="MapTGRSIDetector_Inh">
-<area shape="rect" id="node2" href="./TObject.html" title="TObject" alt="" coords="2,121,179,154"/>
-<area shape="rect" id="node3" href="./TDescant.html" title="TDescant" alt="" coords="589,2,766,36"/>
-<area shape="rect" id="node4" href="./TGriffin.html" title="TGriffin" alt="" coords="589,36,766,69"/>
-<area shape="rect" id="node5" href="./TSceptar.html" title="TSceptar" alt="" coords="589,70,766,103"/>
-<area shape="rect" id="node6" href="./TPaces.html" title="TPaces" alt="" coords="589,104,766,137"/>
-<area shape="rect" id="node7" href="./TSharc.html" title="TSharc" alt="" coords="589,137,766,170"/>
-<area shape="rect" id="node8" href="./TTigress.html" title="TTigress" alt="" coords="589,171,766,204"/>
-<area shape="rect" id="node9" href="./TTip.html" title="TTip" alt="" coords="589,205,766,238"/>
-<area shape="rect" id="node10" href="./TTriFoil.html" title="TTriFoil" alt="" coords="589,238,766,271"/>
+<area shape="rect" id="node2" href="./TDetector.html" title="TDetector" alt="" coords="199,90,330,114"/>
+<area shape="rect" id="node3" href="./TObject.html" title="TObject" alt="" coords="2,90,133,114"/>
+<area shape="rect" id="node4" href="./TTip.html" title="TTip" alt="" coords="635,2,766,26"/>
+<area shape="rect" id="node5" href="./TDescant.html" title="TDescant" alt="" coords="635,27,766,51"/>
+<area shape="rect" id="node6" href="./TGriffin.html" title="TGriffin" alt="" coords="635,52,766,77"/>
+<area shape="rect" id="node7" href="./TPaces.html" title="TPaces" alt="" coords="635,77,766,102"/>
+<area shape="rect" id="node8" href="./TSceptar.html" title="TSceptar" alt="" coords="635,102,766,127"/>
+<area shape="rect" id="node9" href="./TSharc.html" title="TSharc" alt="" coords="635,127,766,152"/>
+<area shape="rect" id="node10" href="./TTigress.html" title="TTigress" alt="" coords="635,152,766,177"/>
+<area shape="rect" id="node11" href="./TTriFoil.html" title="TTriFoil" alt="" coords="635,177,766,202"/>
 </map>
 <map name="MapTGRSIDetector_InhMem" id="MapTGRSIDetector_InhMem">
-<area shape="rect" id="clust8" href="./TObject.html" alt="" coords="171,47,237,145"/>
-<area shape="rect" id="clust9" href="./TObject.html" alt="" coords="93,47,160,161"/>
-<area shape="rect" id="clust10" href="./TObject.html" alt="" coords="16,47,83,161"/>
-<area shape="rect" id="clust11" href="./TObject.html" alt="" coords="203,152,205,155"/>
-<area shape="rect" id="clust12" href="./TObject.html" alt="" coords="171,161,237,593"/>
-<area shape="rect" id="clust13" href="./TObject.html" alt="" coords="93,161,160,609"/>
-<area shape="rect" id="clust14" href="./TObject.html" alt="" coords="16,161,83,609"/>
-<area shape="rect" id="clust7" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
+<area shape="rect" id="clust8" href="./TDetector.html" alt="" coords="281,47,469,65"/>
+<area shape="rect" id="clust9" href="./TDetector.html" alt="" coords="403,65,469,161"/>
+<area shape="rect" id="clust10" href="./TDetector.html" alt="" coords="325,65,392,177"/>
+<area shape="rect" id="clust11" href="./TDetector.html" alt="" coords="248,65,315,177"/>
+<area shape="rect" id="clust7" href="./TDetector.html" title="TDetector" alt="" coords="248,16,469,177"/>
+<area shape="rect" id="clust14" href="./TObject.html" alt="" coords="171,47,237,145"/>
+<area shape="rect" id="clust15" href="./TObject.html" alt="" coords="93,47,160,161"/>
+<area shape="rect" id="clust16" href="./TObject.html" alt="" coords="16,47,83,161"/>
+<area shape="rect" id="clust17" href="./TObject.html" alt="" coords="203,152,205,155"/>
+<area shape="rect" id="clust18" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust19" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust20" href="./TObject.html" alt="" coords="16,161,83,609"/>
+<area shape="rect" id="clust13" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
 </map>
 <map name="MapTGRSIDetector_Lib" id="MapTGRSIDetector_Lib">
 <area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="127,237,244,285"/>
@@ -252,14 +258,14 @@ This is an abstract class that contains the basic info
  nothing
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetector:BuildHits" href="src/TGRSIDetector.h.html#jIBK1D">BuildHits</a>(TGRSIDetectorData* data = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetector:BuildHits" href="src/TGRSIDetector.h.html#Bs8SE">BuildHits</a>(TDetectorData* data = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>*  = <span class="string">""</span>)</span><br />
 <div class="funccomm"><pre>virtual <a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>* GetHit(const <a href="./ListOfTypes.html#Int_t">Int_t</a> idx = 0) { <a href="./TObject.html#TObject:AbstractMethod" title="void TObject::AbstractMethod(const char* method)">AbstractMethod</a>(<span class="string">"GetHit()"</span>); return 0;}
 </pre></div>
 
 <div class="code"><code class="inlinecode">{ <a href="./TObject.html#TObject:AbstractMethod" title="void TObject::AbstractMethod(const char* method)">AbstractMethod</a>(<span class="string">"BuildHits()"</span>); }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetector:FillData" href="src/TGRSIDetector.h.html#wr2H7B">FillData</a>(<a href="./TFragment.html">TFragment</a>* , <a href="./TChannel.html">TChannel</a>* , MNEMONIC* )</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIDetector:FillData" href="src/TGRSIDetector.h.html#z3o1u">FillData</a>(<a href="./TFragment.html">TFragment</a>* , <a href="./TChannel.html">TChannel</a>* , MNEMONIC* )</span><br />
 
 <div class="code"><code class="inlinecode">{ <a href="./TObject.html#TObject:AbstractMethod" title="void TObject::AbstractMethod(const char* method)">AbstractMethod</a>(<span class="string">"FillData()"</span>);  }</code></div>
 <div style="clear:both;"></div>
@@ -274,7 +280,7 @@ This is an abstract class that contains the basic info
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Wed Aug  5 15:49:46 2015 </em><em>&raquo; Last generated: 2015-08-05 15:49</em><br />
+<em>&raquo; Last changed: Tue Sep  8 11:11:03 2015 </em><em>&raquo; Last generated: 2015-09-08 11:11</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Wed Aug  5 15:49:50 2015            -->
+<!--   Date: Tue Sep  8 11:11:07 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -91,9 +91,11 @@ return false;}
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FillBadFragmentTree">FillBadFragmentTree</a>(<a href="./TFragment.html">TFragment</a>*)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FillEpicsTree">FillEpicsTree</a>(<a href="./TEpicsFrag.html">TEpicsFrag</a>*)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FillFragmentTree">FillFragmentTree</a>(<a href="./TFragment.html">TFragment</a>*)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FillPPG">FillPPG</a>(<a href="./TPPGData.html">TPPGData</a>*)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FinalizeBadFragmentTree">FinalizeBadFragmentTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FinalizeEpicsTree">FinalizeEpicsTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FinalizeFragmentTree">FinalizeFragmentTree</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:FinalizePPG">FinalizePPG</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <a href="./TGRSIRootIO.html">TGRSIRootIO</a>*</td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:Get">Get</a>()</td></tr>
@@ -107,6 +109,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TPPG.html">TPPG</a>*</td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:GetPPG">GetPPG</a>()</td></tr>
 <tr class="func"><td class="funcret"><a href="./TFile.html">TFile</a>*</td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:GetRootOutFile">GetRootOutFile</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:GetRunNumber">GetRunNumber</a>(string)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:GetSubRunNumber">GetSubRunNumber</a>(string)</td></tr>
@@ -157,6 +160,7 @@ return false;}
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:SetUpBadFragmentTree">SetUpBadFragmentTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:SetUpEpicsTree">SetUpEpicsTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:SetUpFragmentTree">SetUpFragmentTree</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:SetUpPPG">SetUpPPG</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:SetUpRootOutFile">SetUpRootOutFile</a>(<span class="keyword">int</span>, <span class="keyword">int</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIRootIO:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
@@ -217,9 +221,11 @@ return false;}
 <tr class="data"><td class="datatype"><a href="./TEpicsFrag.html">TEpicsFrag</a>*</td><td class="dataname"><a name="TGRSIRootIO:fEXBufferFrag"></a>fEXBufferFrag</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TTree.html">TTree</a>*</td><td class="dataname"><a name="TGRSIRootIO:fEpicsTree"></a>fEpicsTree</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TTree.html">TTree</a>*</td><td class="dataname"><a name="TGRSIRootIO:fFragmentTree"></a>fFragmentTree</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TPPG.html">TPPG</a>*</td><td class="dataname"><a name="TGRSIRootIO:fPPG"></a>fPPG</td><td></td></tr>
 <tr class="data"><td class="datatype">static <a href="./TGRSIRootIO.html">TGRSIRootIO</a>*</td><td class="dataname"><a name="TGRSIRootIO:fTGRSIRootIO"></a>fTGRSIRootIO</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRootIO:fTimesBadFillCalled"></a>fTimesBadFillCalled</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRootIO:fTimesFillCalled"></a>fTimesFillCalled</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSIRootIO:fTimesPPGCalled"></a>fTimesPPGCalled</td><td></td></tr>
 <tr class="data"><td class="datatype">vector&lt;<a href="./TFile.html">TFile</a>*&gt;</td><td class="dataname"><a name="TGRSIRootIO:finfiles"></a>finfiles</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TFile.html">TFile</a>*</td><td class="dataname"><a name="TGRSIRootIO:foutfile"></a>foutfile</td><td></td></tr>
 
@@ -267,6 +273,8 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:SetUpBadFragmentTree" href="src/TGRSIRootIO.cxx.html#j2Hu_C">SetUpBadFragmentTree</a>()</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:SetUpPPG" href="src/TGRSIRootIO.cxx.html#QePAXD">SetUpPPG</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:SetUpEpicsTree" href="src/TGRSIRootIO.cxx.html#M3Tm3">SetUpEpicsTree</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FillFragmentTree" href="src/TGRSIRootIO.cxx.html#tXAzvD">FillFragmentTree</a>(<a href="./TFragment.html">TFragment</a>* )</span><br />
@@ -276,11 +284,17 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FillBadFragmentTree" href="src/TGRSIRootIO.cxx.html#P4cJlD">FillBadFragmentTree</a>(<a href="./TFragment.html">TFragment</a>* )</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FillPPG" href="src/TGRSIRootIO.cxx.html#FB5bK">FillPPG</a>(<a href="./TPPGData.html">TPPGData</a>* )</span><br />
+<div class="funccomm"><pre>Set PPG Stuff here
+</pre></div>
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FillEpicsTree" href="src/TGRSIRootIO.cxx.html#eXJO6">FillEpicsTree</a>(<a href="./TEpicsFrag.html">TEpicsFrag</a>* )</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FinalizeFragmentTree" href="src/TGRSIRootIO.cxx.html#XzkfnD">FinalizeFragmentTree</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FinalizeBadFragmentTree" href="src/TGRSIRootIO.cxx.html#vdtoE">FinalizeBadFragmentTree</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FinalizePPG" href="src/TGRSIRootIO.cxx.html#d_orM">FinalizePPG</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIRootIO:FinalizeEpicsTree" href="src/TGRSIRootIO.cxx.html#ED6kDE">FinalizeEpicsTree</a>()</span><br />
 </div>
@@ -313,6 +327,11 @@ return false;}
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGRSIRootIO.html#TGRSIRootIO:fBadFragmentTree" title="TTree* TGRSIRootIO::fBadFragmentTree">fBadFragmentTree</a>;  }</code></div>
 <div style="clear:both;"></div>
 </div>
+<div class="funcdoc"><span class="funcname"><a href="./TPPG.html">TPPG</a> * <a class="funcname" name="TGRSIRootIO:GetPPG" href="src/TGRSIRootIO.h.html#w_c_SB">GetPPG</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGRSIRootIO.html#TGRSIRootIO:fPPG" title="TPPG* TGRSIRootIO::fPPG">fPPG</a>;  }</code></div>
+<div style="clear:both;"></div>
+</div>
 <div class="funcdoc"><span class="funcname"><a href="./TTree.html">TTree</a> * <a class="funcname" name="TGRSIRootIO:GetEpicsTree" href="src/TGRSIRootIO.h.html#MYEG7C">GetEpicsTree</a>()</span><br />
 
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGRSIRootIO.html#TGRSIRootIO:fEpicsTree" title="TTree* TGRSIRootIO::fEpicsTree">fEpicsTree</a>;  }</code></div>
@@ -323,7 +342,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Wed Aug  5 15:49:51 2015 </em><em>&raquo; Last generated: 2015-08-05 15:49</em><br />
+<em>&raquo; Last changed: Tue Sep  8 11:11:09 2015 </em><em>&raquo; Last generated: 2015-09-08 11:11</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
