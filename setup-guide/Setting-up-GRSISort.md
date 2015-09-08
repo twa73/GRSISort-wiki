@@ -57,13 +57,11 @@ The setup for GRSISort depends on the shell being used. To determine the Shell y
 `````
 echo $SHELL
 `````
-To setup GRSISort for a .sh shell (bash) execute `source SOURCEME.sh` in your terminal from the GRSISort Directory
+To setup GRSISort for a .sh shell (bash) execute `source thisgrsi.sh` in your terminal from the GRSISort Directory
 
 To avoid running this script every session, add the following to your **~/.bashrc**
 ```
-export GRSISYS=/path/to/dir/of/GRSISort
-export PATH=$GRSISYS/bin:$PATH
-export LD_LIBRARY_PATH=$GRSISYS/libraries:$LD_LIBRARY_PATH
+source /Path/To/GRSISort/thisgrsi.sh
 ```
 
 To compile using a .crsh or .tcsh shell execute `source SOURCEME.csh` in your terminal from the GRSISort Directory
