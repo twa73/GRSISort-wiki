@@ -5,4 +5,5 @@
 As part of the GRSISort analysis package, there are a number of fitting classes available:
 
 1. [TPeak](TPeak) Used to fit photopeaks to a gaussian + skewed gaussian.
+2. [TDecay](TDecay) Used to fit nuclear decay curves.
 
