@@ -21,6 +21,7 @@
   - [[Calibration | Calibration]]
   - [[Kinematics | Kinematics]]
   - [[Data Correcting | Correcting]]
+  - [[Interactive Analysis | Interactive-Analysis]]
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
