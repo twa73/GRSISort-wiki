@@ -35,6 +35,7 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 | **F**  | Ryan D's TPeak Fit (proper skewd gaus for gamma-rays with automatic bg) with full output.   |
 | **g**  | Simple Gaus fit between the last to marks, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED** |
 | **G**  | Gaus fit with linear background, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED** |
+| **i**  | Raw integral of counts between the two markers |
 | **s**  | Show peak values. |
 | **S**  | Remove peak values. |
 | **l**  | Make y-axis linear. |
