@@ -36,6 +36,7 @@ To take advantage of these features all one has to do is start GRSISort!  They a
 | **g**  | Simple Gaus fit between the last to marks, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED** |
 | **G**  | Gaus fit with linear background, displays results of the fit **RESULTS STILL NEED TO BE VERIFIED** |
 | **i**  | Raw integral of counts between the two markers |
+| **I**  | Background subtracted integral of counts between the two markers |
 | **s**  | Show peak values. |
 | **S**  | Remove peak values. |
 | **l**  | Make y-axis linear. |
