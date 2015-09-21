@@ -92,14 +92,11 @@ To avoid running this script every session, add the following to your **~/.bashr
 ```
 source /Path/To/GRSISort/thisgrsi.sh
 ```
+To setup GRSISort for a .crsh or .tcsh shell execute `source thisgrsi.csh` in your terminal from the GRSISort Directory
 
-To compile using a .crsh or .tcsh shell execute `source SOURCEME.csh` in your terminal from the GRSISort Directory
-
-To avoid running this script every session, add the following in your **~/.cshrc**  or **~/.tcshrc** 
+To avoid running this script every session, add the following to your **~/.bashrc**
 ```
-setenv GRSISYS /path/to/dir/of/GRSISort
-set path = ($path $GRSISYS/bin)
-setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$GRSISYS/libraries
+source /Path/To/GRSISort/thisgrsi.csh
 ```
 
 <a name="step5" />
