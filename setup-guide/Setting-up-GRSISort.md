@@ -103,8 +103,7 @@ source /Path/To/GRSISort/thisgrsi.csh
 ## Step 5: Compile GRSISort
 To Compile GRSISort type `make`. Please be patient as compilation will take a few moments.
 
-- To create the HTML documentation, you can compile with `make docs`.
-- To compile the utilities type `make util`. This is important for the fragment tree and analysis tree macros `MakeTimeDiffSpec` and `MakeMatrices`.
+- To create the HTML documentation, you can compile with `make docs`. This is NOT REQUIRED.
 
 If you recieve an error, please consult the [Troubleshooting](troubleshooting) page.
 
