@@ -24,7 +24,36 @@ sudo apt-get install git
 ##Step 2: Install ROOT
 Before installing root make sure you have the [required and optional packages](http://root.cern.ch/drupal/content/build-prerequisites) installed.
 
-To download and install root follow the directions on the [ROOT](http://root.cern.ch/drupal/content/installing-root-source) website. The current supported version of root is v5.34.24, Here are some [Problems](Troubleshooting#rootproblems) that we have found at this stage.
+To download and install root:
+First, clone the root git repository where you want root on your computer:
+`````
+git clone https://github.com/root-mirror/root.git
+`````
+Move into the ROOT directory using
+```
+cd root
+```
+Then, choose the version of root you want. To see the list of ROOT versions, type:
+`````
+git tag -l
+`````
+To choose a version:
+`````
+git checkout -b version_name version_name
+`````
+where version name is one of the versions printed in the previous command. Configure ROOT with 
+``` 
+make ./config --options
+```
+For a list of options, and more detail, see the [ROOT User manual](https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#installing-root). Compile ROOT using 
+```
+make
+```
+Finally, in your ./bashrc or ./profile, include the line
+```bash
+source /path/to/root/bin/thisroot.sh
+```
+The current supported version of root is v5.34.24, Here are some [Problems](Troubleshooting#rootproblems) that we have found at this stage.
 
 *Already have ROOT? Proceed to [Download GRSISort](#step3)*
 
@@ -89,4 +118,3 @@ Instructions unclear, lost in terminology.
 <a name"step7" />
 ## Step 7: Profit
 If you ever figure this out, please share the wealth.
-
