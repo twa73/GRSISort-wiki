@@ -81,4 +81,4 @@ On **CentOS 6** you will need to do `yum install libstdc++-devel.i686`
 
 -------------------
 
-If you have an issue that is currently not on the above list please post it to the [Issue Tracker](https://github.com/pcbend/GRSISort/issues).
+If you have an issue that is currently not on the above list please post it to the [Issue Tracker](https://github.com/GRIFFINCollaboration/GRSISort/issues) after filling out an [Error Report](errorreport).
