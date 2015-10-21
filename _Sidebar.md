@@ -40,7 +40,7 @@
 **Useful resources**  
 
 - [[Troubleshooting | Troubleshooting ]]  
-- [[Error Reporting | errorreporting]]
+- [[Error Reporting | errorreport]]
 - [[Running GRSISort|Running-GRSISort]]
 - [[Technical Docs|Technical-Documentation]]
 - [[GRSISort Team | Team ]]
