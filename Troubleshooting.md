@@ -5,7 +5,7 @@
 2. [GRSI Installation](#installation)  
 3. [HTML Documentation](#fixablehtml)
 4. [ROOT Installation](#rootproblems)
-5. [Error Report Template](#errorreport)
+5. [Error Report Template](errorreport)
 
 <a name="unfixable" />
 ------------------
