@@ -1,6 +1,7 @@
 [**HOME**](Home) > [**TROUBLESHOOTING**](TroubleShooting) > [**ERROR REPORT**](errorreport)
 
 **Error Reporting**
+
 To report and error on the issue tracker, please use the error reporting template provided. To Automatically fill this out, use `sh ${GRSISYS}/util/ErrorReport.sh`. This will generate a template that has many parts automatically filled out, and looks like:
 ```
 SYSTEM = Darwin
