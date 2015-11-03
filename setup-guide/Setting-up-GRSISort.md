@@ -43,6 +43,7 @@ git checkout -b version_name version_name
 `````
 where version name is one of the versions printed in the previous command. Configure ROOT with 
 ``` 
+./configure
 make ./config --options
 ```
 For a list of options, and more detail, see the [ROOT User manual](https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#installing-root). Compile ROOT using 
