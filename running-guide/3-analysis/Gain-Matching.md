@@ -38,7 +38,7 @@ To automate the gain-matching and filling of a cal manager, you can use the stat
 ```c++
 TGainMatch::CoarseMatchAll(myCalManager,energy_chan_mat, low_energy, high_energy);
 ```
-where `energy_chan_mat` is the `TH2*` of Charge vs. ChannelNumber, `low_energy` is the lowest energy peak in the gain match, and `high_energy` is the highest energy peak in the gain match. `low_energy` and `high_energy` are defaulted to the 60Co peaks. Once the `TGainMatch::CoarseMatchAll` is finished, `myCalManager` will be filled with the gains of every channel fit. It should be noted that the cal manager is filled with *a deep copy* of the TGainMatch and not a reference to it. [[TCalManager|TCalManager]] explains how to access the various TGainMatches contained it.
+where `energy_chan_mat` is the `TH2*` of Charge vs. ChannelNumber, `low_energy` is the lowest energy peak in the gain match, and `high_energy` is the highest energy peak in the gain match. `low_energy` and `high_energy` are defaulted to the 60Co peaks. Once the `TGainMatch::CoarseMatchAll` is finished, `myCalManager` will be filled with the gains of every channel fit. It should be noted that the cal manager is filled with *a deep copy* of the TGainMatch and not a reference to it. [[TCalManager|Calibration]] explains how to access the various TGainMatches contained it.
 Finally, to write these gain coefficients to the Channels, use
 ```c++
 myCalManager->WriteToChannel();
