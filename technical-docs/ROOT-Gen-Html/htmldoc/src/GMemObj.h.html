@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:07:24 2015            -->
+<!--   Date: Wed Nov  4 15:35:25 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -39,44 +39,44 @@
 
 <span class="keyword">class</span> <a href="../GPadObj.html">GPadObj</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a> {
   <span class="keyword">public</span>:
-     <a href="../GPadObj.html">GPadObj</a>(<a href="../TObject.html">TObject</a>*obj,<a href="../ListOfTypes.html#Int_t">Int_t</a> pnum=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
-     <span class="keyword">virtual</span> ~GPadObj();
+	<a href="../GPadObj.html">GPadObj</a>(<a href="../TObject.html">TObject</a>*obj,<a href="../ListOfTypes.html#Int_t">Int_t</a> pnum=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
+	<span class="keyword">virtual</span> ~GPadObj();
 
-   <span class="keyword">private</span>:
-      <span class="comment">//PadObj(); </span>
-      <a href="../TObject.html">TObject</a>*   fObject;
-      <a href="../TObject.html">TObject</a>*   <a href="../GMemObj.html#GMemObj:fParent" title="TObject* GMemObj::fParent">fParent</a>;
-      <span class="keyword">int</span>        fPadNumber;
-      <a href="../GCanvas.html">GCanvas</a>*   fCanvas;
-      <span class="comment">//std::vector&lt;std::string&gt; fSource;</span>
-      std::string  <a href="../GMemObj.html#GMemObj:fOption" title="string GMemObj::fOption">fOption</a>;
-
+  <span class="keyword">private</span>:
+   <span class="comment">//PadObj(); </span>
+	<a href="../TObject.html">TObject</a>*   fObject;
+	<a href="../TObject.html">TObject</a>*   <a href="../GMemObj.html#GMemObj:fParent" title="TObject* GMemObj::fParent">fParent</a>;
+	<span class="keyword">int</span>        fPadNumber;
+	<a href="../GCanvas.html">GCanvas</a>*   fCanvas;
+	<span class="comment">//std::vector&lt;std::string&gt; fSource;</span>
+	std::string  <a href="../GMemObj.html#GMemObj:fOption" title="string GMemObj::fOption">fOption</a>;
+	
    ClassDef(<a href="../GPadObj.html">GPadObj</a>,0)
 };
 
 <span class="keyword">class</span> <a href="../GMemObj.html">GMemObj</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a> {
   <span class="keyword">public</span>:
-<a name="qjE9MD"></a>    <a href="../GMemObj.html">GMemObj</a>(<a href="../TObject.html">TObject</a> *obj, <a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
-    <a href="../GMemObj.html">GMemObj</a>(<span class="keyword">const</span> <a href="../GMemObj.html">GMemObj</a> &amp;obj) { ((<a href="../GMemObj.html">GMemObj</a>&amp;)obj).<a href="../GMemObj.html#GMemObj:Copy" title="void GMemObj::Copy(TObject&amp; object)">Copy</a>(*<span class="keyword">this</span>); }
-    <span class="keyword">virtual</span> <a href="../GMemObj.html#GMemObj:_GMemObj" title="void GMemObj::~GMemObj()">~GMemObj</a>();
+<a name="qjE9MD"></a>   <a href="../GMemObj.html">GMemObj</a>(<a href="../TObject.html">TObject</a> *obj, <a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
+   <a href="../GMemObj.html">GMemObj</a>(<span class="keyword">const</span> <a href="../GMemObj.html">GMemObj</a> &amp;obj) : <a href="../TNamed.html#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>() { ((<a href="../GMemObj.html">GMemObj</a>&amp;)obj).<a href="../TNamed.html#TNamed:Copy" title="void TNamed::Copy(TObject&amp; named)">Copy</a>(*<span class="keyword">this</span>); }
+   <span class="keyword">virtual</span> <a href="../GMemObj.html#GMemObj:_GMemObj" title="void GMemObj::~GMemObj()">~GMemObj</a>();
 
-    <span class="keyword">void</span> <a href="../GMemObj.html#GMemObj:Copy" title="void GMemObj::Copy(TObject&amp; object)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;object) <span class="keyword">const</span>;
+   <span class="keyword">void</span> <a href="../GMemObj.html#GMemObj:Copy" title="void GMemObj::Copy(TObject&amp; object)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;object) <span class="keyword">const</span>;
 
-<a name="HKEoD"></a>    <a href="../TObject.html">TObject</a> *<a href="../GMemObj.html#GMemObj:GetObject" title="TObject* GMemObj::GetObject()">GetObject</a>() { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fThis" title="TObject* GMemObj::fThis">fThis</a>;   }
-<a name="GI3aWC"></a>    <a href="../TObject.html">TObject</a> *<a href="../GMemObj.html#GMemObj:GetParent" title="TObject* GMemObj::GetParent()">GetParent</a>() { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fParent" title="TObject* GMemObj::fParent">fParent</a>; }
-<a name="uc7sXE"></a>    <a href="../TFile.html">TFile</a>   *<a href="../GMemObj.html#GMemObj:GetFile" title="TFile* GMemObj::GetFile()">GetFile</a>()   { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fFile" title="TFile* GMemObj::fFile">fFile</a>;   }
-<a name="kj7Z8B"></a>    <span class="keyword">void</span>     <a href="../GMemObj.html#GMemObj:SetParent" title="void GMemObj::SetParent(TObject* parent)">SetParent</a>(<a href="../TObject.html">TObject</a> *parent) { <a href="../GMemObj.html#GMemObj:fParent" title="TObject* GMemObj::fParent">fParent</a> = parent; }
-<a name="ux.SDE"></a>    <span class="keyword">void</span>     <a href="../GMemObj.html#GMemObj:SetFile" title="void GMemObj::SetFile(TFile* file)">SetFile</a>(<a href="../TFile.html">TFile</a> *file)       { <a href="../GMemObj.html#GMemObj:fFile" title="TFile* GMemObj::fFile">fFile</a>   = file;   }
+<a name="HKEoD"></a>   <a href="../TObject.html">TObject</a> *<a href="../GMemObj.html#GMemObj:GetObject" title="TObject* GMemObj::GetObject()">GetObject</a>() { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fThis" title="TObject* GMemObj::fThis">fThis</a>;   }
+<a name="GI3aWC"></a>   <a href="../TObject.html">TObject</a> *<a href="../GMemObj.html#GMemObj:GetParent" title="TObject* GMemObj::GetParent()">GetParent</a>() { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fParent" title="TObject* GMemObj::fParent">fParent</a>; }
+<a name="uc7sXE"></a>   <a href="../TFile.html">TFile</a>   *<a href="../GMemObj.html#GMemObj:GetFile" title="TFile* GMemObj::GetFile()">GetFile</a>()   { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fFile" title="TFile* GMemObj::fFile">fFile</a>;   }
+<a name="kj7Z8B"></a>   <span class="keyword">void</span>     <a href="../GMemObj.html#GMemObj:SetParent" title="void GMemObj::SetParent(TObject* parent)">SetParent</a>(<a href="../TObject.html">TObject</a> *parent) { <a href="../GMemObj.html#GMemObj:fParent" title="TObject* GMemObj::fParent">fParent</a> = parent; }
+<a name="ux.SDE"></a>   <span class="keyword">void</span>     <a href="../GMemObj.html#GMemObj:SetFile" title="void GMemObj::SetFile(TFile* file)">SetFile</a>(<a href="../TFile.html">TFile</a> *file)       { <a href="../GMemObj.html#GMemObj:fFile" title="TFile* GMemObj::fFile">fFile</a>   = file;   }
 
-<a name="BG3esD"></a>    <span class="keyword">const</span> <span class="keyword">char</span> *<a href="../GMemObj.html#GMemObj:GetObjOption" title="const char* GMemObj::GetObjOption()">GetObjOption</a>() { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fOption" title="string GMemObj::fOption">fOption</a>.c_str(); }
-<a name="VPcDBE"></a>    <span class="keyword">const</span> <span class="keyword">char</span> *<a href="../GMemObj.html#GMemObj:GetObjName" title="const char* GMemObj::GetObjName()">GetObjName</a>()   { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fObjName" title="string GMemObj::fObjName">fObjName</a>.c_str(); }
+<a name="BG3esD"></a>   <span class="keyword">const</span> <span class="keyword">char</span> *<a href="../GMemObj.html#GMemObj:GetObjOption" title="const char* GMemObj::GetObjOption()">GetObjOption</a>() { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fOption" title="string GMemObj::fOption">fOption</a>.c_str(); }
+<a name="VPcDBE"></a>   <span class="keyword">const</span> <span class="keyword">char</span> *<a href="../GMemObj.html#GMemObj:GetObjName" title="const char* GMemObj::GetObjName()">GetObjName</a>()   { <span class="keyword">return</span> <a href="../GMemObj.html#GMemObj:fObjName" title="string GMemObj::fObjName">fObjName</a>.c_str(); }
 
   <span class="keyword">private</span>:
-    <a href="../TObject.html">TObject</a> *<a href="../GMemObj.html#GMemObj:fThis" title="TObject* GMemObj::fThis">fThis</a>;
-    <a href="../TObject.html">TObject</a> *<a href="../GMemObj.html#GMemObj:fParent" title="TObject* GMemObj::fParent">fParent</a>;
-    <a href="../TFile.html">TFile</a>   *<a href="../GMemObj.html#GMemObj:fFile" title="TFile* GMemObj::fFile">fFile</a>;
-    std::string <a href="../GMemObj.html#GMemObj:fOption" title="string GMemObj::fOption">fOption</a>;
-    std::string <a href="../GMemObj.html#GMemObj:fObjName" title="string GMemObj::fObjName">fObjName</a>;
+   <a href="../TObject.html">TObject</a> *<a href="../GMemObj.html#GMemObj:fThis" title="TObject* GMemObj::fThis">fThis</a>;
+   <a href="../TObject.html">TObject</a> *<a href="../GMemObj.html#GMemObj:fParent" title="TObject* GMemObj::fParent">fParent</a>;
+   <a href="../TFile.html">TFile</a>   *<a href="../GMemObj.html#GMemObj:fFile" title="TFile* GMemObj::fFile">fFile</a>;
+   std::string <a href="../GMemObj.html#GMemObj:fOption" title="string GMemObj::fOption">fOption</a>;
+   std::string <a href="../GMemObj.html#GMemObj:fObjName" title="string GMemObj::fObjName">fObjName</a>;
 
   ClassDef(<a href="../GMemObj.html">GMemObj</a>,0)  
 };
@@ -85,60 +85,60 @@
 
 <span class="keyword">class</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> {
   <span class="keyword">public</span>:
-    <span class="keyword">static</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> *Instance();
-    <span class="keyword">virtual</span> ~GRootObjectManager();
+	<span class="keyword">static</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> *Instance();
+	<span class="keyword">virtual</span> ~GRootObjectManager();
+	
+	<span class="keyword">static</span> <span class="keyword">void</span> AddCanvas(<a href="../GCanvas.html">GCanvas</a>*);
+	<span class="keyword">static</span> <span class="keyword">void</span> AddCanvas(<a href="../TCanvas.html">TCanvas</a>*);
+	<span class="keyword">static</span> <span class="keyword">void</span> RemoveCanvas(<a href="../GCanvas.html">GCanvas</a>*);
+	<span class="keyword">static</span> <span class="keyword">void</span> RemoveCanvas(<a href="../TCanvas.html">TCanvas</a>* = 0);
 
-    <span class="keyword">static</span> <span class="keyword">void</span> AddCanvas(<a href="../GCanvas.html">GCanvas</a>*);
-    <span class="keyword">static</span> <span class="keyword">void</span> AddCanvas(<a href="../TCanvas.html">TCanvas</a>*);
-    <span class="keyword">static</span> <span class="keyword">void</span> RemoveCanvas(<a href="../GCanvas.html">GCanvas</a>*);
-    <span class="keyword">static</span> <span class="keyword">void</span> RemoveCanvas(<a href="../TCanvas.html">TCanvas</a>* = 0);
-
-    <span class="keyword">static</span> <span class="keyword">void</span> AddObject(<a href="../TObject.html">TObject</a> *obj,<a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
-    <span class="keyword">static</span> <span class="keyword">void</span> RemoveObject(<a href="../TObject.html">TObject</a>*);
-    <span class="comment">//static <a href="../ListOfTypes.html#void">void</a> AddObject(const <a href="../ListOfTypes.html#char">char</a> *name,<a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);</span>
-    <span class="keyword">static</span> <span class="keyword">void</span> RemoveObject(<span class="keyword">const</span> <span class="keyword">char</span> *name);
+	<span class="keyword">static</span> <span class="keyword">void</span> AddObject(<a href="../TObject.html">TObject</a> *obj,<a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
+	<span class="keyword">static</span> <span class="keyword">void</span> RemoveObject(<a href="../TObject.html">TObject</a>*);
+	<span class="comment">//static <a href="../ListOfTypes.html#void">void</a> AddObject(const <a href="../ListOfTypes.html#char">char</a> *name,<a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);</span>
+	<span class="keyword">static</span> <span class="keyword">void</span> RemoveObject(<span class="keyword">const</span> <span class="keyword">char</span> *name);
   
-    <span class="keyword">static</span> <span class="keyword">bool</span> <a href="../GMemObj.html#GMemObj:SetParent" title="void GMemObj::SetParent(TObject* parent)">SetParent</a>(<a href="../TObject.html">TObject</a> *object,<a href="../TObject.html">TObject</a> *parent);
-    <span class="keyword">static</span> <span class="keyword">bool</span> <a href="../GMemObj.html#GMemObj:SetFile" title="void GMemObj::SetFile(TFile* file)">SetFile</a>(<a href="../TObject.html">TObject</a> *object,<a href="../TFile.html">TFile</a> *file);
+	<span class="keyword">static</span> <span class="keyword">bool</span> <a href="../GMemObj.html#GMemObj:SetParent" title="void GMemObj::SetParent(TObject* parent)">SetParent</a>(<a href="../TObject.html">TObject</a> *object,<a href="../TObject.html">TObject</a> *parent);
+	<span class="keyword">static</span> <span class="keyword">bool</span> <a href="../GMemObj.html#GMemObj:SetFile" title="void GMemObj::SetFile(TFile* file)">SetFile</a>(<a href="../TObject.html">TObject</a> *object,<a href="../TFile.html">TFile</a> *file);
 
-    <a href="../TH1.html">TH1</a>    *GetNext1D(<a href="../TObject.html">TObject</a> *object =0);
-    <a href="../TH1.html">TH1</a>    *GetLast1D(<a href="../TObject.html">TObject</a> *object =0);
-    <a href="../TH2.html">TH2</a>    *GetNext2D(<a href="../TObject.html">TObject</a> *object =0);
-    <a href="../TH2.html">TH2</a>    *GetLast2D(<a href="../TObject.html">TObject</a> *object =0);
-    <a href="../TGraph.html">TGraph</a> *GetNextGraph(<a href="../TObject.html">TObject</a> *object=0);
-    <a href="../TGraph.html">TGraph</a> *GetLastGraph(<a href="../TObject.html">TObject</a> *object=0);
+	<a href="../TH1.html">TH1</a>    *GetNext1D(<a href="../TObject.html">TObject</a> *object =0);
+	<a href="../TH1.html">TH1</a>    *GetLast1D(<a href="../TObject.html">TObject</a> *object =0);
+	<a href="../TH2.html">TH2</a>    *GetNext2D(<a href="../TObject.html">TObject</a> *object =0);
+	<a href="../TH2.html">TH2</a>    *GetLast2D(<a href="../TObject.html">TObject</a> *object =0);
+	<a href="../TGraph.html">TGraph</a> *GetNextGraph(<a href="../TObject.html">TObject</a> *object=0);
+	<a href="../TGraph.html">TGraph</a> *GetLastGraph(<a href="../TObject.html">TObject</a> *object=0);
 
-    <a href="../GMemObj.html">GMemObj</a> *FindMemObject(<a href="../TObject.html">TObject</a> *object ) { <span class="keyword">return</span> ((<a href="../GMemObj.html">GMemObj</a>*)fObjectsMap-&gt;<a href="../TObject.html#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(object)); }
-    <a href="../GMemObj.html">GMemObj</a> *FindMemObject(<span class="keyword">const</span> <span class="keyword">char</span> *name) { <span class="keyword">return</span> ((<a href="../GMemObj.html">GMemObj</a>*)fObjectsMap-&gt;<a href="../TObject.html#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(Form(<span class="string">"%s_%s"</span>,name,<span class="string">"memobj"</span>))); }
+	<a href="../GMemObj.html">GMemObj</a> *FindMemObject(<a href="../TObject.html">TObject</a> *object ) { <span class="keyword">return</span> ((<a href="../GMemObj.html">GMemObj</a>*)fObjectsMap-&gt;<a href="../TObject.html#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(object)); }
+	<a href="../GMemObj.html">GMemObj</a> *FindMemObject(<span class="keyword">const</span> <span class="keyword">char</span> *name) { <span class="keyword">return</span> ((<a href="../GMemObj.html">GMemObj</a>*)fObjectsMap-&gt;<a href="../TObject.html#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(Form(<span class="string">"%s_%s"</span>,name,<span class="string">"memobj"</span>))); }
 
 
-    <span class="keyword">static</span> <span class="keyword">void</span> Update(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">"MemClean"</span>);
-    <span class="keyword">static</span> <a href="../TList.html">TList</a> *GetObjectsList() { <span class="keyword">return</span> fObjectsMap; }
-    <span class="keyword">void</span> <a href="../TNamed.html#TNamed:Print" title="void TNamed::Print(Option_t* option=&quot;&quot;)">Print</a>();
+	<span class="keyword">static</span> <span class="keyword">void</span> Update(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">"MemClean"</span>);
+	<span class="keyword">static</span> <a href="../TList.html">TList</a> *GetObjectsList() { <span class="keyword">return</span> fObjectsMap; }
+	<span class="keyword">void</span> <a href="../TNamed.html#TNamed:Print" title="void TNamed::Print(Option_t* option=&quot;&quot;)">Print</a>();
 
 
   <span class="keyword">private</span>:
-    <a href="../GRootObjectManager.html">GRootObjectManager</a>();
-    <span class="keyword">static</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> *fGRootObjectManager;
+	<a href="../GRootObjectManager.html">GRootObjectManager</a>();
+	<span class="keyword">static</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> *fGRootObjectManager;
 
-    <span class="keyword">static</span> std::map&lt;<a href="../TCanvas.html">TCanvas</a>*,std::vector&lt;<a href="../GPadObj.html">GPadObj</a>&gt; &gt; fCanvasMap;
-    <span class="keyword">static</span> <a href="../TList.html">TList</a> *fCanvasList;
+	<span class="keyword">static</span> std::map&lt;<a href="../TCanvas.html">TCanvas</a>*,std::vector&lt;<a href="../GPadObj.html">GPadObj</a>&gt; &gt; fCanvasMap;
+	<span class="keyword">static</span> <a href="../TList.html">TList</a> *fCanvasList;
 
-    <span class="comment">//static std::map&lt;std::string,<a href="../GMemObj.html">GMemObj</a> &gt; fObjectsMap;</span>
-    <span class="keyword">static</span> <a href="../TList.html">TList</a> *fObjectsMap;
+	<span class="comment">//static std::map&lt;std::string,<a href="../GMemObj.html">GMemObj</a> &gt; fObjectsMap;</span>
+	<span class="keyword">static</span> <a href="../TList.html">TList</a> *fObjectsMap;
 
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f1DHistsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f2DHistsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f3DHistsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fGraphsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fCutsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fMiscMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f1DHistsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f2DHistsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f3DHistsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fGraphsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fCutsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fMiscMap;</span>
 
-    <span class="comment">//<a href="../ListOfTypes.html#void">void</a> Cleanup();</span>
-    <span class="keyword">static</span> <span class="keyword">void</span> ExtractObjects(<a href="../TCollection.html">TCollection</a>*);
-    <span class="keyword">static</span> <span class="keyword">void</span> ExtractObjectsFromFile(<a href="../TDirectoryFile.html">TDirectoryFile</a> *file);
+	<span class="comment">//<a href="../ListOfTypes.html#void">void</a> Cleanup();</span>
+	<span class="keyword">static</span> <span class="keyword">void</span> ExtractObjects(<a href="../TCollection.html">TCollection</a>*);
+	<span class="keyword">static</span> <span class="keyword">void</span> ExtractObjectsFromFile(<a href="../TDirectoryFile.html">TDirectoryFile</a> *file);
 
-  ClassDef(<a href="../GRootObjectManager.html">GRootObjectManager</a>,0)
+	ClassDef(<a href="../GRootObjectManager.html">GRootObjectManager</a>,0)
 };
 
 <span class="cpp">#endif</span>
@@ -150,7 +150,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:07 </em><em>&raquo; Last generated: 2015-09-08 11:07</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:35 </em><em>&raquo; Last generated: 2015-11-04 15:35</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

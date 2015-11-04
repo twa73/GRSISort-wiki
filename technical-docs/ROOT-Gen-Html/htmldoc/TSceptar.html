@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:13:46 2015            -->
+<!--   Date: Wed Nov  4 15:42:10 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -87,7 +87,7 @@ return false;}
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSceptar:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Clone"><span class="baseclass">TObject::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Compare"><span class="baseclass">TObject::</span>Compare</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSceptar:Copy">Copy</a>(<a href="./TSceptar.html">TSceptar</a>&amp; rhs) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TSceptar:Copy">Copy</a>(<a href="./TObject.html">TObject</a>&amp; rhs) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DistancetoPrimitive"><span class="baseclass">TObject::</span>DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Draw"><span class="baseclass">TObject::</span>Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
@@ -104,7 +104,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
-<tr class="func"><td class="funcret"><a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>*</td><td class="funcname"><a class="funcname" href="#TSceptar:GetHit">GetHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a> idx = 0)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>*</td><td class="funcname"><a class="funcname" href="#TSceptar:GetHit">GetHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; idx = 0)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TSceptar:GetMultiplicity">GetMultiplicity</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetName"><span class="baseclass">TObject::</span>GetName</a>() <span class="keyword">const</span></td></tr>
@@ -112,7 +112,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <a href="./TVector3.html">TVector3</a></td><td class="funcname"><a class="funcname" href="#TSceptar:GetPosition">GetPosition</a>(<span class="keyword">int</span> DetNbr)</td></tr>
-<tr class="func"><td class="funcret"><a href="./TSceptarHit.html">TSceptarHit</a>*</td><td class="funcname"><a class="funcname" href="#TSceptar:GetSceptarHit">GetSceptarHit</a>(<span class="keyword">int</span> i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TSceptarHit.html">TSceptarHit</a>*</td><td class="funcname"><a class="funcname" href="#TSceptar:GetSceptarHit">GetSceptarHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(<a href="./TTimer.html">TTimer</a>* timer)</td></tr>
@@ -254,8 +254,8 @@ return false;}
 <div class="funccomm"><pre>Default Destructor
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSceptar:TSceptar@1" href="src/TSceptar.cxx.html#t6ezyE">TSceptar</a>(<span class="keyword">const</span> <a href="./TSceptar.html">TSceptar</a>&amp; rhs)</span><br />
-<div class="funccomm"><pre><a href="./TSceptar.html#TSceptar:Copy" title="void TSceptar::Copy(TSceptar&amp; rhs)">Copy</a> Contructor
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSceptar:TSceptar@1" href="src/TSceptar.cxx.html#cVU4y">TSceptar</a>(<span class="keyword">const</span> <a href="./TSceptar.html">TSceptar</a>&amp; rhs)</span><br />
+<div class="funccomm"><pre><a href="./TSceptar.html#TSceptar:Copy" title="void TSceptar::Copy(TObject&amp; rhs)">Copy</a> Contructor
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSceptar:Clear" href="src/TSceptar.cxx.html#KTVSQC">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
@@ -263,7 +263,7 @@ return false;}
 The Option <span class="string">"all"</span> clears the base class and data.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSceptar:Copy" href="src/TSceptar.cxx.html#e_TC7C">Copy</a>(<a href="./TSceptar.html">TSceptar</a>&amp; rhs) const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSceptar:Copy" href="src/TSceptar.cxx.html#ltsMRB">Copy</a>(<a href="./TObject.html">TObject</a>&amp; rhs) const</span><br />
 <div class="funccomm"><pre>Copies a <a href="./TSceptar.html">TSceptar</a>
 </pre></div>
 </div>
@@ -286,14 +286,11 @@ The Option <span class="string">"all"</span> clears the base class and data.
 This is done for both GRIFFIN and it's suppressors.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>* <a class="funcname" name="TSceptar:GetHit" href="src/TSceptar.cxx.html#znq5ZE">GetHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a> idx = 0)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./TGRSIDetectorHit.html">TGRSIDetectorHit</a>* <a class="funcname" name="TSceptar:GetHit" href="src/TSceptar.cxx.html#RGKdrE">GetHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; idx = 0)</span><br />
 <div class="funccomm"><pre>Gets the <a href="./TSceptarHit.html">TSceptarHit</a> at index idx.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./TSceptarHit.html">TSceptarHit</a> * <a class="funcname" name="TSceptar:GetSceptarHit" href="src/TSceptar.h.html#bo.N5">GetSceptarHit</a>(<span class="keyword">int</span> i)</span><br />
-
-<div class="code"><code class="inlinecode">{	<span class="keyword">return</span> &amp;<a href="./TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>[i];   }</code></div>
-<div style="clear:both;"></div>
+<div class="funcdoc"><span class="funcname"><a href="./TSceptarHit.html">TSceptarHit</a>* <a class="funcname" name="TSceptar:GetSceptarHit" href="src/TSceptar.cxx.html#sEndND">GetSceptarHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TSceptar:GetMultiplicity" href="src/TSceptar.h.html#B7_EvE">GetMultiplicity</a>() const</span><br />
 
@@ -315,7 +312,7 @@ This is done for both GRIFFIN and it's suppressors.
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Tue Sep  8 11:13:47 2015 </em><em>&raquo; Last generated: 2015-09-08 11:13</em><br />
+<em>&raquo; Last changed: Wed Nov  4 15:42:11 2015 </em><em>&raquo; Last generated: 2015-11-04 15:42</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:14:05 2015            -->
+<!--   Date: Wed Nov  4 15:42:31 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -31,7 +31,7 @@
 <span class="cpp">#include &lt;stdio.h&gt;</span>
 
 <span class="cpp">#include "<a href="../TTipHit.h">TTipHit.h</a>"</span>
-<span class="cpp">#ifndef __CINT__</span>
+<span class="cpp">#if !defined (__CINT__) &amp;&amp; !defined (__CLING__)</span>
 <span class="cpp">#include "<a href="../TTipData.h">TTipData.h</a>"</span>
 <span class="cpp">#else</span>
 <span class="keyword">class</span> TTipData;
@@ -49,18 +49,18 @@
     <a href="../TTip.html">TTip</a>();  
     <a href="../TTip.html">TTip</a>(<span class="keyword">const</span> <a href="../TTip.html">TTip</a>&amp; rhs);
 
-    <a href="../TTipHit.html">TTipHit</a> *<a href="../TTip.html#TTip:GetTipHit" title="TTipHit* TTip::GetTipHit(const int i)">GetTipHit</a>(<span class="keyword">const</span> <span class="keyword">int</span> i) ;<span class="comment">//!</span>
-    <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a> *<a href="../TTip.html#TTip:GetHit" title="TGRSIDetectorHit* TTip::GetHit(const int i)">GetHit</a>(<span class="keyword">const</span> <span class="keyword">int</span> i);
+    <a href="../TTipHit.html">TTipHit</a> *<a href="../TTip.html#TTip:GetTipHit" title="TTipHit* TTip::GetTipHit(const int&amp; i)">GetTipHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i) ;<span class="comment">//!</span>
+    <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a> *<a href="../TTip.html#TTip:GetHit" title="TGRSIDetectorHit* TTip::GetHit(const int&amp; i)">GetHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i);
 <a name="v8CHXB"></a>    <a href="../ListOfTypes.html#Short_t">Short_t</a> <a href="../TTip.html#TTip:GetMultiplicity" title="Short_t TTip::GetMultiplicity()">GetMultiplicity</a>() <span class="keyword">const</span>         {  <span class="keyword">return</span> <a href="../TTip.html#TTip:tip_hits" title="vector&lt;TTipHit&gt; TTip::tip_hits">tip_hits</a>.<a href="../vector_TTipHit_.html#vector_TTipHit_:size" title="vector&lt;TTipHit,allocator&lt;TTipHit&gt; &gt;::size_type vector&lt;TTipHit,allocator&lt;TTipHit&gt; &gt;::size()">size</a>();}  <span class="comment">//!</span>
 
 	 <span class="keyword">void</span> <a href="../TTip.html#TTip:BuildHits" title="void TTip::BuildHits(TDetectorData* data=0,Option_t* opt=&quot;&quot;)">BuildHits</a>(TDetectorData *data =0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);           <span class="comment">//!</span>
 	 <span class="keyword">void</span> <a href="../TTip.html#TTip:FillData" title="void TTip::FillData(TFragment* ,TChannel* ,MNEMONIC* )">FillData</a>(<a href="../TFragment.html">TFragment</a>*,<a href="../TChannel.html">TChannel</a>*,MNEMONIC*);                           <span class="comment">//!</span>
-    <span class="keyword">void</span> <a href="../TTip.html#TTip:Copy" title="void TTip::Copy(TTip&amp; rhs)">Copy</a>(<a href="../TTip.html">TTip</a> &amp;rhs) <span class="keyword">const</span>;
+    <span class="keyword">void</span> <a href="../TTip.html#TTip:Copy" title="void TTip::Copy(TObject&amp; rhs)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;rhs) <span class="keyword">const</span>;
 
     <a href="../TTip.html">TTip</a>&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> <a href="../TTip.html">TTip</a>&amp;);  <span class="comment">//!</span>
 
     <span class="keyword">void</span> <a href="../TTip.html#TTip:Clear" title="void TTip::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
-    <span class="keyword">void</span> <a href="../TTip.html#TTip:Print" title="void TTip::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
+    <span class="keyword">void</span> <a href="../TTip.html#TTip:Print" title="void TTip::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>;
 
    <span class="keyword">protected</span>:
      <span class="keyword">void</span> <a href="../TTip.html#TTip:PushBackHit" title="void TTip::PushBackHit(TGRSIDetectorHit* tiphit)">PushBackHit</a>(<a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>* tiphit);
@@ -70,67 +70,67 @@
     TTipData *<a href="../TTip.html#TTip:tipdata" title="TTipData* TTip::tipdata">tipdata</a>;                                               <span class="comment">//!  Used to build TIP Hits</span>
     std::vector &lt;<a href="../TTipHit.html">TTipHit</a>&gt; <a href="../TTip.html#TTip:tip_hits" title="vector&lt;TTipHit&gt; TTip::tip_hits">tip_hits</a>;                                  <span class="comment">//   The set of detector hits</span>
 
-  <span class="keyword">private</span>:
-    <span class="comment">//  SFU CsI waveform fitting routines.</span>
-    <span class="keyword">typedef</span> <span class="keyword">struct</span> WaveFormPar {
-      <span class="comment">//parameters for baseline</span>
-      <span class="keyword">int</span>    baseline_range;
-      <span class="keyword">double</span> baseline; <span class="comment">//baseline</span>
-      <span class="keyword">double</span> baselineStDev; <span class="comment">//baseline variance</span>
-      <span class="keyword">int</span>    bflag; <span class="comment">//flag for baseline determiniation</span>
+  <span class="comment">/*private:
+    //  SFU CsI waveform fitting routines.
+    typedef struct WaveFormPar {
+      //parameters for baseline
+      <a href="../ListOfTypes.html#int">int</a>    baseline_range;
+      <a href="../ListOfTypes.html#double">double</a> baseline; //baseline
+      <a href="../ListOfTypes.html#double">double</a> baselineStDev; //baseline variance
+      <a href="../ListOfTypes.html#int">int</a>    bflag; //flag for baseline determiniation
       
-      <span class="comment">//paremeters for exclusion zone</span>
-      <span class="keyword">double</span> max; <span class="comment">//max value of the filtered waveform </span>
-      <span class="keyword">double</span> tmax; <span class="comment">//x position of the max value of the filtered waveform</span>
-      <span class="keyword">double</span> baselineMin; <span class="comment">//max crossing point for exclusion zone</span>
-      <span class="keyword">double</span> baselineMax; <span class="comment">//max crossing point for exclusion zone</span>
-      <span class="keyword">int</span>    temax; <span class="comment">//x position, exclusion zone upper limit</span>
-      <span class="keyword">int</span>    temin; <span class="comment">//x position, exclusion zone lower limit</span>
-      <span class="keyword">double</span> afit,bfit; <span class="comment">//parameters for the line which fits risetime above temax</span>
-      <span class="keyword">int</span>    mflag; <span class="comment">//flag for tmax found</span>
-      <span class="keyword">int</span>    teflag; <span class="comment">//flag for exclusion zone determined</span>
+      //paremeters for exclusion zone
+      <a href="../ListOfTypes.html#double">double</a> max; //max value of the filtered waveform 
+      <a href="../ListOfTypes.html#double">double</a> tmax; //x position of the max value of the filtered waveform
+      <a href="../ListOfTypes.html#double">double</a> baselineMin; //max crossing point for exclusion zone
+      <a href="../ListOfTypes.html#double">double</a> baselineMax; //max crossing point for exclusion zone
+      <a href="../ListOfTypes.html#int">int</a>    temax; //x position, exclusion zone upper limit
+      <a href="../ListOfTypes.html#int">int</a>    temin; //x position, exclusion zone lower limit
+      <a href="../ListOfTypes.html#double">double</a> afit,bfit; //parameters for the line which fits risetime above temax
+      <a href="../ListOfTypes.html#int">int</a>    mflag; //flag for tmax found
+      <a href="../ListOfTypes.html#int">int</a>    teflag; //flag for exclusion zone determined
           
-      <span class="keyword">double</span> t0; <span class="comment">//required for compilation of map.c - check that it works</span>
-      <span class="keyword">double</span> t0_local;
+      <a href="../ListOfTypes.html#double">double</a> t0; //required for compilation of map.c - check that it works
+      <a href="../ListOfTypes.html#double">double</a> t0_local;
       
-      <span class="comment">//new stuff necessary for compiliation of Kris' waveform analyzer changes</span>
-      <span class="keyword">double</span> b0;
-      <span class="keyword">double</span> b1;
-      <span class="keyword">long</span> <span class="keyword">double</span> s0;
-      <span class="keyword">long</span> <span class="keyword">double</span> s1;
-      <span class="keyword">long</span> <span class="keyword">double</span> s2;
-      <span class="keyword">double</span> t90;
-      <span class="keyword">double</span> t50;
-      <span class="keyword">double</span> t30;
-      <span class="keyword">double</span> t10;
-      <span class="keyword">double</span> t10t90;
-      <span class="keyword">int</span> t10_flag;
-      <span class="keyword">int</span> t30_flag;
-      <span class="keyword">int</span> t50_flag;
-      <span class="keyword">int</span> t90_flag;
-      <span class="keyword">int</span> t10t90_flag;
-      <span class="keyword">int</span>    thigh;
-      <span class="keyword">double</span> sig2noise;
+      //new stuff necessary for compiliation of Kris' waveform analyzer changes
+      <a href="../ListOfTypes.html#double">double</a> b0;
+      <a href="../ListOfTypes.html#double">double</a> b1;
+      <a href="../ListOfTypes.html#long">long</a> <a href="../ListOfTypes.html#double">double</a> s0;
+      <a href="../ListOfTypes.html#long">long</a> <a href="../ListOfTypes.html#double">double</a> s1;
+      <a href="../ListOfTypes.html#long">long</a> <a href="../ListOfTypes.html#double">double</a> s2;
+      <a href="../ListOfTypes.html#double">double</a> t90;
+      <a href="../ListOfTypes.html#double">double</a> t50;
+      <a href="../ListOfTypes.html#double">double</a> t30;
+      <a href="../ListOfTypes.html#double">double</a> t10;
+      <a href="../ListOfTypes.html#double">double</a> t10t90;
+      <a href="../ListOfTypes.html#int">int</a> t10_flag;
+      <a href="../ListOfTypes.html#int">int</a> t30_flag;
+      <a href="../ListOfTypes.html#int">int</a> t50_flag;
+      <a href="../ListOfTypes.html#int">int</a> t90_flag;
+      <a href="../ListOfTypes.html#int">int</a> t10t90_flag;
+      <a href="../ListOfTypes.html#int">int</a>    thigh;
+      <a href="../ListOfTypes.html#double">double</a> sig2noise;
     } WaveFormPar;
 
-    <span class="keyword">typedef</span> <span class="keyword">struct</span> WaveShapPar { 
-      <span class="keyword">double</span> chisq;
-      <span class="keyword">int</span>    ndf;
-      <span class="keyword">int</span>    type;
-      std::vector&lt;<span class="keyword">double</span>&gt; t;  <span class="comment">//decay constants for the fits</span>
-      std::vector&lt;<span class="keyword">double</span>&gt; am; <span class="comment">//associated aplitudes for the decay constants</span>
-      <span class="keyword">double</span> rf[5];
+    typedef struct WaveShapPar { 
+      <a href="../ListOfTypes.html#double">double</a> chisq;
+      <a href="../ListOfTypes.html#int">int</a>    ndf;
+      <a href="../ListOfTypes.html#int">int</a>    type;
+      std::vector&lt;<a href="../ListOfTypes.html#double">double</a>&gt; t;  //decay constants for the fits
+      std::vector&lt;<a href="../ListOfTypes.html#double">double</a>&gt; am; //associated aplitudes for the decay constants
+      <a href="../ListOfTypes.html#double">double</a> rf[5];
 
-      <span class="comment">//new stuff necessary for compiliation of Kris' waveform analyzer changes</span>
-      <span class="keyword">long</span> <span class="keyword">double</span> chisq_ex;
-      <span class="keyword">long</span> <span class="keyword">double</span> chisq_f;
-      <span class="keyword">int</span>    ndf_ex;
-      <span class="keyword">int</span>    ndf_f;
+      //new stuff necessary for compiliation of Kris' waveform analyzer changes
+      <a href="../ListOfTypes.html#long">long</a> <a href="../ListOfTypes.html#double">double</a> chisq_ex;
+      <a href="../ListOfTypes.html#long">long</a> <a href="../ListOfTypes.html#double">double</a> chisq_f;
+      <a href="../ListOfTypes.html#int">int</a>    ndf_ex;
+      <a href="../ListOfTypes.html#int">int</a>    ndf_f;
     } WaveShapPar;  
 
-<a name="y9sf8B"></a>    WaveFormPar <a href="../TTip.html#TTip:GetExclusionZone" title="TTip::WaveFormPar TTip::GetExclusionZone()">GetExclusionZone</a>();
-<a name="yOpjOB"></a>    WaveShapPar <a href="../TTip.html#TTip:GetShape" title="TTip::WaveShapPar TTip::GetShape(TTip::WaveFormPar&amp; )">GetShape</a>(WaveFormPar&amp;);
-
+    WaveFormPar GetExclusionZone();
+    WaveShapPar GetShape(WaveFormPar&amp;);
+	*/</span>
 
   <span class="keyword">public</span>:
 
@@ -148,7 +148,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:14 </em><em>&raquo; Last generated: 2015-09-08 11:14</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:42 </em><em>&raquo; Last generated: 2015-11-04 15:42</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

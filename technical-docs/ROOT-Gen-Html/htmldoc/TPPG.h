@@ -86,20 +86,27 @@ class TPPG : public TObject	{
    public: 
     void AddData(TPPGData* pat);
     uint16_t GetStatus(ULong64_t time) const;
-    ULong64_t GetLastStatusTime(ULong64_t time, ppg_pattern pat = kJunk, bool exact_flag = false );
+    ULong64_t GetLastStatusTime(ULong64_t time, ppg_pattern pat = kJunk, bool exact_flag = false ) const;
     Bool_t MapIsEmpty() const;
     std::size_t PPGSize() const {return fPPGStatusMap->size()- 1;}
     Long64_t Merge(TCollection *list);
     void Add(const TPPG* ppg);
     void operator+=(const TPPG& rhs);                           
    
+    void SetCycleLength(ULong64_t length) { fCycleLength = length; }
+
     bool Correct(bool verbose = false);
     ULong64_t GetCycleLength();
+    ULong64_t GetNumberOfCycles();
+    ULong64_t GetTimeInCycle(ULong64_t real_time);
+    ULong64_t GetCycleNumber(ULong64_t real_time);
 
-    TPPGData* const Next();
-    TPPGData* const Previous();
-    TPPGData* const First();
-    TPPGData* const Last();
+    ULong64_t GetStatusStart(ppg_pattern);
+
+    const TPPGData* Next();
+    const TPPGData* Previous();
+    const TPPGData* First();
+    const TPPGData* Last();
 
     virtual void Print(Option_t *opt = "") const;
     virtual void Clear(Option_t *opt = "");
@@ -107,7 +114,7 @@ class TPPG : public TObject	{
   private:
     PPGMap_t::iterator MapBegin() const { return ++(fPPGStatusMap->begin()); }
     PPGMap_t::iterator MapEnd() const   { return fPPGStatusMap->end(); }
-    PPGMap_t::iterator fcurrIterator; //!
+    PPGMap_t::iterator fCurrIterator; //!
 
   private:
     PPGMap_t *fPPGStatusMap;

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:10:34 2015            -->
+<!--   Date: Wed Nov  4 15:39:04 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -67,10 +67,10 @@ ClassImp(<a href="../TEfficiencyCal.html">TEfficiencyCal</a>)
 
    <a href="../ListOfTypes.html#Double_t">Double_t</a> efficiency,d_efficiency;
    <a href="../ListOfTypes.html#Double_t">Double_t</a> intensity = 1.0;<span class="comment">//nuc;</span>
-   <a href="../ListOfTypes.html#Double_t">Double_t</a> d_intensity = 0.1;
 
    efficiency = area/intensity;
-   d_efficiency = efficiency*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Sqrt" title="Double_t TMath::Sqrt(Double_t x)">Sqrt</a>(<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Power" title="LongDouble_t TMath::Power(LongDouble_t x,LongDouble_t y) or overloads">Power</a>(d_efficiency/efficiency,2.0) + <a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Power" title="LongDouble_t TMath::Power(LongDouble_t x,LongDouble_t y) or overloads">Power</a>(d_area/area,2.0));
+ 	d_efficiency = d_area/intensity;
+   <span class="comment">//d_efficiency = efficiency*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Sqrt" title="Double_t TMath::Sqrt(Double_t x)">Sqrt</a>(<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Power" title="LongDouble_t TMath::Power(LongDouble_t x,LongDouble_t y) or overloads">Power</a>(d_efficiency/efficiency,2.0) + <a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Power" title="LongDouble_t TMath::Power(LongDouble_t x,LongDouble_t y) or overloads">Power</a>(d_area/area,2.0));</span>
 
    <a href="../TGraph.html#TGraph:SetPoint" title="void TGraph::SetPoint(Int_t i,Double_t x,Double_t y)">SetPoint</a>(<a href="../TGraph.html#TGraph:GetN" title="Int_t TGraph::GetN()">GetN</a>(), energy, efficiency);
    <a href="../TGraphErrors.html#TGraphErrors:SetPointError" title="void TGraphErrors::SetPointError(Double_t ex,Double_t ey) or overloads">SetPointError</a>(<a href="../TGraph.html#TGraph:GetN" title="Int_t TGraph::GetN()">GetN</a>()-1,d_energy,d_efficiency);
@@ -97,7 +97,7 @@ ClassImp(<a href="../TEfficiencyCal.html">TEfficiencyCal</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:10 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:39 </em><em>&raquo; Last generated: 2015-11-04 15:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

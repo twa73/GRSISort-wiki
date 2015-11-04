@@ -105,11 +105,12 @@ class TCSMHit : public TGRSIDetectorHit 	{
 		TVector3 GetEPosition() const     	  {	return e_position;	}	//!
 		TVector3 GetDPosition() const         {	return d_position;	}	//!
 
+		Double_t GetDdE_dx() const 		{return GetDEnergy()/GetDthickness();}
+		Double_t GetDthickness() const;
 
-
-		TVector3 GetPosition() const	{	return d_position;	 }	//!
-		Double_t GetEnergy() const		{return GetDEnergy() + GetEEnergy();} //!
-		Double_t GetTime() const		{return ver_d_time;} //!
+		TVector3 GetPosition(Double_t dist = 0) const	{	return d_position;	 }	//!
+		Double_t GetEnergy(Option_t *opt = "") const		{ return GetDEnergy() + GetEEnergy();} //!
+		Double_t GetTime(Option_t *opt = "") const		{ return ver_d_time;} //!
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -161,9 +162,8 @@ class TCSMHit : public TGRSIDetectorHit 	{
 		//void SetVerticalWave(std::vector<int> &wave)	{ ver_strip_wave = wave;	} 
 		//void SetPadWave(std::vector<int> &wave)	{ pad_wave = wave;	} 
 
-
 		
-	ClassDef(TCSMHit,2)
+	ClassDef(TCSMHit,3)
 };
 
 

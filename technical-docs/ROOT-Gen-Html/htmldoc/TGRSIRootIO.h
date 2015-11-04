@@ -16,6 +16,7 @@
 #include "TKinematics.h"
 #include "TEpicsFrag.h"
 #include "TPPG.h"
+#include "TScaler.h"
 
 class TGRSIRootIO : public TObject {
 
@@ -32,12 +33,16 @@ class TGRSIRootIO : public TObject {
       TTree *fFragmentTree;
       TTree *fBadFragmentTree;
       TTree *fEpicsTree;
+      TTree *fDeadtimeScalerTree;
+      TTree *fRateScalerTree;
       TPPG *fPPG;
 
       TFile *foutfile;
       int fTimesFillCalled;
       int fTimesBadFillCalled;
       int fTimesPPGCalled;
+      int fTimesDeadtimeScalerCalled;
+      int fTimesRateScalerCalled;
       int fEPICSTimesFillCalled;
 
       std::vector<TFile*> finfiles;
@@ -46,6 +51,9 @@ class TGRSIRootIO : public TObject {
       TFragment  *fBadBufferFrag;
       TEpicsFrag *fEXBufferFrag;
       TChannel   *fBufferChannel;
+
+		TScalerData* fDeadtimeScalerData;
+		TScalerData* fRateScalerData;
 
    public:
       bool SetUpRootOutFile(int,int);
@@ -77,6 +85,16 @@ class TGRSIRootIO : public TObject {
       TPPG *GetPPG()  { return fPPG;  }
       void FillPPG(TPPGData*);
       void FinalizePPG();
+      int GetTimesPPGCalled()  { return fTimesPPGCalled;  }
+
+      void SetUpScalerTrees();
+      TTree *GetDeadtimeScalerTree()  { return fDeadtimeScalerTree;  }
+      TTree *GetRateScalerTree()  { return fRateScalerTree;  }
+      void FillDeadtimeScalerTree(TScalerData*);
+      void FillRateScalerTree(TScalerData*);
+      void FinalizeScalerTrees();
+      int GetTimesDeadtimeScalerCalled()  { return fTimesDeadtimeScalerCalled;  }
+      int GetTimesRateScalerCalled()  { return fTimesRateScalerCalled;  }
 
       void SetUpEpicsTree();
       TTree *GetEpicsTree()  { return fEpicsTree;  }

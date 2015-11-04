@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:13:47 2015            -->
+<!--   Date: Wed Nov  4 15:42:11 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -28,7 +28,7 @@
 <span class="cpp">#include &lt;cstdio&gt;</span>
 
 <span class="cpp">#include "<a href="../TSceptarHit.h">TSceptarHit.h</a>"</span>
-<span class="cpp">#ifndef __CINT__</span>
+<span class="cpp">#if !defined (__CINT__) &amp;&amp; !defined (__CLING__)</span>
 <span class="cpp">#include "<a href="../TSceptarData.h">TSceptarData.h</a>"</span>
 <span class="cpp">#else</span>
 <span class="keyword">class</span> TSceptarData;
@@ -46,9 +46,9 @@
      <a href="../TSceptar.html">TSceptar</a>(<span class="keyword">const</span> <a href="../TSceptar.html">TSceptar</a>&amp; rhs);
 
   <span class="keyword">public</span>: 
-     <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>* <a href="../TSceptar.html#TSceptar:GetHit" title="TGRSIDetectorHit* TSceptar::GetHit(const Int_t idx=0)">GetHit</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> idx =0);
-     <span class="keyword">void</span> <a href="../TSceptar.html#TSceptar:Copy" title="void TSceptar::Copy(TSceptar&amp; rhs)">Copy</a>(<a href="../TSceptar.html">TSceptar</a> &amp;rhs) <span class="keyword">const</span>;
-<a name="bo.N5"></a>     <a href="../TSceptarHit.html">TSceptarHit</a> *<a href="../TSceptar.html#TSceptar:GetSceptarHit" title="TSceptarHit* TSceptar::GetSceptarHit(int i)">GetSceptarHit</a>(<span class="keyword">int</span> i)        {	<span class="keyword">return</span> &amp;<a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>[i];   }	<span class="comment">//!</span>
+     <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>* <a href="../TSceptar.html#TSceptar:GetHit" title="TGRSIDetectorHit* TSceptar::GetHit(const Int_t&amp; idx=0)">GetHit</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>&amp; idx =0);
+     <span class="keyword">void</span> <a href="../TSceptar.html#TSceptar:Copy" title="void TSceptar::Copy(TObject&amp; rhs)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;rhs) <span class="keyword">const</span>;
+     <a href="../TSceptarHit.html">TSceptarHit</a> *<a href="../TSceptar.html#TSceptar:GetSceptarHit" title="TSceptarHit* TSceptar::GetSceptarHit(const int&amp; i)">GetSceptarHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i);	<span class="comment">//!</span>
 <a name="B7_EvE"></a>     <a href="../ListOfTypes.html#Short_t">Short_t</a> <a href="../TSceptar.html#TSceptar:GetMultiplicity" title="Short_t TSceptar::GetMultiplicity()">GetMultiplicity</a>() <span class="keyword">const</span>	       {	<span class="keyword">return</span> <a href="../TSceptar.html#TSceptar:sceptar_hits" title="vector&lt;TSceptarHit&gt; TSceptar::sceptar_hits">sceptar_hits</a>.<a href="../vector_TSceptarHit_.html#vector_TSceptarHit_:size" title="vector&lt;TSceptarHit,allocator&lt;TSceptarHit&gt; &gt;::size_type vector&lt;TSceptarHit,allocator&lt;TSceptarHit&gt; &gt;::size()">size</a>();}	<span class="comment">//!</span>
 
 <a name="Kz08MC"></a>     <span class="keyword">static</span> <a href="../TVector3.html">TVector3</a> <a href="../TSceptar.html#TSceptar:GetPosition" title="TVector3 TSceptar::GetPosition(int DetNbr)">GetPosition</a>(<span class="keyword">int</span> DetNbr)  { <span class="keyword">return</span> <a href="../TSceptar.html#TSceptar:gPaddlePosition" title="TVector3 TSceptar::gPaddlePosition">gPaddlePosition</a>[DetNbr];}	<span class="comment">//!</span>
@@ -93,7 +93,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:13 </em><em>&raquo; Last generated: 2015-09-08 11:13</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:42 </em><em>&raquo; Last generated: 2015-11-04 15:42</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

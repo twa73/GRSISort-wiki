@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:14:08 2015            -->
+<!--   Date: Wed Nov  4 15:42:33 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -28,7 +28,7 @@
 ClassImp(<a href="../TTriFoil.html">TTriFoil</a>)
 
 
-<a href="../TTriFoil.html">TTriFoil</a>::TTriFoil():<a href="../TTriFoil.html#TTriFoil:data" title="TTriFoilData* TTriFoil::data">data</a>(0) 	{
+<a name="jud9MD"></a><a href="../TTriFoil.html">TTriFoil</a>::<a href="../TTriFoil.html#TTriFoil:TTriFoil" title="TTriFoil TTriFoil::TTriFoil() or overloads">TTriFoil</a>():<a href="../TTriFoil.html#TTriFoil:data" title="TTriFoilData* TTriFoil::data">data</a>(0) 	{
 	<a href="../TTriFoil.html#TTriFoil:Clear" title="void TTriFoil::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
 }
 
@@ -36,7 +36,7 @@ ClassImp(<a href="../TTriFoil.html">TTriFoil</a>)
 
 <a name="YWgKcD"></a><span class="keyword">void</span> <a href="../TTriFoil.html">TTriFoil</a>::<a href="../TTriFoil.html#TTriFoil:Clear" title="void TTriFoil::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt)	{
 <span class="comment">//Clears all of the hits and <a href="../TTriFoil.html#TTriFoil:data" title="TTriFoilData* TTriFoil::data">data</a></span>
-   <a href="../TGRSIDetector.html">TGRSIDetector</a>::<a href="../TGRSIDetector.html#TGRSIDetector:Clear" title="void TGRSIDetector::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(opt);
+   <a href="../TDetector.html">TDetector</a>::<a href="../TDetector.html#TDetector:Clear" title="void TDetector::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(opt);
    <span class="keyword">if</span>(<a href="../TTriFoil.html#TTriFoil:data" title="TTriFoilData* TTriFoil::data">data</a>) <a href="../TTriFoil.html#TTriFoil:data" title="TTriFoilData* TTriFoil::data">data</a>-&gt;<a href="../TTriFoil.html#TTriFoil:Clear" title="void TTriFoil::Clear(Option_t* opt=&quot;&quot;)">Clear</a>();
    <a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>.clear();
    <a href="../TTriFoil.html#TTriFoil:timestamp" title="time_t TTriFoil::timestamp">timestamp</a> =0;
@@ -44,13 +44,13 @@ ClassImp(<a href="../TTriFoil.html">TTriFoil</a>)
    <a href="../TTriFoil.html#TTriFoil:tbeam" title="int TTriFoil::tbeam">tbeam</a> = 0;
 }
 
-<a name="V.PWTE"></a><span class="keyword">void</span> <a href="../TTriFoil.html">TTriFoil</a>::<a href="../TTriFoil.html#TTriFoil:Copy" title="void TTriFoil::Copy(TTriFoil&amp; rhs)">Copy</a>(<a href="../TTriFoil.html">TTriFoil</a> &amp;rhs) <span class="keyword">const</span> {
-   <a href="../TGRSIDetector.html">TGRSIDetector</a>::<a href="../TGRSIDetector.html#TGRSIDetector:Copy" title="void TGRSIDetector::Copy(TObject&amp; )">Copy</a>((<a href="../TGRSIDetector.html">TGRSIDetector</a>&amp;)rhs);
-   ((<a href="../TTriFoil.html">TTriFoil</a>&amp;)rhs).<a href="../TTriFoil.html#TTriFoil:data" title="TTriFoilData* TTriFoil::data">data</a>      = 0;
-   ((<a href="../TTriFoil.html">TTriFoil</a>&amp;)rhs).<a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>    = <a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>;
-   ((<a href="../TTriFoil.html">TTriFoil</a>&amp;)rhs).<a href="../TTriFoil.html#TTriFoil:timestamp" title="time_t TTriFoil::timestamp">timestamp</a> = <a href="../TTriFoil.html#TTriFoil:timestamp" title="time_t TTriFoil::timestamp">timestamp</a>;
-   ((<a href="../TTriFoil.html">TTriFoil</a>&amp;)rhs).<a href="../TTriFoil.html#TTriFoil:beam" title="bool TTriFoil::beam">beam</a>      = <a href="../TTriFoil.html#TTriFoil:beam" title="bool TTriFoil::beam">beam</a>;
-   ((<a href="../TTriFoil.html">TTriFoil</a>&amp;)rhs).<a href="../TTriFoil.html#TTriFoil:tbeam" title="int TTriFoil::tbeam">tbeam</a>     = <a href="../TTriFoil.html#TTriFoil:tbeam" title="int TTriFoil::tbeam">tbeam</a>;
+<a name="pC36lD"></a><span class="keyword">void</span> <a href="../TTriFoil.html">TTriFoil</a>::<a href="../TTriFoil.html#TTriFoil:Copy" title="void TTriFoil::Copy(TObject&amp; rhs)">Copy</a>(<a href="../TObject.html">TObject</a> &amp;rhs) <span class="keyword">const</span> {
+   <a href="../TDetector.html">TDetector</a>::<a href="../TDetector.html#TDetector:Copy" title="void TDetector::Copy(TObject&amp; )">Copy</a>(rhs);
+   <span class="keyword">static_cast</span>&lt;<a href="../TTriFoil.html">TTriFoil</a>&amp;&gt;(rhs).<a href="../TTriFoil.html#TTriFoil:data" title="TTriFoilData* TTriFoil::data">data</a>      = 0;
+   <span class="keyword">static_cast</span>&lt;<a href="../TTriFoil.html">TTriFoil</a>&amp;&gt;(rhs).<a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>    = <a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>;
+   <span class="keyword">static_cast</span>&lt;<a href="../TTriFoil.html">TTriFoil</a>&amp;&gt;(rhs).<a href="../TTriFoil.html#TTriFoil:timestamp" title="time_t TTriFoil::timestamp">timestamp</a> = <a href="../TTriFoil.html#TTriFoil:timestamp" title="time_t TTriFoil::timestamp">timestamp</a>;
+   <span class="keyword">static_cast</span>&lt;<a href="../TTriFoil.html">TTriFoil</a>&amp;&gt;(rhs).<a href="../TTriFoil.html#TTriFoil:beam" title="bool TTriFoil::beam">beam</a>      = <a href="../TTriFoil.html#TTriFoil:beam" title="bool TTriFoil::beam">beam</a>;
+   <span class="keyword">static_cast</span>&lt;<a href="../TTriFoil.html">TTriFoil</a>&amp;&gt;(rhs).<a href="../TTriFoil.html#TTriFoil:tbeam" title="int TTriFoil::tbeam">tbeam</a>     = <a href="../TTriFoil.html#TTriFoil:tbeam" title="int TTriFoil::tbeam">tbeam</a>;
   <span class="keyword">return</span>;                                      
 }                                       
 
@@ -61,9 +61,9 @@ ClassImp(<a href="../TTriFoil.html">TTriFoil</a>)
 	<span class="comment">//<a href="../TTriFoil.html">TTriFoil</a>::Set();</span>
 }
 
-<a href="../TTriFoil.html">TTriFoil</a>::TTriFoil(<span class="keyword">const</span> <a href="../TTriFoil.html">TTriFoil</a>&amp; rhs) {
+<a name="eRNkSE"></a><a href="../TTriFoil.html">TTriFoil</a>::<a href="../TTriFoil.html#TTriFoil:TTriFoil" title="TTriFoil TTriFoil::TTriFoil() or overloads">TTriFoil</a>(<span class="keyword">const</span> <a href="../TTriFoil.html">TTriFoil</a>&amp; rhs) : <a href="../TDetector.html#TDetector:TDetector" title="TDetector TDetector::TDetector() or overloads">TDetector</a>() {
   <a href="../TTriFoil.html#TTriFoil:Class" title="TClass* TTriFoil::Class()">Class</a>()-><a href="../TClass.html#TClass:IgnoreTObjectStreamer" title="void TClass::IgnoreTObjectStreamer(Bool_t ignore=kTRUE)">IgnoreTObjectStreamer</a>(<a href="../ListOfTypes.html#Bool_t">kTRUE</a>);
-  ((<a href="../TTriFoil.html">TTriFoil</a>&amp;)rhs).<a href="../TTriFoil.html#TTriFoil:Copy" title="void TTriFoil::Copy(TTriFoil&amp; rhs)">Copy</a>(*<span class="keyword">this</span>);
+  rhs.<a href="../TTriFoil.html#TTriFoil:Copy" title="void TTriFoil::Copy(TObject&amp; rhs)">Copy</a>(*<span class="keyword">this</span>);
 }
 
 <a name="naQd1"></a><span class="keyword">void</span> <a href="../TTriFoil.html">TTriFoil</a>::<a href="../TTriFoil.html#TTriFoil:BuildHits" title="void TTriFoil::BuildHits(TDetectorData* data=0,Option_t* =&quot;&quot;)">BuildHits</a>(TDetectorData *ddata,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt)	{
@@ -79,7 +79,7 @@ ClassImp(<a href="../TTriFoil.html">TTriFoil</a>)
 	<span class="comment">//<a href="../TTriFoil.html#TTriFoil:timestamp" title="time_t TTriFoil::timestamp">timestamp</a> = frag-&gt;MidasTimeStamp;</span>
 	<span class="keyword">int</span> max = 0;
 	<span class="keyword">int</span> imax =0;
-	<span class="keyword">for</span>(<span class="keyword">int</span> i=0;i&lt;<a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>.size();i++){
+	<span class="keyword">for</span>(<a href="../ListOfTypes.html#size_t">size_t</a> i=0;i&lt;<a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>.size();i++){
 		<span class="keyword">if</span>(<a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>[i]&gt;max){
 			max = <a href="../TTriFoil.html#TTriFoil:tf_wave" title="vector&lt;Short_t&gt; TTriFoil::tf_wave">tf_wave</a>[i];
 			imax = i;
@@ -106,7 +106,7 @@ ClassImp(<a href="../TTriFoil.html">TTriFoil</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:14 </em><em>&raquo; Last generated: 2015-09-08 11:14</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:42 </em><em>&raquo; Last generated: 2015-11-04 15:42</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

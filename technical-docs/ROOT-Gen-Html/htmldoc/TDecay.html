@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Wed Nov  4 15:38:57 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TDecay</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TDecay','','TDecay.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TDecay.h.html">header file</a>
+<a class="descrheadentry" href="src/TDecay.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TDecay:description">class description</a> 
+<a class="descrheadentry" href="#TDecay:Function_Members">function members</a>
+<a class="descrheadentry" href="#TDecay:Data_Members">data members</a>
+<a class="descrheadentry" href="#TDecay:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./GRSISORT_Index.html">GRSISORT</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TDecay</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TDecay:description"></a>class TDecay: public <a href="./TVirtualDecay.html">TVirtualDecay</a></h1>
+<div class="classdescr">
+<pre>
+
+    <a href="./TDecay.html">TDecay</a>
+
+ <a href="./TDecay.html">TDecay</a> is a class for fitting halflives during nuclear decay
+ A <a href="./TDecay.html">TDecay</a> consists of multiple TDecayChains, where a <a href="./TDecayChain.html">TDecayChain</a>
+ is starts at a specific nucleus which has a population before the
+ decay fit takes place. This could be a nucleus with a daughter.
+ One <a href="./TDecayChain.html">TDecayChain</a> would consist of just the daughter while the
+ the other decay chain would be the parent and daughter.
+ TDecayChains are made up of multiple TSingleDecays which holds
+ the nucleus specific information such as name, id, halflife and
+ intensity. When any of the above classes are fit to a histogram,
+ they use a <a href="./TDecayFit.html">TDecayFit</a>. The <a href="./TDecayFit.html">TDecayFit</a> is a a <a href="./TF1.html">TF1</a> with extra information
+ such as the class that was used to create the <a href="./TDecayFit.html">TDecayFit</a>. Furthermore,
+ the function <a href="./TDecay.html#TDecay:DrawComponents" title="void TDecay::DrawComponents(Option_t* opt=&quot;&quot;,Bool_t color_flag=true)">DrawComponents</a>() can be used to draw the activites of the
+ individual nuclei involved in the <a href="./TDecayFit.html">TDecayFit</a>.
+
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TDecay:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TDecay:TDecay">TDecay</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TDecay:TDecay@1">TDecay</a>(vector&lt;<a href="./TDecayChain.html">TDecayChain</a>*&gt; chain)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TDecay:TDecay@2">TDecay</a>(<span class="keyword">const</span> <a href="./TDecay.html">TDecay</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TDecay:_TDecay">~TDecay</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:AddChain">AddChain</a>(<a href="./TDecayChain.html">TDecayChain</a>* chain)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TDecay:Class">Class</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Clear"><span class="baseclass">TNamed::</span>Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Clone"><span class="baseclass">TNamed::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Compare"><span class="baseclass">TNamed::</span>Compare</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Copy"><span class="baseclass">TNamed::</span>Copy</a>(<a href="./TObject.html">TObject</a>&amp; named) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TDecay:DecayFit">DecayFit</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DistancetoPrimitive"><span class="baseclass">TObject::</span>DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:Draw">Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:DrawBackground">DrawBackground</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DrawClass"><span class="baseclass">TObject::</span>DrawClass</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DrawClone"><span class="baseclass">TObject::</span>DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:DrawComponents">DrawComponents</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> color_flag = <span class="keyword">true</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Dump"><span class="baseclass">TObject::</span>Dump</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(<a href="./TMethod.html">TMethod</a>* method, <a href="./TObjArray.html">TObjArray</a>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ExecuteEvent"><span class="baseclass">TObject::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:FillBuffer"><span class="baseclass">TNamed::</span>FillBuffer</a>(<span class="keyword">char</span>*&amp; buffer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TFitResultPtr.html">TFitResultPtr</a></td><td class="funcname"><a class="funcname" href="#TDecay:Fit">Fit</a>(<a href="./TH1.html">TH1</a>* fithist, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:FixBackground@1">FixBackground</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:FixBackground">FixBackground</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; background)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:FixHalfLife">FixHalfLife</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> Id, <a href="./ListOfTypes.html#Double_t">Double_t</a> halflife)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TDecay:GetBackground">GetBackground</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TDecay:GetBackgroundError">GetBackgroundError</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TDecayChain.html">TDecayChain</a>*</td><td class="funcname"><a class="funcname" href="#TDecay:GetChain">GetChain</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> idx)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">const</span> <a href="./TDecayFit.html">TDecayFit</a>*</td><td class="funcname"><a class="funcname" href="#TDecay:GetFitFunc">GetFitFunc</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:GetName"><span class="baseclass">TNamed::</span>GetName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TGraph.html">TGraph</a>*</td><td class="funcname"><a class="funcname" href="#TDecay:GetResiduals">GetResiduals</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:GetTitle"><span class="baseclass">TNamed::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(<a href="./TTimer.html">TTimer</a>* timer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Hash"><span class="baseclass">TNamed::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <a href="./TClass.html">TClass</a>* cl) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Inspect"><span class="baseclass">TObject::</span>Inspect</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:InvertBit"><span class="baseclass">TObject::</span>InvertBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TDecay:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:IsEqual"><span class="baseclass">TObject::</span>IsEqual</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:IsFolder"><span class="baseclass">TObject::</span>IsFolder</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:IsOnHeap"><span class="baseclass">TObject::</span>IsOnHeap</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:IsSortable"><span class="baseclass">TNamed::</span>IsSortable</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:IsZombie"><span class="baseclass">TObject::</span>IsZombie</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:ls"><span class="baseclass">TNamed::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Notify"><span class="baseclass">TObject::</span>Notify</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Obsolete"><span class="baseclass">TObject::</span>Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_delete"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_delete@1"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_delete[]"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_delete[]@1"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_new"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TDecay.html">TDecay</a>&amp;</td><td class="funcname"><a class="funcname" href="#TDecay:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TDecay.html">TDecay</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:PrintMap">PrintMap</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:ReleaseBackground">ReleaseBackground</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:SetBackground">SetBackground</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> background)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:SetBackgroundLimits">SetBackgroundLimits</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; low, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; high)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:SetDecayRateLimits">SetDecayRateLimits</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> Id, <a href="./ListOfTypes.html#Double_t">Double_t</a> low, <a href="./ListOfTypes.html#Double_t">Double_t</a> high)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:SetHalfLife">SetHalfLife</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> Id, <a href="./ListOfTypes.html#Double_t">Double_t</a> halflife)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:SetHalfLifeLimits">SetHalfLifeLimits</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> Id, <a href="./ListOfTypes.html#Double_t">Double_t</a> low, <a href="./ListOfTypes.html#Double_t">Double_t</a> high)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:SetName"><span class="baseclass">TNamed::</span>SetName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:SetNameTitle"><span class="baseclass">TNamed::</span>SetNameTitle</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* title)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:SetRange">SetRange</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> xlow, <a href="./ListOfTypes.html#Double_t">Double_t</a> xhigh)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:SetTitle"><span class="baseclass">TNamed::</span>SetTitle</a>(<span class="keyword">const</span> <span class="keyword">char</span>* title = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TNamed.html#TNamed:Sizeof"><span class="baseclass">TNamed::</span>Sizeof</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:Streamer">Streamer</a>(<a href="./TBuffer.html">TBuffer</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:StreamerNVirtual">StreamerNVirtual</a>(<a href="./TBuffer.html">TBuffer</a>&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SysError"><span class="baseclass">TObject::</span>SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:TestBit"><span class="baseclass">TObject::</span>TestBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:TestBits"><span class="baseclass">TObject::</span>TestBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:UseCurrentStyle"><span class="baseclass">TObject::</span>UseCurrentStyle</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
+
+</table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TDecay:ComponentFunc">ComponentFunc</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> <a href="./TDecayFit.html">TDecayFit</a>*</td><td class="funcname"><a class="funcname" href="#TDecay:GetFitFunction">GetFitFunction</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:RemakeMap">RemakeMap</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDecay:SetParameters">SetParameters</a>()</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TDecay:Data_Members"></a>Data Members</h2>
+<div class="access" id="enumpubl"><b>public:</b>
+<table class="data" id="tabenumpubl" cellspacing="0">
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span>EStatusBits { </td><td class="dataname"><a href="./TObject.html#TObject:kCanDelete">kCanDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kMustCleanup">kMustCleanup</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kObjInCanvas">kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kIsReferenced">kIsReferenced</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kHasUUID">kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kCannotPick">kCannotPick</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kNoContextMenu">kNoContextMenu</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kInvalidObject">kInvalidObject</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span><i>[unnamed]</i> { </td><td class="dataname"><a href="./TObject.html#TObject:kIsOnHeap">kIsOnHeap</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kNotDeleted">kNotDeleted</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kZombie">kZombie</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kBitMask">kBitMask</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kSingleKey">kSingleKey</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kOverwrite">kOverwrite</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="./TObject.html#TObject:kWriteDelete">kWriteDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+
+</table></div>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="datainh"><td class="datatype"><a href="./TString.html">TString</a></td><td class="dataname"><a href="./TNamed.html#TNamed:fName"><span class="baseclass">TNamed::</span>fName</a></td><td class="datadesc">object identifier</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./TString.html">TString</a></td><td class="dataname"><a href="./TNamed.html#TNamed:fTitle"><span class="baseclass">TNamed::</span>fTitle</a></td><td class="datadesc">object title</td></tr>
+
+</table></div>
+<div class="access" id="datapriv"><b>private:</b>
+<table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype"><a href="./vector_TDecayChain*_.html">vector&lt;TDecayChain*&gt;</a></td><td class="dataname"><a name="TDecay:fChainList"></a>fChainList</td><td></td></tr>
+<tr class="data"><td class="datatype">map&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>,std::vector&lt;<a href="./TSingleDecay.html">TSingleDecay</a>*&gt; &gt;</td><td class="dataname"><a name="TDecay:fDecayMap"></a>fDecayMap</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TDecayFit.html">TDecayFit</a>*</td><td class="dataname"><a name="TDecay:fFitFunc"></a>fFitFunc</td><td></td></tr>
+
+</table></div>
+</div>
+<h2><a id="TDecay:Class_Charts"></a>Class Charts</h2>
+<map name="MapTDecay_Inh" id="MapTDecay_Inh">
+<area shape="rect" id="node2" href="./TVirtualDecay.html" title="TVirtualDecay" alt="" coords="419,7,558,33"/>
+<area shape="rect" id="node3" href="./TNamed.html" title="TNamed" alt="" coords="210,7,349,33"/>
+<area shape="rect" id="node4" href="./TObject.html" title="TObject" alt="" coords="2,7,141,33"/>
+</map>
+<map name="MapTDecay_InhMem" id="MapTDecay_InhMem">
+<area shape="rect" id="clust10" href="./TVirtualDecay.html" alt="" coords="513,47,701,65"/>
+<area shape="rect" id="clust11" href="./TVirtualDecay.html" alt="" coords="635,65,701,145"/>
+<area shape="rect" id="clust12" href="./TVirtualDecay.html" alt="" coords="557,65,624,161"/>
+<area shape="rect" id="clust13" href="./TVirtualDecay.html" alt="" coords="480,65,547,161"/>
+<area shape="rect" id="clust9" href="./TVirtualDecay.html" title="TVirtualDecay" alt="" coords="480,16,701,161"/>
+<area shape="rect" id="clust16" href="./TNamed.html" alt="" coords="248,47,469,65"/>
+<area shape="rect" id="clust17" href="./TNamed.html" alt="" coords="403,65,469,225"/>
+<area shape="rect" id="clust18" href="./TNamed.html" alt="" coords="325,65,392,225"/>
+<area shape="rect" id="clust19" href="./TNamed.html" alt="" coords="248,65,315,225"/>
+<area shape="rect" id="clust15" href="./TNamed.html" title="TNamed" alt="" coords="248,16,469,225"/>
+<area shape="rect" id="clust22" href="./TObject.html" alt="" coords="171,47,237,145"/>
+<area shape="rect" id="clust23" href="./TObject.html" alt="" coords="93,47,160,161"/>
+<area shape="rect" id="clust24" href="./TObject.html" alt="" coords="16,47,83,161"/>
+<area shape="rect" id="clust25" href="./TObject.html" alt="" coords="203,152,205,155"/>
+<area shape="rect" id="clust26" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust27" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust28" href="./TObject.html" alt="" coords="16,161,83,609"/>
+<area shape="rect" id="clust21" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
+</map>
+<map name="MapTDecay_Lib" id="MapTDecay_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="127,237,244,285"/>
+</map>
+<div class="tabs">
+<a id="imgTDecay_Inh" class="tabsel" href="inh/TDecay_Inh.png" onclick="javascript:return SetImg('Charts','inh/TDecay_Inh.png');">Inheritance</a>
+<a id="imgTDecay_InhMem" class="tab" href="inhmem/TDecay_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TDecay_InhMem.png');">Inherited Members</a>
+<a id="imgTDecay_Incl" class="tab" href="incl/TDecay_Incl.png" onclick="javascript:return SetImg('Charts','incl/TDecay_Incl.png');">Includes</a>
+<a id="imgTDecay_Lib" class="tab" href="lib/TDecay_Lib.png" onclick="javascript:return SetImg('Charts','lib/TDecay_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTDecay_Inh" src="inh/TDecay_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDecay:TDecay@1" href="src/TDecay.cxx.html#KXoHaE">TDecay</a>(vector&lt;<a href="./TDecayChain.html">TDecayChain</a>*&gt; chain)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDecay:_TDecay" href="src/TDecay.cxx.html#ScaITB">~TDecay</a>()</span><br />
+<div class="funccomm"><pre>  if(<a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>) delete <a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>;
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TDecayChain.html">TDecayChain</a>* <a class="funcname" name="TDecay:GetChain" href="src/TDecay.cxx.html#LM6csE">GetChain</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> idx)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TDecay:DecayFit" href="src/TDecay.cxx.html#dZBxHB">DecayFit</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</span><br />
+<div class="funccomm"><pre>This fits the total activity caused by the entire chain.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TFitResultPtr.html">TFitResultPtr</a> <a class="funcname" name="TDecay:Fit" href="src/TDecay.cxx.html#WH5PYD">Fit</a>(<a href="./TH1.html">TH1</a>* fithist, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:Draw" href="src/TDecay.cxx.html#wZU98B">Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:SetParameters" href="src/TDecay.cxx.html#KBcvO">SetParameters</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TDecay:ComponentFunc" href="src/TDecay.cxx.html#c6.S2B">ComponentFunc</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* dim, <a href="./ListOfTypes.html#Double_t">Double_t</a>* par)</span><br />
+<div class="funccomm"><pre>Function for drawing summed components.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:DrawComponents" href="src/TDecay.cxx.html#GEQwtD">DrawComponents</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> color_flag = <span class="keyword">true</span>)</span><br />
+<div class="funccomm"><pre>Loop over all of the ids and draw them seperately on the pad
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:DrawBackground" href="src/TDecay.cxx.html#XOjLpE">DrawBackground</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:SetHalfLife" href="src/TDecay.cxx.html#EOC.E">SetHalfLife</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> Id, <a href="./ListOfTypes.html#Double_t">Double_t</a> halflife)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:SetHalfLifeLimits" href="src/TDecay.cxx.html#bxz2IC">SetHalfLifeLimits</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> Id, <a href="./ListOfTypes.html#Double_t">Double_t</a> low, <a href="./ListOfTypes.html#Double_t">Double_t</a> high)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:SetDecayRateLimits" href="src/TDecay.cxx.html#Btfv5D">SetDecayRateLimits</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> Id, <a href="./ListOfTypes.html#Double_t">Double_t</a> low, <a href="./ListOfTypes.html#Double_t">Double_t</a> high)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:Print" href="src/TDecay.cxx.html#Qek1uD">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:PrintMap" href="src/TDecay.cxx.html#XuEBtC">PrintMap</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:SetRange" href="src/TDecay.cxx.html#Sg19XD">SetRange</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> xlow, <a href="./ListOfTypes.html#Double_t">Double_t</a> xhigh)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:RemakeMap" href="src/TDecay.cxx.html#i6g1HE">RemakeMap</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGraph.html">TGraph</a>* <a class="funcname" name="TDecay:GetResiduals" href="src/TDecay.h.html#mQ5do">GetResiduals</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;fResiduals; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TDecayFit.html">TDecayFit</a> <span class="keyword">const</span>* <a class="funcname" name="TDecay:GetFitFunction" href="src/TDecay.h.html#FmZui">GetFitFunction</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:FixHalfLife" href="src/TDecay.h.html#ZjC2IB">FixHalfLife</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a> &amp;halflife)</span><br />
+
+<div class="code"><code class="inlinecode">{ fDecayFunc-&gt;FixParameter(1,std::log(2)/halflife); UpdateDecays(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDecay:TDecay" href="src/TDecay.h.html#x5DyLD">TDecay</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDecay:TDecay@1" href="src/TDecay.h.html#IUvQKE">TDecay</a>(vector&lt;<a href="./TDecayChain.html">TDecayChain</a>*&gt; chain)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:AddChain" href="src/TDecay.h.html#gyUvhC">AddChain</a>(<a href="./TDecayChain.html">TDecayChain</a>* chain)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TDecay.html#TDecay:fChainList" title="vector&lt;TDecayChain*&gt; TDecay::fChainList">fChainList</a>.<a href="./vector_TDecayChain*_.html#vector_TDecayChain*_:push_back" title="void vector&lt;TDecayChain*,allocator&lt;TDecayChain*&gt; &gt;::push_back(TDecayChain* const&amp; x)">push_back</a>(chain);}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <a href="./TDecayFit.html">TDecayFit</a>* <a class="funcname" name="TDecay:GetFitFunc" href="src/TDecay.h.html#fymZDD">GetFitFunc</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:SetBackground" href="src/TDecay.h.html#T8w7mB">SetBackground</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> background)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>-><a href="./TFormula.html#TFormula:SetParameter" title="void TFormula::SetParameter(const char* name,Double_t parvalue) or overloads">SetParameter</a>(0,background);}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TDecay:GetBackground" href="src/TDecay.h.html#U5P7h">GetBackground</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>-><a href="./TFormula.html#TFormula:GetParameter" title="Double_t TFormula::GetParameter(Int_t ipar) or overloads">GetParameter</a>(0); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TDecay:GetBackgroundError" href="src/TDecay.h.html#rR5nO">GetBackgroundError</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>-><a href="./TF1.html#TF1:GetParError" title="Double_t TF1::GetParError(Int_t ipar)">GetParError</a>(0); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:FixBackground" href="src/TDecay.h.html#sSBtzB">FixBackground</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; background)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>-><a href="./TF1.html#TF1:FixParameter" title="void TF1::FixParameter(Int_t ipar,Double_t value)">FixParameter</a>(0,background); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:FixBackground@1" href="src/TDecay.h.html#jYcjvD">FixBackground</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>-><a href="./TF1.html#TF1:FixParameter" title="void TF1::FixParameter(Int_t ipar,Double_t value)">FixParameter</a>(0,<a href="./TDecay.html#TDecay:GetBackground" title="Double_t TDecay::GetBackground()">GetBackground</a>());}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:SetBackgroundLimits" href="src/TDecay.h.html#DpkRJ">SetBackgroundLimits</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; low, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; high)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>-><a href="./TF1.html#TF1:SetParLimits" title="void TF1::SetParLimits(Int_t ipar,Double_t parmin,Double_t parmax)">SetParLimits</a>(0,low,high); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDecay:ReleaseBackground" href="src/TDecay.h.html#z4qpfC">ReleaseBackground</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TDecay.html#TDecay:fFitFunc" title="TDecayFit* TDecay::fFitFunc">fFitFunc</a>-><a href="./TF1.html#TF1:ReleaseParameter" title="void TF1::ReleaseParameter(Int_t ipar)">ReleaseParameter</a>(0);}</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+
+<em>&raquo; Last changed: Wed Nov  4 15:38:58 2015 </em><em>&raquo; Last generated: 2015-11-04 15:38</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

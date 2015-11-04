@@ -5,7 +5,7 @@
 #include <string>
 #include <fstream>
 
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include <thread>
 #endif
 
@@ -40,20 +40,27 @@ class TGRSILoop : public TObject {
       bool fTestMode;
       bool fOffline;   
 
+      bool fIamTigress;
+      bool fIamGriffin;
+
       TXMLOdb *fOdb;
 
       int fFragsReadFromMidas;
       int fFragsSentToTree;
-      int fBadFragsSentToTree;
-
-   #ifndef __CINT__
+		int fBadFragsSentToTree;
+		int fDeadtimeScalersSentToTree;
+		int fRateScalersSentToTree;
+ 
+#if !defined (__CINT__) && !defined (__CLING__)
       std::thread *fMidasThread;
       std::thread *fFillTreeThread;
+      std::thread *fFillScalerThread;
    #endif
 
    public:
       bool fMidasThreadRunning;
       bool fFillTreeThreadRunning;
+      bool fFillScalerThreadRunning;
       
       void SetSuppressError(bool temp = true) { suppress_error = temp; } 
       bool IsOnline()   { return !fOffline;  }
@@ -62,6 +69,7 @@ class TGRSILoop : public TObject {
       bool SortMidas();
       void ProcessMidasFile(TMidasFile*);
       void FillFragmentTree(TMidasFile*);
+      void FillScalerTree();
       bool ProcessMidasEvent(TMidasEvent*,TMidasFile *mfile=0);
       bool ProcessTIGRESS(uint32_t *ptr,int &dsize,TMidasEvent *mevent=0,TMidasFile *mfile=0); 
       bool ProcessGRIFFIN(uint32_t *ptr,int &dsize,int bank,TMidasEvent *mevent=0,TMidasFile *mfile=0); 
@@ -75,6 +83,8 @@ class TGRSILoop : public TObject {
 
       int GetFragsSentToTree()    { return fFragsSentToTree; }
       int GetFragsReadFromMidas() { return fFragsReadFromMidas; }
+
+      static bool GetSuppressError() { return suppress_error; } 
 
       void Clear(Option_t *opt="");
       void Print(Option_t *opt="") const;

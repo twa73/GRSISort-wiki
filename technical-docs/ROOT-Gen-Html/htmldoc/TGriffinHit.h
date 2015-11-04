@@ -18,10 +18,10 @@
 class TGriffinHit : public TGRSIDetectorHit {
 	public:
 		enum EGriffinHitBits {
-			kCrystalSet = 1<<0,
-			kBit1       = 1<<1,
-			kBit2       = 1<<2,
-			kBit3       = 1<<3,
+			kTotalPU1   = 1<<0,
+			kTotalPU2   = 1<<1,
+			kPUHit1     = 1<<2,
+			kPUHit2     = 1<<3,
 			kBit4       = 1<<4,
 			kBit5       = 1<<5,
 			kBit6       = 1<<6,
@@ -34,15 +34,14 @@ class TGriffinHit : public TGRSIDetectorHit {
 		virtual ~TGriffinHit();
 
 	private:
-      Int_t fFilter;             //  The Filter Word
-		UChar_t fGriffinHitBits;   //  Transient Member Flags
-      UInt_t fCrystal;           //! Crystal Number       
+      Int_t fFilter;              //  The Filter Word
+		UChar_t fGriffinHitBits;    //  Transient Member Flags
+      UInt_t fCrystal;            //! Crystal Number       
+      Bool_t fBremSuppressed_flag;//! Bremsstrahlung Suppression flag.
 
 	public:
 		/////////////////////////  Setters	/////////////////////////////////////
       inline void SetFilterPattern(const int &x)   { fFilter = x;   }                  //! 
-
-      TVector3 GetPosition(Double_t dist = 110.0) const; //!
 
 		/////////////////////////  Getters	/////////////////////////////////////
       inline Int_t    GetFilterPattern() const         {   return fFilter;   }          //!
@@ -58,10 +57,18 @@ class TGriffinHit : public TGRSIDetectorHit {
       UInt_t SetCrystal(UInt_t crynum);
       Bool_t IsCrystalSet() const {return IsSubDetSet();}
 
+      UChar_t NPileUps() const; 
+      UChar_t PUHit() const;    
+      void SetNPileUps(UChar_t npileups);
+      void SetPUHit(UChar_t puhit);
+      
 		/////////////////////////		/////////////////////////////////////
 
       inline UShort_t GetArrayNumber() { return( 4*(GetDetector()-1)+(GetCrystal()+1)); } //!
       // returns a number 1-64 ( 1 = Detector 1 blue;  64 =  Detector 16 white; ) 
+      Bool_t GetIsBremSuppressed() const { return fBremSuppressed_flag; }
+      void SetIsBremSuppressed(const Bool_t &supp_flag) { fBremSuppressed_flag = supp_flag; }
+      void MakeBremSuppressed(const Bool_t &supp_flag) { fBremSuppressed_flag |= supp_flag; }
 
       bool   InFilter(Int_t);  //!
 
@@ -72,9 +79,14 @@ class TGriffinHit : public TGRSIDetectorHit {
 	public:
 		virtual void Clear(Option_t *opt = "");		 //!
 		virtual void Print(Option_t *opt = "") const; //!
-      virtual void Copy(TGriffinHit&) const;        //!
+      virtual void Copy(TObject&) const;        //!
 
-	ClassDef(TGriffinHit,3);
+   private:
+      TVector3 GetChannelPosition(Double_t dist = 110.0) const; //!
+      void SetGriffinFlag(enum EGriffinHitBits,Bool_t set);
+	
+      ClassDef(TGriffinHit,5); //Information about a GRIFFIN Hit
+
 };
 
 

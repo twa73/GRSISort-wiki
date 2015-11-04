@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:10:37 2015            -->
+<!--   Date: Wed Nov  4 15:39:08 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -141,16 +141,16 @@ ClassImp(<a href="../TEnergyCal.html">TEnergyCal</a>)
 
 <a name="rAEjpE"></a><span class="keyword">void</span> <a href="../TEnergyCal.html">TEnergyCal</a>::<a href="../TEnergyCal.html#TEnergyCal:WriteToChannel" title="void TEnergyCal::WriteToChannel()">WriteToChannel</a>() <span class="keyword">const</span> {
    <span class="comment">//<a href="../TObject.html#TObject:Write" title="Int_t TObject::Write(const char* name=0,Int_t option=0,Int_t bufsize=0) or overloads">Write</a> the energy calibration information to the current <a href="../TChannel.html">TChannel</a>.</span>
-   <span class="keyword">if</span>(!<a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>()){
+   <span class="keyword">if</span>(!<a href="../TCal.html#TCal:GetChannel" title="TChannel* TCal::GetChannel()">GetChannel</a>()){
       <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"WriteToChannel"</span>,<span class="string">"No Channel Set"</span>);
       <span class="keyword">return</span>;
    }
-   <a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:DestroyENGCal" title="void TChannel::DestroyENGCal()">DestroyENGCal</a>();
-   printf(<span class="string">"Writing to channel %d\n"</span>,<a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:GetNumber" title="int TChannel::GetNumber()">GetNumber</a>());
+   <a href="../TCal.html#TCal:GetChannel" title="TChannel* TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:DestroyENGCal" title="void TChannel::DestroyENGCal()">DestroyENGCal</a>();
+   printf(<span class="string">"Writing to channel %d\n"</span>,<a href="../TCal.html#TCal:GetChannel" title="TChannel* TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:GetNumber" title="int TChannel::GetNumber()">GetNumber</a>());
    printf(<span class="string">"p0 = %lf \t p1 = %lf\n"</span>,<span class="keyword">this</span>-&gt;<a href="../TEnergyCal.html#TEnergyCal:GetParameter" title="Double_t TEnergyCal::GetParameter(Int_t parameter)">GetParameter</a>(0),<span class="keyword">this</span>-&gt;<a href="../TEnergyCal.html#TEnergyCal:GetParameter" title="Double_t TEnergyCal::GetParameter(Int_t parameter)">GetParameter</a>(1));
    <span class="comment">//<a href="../TGraph.html#TGraph:Set" title="void TGraph::Set(Int_t n)">Set</a> the energy parameters based on the fitted calibration.</span>
-   <a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:AddENGCoefficient" title="void TChannel::AddENGCoefficient(Float_t temp)">AddENGCoefficient</a>(<span class="keyword">this</span>-&gt;<a href="../TEnergyCal.html#TEnergyCal:GetParameter" title="Double_t TEnergyCal::GetParameter(Int_t parameter)">GetParameter</a>(0));
-   <a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:AddENGCoefficient" title="void TChannel::AddENGCoefficient(Float_t temp)">AddENGCoefficient</a>(<span class="keyword">this</span>-&gt;<a href="../TEnergyCal.html#TEnergyCal:GetParameter" title="Double_t TEnergyCal::GetParameter(Int_t parameter)">GetParameter</a>(1));
+   <a href="../TCal.html#TCal:GetChannel" title="TChannel* TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:AddENGCoefficient" title="void TChannel::AddENGCoefficient(Float_t temp)">AddENGCoefficient</a>(<span class="keyword">this</span>-&gt;<a href="../TEnergyCal.html#TEnergyCal:GetParameter" title="Double_t TEnergyCal::GetParameter(Int_t parameter)">GetParameter</a>(0));
+   <a href="../TCal.html#TCal:GetChannel" title="TChannel* TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:AddENGCoefficient" title="void TChannel::AddENGCoefficient(Float_t temp)">AddENGCoefficient</a>(<span class="keyword">this</span>-&gt;<a href="../TEnergyCal.html#TEnergyCal:GetParameter" title="Double_t TEnergyCal::GetParameter(Int_t parameter)">GetParameter</a>(1));
 }
 
 <a name="pwVPvD"></a><span class="keyword">void</span> <a href="../TEnergyCal.html">TEnergyCal</a>::<a href="../TEnergyCal.html#TEnergyCal:Print" title="void TEnergyCal::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) <span class="keyword">const</span> {
@@ -173,7 +173,7 @@ ClassImp(<a href="../TEnergyCal.html">TEnergyCal</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:10 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:39 </em><em>&raquo; Last generated: 2015-11-04 15:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 #include "TTigressHit.h"
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include "TTigressData.h"
 #include "TBGOData.h"
 #else
@@ -23,8 +23,6 @@ class TBGOData;
 
 #include "TGRSIDetector.h" 
 
-using namespace std;
-
 class TTigress : public TGRSIDetector {
 
 	public:
@@ -38,9 +36,11 @@ class TTigress : public TGRSIDetector {
 		void BuildAddBack(Option_t *opt="");	//!
 		//void BuildCloverAddBack(Option_t *opt="");	//!
 
-		TTigressHit *GetTigressHit(const int i) {	return (TTigressHit*)tigress_hits.At(i);	    } //!
-      TGRSIDetectorHit *GetHit(const int i)   { return GetTigressHit(i);       } //!
-		Int_t GetMultiplicity()	                { return tigress_hits.GetEntries(); }	//!
+      //These Getters of hits throw "ROOT Errors"
+		TTigressHit *GetTigressHit(const int& i) {	return (TTigressHit*)tigress_hits.At(i);	    } //!
+      TGRSIDetectorHit *GetHit(const int& i)   { return GetTigressHit(i);       } //!
+		Short_t GetMultiplicity() const	       { return tigress_hits.GetEntries(); }	//!
+//		size_t GetMultiplicity() const	       { return tigress_hits.size(); }	//!
 
 		TTigressHit *GetAddBackHit(int i)   {	return (TTigressHit*)addback_hits.At(i);	       } //!
 		Int_t GetAddBackMultiplicity()	   {	return addback_hits.GetEntries(); }	//!
@@ -67,8 +67,8 @@ class TTigress : public TGRSIDetector {
 		TTigressData *tigdata;        //!
 		TBGOData     *bgodata;        //!
 
-		//std::vector <TTigressHit> tigress_hits;
-		//std::vector <TTigressHit> addback_hits;
+	//	std::vector <TTigressHit> tigress_hits;
+	//	std::vector <TTigressHit> addback_hits;
 		//std::vector <TTigressHit> clover_addback_hits;			
       TClonesArray tigress_hits;
       TClonesArray addback_hits;
@@ -99,9 +99,9 @@ class TTigress : public TGRSIDetector {
 	public:         
 		virtual void Clear(Option_t *opt = "");		 //!
 		virtual void Print(Option_t *opt = "") const; //!
-      virtual void Copy(TTigress&) const;           //!
+      virtual void Copy(TObject&) const;           //!
 
-   ClassDef(TTigress,1)  // Tigress Physics structure
+   ClassDef(TTigress,3)  // Tigress Physics structure
 
 
 };

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:10:44 2015            -->
+<!--   Date: Wed Nov  4 15:39:15 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -98,12 +98,14 @@ fragment
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:Get4GCfd">Get4GCfd</a>(<span class="keyword">int</span> i = 0)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:Get4GCfd">Get4GCfd</a>(<a href="./ListOfTypes.html#size_t">size_t</a> i = 0)</td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:GetCfd">GetCfd</a>(<span class="keyword">int</span> iter = 0) <span class="keyword">const</span></td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:GetCharge">GetCharge</a>(<span class="keyword">int</span> iter = 0) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:GetCharge">GetCharge</a>(<a href="./ListOfTypes.html#size_t">size_t</a> iter = 0) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetColor">GetColor</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#ULong64_t">ULong64_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:GetCycleNumber">GetCycleNumber</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetEnergy">GetEnergy</a>(<span class="keyword">int</span> iter = 0) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetEnergy">GetEnergy</a>(<a href="./ListOfTypes.html#size_t">size_t</a> iter = 0) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:GetLed">GetLed</a>(<span class="keyword">int</span> iter = 0) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TFragment:GetName">GetName</a>() <span class="keyword">const</span></td></tr>
@@ -111,13 +113,16 @@ fragment
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTime">GetTime</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#ULong64_t">ULong64_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:GetTimeInCycle">GetTimeInCycle</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">long</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTimeStamp">GetTimeStamp</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">long</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTimeStamp_ns">GetTimeStamp_ns</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TFragment:GetTZero">GetTZero</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TFragment:GetZCross">GetZCross</a>(<span class="keyword">int</span> iter = 0) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(<a href="./TTimer.html">TTimer</a>* timer)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TFragment:HasWave">HasWave</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <a href="./TClass.html">TClass</a>* cl) <span class="keyword">const</span></td></tr>
@@ -228,6 +233,7 @@ fragment
 <tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:Zc"></a>Zc</td><td class="datadesc">-&gt;  ZC of each pileup hit</td></tr>
 <tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:ccLong"></a>ccLong</td><td class="datadesc">-&gt;  Integration over the wavefrom fall (Descant only?)</td></tr>
 <tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Int_t">Int_t</a>&gt;</td><td class="dataname"><a name="TFragment:ccShort"></a>ccShort</td><td class="datadesc">-&gt;  Integration over the waveform rise (Descant only?)</td></tr>
+<tr class="data"><td class="datatype"><a href="./TPPG.html">TPPG</a>*</td><td class="dataname"><a name="TFragment:fPPG"></a>fPPG</td><td class="datadesc">!</td></tr>
 <tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#Short_t">Short_t</a>&gt;</td><td class="dataname"><a name="TFragment:wavebuffer"></a>wavebuffer</td><td class="datadesc">-&gt; waveform words</td></tr>
 
 </table></div>
@@ -278,13 +284,17 @@ fragment
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">long</span> <a class="funcname" name="TFragment:GetTimeStamp_ns" href="src/TFragment.cxx.html#TnB9n">GetTimeStamp_ns</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TFragment:Get4GCfd" href="src/TFragment.cxx.html#pqJ9iB">Get4GCfd</a>(<span class="keyword">int</span> i = 0)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TFragment:Get4GCfd" href="src/TFragment.cxx.html#LUX8j">Get4GCfd</a>(<a href="./ListOfTypes.html#size_t">size_t</a> i = 0)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TFragment:GetName" href="src/TFragment.cxx.html#dgriJD">GetName</a>() const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TFragment:GetEnergy" href="src/TFragment.cxx.html#MYbHuB">GetEnergy</a>(<span class="keyword">int</span> iter = 0) const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TFragment:GetEnergy" href="src/TFragment.cxx.html#Ywt4hB">GetEnergy</a>(<a href="./ListOfTypes.html#size_t">size_t</a> iter = 0) const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="TFragment:GetCharge" href="src/TFragment.cxx.html#d33l6">GetCharge</a>(<span class="keyword">int</span> iter = 0) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="TFragment:GetCharge" href="src/TFragment.cxx.html#K19dp">GetCharge</a>(<a href="./ListOfTypes.html#size_t">size_t</a> iter = 0) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#ULong64_t">ULong64_t</a> <a class="funcname" name="TFragment:GetTimeInCycle" href="src/TFragment.cxx.html#NDUcUC">GetTimeInCycle</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#ULong64_t">ULong64_t</a> <a class="funcname" name="TFragment:GetCycleNumber" href="src/TFragment.cxx.html#CzeaSD">GetCycleNumber</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragment:Print" href="src/TFragment.cxx.html#YidzZE">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
 <div class="funccomm"><pre>Prints out all fields of the <a href="./TFragment.html">TFragment</a>
@@ -303,16 +313,28 @@ Note that multiple options add to the output, so <span class="string">"CAB"</spa
 One should eventually add N,P,T options as well.
 </pre></div>
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TFragment:GetColor" href="src/TFragment.cxx.html#XSEO4D">GetColor</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragment:TFragment" href="src/TFragment.h.html#cApDNB">TFragment</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TFragment:GetCfd" href="src/TFragment.h.html#QEgKsD">GetCfd</a>(<span class="keyword">int</span> iter = 0) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TFragment:GetCfd" href="src/TFragment.h.html#d1GjDD">GetCfd</a>(<span class="keyword">int</span> iter = 0) const</span><br />
 
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TFragment.html#TFragment:Cfd" title="vector&lt;Int_t&gt; TFragment::Cfd">Cfd</a>.at(iter); }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TFragment:GetLed" href="src/TFragment.h.html#gsjFwC">GetLed</a>(<span class="keyword">int</span> iter = 0) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TFragment:GetZCross" href="src/TFragment.h.html#eLvKqC">GetZCross</a>(<span class="keyword">int</span> iter = 0) const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TFragment.html#TFragment:Zc" title="vector&lt;Int_t&gt; TFragment::Zc">Zc</a>.at(iter); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="TFragment:GetLed" href="src/TFragment.h.html#hsbPWD">GetLed</a>(<span class="keyword">int</span> iter = 0) const</span><br />
 
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TFragment.html#TFragment:Led" title="vector&lt;Int_t&gt; TFragment::Led">Led</a>.at(iter); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TFragment:HasWave" href="src/TFragment.h.html#y1Cs9C">HasWave</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./TFragment.html#TFragment:wavebuffer" title="vector&lt;Short_t&gt; TFragment::wavebuffer">wavebuffer</a>.size()&gt;0) ?  <span class="keyword">true</span> : <span class="keyword">false</span>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TFragment:operator__" href="src/TFragment.h.html#hHdtHE">operator&lt;</a>(<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&amp; rhs) const</span><br />
@@ -330,7 +352,7 @@ One should eventually add N,P,T options as well.
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Tue Sep  8 11:10:46 2015 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
+<em>&raquo; Last changed: Wed Nov  4 15:39:16 2015 </em><em>&raquo; Last generated: 2015-11-04 15:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

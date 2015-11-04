@@ -3,21 +3,20 @@
 
 #include <cstdio>
 #include <cmath>
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include <tuple>
 #endif
 
 #include "TFragment.h"
 #include "TChannel.h"
 #include "TCrystalHit.h"
-//#include "TTigress.h"
+#include "TPulseAnalyzer.h"
 
 #include "TMath.h"
 #include "TVector3.h"
 #include "TClonesArray.h"
 
 #include "TGRSIDetectorHit.h"
-
 
 class TTigressHit : public TGRSIDetectorHit {
 	public:
@@ -30,55 +29,62 @@ class TTigressHit : public TGRSIDetectorHit {
 		UInt_t   crystal;              //!
 		UShort_t first_segment;        
 		Float_t    first_segment_charge; //!
+		
+	    Double_t    time_fit;
+	    Double_t    sig2noise;
 
-      Double_t fEnergy;
+  //    Double_t fEnergy;
 
 		TCrystalHit core;
 		//std::vector<TCrystalHit> segment;
-      TClonesArray segment;
+      	TClonesArray segment;
 		//std::vector<TCrystalHit> bgo;
-      TClonesArray bgo;
+      	TClonesArray bgo;
 
 		//double doppler;
-	
+
 		//need to do sudo tracking to build addback.
 		TVector3 lasthit;                //!
-		#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 		std::tuple<int,int,int> lastpos; //!
-		#endif
+#endif
 
       static TVector3 beam;
 
 	public:
       void SetHit() {}
 		/////////////////////////		/////////////////////////////////////
-		void SetCore(TCrystalHit &temp)		  { core = temp;	} 					//!
+		void SetCore(const TCrystalHit &temp)		  { core = temp;	} 					//!
 		void AddSegment(TCrystalHit &temp);	  //{ segment.push_back(temp);	}		//!
 		void AddBGO(TCrystalHit &temp);		  //{ bgo.push_back(temp);	}			//!
 
 		//void SetDetectorNumber(const int &i) { detector = i;	} 				//!
 		void SetCrystal()	                   { crystal = GetCrystal(); SetFlag(TGRSIDetectorHit::kIsSubDetSet,true); }		//!
 		void SetInitalHit(const int &i)		 { first_segment = i; }				//!
-      Bool_t IsCrystalSet() const {return IsSubDetSet();}
+      	Bool_t IsCrystalSet() const {return IsSubDetSet();}
 
 //		void SetPosition(const TVector3 &p)  { position = p;	}					//!
 		//void SetDoppler(const double &d)	   { doppler = d;	}					//!
 
 		/////////////////////////		/////////////////////////////////////
 		//inline int GetDetectorNumber()	     {	return detector;		}			//!
-		       int GetCrystal();	          //{	return crystal;			}		//!
-		inline int GetInitialHit()		       {	return first_segment;	}			//!
+		int GetCrystal() const;	          //{	return crystal;			}		//!
+		inline int GetInitialHit()		               {	return first_segment;	}			//!
 	
-		inline Float_t GetCharge()	  const	 {	return core.GetCharge();	}		//!
-		inline double GetEnergy() const	    {	return core.GetEnergy();	}		//!
-		inline double GetTime()  const       { return core.GetTime();		}		//!
-      //inline Int_t GetCfd()    const      { return core.GetCfd(); }          //!
-      TVector3 GetPosition(Double_t dist=110.); // { return TTigress::GetPosition(GetDetector(),GetCrystal(),GetInitialHit(),dist); }
+		inline Float_t GetCharge()	const	               {  return core.GetCharge();	}		//!
+		inline double GetEnergy(Option_t *opt ="")const	{	return core.GetEnergy();	}		//!
+		inline double GetTime(Option_t *opt ="") const	{	return core.GetTime();		}		//!
+		inline double GetTimeCFD() const                {  return core.GetCfd(); } //!
+      	inline UInt_t GetAddress() const                {  return core.GetAddress(); }
+      	ULong_t GetTimeStamp(Option_t *opt="")   const  {  return core.GetTimeStamp();   }  // Returns a time value to the nearest nanosecond!
+      	UInt_t GetDetector()   const                    {  return core.GetDetector();   }  // Returns a time value to the nearest nanosecond!
 		//inline double   GetDoppler()	       {	return doppler;				}		//!
 
+    	void SetWavefit(TFragment&);
+		inline Double_t GetSignalToNoise()		   { return sig2noise;	} //!
+		inline Double_t GetFitTime()			   { return time_fit;	} //!
 
 		inline double GetDoppler(double beta,TVector3 *vec=0) { 
-			bool madevec = false;
 			if(vec==0) {
 				vec = &beam;
 			}
@@ -101,19 +107,19 @@ class TTigressHit : public TGRSIDetectorHit {
 		
 		void SumHit(TTigressHit*);                                        //!
 		TVector3 GetLastHit()	{return lasthit;}                      //!
-		#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 		inline std::tuple<int,int,int> GetLastPosition() {return lastpos;} //!
-		#endif                         
+#endif                         
 
 	public:
 		virtual void Clear(Option_t *opt = "");		                      //!
-		virtual void Copy(TTigressHit&) const;                             //!
-      virtual void Print(Option_t *opt = "") const;		                //!
+		virtual void Copy(TObject&) const;                             //!
+      virtual void Print(Option_t *opt = "") const;       		                //!
+
+   private:
+    TVector3 GetChannelPosition(Double_t dist=110.0) const;
 
 	ClassDef(TTigressHit,1)
 };
-
-
-
 
 #endif

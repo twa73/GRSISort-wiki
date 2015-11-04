@@ -2,7 +2,6 @@
 #define TDATAPARSER_H
 
 #include "Globals.h"
-#include <stdint.h>
 #include <ctime>
 #include <vector>
 #include <map>
@@ -10,6 +9,7 @@
 #include "TChannel.h"
 #include "TFragment.h"
 #include "TPPG.h"
+#include "TScaler.h"
 
 //#include "TObject.h"
 
@@ -42,8 +42,10 @@ class TDataParser { //: public TObject {
     static int TigressDataToFragment(uint32_t *data, int size,unsigned int midasserialnumber = 0, time_t midastime = 0);
     static int GriffinDataToFragment(uint32_t *data, int size, int bank, unsigned int midasserialnumber = 0, time_t midastime = 0);
     static int GriffinDataToPPGEvent(uint32_t *data, int size, int bank, unsigned int midasserialnumber=0, time_t midastime=0); 
+	 static int GriffinDataToScalerEvent(uint32_t *data, int address);
    
     static int EPIXToScalar(float *data,int size,unsigned int midasserialnumber = 0,time_t midastime = 0);
+    static int SCLRToScalar(uint32_t *data,int size,unsigned int midasserialnumber = 0,time_t midastime = 0);
 	 static int EightPIDataToFragment(uint32_t stream,uint32_t* data,
                                      int size,unsigned int midasserialnumber = 0, time_t midastime = 0);
     static int FifoToFragment(unsigned short *data,int size,bool zerobuffer=false,
@@ -61,7 +63,6 @@ class TDataParser { //: public TObject {
     static bool SetTIGTimeStamp(uint32_t*, TFragment*);
 
     static bool SetGRIFHeader(uint32_t,TFragment*,int);
-    static bool SetGRIFPPG(uint32_t,TFragment*);
     static bool SetGRIFMasterFilterId(uint32_t,TFragment*);
     static bool SetGRIFMasterFilterPattern(uint32_t,TFragment*);
     static bool SetGRIFChannelTriggerId(uint32_t,TFragment*);  
@@ -78,6 +79,10 @@ class TDataParser { //: public TObject {
     static bool SetPPGNetworkPacket(uint32_t,TPPGData*);
     static bool SetPPGLowTimeStamp(uint32_t,TPPGData*);
     static bool SetPPGHighTimeStamp(uint32_t,TPPGData*);
+	 static bool SetScalerNetworkPacket(uint32_t, TScalerData*);
+	 static bool SetScalerLowTimeStamp(uint32_t, TScalerData*);
+	 static bool SetScalerHighTimeStamp(uint32_t, TScalerData*, int&);
+	 static bool SetScalerValue(int, uint32_t, TScalerData*);
 
     static void FillStats(TFragment*);
 

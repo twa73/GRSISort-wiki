@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:07:30 2015            -->
+<!--   Date: Wed Nov  4 15:35:32 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -39,44 +39,44 @@
 
 <span class="keyword">class</span> <a href="../GPadObj.html">GPadObj</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a> {
   <span class="keyword">public</span>:
-     <a href="../GPadObj.html">GPadObj</a>(<a href="../TObject.html">TObject</a>*obj,<a href="../ListOfTypes.html#Int_t">Int_t</a> pnum=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
-     <span class="keyword">virtual</span> ~GPadObj();
+	<a href="../GPadObj.html">GPadObj</a>(<a href="../TObject.html">TObject</a>*obj,<a href="../ListOfTypes.html#Int_t">Int_t</a> pnum=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
+	<span class="keyword">virtual</span> ~GPadObj();
 
-   <span class="keyword">private</span>:
-      <span class="comment">//PadObj(); </span>
-      <a href="../TObject.html">TObject</a>*   fObject;
-      <a href="../TObject.html">TObject</a>*   fParent;
-      <span class="keyword">int</span>        fPadNumber;
-      <a href="../GCanvas.html">GCanvas</a>*   fCanvas;
-      <span class="comment">//std::vector&lt;std::string&gt; fSource;</span>
-      std::string  fOption;
-
+  <span class="keyword">private</span>:
+   <span class="comment">//PadObj(); </span>
+	<a href="../TObject.html">TObject</a>*   fObject;
+	<a href="../TObject.html">TObject</a>*   fParent;
+	<span class="keyword">int</span>        fPadNumber;
+	<a href="../GCanvas.html">GCanvas</a>*   fCanvas;
+	<span class="comment">//std::vector&lt;std::string&gt; fSource;</span>
+	std::string  fOption;
+	
    ClassDef(<a href="../GPadObj.html">GPadObj</a>,0)
 };
 
 <span class="keyword">class</span> <a href="../GMemObj.html">GMemObj</a> : <span class="keyword">public</span> <a href="../TNamed.html">TNamed</a> {
   <span class="keyword">public</span>:
-    <a href="../GMemObj.html">GMemObj</a>(<a href="../TObject.html">TObject</a> *obj, <a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
-    <a href="../GMemObj.html">GMemObj</a>(<span class="keyword">const</span> <a href="../GMemObj.html">GMemObj</a> &amp;obj) { ((<a href="../GMemObj.html">GMemObj</a>&amp;)obj).<a href="../GMemObj.html#GMemObj:Copy" title="void GMemObj::Copy(TObject&amp; object)">Copy</a>(*<span class="keyword">this</span>); }
-    <span class="keyword">virtual</span> ~GMemObj();
+   <a href="../GMemObj.html">GMemObj</a>(<a href="../TObject.html">TObject</a> *obj, <a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
+   <a href="../GMemObj.html">GMemObj</a>(<span class="keyword">const</span> <a href="../GMemObj.html">GMemObj</a> &amp;obj) : <a href="../TNamed.html#TNamed:TNamed" title="TNamed TNamed::TNamed() or overloads">TNamed</a>() { ((<a href="../GMemObj.html">GMemObj</a>&amp;)obj).<a href="../TNamed.html#TNamed:Copy" title="void TNamed::Copy(TObject&amp; named)">Copy</a>(*<span class="keyword">this</span>); }
+   <span class="keyword">virtual</span> ~GMemObj();
 
-    <span class="keyword">void</span> Copy(<a href="../TObject.html">TObject</a> &amp;object) <span class="keyword">const</span>;
+   <span class="keyword">void</span> Copy(<a href="../TObject.html">TObject</a> &amp;object) <span class="keyword">const</span>;
 
-    <a href="../TObject.html">TObject</a> *GetObject() { <span class="keyword">return</span> fThis;   }
-    <a href="../TObject.html">TObject</a> *GetParent() { <span class="keyword">return</span> fParent; }
-    <a href="../TFile.html">TFile</a>   *GetFile()   { <span class="keyword">return</span> fFile;   }
-    <span class="keyword">void</span>     <a href="../GRootObjectManager.html#GRootObjectManager:SetParent" title="bool GRootObjectManager::SetParent(TObject* object,TObject* parent)">SetParent</a>(<a href="../TObject.html">TObject</a> *parent) { fParent = parent; }
-    <span class="keyword">void</span>     <a href="../GRootObjectManager.html#GRootObjectManager:SetFile" title="bool GRootObjectManager::SetFile(TObject* object,TFile* file)">SetFile</a>(<a href="../TFile.html">TFile</a> *file)       { fFile   = file;   }
+   <a href="../TObject.html">TObject</a> *GetObject() { <span class="keyword">return</span> fThis;   }
+   <a href="../TObject.html">TObject</a> *GetParent() { <span class="keyword">return</span> fParent; }
+   <a href="../TFile.html">TFile</a>   *GetFile()   { <span class="keyword">return</span> fFile;   }
+   <span class="keyword">void</span>     <a href="../GRootObjectManager.html#GRootObjectManager:SetParent" title="bool GRootObjectManager::SetParent(TObject* object,TObject* parent)">SetParent</a>(<a href="../TObject.html">TObject</a> *parent) { fParent = parent; }
+   <span class="keyword">void</span>     <a href="../GRootObjectManager.html#GRootObjectManager:SetFile" title="bool GRootObjectManager::SetFile(TObject* object,TFile* file)">SetFile</a>(<a href="../TFile.html">TFile</a> *file)       { fFile   = file;   }
 
-    <span class="keyword">const</span> <span class="keyword">char</span> *GetObjOption() { <span class="keyword">return</span> fOption.c_str(); }
-    <span class="keyword">const</span> <span class="keyword">char</span> *GetObjName()   { <span class="keyword">return</span> fObjName.c_str(); }
+   <span class="keyword">const</span> <span class="keyword">char</span> *GetObjOption() { <span class="keyword">return</span> fOption.c_str(); }
+   <span class="keyword">const</span> <span class="keyword">char</span> *GetObjName()   { <span class="keyword">return</span> fObjName.c_str(); }
 
   <span class="keyword">private</span>:
-    <a href="../TObject.html">TObject</a> *fThis;
-    <a href="../TObject.html">TObject</a> *fParent;
-    <a href="../TFile.html">TFile</a>   *fFile;
-    std::string fOption;
-    std::string fObjName;
+   <a href="../TObject.html">TObject</a> *fThis;
+   <a href="../TObject.html">TObject</a> *fParent;
+   <a href="../TFile.html">TFile</a>   *fFile;
+   std::string fOption;
+   std::string fObjName;
 
   ClassDef(<a href="../GMemObj.html">GMemObj</a>,0)  
 };
@@ -85,60 +85,60 @@
 
 <span class="keyword">class</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> {
   <span class="keyword">public</span>:
-    <span class="keyword">static</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> *<a href="../GRootObjectManager.html#GRootObjectManager:Instance" title="GRootObjectManager* GRootObjectManager::Instance()">Instance</a>();
-    <span class="keyword">virtual</span> <a href="../GRootObjectManager.html#GRootObjectManager:_GRootObjectManager" title="void GRootObjectManager::~GRootObjectManager()">~GRootObjectManager</a>();
+	<span class="keyword">static</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> *<a href="../GRootObjectManager.html#GRootObjectManager:Instance" title="GRootObjectManager* GRootObjectManager::Instance()">Instance</a>();
+	<span class="keyword">virtual</span> <a href="../GRootObjectManager.html#GRootObjectManager:_GRootObjectManager" title="void GRootObjectManager::~GRootObjectManager()">~GRootObjectManager</a>();
+	
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:AddCanvas" title="void GRootObjectManager::AddCanvas(GCanvas* ) or overloads">AddCanvas</a>(<a href="../GCanvas.html">GCanvas</a>*);
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:AddCanvas" title="void GRootObjectManager::AddCanvas(GCanvas* ) or overloads">AddCanvas</a>(<a href="../TCanvas.html">TCanvas</a>*);
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:RemoveCanvas" title="void GRootObjectManager::RemoveCanvas(GCanvas* ) or overloads">RemoveCanvas</a>(<a href="../GCanvas.html">GCanvas</a>*);
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:RemoveCanvas" title="void GRootObjectManager::RemoveCanvas(GCanvas* ) or overloads">RemoveCanvas</a>(<a href="../TCanvas.html">TCanvas</a>* = 0);
 
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:AddCanvas" title="void GRootObjectManager::AddCanvas(GCanvas* ) or overloads">AddCanvas</a>(<a href="../GCanvas.html">GCanvas</a>*);
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:AddCanvas" title="void GRootObjectManager::AddCanvas(GCanvas* ) or overloads">AddCanvas</a>(<a href="../TCanvas.html">TCanvas</a>*);
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:RemoveCanvas" title="void GRootObjectManager::RemoveCanvas(GCanvas* ) or overloads">RemoveCanvas</a>(<a href="../GCanvas.html">GCanvas</a>*);
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:RemoveCanvas" title="void GRootObjectManager::RemoveCanvas(GCanvas* ) or overloads">RemoveCanvas</a>(<a href="../TCanvas.html">TCanvas</a>* = 0);
-
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:AddObject" title="void GRootObjectManager::AddObject(TObject* obj,TObject* par=0,TFile* file=0,Option_t* opt=&quot;&quot;)">AddObject</a>(<a href="../TObject.html">TObject</a> *obj,<a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:RemoveObject" title="void GRootObjectManager::RemoveObject(TObject* ) or overloads">RemoveObject</a>(<a href="../TObject.html">TObject</a>*);
-    <span class="comment">//static <a href="../ListOfTypes.html#void">void</a> <a href="../GRootObjectManager.html#GRootObjectManager:AddObject" title="void GRootObjectManager::AddObject(TObject* obj,TObject* par=0,TFile* file=0,Option_t* opt=&quot;&quot;)">AddObject</a>(const <a href="../ListOfTypes.html#char">char</a> *name,<a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);</span>
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:RemoveObject" title="void GRootObjectManager::RemoveObject(TObject* ) or overloads">RemoveObject</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name);
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:AddObject" title="void GRootObjectManager::AddObject(TObject* obj,TObject* par=0,TFile* file=0,Option_t* opt=&quot;&quot;)">AddObject</a>(<a href="../TObject.html">TObject</a> *obj,<a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:RemoveObject" title="void GRootObjectManager::RemoveObject(TObject* ) or overloads">RemoveObject</a>(<a href="../TObject.html">TObject</a>*);
+	<span class="comment">//static <a href="../ListOfTypes.html#void">void</a> <a href="../GRootObjectManager.html#GRootObjectManager:AddObject" title="void GRootObjectManager::AddObject(TObject* obj,TObject* par=0,TFile* file=0,Option_t* opt=&quot;&quot;)">AddObject</a>(const <a href="../ListOfTypes.html#char">char</a> *name,<a href="../TObject.html">TObject</a> *par=0,<a href="../TFile.html">TFile</a> *file=0,<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);</span>
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:RemoveObject" title="void GRootObjectManager::RemoveObject(TObject* ) or overloads">RemoveObject</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name);
   
-    <span class="keyword">static</span> <span class="keyword">bool</span> <a href="../GRootObjectManager.html#GRootObjectManager:SetParent" title="bool GRootObjectManager::SetParent(TObject* object,TObject* parent)">SetParent</a>(<a href="../TObject.html">TObject</a> *object,<a href="../TObject.html">TObject</a> *parent);
-    <span class="keyword">static</span> <span class="keyword">bool</span> <a href="../GRootObjectManager.html#GRootObjectManager:SetFile" title="bool GRootObjectManager::SetFile(TObject* object,TFile* file)">SetFile</a>(<a href="../TObject.html">TObject</a> *object,<a href="../TFile.html">TFile</a> *file);
+	<span class="keyword">static</span> <span class="keyword">bool</span> <a href="../GRootObjectManager.html#GRootObjectManager:SetParent" title="bool GRootObjectManager::SetParent(TObject* object,TObject* parent)">SetParent</a>(<a href="../TObject.html">TObject</a> *object,<a href="../TObject.html">TObject</a> *parent);
+	<span class="keyword">static</span> <span class="keyword">bool</span> <a href="../GRootObjectManager.html#GRootObjectManager:SetFile" title="bool GRootObjectManager::SetFile(TObject* object,TFile* file)">SetFile</a>(<a href="../TObject.html">TObject</a> *object,<a href="../TFile.html">TFile</a> *file);
 
-    <a href="../TH1.html">TH1</a>    *<a href="../GRootObjectManager.html#GRootObjectManager:GetNext1D" title="TH1* GRootObjectManager::GetNext1D(TObject* object=0)">GetNext1D</a>(<a href="../TObject.html">TObject</a> *object =0);
-    <a href="../TH1.html">TH1</a>    *<a href="../GRootObjectManager.html#GRootObjectManager:GetLast1D" title="TH1* GRootObjectManager::GetLast1D(TObject* object=0)">GetLast1D</a>(<a href="../TObject.html">TObject</a> *object =0);
-    <a href="../TH2.html">TH2</a>    *<a href="../GRootObjectManager.html#GRootObjectManager:GetNext2D" title="TH2* GRootObjectManager::GetNext2D(TObject* object=0)">GetNext2D</a>(<a href="../TObject.html">TObject</a> *object =0);
-    <a href="../TH2.html">TH2</a>    *<a href="../GRootObjectManager.html#GRootObjectManager:GetLast2D" title="TH2* GRootObjectManager::GetLast2D(TObject* object=0)">GetLast2D</a>(<a href="../TObject.html">TObject</a> *object =0);
-    <a href="../TGraph.html">TGraph</a> *<a href="../GRootObjectManager.html#GRootObjectManager:GetNextGraph" title="TGraph* GRootObjectManager::GetNextGraph(TObject* object=0)">GetNextGraph</a>(<a href="../TObject.html">TObject</a> *object=0);
-    <a href="../TGraph.html">TGraph</a> *<a href="../GRootObjectManager.html#GRootObjectManager:GetLastGraph" title="TGraph* GRootObjectManager::GetLastGraph(TObject* object=0)">GetLastGraph</a>(<a href="../TObject.html">TObject</a> *object=0);
+	<a href="../TH1.html">TH1</a>    *<a href="../GRootObjectManager.html#GRootObjectManager:GetNext1D" title="TH1* GRootObjectManager::GetNext1D(TObject* object=0)">GetNext1D</a>(<a href="../TObject.html">TObject</a> *object =0);
+	<a href="../TH1.html">TH1</a>    *<a href="../GRootObjectManager.html#GRootObjectManager:GetLast1D" title="TH1* GRootObjectManager::GetLast1D(TObject* object=0)">GetLast1D</a>(<a href="../TObject.html">TObject</a> *object =0);
+	<a href="../TH2.html">TH2</a>    *<a href="../GRootObjectManager.html#GRootObjectManager:GetNext2D" title="TH2* GRootObjectManager::GetNext2D(TObject* object=0)">GetNext2D</a>(<a href="../TObject.html">TObject</a> *object =0);
+	<a href="../TH2.html">TH2</a>    *<a href="../GRootObjectManager.html#GRootObjectManager:GetLast2D" title="TH2* GRootObjectManager::GetLast2D(TObject* object=0)">GetLast2D</a>(<a href="../TObject.html">TObject</a> *object =0);
+	<a href="../TGraph.html">TGraph</a> *<a href="../GRootObjectManager.html#GRootObjectManager:GetNextGraph" title="TGraph* GRootObjectManager::GetNextGraph(TObject* object=0)">GetNextGraph</a>(<a href="../TObject.html">TObject</a> *object=0);
+	<a href="../TGraph.html">TGraph</a> *<a href="../GRootObjectManager.html#GRootObjectManager:GetLastGraph" title="TGraph* GRootObjectManager::GetLastGraph(TObject* object=0)">GetLastGraph</a>(<a href="../TObject.html">TObject</a> *object=0);
 
-<a name="Ei7aDB"></a>    <a href="../GMemObj.html">GMemObj</a> *<a href="../GRootObjectManager.html#GRootObjectManager:FindMemObject" title="GMemObj* GRootObjectManager::FindMemObject(TObject* object) or overloads">FindMemObject</a>(<a href="../TObject.html">TObject</a> *object ) { <span class="keyword">return</span> ((<a href="../GMemObj.html">GMemObj</a>*)<a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>-><a href="../TList.html#TList:FindObject" title="TObject* TList::FindObject(const char* name) or overloads">FindObject</a>(object)); }
-<a name="ccrj0"></a>    <a href="../GMemObj.html">GMemObj</a> *<a href="../GRootObjectManager.html#GRootObjectManager:FindMemObject" title="GMemObj* GRootObjectManager::FindMemObject(TObject* object) or overloads">FindMemObject</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name) { <span class="keyword">return</span> ((<a href="../GMemObj.html">GMemObj</a>*)<a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>-><a href="../TList.html#TList:FindObject" title="TObject* TList::FindObject(const char* name) or overloads">FindObject</a>(Form(<span class="string">"%s_%s"</span>,name,<span class="string">"memobj"</span>))); }
+<a name="Ei7aDB"></a>	<a href="../GMemObj.html">GMemObj</a> *<a href="../GRootObjectManager.html#GRootObjectManager:FindMemObject" title="GMemObj* GRootObjectManager::FindMemObject(TObject* object) or overloads">FindMemObject</a>(<a href="../TObject.html">TObject</a> *object ) { <span class="keyword">return</span> ((<a href="../GMemObj.html">GMemObj</a>*)<a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>-><a href="../TList.html#TList:FindObject" title="TObject* TList::FindObject(const char* name) or overloads">FindObject</a>(object)); }
+<a name="ccrj0"></a>	<a href="../GMemObj.html">GMemObj</a> *<a href="../GRootObjectManager.html#GRootObjectManager:FindMemObject" title="GMemObj* GRootObjectManager::FindMemObject(TObject* object) or overloads">FindMemObject</a>(<span class="keyword">const</span> <span class="keyword">char</span> *name) { <span class="keyword">return</span> ((<a href="../GMemObj.html">GMemObj</a>*)<a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>-><a href="../TList.html#TList:FindObject" title="TObject* TList::FindObject(const char* name) or overloads">FindObject</a>(Form(<span class="string">"%s_%s"</span>,name,<span class="string">"memobj"</span>))); }
 
 
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:Update" title="void GRootObjectManager::Update(Option_t* opt=&quot;MemClean&quot;)">Update</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">"MemClean"</span>);
-<a name="jS7SP"></a>    <span class="keyword">static</span> <a href="../TList.html">TList</a> *<a href="../GRootObjectManager.html#GRootObjectManager:GetObjectsList" title="TList* GRootObjectManager::GetObjectsList()">GetObjectsList</a>() { <span class="keyword">return</span> <a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>; }
-    <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:Print" title="void GRootObjectManager::Print()">Print</a>();
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:Update" title="void GRootObjectManager::Update(Option_t* opt=&quot;MemClean&quot;)">Update</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">"MemClean"</span>);
+<a name="jS7SP"></a>	<span class="keyword">static</span> <a href="../TList.html">TList</a> *<a href="../GRootObjectManager.html#GRootObjectManager:GetObjectsList" title="TList* GRootObjectManager::GetObjectsList()">GetObjectsList</a>() { <span class="keyword">return</span> <a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>; }
+	<span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:Print" title="void GRootObjectManager::Print()">Print</a>();
 
 
   <span class="keyword">private</span>:
-<a name="wPkhPD"></a>    <a href="../GRootObjectManager.html">GRootObjectManager</a>();
-    <span class="keyword">static</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> *<a href="../GRootObjectManager.html#GRootObjectManager:fGRootObjectManager" title="GRootObjectManager* GRootObjectManager::fGRootObjectManager">fGRootObjectManager</a>;
+<a name="wPkhPD"></a>	<a href="../GRootObjectManager.html">GRootObjectManager</a>();
+	<span class="keyword">static</span> <a href="../GRootObjectManager.html">GRootObjectManager</a> *<a href="../GRootObjectManager.html#GRootObjectManager:fGRootObjectManager" title="GRootObjectManager* GRootObjectManager::fGRootObjectManager">fGRootObjectManager</a>;
 
-    <span class="keyword">static</span> std::map&lt;<a href="../TCanvas.html">TCanvas</a>*,std::vector&lt;<a href="../GPadObj.html">GPadObj</a>&gt; &gt; <a href="../GRootObjectManager.html#GRootObjectManager:fCanvasMap" title="map&lt;TCanvas*,std::vector&lt;GPadObj&gt; &gt; GRootObjectManager::fCanvasMap">fCanvasMap</a>;
-    <span class="keyword">static</span> <a href="../TList.html">TList</a> *<a href="../GRootObjectManager.html#GRootObjectManager:fCanvasList" title="TList* GRootObjectManager::fCanvasList">fCanvasList</a>;
+	<span class="keyword">static</span> std::map&lt;<a href="../TCanvas.html">TCanvas</a>*,std::vector&lt;<a href="../GPadObj.html">GPadObj</a>&gt; &gt; <a href="../GRootObjectManager.html#GRootObjectManager:fCanvasMap" title="map&lt;TCanvas*,std::vector&lt;GPadObj&gt; &gt; GRootObjectManager::fCanvasMap">fCanvasMap</a>;
+	<span class="keyword">static</span> <a href="../TList.html">TList</a> *<a href="../GRootObjectManager.html#GRootObjectManager:fCanvasList" title="TList* GRootObjectManager::fCanvasList">fCanvasList</a>;
 
-    <span class="comment">//static std::map&lt;std::string,<a href="../GMemObj.html">GMemObj</a> &gt; <a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>;</span>
-    <span class="keyword">static</span> <a href="../TList.html">TList</a> *<a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>;
+	<span class="comment">//static std::map&lt;std::string,<a href="../GMemObj.html">GMemObj</a> &gt; <a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>;</span>
+	<span class="keyword">static</span> <a href="../TList.html">TList</a> *<a href="../GRootObjectManager.html#GRootObjectManager:fObjectsMap" title="TList* GRootObjectManager::fObjectsMap">fObjectsMap</a>;
 
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f1DHistsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f2DHistsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f3DHistsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fGraphsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fCutsMap;</span>
-    <span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fMiscMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f1DHistsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f2DHistsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; f3DHistsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fGraphsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fCutsMap;</span>
+	<span class="comment">//static std::map&lt;<a href="../TObject.html">TObject</a>*,std::vector&lt;<a href="../GMemObj.html">GMemObj</a>*&gt; &gt; fMiscMap;</span>
 
-    <span class="comment">//<a href="../ListOfTypes.html#void">void</a> Cleanup();</span>
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:ExtractObjects" title="void GRootObjectManager::ExtractObjects(TCollection* )">ExtractObjects</a>(<a href="../TCollection.html">TCollection</a>*);
-    <span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:ExtractObjectsFromFile" title="void GRootObjectManager::ExtractObjectsFromFile(TDirectoryFile* file)">ExtractObjectsFromFile</a>(<a href="../TDirectoryFile.html">TDirectoryFile</a> *file);
+	<span class="comment">//<a href="../ListOfTypes.html#void">void</a> Cleanup();</span>
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:ExtractObjects" title="void GRootObjectManager::ExtractObjects(TCollection* )">ExtractObjects</a>(<a href="../TCollection.html">TCollection</a>*);
+	<span class="keyword">static</span> <span class="keyword">void</span> <a href="../GRootObjectManager.html#GRootObjectManager:ExtractObjectsFromFile" title="void GRootObjectManager::ExtractObjectsFromFile(TDirectoryFile* file)">ExtractObjectsFromFile</a>(<a href="../TDirectoryFile.html">TDirectoryFile</a> *file);
 
-  ClassDef(<a href="../GRootObjectManager.html">GRootObjectManager</a>,0)
+	ClassDef(<a href="../GRootObjectManager.html">GRootObjectManager</a>,0)
 };
 
 <span class="cpp">#endif</span>
@@ -150,7 +150,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:07 </em><em>&raquo; Last generated: 2015-09-08 11:07</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:35 </em><em>&raquo; Last generated: 2015-11-04 15:35</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

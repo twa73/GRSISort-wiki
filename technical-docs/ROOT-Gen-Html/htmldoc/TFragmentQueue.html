@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:10:46 2015            -->
+<!--   Date: Wed Nov  4 15:39:16 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -80,7 +80,7 @@ and returns it's status in order to monitor progress.
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:Add">Add</a>(<a href="./TFragment.html">TFragment</a>*)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(<a href="./TBrowser.html">TBrowser</a>* b)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:CheckStatus">CheckStatus</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:CheckStatus">CheckStatus</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TFragmentQueue:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
@@ -142,7 +142,7 @@ and returns it's status in order to monitor progress.
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:Pop">Pop</a>()</td></tr>
 <tr class="func"><td class="funcret"><a href="./TFragment.html">TFragment</a>*</td><td class="funcname"><a class="funcname" href="#TFragmentQueue:PopFragment">PopFragment</a>()</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./TObject.html">TObject</a>* obj)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
@@ -156,7 +156,7 @@ and returns it's status in order to monitor progress.
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:ShowMembers">ShowMembers</a>(<a href="./TMemberInspector.html">TMemberInspector</a>&amp;)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:Size">Size</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:Size">Size</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:StartStatusUpdate">StartStatusUpdate</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:Stop">Stop</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragmentQueue:StopStatusUpdate">StopStatusUpdate</a>()</td></tr>
@@ -262,7 +262,7 @@ and returns it's status in order to monitor progress.
 <div class="code"><code class="inlinecode">{	}</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:Print" href="src/TFragmentQueue.cxx.html#FguELB">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:Print" href="src/TFragmentQueue.cxx.html#VcXwOE">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
 <div class="funccomm"><pre><a href="./TFragmentQueue.html#TFragmentQueue:Print" title="void TFragmentQueue::Print(Option_t* opt=&quot;&quot;)">Print</a> the status of the Fragment Queue
 </pre></div>
 </div>
@@ -292,11 +292,11 @@ std::unique_lock&lt;std::mutex&gt; sorted(Sorted,std::defer_lock);
 sorted.lock();
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TFragmentQueue:Size" href="src/TFragmentQueue.cxx.html#KXYjJD">Size</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TFragmentQueue:Size" href="src/TFragmentQueue.cxx.html#W9aWp">Size</a>() const</span><br />
 <div class="funccomm"><pre>Returns the number of fragments in the Queue
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:CheckStatus" href="src/TFragmentQueue.cxx.html#ba35jB">CheckStatus</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragmentQueue:CheckStatus" href="src/TFragmentQueue.cxx.html#FXZcBD">CheckStatus</a>() const</span><br />
 <div class="funccomm"><pre>Checks the status of the Queue. This is called by the <a href="./TFragmentQueue.html#TFragmentQueue:Print" title="void TFragmentQueue::Print(Option_t* opt=&quot;&quot;)">Print</a>() function.
 std::unique_lock&lt;std::mutex&gt; all(All,std::defer_lock);
 all.lock();
@@ -345,7 +345,7 @@ all.lock();
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Tue Sep  8 11:10:47 2015 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
+<em>&raquo; Last changed: Wed Nov  4 15:39:17 2015 </em><em>&raquo; Last generated: 2015-11-04 15:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

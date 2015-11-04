@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:12:09 2015            -->
+<!--   Date: Wed Nov  4 15:40:31 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -341,13 +341,13 @@ return false;}
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TKinematics:InitKin" href="src/TKinematics.cxx.html#huTf1D">InitKin</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TSpline3.html">TSpline3</a>* <a class="funcname" name="TKinematics:Evslab" href="src/TKinematics.cxx.html#AwRYCE">Evslab</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2)</span><br />
-<div class="funccomm"><pre><a href="./ListOfTypes.html#ostream">cout</a> &lt;&lt; <span class="string">"maximum scattering angle: "</span> &lt;&lt; <a href="./TKinematics.html#TKinematics:GetMaxAngle" title="double TKinematics::GetMaxAngle(double vcm) or overloads">GetMaxAngle</a>(<a href="./TKinematics.html#TKinematics:fVcm" title="double TKinematics::fVcm">fVcm</a>[part])*180./PI  &lt;&lt; endl;
-<a href="./ListOfTypes.html#ostream">cout</a> &lt;&lt; <span class="string">"max "</span> &lt;&lt; thmax &lt;&lt; <span class="string">" min "</span> &lt;&lt; thmin &lt;&lt; <span class="string">" steps "</span> &lt;&lt; (<a href="./ListOfTypes.html#int">int</a>)((thmax-thmin)/size)+1 &lt;&lt; endl;
+<div class="funccomm"><pre><a href="./ListOfTypes.html#double">double</a>* energy = new <a href="./ListOfTypes.html#double">double</a>[(<a href="./ListOfTypes.html#int">int</a>)((thmax-thmin)/size)+1];
+<a href="./ListOfTypes.html#double">double</a>* angle = new <a href="./ListOfTypes.html#double">double</a>[(<a href="./ListOfTypes.html#int">int</a>)((thmax-thmin)/size)+1];
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TGraph.html">TGraph</a>* <a class="funcname" name="TKinematics:Evslab_graph" href="src/TKinematics.cxx.html#d58yMC">Evslab_graph</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2)</span><br />
-<div class="funccomm"><pre><a href="./ListOfTypes.html#ostream">cout</a> &lt;&lt; <span class="string">"maximum scattering angle: "</span> &lt;&lt; <a href="./TKinematics.html#TKinematics:GetMaxAngle" title="double TKinematics::GetMaxAngle(double vcm) or overloads">GetMaxAngle</a>(<a href="./TKinematics.html#TKinematics:fVcm" title="double TKinematics::fVcm">fVcm</a>[part])*180./PI  &lt;&lt; endl;
-<a href="./ListOfTypes.html#ostream">cout</a> &lt;&lt; <span class="string">"max "</span> &lt;&lt; thmax &lt;&lt; <span class="string">" min "</span> &lt;&lt; thmin &lt;&lt; <span class="string">" steps "</span> &lt;&lt; (<a href="./ListOfTypes.html#int">int</a>)((thmax-thmin)/size)+1 &lt;&lt; endl;
+<div class="funccomm"><pre><a href="./ListOfTypes.html#double">double</a>* energy = new <a href="./ListOfTypes.html#double">double</a>[(<a href="./ListOfTypes.html#int">int</a>)((thmax-thmin)/size)+1];
+<a href="./ListOfTypes.html#double">double</a>* angle = new <a href="./ListOfTypes.html#double">double</a>[(<a href="./ListOfTypes.html#int">int</a>)((thmax-thmin)/size)+1];
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"><a href="./TSpline3.html">TSpline3</a>* <a class="funcname" name="TKinematics:Evscm" href="src/TKinematics.cxx.html#ha67j">Evscm</a>(<span class="keyword">double</span> thmin, <span class="keyword">double</span> thmax, <span class="keyword">double</span> size, <span class="keyword">int</span> part = 2)</span><br />
@@ -545,7 +545,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Tue Sep  8 11:12:10 2015 </em><em>&raquo; Last generated: 2015-09-08 11:12</em><br />
+<em>&raquo; Last changed: Wed Nov  4 15:40:32 2015 </em><em>&raquo; Last generated: 2015-11-04 15:40</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

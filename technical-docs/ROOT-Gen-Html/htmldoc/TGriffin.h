@@ -10,7 +10,7 @@
 #include <TBits.h>
 
 #include "TGriffinHit.h"
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include "TGriffinData.h"
 #else
 class TGriffinData;
@@ -42,25 +42,25 @@ class TGriffin : public TGRSIDetector {
    public:
       void BuildHits(TDetectorData *data =0,Option_t *opt = ""); //!
 
-      TGriffinHit *GetGriffinHit(const int i); //!
-      TGRSIDetectorHit* GetHit(const Int_t idx = 0);
-      Int_t GetMultiplicity() const {return griffin_hits.size();}
+      TGriffinHit *GetGriffinHit(const int& i); //!
+      TGRSIDetectorHit* GetHit(const Int_t& idx = 0);
+      Short_t GetMultiplicity() const {return griffin_hits.size();}
 
       static TVector3 GetPosition(int DetNbr ,int CryNbr = 5, double distance = 110.0);		//!
       void FillData(TFragment*,TChannel*,MNEMONIC*); //!
 
       TGriffin& operator=(const TGriffin&);  //!
       
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
       void SetAddbackCriterion(std::function<bool(TGriffinHit&, TGriffinHit&)> criterion) { fAddback_criterion = criterion; }
       std::function<bool(TGriffinHit&, TGriffinHit&)> GetAddbackCriterion() const { return fAddback_criterion; }
 #endif
 
       Int_t GetAddbackMultiplicity();
-      TGriffinHit* GetAddbackHit(const int i);
+      TGriffinHit* GetAddbackHit(const int& i);
 
    private:
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
       static std::function<bool(TGriffinHit&, TGriffinHit&)> fAddback_criterion;
 #endif
       TGriffinData *grifdata;                 //!  Used to build GRIFFIN Hits
@@ -90,11 +90,11 @@ class TGriffin : public TGRSIDetector {
       Bool_t TestBitNumber(enum EGriffinBits bit) const {return (bit & fGriffinBits);}
 
    public:
-      virtual void Copy(TGriffin&) const;                //!
+      virtual void Copy(TObject&) const;                //!
       virtual void Clear(Option_t *opt = "all");		     //!
       virtual void Print(Option_t *opt = "") const;		  //!
       void ResetAddback();		     //!
-      UShort_t GetNAddbackFrags(int idx) const;
+      UShort_t GetNAddbackFrags(size_t idx) const;
 
    protected:
       void PushBackHit(TGRSIDetectorHit* ghit);

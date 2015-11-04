@@ -10,7 +10,7 @@
 #include <stdio.h>
 
 #include "TTipHit.h"
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include "TTipData.h"
 #else
 class TTipData;
@@ -28,18 +28,18 @@ class TTip : public TGRSIDetector {
     TTip();  
     TTip(const TTip& rhs);
 
-    TTipHit *GetTipHit(const int i) ;//!
-    TGRSIDetectorHit *GetHit(const int i);
+    TTipHit *GetTipHit(const int& i) ;//!
+    TGRSIDetectorHit *GetHit(const int& i);
     Short_t GetMultiplicity() const         {  return tip_hits.size();}  //!
 
 	 void BuildHits(TDetectorData *data =0,Option_t *opt = "");           //!
 	 void FillData(TFragment*,TChannel*,MNEMONIC*);                           //!
-    void Copy(TTip &rhs) const;
+    void Copy(TObject &rhs) const;
 
     TTip& operator=(const TTip&);  //!
 
     void Clear(Option_t *opt = "");
-    void Print(Option_t *opt = "");
+    void Print(Option_t *opt = "") const;
 
    protected:
      void PushBackHit(TGRSIDetectorHit* tiphit);
@@ -49,7 +49,7 @@ class TTip : public TGRSIDetector {
     TTipData *tipdata;                                               //!  Used to build TIP Hits
     std::vector <TTipHit> tip_hits;                                  //   The set of detector hits
 
-  private:
+  /*private:
     //  SFU CsI waveform fitting routines.
     typedef struct WaveFormPar {
       //parameters for baseline
@@ -109,7 +109,7 @@ class TTip : public TGRSIDetector {
 
     WaveFormPar GetExclusionZone();
     WaveShapPar GetShape(WaveFormPar&);
-
+	*/
 
   public:
 

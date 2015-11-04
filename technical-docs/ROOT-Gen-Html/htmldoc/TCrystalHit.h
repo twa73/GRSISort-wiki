@@ -18,7 +18,8 @@ class TCrystalHit : public TGRSIDetectorHit	{
 		int segment;		//
 		//int charge;		  //
 
-		double local_energy;	//
+//		double local_energy;	//
+      bool suppress;
 		//double time;		//
 		//double cfd;		  //
 
@@ -29,18 +30,20 @@ class TCrystalHit : public TGRSIDetectorHit	{
 
 		virtual void Clear(Option_t *opt = "");		      //!
 		virtual void Print(Option_t *opt = "") const;		//!
-      virtual void Copy(TCrystalHit&) const;             //!
+      virtual void Copy(TObject&) const;             //!
 
 		inline int    GetSegment()       { return segment;}   //!
-		inline double GetEnergy() const 	{ return local_energy;	}	//!
+	//	inline double GetEnergy(Option_t *opt= "") const 	{ return local_energy;	}	//!
 
-      TVector3 GetPosition() const {return TVector3();}
+      TVector3 GetPosition(Double_t dist = 0) const {return TVector3();}
 		inline void SetSegment(const int &seg) { segment = seg;   }       //!
-		inline void SetEnergy(const double &e)	{	local_energy = e;	}	//!
+//		inline void SetEnergy(const double &e)	{	local_energy = e;	}	//!
+
+      inline void SetSuppress(const bool flag = true) { suppress = flag;} 
+      inline bool Suppress() {return suppress;}
 
 		//inline void SetWave(const std::vector<int> &w)	{	wave = w;	} //!
 		//inline std::vector<int> *GetWave()	{	return &wave;	}	  //!
-
 
 	ClassDef(TCrystalHit,1)
 };

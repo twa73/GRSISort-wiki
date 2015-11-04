@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:10:31 2015            -->
+<!--   Date: Wed Nov  4 15:39:02 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -28,7 +28,7 @@
 <span class="cpp">#include &lt;cstdio&gt;</span>
 
 <span class="cpp">#include "<a href="../TDescantHit.h">TDescantHit.h</a>"</span>
-<span class="cpp">#ifndef __CINT__</span>
+<span class="cpp">#if !defined (__CINT__) &amp;&amp; !defined (__CLING__)</span>
 <span class="cpp">#include "<a href="../TDescantData.h">TDescantData.h</a>"</span>
 <span class="cpp">#else</span>
 <span class="keyword">class</span> TDescantData;
@@ -46,8 +46,8 @@
      <span class="keyword">virtual</span> <a href="../TDescant.html#TDescant:_TDescant" title="void TDescant::~TDescant()">~TDescant</a>();
 
   <span class="keyword">public</span>: 
-     <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>* <a href="../TDescant.html#TDescant:GetHit" title="TGRSIDetectorHit* TDescant::GetHit(const Int_t idx=0)">GetHit</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> idx =0);
-     <a href="../TDescantHit.html">TDescantHit</a>* <a href="../TDescant.html#TDescant:GetDescantHit" title="TDescantHit* TDescant::GetDescantHit(const Int_t idx=0)">GetDescantHit</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> idx = 0);
+     <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a>* <a href="../TDescant.html#TDescant:GetHit" title="TGRSIDetectorHit* TDescant::GetHit(const Int_t&amp; idx=0)">GetHit</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>&amp; idx =0);
+     <a href="../TDescantHit.html">TDescantHit</a>* <a href="../TDescant.html#TDescant:GetDescantHit" title="TDescantHit* TDescant::GetDescantHit(const Int_t&amp; idx=0)">GetDescantHit</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a>&amp; idx = 0);
 
 <a name="uGnLe"></a>     <a href="../ListOfTypes.html#Short_t">Short_t</a> <a href="../TDescant.html#TDescant:GetMultiplicity" title="Short_t TDescant::GetMultiplicity()">GetMultiplicity</a>() <span class="keyword">const</span>	       {	<span class="keyword">return</span> <a href="../TDescant.html#TDescant:descant_hits" title="vector&lt;TDescantHit&gt; TDescant::descant_hits">descant_hits</a>.<a href="../vector_TDescantHit_.html#vector_TDescantHit_:size" title="vector&lt;TDescantHit,allocator&lt;TDescantHit&gt; &gt;::size_type vector&lt;TDescantHit,allocator&lt;TDescantHit&gt; &gt;::size()">size</a>();}	<span class="comment">//!</span>
 
@@ -74,7 +74,7 @@
      <span class="keyword">static</span> <a href="../TVector3.html">TVector3</a> <a href="../TDescant.html#TDescant:gPosition" title="TVector3 TDescant::gPosition">gPosition</a>[71];                                     <span class="comment">//!  Position of each Paddle needs to be updated</span>
 
    <span class="keyword">public</span>:         
-     <span class="keyword">void</span> <a href="../TDescant.html#TDescant:Copy" title="void TDescant::Copy(TDescant&amp; )">Copy</a>(<a href="../TDescant.html">TDescant</a>&amp;) <span class="keyword">const</span>;                <span class="comment">//!</span>
+     <span class="keyword">void</span> <a href="../TDescant.html#TDescant:Copy" title="void TDescant::Copy(TObject&amp; )">Copy</a>(<a href="../TObject.html">TObject</a>&amp;) <span class="keyword">const</span>;                <span class="comment">//!</span>
      <span class="keyword">void</span> <a href="../TDescant.html#TDescant:Clear" title="void TDescant::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);		<span class="comment">//!</span>
      <span class="keyword">void</span> <a href="../TDescant.html#TDescant:Print" title="void TDescant::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>;		<span class="comment">//!</span>
 
@@ -96,7 +96,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:10 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:39 </em><em>&raquo; Last generated: 2015-11-04 15:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

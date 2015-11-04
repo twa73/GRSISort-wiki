@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:13:45 2015            -->
+<!--   Date: Wed Nov  4 15:42:06 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -68,7 +68,7 @@ return false;}
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TSRIM:TSRIM">TSRIM</a>()</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TSRIM:TSRIM@2">TSRIM</a>(<span class="keyword">const</span> <a href="./TSRIM.html">TSRIM</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TSRIM:TSRIM@1">TSRIM</a>(<span class="keyword">const</span> <span class="keyword">char</span>* infilename, <span class="keyword">double</span> emax = -1.0, <span class="keyword">double</span> emin = 0.0, <span class="keyword">bool</span> printfile = <span class="keyword">true</span>)</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TSRIM:_TSRIM">~TSRIM</a>()</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TSRIM:_TSRIM">~TSRIM</a>()</td></tr>
 <tr class="func"><td class="funcret">static <a href="./TClass.html">TClass</a>*</td><td class="funcname"><a class="funcname" href="#TSRIM:Class">Class</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TSRIM:GetAdjustedEnergy">GetAdjustedEnergy</a>(<span class="keyword">double</span> energy, <span class="keyword">double</span> distance, <span class="keyword">double</span> stepsize = <a href="./TSRIM.html#TSRIM:dx" title="const double TSRIM::dx">dx</a>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TSRIM:GetEmax">GetEmax</a>()</td></tr>
@@ -132,11 +132,6 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSRIM:TSRIM@1" href="src/TSRIM.cxx.html#nlQIkB">TSRIM</a>(<span class="keyword">const</span> <span class="keyword">char</span>* infilename, <span class="keyword">double</span> emax = -1.0, <span class="keyword">double</span> emin = 0.0, <span class="keyword">bool</span> printfile = <span class="keyword">true</span>)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSRIM:_TSRIM" href="src/TSRIM.cxx.html#VXTK5B">~TSRIM</a>()</span><br />
-
-<div class="code"><code class="inlinecode">{	}</code></div>
-<div style="clear:both;"></div>
-</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TSRIM:ReadEnergyLossFile" href="src/TSRIM.cxx.html#DePt7B">ReadEnergyLossFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <span class="keyword">double</span> emax = -1.0, <span class="keyword">double</span> emin = 0.0, <span class="keyword">bool</span> printfile = <span class="keyword">true</span>)</span><br />
 <div class="funccomm"><pre> if Steffen makes a <a href="./TSRIM.html">TSRIM</a> file that this thing can't read it's beacuse of mac encoding.
 		use dos2unix -c mac d_in_Si.txt in terminal
@@ -145,6 +140,11 @@ return false;}
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TSRIM:GetEnergy" href="src/TSRIM.cxx.html#l_jMoB">GetEnergy</a>(<span class="keyword">double</span> energy, <span class="keyword">double</span> dist)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TSRIM:GetAdjustedEnergy" href="src/TSRIM.cxx.html#ghp_EB">GetAdjustedEnergy</a>(<span class="keyword">double</span> energy, <span class="keyword">double</span> distance, <span class="keyword">double</span> stepsize = <a href="./TSRIM.html#TSRIM:dx" title="const double TSRIM::dx">dx</a>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">virtual</span> <a class="funcname" name="TSRIM:_TSRIM" href="src/TSRIM.h.html#w319PE">~TSRIM</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{}</code></div>
+<div style="clear:both;"></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="TSRIM:TSRIM" href="src/TSRIM.h.html#oDqZV">TSRIM</a>()</span><br />
 </div>
@@ -208,7 +208,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Tue Sep  8 11:13:46 2015 </em><em>&raquo; Last generated: 2015-09-08 11:13</em><br />
+<em>&raquo; Last changed: Wed Nov  4 15:42:07 2015 </em><em>&raquo; Last generated: 2015-11-04 15:42</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

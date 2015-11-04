@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:12:51 2015            -->
+<!--   Date: Wed Nov  4 15:41:10 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -412,7 +412,7 @@ ClassImp(<a href="../TMidasFile.html">TMidasFile</a>)
    <a href="../TMidasFile.html#TMidasFile:fWriteBuffer" title="vector&lt;char&gt; TMidasFile::fWriteBuffer">fWriteBuffer</a>.push_back((<span class="keyword">char</span>)((midasEvent-&gt;GetDataSize() &gt;&gt; 16) &amp; 0xFF));
    <a href="../TMidasFile.html#TMidasFile:fWriteBuffer" title="vector&lt;char&gt; TMidasFile::fWriteBuffer">fWriteBuffer</a>.push_back((<span class="keyword">char</span>)(midasEvent-&gt;GetDataSize() &gt;&gt; 24));
  
-   <span class="keyword">for</span>(<span class="keyword">int</span> i=0; i&lt;midasEvent-&gt;GetDataSize();i++){
+   <span class="keyword">for</span>(<a href="../ListOfTypes.html#size_t">size_t</a> i=0; i&lt;midasEvent-&gt;GetDataSize();i++){
       <a href="../TMidasFile.html#TMidasFile:fWriteBuffer" title="vector&lt;char&gt; TMidasFile::fWriteBuffer">fWriteBuffer</a>.push_back(midasEvent-&gt;GetData()[i]);
    }
   
@@ -591,7 +591,7 @@ ClassImp(<a href="../TMidasFile.html">TMidasFile</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:12 </em><em>&raquo; Last generated: 2015-09-08 11:12</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:41 </em><em>&raquo; Last generated: 2015-11-04 15:41</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

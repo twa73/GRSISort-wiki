@@ -9,7 +9,7 @@
 #include <TBits.h>
 
 #include "TPacesHit.h"
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include "TPacesData.h"
 #else
 class TPacesData;
@@ -30,9 +30,9 @@ class TPaces : public TGRSIDetector {
   public: 
      void BuildHits(TDetectorData *data =0,Option_t *opt = ""); //!
 
-     TPacesHit *GetPacesHit(const int i); //!
-     TGRSIDetectorHit* GetHit(const Int_t idx = 0);
-     Int_t GetMultiplicity() const {return paces_hits.size();}
+     TPacesHit *GetPacesHit(const int& i); //!
+     TGRSIDetectorHit* GetHit(const Int_t& idx = 0);
+     Short_t GetMultiplicity() const {return paces_hits.size();}
      
      static TVector3 GetPosition(int DetNbr);		//!
      void FillData(TFragment*,TChannel*,MNEMONIC*); //!
@@ -54,7 +54,7 @@ class TPaces : public TGRSIDetector {
     // static TVector3 gCloverPosition[17];               //! Position of each HPGe Clover
 
    public:         
-     virtual void Copy(TPaces&) const;                //!
+     virtual void Copy(TObject&) const;                //!
      virtual void Clear(Option_t *opt = "all");		     //!
      virtual void Print(Option_t *opt = "") const;		  //!
 

@@ -20,6 +20,7 @@ namespace TGRSIOptions {
       extern std::vector<std::string> fInputMidasFile;
       extern std::vector<std::string> fInputCalFile;
       extern std::vector<std::string> fInputOdbFile;
+    	extern std::vector<std::string> fExternalRunInfo;
     	extern std::vector<std::string> fMacroFile;
 
       extern bool fCloseAfterSort;
@@ -30,7 +31,8 @@ namespace TGRSIOptions {
       extern bool fWorkHarder;
       extern bool fReadingMaterial;
       extern bool fIgnoreFileOdb;
-      extern bool fIgnoreEpics;
+		extern bool fIgnoreScaler;
+		extern bool fIgnoreEpics;
       extern bool fWriteBadFrags;
 
       }
@@ -48,6 +50,9 @@ namespace TGRSIOptions {
 		const char *GetXMLODBFile(int runnumber=0,int subrunnumber=-1);
       const char *GetCalFile(int runnumber=0,int subrunnumber=-1);
 
+      void AddExternalRunInfo(std::string);
+      void SetExternalRunInfo();
+      bool ExternalRunInfo();
 
       void SetCloseAfterSort(bool flag=true); 
       bool CloseAfterSort();                  
@@ -55,8 +60,14 @@ namespace TGRSIOptions {
       void SetIgnoreFileOdb(bool flag=true);
       bool IgnoreFileOdb();
 
+      void SetIgnoreScaler(bool flag=true);
+      bool IgnoreScaler();
+
       void SetIgnoreEpics(bool flag=true);
       bool IgnoreEpics();
+      
+      void SetIgnoreSCLR(bool flag=true);
+      bool IgnoreSCLR();
 
       void SetLogErrors(bool flag=true);      
       bool LogErrors();			
@@ -91,11 +102,7 @@ namespace TGRSIOptions {
       
       //void Print(Option_t *opt = "") const;
       //void Clear(Option_t *opt = "");
-
- 
-
-
-};
+}
 
 #endif
 

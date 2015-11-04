@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:11:06 2015            -->
+<!--   Date: Wed Nov  4 15:39:33 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -90,6 +90,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:ExecuteEvent"><span class="baseclass">TObject::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSILoop:FillFragmentTree">FillFragmentTree</a>(<a href="./TMidasFile.html">TMidasFile</a>*)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSILoop:FillScalerTree">FillScalerTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSILoop:Finalize">Finalize</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./TObject.html">TObject</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./TObject.html">TObject</a>* obj) <span class="keyword">const</span></td></tr>
@@ -103,6 +104,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSILoop:GetSuppressError">GetSuppressError</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="./TObject.html#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(<a href="./TTimer.html">TTimer</a>* timer)</td></tr>
@@ -209,6 +211,7 @@ return false;}
 </table></div>
 <div class="access" id="datapubl"><b>public:</b>
 <table class="data" id="tabdatapubl" cellspacing="0">
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSILoop:fFillScalerThreadRunning"></a>fFillScalerThreadRunning</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSILoop:fFillTreeThreadRunning"></a>fFillTreeThreadRunning</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSILoop:fMidasThreadRunning"></a>fMidasThreadRunning</td><td></td></tr>
 
@@ -216,10 +219,14 @@ return false;}
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSILoop:fBadFragsSentToTree"></a>fBadFragsSentToTree</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSILoop:fDeadtimeScalersSentToTree"></a>fDeadtimeScalersSentToTree</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSILoop:fFragsReadFromMidas"></a>fFragsReadFromMidas</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSILoop:fFragsSentToTree"></a>fFragsSentToTree</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSILoop:fIamGriffin"></a>fIamGriffin</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSILoop:fIamTigress"></a>fIamTigress</td><td></td></tr>
 <tr class="data"><td class="datatype"><a href="./TXMLOdb.html">TXMLOdb</a>*</td><td class="dataname"><a name="TGRSILoop:fOdb"></a>fOdb</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSILoop:fOffline"></a>fOffline</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TGRSILoop:fRateScalersSentToTree"></a>fRateScalersSentToTree</td><td></td></tr>
 <tr class="data"><td class="datatype">static <a href="./TGRSILoop.html">TGRSILoop</a>*</td><td class="dataname"><a name="TGRSILoop:fTGRSILoop"></a>fTGRSILoop</td><td></td></tr>
 <tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TGRSILoop:fTestMode"></a>fTestMode</td><td></td></tr>
 <tr class="data"><td class="datatype">static <span class="keyword">bool</span></td><td class="dataname"><a name="TGRSILoop:suppress_error"></a>suppress_error</td><td></td></tr>
@@ -231,14 +238,14 @@ return false;}
 <area shape="rect" id="node2" href="./TObject.html" title="TObject" alt="" coords="4,14,300,70"/>
 </map>
 <map name="MapTGRSILoop_InhMem" id="MapTGRSILoop_InhMem">
-<area shape="rect" id="clust11" href="./TObject.html" alt="" coords="171,255,237,353"/>
-<area shape="rect" id="clust12" href="./TObject.html" alt="" coords="93,255,160,369"/>
-<area shape="rect" id="clust13" href="./TObject.html" alt="" coords="16,255,83,369"/>
-<area shape="rect" id="clust14" href="./TObject.html" alt="" coords="203,360,205,363"/>
-<area shape="rect" id="clust15" href="./TObject.html" alt="" coords="171,369,237,801"/>
-<area shape="rect" id="clust16" href="./TObject.html" alt="" coords="93,369,160,817"/>
-<area shape="rect" id="clust17" href="./TObject.html" alt="" coords="16,369,83,817"/>
-<area shape="rect" id="clust10" href="./TObject.html" title="TObject" alt="" coords="16,224,237,817"/>
+<area shape="rect" id="clust11" href="./TObject.html" alt="" coords="171,47,237,145"/>
+<area shape="rect" id="clust12" href="./TObject.html" alt="" coords="93,47,160,161"/>
+<area shape="rect" id="clust13" href="./TObject.html" alt="" coords="16,47,83,161"/>
+<area shape="rect" id="clust14" href="./TObject.html" alt="" coords="203,152,205,155"/>
+<area shape="rect" id="clust15" href="./TObject.html" alt="" coords="171,161,237,593"/>
+<area shape="rect" id="clust16" href="./TObject.html" alt="" coords="93,161,160,609"/>
+<area shape="rect" id="clust17" href="./TObject.html" alt="" coords="16,161,83,609"/>
+<area shape="rect" id="clust10" href="./TObject.html" title="TObject" alt="" coords="16,16,237,609"/>
 </map>
 <map name="MapTGRSILoop_Lib" id="MapTGRSILoop_Lib">
 <area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="127,237,244,285"/>
@@ -268,10 +275,12 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSILoop:FillFragmentTree" href="src/TGRSILoop.cxx.html#GKj_hB">FillFragmentTree</a>(<a href="./TMidasFile.html">TMidasFile</a>* )</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSILoop:FillScalerTree" href="src/TGRSILoop.cxx.html#XjVmYD">FillScalerTree</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSILoop:ProcessMidasFile" href="src/TGRSILoop.cxx.html#DJ3wFC">ProcessMidasFile</a>(<a href="./TMidasFile.html">TMidasFile</a>* )</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSILoop:SetFileOdb" href="src/TGRSILoop.cxx.html#U2iFr">SetFileOdb</a>(<span class="keyword">char</span>* data, <span class="keyword">int</span> size)</span><br />
-<div class="funccomm"><pre>check if we have already set the tchannels....
+<div class="funccomm"><pre>check if we have already set the TChannels....
 
 </pre></div>
 </div>
@@ -333,12 +342,17 @@ return false;}
 <div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGRSILoop.html#TGRSILoop:fFragsReadFromMidas" title="int TGRSILoop::fFragsReadFromMidas">fFragsReadFromMidas</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSILoop:GetSuppressError" href="src/TGRSILoop.h.html#jxwBZB">GetSuppressError</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGRSILoop.html#TGRSILoop:suppress_error" title="bool TGRSILoop::suppress_error">suppress_error</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
 
 <br />
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Tue Sep  8 11:11:07 2015 </em><em>&raquo; Last generated: 2015-09-08 11:11</em><br />
+<em>&raquo; Last changed: Wed Nov  4 15:39:34 2015 </em><em>&raquo; Last generated: 2015-11-04 15:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

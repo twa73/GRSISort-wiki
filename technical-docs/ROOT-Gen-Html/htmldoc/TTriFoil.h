@@ -6,18 +6,16 @@
 #include <iostream>
 #include <stdio.h>
 
-#include "TGRSIDetector.h"
+#include "TDetector.h"
 
 #include "TFragment.h"
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include "TTriFoilData.h"
 #else
 class TTriFoilData;
 #endif
 
-using namespace std;
-
-class TTriFoil :  public TGRSIDetector {
+class TTriFoil :  public TDetector {
 	
 	public:
 		TTriFoil();
@@ -36,7 +34,7 @@ class TTriFoil :  public TGRSIDetector {
 
 		void Clear(Option_t *opt = ""); 	//!
 		void Print(Option_t *opt = "") const; 	//!
-      void Copy(TTriFoil &rhs) const;
+      void Copy(TObject &rhs) const;
 
 		
 	

@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:11:06 2015            -->
+<!--   Date: Wed Nov  4 15:39:33 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,7 +22,7 @@
 <span class="cpp">#include "<a href="../TGRSIFunctions.h">TGRSIFunctions.h</a>"</span>
 
 <span class="comment">//Without this macro the <a href="../THtml.html">THtml</a> doc for <a href="../TGRSIFunctions.html">TGRSIFunctions</a> can't be generated</span>
-NamespaceImp(<a href="../TGRSIFunctions.html">TGRSIFunctions</a>);
+NamespaceImp(<a href="../TGRSIFunctions.html">TGRSIFunctions</a>)
 
 <span class="comment">//////////////////////////////////////////////////////////////////////</span>
 <span class="comment">//</span>
@@ -266,8 +266,8 @@ NamespaceImp(<a href="../TGRSIFunctions.html">TGRSIFunctions</a>);
 
 
 
-<a name="cgH5oD"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html">TGRSIFunctions</a>::<a href="../TGRSIFunctions.html#TGRSIFunctions:Bateman" title="Double_t TGRSIFunctions::Bateman(Double_t* dim,Double_t* par,Int_t nChain=1,Double_t SecondsPerBin=1.0)">Bateman</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> *dim, <a href="../ListOfTypes.html#Double_t">Double_t</a> *par, <a href="../ListOfTypes.html#Int_t">Int_t</a> nChain, <a href="../ListOfTypes.html#Double_t">Double_t</a> SecondsPerBin){
-<span class="comment">//****NOT TESTED****The <a href="../TGRSIFunctions.html#TGRSIFunctions:Bateman" title="Double_t TGRSIFunctions::Bateman(Double_t* dim,Double_t* par,Int_t nChain=1,Double_t SecondsPerBin=1.0)">Bateman</a> equation is the general closed form for a decay chain of nuclei. This functions returns</span>
+<a name="e.G1IB"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TGRSIFunctions.html">TGRSIFunctions</a>::<a href="../TGRSIFunctions.html#TGRSIFunctions:Bateman" title="Double_t TGRSIFunctions::Bateman(Double_t* dim,Double_t* par,UInt_t nChain=1,Double_t SecondsPerBin=1.0)">Bateman</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> *dim, <a href="../ListOfTypes.html#Double_t">Double_t</a> *par, <a href="../ListOfTypes.html#UInt_t">UInt_t</a> nChain, <a href="../ListOfTypes.html#Double_t">Double_t</a> SecondsPerBin){
+<span class="comment">//****NOT TESTED****The <a href="../TGRSIFunctions.html#TGRSIFunctions:Bateman" title="Double_t TGRSIFunctions::Bateman(Double_t* dim,Double_t* par,UInt_t nChain=1,Double_t SecondsPerBin=1.0)">Bateman</a> equation is the general closed form for a decay chain of nuclei. This functions returns</span>
 <span class="comment">//the total activity from a given chain of nuclei.</span>
 <span class="comment">//Requires the following parameters:</span>
 <span class="comment">//   - dim[0]:  channels being fit</span>
@@ -286,24 +286,24 @@ NamespaceImp(<a href="../TGRSIFunctions.html">TGRSIFunctions</a>);
 
 <span class="comment">//LOOP OVER ALL NUCLEI</span>
 
-   <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> n=0; n&lt;nChain;n++){
+   <span class="keyword">for</span>(<a href="../ListOfTypes.html#UInt_t">UInt_t</a> n=0; n&lt;nChain;n++){
       <span class="comment">//Calculate this equation for the nth nucleus.</span>
       <a href="../ListOfTypes.html#Double_t">Double_t</a> firstterm = 1.0;
       <span class="comment">//Compute the first multiplication</span>
-      <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> j=0; j&lt;n-1; j++){
+      <span class="keyword">for</span>(<a href="../ListOfTypes.html#UInt_t">UInt_t</a> j=0; j&lt;n-1; j++){
          firstterm*=par[1+3*j];
       }
       <a href="../ListOfTypes.html#Double_t">Double_t</a> secondterm = 0.0;
-      <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i=0; i&lt;n; i++){
-         <a href="../ListOfTypes.html#Double_t">Double_t</a> sum = 0.0;
-         <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> j=i; j&lt;n; j++){
-            <a href="../ListOfTypes.html#Double_t">Double_t</a> denom = 1.0;
-            <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> p=i;p&lt;n;p++){
-               <span class="keyword">if</span>(p!=j){ denom*=par[1+3*p]-par[1+3*j]; } 
-            }
-            sum+=par[0+3*i]/par[1+3*i]*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Exp" title="Double_t TMath::Exp(Double_t x)">Exp</a>(-par[1+3*j]*dim[0])/denom; 
-          }
-          secondterm += sum;
+      <span class="keyword">for</span>(<a href="../ListOfTypes.html#UInt_t">UInt_t</a> i=0; i&lt;n; i++){
+			<a href="../ListOfTypes.html#Double_t">Double_t</a> sum = 0.0;
+			<span class="keyword">for</span>(<a href="../ListOfTypes.html#UInt_t">UInt_t</a> j=i; j&lt;n; j++){
+				<a href="../ListOfTypes.html#Double_t">Double_t</a> denom = 1.0;
+				<span class="keyword">for</span>(<a href="../ListOfTypes.html#UInt_t">UInt_t</a> p=i;p&lt;n;p++){
+					<span class="keyword">if</span>(p!=j){ denom*=par[1+3*p]-par[1+3*j]; } 
+				}
+				sum+=par[0+3*i]/par[1+3*i]*<a href="../TMath.html">TMath</a>::<a href="../TMath.html#TMath:Exp" title="Double_t TMath::Exp(Double_t x)">Exp</a>(-par[1+3*j]*dim[0])/denom; 
+			}
+			secondterm += sum;
       }
       par[2+3*n] = par[1+3*n]*firstterm*secondterm;
       totalActivity += par[2+3*n];
@@ -335,7 +335,7 @@ NamespaceImp(<a href="../TGRSIFunctions.html">TGRSIFunctions</a>);
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:11 </em><em>&raquo; Last generated: 2015-09-08 11:11</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:39 </em><em>&raquo; Last generated: 2015-11-04 15:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

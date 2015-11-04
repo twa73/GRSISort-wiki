@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:11:07 2015            -->
+<!--   Date: Wed Nov  4 15:39:34 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -65,12 +65,14 @@ return false;}
 <h2><a id="TGRSIOptions:Function_Members"></a>Function Members (Methods)</h2>
 <div class="access" id="funcpubl"><b>public:</b>
 <table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddExternalRunInfo">AddExternalRunInfo</a>(string)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddInputCalFile">AddInputCalFile</a>(string&amp; input)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddInputMidasFile">AddInputMidasFile</a>(string&amp; input)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddInputOdbFile">AddInputOdbFile</a>(string&amp; input)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddInputRootFile">AddInputRootFile</a>(string&amp; input)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:AddMacroFile">AddMacroFile</a>(string&amp; input)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:CloseAfterSort">CloseAfterSort</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:ExternalRunInfo">ExternalRunInfo</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetCalFile">GetCalFile</a>(<span class="keyword">int</span> runnumber = 0, <span class="keyword">int</span> subrunnumber = -1)</td></tr>
 <tr class="func"><td class="funcret">string</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetExptName">GetExptName</a>()</td></tr>
 <tr class="func"><td class="funcret">string</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetHostName">GetHostName</a>()</td></tr>
@@ -82,15 +84,20 @@ return false;}
 <tr class="func"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGRSIOptions:GetXMLODBFile">GetXMLODBFile</a>(<span class="keyword">int</span> runnumber = 0, <span class="keyword">int</span> subrunnumber = -1)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:IgnoreEpics">IgnoreEpics</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:IgnoreFileOdb">IgnoreFileOdb</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:IgnoreScaler">IgnoreScaler</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:IgnoreSCLR">IgnoreSCLR</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:LogErrors">LogErrors</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:MakeAnalysisTree">MakeAnalysisTree</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:ProgressDialog">ProgressDialog</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:ReadingMaterial">ReadingMaterial</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetCloseAfterSort">SetCloseAfterSort</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetExptName">SetExptName</a>(string&amp; expt)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetExternalRunInfo">SetExternalRunInfo</a>()</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetHostName">SetHostName</a>(string&amp; host)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetIgnoreEpics">SetIgnoreEpics</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetIgnoreFileOdb">SetIgnoreFileOdb</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetIgnoreScaler">SetIgnoreScaler</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetIgnoreSCLR">SetIgnoreSCLR</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetLogErrors">SetLogErrors</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetMakeAnalysisTree">SetMakeAnalysisTree</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGRSIOptions:SetProgressDialog">SetProgressDialog</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</td></tr>
@@ -124,6 +131,12 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span> * <a class="funcname" name="TGRSIOptions:GetCalFile" href="src/TGRSIOptions.h.html#TfugBD">GetCalFile</a>(<span class="keyword">int</span> runnumber = 0, <span class="keyword">int</span> subrunnumber = -1)</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:AddExternalRunInfo" href="src/TGRSIOptions.h.html#vWaR3E">AddExternalRunInfo</a>(string )</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetExternalRunInfo" href="src/TGRSIOptions.h.html#nY4e0B">SetExternalRunInfo</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:ExternalRunInfo" href="src/TGRSIOptions.h.html#PGTKqB">ExternalRunInfo</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetCloseAfterSort" href="src/TGRSIOptions.h.html#mwE4m">SetCloseAfterSort</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:CloseAfterSort" href="src/TGRSIOptions.h.html#MIhSE">CloseAfterSort</a>()</span><br />
@@ -132,9 +145,17 @@ return false;}
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:IgnoreFileOdb" href="src/TGRSIOptions.h.html#aF1jm">IgnoreFileOdb</a>()</span><br />
 </div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetIgnoreScaler" href="src/TGRSIOptions.h.html#x3vHhC">SetIgnoreScaler</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:IgnoreScaler" href="src/TGRSIOptions.h.html#abP_VC">IgnoreScaler</a>()</span><br />
+</div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetIgnoreEpics" href="src/TGRSIOptions.h.html#kLPn7">SetIgnoreEpics</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:IgnoreEpics" href="src/TGRSIOptions.h.html#xhZ0tC">IgnoreEpics</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetIgnoreSCLR" href="src/TGRSIOptions.h.html#w5S9fB">SetIgnoreSCLR</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGRSIOptions:IgnoreSCLR" href="src/TGRSIOptions.h.html#mcICfE">IgnoreSCLR</a>()</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGRSIOptions:SetLogErrors" href="src/TGRSIOptions.h.html#cFTppD">SetLogErrors</a>(<span class="keyword">bool</span> flag = <span class="keyword">true</span>)</span><br />
 </div>
@@ -183,7 +204,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: Tue Sep  8 11:11:07 2015 </em><em>&raquo; Last generated: 2015-09-08 11:11</em><br />
+<em>&raquo; Last changed: Wed Nov  4 15:39:34 2015 </em><em>&raquo; Last generated: 2015-11-04 15:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

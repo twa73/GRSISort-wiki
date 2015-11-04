@@ -7,7 +7,7 @@
 #include <cstdio>
 #include <map>
 #include <iostream>
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include <tuple>
 #include <iterator>
 #include <algorithm>
@@ -19,7 +19,7 @@
 #include "TFragment.h"
 #include "TChannel.h"
 
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include "TCSMData.h"
 #else
 class TCSMData;
@@ -42,11 +42,11 @@ class TCSM :  public TDetector 	{
 
 	public: 
 		virtual void Clear(Option_t * = "");		//!
-		virtual void Print(Option_t * = "");		//!
+		virtual void Print(Option_t * = "") const;		//!
 		void BuildHits(TDetectorData *cd = 0,  Option_t * = "");			//!
 
-		TCSMHit *GetHit(int i)		{return &csm_hits.at(i);}	//->
-		Short_t GetMultiplicity()	{return csm_hits.size();}	//->
+		TCSMHit *GetCSMHit(const int& i);	//->
+		Short_t GetMultiplicity() const	{return csm_hits.size();}	//->
 
 	   static TVector3 GetPosition(int detector, char pos, int horizontalstrip, int verticalstrip, double X=0.00, double Y=0.00, double Z=0.00);	//! 
 
@@ -55,12 +55,14 @@ class TCSM :  public TDetector 	{
 	private: 
 		TCSMData *data;                             //!
 		std::vector <TCSMHit> csm_hits;
-		void BuildVH(vector<int> &,vector<int> &,vector<TCSMHit> &,TCSMData*);
-		void BuilddEE(vector<TCSMHit> &,vector<TCSMHit> &,vector<TCSMHit> &);
+		void BuildVH(std::vector<int> &,std::vector<int> &,std::vector<TCSMHit> &,TCSMData*);
+		void BuilddEE(std::vector<TCSMHit> &,std::vector<TCSMHit> &,std::vector<TCSMHit> &);
+		void OldBuilddEE(std::vector<TCSMHit> &,std::vector<TCSMHit> &,std::vector<TCSMHit> &);
+		void MakedEE(std::vector<TCSMHit> &DHitVec,std::vector<TCSMHit> &EHitVec,std::vector<TCSMHit> &BuiltHits);
 		TCSMHit MakeHit(int, int, TCSMData*);
-		TCSMHit MakeHit(vector<int> &,vector<int> &, TCSMData*);
+		TCSMHit MakeHit(std::vector<int> &,std::vector<int> &, TCSMData*);
 		TCSMHit CombineHits(TCSMHit d_hit,TCSMHit e_hit);
-		void RecoverHit(char, int, TCSMData *, vector<TCSMHit> &);
+		void RecoverHit(char, int, TCSMData *, std::vector<TCSMHit> &);
 		bool AlmostEqual(int, int);
 		bool AlmostEqual(double,double);
 		

@@ -7,8 +7,7 @@
 #include <vector>
 #include <string>
 #include <queue>
-#include <stdint.h>
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #define _GLIBCXX_USE_NANOSLEEP 1
    #include <thread>
    #include <mutex>
@@ -30,10 +29,10 @@
 #include "TTigress.h" 
 #include "TSharc.h"     
 #include "TTriFoil.h"   
-//#include "TRf.h"        
+#include "TRF.h"        
 #include "TCSM.h"       
-//#include "TSpice.h"     
-//#include "TS3.h"        
+#include "TSiLi.h"     
+#include "TS3.h"        
 #include "TTip.h"       
    
 #include "TGriffin.h"   
@@ -55,34 +54,33 @@
 ////////////////////////////////////////////////////////////////
 
 class TEventQueue : public TObject {
-   public:
-      static TEventQueue *Get();
-      static void Add(std::vector<TFragment> *event); 
-      static std::vector<TFragment> *PopEntry();
-      static int Size();
-      virtual ~TEventQueue() { std::cout << std::endl << "In event queue dstor." << std::endl; }
+  public:
+	static TEventQueue *Get();
+	static void Add(std::vector<TFragment> *event); 
+	static std::vector<TFragment> *PopEntry();
+	static int Size();
+	virtual ~TEventQueue() { std::cout << std::endl << "In event queue dstor." << std::endl; }
 
-   private:
-      TEventQueue();
-      TEventQueue(const TEventQueue&) { MayNotUse(__PRETTY_FUNCTION__); }
-      void operator=(const TEventQueue&){ MayNotUse(__PRETTY_FUNCTION__); }
-      static TEventQueue *fPtrToQue;
+  private:
+	TEventQueue();
+   TEventQueue(const TEventQueue&) : TObject() { MayNotUse(__PRETTY_FUNCTION__); }
+	void operator=(const TEventQueue&){ MayNotUse(__PRETTY_FUNCTION__); }
+	static TEventQueue *fPtrToQue;
 
       
-      void Add_Instance(std::vector<TFragment> *event); 
-      std::vector<TFragment> *PopEntry_Instance();
-      int Size_Instance();
+	void Add_Instance(std::vector<TFragment> *event); 
+	std::vector<TFragment> *PopEntry_Instance();
+	int Size_Instance();
       
-      std::queue<std::vector<TFragment>*> fEventQueue;
-      #ifndef __CINT__
-      std::mutex m_event;
-      #endif 
-      bool elock;
-      void SetLock() {  printf(BLUE "settting event lock" RESET_COLOR  "\n");  elock = true;}
-      void UnsetLock() {  printf(RED "unsettting event lock" RESET_COLOR  "\n");  elock = false;}
+	std::queue<std::vector<TFragment>*> fEventQueue;
+#if !defined (__CINT__) && !defined (__CLING__)
+	std::mutex m_event;
+#endif 
+	bool elock;
+	void SetLock() {  printf(BLUE "settting event lock" RESET_COLOR  "\n");  elock = true;}
+	void UnsetLock() {  printf(RED "unsettting event lock" RESET_COLOR  "\n");  elock = false;}
 
-      ClassDef(TEventQueue,0)
-
+	ClassDef(TEventQueue,0)
 };
 
 //class TWriteQueue : public TObject {
@@ -104,7 +102,7 @@ class TWriteQueue {
       int Size_Instance();
       
       std::queue<std::map<std::string, TDetector*>*> fWriteQueue;
-      #ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
       std::mutex m_write;
       #endif
       bool wlock;         
@@ -173,7 +171,7 @@ class TAnalysisTreeBuilder : public TObject {
       static int fAnalysisIn;
       static int fAnalysisOut;
 
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
       bool fSortFragmentDone;
       bool fPrintStatus;
       std::thread *fReadThread;                             //The thread used to read fragments out of the fragment tree
@@ -190,10 +188,10 @@ class TAnalysisTreeBuilder : public TObject {
       TTigress    *tigress;                                 //A pointer to the Tigress Mother Class
       TSharc      *sharc;                                   //A pointer to the Sharc Mother Class
       TTriFoil    *triFoil;                                 //A pointer to the TriFoil Mother Class
-      //TRf         *rf;      
+      TRF         *rf;                                      //A pointer to the TRF Mother Class 
       TCSM        *csm;                                     //A pointer to the CSM Mother Class
-      //TSpice      *spice;  
-      //TS3         *s3;
+      TSiLi       *sili;  
+      TS3         *s3;
       TTip        *tip;    
        
       //GrifAux detectors

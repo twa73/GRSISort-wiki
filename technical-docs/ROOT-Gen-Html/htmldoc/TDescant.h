@@ -7,7 +7,7 @@
 #include <cstdio>
 
 #include "TDescantHit.h"
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 #include "TDescantData.h"
 #else
 class TDescantData;
@@ -25,8 +25,8 @@ class TDescant : public TGRSIDetector {
      virtual ~TDescant();
 
   public: 
-     TGRSIDetectorHit* GetHit(const Int_t idx =0);
-     TDescantHit* GetDescantHit(const Int_t idx = 0);
+     TGRSIDetectorHit* GetHit(const Int_t& idx =0);
+     TDescantHit* GetDescantHit(const Int_t& idx = 0);
 
      Short_t GetMultiplicity() const	       {	return descant_hits.size();}	//!
 
@@ -53,7 +53,7 @@ class TDescant : public TGRSIDetector {
      static TVector3 gPosition[71];                                     //!  Position of each Paddle needs to be updated
 
    public:         
-     void Copy(TDescant&) const;                //!
+     void Copy(TObject&) const;                //!
      void Clear(Option_t *opt = "");		//!
      void Print(Option_t *opt = "") const;		//!
 

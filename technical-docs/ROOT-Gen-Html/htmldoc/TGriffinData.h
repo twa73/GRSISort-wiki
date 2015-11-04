@@ -1,7 +1,7 @@
 #ifndef TGRIFFINDATA_H
 #define TGRIFFINDATA_H
 
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 
 #include <cstdlib>
 #include <cstdio>
@@ -30,6 +30,7 @@ class TGriffinData : public TGRSIDetectorData {
     std::vector<std::vector<Short_t> >fCore_Wave;	//!
 
     std::vector<Int_t>        fCore_NbrHits; //!
+    std::vector<Int_t>        fCore_PUHit; //!
     std::vector<Int_t>        fCore_MidasId; //!
 
     static bool fIsSet; //!
@@ -55,6 +56,7 @@ class TGriffinData : public TGRSIDetectorData {
     
     inline void SetCoreMidasId(const Int_t &mid)	      {fCore_MidasId.push_back(mid);      }	//!
     inline void SetCoreNbrHits(const Int_t &nbr)	      {fCore_NbrHits.push_back(nbr);      }	//!
+    inline void SetCorePUHit(const Int_t &puhit)         {fCore_PUHit.push_back(puhit);      }  //!
     
     inline void SetCoreWave(const std::vector<Short_t> &CoreWave)	{fCore_Wave.push_back(CoreWave);} //!
 
@@ -73,9 +75,10 @@ class TGriffinData : public TGRSIDetectorData {
             else if(mnemonic->arraysubposition.compare(0,1,"W")==0)
        	      CoreNbr=3;
    
-            for(int x=0;x<frag->Charge.size();x++) {
+            for(size_t x=0;x<frag->Charge.size();x++) {
                SetCoreMidasId(frag->MidasId);
                SetCoreNbrHits(frag->Charge.size());
+               SetCorePUHit(x);
                SetIsHighGain(false);
                SetCoreAddress(frag->ChannelAddress);
            	   SetCloverNumber(mnemonic->arrayposition);
@@ -95,6 +98,7 @@ class TGriffinData : public TGRSIDetectorData {
 
       inline Int_t    GetCoreMidasId(const unsigned int &i) const    {return fCore_MidasId.at(i); }
       inline Int_t    GetCoreNbrHits(const unsigned int &i) const    {return fCore_NbrHits.at(i); }
+      inline Int_t    GetCorePUHit(const unsigned int &i) const          {return fCore_PUHit.at(i);}//!
 
       inline UShort_t GetCloverNumber(const unsigned int &i) const   {return fClover_Nbr.at(i);}	//!
       inline UShort_t GetCoreNumber(const unsigned int &i) const     {return fCore_Nbr.at(i);}	//!

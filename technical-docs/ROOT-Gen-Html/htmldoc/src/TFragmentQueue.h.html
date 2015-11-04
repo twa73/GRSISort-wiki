@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:10:47 2015            -->
+<!--   Date: Wed Nov  4 15:39:17 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -26,7 +26,7 @@
 <span class="cpp">#include &lt;queue&gt;</span>
 <span class="cpp">#include &lt;map&gt;</span>
 
-<span class="cpp">#ifndef __CINT__</span>
+<span class="cpp">#if !defined (__CINT__) &amp;&amp; !defined (__CLING__)</span>
 <span class="cpp">#define _GLIBCXX_USE_NANOSLEEP 1</span>
 <span class="cpp">#include &lt;thread&gt;</span>
 <span class="cpp">#include &lt;mutex&gt;</span>
@@ -71,7 +71,7 @@
 		<span class="keyword">static</span> std::map&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; <a href="../TFragmentQueue.html#TFragmentQueue:fragment_id_map" title="map&lt;int,int,less&lt;int&gt;,allocator&lt;pair&lt;const int,int&gt; &gt; &gt; TFragmentQueue::fragment_id_map">fragment_id_map</a>;	
 
 
-<span class="cpp">#ifndef __CINT__</span>
+<span class="cpp">#if !defined (__CINT__) &amp;&amp; !defined (__CLING__)</span>
 <span class="cpp">#ifndef NO_MUTEX</span>
 	<span class="keyword">public</span>:
 		<span class="keyword">static</span> std::mutex All;
@@ -89,11 +89,11 @@
 		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:Pop" title="void TFragmentQueue::Pop()">Pop</a>();
 		<a href="../TFragment.html">TFragment</a> *<a href="../TFragmentQueue.html#TFragmentQueue:PopFragment" title="TFragment* TFragmentQueue::PopFragment()">PopFragment</a>();
 
-		<span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:Size" title="int TFragmentQueue::Size()">Size</a>();
+		<span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:Size" title="int TFragmentQueue::Size()">Size</a>() <span class="keyword">const</span>;
 
 		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:StartStatusUpdate" title="void TFragmentQueue::StartStatusUpdate()">StartStatusUpdate</a>();
 		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:StopStatusUpdate" title="void TFragmentQueue::StopStatusUpdate()">StopStatusUpdate</a>();
-		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:CheckStatus" title="void TFragmentQueue::CheckStatus()">CheckStatus</a>();
+		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:CheckStatus" title="void TFragmentQueue::CheckStatus()">CheckStatus</a>() <span class="keyword">const</span>;
 
 <a name="OnhEQB"></a>		<span class="keyword">unsigned</span> <span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:GetTotalFragsIn" title="unsigned int TFragmentQueue::GetTotalFragsIn()">GetTotalFragsIn</a>() { <span class="keyword">return</span> <a href="../TFragmentQueue.html#TFragmentQueue:fTotalFragsIn" title="unsigned int TFragmentQueue::fTotalFragsIn">fTotalFragsIn</a>;}
 <a name="wn4X3B"></a>		<span class="keyword">unsigned</span> <span class="keyword">int</span> <a href="../TFragmentQueue.html#TFragmentQueue:GetTotalFragsOut" title="unsigned int TFragmentQueue::GetTotalFragsOut()">GetTotalFragsOut</a>()	{	<span class="keyword">return</span> <a href="../TFragmentQueue.html#TFragmentQueue:fTotalFragsOut" title="unsigned int TFragmentQueue::fTotalFragsOut">fTotalFragsOut</a>;}
@@ -101,7 +101,7 @@
 <a name="h_rstD"></a>		<span class="keyword">bool</span> <a href="../TFragmentQueue.html#TFragmentQueue:Running" title="bool TFragmentQueue::Running()">Running</a>() { <span class="keyword">return</span> !<a href="../TFragmentQueue.html#TFragmentQueue:fStop" title="bool TFragmentQueue::fStop">fStop</a>;}
 <a name="Y6bloD"></a>		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:Stop" title="void TFragmentQueue::Stop()">Stop</a>() { <a href="../TFragmentQueue.html#TFragmentQueue:fStop" title="bool TFragmentQueue::fStop">fStop</a> = <span class="keyword">true</span>;}
 
-      <span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:Print" title="void TFragmentQueue::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
+      <span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:Print" title="void TFragmentQueue::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>;
 		<span class="keyword">void</span> <a href="../TFragmentQueue.html#TFragmentQueue:Clear" title="void TFragmentQueue::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);
 		
 		ClassDef(<a href="../TFragmentQueue.html">TFragmentQueue</a>,0); <span class="comment">//The <a href="../TFragmentQueue.html#TFragmentQueue:Class" title="TClass* TFragmentQueue::Class()">Class</a> used to hold fragments when building events</span>
@@ -121,7 +121,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:10 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:39 </em><em>&raquo; Last generated: 2015-11-04 15:39</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

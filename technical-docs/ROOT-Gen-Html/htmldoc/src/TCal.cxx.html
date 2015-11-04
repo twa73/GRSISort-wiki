@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:10:15 2015            -->
+<!--   Date: Wed Nov  4 15:38:42 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -108,7 +108,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
    <span class="comment">//Sets the channel being calibrated</span>
    <span class="keyword">if</span>(!chan){
       <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetChannel"</span>,<span class="string">"TChannel does not exist"</span>);
-      printf(<span class="string">"%p\n"</span>,chan);
+      printf(<span class="string">"%p\n"</span>, (<span class="keyword">void</span>*) chan);
       <span class="keyword">return</span> <span class="keyword">false</span>;
    }
    <span class="comment">//<a href="../TGraph.html#TGraph:Set" title="void TGraph::Set(Int_t n)">Set</a> our <a href="../TRef.html">TRef</a> to point at the <a href="../TChannel.html">TChannel</a></span>
@@ -120,7 +120,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
    <span class="comment">//Writes this calibration to all channels in the current <a href="../TChannel.html">TChannel</a> Map</span>
    std::map&lt;<span class="keyword">unsigned</span> <span class="keyword">int</span>,<a href="../TChannel.html">TChannel</a>*&gt;::iterator mapit;
    std::map&lt;<span class="keyword">unsigned</span> <span class="keyword">int</span>,<a href="../TChannel.html">TChannel</a>*&gt; *chanmap = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannelMap" title="map&lt;unsigned int,TChannel*&gt;* TChannel::GetChannelMap()">GetChannelMap</a>();
-   <a href="../TChannel.html">TChannel</a>* orig_chan = <a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>();
+   <a href="../TChannel.html">TChannel</a>* orig_chan = <a href="../TCal.html#TCal:GetChannel" title="TChannel* TCal::GetChannel()">GetChannel</a>();
    <span class="keyword">for</span>(mapit = chanmap-&gt;begin(); mapit != chanmap-&gt;end(); mapit++){
       <span class="keyword">if</span>(!mnemonic.size() || !strncmp(mapit-&gt;second-&gt;GetChannelName(),mnemonic.c_str(),mnemonic.size())){
          <a href="../TCal.html#TCal:SetChannel" title="Bool_t TCal::SetChannel(const TChannel* chan) or overloads">SetChannel</a>(mapit-&gt;second);
@@ -160,7 +160,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 <a name="LEL4PB"></a><a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:SetChannel" title="Bool_t TCal::SetChannel(const TChannel* chan) or overloads">SetChannel</a>(<a href="../ListOfTypes.html#UInt_t">UInt_t</a> channum){
    <span class="comment">//Sets the channel for the calibration to the channel number channum. Returns </span>
    <span class="comment">//0 if the channel does not exist</span>
-   <a href="../TChannel.html">TChannel</a> *chan = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannelByNumber" title="TChannel *const TChannel::GetChannelByNumber(int temp_numebr)">GetChannelByNumber</a>(channum);
+   <a href="../TChannel.html">TChannel</a> *chan = <a href="../TChannel.html">TChannel</a>::<a href="../TChannel.html#TChannel:GetChannelByNumber" title="TChannel* TChannel::GetChannelByNumber(int temp_numebr)">GetChannelByNumber</a>(channum);
    <span class="keyword">if</span>(!chan){
       <a href="../TObject.html#TObject:Error" title="void TObject::Error(const char* method,const char* msgfmt)">Error</a>(<span class="string">"SetChannel"</span>,<span class="string">"Channel Number %d does not exist in current memory."</span>,channum);
       <span class="keyword">return</span> <span class="keyword">false</span>;
@@ -169,7 +169,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
       <span class="keyword">return</span> <a href="../TCal.html#TCal:SetChannel" title="Bool_t TCal::SetChannel(const TChannel* chan) or overloads">SetChannel</a>(chan);
 }
 
-<a name="VyFkAB"></a><a href="../TChannel.html">TChannel</a>* <span class="keyword">const</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>() <span class="keyword">const</span> {
+<a name="bk4O0"></a><a href="../TChannel.html">TChannel</a>* <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:GetChannel" title="TChannel* TCal::GetChannel()">GetChannel</a>() <span class="keyword">const</span> {
    <span class="comment">//Gets the channel being pointed to by the <a href="../TCal.html">TCal</a>. Returns 0 if no channel</span>
    <span class="comment">//is set.</span>
    <span class="keyword">return</span> (<a href="../TChannel.html">TChannel</a>*)(<a href="../TCal.html#TCal:fchan" title="TRef TCal::fchan">fchan</a>.<a href="../TRef.html#TRef:GetObject" title="TObject* TRef::GetObject()">GetObject</a>()); <span class="comment">//Gets the object pointed at by the <a href="../TRef.html">TRef</a> and casts it to a <a href="../TChannel.html">TChannel</a></span>
@@ -196,8 +196,8 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 */</span>
 <a name="iqkoP"></a><span class="keyword">void</span> <a href="../TCal.html">TCal</a>::<a href="../TCal.html#TCal:Print" title="void TCal::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt) <span class="keyword">const</span>{
    <span class="comment">//Prints calibration information</span>
-   <span class="keyword">if</span>(<a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>())
-      printf(<span class="string">"Channel Number: %u\n"</span>,<a href="../TCal.html#TCal:GetChannel" title="TChannel *const TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:GetNumber" title="int TChannel::GetNumber()">GetNumber</a>());
+   <span class="keyword">if</span>(<a href="../TCal.html#TCal:GetChannel" title="TChannel* TCal::GetChannel()">GetChannel</a>())
+      printf(<span class="string">"Channel Number: %u\n"</span>,<a href="../TCal.html#TCal:GetChannel" title="TChannel* TCal::GetChannel()">GetChannel</a>()-><a href="../TChannel.html#TChannel:GetNumber" title="int TChannel::GetNumber()">GetNumber</a>());
    <span class="keyword">else</span>
       printf(<span class="string">"Channel Number: NOT SET\n"</span>);
 
@@ -236,7 +236,7 @@ ClassImp(<a href="../TCal.html">TCal</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:10 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:38 </em><em>&raquo; Last generated: 2015-11-04 15:38</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

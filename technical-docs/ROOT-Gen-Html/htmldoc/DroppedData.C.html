@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:14:39 2015            -->
+<!--   Date: Wed Nov  4 15:43:12 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -26,21 +26,22 @@
 
    <a href="./ListOfTypes.html#long">long</a> entries = tree-&gt;GetEntries();
    <a href="./ListOfTypes.html#double">double</a> packetRatio = ((<a href="./ListOfTypes.html#double">double</a>)entries)/((<a href="./ListOfTypes.html#double">double</a>)(tree-&gt;GetMaximum(<span class="string">"NetworkPacketNumber"</span>) - tree-&gt;GetMinimum(<span class="string">"NetworkPacketNumber"</span>)));
-   <a href="./ListOfTypes.html#double">double</a> filterRatio = ((<a href="./ListOfTypes.html#double">double</a>)entries)/((<a href="./ListOfTypes.html#double">double</a>)(tree-&gt;GetMaximum(<span class="string">"MidasId"</span>) - tree-&gt;GetMinimum(<span class="string">"MidasId"</span>)));
+//   <a href="./ListOfTypes.html#double">double</a> filterRatio = ((<a href="./ListOfTypes.html#double">double</a>)entries)/((<a href="./ListOfTypes.html#double">double</a>)(tree-&gt;GetMaximum(<span class="string">"MidasId"</span>) - tree-&gt;GetMinimum(<span class="string">"MidasId"</span>)));
 
    <a href="./ListOfTypes.html#double">double</a> packetLost = tree-&gt;GetMaximum(<span class="string">"NetworkPacketNumber"</span>) - tree-&gt;GetMinimum(<span class="string">"NetworkPacketNumber"</span>) - entries;
-   <a href="./ListOfTypes.html#double">double</a> filterLost = tree-&gt;GetMaximum(<span class="string">"MidasId"</span>) - tree-&gt;GetMinimum(<span class="string">"MidasId"</span>) - entries;
+//   <a href="./ListOfTypes.html#double">double</a> filterLost = tree-&gt;GetMaximum(<span class="string">"MidasId"</span>) - tree-&gt;GetMinimum(<span class="string">"MidasId"</span>) - entries;
 
-   std::<a href="./ListOfTypes.html#ostream">cout</a>&lt;&lt;<span class="string">"Got "</span>&lt;&lt;packetRatio*100.&lt;&lt;<span class="string">" % of the network packets and "</span>&lt;&lt;filterRatio*100.&lt;&lt;<span class="string">" % of the master filter IDs (lost "</span>&lt;&lt;packetLost&lt;&lt;<span class="string">" packets and "</span>&lt;&lt;filterLost&lt;&lt;<span class="string">" IDs)"</span>&lt;&lt;std::endl;
+   std::<a href="./ListOfTypes.html#ostream">cout</a>&lt;&lt;<span class="string">"Got "</span>&lt;&lt;packetRatio*100.&lt;&lt;<span class="string">" % of the network packets (lost "</span>&lt;&lt;packetLost&lt;&lt;<span class="string">" packets"</span>&lt;&lt;std::endl;
+//   std::<a href="./ListOfTypes.html#ostream">cout</a>&lt;&lt;<span class="string">"Got "</span>&lt;&lt;packetRatio*100.&lt;&lt;<span class="string">" % of the network packets and "</span>&lt;&lt;filterRatio*100.&lt;&lt;<span class="string">" % of the master filter IDs (lost "</span>&lt;&lt;packetLost&lt;&lt;<span class="string">" packets and "</span>&lt;&lt;filterLost&lt;&lt;<span class="string">" IDs)"</span>&lt;&lt;std::endl;
 }
 </pre></div>
-<div id="linenums"><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="1" href="#1" class="ln">1</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="2" href="#2" class="ln">2</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="3" href="#3" class="ln">3</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="4" href="#4" class="ln">4</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="5" href="#5" class="ln">5</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="6" href="#6" class="ln">6</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="7" href="#7" class="ln">7</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="8" href="#8" class="ln">8</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="9" href="#9" class="ln">9</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="10" href="#10" class="ln">10</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="11" href="#11" class="ln">11</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="12" href="#12" class="ln">12</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="13" href="#13" class="ln">13</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="14" href="#14" class="ln">14</a></div></div>
+<div id="linenums"><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="1" href="#1" class="ln">1</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="2" href="#2" class="ln">2</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="3" href="#3" class="ln">3</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="4" href="#4" class="ln">4</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="5" href="#5" class="ln">5</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="6" href="#6" class="ln">6</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="7" href="#7" class="ln">7</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="8" href="#8" class="ln">8</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="9" href="#9" class="ln">9</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="10" href="#10" class="ln">10</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="11" href="#11" class="ln">11</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="12" href="#12" class="ln">12</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="13" href="#13" class="ln">13</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="14" href="#14" class="ln">14</a></div><div class="ln">&nbsp;<span class="lnfile">DroppedData.C:</span><a name="15" href="#15" class="ln">15</a></div></div>
 
 <br />
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:14 </em><em>&raquo; Last generated: 2015-09-08 11:14</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:43 </em><em>&raquo; Last generated: 2015-11-04 15:43</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

@@ -1,7 +1,7 @@
 #ifndef TSCEPTARDATA_H
 #define TSCEPTARDATA_H
 
-#ifndef __CINT__
+#if !defined (__CINT__) && !defined (__CLING__)
 
 #include <cstdlib>
 #include <cstdio>
@@ -50,7 +50,7 @@ class TSceptarData : public TGRSIDetectorData {
 		inline void SetDet(TFragment *frag,TChannel *channel,MNEMONIC *mnemonic)	{
 		   if(!frag || !channel || !mnemonic) return;
          
-         for(int x=0;x<frag->Charge.size();x++) {
+         for(size_t x=0;x<frag->Charge.size();x++) {
      		   //SetDetNumber(frag->ChannelNumber);
      		   SetDetNumber(mnemonic->arrayposition);
 	   	   SetDetAddress(frag->ChannelAddress);

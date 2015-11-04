@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:14:02 2015            -->
+<!--   Date: Wed Nov  4 15:42:27 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -29,7 +29,7 @@
 <span class="cpp">#include &lt;stdio.h&gt;</span>
 
 <span class="cpp">#include "<a href="../TTigressHit.h">TTigressHit.h</a>"</span>
-<span class="cpp">#ifndef __CINT__</span>
+<span class="cpp">#if !defined (__CINT__) &amp;&amp; !defined (__CLING__)</span>
 <span class="cpp">#include "<a href="../TTigressData.h">TTigressData.h</a>"</span>
 <span class="cpp">#include "<a href="../TBGOData.h">TBGOData.h</a>"</span>
 <span class="cpp">#else</span>
@@ -44,8 +44,6 @@
 
 <span class="cpp">#include "<a href="../TGRSIDetector.h">TGRSIDetector.h</a>"</span> 
 
-<span class="keyword">using</span> <span class="keyword">namespace</span> std;
-
 <span class="keyword">class</span> <a href="../TTigress.html">TTigress</a> : <span class="keyword">public</span> <a href="../TGRSIDetector.html">TGRSIDetector</a> {
 
 	<span class="keyword">public</span>:
@@ -59,9 +57,11 @@
 		<span class="keyword">void</span> <a href="../TTigress.html#TTigress:BuildAddBack" title="void TTigress::BuildAddBack(Option_t* opt=&quot;&quot;)">BuildAddBack</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);	<span class="comment">//!</span>
 		<span class="comment">//<a href="../ListOfTypes.html#void">void</a> BuildCloverAddBack(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt=<span class="string">""</span>);	//!</span>
 
-<a name="fgWpHC"></a>		<a href="../TTigressHit.html">TTigressHit</a> *<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(const int i)">GetTigressHit</a>(<span class="keyword">const</span> <span class="keyword">int</span> i) {	<span class="keyword">return</span> (<a href="../TTigressHit.html">TTigressHit</a>*)<a href="../TTigress.html#TTigress:tigress_hits" title="TClonesArray TTigress::tigress_hits">tigress_hits</a>.<a href="../TObjArray.html#TObjArray:At" title="TObject* TObjArray::At(Int_t i)">At</a>(i);	    } <span class="comment">//!</span>
-<a name="bfhh0"></a>      <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a> *<a href="../TTigress.html#TTigress:GetHit" title="TGRSIDetectorHit* TTigress::GetHit(const int i)">GetHit</a>(<span class="keyword">const</span> <span class="keyword">int</span> i)   { <span class="keyword">return</span> <a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(const int i)">GetTigressHit</a>(i);       } <span class="comment">//!</span>
-<a name="eip1MD"></a>		<a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TTigress.html#TTigress:GetMultiplicity" title="Int_t TTigress::GetMultiplicity()">GetMultiplicity</a>()	                { <span class="keyword">return</span> <a href="../TTigress.html#TTigress:tigress_hits" title="TClonesArray TTigress::tigress_hits">tigress_hits</a>.<a href="../TObjArray.html#TObjArray:GetEntries" title="Int_t TObjArray::GetEntries()">GetEntries</a>(); }	<span class="comment">//!</span>
+      <span class="comment">//These Getters of hits throw <span class="string">"ROOT Errors"</span></span>
+<a name="nR5_YC"></a>		<a href="../TTigressHit.html">TTigressHit</a> *<a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(const int&amp; i)">GetTigressHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i) {	<span class="keyword">return</span> (<a href="../TTigressHit.html">TTigressHit</a>*)<a href="../TTigress.html#TTigress:tigress_hits" title="TClonesArray TTigress::tigress_hits">tigress_hits</a>.<a href="../TObjArray.html#TObjArray:At" title="TObject* TObjArray::At(Int_t i)">At</a>(i);	    } <span class="comment">//!</span>
+<a name="YQAQkB"></a>      <a href="../TGRSIDetectorHit.html">TGRSIDetectorHit</a> *<a href="../TTigress.html#TTigress:GetHit" title="TGRSIDetectorHit* TTigress::GetHit(const int&amp; i)">GetHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)   { <span class="keyword">return</span> <a href="../TTigress.html#TTigress:GetTigressHit" title="TTigressHit* TTigress::GetTigressHit(const int&amp; i)">GetTigressHit</a>(i);       } <span class="comment">//!</span>
+<a name="EY8vwC"></a>		<a href="../ListOfTypes.html#Short_t">Short_t</a> <a href="../TTigress.html#TTigress:GetMultiplicity" title="Short_t TTigress::GetMultiplicity()">GetMultiplicity</a>() <span class="keyword">const</span>	       { <span class="keyword">return</span> <a href="../TTigress.html#TTigress:tigress_hits" title="TClonesArray TTigress::tigress_hits">tigress_hits</a>.<a href="../TObjArray.html#TObjArray:GetEntries" title="Int_t TObjArray::GetEntries()">GetEntries</a>(); }	<span class="comment">//!</span>
+<span class="comment">//		<a href="../ListOfTypes.html#size_t">size_t</a> <a href="../TTigress.html#TTigress:GetMultiplicity" title="Short_t TTigress::GetMultiplicity()">GetMultiplicity</a>() const	       { return <a href="../TTigress.html#TTigress:tigress_hits" title="TClonesArray TTigress::tigress_hits">tigress_hits</a>.size(); }	//!</span>
 
 <a name="SnMbfE"></a>		<a href="../TTigressHit.html">TTigressHit</a> *<a href="../TTigress.html#TTigress:GetAddBackHit" title="TTigressHit* TTigress::GetAddBackHit(int i)">GetAddBackHit</a>(<span class="keyword">int</span> i)   {	<span class="keyword">return</span> (<a href="../TTigressHit.html">TTigressHit</a>*)<a href="../TTigress.html#TTigress:addback_hits" title="TClonesArray TTigress::addback_hits">addback_hits</a>.<a href="../TObjArray.html#TObjArray:At" title="TObject* TObjArray::At(Int_t i)">At</a>(i);	       } <span class="comment">//!</span>
 <a name="BYqYoB"></a>		<a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../TTigress.html#TTigress:GetAddBackMultiplicity" title="Int_t TTigress::GetAddBackMultiplicity()">GetAddBackMultiplicity</a>()	   {	<span class="keyword">return</span> <a href="../TTigress.html#TTigress:addback_hits" title="TClonesArray TTigress::addback_hits">addback_hits</a>.<a href="../TObjArray.html#TObjArray:GetEntries" title="Int_t TObjArray::GetEntries()">GetEntries</a>(); }	<span class="comment">//!</span>
@@ -88,8 +88,8 @@
 		TTigressData *<a href="../TTigress.html#TTigress:tigdata" title="TTigressData* TTigress::tigdata">tigdata</a>;        <span class="comment">//!</span>
 		TBGOData     *<a href="../TTigress.html#TTigress:bgodata" title="TBGOData* TTigress::bgodata">bgodata</a>;        <span class="comment">//!</span>
 
-		<span class="comment">//std::vector &lt;<a href="../TTigressHit.html">TTigressHit</a>&gt; <a href="../TTigress.html#TTigress:tigress_hits" title="TClonesArray TTigress::tigress_hits">tigress_hits</a>;</span>
-		<span class="comment">//std::vector &lt;<a href="../TTigressHit.html">TTigressHit</a>&gt; <a href="../TTigress.html#TTigress:addback_hits" title="TClonesArray TTigress::addback_hits">addback_hits</a>;</span>
+	<span class="comment">//	std::vector &lt;<a href="../TTigressHit.html">TTigressHit</a>&gt; <a href="../TTigress.html#TTigress:tigress_hits" title="TClonesArray TTigress::tigress_hits">tigress_hits</a>;</span>
+	<span class="comment">//	std::vector &lt;<a href="../TTigressHit.html">TTigressHit</a>&gt; <a href="../TTigress.html#TTigress:addback_hits" title="TClonesArray TTigress::addback_hits">addback_hits</a>;</span>
 		<span class="comment">//std::vector &lt;<a href="../TTigressHit.html">TTigressHit</a>&gt; clover_addback_hits;			</span>
       <a href="../TClonesArray.html">TClonesArray</a> <a href="../TTigress.html#TTigress:tigress_hits" title="TClonesArray TTigress::tigress_hits">tigress_hits</a>;
       <a href="../TClonesArray.html">TClonesArray</a> <a href="../TTigress.html#TTigress:addback_hits" title="TClonesArray TTigress::addback_hits">addback_hits</a>;
@@ -120,9 +120,9 @@
 	<span class="keyword">public</span>:         
 		<span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TTigress.html#TTigress:Clear" title="void TTigress::Clear(Option_t* opt=&quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>);		 <span class="comment">//!</span>
 		<span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TTigress.html#TTigress:Print" title="void TTigress::Print(Option_t* opt=&quot;&quot;)">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>; <span class="comment">//!</span>
-      <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TTigress.html#TTigress:Copy" title="void TTigress::Copy(TTigress&amp; )">Copy</a>(<a href="../TTigress.html">TTigress</a>&amp;) <span class="keyword">const</span>;           <span class="comment">//!</span>
+      <span class="keyword">virtual</span> <span class="keyword">void</span> <a href="../TTigress.html#TTigress:Copy" title="void TTigress::Copy(TObject&amp; )">Copy</a>(<a href="../TObject.html">TObject</a>&amp;) <span class="keyword">const</span>;           <span class="comment">//!</span>
 
-   ClassDef(<a href="../TTigress.html">TTigress</a>,1)  <span class="comment">// Tigress Physics structure</span>
+   ClassDef(<a href="../TTigress.html">TTigress</a>,3)  <span class="comment">// Tigress Physics structure</span>
 
 
 };
@@ -145,7 +145,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:14 </em><em>&raquo; Last generated: 2015-09-08 11:14</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:42 </em><em>&raquo; Last generated: 2015-11-04 15:42</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>

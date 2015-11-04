@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: ROOT team (rootdev@cern.ch)         -->
 <!--                                             -->
-<!--   Date: Tue Sep  8 11:10:15 2015            -->
+<!--   Date: Wed Nov  4 15:38:42 2015            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -126,11 +126,12 @@
 <a name="zAZxxD"></a>		<a href="../TVector3.html">TVector3</a> <a href="../TCSMHit.html#TCSMHit:GetEPosition" title="TVector3 TCSMHit::GetEPosition()">GetEPosition</a>() <span class="keyword">const</span>     	  {	<span class="keyword">return</span> <a href="../TCSMHit.html#TCSMHit:e_position" title="TVector3 TCSMHit::e_position">e_position</a>;	}	<span class="comment">//!</span>
 <a name="pYVonD"></a>		<a href="../TVector3.html">TVector3</a> <a href="../TCSMHit.html#TCSMHit:GetDPosition" title="TVector3 TCSMHit::GetDPosition()">GetDPosition</a>() <span class="keyword">const</span>         {	<span class="keyword">return</span> <a href="../TCSMHit.html#TCSMHit:d_position" title="TVector3 TCSMHit::d_position">d_position</a>;	}	<span class="comment">//!</span>
 
+<a name="FbAYy"></a>		<a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TCSMHit.html#TCSMHit:GetDdE_dx" title="Double_t TCSMHit::GetDdE_dx()">GetDdE_dx</a>() <span class="keyword">const</span> 		{<span class="keyword">return</span> <a href="../TCSMHit.html#TCSMHit:GetDEnergy" title="Double_t TCSMHit::GetDEnergy()">GetDEnergy</a>()/<a href="../TCSMHit.html#TCSMHit:GetDthickness" title="Double_t TCSMHit::GetDthickness()">GetDthickness</a>();}
+		<a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TCSMHit.html#TCSMHit:GetDthickness" title="Double_t TCSMHit::GetDthickness()">GetDthickness</a>() <span class="keyword">const</span>;
 
-
-<a name="e.W5LE"></a>		<a href="../TVector3.html">TVector3</a> <a href="../TCSMHit.html#TCSMHit:GetPosition" title="TVector3 TCSMHit::GetPosition()">GetPosition</a>() <span class="keyword">const</span>	{	<span class="keyword">return</span> <a href="../TCSMHit.html#TCSMHit:d_position" title="TVector3 TCSMHit::d_position">d_position</a>;	 }	<span class="comment">//!</span>
-<a name="ceE2d"></a>		<a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TCSMHit.html#TCSMHit:GetEnergy" title="Double_t TCSMHit::GetEnergy()">GetEnergy</a>() <span class="keyword">const</span>		{<span class="keyword">return</span> <a href="../TCSMHit.html#TCSMHit:GetDEnergy" title="Double_t TCSMHit::GetDEnergy()">GetDEnergy</a>() + <a href="../TCSMHit.html#TCSMHit:GetEEnergy" title="Double_t TCSMHit::GetEEnergy()">GetEEnergy</a>();} <span class="comment">//!</span>
-<a name="pgw02"></a>		<a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TCSMHit.html#TCSMHit:GetTime" title="Double_t TCSMHit::GetTime()">GetTime</a>() <span class="keyword">const</span>		{<span class="keyword">return</span> <a href="../TCSMHit.html#TCSMHit:ver_d_time" title="Double_t TCSMHit::ver_d_time">ver_d_time</a>;} <span class="comment">//!</span>
+<a name="nnqKtB"></a>		<a href="../TVector3.html">TVector3</a> <a href="../TCSMHit.html#TCSMHit:GetPosition" title="TVector3 TCSMHit::GetPosition(Double_t dist=0)">GetPosition</a>(<a href="../ListOfTypes.html#Double_t">Double_t</a> dist = 0) <span class="keyword">const</span>	{	<span class="keyword">return</span> <a href="../TCSMHit.html#TCSMHit:d_position" title="TVector3 TCSMHit::d_position">d_position</a>;	 }	<span class="comment">//!</span>
+<a name="pYcxQB"></a>		<a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TCSMHit.html#TCSMHit:GetEnergy" title="Double_t TCSMHit::GetEnergy(Option_t* opt=&quot;&quot;)">GetEnergy</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>		{ <span class="keyword">return</span> <a href="../TCSMHit.html#TCSMHit:GetDEnergy" title="Double_t TCSMHit::GetDEnergy()">GetDEnergy</a>() + <a href="../TCSMHit.html#TCSMHit:GetEEnergy" title="Double_t TCSMHit::GetEEnergy()">GetEEnergy</a>();} <span class="comment">//!</span>
+<a name="JQ5ftC"></a>		<a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../TCSMHit.html#TCSMHit:GetTime" title="Double_t TCSMHit::GetTime(Option_t* opt=&quot;&quot;)">GetTime</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a> *opt = <span class="string">""</span>) <span class="keyword">const</span>		{ <span class="keyword">return</span> <a href="../TCSMHit.html#TCSMHit:ver_d_time" title="Double_t TCSMHit::ver_d_time">ver_d_time</a>;} <span class="comment">//!</span>
 
 <span class="comment">///////////////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="comment">///////////////////////////////////////////////////////////////////////////////////////////////</span>
@@ -182,9 +183,8 @@
 		<span class="comment">//<a href="../ListOfTypes.html#void">void</a> SetVerticalWave(std::vector&lt;<a href="../ListOfTypes.html#int">int</a>&gt; &amp;wave)	{ ver_strip_wave = wave;	} </span>
 		<span class="comment">//<a href="../ListOfTypes.html#void">void</a> SetPadWave(std::vector&lt;<a href="../ListOfTypes.html#int">int</a>&gt; &amp;wave)	{ pad_wave = wave;	} </span>
 
-
 		
-	ClassDef(<a href="../TCSMHit.html">TCSMHit</a>,2)
+	ClassDef(<a href="../TCSMHit.html">TCSMHit</a>,3)
 };
 
 
@@ -199,7 +199,7 @@
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-09-08 11:10 </em><em>&raquo; Last generated: 2015-09-08 11:10</em><br />
+<em>&raquo; Last changed: 2015-11-04 15:38 </em><em>&raquo; Last generated: 2015-11-04 15:38</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
 </div>
 </div>
