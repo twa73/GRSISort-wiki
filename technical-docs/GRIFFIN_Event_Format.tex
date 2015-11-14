@@ -270,9 +270,9 @@ Example of extracting the Master Filter Pattern(s):\\
 \begin{flushleft}
 \begin{tabular}{ccccccccc}
 Word III &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x00010F81 & \& & 0x7FFF0000 & $>>$ & 16 & = & 0x0001 & = & 1 (Only Filter 1 passed)\\
-0x00050F81 & \& & 0x7FFF0000 & $>>$ & 16 & = & 0x0005 & = & 5 (Filters 1 and 3 passed)\\
-0x00850F81 & \& & 0x7FFF0000 & $>>$ & 16 & = & 0x0085 & = & 133 (Filters 1, 3 and 8 passed)\\
+0x00010F81 & \& & 0x3FFF0000 & $>>$ & 16 & = & 0x0001 & = & 1 (Only Filter 1 passed)\\
+0x00050F81 & \& & 0x3FFF0000 & $>>$ & 16 & = & 0x0005 & = & 5 (Filters 1 and 3 passed)\\
+0x00850F81 & \& & 0x3FFF0000 & $>>$ & 16 & = & 0x0085 & = & 133 (Filters 1, 3 and 8 passed)\\
 \end{tabular}
 \end{flushleft}
 
@@ -345,7 +345,7 @@ The timestamp is in units of 10~nanoseconds and has a maximum value of 4,398,046
 There are two methods of determining the event-by-event deadtime of the system for precision measurements; firstly to operate at a fixed deadtime for every event, or secondly to measure and record the deadtime of each event. Both methods will be trialled and evaluated as part of the GRIFFIN DAQ development.\\
 
 \noindent
-The deadtime for each event is provided as bits 14-27 (14 bits) of word VII. The type is identified in the 4 upper bits as type 11.\\
+The deadtime for each event is provided as bits 14-27 (14 bits) of word VII. The type is identified in the 4 upper bits as type 0xB.\\
 Example of identifying a Deadtime word type:\\
 
 \begin{tabular}{ccccccccc}
@@ -358,14 +358,14 @@ An example of unpacking the Deadtime value:\\
 
 \begin{tabular}{ccccccccr}
 Word VII &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xC074A998 & \& & 0x0FFFFC000 & $>>$ & 14 & = & 0x0074A998 & = & 7645592\\
+0xC074A998 & \& & 0x0FFFC000 & $>>$ & 14 & = & 0x001D2 & = & 466\\
 \end{tabular}\\
 
 The deadtime is in units of 10~ns and the maximum value is 16,383 representing 162.383 microseconds of deadtime for this event readout.
 
 %%%%%%%%%%%%%%
 \section{Network Packet ID}
-The Network Packet ID is currently provided in word VIa as the 28 lower bits. The Network Packet ID is an event counter which is reset at the start of a run and increments by 1 each time a new event is dispatched by the GRIF-C master. The word type is identified in the 4 upper bits as type 9.\\
+The Network Packet ID is currently provided in word VIa as the 28 lower bits. The Network Packet ID is an event counter which is reset at the start of a run and increments by 1 each time a new event is dispatched by the GRIF-C master. The word type is identified in the 4 upper bits as type 0xD.\\
 Example of identifying the Network Packet ID word type:\\
 
 \begin{tabular}{ccccccccc}
