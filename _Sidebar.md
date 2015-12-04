@@ -31,6 +31,7 @@
   - [[UserFillObj.h|User-Files#userfill]]
 - [[Cal Files|CalFiles]]
 - [[RunInfo Files|RunInfo-Files]]
+- [[Tips and Tricks|Tips-and-Tricks]]
 
 [**Technical Documentation**](Technical-Documentation)
 - <a href="https://rawgit.com/wiki/GriffinCollaboration/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/GRSISORT_Index.html" target="_blank">GRSISort Classes</a>
