@@ -22,6 +22,7 @@
   - [[Kinematics | Kinematics]]
   - [[Data Correcting | Correcting]]
   - [[Interactive Analysis | Interactive-Analysis]]
+  - [[Angular Correlations | Angular-Correlations]]
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
