@@ -48,5 +48,5 @@ The spectrum that we have now is heavily skewed by the number of detector pairs 
 
 Alternatively (and probably preferably), one can use the event-mixing technique to normalize the histogram.
 
-### Convert angular indices to angles
+## Convert angular indices to angles
 ...or more accurately, to a value of cos(theta). This can be done with the `CreateGraphFromHst` function.
