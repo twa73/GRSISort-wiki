@@ -6,7 +6,7 @@ This class is designed to be used primarily in the interactive shell of GRSISort
 
 The expected work flow for the creation of event-mixed angular correlation spectra is drawn out below. Red boxes will be created by the user outside of the class. Red arrow indicate expected actions that are outside the scope of the class. Each black arrow corresponds to a function provided by the class. The green and orange boxes  correspond to data members inside two different instances of the angular correlations class.
 
-*insert image here*
+![](https://raw.githubusercontent.com/wiki/GRIFFINCollaboration/GRSISort/images/correlation_creation_workflow_english_simple.png)
 
 Or, if  you prefer lists, the workflow could be described as follows:
 
