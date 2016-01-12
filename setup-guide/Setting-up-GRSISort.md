@@ -50,7 +50,7 @@ where version name is one of the versions printed in the previous command. Confi
 ./configure
 make --options
 ```
-For a list of options, and more detail, see the [ROOT User manual](https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#installing-root). Compile ROOT using 
+For a list of options, and more detail, see the [ROOT User manual](https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#installing-root) and the guide for [building ROOT with this method](https://root.cern.ch/build-root-old-method). To enable the compilation and installation of all optional packages (such as the MathMore library), include an `--all` flag after your `./configure` command. Compile ROOT using 
 ```
 make
 ```
