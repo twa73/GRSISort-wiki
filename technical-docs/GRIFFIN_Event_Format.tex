@@ -5,6 +5,9 @@
 %\usetikzlibrary{positioning,shapes,shadows,arrows}
 %\usetikzlibrary{shapes,shadows,arrows}
 \usepackage{pdflscape,caption}
+\usepackage[parfill]{parskip}
+\usepackage[colorlinks=true,linktocpage=true]{hyperref}
+\hypersetup{pdftitle={GRIFFIN Data Format Specification},citecolor=blue,linkcolor=blue}
 \listfiles
 
 \newcommand\etc{\textsl{etc}}
@@ -16,185 +19,77 @@
 \newcommand\comp{\textsl{The Companion}}
 \newcommand\nss{\textsl{Not so Short}}
 
+\geometry{letterpaper,left=2cm,top=2cm}
 \makeatletter
 \newcommand*{\toccontents}{\@starttoc{toc}}
 \makeatother
 
 \begin{document}
-\leftmargin 1.0cm
-\rightmargin 0.0cm
+%\lmargin=1.0cm
+%\rightmargin 1.0cm
 \topmargin -2.0cm
-\textwidth 16.0cm
+\textwidth 20.0cm
 \textheight 23.0cm
-\oddsidemargin 0.5cm
+%\oddsidemargin 0.5cm
 
 \begin{center}
 \thispagestyle{empty}
 {\large {\bf GRIFFIN Data Format Specification}}\\
-Compiled by Adam Garnsworthy, May 2015
+Compiled November 2015
 \end{center}
 
-\noindent The GRIFFIN data acquisition system runs under the MIDAS Data Acquisition system in order to record the data from the GRIFFIN HPGe spectrometer for decay spectroscopy experiments at TRIUMF-ISAC.\\
+The GRIFFIN data acquisition system runs under the MIDAS Data Acquisition system in order to record the data from the GRIFFIN HPGe spectrometer for decay spectroscopy experiments at TRIUMF-ISAC.\\
 
 %\tableofcontents
 \toccontents
 
-\chapter{Introduction}
+\chapter{Common event information}
 
-\section{Binary Counting Definition}
+GRIFFIN data contains a variety of types of events. An event here is defined as a group of 32-bit words beginning with a header word (identified by a first hex letter of 0x8) and ending with a trailer word (identified by a first hex letter of (0xe). The words in each event are numbered in this document with Roman numerals, beginning with I (the header word). Words that are not included in normal running conditions are indicated with the Roman numeral of the previous word and a lowercase letter (i.e. IVa).
 
-The bits in the words in this document are counted from 0 to 7 in each byte. There-fore a 4-byte, 32 bit word contains bits from 0 to 31.\\
+For various reasons, certain pieces of information are found in every event. The following sections describe these pieces of information.
 
-\noindentAn example of how the bits in a 16-bit, 2-byte word are counted in this document:\\
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Module Type}
+The Module Type indicates where the data was generated (GRIF-16, GRIF-4G, GRIF-C etc.) and is provided in word I as bits 25-27 (3 bits). The packet type is identified in the 4 upper bits of word I as type 8 (header).\\
 
-\begin{tabular}{l|cccc|cccc|cccc|cccc|}
-Bit Number: & 15 & 14 & 13 & 12 & 11 & 10 & 09 & 08 & 07 & 06 & 05 & 04 & 03 & 02 & 01 & 00\\
-Bit Weight: & \multicolumn{4}{l}{32,768} & \multicolumn{4}{|l}{2,048} &\multicolumn{4}{|l}{128} &\multicolumn{4}{|l|}{8}\\
-\end{tabular}\\
-
-\chapter{GRIF-16}
-
-\section{Event Format and Size}
-
-Detectors counting at a high rate will register multiple hits during a fixed evaluation period. In order to take advantage of higher counting rates, it is therefore essential to handle these pile-up events and recover the energies and times for every interaction in the detector. A method for extracting these energies and times is shown in figure \ref{pileup} which involves splitting the integration window of size, K, into multiple windows, K1, K2 etc. The event can also be flagged and the waveform output for evaluation offline.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=16cm]{./Pileup_Waveforms.png}
-\caption{\label{pileup}Method for extracting energy and time for pile-up events in the firmware.}
-\end{figure}
-
-\noindent The event format for handling pileup events is of variable size and depends on the number of hits in the evaluation window, the maximum is 3 hits in one window. The format is based on 4-byte (32-bit) words shown in the following tables, the number of bits for each sub-word is indicated in brackets. Waveforms can also be included at 2 bytes per sample.\\
-
-\newpage
-\begin{landscape}
-\begin{table}
-\caption{GRIFFIN GRIF-16 Event Format written to disk, bank GRF2:}
-\begin{tabular*}{\textwidth}{p{0.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|c}
-\cline{2-7}
-I & Packet Type (4) {\bf 0x8} & Pile-Up Type (2) & Data Type (3) & Num. Filter Patterns (3) & Address (16) & Det. Type (4) & 4~bytes\\
-\cline{2-7}
-II & Fixed 00 (2) & \multicolumn{2}{c|}{Master Filter Patterns Passed (14)} & \multicolumn{3}{c|}{PPG Pattern (16)} & 4~bytes\\
-\cline{2-7}
-III & Fixed 0 (1) & \multicolumn{5}{c|}{Master Filter ID (31)} & 4~bytes\\
-\cline{2-7}
-IV & Packet Type (4) {\bf 0x9} & \multicolumn{5}{c|}{Channel Trigger ID (28)} & 4~bytes\\
-\cline{2-7}
-V & Packet Type (4) {\bf 0xa} & \multicolumn{5}{c|}{Time Stamp low bits (28)} & 4~bytes\\
-\cline{2-7}
-VI & Packet Type (4) {\bf 0xb} & \multicolumn{2}{c|}{Deadtime (14)} & \multicolumn{3}{c|}{Time Stamp high bits (14)} & 4~bytes\\
-\cline{2-7}
-VIa & Packet Type (4) {\bf 0xd} & \multicolumn{5}{c|}{Network Packet ID (28)} & 4~bytes\\
-\cline{2-7}
-VIb & Packet Type (4) {\bf 0xc} & \multicolumn{5}{c|}{Waveform Sample (28)} & 4~bytes\\
-\cline{2-7}
-VII & Fixed 0 (1) & Upper K1 bits (5) & \multicolumn{4}{c|}{K1 Pulse Height (26)} & 4~bytes\\
-\cline{2-7}
-VIII & Fixed 0 (1) & Lower K1 bits (5) & \multicolumn{4}{c|}{K1 Amplitude-Corrected Timing (26)} & 4~bytes\\
-\cline{2-7}
-IX & Fixed 0 (1) & Upper K2 bits (5) & \multicolumn{4}{c|}{K2 Pulse Height (26)} & 4~bytes\\
-\cline{2-7}
-X & Fixed 0 (1) & Lower K2 bits (5) & \multicolumn{4}{c|}{K2 Amplitude-Corrected Timing (26)} & 4~bytes\\
-\cline{2-7}
-XI & Fixed 0 (1) & Upper K3 bits (5) & \multicolumn{4}{c|}{K3 Pulse Height (26)} & 4~bytes\\
-\cline{2-7}
-XII & Fixed 0 (1) & Lower K3 bits (5) & \multicolumn{4}{c|}{K3 Amplitude-Corrected Timing (26)} & 4~bytes\\
-\cline{2-7}
-XIII & Packet Type (4) {\bf 0xe} & \multicolumn{2}{c|}{Event Trailer (10)} & \multicolumn{3}{c|}{Event Trailer - Repeated Time Stamp low bits (14)} & 4~bytes\\
-\cline{2-7}
-\multicolumn{5}{r}{Total one hit} & \multicolumn{2}{c}{9 words I-VIII+XIII:} & 36 bytes\\
-\multicolumn{5}{r}{Total two hits} & \multicolumn{2}{c}{ 11 words I-X+XIII:} & 44 bytes\\
-\multicolumn{5}{r}{Total three hits} & \multicolumn{2}{c}{ 13 words I-XIII:} & 52 bytes\\
-\end{tabular*}
-\end{table}
-\end{landscape}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Bank version information}
-Over the lifetime of the data acquisition system, the data format is expected to change. Care will be taken to make these changes backward compatible, but occasionally, this will not be possible. In that case, the bank name will be used to track the data format used. This document will be maintained with the current data format. Differences between the current data format and the older data formats will be detailed in this section. The current bank name is GRF2.
-
-\begin{itemize}
-\item GRF2: current bank name
-\item GRF1: different header format than GRF2. Header word contains the following information (bit size): Packet Type (4), Number Filter Patterns (4), Data Type (3), Pile-Up Type (3), Address (14), Detector Type (4).
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Pile-Up Type}
-The Pile-Up Type indicates how many hits were recorded within the evaluation window, with the maximum being 3 hits in one window. The Pile-Up Type is provided in word I as bits 18-20 (2 bits).\\
-Example of identifying a Header word type:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\  %change here
-\end{tabular}\\
-
-\noindent 
-Example of extracting the Pile-Up Type:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x80007C80 & \& & 0x0C000000 & $>>$ & 26 & = & 0x0 & = & 0 (1 Hit)\\  %change here
-0x84007C80 & \& & 0x0C000000 & $>>$ & 26 & = & 0x1 & = & 1 (2 Hit)\\  %change here
-0x88007C80 & \& & 0x0C000000 & $>>$ & 26 & = & 0x2 & = & 2 (3 Hits)\\  %change here
-0x8C007C80 & \& & 0x0C000000 & $>>$ & 26 & = & 0x3 & = & 3 ($>$3 Hits = Bad)\\  %change here
-\end{tabular}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Data Type}
-The Data Type indicates where the data was generated (GRIF-16, GRIF-4G, GRIF-C etc.) and is provided in word I as bits 23-25 (3 bits). The  packet type is identified in the 4 upper bits of word I as type 8.\\
-Example of identifying a Header word type:\\
+Example of identifying a header word type:\\
 
 \begin{tabular}{ccccccccc}
 Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
 0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
 \end{tabular}\\
 
-\noindent The Data Type number can be extracted as:\\
+Example unpacking of module type:\\
 
 \begin{tabular}{ccccccccc}
 Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x80A4A998 & \& & 0x03800000 & $>>$ & 23 & = & 0x1 & = & 1 (GRIF-16)\\
-0x8124A998 & \& & 0x03800000 & $>>$ & 23 & = & 0x2 & = & 2 (GRIF-4G)\\
-0x81A4A998 & \& & 0x03800000 & $>>$ & 23 & = & 0x3 & = & 3 (GRIF-C Slave)\\
-0x8234A998 & \& & 0x03800000 & $>>$ & 23 & = & 0x4 & = & 4 (GRIF-C Master)\\
+0x82800001 & \& & 0x0E000000 & $>>$ & 25 & = & 0x1 & = & 1 (GRIF-16)\\
+0x8424A998 & \& & 0x0E000000 & $>>$ & 25 & = & 0x2 & = & 2 (GRIF-4G)\\
+0x86A4A998 & \& & 0x0E000000 & $>>$ & 25 & = & 0x3 & = & 3 (GRIF-C Slave)\\
+0x8834A998 & \& & 0x0E000000 & $>>$ & 25 & = & 0x4 & = & 4 (GRIF-C Master)\\
 \end{tabular}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Number of Filter Patterns}
-The Number of Filter Patterns which have been satisfied by this event fragment is provided in word I as bits 20-22 (3 bits). The packet type is identified in the 4 upper bits of word I as type 8.\\
-Example of identifying a Header word type:\\
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Word Count}
+The word count reports how many non-waveform words are expected to be in the event. This includes the header and the trailer. The word count is located in word I (the header), in bits 20-24.\\
+
+Example of identifying a header word type:\\
 
 \begin{tabular}{ccccccccc}
 Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
+0x82A28280 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
 \end{tabular}\\
 
-\noindent The number of filter patterns can be extracted as:\\
-
+Example of unpacking the address from the header word:\\
 \begin{tabular}{ccccccccc}
 Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8614A998 & \& & 0x00700000 & $>>$ & 20 & = & 0x1 & = & 1 (1 pattern word)\\
-0x8624A998 & \& & 0x00700000 & $>>$ & 20 & = & 0x2 & = & 2 (2 pattern words)\\
-0x8634A998 & \& & 0x00700000 & $>>$ & 20 & = & 0x3 & = & 3 (3 pattern words)\\
-\end{tabular}
+0x82A28280 & \& & 0x01F00000 & $>>$ & 20 & = & 0x0A & = & 10\\
+\end{tabular}\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Address}
-The Address is provided in word I as bits 4 to 19 (16 bits). This indicates which channel on which module has provided this event fragment.\\
-Example of identifying a Header word type:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
-\end{tabular}\\
-
-\noindent An example of unpacking the Address from the header word:\\
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x82228280 & \& & 0x000FFFF0 & $>>$ & 4 & = & 0x0505 & = & 1285\\
-\end{tabular}\\
-
-\noindent The various properties with the Address word are as follows:\\
+The Address is provided in word I as bits 4 to 19 (16 bits). This indicates which channel on which module has provided this event. Addresses are determined by the path each signal takes through the electronics. More specifically, the address can be broken down into the following properties:\\
 
 \begin{tabular}{cccl}
 Property & Size & Values & Description\\
@@ -203,7 +98,22 @@ S & 4 bits & 0 to 15 & Input channel to Slave or ID number of Digitizer\\
 C & 8 bits & 0 to 255 & Input channel to Digitizer\\
 \end{tabular}\\
 
-\noindent These properties can be extracted from this 16 bit word in the following way:\\
+The one exception is that an address of 0xFFFF identifies the event as a \hyperref[c.PPG]{PPG event}.
+
+Example of identifying a header word type:\\
+
+\begin{tabular}{ccccccccc}
+Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
+\end{tabular}\\
+
+Example of unpacking the address from the header word:\\
+\begin{tabular}{ccccccccc}
+Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x82228280 & \& & 0x000FFFF0 & $>>$ & 4 & = & 0x0505 & = & 1285\\
+\end{tabular}\\
+
+Examples of unpacking address properties:\\
 
 \begin{tabular}{ccccccccc}
 Address &  & Mask & & Shift & & Hex result & & Decimal result\\
@@ -214,7 +124,8 @@ Address &  & Mask & & Shift & & Hex result & & Decimal result\\
 
 %%%%%%%%%%%%%
 \section{Detector Type}
-The Detector Type is provided in word I as bits 0 to 3 (4 bits). This indicates which detector type has generated this event fragment and is used primarily in master filter decisions.\\
+The Detector Type is provided in word I as bits 0 to 3 (4 bits). This further specifies the type of data that follows. For data events originating in the GRIF-16 or GRIF-4G, this indicates which detector type has generated this event fragment and is used primarily in master filter decisions. For other types of events (Scaler or PPG), it identifies the type of information given in the rest of the event. A full list of detector type flags can be found in Tables \ref{table.dettype_data} and \ref{table.dettype_other}.\\
+
 Example of identifying a Header word type:\\
 
 \begin{tabular}{ccccccccc}
@@ -222,7 +133,7 @@ Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
 0x8074A928 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
 \end{tabular}\\
 
-\noindent The Detector Type value can be extracted as:\\
+ The Detector Type value can be extracted as:\\
 
 \begin{tabular}{ccccccccc}
 Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
@@ -231,41 +142,44 @@ Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
 0x8074A905 & \& & 0x0000000F & $>>$ & 0 & = & 0x05 & = & 05 (Si(Li))\\
 \end{tabular}\\
 
-\noindent Here is a full list of GRIFFIN Detector Types:\\
-\begin{tabular}{cccl}
-{\bf ID} & {\bf Short Name} & {\bf Full Name} & {\bf Description}\\
-00 & GRGa & Ge & 16 HPGe Clovers Low Gain\\
-01 & GRGb & Ge & 16 HPGe Clovers High Gain\\
-02 & SEP & Beta & 20 plastic scintillators (SCEPTAR)\\
-03 & DAN & DANTE & 8 LaBr3 scintillators Energy signals\\
-04 & DAT & DANTE & 8 LaBr3 scintillators TAC signals\\
-05 & PAC & PACES & 5 SiLi for ICE\\
-06 & DSC & DESCANT & 70 Scintillators for neutrons\\
-07 & GRS & Suppressors & 16 sets of BGO for clovers\\
-08 & DAS & Suppressors & 8 sets of BGO for DANTE\\
-09 & SET & Beta & Zero-Degree scintillator (ZDS)\\
-10 & DSC & DESCANT (Gamma) & Gamma identified by pulse shape\\
-11 & DSC & DESCANT (Neutron) & Neutron identified by pulse shape\\
-12 &  &  & Undefined\\
-13 &  &  & Undefined\\
-14 &  &  & Undefined\\
-15 &  &  & Undefined\\
-\end{tabular}
-
 %%%%%%%%%%%%%%
-\section{Master Filter ID}
-The Master Filter ID is provided in word III as 31 bits. The Master Filter ID is an event counter which is reset at the start of a run and increments by 1 each time a new event master filter condition is passed in the master filter algorithm in the Master GRIF-C. The maximum value is 2147483649 above which the counter will wrap around.\\
-Example of extracting the Master Filter ID:\\
+\section{Network Packet Counter Value}
+The network packet counter value is provided in word II as the 28 lower bits. The network packet counter value is an event counter that increments by 1 each time a new event is dispatched by the GRIF-C master. The word type is identified in the 4 upper bits as type 0xD.\\
+The network packet counter value is assigned as a group of GRIFFIN events leave the GRIF-C. It is only assigned to the first event in that group; the network packet counter value for all other events will be zero. The network packet counter value is shared by all events: GRIF-16 events (data and scaler), GRIF-C events (PPG), and GRIF-4G events. The network packet counter value number can wrap around if it becomes too large. The user should monitor the network packet counter value numbers which should increase throughout the run. The maximum value of network packet counter value is 268435455. If the number changes from very large to small then the counter has wrapped around, this should be tested at every event.\\
+
+Example of identifying the network packet counter value word type:\\
 
 \begin{tabular}{ccccccccc}
 Word II &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x56007C84 & \& & 0x7FFFFFFF & $>>$ & 0 & = & 0x56007C84& = & 1442872452\\
+0xD00461FF & \& & 0xF0000000 & $>>$ & 28 & = & 0xD & = & 13\\
+\end{tabular}\\
+
+Example of unpacking the network packet counter value:\\
+
+\begin{tabular}{ccccccccc}
+Word VIa &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xD00461FF & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x000461FF & = & 287231\\
 \end{tabular}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Fragment events}
+
+Events containing information on interactions in detectors are called fragments events. These events originate in one of two electronic modules: a GRIF-16 or GRIF-4G. The chapter details the information available in all fragment events, whether it is present in all fragment events, only in GRIF-16 fragment events, or only in GRIF-4G fragment events.
+
+\section{Common fields}
+The fields described in this section are present in all fragment events.
+
 %%%%%%%%%%%%%%
-\section{Master Filter Pattern}
-There are up to eight (more in the future) Filter Patterns which can be set and tested for every fragment. The Identifier(s) (1-8) of the Filter Pattern which was passed is provided in word II as bits 16 to 30 (14 bits). If multiple Filter conditions were passed by this fragment then there will be multiple Filter Patterns indicated in this word.\\
-Example of extracting the Master Filter Pattern(s):\\
+\subsection{Filter Patterns}
+There are up to eight (more in the future) Filter Patterns which can be set and tested for every fragment. The Identifier(s) (1-8) of the Filter Pattern which was passed is provided in word III as bits 16 to 29 (14 bits). If multiple Filter conditions were passed by this fragment then there will be multiple Filter Patterns indicated in this word.\\
+
+Example of extracting the Filter Pattern(s):\\
 
 \begin{flushleft}
 \begin{tabular}{ccccccccc}
@@ -277,28 +191,39 @@ Word III &  & Mask & & Shift & & Hex result & & Decimal result\\
 \end{flushleft}
 
 %%%%%%%%%%%%%%
-\section{PPG Pattern}
-The PPG Pattern is a recording of the Programable Pattern Generator status at the time that the threshold crossing occurred, and is provided in word II as bits 0 to 15 (16 bits). The pattern represents, for example, if the beam were being delivered or if it was blocked for decay counting etc.\\
-Example of extracting the PPG Pattern:\\
+\subsection{Waveform Indicator}
+The waveform indicator is provided in word III as a single bit (bit 15). It indicates the expected presence of a waveform in the data. If this value is 0, there is no waveform present. If the value is 1, a waveform sample is expected.\\
+
+Example of unpacking the waveform indicator word:\\
 
 \begin{tabular}{ccccccccc}
 Word III &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x0F810F81 & \& & 0x0000FFFF & $>>$ & 0 & = & 0x00000F81 & = & 3969\\
+0x00508001 & & 0x00008000 & & 15 & & 0x1 & & 1\\
 \end{tabular}
 
 %%%%%%%%%%%%%%
-\section{Channel Trigger ID}
-The Channel Trigger ID is provided in word IV as the 28 lower bits. The Channel Trigger ID is an event counter which is reset at the start of a run and increments by 1 each time a new threshold crossing occurs for this channel on the GRIF-16 or GRIF-4G. The word type is identified in the 4 upper bits as type 9.\\
-Example of identifying the Channel Trigger ID word type:\\
+\subsection{Filter Condition Counter Value}
+The filter condition counter value are provided in word IV as 31 bits. The filter condition counter is an event counter which is reset at the start of a run and increments by 1 each time a new event master filter condition is passed in the master filter algorithm in the Master GRIF-C. The maximum value is 2147483649 above which the counter will wrap around. If a fragment satisfies multiple filters, it will have multiple filter condition counter value words. The order of the counter values will mirror the order of the satisfied conditions in the filter pattern.\\
+
+Example of extracting the filter condition counter value:\\
 
 \begin{tabular}{ccccccccc}
 Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x56007C84 & \& & 0x7FFFFFFF & $>>$ & 0 & = & 0x56007C84& = & 1442872452\\
+\end{tabular}
+
+%%%%%%%%%%%%%%
+\subsection{Channel Hit Detection Counter Value}
+The Channel Hit Detection Counter Value is provided in word V as the 28 lower bits. The Channel Trigger counter is an event counter which is reset at the start of a run and increments by 1 each time a new threshold crossing occurs for this channel on the GRIF-16 or GRIF-4G. The word type is identified in the 4 upper bits as type 9. The Channel Trigger counter value can wrap around if it becomes too large. The user should monitor the channel hit detection counter values which should increase throughout the run. The maximum value of channel hit detection counter value is 268435455. If the number changes from very large to small then the counter has wrapped around, this should be tested at every event.\\
+
+Example of identifying the Channel Trigger counter value word type:\\
+
+\begin{tabular}{ccccccccc}
+Word V &  & Mask & & Shift & & Hex result & & Decimal result\\
 0x900461FF & \& & 0xF0000000 & $>>$ & 28 & = & 0x9 & = & 9\\
 \end{tabular}\\
 
-\noindent The Channel Trigger ID number can wrap around if it becomes too large. The user should monitor the channel trigger id numbers which should increase throughout the run. The maximum value of channel trigger id is 268435455. If the number changes from very large to small then the counter has wrapped around, this should be tested at every event.
-
-\noindent Example of unpacking the Channel Trigger ID:\\
+Example of unpacking the Channel Trigger counter value:\\
 
 \begin{tabular}{ccccccccc}
 Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
@@ -306,27 +231,29 @@ Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
 \end{tabular}
 
 %%%%%%%%%%%%%%
-\section{Timestamp}
-The timestamp is stored in two separate words as the lower 28 bits and 14 bits of the two words, word V and word VI respectively. Word V is the lower bits of the Timestamp and Word VI is the upper bits of the Timestamp. The type is identified in the 4 upper bits of both words as type 10 for the lower bits and 11 for the upper bits.\\
+\subsection{Timestamp}
+
+The timestamp is stored in two separate words. The lower 28 bits of word VI contain the low bits of the timestamp and the lowest 14 bits of word VII contain the high bits of the timestamp. The type is identified in the 4 upper bits of both words as type 10 (0xA) for the lower bits and 11 (0xB) for the upper bits. The upper and lower bits of the Timestamp can then be combined to make the full 42-bit timestamp. This is done in two steps by shifting the upper bits and then adding the lower bits using a bitwise or ($||$), as shown below. The timestamp is in units of 10~nanoseconds and has a maximum value of 4,398,046,511,103. The timestamp will therefore reset either after 12 hours or when the run is restarted.\\
+
+{\bf Note:} The timestamps in the fragment events are 42 bits. The timestamps in the scaler events are 44 bits. The timestamps in the PPG events are 56 bits. For accurate comparisons between the different event types, use only the lowest 42 bits.\\
+
 Example of identifying a Timestamp word type:\\
 
 \begin{tabular}{ccccccccc}
-Word V/VI &  & Mask & & Shift & & Hex result & & Decimal result\\
+Word VI/VII &  & Mask & & Shift & & Hex result & & Decimal result\\
 0xA074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xA & = & 10 (lower bits)\\
 0xB074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xB & = & 11 (upper bits)\\
 \end{tabular}\\
 
-\noindent
-An example of unpacking the Timestamp value:\\
+Example of unpacking the Timestamp value:\\
 
 \begin{tabular}{ccccccccr}
-Word V/VI &  & Mask & & Shift & & Hex result & & Decimal result\\
+Word VI/VII &  & Mask & & Shift & & Hex result & & Decimal result\\
 0xA074A998 & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x0074A998 & = & 7645592\\
 0xB0000005 & \& & 0x00003FFF & $>>$ & 0 & = & 0x00000005 & = & 5\\
 \end{tabular}\\
 
-\noindent
-The upper and lower bits of the Timestamp can then be combined to make the full 42-bit timestamp. This is done in two steps by shifting the upper bits and then adding the lower bits using a bitwise or ($||$):\\
+Example of combining the two timestamp sub-words:\\
 
 \begin{tabular}{ccccccr}
 \multicolumn{3}{c}{Build Timestamp} & & Hex result & & Decimal result\\
@@ -334,89 +261,311 @@ The upper and lower bits of the Timestamp can then be combined to make the full 
 0x05000000 & $||$ & 0x0074A998 & = & 0x0574A998 & = & 91531672\\
 \end{tabular}\\
 
-\noindent
-The timestamp is in units of 10~nanoseconds and has a maximum value of 4,398,046,511,103. The timestamp will therefore reset either after 509 days or when the GRIF-C Master module is power cycled.\\
-
-\noindent The 28 lower bits are also stored in the event trailer.
-
 %%%%%%%%%%%%%%
 
-\section{Deadtime}
+\subsection{Deadtime}
 There are two methods of determining the event-by-event deadtime of the system for precision measurements; firstly to operate at a fixed deadtime for every event, or secondly to measure and record the deadtime of each event. Both methods will be trialled and evaluated as part of the GRIFFIN DAQ development.\\
 
-\noindent
-The deadtime for each event is provided as bits 14-27 (14 bits) of word VII. The type is identified in the 4 upper bits as type 0xB.\\
-Example of identifying a Deadtime word type:\\
+The deadtime for each event is provided as bits 14-27 (14 bits) of word VII. The type is identified in the 4 upper bits as type 0xB. The deadtime is in units of 10~ns and the maximum value is 16,383 representing 162.383 microseconds of deadtime for this event readout.\\
+
+Example of identifying a deadtime word type:\\
 
 \begin{tabular}{ccccccccc}
 Word VII &  & Mask & & Shift & & Hex result & & Decimal result\\
 0xB074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xB & = & 11\\
 \end{tabular}\\
 
-\noindent
-An example of unpacking the Deadtime value:\\
+An example of unpacking the deadtime value:\\
 
-\begin{tabular}{ccccccccr}
+\begin{tabular}{ccccccccc}
 Word VII &  & Mask & & Shift & & Hex result & & Decimal result\\
 0xC074A998 & \& & 0x0FFFC000 & $>>$ & 14 & = & 0x001D2 & = & 466\\
 \end{tabular}\\
 
-The deadtime is in units of 10~ns and the maximum value is 16,383 representing 162.383 microseconds of deadtime for this event readout.
 
 %%%%%%%%%%%%%%
-\section{Network Packet ID}
-The Network Packet ID is currently provided in word VIa as the 28 lower bits. The Network Packet ID is an event counter which is reset at the start of a run and increments by 1 each time a new event is dispatched by the GRIF-C master. The word type is identified in the 4 upper bits as type 0xD.\\
-Example of identifying the Network Packet ID word type:\\
+\subsection{Channel Accepted Hit Counter Value}
+The Channel Accepted Hit counter value is provided in word XIII (the trailer) as bits 14-27. The Channel Accepted Hit counter is a 14-bit event counter which is reset at the start of a run and increments by 1 each time a new trigger is accepted for this channel on the GRIF-16 or GRIF-4G. The word type is identified in the 4 upper bits as type 0xE. The Channel Accepted Hit counter value number can wrap around if it becomes too large. The user should monitor the Channel Accepted Hit counter values which should increase throughout the run. The maximum value of the channel accepted hit counter value is 16383. If the number changes from very large to small then the counter has wrapped around, this should be tested at every event.\\
+
+Example of identifying the Channel Trigger counter value word type:\\
 
 \begin{tabular}{ccccccccc}
-Word VIa &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xD00461FF & \& & 0xF0000000 & $>>$ & 28 & = & 0xD & = & 13\\
+Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xE074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xE & = & 14\\
 \end{tabular}\\
 
-\noindent The Network Packet ID number can wrap around if it becomes too large. The user should monitor the Network Packet id numbers which should increase throughout the run. The maximum value of Network Packet ID is 268435455. If the number changes from very large to small then the counter has wrapped around, this should be tested at every event.
-
-\noindent Example of unpacking the Network Packet ID:\\
+Example of unpacking the Channel Accepted Hit counter value:\\
 
 \begin{tabular}{ccccccccc}
-Word VIa &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xD00461FF & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x000461FF & = & 287231\\
+Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xE074A998 & \& & 0x0FFFC000 & $>>$ & 14 & = & 0x1D2 & = & 466\\
+\end{tabular}
+
+\section{GRIF-16}
+
+This section details sub-words that are particular to fragment events that originate in the GRIF-16 modules.
+\begin{landscape}
+\begin{table}
+\caption{GRIFFIN GRIF-16 fragment event format, bank GRF3. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets. Words with an asterisk might be repeated within a single fragment event.}
+\begin{tabular*}{\textwidth}{p{0.9cm}|p{2.25cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|c}
+\cline{2-9}
+I& Packet Type (4) {\bf 0x8} & Module Type (3) & Word Count (5) & \multicolumn{4}{p{8.8cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
+\cline{2-9}
+II & Packet Type (4) {\bf 0xd} & \multicolumn{7}{p{15.4cm}|}{\centering{Network Packet Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+II & Fixed 00 (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Filter Patterns (14)}} & Waveform Ind. (1) & \multicolumn{2}{p{4.4cm}|}{\centering{reserved (10)}} & Pile-up type (5) & 4~bytes\\
+\cline{2-9}
+IV* & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Filter Condition Counter Value (31)}} & 4~bytes\\
+\cline{2-9}
+V & Packet Type (4) {\bf 0x9} & \multicolumn{7}{p{15.4cm}|}{\centering{Channel Hit Detection Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+VI & Packet Type (4) {\bf 0xa} & \multicolumn{7}{p{15.4cm}|}{\centering{Time Stamp low bits (28)}} & 4~bytes\\
+\cline{2-9}
+VII & Packet Type (4) {\bf 0xb} & \multicolumn{3}{p{6.6cm}|}{\centering{Deadtime (14)}} & \multicolumn{4}{p{8.8cm}|}{\centering{Time Stamp high bits (14)}} & 4~bytes\\
+\cline{2-9}
+VIIa* & Packet Type (4) {\bf 0xc} & \multicolumn{7}{p{15.4cm}|}{\centering{Waveform Sample (28)}} & 4~bytes\\
+\cline{2-9}
+VIII & Fixed 0 (1) & Int. Len. high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height (26)}} & 4~bytes\\
+\cline{2-9}
+IX & Fixed 0 (1) & \multicolumn{2}{p{4.4cm}|}{Int. Length low bits (9)} & \multicolumn{5}{p{11.0cm}|}{\centering{CFD (22)}} & 4~bytes\\
+\cline{2-9}
+X & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{Channel Accepted Hit Counter Value (14)} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
+\cline{2-9}
+\multicolumn{9}{r}{Total one hit:} & 36 bytes\\
+\end{tabular*}
+\end{table}
+\end{landscape}
+
+\subsection{Pile-up evaluation}
+
+\textcolor{red}{Chris, please review this section. It could use some expansion.}
+
+Detectors counting at a high rate will register multiple hits during a fixed evaluation period. In order to take advantage of higher counting rates, it is therefore essential to handle these pile-up events and recover the energies and times for every interaction in the detector. A method for extracting these energies and times is shown in Figure \ref{pileup} which involves splitting the integration window of size, K, into multiple windows, K1, K2 etc. The event can also be flagged and the waveform output for evaluation offline.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=16cm]{./Pileup_Waveforms.png}
+\caption{\label{pileup}Method for extracting energy and time for pile-up events in the firmware.}
+\end{figure}
+
+Energy and time can only be evaluated on the first three pile-up interactions. These interactions will be written to disk as individual fragment events. After those three hits, the channel will be dead until the signal returns to baseline.
+
+\subsection{Pile-Up Type}
+The Pile-Up Type indicates how many hits were recorded within the evaluation window, with the maximum being 31 hits in one window, though only the first three will be included in the event with pulse height and CFD words. The Pile-Up Type is provided in word III as bits 4-0 (5 bits).\\
+
+%Example of identifying a Header word type:\\
+
+%\begin{tabular}{ccccccccc}
+%Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
+%0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
+%\end{tabular}\\
+ 
+Example of extracting the Pile-Up Type:\\
+
+\begin{tabular}{ccccccccc}
+Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x02000000 & \& & 0x0000001F & $>>$ & 0 & = & 0x0 & = & 0 (1 Hit)\\
+0x02200002 & \& & 0x0000001F & $>>$ & 0 & = & 0x2 & = & 2 (3 Hits)\\
+0x02400004 & \& & 0x0000001F & $>>$ & 0 & = & 0x4 & = & 4 (5 Hits)\\
+0x00F0001F & \& & 0x0000001F & $>>$ & 0 & = & 0x1F & = & 31 ($>$31 Hits = Bad)\\
 \end{tabular}
 
 %%%%%%%%%%%%%%
-\section{Waveform Data}
-The Waveform Data is provided in multiple words, the number of which depends on the waveform length. These words are inserted into the event between words VI and VII. Waveform data words can be identified by their type which is in the 4 upper bits of each words as type C.
+\subsection{Waveform Data}
+The Waveform Data is provided in multiple words, the number of which depends on the waveform length. These words are inserted into the event between words VII and VIII. Waveform Data words can be identified by their type which is in the 4 upper bits of each words as type C. The first waveform data word contains a counter of how many waveform data words to be expected (including this word). After that, each Waveform Data word contains two signed 14 bit values representing two samples of the waveform in ADC units. The first sample is in the lower 14 bits of the 28 bit value and the second sample is in the higher 14 bits of the 28 bit value. The most significant bit in each sample indicates  After extraction, both samples should be checked for negative values: if the most significant bit in a sample is 1, then it is negative.\\
+
+Example of identifying a Waveform Data word type:\\
 
 \begin{tabular}{ccccccccc}
 Word &  & Mask & & Shift & & Hex result & & Decimal result\\
 0xC57715CC & \& & 0xF0000000 & $>>$ & 28 & = & 0xC & = & 12\\
 \end{tabular}\\
 
-The Waveform Data values are in units of ADC bins.
+Example of identifying the first sample from a Waveform Data word:\\
+
+\begin{tabular}{ccccccccc}
+Word &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xC57715CC & \& & 0x00003FFF & $>>$ & 0 & = & 0x15CC & = & 5580\\
+\end{tabular}\\
+
+Example of identifying the second sample from a Waveform Data word:\\
+
+\begin{tabular}{ccccccccc}
+Word &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xC57715CC & \& & 0x0FFFC000 & $>>$ & 14 & = & 0x15DC & = & 5596\\
+\end{tabular}\\
+
+Example of checking 14-bit samples for negative values:
+
+\begin{tabular}{cccccccc}
+Sample & & Mask & & Hex result & & Decimal result & Negative?\\
+0x15CC & \& & 0x2000 & = & 0x1 & = & 1 & yes\\
+\end{tabular}
+
+%%%%%%%%%%%%%
+\subsection{Integration Length}
+The 14 bits of the integration length are provided in words VIII as bits 26-30 and IX as bits 22-30. The integration length is the number of samples used in the integration step of the pulse height algorithm. The upper and lower bits of the integration length can then be combined to make the full integration length. This is done in two steps by shifting the upper bits and adding the lower bits as shown below.\\
+
+Example of extracting the integration length:\\
+
+\begin{tabular}{ccccccccc}
+Word VIII/IX &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x0474A998 & \& & 0x7C000000 & $>>$ & 26 & = & 0x01 & = & 1\\
+0x4584A998 & \& & 0x7FC00000 & $>>$ & 22 & = & 0x116 & = & 278\\
+\end{tabular}\\
+
+Example of building the integration length:\\
+
+\begin{tabular}{ccccccr}
+\multicolumn{3}{c}{Build value} & & Hex result & & Decimal result\\
+0x01 & $<<$ & 9 & = & 0x200\\
+0x200 & $||$ & 0x116 & = & 0x316 & = & 790\\
+\end{tabular}
+
+%%%%%%%%%%%%%
+\subsection{Pulse Height Signal}
+The pulse height signal is provided in word VIII as the 26 lower bits. The maximum value is 67108863 and is in units of ADC channels.\\
+
+Two examples of unpacking the Pulse Height value:\\
+
+\begin{tabular}{ccccccccc}
+Word VIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x680001FF & \& & 0x03FFFFFF & $>>$ & 0 & = & 0x000001FF & = & 511\\
+0x680005B5 & \& & 0x03FFFFFF & $>>$ & 0 & = & 0x000005B5 & = & 1461\\
+\end{tabular}\\
+
+%%%%%%%%%%%%%
+\subsection{CFD Signal}
+The timing from a CFD algorithm is provided as a signed integer in word VIII as the 22 lowest bits. The value given in the CFD word is the correction to the time stamp. This value should be added to the time stamp. The value ranges from -524288 to 524287 and is in units of 10 nanoseconds.\\
+
+Two examples of unpacking the CFD value:\\
+
+\begin{tabular}{ccccccccc}
+Word IX &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x78000052 & \& & 0x003FFFFF & $>>$ & 0 & = & 0x00000052 & = & 82\\
+0x780000F6 & \& & 0x003FFFFF & $>>$ & 0 & = & 0x000000F6 & = & 246\\
+\end{tabular}\\
+
+%%%%%%%%%%%%%
+\subsection{Event Trailer}
+The Event Trailer is provided in word XI and it indicates the end of the data event fragment. The type is identified in the 4 upper bits as type 14 (0xE). The 14 lower bits of the Channel Trigger counter value are repeated in the data event trailer. This can be used as an additional check to ensure the event is not corrupted.\\
+
+Example of identifying the Event Trailer word type:\\
+
+\begin{tabular}{ccccccccc}
+Word XIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xEEEEEEEE & \& & 0xF0000000 & $>>$ & 28 & = & 0xE & = & 14\\
+\end{tabular}\\
+
+Example of unpacking the lower bits of the Channel Trigger counter value:\\
+\begin{tabular}{ccccccccr}
+Word XIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xE074A998 & \& & 0x0003FFFF & $>>$ & 0 & = & 0x0000A998 & = & 43416\\
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{GRIF-4G}
+
+
+The format from this digitizer will be similar to that of the GRIF-16 but additional information may be provided associated with DESCANT detectors. This information will include output from additional signal-processing modules such as a neutron-gamma discrimination algorithm.\\
+
+\newpage
+
+\begin{landscape}
+\begin{table}
+\caption{GRIFFIN GRIF-4G fragment event format, bank GRF3. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets. Words with an asterisk might be repeated within a single fragment event.}
+\begin{tabular*}{\textwidth}{p{0.9cm}|p{2.25cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|c}
+\cline{2-9}
+I & Packet Type (4) {\bf 0x8} & Module Type (3) & Word Count (5) & \multicolumn{4}{p{8.8cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
+\cline{2-9}
+II & Packet Type (4) {\bf 0xd} & \multicolumn{7}{p{15.4cm}|}{\centering{Network Packet Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+II & Fixed 00 (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Filter Patterns (14)}} & Waveform Ind. (1) & \multicolumn{3}{p{6.6cm}|}{\centering{reserved (15)}} & 4~bytes\\
+\cline{2-9}
+IV* & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Filter Condition Counter Value (31)}} & 4~bytes\\
+\cline{2-9}
+V & Packet Type (4) {\bf 0x9} & \multicolumn{7}{p{15.4cm}|}{\centering{Channel Hit Detection Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+VI & Packet Type (4) {\bf 0xa} & \multicolumn{7}{p{15.4cm}|}{\centering{Time Stamp low bits (28)}} & 4~bytes\\
+\cline{2-9}
+VII & Packet Type (4) {\bf 0xb} & \multicolumn{3}{p{6.6cm}|}{\centering{Deadtime (14)}} & \multicolumn{4}{p{8.8cm}|}{\centering{Time Stamp high bits (14)}} & 4~bytes\\
+\cline{2-9}
+VIIa* & Packet Type (4) {\bf 0xc} & \multicolumn{7}{p{15.4cm}|}{\centering{Waveform Sample (28)}} & 4~bytes\\
+\cline{2-9}
+VIII & Fixed 0 (1) & Int. Len. high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height (26)}} & 4~bytes\\
+\cline{2-9}
+IX & Fixed 0 (1) & Int. Length low bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{CFD Timing (26)}} & 4~bytes\\
+\cline{2-9}
+X & Fixed 0 (1) & \multicolumn{2}{p{4.4cm}|}{Long Int. high bits (10)} & \multicolumn{5}{p{11.0cm}|}{\centering{Short Charge Integration (21)}} & 4~bytes\\
+\cline{2-9}
+XI & Fixed 0 (1) & \multicolumn{2}{p{4.4cm}|}{Long Int. low bits (10)} & \multicolumn{5}{p{11.0cm}|}{\centering{Zero-Crossing Time (21)}} & 4~bytes\\
+\cline{2-9}
+XII & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{Channel Accepted Hit Counter Value (14)} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - Repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
+\cline{2-9}
+\multicolumn{7}{r}{Total one hit} & \multicolumn{2}{c}{10 words I-IX, XII:} & 40 bytes\\
+\multicolumn{7}{r}{Total one hit (DESCANT Detector Type only)} & \multicolumn{2}{c}{12 words I-XII:} & 48 bytes\\
+\end{tabular*}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%
+\subsection{Waveform Data}
+The Waveform Data is provided in multiple words, the number of which depends on the waveform length. These words are inserted into the event between words VII and VIII. Waveform Data words can be identified by their type which is in the 4 upper bits of each words as type C. Each Waveform Data word contains two signed 14 bit values representing two samples of the waveform in ADC units. The first sample is in the lower 14 bits of the 28 bit value and the second sample is in the higher 14 bits of the 28 bit value. The most significant bit in each sample indicates  After extraction, both samples should be checked for negative values: if the most significant bit in a sample is 1, then it is negative.\\
+
+ Example of identifying a Waveform Data word type:\\
+
+\begin{tabular}{ccccccccc}
+Word &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xC57715CC & \& & 0xF0000000 & $>>$ & 28 & = & 0xC & = & 12\\
+\end{tabular}\\
+
+ Example of identifying the first sample from a Waveform Data word:\\
+
+\begin{tabular}{ccccccccc}
+Word &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xC57715CC & \& & 0x00003FFF & $>>$ & 0 & = & 0x15CC & = & 5580\\
+\end{tabular}\\
+
+ Example of identifying the second sample from a Waveform Data word:\\
+
+\begin{tabular}{ccccccccc}
+Word &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xC57715CC & \& & 0x0FFFC000 & $>>$ & 14 & = & 0x15DC & = & 5596\\
+\end{tabular}\\
+
+Example of checking 14-bit samples for negative values:
+
+\begin{tabular}{cccccccc}
+Sample & & Mask & & Hex result & & Decimal result & Negative?\\
+0x15CC & \& & 0x2000 & = & 0x1 & = & 1 & yes\\
+\end{tabular}
 
 %%%%%%%%%%%%%%
 
-\section{K Values}
-The 10 bits of the K value are provided in words VII and VIII as bits 26-30.\\
-Example of extracting the K value:\\
+\subsection{Integration Length}
+The 10 bits of the integration length are provided in words VIII and IX as bits 26-30. The upper and lower bits of the integration length can then be combined to make the full integration length. This is done in two steps by shifting the upper bits and adding the lower bits, as shown below.\\
+
+Example of extracting the integration length:\\
 
 \begin{tabular}{ccccccccc}
-Word VII/VIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+Word VIII/IX &  & Mask & & Shift & & Hex result & & Decimal result\\
 0x2074A998 & \& & 0x7C000000 & $>>$ & 26 & = & 0x08 & = & 8\\
 0x5874A998 & \& & 0x7C000000 & $>>$ & 26 & = & 0x16 & = & 22\\
 \end{tabular}\\
-The upper and lower bits of the K value can then be combined to make the full K value. This is done in two steps by shifting the upper bits and adding the lower bits:\\
 
-\begin{tabular}{ccccccr}
-\multicolumn{3}{c}{Build K Value} & & Hex result & & Decimal result\\
+Example of building the integration length:\\
+
+\begin{tabular}{ccccccc}
+\multicolumn{3}{c}{Build value} & & Hex result & & Decimal result\\
 0x08 & $<<$ & 5 & = & 0x100\\
 0x100 & $||$ & 0x16 & = & 0x116 & = & 278\\
 \end{tabular}
 
 %%%%%%%%%%%%%
-\section{Pulse Height Signal}
-The pulse height signal is provided in word VII as the 26 lower bits, which represent Pulse height 1. The maximum value is 67108863 and is in units of ADC channels.\\
+\subsection{Pulse Height Signal}
+The pulse height signal is provided in word VIII as the 26 lower bits, which represent Pulse height 1. The maximum value is 67108863 and is in units of ADC channels. There is no handling of pile-up in the GRIF-4G module. Pile-up events will cause occasional bad data.\\
 
-\noindent
 Two examples of unpacking the Pulse Height value:\\
 
 \begin{tabular}{ccccccccc}
@@ -425,40 +574,89 @@ Word VII &  & Mask & & Shift & & Hex result & & Decimal result\\
 0x680005B5 & \& & 0x03FFFFFF & $>>$ & 0 & = & 0x000005B5 & = & 1461\\
 \end{tabular}\\
 
-\noindent
-For pile-up events the charge value of the secondary interactions are given in words X and XII.
-
 %%%%%%%%%%%%%
-\section{Amplitude-Corrected Timing Signal}
-The timing from a Amplitude-Corrected Timing algorithm is provided in word VIII as the 26 lower bits. The maximum value is 67108863 and is in units of 10 nanoseconds.
+\subsection{CFD Timing Signal}
 
-\noindent
-Two examples of unpacking the Amplitude-Corrected timing value:\\
+\textcolor{red}{Vinzenz, this could use some expansion.}
 
-\begin{tabular}{ccccccccc}
-Word VIII &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x78000052 & \& & 0x03FFFFFF & $>>$ & 0 & = & 0x00000052 & = & 82\\
-0x780000F6 & \& & 0x03FFFFFF & $>>$ & 0 & = & 0x000000F6 & = & 246\\
-\end{tabular}\\
+The timing from a CFD algorithm is provided in two parts word IX as the 21 lower bits. There is both a CFD time itself (bits 0-20) and the ``remainder" (bits 21-24) which is generated because of the difference between the 100~MHz timestamp and the 125~MHz clock that the FPGA is running on. The CFD time is in units of 1/256~ns.\\
 
-\noindent
-For pile-up events the Amplitude-Corrected timing values of the secondary interactions are given in words VIII and XII.
+A time in units of 1~ns can be constructed as $[(\text{Timestamp} \times 10) + \text{Remainder}]$.\\
+
+A time in steps of 1/256~ns ($\sim$ 3.9~ps) can be constructed as $[(\text{Timestamp} \times 10) + \text{Remainder} + \frac{\text{CFD}}{256}]$.\\
 
 %%%%%%%%%%%%%%
-\section{Event Trailer}
-The Event Trailer is provided in word XIII and it indicates the end of the event fragment. The type is identified in the 4 upper bits as type 14.\\
+\subsection{Short Charge Integration}
+{\bf Note:} Words X and XI are only read out for the DESCANT detector type.\\
+
+The 19 bits of the Short Charge Integration are provided in word X as bits 0-18. This short integration of the charge signal is used in combination with the Long Charge Integration and the CFD information to provide neutron-gamma discrimination. The word type is identified in the 4 upper bits as type 0xF.\\
+
+Example of identifying the Short Charge Integration word type:\\
+
+\begin{tabular}{ccccccccc}
+Word X &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xF00461FF & \& & 0xF0000000 & $>>$ & 28 & = & 0xF & = & 15\\
+\end{tabular}\\
+
+Two examples of unpacking the Short Charge Integration value:\\
+
+\begin{tabular}{ccccccccc}
+Word X &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xF00461FF & \& & 0x001FFFFF & $>>$ & 0 & = & 0x000001FF & = & 511\\
+0xF00465B5 & \& & 0x001FFFFF & $>>$ & 0 & = & 0x000005B5 & = & 1461\\
+\end{tabular}\\
+
+%%%%%%%%%%%%%%
+\subsection{Long Charge Integration}
+{\bf Note:} Words X and XI are only read out for the DESCANT detector type.\\
+
+The 19 bits of the Long Charge Integration are provided in words X as bits 19-27 and XI as bits 22-31. The upper and lower bits of the Long Charge Integration can then be combined to make the full Long Charge Integration. This is done in two steps by shifting the upper bits and adding the lower bits, as shown below.\\
+
+Example of extracting the Long Charge Integration:\\
+
+\begin{tabular}{ccccccccc}
+Word X/XI &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xF044A5B5 & \& & 0x7FE00000 & $>>$ & 21 & = & 0x382 & = & 898\\
+0x02C4A998 & \& & 0x7FE00000 & $>>$ & 21 & = & 0x16 & = & 22\\
+\end{tabular}\\
+
+Example of building the long charge integration:\\
+
+\begin{tabular}{ccccccc}
+\multicolumn{3}{c}{Build Long Integration} & & Hex result & & Decimal result\\
+0x0016 & $<<$ & 9 & = & 0x2000\\
+0x2000 & $||$ & 0x382 & = & 0x2382 & = & 9090\\
+\end{tabular}
+
+%%%%%%%%%%%%%
+\subsection{Zero-Crossing Time}
+{\bf Note:} Words X and XI are only read out for the DESCANT detector type.\\
+
+The Zero-Crossing Time is provided in word XI as the 21 lower bits. This is the result of a CFD algorithm processing the signal after it has been integrated.\\
+
+Two examples of unpacking the Zero-Crossing Time value:\\
+
+\begin{tabular}{ccccccccc}
+Word XI &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x78000052 & \& & 0x001FFFFF & $>>$ & 0 & = & 0x00000052 & = & 82\\
+0x780000F6 & \& & 0x001FFFFF & $>>$ & 0 & = & 0x000000F6 & = & 246\\
+\end{tabular}\\
+
+%%%%%%%%%%%%%%
+\subsection{Event Trailer}
+The Event Trailer is provided in word XII and it indicates the end of the event fragment. The type is identified in the 4 upper bits as type 14. The 14 lower bits of the timestamp is repeated in the event trailer. This can be used as an additional check to ensure the event is not corrupted.\\
+
 Example of identifying the Event Trailer word type:\\
 
 \begin{tabular}{ccccccccc}
-Word XIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+Word XII &  & Mask & & Shift & & Hex result & & Decimal result\\
 0xEEEEEEEE & \& & 0xF0000000 & $>>$ & 28 & = & 0xE & = & 14\\
 \end{tabular}
 
-\noindent
-The 14 lower bits of the timestamp is repeated in the event trailer. This can be used as an additional check to ensure the event is not corrupted. An example of unpacking the lower bits of the Timestamp value from the Event Trailer word:\\
+Example of unpacking the lower bits of the Timestamp value:\\
 
 \begin{tabular}{ccccccccr}
-Word XIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+Word XI &  & Mask & & Shift & & Hex result & & Decimal result\\
 0xE074A998 & \& & 0x0003FFFF & $>>$ & 0 & = & 0x0000A998 & = & 43416\\
 \end{tabular}
 
@@ -468,174 +666,399 @@ Word XIII &  & Mask & & Shift & & Hex result & & Decimal result\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{GRIF-4G}
 
-\noindent
-The format from this digitizer will be similar to that of the GRIF-16 but additional information may be provided associated with DESCANT detectors. This information will include output from additional signal-processing modules such as a neutron-gamma discrimination algorithm.\\
+\chapter{Scaler events}
 
-\newpage
+\section{Event Format and Size}
+
 \begin{landscape}
 \begin{table}
-\caption{GRIFFIN GRIF-4G Event Format written to disk, bank GRF2:}
-\begin{tabular*}{\textwidth}{p{0.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|c}
+\caption{GRIFFIN GRIF-16 Scaler Event Format written to disk, bank GRF3. Words with asterisks may be repeated.}
+\begin{tabular*}{\textwidth}{p{0.9cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}p{2.7cm}|p{2.7cm}|c}
+\multicolumn{1}{l}{} & & & & & & & \\[\dimexpr-\normalbaselineskip-\arrayrulewidth]% Correct for mis-alignment
 \cline{2-7}
-I & Packet Type (4) {\bf 0x8} & Pile-Up Type (2) & Data Type (3) & Num. Filter Patterns (3) & Address (16) & Det. Type (4) & 4~bytes\\
+I & Packet Type (4) {\bf 0x8} & Module Type (3) & Word Count (5) & \multicolumn{2}{c|}{Address (16)} & Det. Type (4) {\bf 0xF} & 4~bytes\\
 \cline{2-7}
-II & Fixed 00 (2) & \multicolumn{2}{c|}{Master Filter Patterns Passed (14)} & \multicolumn{3}{c|}{PPG Pattern (16)} & 4~bytes\\
+II & Packet Type (4) {\bf 0xd} & \multicolumn{5}{c|}{Network Packet Counter Value (28)} & 4~bytes\\
 \cline{2-7}
-III & Fixed 0 (1) & \multicolumn{5}{c|}{Master Filter ID (31)} & 4~bytes\\
+III & Packet Type (4) {\bf 0xa} & \multicolumn{5}{c|}{Time Stamp low bits (28)} & 4~bytes\\
 \cline{2-7}
-IV & Packet Type (4) {\bf 0x9} & \multicolumn{5}{c|}{Channel Trigger ID (28)} & 4~bytes\\
+IV* & \multicolumn{6}{c|}{Scaler value (32)} & 4~bytes\\
 \cline{2-7}
-V & Packet Type (4) {\bf 0xa} & \multicolumn{5}{c|}{Time Stamp low bits (28)} & 4~bytes\\
+V & Packet Type (4) {\bf 0xe} & Scaler Type (4) & \multicolumn{2}{c|}{Time Stamp high bits (16)} & \multicolumn{2}{c|}{Repeated Time Stamp low bits (8)} & 4~bytes\\
 \cline{2-7}
-VI & Packet Type (4) {\bf 0xb} & \multicolumn{2}{c|}{Deadtime (14)} & \multicolumn{3}{c|}{Time Stamp high bits (14)} & 4~bytes\\
-\cline{2-7}
-VIa & Packet Type (4) {\bf 0xd} & \multicolumn{5}{c|}{Network Packet ID (28)} & 4~bytes\\
-\cline{2-7}
-VIb & Packet Type (4) {\bf 0xc} & \multicolumn{5}{c|}{Waveform Sample (28)} & 4~bytes\\
-\cline{2-7}
-VII & Fixed 0 (1) & Upper K1 bits (5) & \multicolumn{4}{c|}{K1 Pulse Height (26)} & 4~bytes\\
-\cline{2-7}
-VIII & Fixed 0 (1) & Lower K1 bits (5) & \multicolumn{4}{c|}{K1 CFD Timing (26)} & 4~bytes\\
-\cline{2-7}
-IX & Packet Type (4) {\bf 0xf} & Upper Long Integration bits (9) & \multicolumn{4}{c|}{Short Charge Integration (19)} & 4~bytes\\
-\cline{2-7}
-X & Fixed 0 (1) & Lower Long Integration bits (10) & \multicolumn{4}{c|}{Zero-Crossing Time (21)} & 4~bytes\\
-\cline{2-7}
-XI & Packet Type (4) {\bf 0xe} & \multicolumn{2}{c|}{Event Trailer (10)} & \multicolumn{3}{c|}{Event Trailer - Repeated Time Stamp low bits (14)} & 4~bytes\\
-\cline{2-7}
-\multicolumn{5}{r}{Total one hit} & \multicolumn{2}{c}{11 words I-VIII, XI:} & 44 bytes\\
-\multicolumn{5}{r}{Total one hit (DESCANT Detector Type only)} & \multicolumn{2}{c}{13 words I-XI:} & 52 bytes\\
 \end{tabular*}
 \end{table}
 \end{landscape}
 
+\subsection{Timestamp}
+The 46-bit timestamp is stored in two separate words as the lower 28 bits and bits 8-23 of two words, word III and word V respectively. Word III is the lower bits of the Timestamp and Word V (trailer) contains the upper bits of the Timestamp. The type is identified in the 4 upper bits of both words as type 10 (0xa) for the lower bits and 15 (0xe) for the upper bits. The upper and lower bits of the Timestamp can then be combined to make the full 46-bit timestamp. This is done in two steps by shifting the upper bits and then adding the lower bits using a bitwise or ($||$), as shown below.\\
+
+{\bf Note:} The timestamps in the fragment events are 42 bits. The timestamps in the scaler events are 44 bits. The timestamps in the PPG events are 56 bits. For accurate comparisons between the different event types, use only the lowest 42 bits.\\
+
+Example of identifying a Timestamp word type:\\
+
+\begin{tabular}{ccccccccc}
+Word III/V &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xA074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xA & = & 10 (lower bits)\\
+0xE0000190 & \& & 0xF0000000 & $>>$ & 28 & = & 0xE & = & 15 (upper bits)\\
+\end{tabular}\\
+
+Example of unpacking the Timestamp value:\\
+
+\begin{tabular}{ccccccccr}
+Word III/V &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xA074A998 & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x0074A998 & = & 7645592\\
+0xE0000190 & \& & 0x00FFFF00 & $>>$ & 8 & = & 0x00000001 & = & 1\\
+\end{tabular}\\
+
+Example of building the timestamp:\\
+
+\begin{tabular}{ccccccr}
+\multicolumn{3}{c}{Build Timestamp} & & Hex result & & Decimal result\\
+0x00000005 & $<<$ & 28 & = & 0x05000000\\
+0x05000000 & $||$ & 0x0074A998 & = & 0x0574A998 & = & 91531672\\
+\end{tabular}\\
+
+
+The timestamp is in units of 10~nanoseconds and has a maximum value of 4,398,046,511,103. The timestamp will therefore reset either after 12 hours or when the run is restarted.\\
+
+%%%%%%%%%%%%%%
+\subsection{Scaler Values}
+Scaler values are provided by the GRIF-16 modules and are particular to each channel. Scaler events include either a series of deadtime counters or a series of rate counters, depending on the scaler type. Scaler values have no identifying first bits and are simply identified as the words between word III (identifier of 0xa) and word V (identifier of 0xe) in a scaler event. The number of scaler values will vary with the different scaler types.\\
+
+Two examples of unpacking the scaler value:\\
+
+\begin{tabular}{ccccccccc}
+Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x85756ab4 & \& & 0xFFFFFFFF & $>>$ & 0 & = & 0x85756ab4 & = & 2239064756\\
+0x64bd760e & \& & 0xFFFFFFFF & $>>$ & 0 & = & 0x64bd760e & = & 1690138126\\
+\end{tabular}
+
+%%%%%%%%%%%%%%
+\subsection{Scaler Type}
+The Scaler Type is provided in word V (trailer) of GRIF-16 Scaler Events, in bits 24-27. It identifies whether a Scaler Event lists the deadtime scalers or the rate scalers. A type of 0 indicates a deadtime scaler, while a type of 1 indicates a rate scaler.\\
+
+Example of identifying the Scaler Type word type (trailer):\\
+
+\begin{tabular}{ccccccccc}
+Word XIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xE0000190 & \& & 0xF0000000 & $>>$ & 28 & = & 0xE & = & 14\\
+\end{tabular}\\
+
+Example of unpacking the Scaler Type:\\
+
+\begin{tabular}{ccccccccc}
+Word XIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xE0000190 & \& & 0x0F000000 & $>>$ & 24 & = & 0x1 & = & 1\\
+\end{tabular}\\
+
+%%%%%%%%%%%%%%
+
+\subsection{Event Trailer}
+The Scaler Event Trailer is provided in word V and it indicates the end of the Scaler Event fragment. The first 8 bits of the Time Stamp Low value are repeated in the scaler event trailer. This can be used as an additional check to ensure the event is not corrupted.\\
+
+Example of identifying the Scaler Event Trailer word type:\\
+
+\begin{tabular}{ccccccccc}
+Word V &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xE0000190 & \& & 0xF0000000 & $>>$ & 28 & = & 0xE & = & 14\\
+\end{tabular}\\
+
+Example of unpacking the first 8 bits of the Time Stamp Low value from the Scaler Event Trailer word:\\
+
+\begin{tabular}{ccccccccr}
+Word V &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xE0000190 & \& & 0x000000FF & $>>$ & 0 & = & 0x90 & = & 144\\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{PPG events}
+\label{c.PPG}
+Additional information will be produced from the GRIF-C such as statistics and information on any events which have been dropped and did not make it to the disk file. The PPG event described in this chapter is one such piece of additional information.
+
+\begin{landscape}
+\begin{table}
+\caption{GRIFFIN GRIF-C PPG event format, bank GRF3. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets.}
+\begin{tabular*}{\textwidth}{p{0.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|c}
+\cline{2-7}
+I & Packet Type (4) {\bf 0x8} & Module Type (3) {\bf 0x4} & Word Count (5) & \multicolumn{2}{c|}{Address (16) {\bf 0xFFFF}} & Det. Type (4) {\bf 0x0} & 4~bytes\\
+\cline{2-7}
+II & Packet Type (4) {\bf 0xd} & \multicolumn{5}{c|}{Network Packet Counter Value (28)} & 4~bytes\\
+\cline{2-7}
+III & Packet Type (4) {\bf 0x0} & \multicolumn{5}{c|}{Expected GRIF-C PPG pattern (28)} & 4~bytes\\
+\cline{2-7}
+IV & Packet Type (4) {\bf 0x9} & \multicolumn{5}{c|}{Confirmed PPG pattern (28)} & 4~bytes\\
+\cline{2-7}
+V & Packet Type (4) {\bf 0xa} & \multicolumn{5}{c|}{Time Stamp low bits (28)} & 4~bytes\\
+\cline{2-7}
+VI & Packet Type (4) {\bf 0xb} & \multicolumn{5}{c|}{Time Stamp high bits (28)} & 4~bytes\\
+\cline{2-7}
+VIII & Packet Type (4) {\bf 0xe} & \multicolumn{5}{c|}{Trailer: previous PPG pattern (28)} & 4~bytes\\
+\cline{2-7}
+\end{tabular*}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%
+\section{Expected GRIF-C PPG pattern}
+The expected GRIF-C PPG pattern is provided in the last 28 bits of word III of GRIF-C PPG events. It is identified with a packet type of 0x0. The PPG pattern itself is 16 bits long. The 28 bit value contains the lower 12 bits of the PPG pattern followed by the full 16-bit pattern.\\
+
+Example of identifying an expected GRIF-C PPG word:\\
+
+\begin{tabular}{ccccccccc}
+Word III &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x0008c008 & \& & 0xF0000000 & $>>$ & 28 & = & 0x0 & = & 0 \\
+\end{tabular}\\
+
+Example of unpacking an expected GRIF-C PPG word:\\
+
+\begin{tabular}{ccccccccc}
+Word III &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x0008c008 & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x008c008 & = & 573448 \\
+\end{tabular}
+
+%%%%%%%%%%%%%%
+\section{Confirmed PPG pattern}
+The confirmed PPG pattern that is read back from the PPG module is provided in the last 28 bits of word IV of GRIF-C PPG events. This should have the same value as the expected GRIF-C PPG pattern - any difference indicates a PPG failure or event corruption. It is identified with a packet type of 0x9. The PPG pattern itself is 16 bits long. The 28 bit value contains the lower 12 bits of the PPG pattern followed by the full 16-bit pattern.\\
+
+ Example of identifying a confirmed PPG word:\\
+
+\begin{tabular}{ccccccccc}
+Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x9008c008 & \& & 0xF0000000 & $>>$ & 28 & = & 0x9 & = & 9 \\
+\end{tabular}\\
+
+Example of unpacking a confirmed PPG word:\\
+
+\begin{tabular}{ccccccccc}
+Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
+0x9008c008 & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x008c008 & = & 573448 \\
+\end{tabular}
+
+%%%%%%%%%%%%%%
+\section{Timestamp}
+
+\subsection{Data Event Timestamp}
+The timestamp is stored in two separate words as the lower 28 bits of words V and VI. Word V is the lower bits of the Timestamp and Word VI is the upper bits of the Timestamp. The type is identified in the 4 upper bits of both words as type 10 (0xA) for the lower bits and 11 (0xB) for the upper bits. The upper and lower bits of the Timestamp can then be combined to make the full 56-bit timestamp. This is done in two steps by shifting the upper bits and then adding the lower bits using a bitwise or ($||$), as shown below. The timestamp is in units of 10~nanoseconds.\\
+
+{\bf Note:} The timestamps in the fragment events are 42 bits. The timestamps in the scaler events are 44 bits. The timestamps in the PPG events are 56 bits. For accurate comparisons between the different event types, use only the lowest 42 bits.\\
+
+Example of identifying a Timestamp word type:\\
+
+\begin{tabular}{ccccccccc}
+Word V/VI &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xA074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xA & = & 10 (lower bits)\\
+0xB074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xB & = & 11 (upper bits)\\
+\end{tabular}\\
+
+Example of unpacking the Timestamp value:\\
+
+\begin{tabular}{ccccccccr}
+Word V/VI &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xA074A998 & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x0074A998 & = & 7645592\\
+0xB0000005 & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x00000005 & = & 5\\
+\end{tabular}\\
+
+Example of building the timestamp:\\
+
+\begin{tabular}{ccccccr}
+\multicolumn{3}{c}{Build Timestamp} & & Hex result & & Decimal result\\
+0x00000005 & $<<$ & 28 & = & 0x05000000\\
+0x05000000 & $||$ & 0x0074A998 & = & 0x0574A998 & = & 91531672\\
+\end{tabular}\\
+
+%%%%%%%%%%%%%%
+\section{Previous PPG pattern}
+The previous PPG pattern is provided in the last 28 bits of word VIII (trailer) of GRIF-C PPG events. This should have the same value as the expected GRIF-C PPG pattern from the previous PPG event - any difference indicates a PPG failure or event corruption. It is identified with a packet type of 0xe. The PPG pattern itself is 16 bits long. The 28 bit value contains the lower 12 bits of the PPG pattern followed by the full 16-bit pattern.\\
+
+ Example of identifying a previous PPG word:\\
+
+\begin{tabular}{ccccccccc}
+Word VIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xe008c008 & \& & 0xF0000000 & $>>$ & 28 & = & 0xe & = & 15 \\
+\end{tabular}\\
+
+Example of unpacking a previous PPG word:\\
+
+\begin{tabular}{ccccccccc}
+Word VIII &  & Mask & & Shift & & Hex result & & Decimal result\\
+0xe008c008 & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x008c008 & = & 573448 \\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Reference information}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Bank version information}
-Over the lifetime of the data acquisition system, the data format is expected to change. Care will be taken to make these changes backward compatible, but occasionally, this will not be possible. In that case, the bank name will be used to track the data format used. This document will be maintained with the current data format. Differences between the current data format and the older data formats will be detailed in this section. The current bank name is GRF2.
+Over the lifetime of the data acquisition system, the data format is expected to change. Care will be taken to make these changes backward compatible, but occasionally, this will not be possible. In that case, the bank name will be used to track the data format used. This document will be maintained with the current data format. Differences between the current data format and the older data formats will be detailed in this section. The current bank name is GRF3.
 
 \begin{itemize}
-\item GRF2: current bank name
-\item GRF1: different header format than GRF2. Header word contains the following information (bit size): Packet Type (4), Number Filter Patterns (4), Data Type (3), Pile-Up Type (3), Address (14), Detector Type (4).
+\item GRF3: current bank name
+\item GRF2:
+	\begin{itemize}
+		\item Different header format than GRF3. Header word contains the following information (bit size): Packet Type (4), Pile-Up Type (2), Module Type (3), Number Filter Patterns (3), Address (16), Detector Type (4).
+		\item Different trailer format than GRF3. Trailer word contains the following information (bit size): Packet Type (4), Event Trailer (10), Event Trailer - Repeated Time Stamp low bits (14).
+		\item This was the first bank to include scaler events.
+	\end{itemize}
+\item GRF1:
+	\begin{itemize}
+		\item Different header format than GRF2. Header word contains the following information (bit size): Packet Type (4), Number Filter Patterns (4), Module Type (3), Pile-Up Type (3), Address (14), Detector Type (4).
+	\end{itemize}
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Binary Counting Definition}
+
+The bits in the words in this document are counted from 0 to 7 in each byte, using LSB bit numbering where bits are counting right to left, from the least to most significant. Therefore a 4-byte, 32 bit word contains bits from 0 to 31.\\
+
+An example of how the bits in a 16-bit, 2-byte word are counted in this document:\\
+
+\begin{tabular}{l|cccc|cccc|cccc|cccc|}
+Bit Number: & 15 & 14 & 13 & 12 & 11 & 10 & 09 & 08 & 07 & 06 & 05 & 04 & 03 & 02 & 01 & 00\\
+Bit Weight: & \multicolumn{4}{l}{32,768} & \multicolumn{4}{|l}{2,048} &\multicolumn{4}{|l}{128} &\multicolumn{4}{|l|}{8}\\
+\end{tabular}\\
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Pile-Up Type}
-The Pile-Up Type indicates how many hits were recorded within the evaluation window, with the maximum being 3 hits in one window. The Pile-Up Type is provided in word I as bits 18-20 (2 bits).\\
-Example of identifying a Header word type:\\
+\newpage
+\section{Reference tables}
 
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\  %change here
-\end{tabular}\\
-
-\noindent 
-Example of extracting the Pile-Up Type:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x80007C80 & \& & 0x0C000000 & $>>$ & 26 & = & 0x0 & = & 0 (1 Hit)\\  %change here
-0x84007C80 & \& & 0x0C000000 & $>>$ & 26 & = & 0x1 & = & 1 (2 Hit)\\  %change here
-0x88007C80 & \& & 0x0C000000 & $>>$ & 26 & = & 0x2 & = & 2 (3 Hits)\\  %change here
-0x8C007C80 & \& & 0x0C000000 & $>>$ & 26 & = & 0x3 & = & 3 ($>$3 Hits = Bad)\\  %change here
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{cccc}
+\hline
+\hline
+\multicolumn{2}{c}{Packet Type} & \\
+Hexadecimal & Decimal & Word description\\
+\hline
+0x8 & 8 & Header (start of event)\\
+0x9 & 9 &  Channel Hit Detection Counter Value\\
+0xA & 10 & Timestamp Lower bits word\\
+0xB & 11 & Deadtime and Timestamp high bits\\
+0xC & 12 & Waveform sample\\
+0xD & 13 & Network Packet Counter Value\\
+0xE & 14 & Trailer (end of event)\\
+0xF & 15 & Long Charge Integration and Short Charge Integration (GRIF-4G only)\\
+\hline
+\hline
 \end{tabular}
+\label{table.packettypes_data}
+\caption{Data event packet types.}
+\end{center}
+\end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Data Type}
-The Data Type indicates where the data was generated (GRIF-16, GRIF-4G, GRIF-C etc.) and is provided in word I as bits 23-25 (3 bits). The  packet type is identified in the 4 upper bits of word I as type 8.\\
-Example of identifying a Header word type:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
-\end{tabular}\\
-
-\noindent The Data Type number can be extracted as:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x80A4A998 & \& & 0x03800000 & $>>$ & 23 & = & 0x1 & = & 1 (GRIF-16)\\
-0x8124A998 & \& & 0x03800000 & $>>$ & 23 & = & 0x2 & = & 2 (GRIF-4G)\\
-0x81A4A998 & \& & 0x03800000 & $>>$ & 23 & = & 0x3 & = & 3 (GRIF-C Slave)\\
-0x8234A998 & \& & 0x03800000 & $>>$ & 23 & = & 0x4 & = & 4 (GRIF-C Master)\\
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+\hline
+\multicolumn{2}{c}{Packet Type}\\
+Hexadecimal & Decimal & Word description\\
+\hline
+0x8 & 8 & Header (start of event)\\
+0x9 & 9 & Confirmed PPG pattern (PPG only) \\
+0xA & 10 & Timestamp Lower bits word\\
+0xB & 11 & not used\\
+0xC & 12 & not used\\
+0xD & 13 & Network Packet Counter Value\\
+0xE & 14 & Trailer (end of event)\\
+0xF & 15 & not used\\
+\hline
+\hline
 \end{tabular}
+\label{table.packettypes_other}
+\caption{Packet types for scaler and PPG events.}
+\end{center}
+\end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Number of Filter Patterns}
-The Number of Filter Patterns which have been satisfied by this event fragment is provided in word I as bits 20-22 (3 bits). The packet type is identified in the 4 upper bits of word I as type 8.\\
-Example of identifying a Header word type:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
-\end{tabular}\\
-
-\noindent The number of filter patterns can be extracted as:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8614A998 & \& & 0x00700000 & $>>$ & 20 & = & 0x1 & = & 1 (1 pattern word)\\
-0x8624A998 & \& & 0x00700000 & $>>$ & 20 & = & 0x2 & = & 2 (2 pattern words)\\
-0x8634A998 & \& & 0x00700000 & $>>$ & 20 & = & 0x3 & = & 3 (3 pattern words)\\
+\begin{table}
+\begin{center}
+\begin{tabular}{ccc}
+\hline
+\hline
+Mask & Shift & Name\\
+\hline
+0x0E000000 & 25 & Module Type\\
+0x01F00000 & 20 & Word count\\
+0x000FFFF0 & 4 & Address\\
+0x0000000F & 0 & Detector Type\\
+0x0FFFFFFF & 0 & Network Packet Counter Value\\
+\hline
+\multicolumn{3}{l}{All fragment events}\\
+\hline
+0x3FFF0000 & 16 & Filter Patterns\\
+0x00080000 & 15 & Waveform Indicator\\
+0x7FFFFFFF & 0 & Filter Condition Counter Value\\
+0x0FFFFFFF & 0 & Channel Hit Detection Counter Value\\
+0x0FFFFFFF & 0 & Timestamp Lower Bits\\
+0x00003FFF & 0 & Timestamp Upper Bits\\
+0x0FFFC000 & 14 & Deadtime\\
+0x0FFFC000 & 14 & Channel Accepted Hit Counter Value\\
+\hline
+\multicolumn{3}{l}{GRIF-16 data}\\
+\hline
+0x0000001F & 0 & Pile-Up Type\\
+0x00003FFF & 0 & Waveform sample 1\\
+0x0FFFC000 & 14 & Waveform sample 2\\
+0x7C000000 & 26 & Integration Length Lower Bits\\
+0x7CC00000 & 22 & Integration Length Upper Bits\\
+0x03FFFFFF & 0 & Pulse Height Signal\\
+0x003FFFFF & 0 & CFD Timing Signal\\
+\hline
+\multicolumn{3}{l}{GRIF-4G data}\\
+\hline
+0x00003FFF & 0 & Waveform sample 1\\
+0x0FFFC000 & 14 & Waveform sample 2\\
+0x7C000000 & 26 & Integration Length Lower Bits\\
+0x7C000000 & 26 & Integration Length Upper Bits\\
+0x03FFFFFF & 0 & Pulse Height Signal\\
+0x03FFFFFF & 0 & CFD Timing Signal\\
+0x001FFFFF & 0 & Zero-Crossing Time\\
+0x001FFFFF & 0 & Short Charge Integration\\
+0x7FE00000 & 21 & Long Charge Integration Upper Bits\\
+0x7FE00000 & 21 & Long Charge Integration Lower Bits\\
+\hline
+\multicolumn{3}{l}{Scaler}\\
+\hline
+0x00FFFF00 & 8 & Timestamp high bits\\
+0x0FFFFFFF & 0 & Timestamp low bits\\
+0xFFFFFFFF & 0 & Scaler values\\
+0x0F000F00 & 24 & Scaler type\\
+\hline
+\multicolumn{3}{l}{PPG}\\
+\hline
+0x0FFFFFFF & 0 & PPG patterns\\
+0x0FFFFFFF & 0 & Timestamp low bits\\
+0x0FFFFFFF & 0 & Timestamp high bits\\
+\hline
+\hline
 \end{tabular}
+\caption{Bit masks and bit shifts used to unpack GRIFFIN event data.}
+\label{table.bits}
+\end{center}
+\end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Address}
-The Address is provided in word I as bits 4 to 19 (16 bits). This indicates which channel on which module has provided this event fragment.\\
-Example of identifying a Header word type:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
-\end{tabular}\\
-
-\noindent An example of unpacking the Address from the header word:\\
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x82228280 & \& & 0x000FFFF0 & $>>$ & 4 & = & 0x0505 & = & 1285\\
-\end{tabular}\\
-
-\noindent The various properties with the Address word are as follows:\\
-
+\begin{table}
+\begin{center}
 \begin{tabular}{cccl}
-Property & Size & Values & Description\\
-M & 4 bits & 0 to 15 & Input channel to Master or ID number of Slave\\
-S & 4 bits & 0 to 15 & Input channel to Slave or ID number of Digitizer\\
-C & 8 bits & 0 to 255 & Input channel to Digitizer\\
-\end{tabular}\\
-
-\noindent These properties can be extracted from this 16 bit word in the following way:\\
-
-\begin{tabular}{ccccccccc}
-Address &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x1405 & \& & 0x0000F000 & $>>$ & 12 & = & 0x01 & = & 1 (M)\\
-0x1405 & \& & 0x00000F00 & $>>$ & 8 & = & 0x04 & = & 4 (S)\\
-0x1405 & \& & 0x000000FF & $>>$ & 0 & = & 0x05 & = & 5 (C)\\
-\end{tabular}
-
-%%%%%%%%%%%%%
-\section{Detector Type}
-The Detector Type is provided in word I as bits 0 to 3 (4 bits). This indicates which detector type has generated this event fragment and is used primarily in master filter decisions.\\
-Example of identifying a Header word type:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A928 & \& & 0xF0000000 & $>>$ & 28 & = & 0x8 & = & 8\\
-\end{tabular}\\
-
-\noindent The Detector Type value can be extracted as:\\
-
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A900 & \& & 0x0000000F & $>>$ & 0 & = & 0x00 & = & 00 (HPGe Low Gain)\\
-0x8074A902 & \& & 0x0000000F & $>>$ & 0 & = & 0x02 & = & 02 (SCEPTAR)\\
-0x8074A905 & \& & 0x0000000F & $>>$ & 0 & = & 0x05 & = & 05 (Si(Li))\\
-\end{tabular}\\
-
-\noindent Here is a full list of GRIFFIN Detector Types:\\
-\begin{tabular}{cccl}
-{\bf ID} & {\bf Short Name} & {\bf Full Name} & {\bf Description}\\
+\hline
+\hline
+ID & Short Name & Full Name & Description\\
+\hline
 00 & GRGa & Ge & 16 HPGe Clovers Low Gain\\
 01 & GRGb & Ge & 16 HPGe Clovers High Gain\\
 02 & SEP & Beta & 20 plastic scintillators (SCEPTAR)\\
@@ -651,341 +1074,95 @@ Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
 12 &  &  & Undefined\\
 13 &  &  & Undefined\\
 14 &  &  & Undefined\\
-15 &  &  & Undefined\\
+15 &  &  & Scaler\\
+\hline
+\hline
 \end{tabular}
+\caption{Detector types used in GRIFFIN data events originating in the GRIF-16 or GRIF-4G digitizers.}
+\label{table.dettype_data}
+\end{center}
+\end{table}
 
-%%%%%%%%%%%%%%
-\section{Master Filter ID}
-The Master Filter ID is provided in word III as 31 bits. The Master Filter ID is an event counter which is reset at the start of a run and increments by 1 each time a new event master filter condition is passed in the master filter algorithm in the Master GRIF-C. The maximum value is 2147483649 above which the counter will wrap around.\\
-Example of extracting the Master Filter ID:\\
-
-\begin{tabular}{ccccccccc}
-Word II &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x56007C84 & \& & 0x7FFFFFFF & $>>$ & 0 & = & 0x56007C84& = & 1442872452\\
+\begin{table}
+\begin{center}
+\begin{tabular}{cccl}
+\hline
+\hline
+ID & Description\\
+\hline
+00 & PPG event \\
+01 & Undefined\\
+02 & Undefined\\
+03 & Undefined\\
+04 & Undefined\\
+05 & Undefined\\
+06 & Undefined\\
+07 & Undefined\\
+08 & Undefined\\
+09 & Undefined\\
+10 & Undefined\\
+11 & Undefined\\
+12 & Undefined\\
+13 & Undefined\\
+14 & Undefined\\
+15 & Undefined\\
+\hline
+\hline
 \end{tabular}
+\caption{Detector types used in GRIFFIN data events originating in the GRIF-C digitizers.}
+\label{table.dettype_other}
+\end{center}
+\end{table}
 
-%%%%%%%%%%%%%%
-\section{Master Filter Pattern}
-There are up to eight (more in the future) Filter Patterns which can be set and tested for every fragment. The Identifier(s) (1-8) of the Filter Pattern which was passed is provided in word II as bits 16 to 30 (14 bits). If multiple Filter conditions were passed by this fragment then there will be multiple Filter Patterns indicated in this word.\\
-Example of extracting the Master Filter Pattern(s):\\
-
-\begin{flushleft}
-\begin{tabular}{ccccccccc}
-Word III &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x00010F81 & \& & 0x7FFF0000 & $>>$ & 16 & = & 0x0001 & = & 1 (Only Filter 1 passed)\\
-0x00050F81 & \& & 0x7FFF0000 & $>>$ & 16 & = & 0x0005 & = & 5 (Filters 1 and 3 passed)\\
-0x00850F81 & \& & 0x7FFF0000 & $>>$ & 16 & = & 0x0085 & = & 133 (Filters 1, 3 and 8 passed)\\
+\begin{table}
+\begin{center}
+\begin{tabular}{cc}
+\hline
+\hline
+PPG Pattern & Description\\
+\hline
+0xc000 & \textcolor{red}{This one doesn't turn the beam on.}\\
+\hline
+\hline
 \end{tabular}
-\end{flushleft}
+\caption{PPG patterns used in GRIFFIN PPG events.}
+\label{table.ppg}
+\end{center}
+\end{table}
 
-%%%%%%%%%%%%%%
-\section{PPG Pattern}
-The PPG Pattern is a recording of the Programable Pattern Generator status at the time that the threshold crossing occurred, and is provided in word II as bits 0 to 15 (16 bits). The pattern represents, for example, if the beam were being delivered or if it was blocked for decay counting etc.\\
-Example of extracting the PPG Pattern:\\
-
-\begin{tabular}{ccccccccc}
-Word III &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x0F810F81 & \& & 0x0000FFFF & $>>$ & 0 & = & 0x00000F81 & = & 3969\\
-\end{tabular}
-
-%%%%%%%%%%%%%%
-\section{Channel Trigger ID}
-The Channel Trigger ID is provided in word IV as the 28 lower bits. The Channel Trigger ID is an event counter which is reset at the start of a run and increments by 1 each time a new threshold crossing occurs for this channel on the GRIF-16 or GRIF-4G. The word type is identified in the 4 upper bits as type 9.\\
-Example of identifying the Channel Trigger ID word type:\\
-
-\begin{tabular}{ccccccccc}
-Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x900461FF & \& & 0xF0000000 & $>>$ & 28 & = & 0x9 & = & 9\\
-\end{tabular}\\
-
-\noindent The Channel Trigger ID number can wrap around if it becomes too large. The user should monitor the channel trigger id numbers which should increase throughout the run. The maximum value of channel trigger id is 268435455. If the number changes from very large to small then the counter has wrapped around, this should be tested at every event.
-
-\noindent Example of unpacking the Channel Trigger ID:\\
-
-\begin{tabular}{ccccccccc}
-Word IV &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x900461FF & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x000461FF & = & 287231\\
-\end{tabular}
-
-%%%%%%%%%%%%%%
-\section{Timestamp}
-The timestamp is stored in two separate words as the lower 28 bits and 14 bits of the two words, word V and word VI respectively. Word V is the lower bits of the Timestamp and Word VI is the upper bits of the Timestamp. The type is identified in the 4 upper bits of both words as type 10 for the lower bits and 11 for the upper bits.\\
-Example of identifying a Timestamp word type:\\
-
-\begin{tabular}{ccccccccc}
-Word V/VI &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xA074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xA & = & 10 (lower bits)\\
-0xB074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xB & = & 11 (upper bits)\\
-\end{tabular}\\
-
-\noindent
-An example of unpacking the Timestamp value:\\
-
-\begin{tabular}{ccccccccr}
-Word V/VI &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xA074A998 & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x0074A998 & = & 7645592\\
-0xB0000005 & \& & 0x00003FFF & $>>$ & 0 & = & 0x00000005 & = & 5\\
-\end{tabular}\\
-
-\noindent
-The upper and lower bits of the Timestamp can then be combined to make the full 42-bit timestamp. This is done in two steps by shifting the upper bits and then adding the lower bits using a bitwise or ($||$):\\
-
-\begin{tabular}{ccccccr}
-\multicolumn{3}{c}{Build Timestamp} & & Hex result & & Decimal result\\
-0x00000005 & $<<$ & 28 & = & 0x05000000\\
-0x05000000 & $||$ & 0x0074A998 & = & 0x0574A998 & = & 91531672\\
-\end{tabular}\\
-
-\noindent
-The timestamp is in units of 10~nanoseconds and has a maximum value of 4,398,046,511,103. The timestamp will therefore reset either after 509 days or when the GRIF-C Master module is power cycled.\\
-
-\noindent The 28 lower bits are also stored in the event trailer.
-
-%%%%%%%%%%%%%%
-
-\section{Deadtime}
-There are two methods of determining the event-by-event deadtime of the system for precision measurements; firstly to operate at a fixed deadtime for every event, or secondly to measure and record the deadtime of each event. Both methods will be trialled and evaluated as part of the GRIFFIN DAQ development.\\
-
-\noindent
-The deadtime for each event is provided as bits 14-27 (14 bits) of word VII. The type is identified in the 4 upper bits as type 11.\\
-Example of identifying a Deadtime word type:\\
-
-\begin{tabular}{ccccccccc}
-Word VII &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xB074A998 & \& & 0xF0000000 & $>>$ & 28 & = & 0xB & = & 11\\
-\end{tabular}\\
-
-\noindent
-An example of unpacking the Deadtime value:\\
-
-\begin{tabular}{ccccccccr}
-Word VII &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xC074A998 & \& & 0x0FFFFC000 & $>>$ & 14 & = & 0x0074A998 & = & 7645592\\
-\end{tabular}\\
-
-The deadtime is in units of 10~ns and the maximum value is 16,383 representing 162.383 microseconds of deadtime for this event readout.
-
-%%%%%%%%%%%%%%
-\section{Network Packet ID}
-The Network Packet ID is currently provided in word VIa as the 28 lower bits. The Network Packet ID is an event counter which is reset at the start of a run and increments by 1 each time a new event is dispatched by the GRIF-C master. The word type is identified in the 4 upper bits as type 9.\\
-Example of identifying the Network Packet ID word type:\\
-
-\begin{tabular}{ccccccccc}
-Word VIa &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xD00461FF & \& & 0xF0000000 & $>>$ & 28 & = & 0xD & = & 13\\
-\end{tabular}\\
-
-\noindent The Network Packet ID number can wrap around if it becomes too large. The user should monitor the Network Packet id numbers which should increase throughout the run. The maximum value of Network Packet ID is 268435455. If the number changes from very large to small then the counter has wrapped around, this should be tested at every event.
-
-\noindent Example of unpacking the Network Packet ID:\\
-
-\begin{tabular}{ccccccccc}
-Word VIa &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xD00461FF & \& & 0x0FFFFFFF & $>>$ & 0 & = & 0x000461FF & = & 287231\\
-\end{tabular}
-
-%%%%%%%%%%%%%%
-\section{Waveform Data}
-The Waveform Data is provided in multiple words, the number of which depends on the waveform length. These words are inserted into the event between words VI and VII. Waveform data words can be identified by their type which is in the 4 upper bits of each words as type C.
-
-\begin{tabular}{ccccccccc}
-Word &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xC57715CC & \& & 0xF0000000 & $>>$ & 28 & = & 0xC & = & 12\\
-\end{tabular}\\
-
-The Waveform Data values are in units of ADC bins.
-
-%%%%%%%%%%%%%%
-
-\section{K Values}
-The 10 bits of the K value are provided in words VII and VIII as bits 26-30.\\
-Example of extracting the K value:\\
-
-\begin{tabular}{ccccccccc}
-Word VII/VIII &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x2074A998 & \& & 0x7C000000 & $>>$ & 26 & = & 0x08 & = & 8\\
-0x5874A998 & \& & 0x7C000000 & $>>$ & 26 & = & 0x16 & = & 22\\
-\end{tabular}\\
-The upper and lower bits of the K value can then be combined to make the full K value. This is done in two steps by shifting the upper bits and adding the lower bits:\\
-
-\begin{tabular}{ccccccr}
-\multicolumn{3}{c}{Build K Value} & & Hex result & & Decimal result\\
-0x08 & $<<$ & 5 & = & 0x100\\
-0x100 & $||$ & 0x16 & = & 0x116 & = & 278\\
-\end{tabular}
-
-%%%%%%%%%%%%%
-\section{Pulse Height Signal}
-The pulse height signal is provided in word VII as the 26 lower bits, which represent Pulse height 1. The maximum value is 67108863 and is in units of ADC channels.\\
-
-\noindent
-Two examples of unpacking the Pulse Height value:\\
-
-\begin{tabular}{ccccccccc}
-Word VII &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x680001FF & \& & 0x03FFFFFF & $>>$ & 0 & = & 0x000001FF & = & 511\\
-0x680005B5 & \& & 0x03FFFFFF & $>>$ & 0 & = & 0x000005B5 & = & 1461\\
-\end{tabular}\\
-
-\noindent
-There is no handling of pile-up in the GRIF-4G module. Pile-up events will cause occasional bad data.
-
-%%%%%%%%%%%%%
-\section{CFD Timing Signal}
-Note that Word VIII and IX are only read out for the DESCANT detector type.\\
-
-\noindent
-The timing from a CFD algorithm is provided in two parts word VIII as the 21 lower bits. There is both a CFD time itself (bits 0-20) and the ``remainder" (bits 21-24) which is generated because of the difference between the 100~MHz timestamp and the 125~MHz clock that the FPGA is running on. The CFD time is in units of 1/256~ns.\\
-
-\noindent
-A time in units of 1~ns can be constructed as $[(\text{Timestamp} \times 10) + \text{Remainder}]$.\\
-
-\noindent
-A time in steps of 1/256~ns ($\sim$ 3.9~ps) can be constructed as $[(\text{Timestamp} \times 10) + \text{Remainder} + \frac{\text{CFD}}{256}]$.\\
-
-%%%%%%%%%%%%%%
-
-\section{Short Charge Integration}
-Note that Word VIII and IX are only read out for the DESCANT detector type.\\
-
-\noindent
-The 19 bits of the Short Charge Integration are provided in word IX as bits 0-18. This short integration of the charge signal is used in combination with the Long Charge Integration and the CFD information to provide neutron-gamma discrimination. The word type is identified in the 4 upper bits as type 0xf.\\
-Example of identifying the Short CHarge Integration word type:\\
-
-\begin{tabular}{ccccccccc}
-Word IX &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xF00461FF & \& & 0xF0000000 & $>>$ & 28 & = & 0xF & = & 15\\
-\end{tabular}\\
-
-\noindent
-Two examples of unpacking the Short Charge Integration value:\\
-
-\begin{tabular}{ccccccccc}
-Word IX &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xF00461FF & \& & 0x001FFFFF & $>>$ & 0 & = & 0x000001FF & = & 511\\
-0xF00465B5 & \& & 0x001FFFFF & $>>$ & 0 & = & 0x000005B5 & = & 1461\\
-\end{tabular}\\
-
-%%%%%%%%%%%%%%
-
-\section{Long Charge Integration}
-Note that Word VIII and IX are only read out for the DESCANT detector type.\\
-
-\noindent
-The 19 bits of the Long Charge Integration are provided in words IX as bits 19-27 and X as bits 22-31.\\
-Example of extracting the Long Charge Integration:\\
-
-\begin{tabular}{ccccccccc}
-Word IX/X &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xF044A5B5 & \& & 0x0FF80000 & $>>$ & 19 & = & 0x08 & = & 8\\
-0x02C4A998 & \& & 0x7FE00000 & $>>$ & 21 & = & 0x16 & = & 22\\
-\end{tabular}\\
-
-\noindent
-The upper and lower bits of the Long Charge Integration can then be combined to make the full Long Charge Integration. This is done in two steps by shifting the upper bits and adding the lower bits:\\
-
-\begin{tabular}{ccccccr}
-\multicolumn{3}{c}{Build Long Integration} & & Hex result & & Decimal result\\
-0x0016 & $<<$ & 9 & = & 0x2000\\
-0x2000 & $||$ & 0x08 & = & 0x2008 & = & 8200\\
-\end{tabular}
-
-%%%%%%%%%%%%%
-\section{Zero-Crossing Time}
-Note that Word VIII and IX are only read out for the DESCANT detector type.\\
-
-\noindent
-The Zero-Crossing Time is provided in word X as the 21 lower bits. This is the result of a CFD algorithm processing the signal after it has been integrated.\\
-
-\noindent
-Two examples of unpacking the Zero-Crossing Time value:\\
-
-\begin{tabular}{ccccccccc}
-Word X &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x78000052 & \& & 0x001FFFFF & $>>$ & 0 & = & 0x00000052 & = & 82\\
-0x780000F6 & \& & 0x001FFFFF & $>>$ & 0 & = & 0x000000F6 & = & 246\\
-\end{tabular}\\
-
-%%%%%%%%%%%%%%
-\section{Event Trailer}
-The Event Trailer is provided in word XI and it indicates the end of the event fragment. The type is identified in the 4 upper bits as type 14.\\
-Example of identifying the Event Trailer word type:\\
-
-\begin{tabular}{ccccccccc}
-Word XI &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xEEEEEEEE & \& & 0xF0000000 & $>>$ & 28 & = & 0xE & = & 14\\
-\end{tabular}
-
-\noindent
-The 14 lower bits of the timestamp is repeated in the event trailer. This can be used as an additional check to ensure the event is not corrupted. An example of unpacking the lower bits of the Timestamp value from the Event Trailer word:\\
-
-\begin{tabular}{ccccccccr}
-Word XI &  & Mask & & Shift & & Hex result & & Decimal result\\
-0xE074A998 & \& & 0x0003FFFF & $>>$ & 0 & = & 0x0000A998 & = & 43416\\
-\end{tabular}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{GRIF-C}
-Not yet fully defined.\\
-
-Additional information will be produced from the GRIF-C such as statistics and information on any events which have been dropped and did not make it to the disk file.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{}
-\section{List of Packet Type Identifiers}
-The first 4 bits of some 32-bit words contain a packet type identifier. These can be used to ensure correct identification of data words and appropriate use of the words.\\
-
-\noindent An example of identifying a Header word type, the same method is used to get all packet type identifiers:\\
-\begin{tabular}{ccccccccc}
-Word I &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x8074A998 & \& & 0xF000000 & $>>$ & 28 & = & 0x8 & = & 8\\
-\end{tabular}\\
-
-\noindent A full list of packet types is listed here:\\
-
-\begin{tabular}{ccc}
-Packet Type & Packet Type & Name\\
-(Hexadecimal) & (Decimal) & \\
-0x8 & 8 & Header word (Start of event)\\
-0x9 & 9 &  Channel Trigger ID word\\
-0xA & 10 & Timestamp Lower bits word\\
-0xB & 11 & Deadtime and Timestamp Upper bits word\\
-0xC & 12 & Waveform sample\\
-0xD & 13 & Network Packet ID\\
-0xE & 14 & Trailer word (End of event)\\
-0xF & 15 & Lower bits of Long Charge \\
-& & Integration and Short Charge Integration\\
-\end{tabular}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\section{List of Bit Masks and Bit Shifts}
-A full list of bit masks is given here. See individual sections for the meanings:\\
-
-\begin{tabular}{ccc}
-Mask & Shift & Name\\
-0x0C000000 & 26 & Pile-Up Type\\
-0x03800000 & 23 & Data Type\\
-0x00700000 & 20 & Number of Filter Patterns\\
-0x000FFFF0 & 4 & Address\\
-0x0000000F & 0 & Detector Type\\
-0x7FFF0000 & 0 & Master Filter Patterns Passed\\
-0x0000FFFF & 0 & PPG Pattern\\
-0x7FFFFFFF & 0 & Master Filter ID\\
-0x0FFFFFFF & 0 & Channel Trigger ID\\
-0x0FFFFFFF & 0 & Network Packet ID\\
-0x0FFFFFFF & 0 & Timestamp Lower Bits\\
-0x00003FFF & 0 & Timestamp Upper Bits\\
-0x0FFFC000 & 14 & Deadtime\\
-0x7C000000 & 26 & K Value Lower Bits\\
-0x7C000000 & 26 & K Value Upper Bits\\
-0x03FFFFFF & 0 & Pulse Height Signal\\
-0x03FFFFFF & 0 & CFD Timing Signal\\
-0x001FFFFF & 0 & Zero-Crossing Time\\
-0x001FFFFF & 0 & Short Charge Integration\\
-0x0FF80000 & 19 & Long Charge Integration Upper Bits\\
-0x7FE00000 & 21 & Long Charge Integration Lower Bits\\
+\begin{table}
+\begin{center}
+\begin{tabular}{cc}
+\hline
+\hline
+Data item name & GRSISort data member name\\
+\hline
+Module Type & \texttt{DataType} \\
+Address & \texttt{ChannelAddress} \\
+Detector Type & \texttt{DetectorType} \\
+Network Packet Counter Value & \texttt{NetworkPacketNumber} \\
+Filter Patterns & \texttt{TriggerBitPattern}\\
+Filter Condition Counter Value & \texttt{TriggerId}\\
+Channel Trigger Counter Value & \texttt{ChannelId} \\
+Timestamp low bits & \texttt{TimeStampLow} \\
+Timestamp high bits & \texttt{TimeStampHigh} \\
+Deadtime & \texttt{DeadTime} \\
+Channel Accepted Counter Value & \texttt{AcceptedChannelId} \\
+Pile-Up Type & \texttt{NumberOfPileups}\\
+Waveform data & \texttt{wavebuffer} \\
+Integration Length & \texttt{KValue} \\
+Pulse Height Signal & \texttt{Charge} \\
+CFD Signal & \texttt{Cfd} \\
+Short Charge Integration & \texttt{ccShort} \\
+Long Charge Integration & \texttt{ccLong} \\
+Zero-Crossing Time & \texttt{Zc} \\
+\hline
+\hline
 \end{tabular}
+\caption{GRSISort data member names associated with data items.}
+\label{table.grsisort}
+\end{center}
+\end{table}
 
 \end{document}
