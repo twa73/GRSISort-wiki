@@ -914,7 +914,7 @@ Over the lifetime of the data acquisition system, the data format is expected to
 		\item Different header format than GRF3. Header word contains the following information (bit size): Packet Type (4), Pile-Up Type (2), Module Type (3), Number Filter Patterns (3), Address (16), Detector Type (4).
       \item Different GRIF-16 / GRIF-4G word III format. Word III contains the following information (bit size): Fixed 00 (2), Filter Patterns (14), PPG pattern (16).
       \item Different GRIF-16 word IX format. Word IX contains the following information (bit size): Integration length low bits (5), CFD (26).
-		\item Different trailer format than GRF3. Trailer word contains the following information (bit size): Packet Type (4), Event Trailer (10), Event Trailer - Repeated Time Stamp low bits (14).
+		\item Different trailer format than GRF3. Trailer word contains the following information (bit size): Packet Type (4), Event Trailer (14), Event Trailer - Repeated Time Stamp low bits (14).
 		\item This was the first bank to include scaler events.
       \item This bank did not have PPG events.
 	\end{itemize}
@@ -1169,5 +1169,90 @@ Zero-Crossing Time & \texttt{Zc} \\
 \label{table.grsisort}
 \end{center}
 \end{table}
+
+\begin{landscape}
+\begin{table}
+\caption{Old GRIFFIN GRIF-16 fragment event format, bank GRF2. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets. Words with an asterisk might be repeated within a single fragment event.}
+\begin{tabular*}{\textwidth}{p{0.9cm}|p{2.25cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|c}
+\cline{2-9}
+I& Packet Type (4) {\bf 0x8} & Pile-Up Type (2) & Module Type (3) & Num. Filter Patterns (3) & \multicolumn{3}{p{8.8cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
+\cline{2-9}
+II & Packet Type (4) {\bf 0xd} & \multicolumn{7}{p{15.4cm}|}{\centering{Network Packet Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+III & Fixed 00 (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Filter Patterns (14)}} & \multicolumn{4}{p{8.8cm}|}{\centering{PPG pattern (10)}} & 4~bytes\\
+\cline{2-9}
+IV* & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Filter Condition Counter Value (31)}} & 4~bytes\\
+\cline{2-9}
+V & Packet Type (4) {\bf 0x9} & \multicolumn{7}{p{15.4cm}|}{\centering{Channel Hit Detection Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+VI & Packet Type (4) {\bf 0xa} & \multicolumn{7}{p{15.4cm}|}{\centering{Time Stamp low bits (28)}} & 4~bytes\\
+\cline{2-9}
+VII & Packet Type (4) {\bf 0xb} & \multicolumn{3}{p{6.6cm}|}{\centering{Deadtime (14)}} & \multicolumn{4}{p{8.8cm}|}{\centering{Time Stamp high bits (14)}} & 4~bytes\\
+\cline{2-9}
+VIIa* & Packet Type (4) {\bf 0xc} & \multicolumn{7}{p{15.4cm}|}{\centering{Waveform Sample (28)}} & 4~bytes\\
+\cline{2-9}
+VIII & Fixed 0 (1) & Int. Len. 1 high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height 1 (26)}} & 4~bytes\\
+\cline{2-9}
+IX & Fixed 0 (1) & Int. Len. 1 low bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{CFD 1 (26)}} & 4~bytes\\
+\cline{2-9}
+X & Fixed 0 (1) & Int. Len. 2 high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height 2 (26)}} & 4~bytes\\
+\cline{2-9}
+XI & Fixed 0 (1) & Int. Len. 2 low bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{CFD 2 (26)}} & 4~bytes\\
+\cline{2-9}
+XII & Fixed 0 (1) & Int. Len. 3 high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height 3 (26)}} & 4~bytes\\
+\cline{2-9}
+XIII & Fixed 0 (1) & Int. Len. 3 low bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{CFD 3 (26)}} & 4~bytes\\
+\cline{2-9}
+XIV & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{Event Trailer (14)} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
+\cline{2-9}
+\multicolumn{9}{r}{Total one hit (words I-IX,XIV):} & 36 bytes\\
+\multicolumn{9}{r}{Total two hits (words I-XI,XIV):} & 44 bytes\\
+\multicolumn{9}{r}{Total three hits (words I-XIV):} & 52 bytes\\
+\end{tabular*}
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}
+\caption{Old GRIFFIN GRIF-16 fragment event format, bank GRF1. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets. Words with an asterisk might be repeated within a single fragment event.}
+\begin{tabular*}{\textwidth}{p{0.9cm}|p{2.25cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|c}
+\cline{2-9}
+I& Packet Type (4) {\bf 0x8} & Num. Filter Patterns (3) & Module Type (3) & Pile-Up Type (3) & \multicolumn{3}{p{8.8cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
+\cline{2-9}
+II & Packet Type (4) {\bf 0xd} & \multicolumn{7}{p{15.4cm}|}{\centering{Network Packet Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+III & Fixed 00 (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Filter Patterns (14)}} & \multicolumn{4}{p{8.8cm}|}{\centering{PPG pattern (10)}} & 4~bytes\\
+\cline{2-9}
+IV* & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Filter Condition Counter Value (31)}} & 4~bytes\\
+\cline{2-9}
+V & Packet Type (4) {\bf 0x9} & \multicolumn{7}{p{15.4cm}|}{\centering{Channel Hit Detection Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+VI & Packet Type (4) {\bf 0xa} & \multicolumn{7}{p{15.4cm}|}{\centering{Time Stamp low bits (28)}} & 4~bytes\\
+\cline{2-9}
+VII & Packet Type (4) {\bf 0xb} & \multicolumn{3}{p{6.6cm}|}{\centering{Deadtime (14)}} & \multicolumn{4}{p{8.8cm}|}{\centering{Time Stamp high bits (14)}} & 4~bytes\\
+\cline{2-9}
+VIIa* & Packet Type (4) {\bf 0xc} & \multicolumn{7}{p{15.4cm}|}{\centering{Waveform Sample (28)}} & 4~bytes\\
+\cline{2-9}
+VIII & Fixed 0 (1) & Int. Len. high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height 1 (26)}} & 4~bytes\\
+\cline{2-9}
+IX & Fixed 0 (1) & Int. Len. low bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{CFD 1 (26)}} & 4~bytes\\
+\cline{2-9}
+X & Fixed 0 (1) & Int. Len. high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height 2 (26)}} & 4~bytes\\
+\cline{2-9}
+XI & Fixed 0 (1) & Int. Len. low bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{CFD 2 (26)}} & 4~bytes\\
+\cline{2-9}
+XII & Fixed 0 (1) & Int. Len. high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height 3 (26)}} & 4~bytes\\
+\cline{2-9}
+XIII & Fixed 0 (1) & Int. Len. low bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{CFD 3 (26)}} & 4~bytes\\
+\cline{2-9}
+XIV & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{Event Trailer (14)} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
+\cline{2-9}
+\multicolumn{9}{r}{Total one hit (words I-IX,XIV):} & 36 bytes\\
+\multicolumn{9}{r}{Total two hits (words I-XI,XIV):} & 44 bytes\\
+\multicolumn{9}{r}{Total three hits (words I-XIV):} & 52 bytes\\
+\end{tabular*}
+\end{table}
+\end{landscape}
+
 
 \end{document}
