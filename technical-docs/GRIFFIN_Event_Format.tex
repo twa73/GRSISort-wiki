@@ -313,7 +313,7 @@ I& Packet Type (4) {\bf 0x8} & Module Type (3) & Word Count (5) & \multicolumn{4
 \cline{2-9}
 II & Packet Type (4) {\bf 0xd} & \multicolumn{7}{p{15.4cm}|}{\centering{Network Packet Counter Value (28)}} & 4~bytes\\
 \cline{2-9}
-II & Fixed 00 (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Filter Patterns (14)}} & Waveform Ind. (1) & \multicolumn{2}{p{4.4cm}|}{\centering{reserved (10)}} & Pile-up type (5) & 4~bytes\\
+III & Fixed 00 (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Filter Patterns (14)}} & Waveform Ind. (1) & \multicolumn{2}{p{4.4cm}|}{\centering{reserved (10)}} & Pile-up type (5) & 4~bytes\\
 \cline{2-9}
 IV* & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Filter Condition Counter Value (31)}} & 4~bytes\\
 \cline{2-9}
@@ -436,15 +436,16 @@ Word VIII &  & Mask & & Shift & & Hex result & & Decimal result\\
 
 %%%%%%%%%%%%%
 \subsection{CFD Signal}
-The timing from a CFD algorithm is provided as a signed integer in word VIII as the 22 lowest bits. The value given in the CFD word is the correction to the time stamp. This value should be added to the time stamp. The value ranges from -524288 to 524287 and is in units of 10 nanoseconds.\\
+The timing from a CFD algorithm is provided as a signed integer in word VIII as the 22 lowest bits. The value given in the CFD word is the corrected lowest 18 bits of the time stamp and an additional four bits to specify the sub-timestamp timing. The sub-timestamp timing is given in sixteenths of a timestamp, or 10/16ths of a ns. The value ranges from 0 to 4194303 and is in units of 10/16 nanoseconds. To see the CFD value in timestamp units, divide it by 16.\\
 
 Two examples of unpacking the CFD value:\\
 
-\begin{tabular}{ccccccccc}
-Word IX &  & Mask & & Shift & & Hex result & & Decimal result\\
-0x78000052 & \& & 0x003FFFFF & $>>$ & 0 & = & 0x00000052 & = & 82\\
-0x780000F6 & \& & 0x003FFFFF & $>>$ & 0 & = & 0x000000F6 & = & 246\\
+\begin{tabular}{cccccccccccc}
+Word IX &  & Mask & & Shift & & Hex result & & Decimal result & & Decimal value (timestamp units)\\
+0x78000052 & \& & 0x003FFFFF & $>>$ & 0 & = & 0x00000052 & = & 82 & = & 5.125\\
+0x780000F6 & \& & 0x003FFFFF & $>>$ & 0 & = & 0x000000F6 & = & 246 & = & 15.375\\
 \end{tabular}\\
+
 
 %%%%%%%%%%%%%
 \subsection{Event Trailer}
@@ -911,12 +912,16 @@ Over the lifetime of the data acquisition system, the data format is expected to
 \item GRF2:
 	\begin{itemize}
 		\item Different header format than GRF3. Header word contains the following information (bit size): Packet Type (4), Pile-Up Type (2), Module Type (3), Number Filter Patterns (3), Address (16), Detector Type (4).
+      \item Different GRIF-16 / GRIF-4G word III format. Word III contains the following information (bit size): Fixed 00 (2), Filter Patterns (14), PPG pattern (16).
+      \item Different GRIF-16 word IX format. Word IX contains the following information (bit size): Integration length low bits (5), CFD (26).
 		\item Different trailer format than GRF3. Trailer word contains the following information (bit size): Packet Type (4), Event Trailer (10), Event Trailer - Repeated Time Stamp low bits (14).
 		\item This was the first bank to include scaler events.
+      \item This bank did not have PPG events.
 	\end{itemize}
 \item GRF1:
 	\begin{itemize}
 		\item Different header format than GRF2. Header word contains the following information (bit size): Packet Type (4), Number Filter Patterns (4), Module Type (3), Pile-Up Type (3), Address (14), Detector Type (4).
+      \item This bank did not have PPG events.
 	\end{itemize}
 \end{itemize}
 
