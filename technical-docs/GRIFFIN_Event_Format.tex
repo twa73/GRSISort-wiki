@@ -907,6 +907,8 @@ Word VIII &  & Mask & & Shift & & Hex result & & Decimal result\\
 \section{Bank version information}
 Over the lifetime of the data acquisition system, the data format is expected to change. Care will be taken to make these changes backward compatible, but occasionally, this will not be possible. In that case, the bank name will be used to track the data format used. This document will be maintained with the current data format. Differences between the current data format and the older data formats will be detailed in this section. The current bank name is GRF3.
 
+Old GRIF-16 data format tables are included in section \ref{sec.tables}.
+
 \begin{itemize}
 \item GRF3: current bank name
 \item GRF2:
@@ -941,6 +943,7 @@ Bit Weight: & \multicolumn{4}{l}{32,768} & \multicolumn{4}{|l}{2,048} &\multicol
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Reference tables}
+\label{sec.tables}
 
 \begin{table}[h]
 \begin{center}
@@ -1175,7 +1178,7 @@ Zero-Crossing Time & \texttt{Zc} \\
 \caption{Old GRIFFIN GRIF-16 fragment event format, bank GRF2. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets. Words with an asterisk might be repeated within a single fragment event.}
 \begin{tabular*}{\textwidth}{p{0.9cm}|p{2.25cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|c}
 \cline{2-9}
-I& Packet Type (4) {\bf 0x8} & Pile-Up Type (2) & Module Type (3) & Num. Filter Patterns (3) & \multicolumn{3}{p{8.8cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
+I& Packet Type (4) {\bf 0x8} & Pile-Up Type (2) & Module Type (3) & Num. Filter Patterns (3) & \multicolumn{3}{p{6.6cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
 \cline{2-9}
 II & Packet Type (4) {\bf 0xd} & \multicolumn{7}{p{15.4cm}|}{\centering{Network Packet Counter Value (28)}} & 4~bytes\\
 \cline{2-9}
@@ -1203,7 +1206,7 @@ XII & Fixed 0 (1) & Int. Len. 3 high bits (5) & \multicolumn{6}{p{13.2cm}|}{\cen
 \cline{2-9}
 XIII & Fixed 0 (1) & Int. Len. 3 low bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{CFD 3 (26)}} & 4~bytes\\
 \cline{2-9}
-XIV & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{Event Trailer (14)} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
+XIV & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{\centering{reserved (14)}} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
 \cline{2-9}
 \multicolumn{9}{r}{Total one hit (words I-IX,XIV):} & 36 bytes\\
 \multicolumn{9}{r}{Total two hits (words I-XI,XIV):} & 44 bytes\\
@@ -1217,7 +1220,7 @@ XIV & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{Event Trailer (14)}
 \caption{Old GRIFFIN GRIF-16 fragment event format, bank GRF1. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets. Words with an asterisk might be repeated within a single fragment event.}
 \begin{tabular*}{\textwidth}{p{0.9cm}|p{2.25cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|c}
 \cline{2-9}
-I& Packet Type (4) {\bf 0x8} & Num. Filter Patterns (3) & Module Type (3) & Pile-Up Type (3) & \multicolumn{3}{p{8.8cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
+I& Packet Type (4) {\bf 0x8} & Num. Filter Patterns (3) & Module Type (3) & Pile-Up Type (3) & \multicolumn{3}{p{6.6cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
 \cline{2-9}
 II & Packet Type (4) {\bf 0xd} & \multicolumn{7}{p{15.4cm}|}{\centering{Network Packet Counter Value (28)}} & 4~bytes\\
 \cline{2-9}
@@ -1245,7 +1248,7 @@ XII & Fixed 0 (1) & Int. Len. high bits (5) & \multicolumn{6}{p{13.2cm}|}{\cente
 \cline{2-9}
 XIII & Fixed 0 (1) & Int. Len. low bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{CFD 3 (26)}} & 4~bytes\\
 \cline{2-9}
-XIV & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{Event Trailer (14)} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
+XIV & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{\centering{reserved (14)}} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
 \cline{2-9}
 \multicolumn{9}{r}{Total one hit (words I-IX,XIV):} & 36 bytes\\
 \multicolumn{9}{r}{Total two hits (words I-XI,XIV):} & 44 bytes\\
