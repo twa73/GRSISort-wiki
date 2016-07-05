@@ -8,6 +8,7 @@ Calibration files (Cal Files) are the files ending in a __.cal__ extension. They
 - Set a charge integration parameter
 - Calibrate CFD, LED and Time
 - Calibrate Efficiency
+- Set a Time Offset for a channel's Timestamps (LaBr)
 
 Some of this information is contained in the ODB which is read out by __grsisort__ from the start of the __.mid__ file. The [[Calibration | Calibration ]] classes can be used to set these variables in TChannel and create cal files as well.
 
@@ -35,6 +36,7 @@ ENGChi2:     0.000000
 EffCoeff:  
 EFFChi2:   0.000000
 TIMECoeff:  0.000000	271.279000	-0.739159	
+TimeOffset: 0.0
 }
 ```
 ``Name`` sets the mnemonic for the data from the address listed with ``Address``. If this calibration file is read in while sorting a MIDAS file to a `FragmentTree`, `Number` will be the `ChannelNumber` assigned to this address in the `FragmentTree`.
@@ -57,6 +59,7 @@ Other possible calibration parameters include:
 - `CFDCoeff`
 - `EffCoeff`
 - `FileInt`
+- `TimeOffSet`
 
 ## ODB #
 Using **odbgains.C** on a cal file writes a bash script that will allows easy setting of the odb gains parameters for GRIFFIN.
