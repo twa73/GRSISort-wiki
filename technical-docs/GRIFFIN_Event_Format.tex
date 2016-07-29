@@ -1175,6 +1175,80 @@ Zero-Crossing Time & \texttt{Zc} \\
 
 \begin{landscape}
 \begin{table}
+\caption{GRIFFIN GRIF-16 fragment event format, bank GRF4. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets. Words with an asterisk might be repeated within a single fragment event.}
+\begin{tabular*}{\textwidth}{p{0.9cm}|p{2.25cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|c}
+\cline{2-9}
+I& Packet Type (4) {\bf 0x8} & Module Type (3) & Word Count (5) & \multicolumn{4}{p{8.8cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
+\cline{2-9}
+II & Packet Type (4) {\bf 0xd} & \multicolumn{7}{p{15.4cm}|}{\centering{Network Packet Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+III & Fixed 00 (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Filter Patterns (14)}} & Waveform Ind. (1) & \multicolumn{2}{p{4.4cm}|}{\centering{reserved (10)}} & Pile-up type (5) & 4~bytes\\
+\cline{2-9}
+IV* & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Filter Condition Counter Value (31)}} & 4~bytes\\
+\cline{2-9}
+V & Packet Type (4) {\bf 0x9} & \multicolumn{7}{p{15.4cm}|}{\centering{Channel Hit Detection Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+VI & Packet Type (4) {\bf 0xa} & \multicolumn{7}{p{15.4cm}|}{\centering{Time Stamp low bits (28)}} & 4~bytes\\
+\cline{2-9}
+VII & Packet Type (4) {\bf 0xb} & \multicolumn{3}{p{6.6cm}|}{\centering{Deadtime (14)}} & \multicolumn{4}{p{8.8cm}|}{\centering{Time Stamp high bits (14)}} & 4~bytes\\
+\cline{2-9}
+VIIa* & Packet Type (4) {\bf 0xc} & \multicolumn{7}{p{15.4cm}|}{\centering{Waveform Sample (28)}} & 4~bytes\\
+\cline{2-9}
+VIII & Fixed 0 (1) & Int. Len. high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height (26)}} & 4~bytes\\
+\cline{2-9}
+IX & Fixed 0 (1) & \multicolumn{2}{p{4.4cm}|}{Int. Length low bits (9)} & \multicolumn{5}{p{11.0cm}|}{\centering{CFD (22)}} & 4~bytes\\
+\cline{2-9}
+X & Fixed 0 (1) & reserved (7) & \multicolumn{2}{p{4.4cm}|}{Num. hits (8)} & reserved (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Int. Len. 2 (14)}} & 4~bytes\\
+\cline{2-9}
+XI & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Pulse Height 2 (31)}} & 4~bytes\\
+\cline{2-9}
+XII & Fixed 0 (1) & reserved (1) & \multicolumn{2}{p{4.4cm}|}{Int. Len. 4 (14)} & reserved (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Int. Len. 3 (14)}} & 4~bytes\\
+\cline{2-9}
+XIII & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Pulse Height 3 (31)}} & 4~bytes\\
+\cline{2-9}
+XIV & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Pulse Height 4 (31)}} & 4~bytes\\
+\cline{2-9}
+XV & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{Channel Accepted Hit Counter Value (14)} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
+\cline{2-9}
+\multicolumn{9}{r}{Total one hit:} & 36 bytes\\
+\end{tabular*}
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}
+\caption{GRIFFIN GRIF-16 fragment event format, bank GRF3. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets. Words with an asterisk might be repeated within a single fragment event.}
+\begin{tabular*}{\textwidth}{p{0.9cm}|p{2.25cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|c}
+\cline{2-9}
+I& Packet Type (4) {\bf 0x8} & Module Type (3) & Word Count (5) & \multicolumn{4}{p{8.8cm}|}{\centering{Address (16)}} & Det. Type (4) & 4~bytes\\
+\cline{2-9}
+II & Packet Type (4) {\bf 0xd} & \multicolumn{7}{p{15.4cm}|}{\centering{Network Packet Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+III & Fixed 00 (2) & \multicolumn{3}{p{6.6cm}|}{\centering{Filter Patterns (14)}} & Waveform Ind. (1) & \multicolumn{2}{p{4.4cm}|}{\centering{reserved (10)}} & Pile-up type (5) & 4~bytes\\
+\cline{2-9}
+IV* & Fixed 0 (1) & \multicolumn{7}{p{15.4cm}|}{\centering{Filter Condition Counter Value (31)}} & 4~bytes\\
+\cline{2-9}
+V & Packet Type (4) {\bf 0x9} & \multicolumn{7}{p{15.4cm}|}{\centering{Channel Hit Detection Counter Value (28)}} & 4~bytes\\
+\cline{2-9}
+VI & Packet Type (4) {\bf 0xa} & \multicolumn{7}{p{15.4cm}|}{\centering{Time Stamp low bits (28)}} & 4~bytes\\
+\cline{2-9}
+VII & Packet Type (4) {\bf 0xb} & \multicolumn{3}{p{6.6cm}|}{\centering{Deadtime (14)}} & \multicolumn{4}{p{8.8cm}|}{\centering{Time Stamp high bits (14)}} & 4~bytes\\
+\cline{2-9}
+VIIa* & Packet Type (4) {\bf 0xc} & \multicolumn{7}{p{15.4cm}|}{\centering{Waveform Sample (28)}} & 4~bytes\\
+\cline{2-9}
+VIII & Fixed 0 (1) & Int. Len. high bits (5) & \multicolumn{6}{p{13.2cm}|}{\centering{Pulse Height (26)}} & 4~bytes\\
+\cline{2-9}
+IX & Fixed 0 (1) & \multicolumn{2}{p{4.4cm}|}{Int. Length low bits (9)} & \multicolumn{5}{p{11.0cm}|}{\centering{CFD (22)}} & 4~bytes\\
+\cline{2-9}
+X & Packet Type (4) {\bf 0xe} & \multicolumn{3}{p{6.6cm}|}{Channel Accepted Hit Counter Value (14)} & \multicolumn{4}{p{8.8cm}|}{Event Trailer - repeated Channel Hit Detection Counter Value low bits (14)} & 4~bytes\\
+\cline{2-9}
+\multicolumn{9}{r}{Total one hit:} & 36 bytes\\
+\end{tabular*}
+\end{table}
+
+\end{landscape}
+\begin{landscape}
+\begin{table}
 \caption{Old GRIFFIN GRIF-16 fragment event format, bank GRF2. Format is based on 4-byte (32-bit) words. The number of bits for each sub-word is indicated in brackets. Words with an asterisk might be repeated within a single fragment event.}
 \begin{tabular*}{\textwidth}{p{0.9cm}|p{2.25cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|c}
 \cline{2-9}
