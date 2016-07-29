@@ -13,7 +13,7 @@ grsisort -a fragment04242_000.root mycal.cal myruninfo.info
 The last .info file input on the command line is the one that GRSISort uses.
 
 # RunInfo file format #
-An [example RunInfo file](https://github.com/GRIFFINCollaboration/GRSISort/blob/master/util/grsiruninfoexample.info) is located in the `util` directory and is copied here:
+An [example RunInfo file](https://github.com/GRIFFINCollaboration/GRSISort/blob/master/example/grsiruninfoexample.info) is located in the `example` directory and is copied here:
 ```
 /////////////////////////////////////
 /////    Example *.info file   //////
@@ -28,9 +28,12 @@ AddBackWindow: 15.0  // 150.0 nseconds
 
 //The Array position in mm.
 HPGePos:       110.0 // 110.0 mm 
-```
 
+//Bad Cycles
+BadCycle: 5 25 42 10
+```
 As with the calibration file, the RunInfo file interprets `//` as a comment and the parameter names are case-insensitive. This example specifies the following parameters:
 - The event building window is set with `BuildWindow` and in this example is set to 200 (which, with our 10 ns clock ticks is actually 2 microseconds).
 - The addback time window is set with `AddbackWindow` and in this examples is set to 15 (or 150 ns).
 - The radial position of the clover faces is set with `HPGePos`. Here, it is set to 110.0 mm. Other GRIFFIN values are 145 and 165 mm.
+- Bad cycles can be added to the bad cycle list with `BadCycle`. This command can be used multiple times in one info file, and/or written as a list as shown above. 

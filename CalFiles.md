@@ -8,6 +8,7 @@ Calibration files (Cal Files) are the files ending in a __.cal__ extension. They
 - Set a charge integration parameter
 - Calibrate CFD, LED and Time
 - Calibrate Efficiency
+- Set a Time Offset for a channel's Timestamps (LaBr)
 
 Some of this information is contained in the ODB which is read out by __grsisort__ from the start of the __.mid__ file. The [[Calibration | Calibration ]] classes can be used to set these variables in TChannel and create cal files as well.
 
@@ -35,6 +36,7 @@ ENGChi2:     0.000000
 EffCoeff:  
 EFFChi2:   0.000000
 TIMECoeff:  0.000000	271.279000	-0.739159	
+TimeOffset: 0.0
 }
 ```
 ``Name`` sets the mnemonic for the data from the address listed with ``Address``. If this calibration file is read in while sorting a MIDAS file to a `FragmentTree`, `Number` will be the `ChannelNumber` assigned to this address in the `FragmentTree`.
@@ -43,6 +45,7 @@ Beyond these three primary numbers, any additional lines will set calibration va
 - `EngCoeff` sets the energy calibration coefficients, assuming a polynomial calibration from charge to energy. The first value is the zeroth-order coefficient (offset, set to `-0.743423` in the example above), the second is the first-order coefficient (slope, set to `1.419230` in the example above), etc.
 - `Integration` sets the integration parameter that is used in the energy calibration.
 - `TIMECoeff` or `Walk` sets the coefficients for the low-energy walk correction of the form t<sub>diff</sub> = a<sub>0</sub>+a<sub>1</sub>E<sup>a<sub>2</sub></sup>. In the example above, a<sub>0</sub> is 0, a<sub>1</sub> is 271.279, and a<sub>2</sub> is -0.739159.
+- `TimeOffset` is an offset to be removed from the time stamp from the hit. Useful for TAC's. The returned value is Timestamp - TimeOffset.
 
 Other possible calibration parameters include:
 - `Number`

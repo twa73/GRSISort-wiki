@@ -1,0 +1,27 @@
+var class_t_p_p_g_data =
+[
+    [ "TPPGData", "class_t_p_p_g_data.html#a06f12c41efedada2ceb2960bb6b1b0ff", null ],
+    [ "TPPGData", "class_t_p_p_g_data.html#a5a12b04038420d95a7c90d42ea14c24c", null ],
+    [ "~TPPGData", "class_t_p_p_g_data.html#a282ff2e95f70b4476784b0fc1ac2614c", null ],
+    [ "Clear", "class_t_p_p_g_data.html#a788c12788a3031829175ba63c5fb6d1a", null ],
+    [ "Copy", "class_t_p_p_g_data.html#a96bdc6025227d553dc1ba7033fe155fa", null ],
+    [ "GetHighTimeStamp", "class_t_p_p_g_data.html#a89ccaf9db21ee5cbd74ff9ebb0b41dfa", null ],
+    [ "GetLowTimeStamp", "class_t_p_p_g_data.html#a0b6633acea241a54b312379ddc1bd7eb", null ],
+    [ "GetNetworkPacketId", "class_t_p_p_g_data.html#a0960a95fd9b17ba7fd56e427aaf89cc3", null ],
+    [ "GetNewPPG", "class_t_p_p_g_data.html#a34b015eb7d329176e3cc8e963f17f466", null ],
+    [ "GetOldPPG", "class_t_p_p_g_data.html#a9262649670555f60987609f080e274d2", null ],
+    [ "GetTimeStamp", "class_t_p_p_g_data.html#a1f7c4c97d3aed437304752169dab7f10", null ],
+    [ "Print", "class_t_p_p_g_data.html#a4e5fedd5a1b95dfd21ed6761c29b5a50", null ],
+    [ "SetHighTimeStamp", "class_t_p_p_g_data.html#a4e43f132a65f509a8145db5912342b52", null ],
+    [ "SetLowTimeStamp", "class_t_p_p_g_data.html#afc03ef7c9dada76ba27d3270c998bdb2", null ],
+    [ "SetNetworkPacketId", "class_t_p_p_g_data.html#a3f62e974327228efa91e14094a17e120", null ],
+    [ "SetNewPPG", "class_t_p_p_g_data.html#a63206cb9337273bbef77718b9e5c2e16", null ],
+    [ "SetOldPPG", "class_t_p_p_g_data.html#a79e78ccbc28002197cc628f6652e81e4", null ],
+    [ "SetTimeStamp", "class_t_p_p_g_data.html#a726127286924d95e637d3d9127d49316", null ],
+    [ "fHighTimeStamp", "class_t_p_p_g_data.html#ab1a207848ee1b8973c8da48aac7db9c3", null ],
+    [ "fLowTimeStamp", "class_t_p_p_g_data.html#aead552948c90ea83dbd09140c904dc49", null ],
+    [ "fNetworkPacketId", "class_t_p_p_g_data.html#a857ac6523fdbd4f820f639719ed52618", null ],
+    [ "fNewPpg", "class_t_p_p_g_data.html#a7c1c6909c89e0bf0d81b4424a17d476d", null ],
+    [ "fOldPpg", "class_t_p_p_g_data.html#aeb32799263a1183c0f2b5d7295605cf3", null ],
+    [ "fTimeStamp", "class_t_p_p_g_data.html#a159895bf544b149ec55f1a2b01b745a5", null ]
+];

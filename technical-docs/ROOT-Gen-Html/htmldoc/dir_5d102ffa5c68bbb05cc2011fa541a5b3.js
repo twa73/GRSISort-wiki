@@ -1,0 +1,28 @@
+var dir_5d102ffa5c68bbb05cc2011fa541a5b3 =
+[
+    [ "TAnalysisTreeBuilder", "dir_1c3758f215ce45c233ebb030017b43b2.html", "dir_1c3758f215ce45c233ebb030017b43b2" ],
+    [ "TAngularCorrelation", "dir_cafc47414a090c81cd7f8adb8c8a5b0c.html", "dir_cafc47414a090c81cd7f8adb8c8a5b0c" ],
+    [ "TBetaDecay", "dir_1ae993d64e04c4e8939088a386f8b6de.html", "dir_1ae993d64e04c4e8939088a386f8b6de" ],
+    [ "TCal", "dir_13e92ebc68fde48ee20b0034e64797c9.html", "dir_13e92ebc68fde48ee20b0034e64797c9" ],
+    [ "TCSM", "dir_363de32be812da79f561d7c59e28b3d8.html", "dir_363de32be812da79f561d7c59e28b3d8" ],
+    [ "TDescant", "dir_3e9dc872fc049d80ccc64ec1e89fad2e.html", "dir_3e9dc872fc049d80ccc64ec1e89fad2e" ],
+    [ "TDetector", "dir_91ea488114914207f44c4bb7484c5182.html", "dir_91ea488114914207f44c4bb7484c5182" ],
+    [ "TGriffin", "dir_0489bf6b09ad5ac65e3d2d3f52bb4af4.html", "dir_0489bf6b09ad5ac65e3d2d3f52bb4af4" ],
+    [ "TGRSIDetector", "dir_c9748be54fcfff23452b5a7ce9682729.html", "dir_c9748be54fcfff23452b5a7ce9682729" ],
+    [ "TGRSIFit", "dir_e8b559d4913f9bad472cbfcb7ee2a960.html", "dir_e8b559d4913f9bad472cbfcb7ee2a960" ],
+    [ "TKinematics", "dir_cfe5f024f96550f46ae32fa6d0909d98.html", "dir_cfe5f024f96550f46ae32fa6d0909d98" ],
+    [ "TNucleus", "dir_82617da3d6edaeefcbed14136fb9d941.html", "dir_82617da3d6edaeefcbed14136fb9d941" ],
+    [ "TPaces", "dir_e1b411c9fa76219dff9d69ef7a5731d8.html", "dir_e1b411c9fa76219dff9d69ef7a5731d8" ],
+    [ "TPulseAnalyzer", "dir_7a86f08b623ee522186c4e6c19594b57.html", "dir_7a86f08b623ee522186c4e6c19594b57" ],
+    [ "TReaction", "dir_9f84a838314c4b2973ed753402edcdf2.html", "dir_9f84a838314c4b2973ed753402edcdf2" ],
+    [ "TRF", "dir_ded1392f571ea7ab96785274c2f76b47.html", "dir_ded1392f571ea7ab96785274c2f76b47" ],
+    [ "TS3", "dir_799b0580a8e3de77631b4ada282ceda4.html", "dir_799b0580a8e3de77631b4ada282ceda4" ],
+    [ "TSceptar", "dir_50b3647ca78e876799244414d1c70bf0.html", "dir_50b3647ca78e876799244414d1c70bf0" ],
+    [ "TSharc", "dir_9e69cfa574e9cb27ee2f64cb2ea4b307.html", "dir_9e69cfa574e9cb27ee2f64cb2ea4b307" ],
+    [ "TSiLi", "dir_c923b593c3bb988fe41584a7c5c1fc3c.html", "dir_c923b593c3bb988fe41584a7c5c1fc3c" ],
+    [ "TSRIM", "dir_9174d2e49cb91b43f97985d09cb40871.html", "dir_9174d2e49cb91b43f97985d09cb40871" ],
+    [ "TTigress", "dir_78626689a73b237e2c18e5812fffe375.html", "dir_78626689a73b237e2c18e5812fffe375" ],
+    [ "TTip", "dir_a5b203dfc33be69a2b894ab0007b6c4f.html", "dir_a5b203dfc33be69a2b894ab0007b6c4f" ],
+    [ "TTriFoil", "dir_ca978f61ace123f582666c4bb7b8a145.html", "dir_ca978f61ace123f582666c4bb7b8a145" ],
+    [ "TZeroDegree", "dir_4dd301ed9706294b34f494e351ed8fa3.html", "dir_4dd301ed9706294b34f494e351ed8fa3" ]
+];

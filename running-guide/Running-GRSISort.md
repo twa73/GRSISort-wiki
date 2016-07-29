@@ -38,7 +38,7 @@ If **-a** or **-s** are left off of the command, the fragment tree will be loade
 
 Currently accepted flags for the fragment tree sort:
   * __-a__,                creates an analysis tree to be used for doing a full analysis of the data
-  * __-s__,                sorts the fragment tree into user defined hits. 
+  * __-s__,                sorts the fragment tree into user defined hists. 
   * __-q__,                quits the grsi environment after completeing the fragment sort
   * __--no_speed__,         suppresses the output from the PROOF speedometer
   * __--work_harder__,      inputting a `<macro>.C` file, runs that macro on the sorted file
