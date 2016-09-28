@@ -110,18 +110,15 @@ $(document).ready(function(){initNavTree('class_g_h1_d.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_g_h1_d-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">GH1D Class Reference<div class="ingroups"><a class="el" href="group___g_r_o_o_t.html">GROOT</a></div></div>  </div>
+<div class="title">GH1D Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00018">18</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00011">11</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -135,36 +132,49 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a811d5e41cb5fbd7517861ae8fdbcf08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dd760e9f9d9082a97ae91bb91c17658"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a0dd760e9f9d9082a97ae91bb91c17658">GH1D</a> (const char *name, const char *title, Int_t nbinsx, Double_t xlow, Double_t xup)</td></tr>
 <tr class="separator:a0dd760e9f9d9082a97ae91bb91c17658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e5ec852412720e64f23f9e30194c227"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a5e5ec852412720e64f23f9e30194c227">~GH1D</a> ()</td></tr>
-<tr class="separator:a5e5ec852412720e64f23f9e30194c227"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fa6b1986675206fb9ea80a6b62b14e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a4fa6b1986675206fb9ea80a6b62b14e9">Draw</a> (Option_t *opt)</td></tr>
-<tr class="separator:a4fa6b1986675206fb9ea80a6b62b14e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dad2e3bff46fb95df764427d536f174"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a0dad2e3bff46fb95df764427d536f174">ExecuteEvent</a> (Int_t evnet, Int_t x, Int_t y)</td></tr>
-<tr class="separator:a0dad2e3bff46fb95df764427d536f174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a2e7fb1c82ed335bc7eefc0a7c5ef1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a46a2e7fb1c82ed335bc7eefc0a7c5ef1">GH1D</a> (const TF1 &amp;function, Int_t nbinsx, Double_t xlow, Double_t xup)</td></tr>
+<tr class="separator:a46a2e7fb1c82ed335bc7eefc0a7c5ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7bfcff1bae97f0c2dc3f5ad70b40c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a4b7bfcff1bae97f0c2dc3f5ad70b40c5">GH1D</a> (const TH1 &amp;source)</td></tr>
+<tr class="separator:a4b7bfcff1bae97f0c2dc3f5ad70b40c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ef476a6002a277f04808cab2636b74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#ac9ef476a6002a277f04808cab2636b74">Clear</a> (Option_t *opt=&quot;&quot;)</td></tr>
+<tr class="separator:ac9ef476a6002a277f04808cab2636b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2bcc0ef3fe527f7f4074d64fba747c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#ace2bcc0ef3fe527f7f4074d64fba747c">Copy</a> (TObject &amp;obj) const </td></tr>
+<tr class="separator:ace2bcc0ef3fe527f7f4074d64fba747c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d67b8ad1ae64af35195ff95b925cb7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a4d67b8ad1ae64af35195ff95b925cb7c">Draw</a> (Option_t *opt=&quot;&quot;)</td></tr>
+<tr class="separator:a4d67b8ad1ae64af35195ff95b925cb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7466f5a54d033bb1f672dc56e5fdab"><td class="memItemLeft" align="right" valign="top">TH1 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a7f7466f5a54d033bb1f672dc56e5fdab">DrawCopy</a> (Option_t *opt=&quot;&quot;, const char *name_postfix=&quot;copy&quot;) const </td></tr>
+<tr class="separator:a7f7466f5a54d033bb1f672dc56e5fdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a767a1c2a9e9674d4e4310cbc7def4e52"><td class="memItemLeft" align="right" valign="top">TH1 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a767a1c2a9e9674d4e4310cbc7def4e52">DrawNormalized</a> (Option_t *opt=&quot;&quot;, Double_t norm=1) const </td></tr>
+<tr class="separator:a767a1c2a9e9674d4e4310cbc7def4e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c947e5cb60f7d019cec113322a5096"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_g_h1_d.html">GH1D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a49c947e5cb60f7d019cec113322a5096">GetNext</a> (bool DrawEmpty=false) const </td></tr>
+<tr class="separator:a49c947e5cb60f7d019cec113322a5096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb00b40d227509de5c781c4759b042ee"><td class="memItemLeft" align="right" valign="top">TObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#acb00b40d227509de5c781c4759b042ee">GetParent</a> () const </td></tr>
+<tr class="separator:acb00b40d227509de5c781c4759b042ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae89b9253be9f79960bdf322a186b4492"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_g_h1_d.html">GH1D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#ae89b9253be9f79960bdf322a186b4492">GetPrevious</a> (bool DrawEmpty=false) const </td></tr>
+<tr class="separator:ae89b9253be9f79960bdf322a186b4492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b71afc15ab46a1daf1fb6d23cdee70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#ac9b71afc15ab46a1daf1fb6d23cdee70">GetProjectionAxis</a> () const </td></tr>
+<tr class="separator:ac9b71afc15ab46a1daf1fb6d23cdee70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00116e63a315367143653c7591c9e92a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a00116e63a315367143653c7591c9e92a">Print</a> (Option_t *opt=&quot;&quot;) const </td></tr>
+<tr class="separator:a00116e63a315367143653c7591c9e92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9c5070c9c2a0c1f9c9b2d0b46e27d3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_g_h1_d.html">GH1D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#aa9c5070c9c2a0c1f9c9b2d0b46e27d3a">Project</a> (int bins=-1)</td></tr>
+<tr class="separator:aa9c5070c9c2a0c1f9c9b2d0b46e27d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051523cd074c839f0aa31fdec78f75aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_g_h1_d.html">GH1D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a051523cd074c839f0aa31fdec78f75aa">Project</a> (double bin_low, double bin_high) const </td></tr>
+<tr class="separator:a051523cd074c839f0aa31fdec78f75aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a60ae4432d00bb548e6494cac91b77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_g_h1_d.html">GH1D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a19a60ae4432d00bb548e6494cac91b77">Project_Background</a> (double bin_low, double bin_high, double bg_bin_low, double bg_bin_high, <a class="el" href="_g_h2_base_8h.html#a3d9e66bead7d94999f3a9ad82ffc8eb6">kBackgroundSubtraction</a> mode=<a class="el" href="_g_h2_base_8h.html#a3d9e66bead7d94999f3a9ad82ffc8eb6a39a12f698664ea26b410434647b9b924">kRegionBackground</a>) const </td></tr>
+<tr class="separator:a19a60ae4432d00bb548e6494cac91b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd721fcb6bdd828918b536805ed34c0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#acd721fcb6bdd828918b536805ed34c0b">SetParent</a> (TObject *obj)</td></tr>
+<tr class="separator:acd721fcb6bdd828918b536805ed34c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc7c745cec1b661f528fb73e0f2190aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#acc7c745cec1b661f528fb73e0f2190aa">SetProjectionAxis</a> (int axis)</td></tr>
+<tr class="separator:acc7c745cec1b661f528fb73e0f2190aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf5097772496fd22039bc2b3a8fa3e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a6bf5097772496fd22039bc2b3a8fa3e0">WriteDatFile</a> (const char *outFile)</td></tr>
+<tr class="separator:a6bf5097772496fd22039bc2b3a8fa3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac990cbd8e031d9944e0265f6c224e9a5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#ac990cbd8e031d9944e0265f6c224e9a5">CheckMapStats</a> ()</td></tr>
-<tr class="separator:ac990cbd8e031d9944e0265f6c224e9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a9ef6b64e5cabeda5466281a92d0a22d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a9ef6b64e5cabeda5466281a92d0a22d3">InitGH1D</a> ()</td></tr>
-<tr class="separator:a9ef6b64e5cabeda5466281a92d0a22d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a31af5f1399311e3c7a884631ddf85e50"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a31af5f1399311e3c7a884631ddf85e50">AddToMap</a> (<a class="el" href="class_g_h1_d.html">GH1D</a> *)</td></tr>
-<tr class="separator:a31af5f1399311e3c7a884631ddf85e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a963caa79f583b4936f9d0d647d174ad9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a963caa79f583b4936f9d0d647d174ad9">RemoveFromMap</a> (<a class="el" href="class_g_h1_d.html">GH1D</a> *)</td></tr>
-<tr class="separator:a963caa79f583b4936f9d0d647d174ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a6b33866a64d8308509f500bb01e56991"><td class="memItemLeft" align="right" valign="top">static std::map&lt; <a class="el" href="class_g_h1_d.html">GH1D</a> *, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a6b33866a64d8308509f500bb01e56991">fCurrentHistMap</a></td></tr>
-<tr class="separator:a6b33866a64d8308509f500bb01e56991"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1128f2888a15392b13bc41fffc70ea94"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a1128f2888a15392b13bc41fffc70ea94">fUniqueId</a> = 0</td></tr>
-<tr class="separator:a1128f2888a15392b13bc41fffc70ea94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a682f81bca22f439ffd0bf86a725132ee"><td class="memItemLeft" align="right" valign="top">TRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#a682f81bca22f439ffd0bf86a725132ee">parent</a></td></tr>
+<tr class="separator:a682f81bca22f439ffd0bf86a725132ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5194ebcb54ac57982f9fa1ce3fe28f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_h1_d.html#aec5194ebcb54ac57982f9fa1ce3fe28f">projection_axis</a></td></tr>
+<tr class="separator:aec5194ebcb54ac57982f9fa1ce3fe28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 <p><code>#include &lt;<a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>&gt;</code></p>
@@ -180,12 +190,16 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_g_h1_d__coll__graph.svg" width="70" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_g_h1_d__coll__graph.svg" width="70" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae44794336fa7805417f019737d4737ac"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">GH1D::GH1D </td>
@@ -194,44 +208,25 @@ Static Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00014">14</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
-
-<p>References <a class="el" href="_g_h1_d_8cxx_source.html#l00040">InitGH1D()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5e5ec852412720e64f23f9e30194c227"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">GH1D::~GH1D </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00018">18</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00013">13</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
 
-<p>References <a class="el" href="_g_h1_d_8cxx_source.html#l00089">RemoveFromMap()</a>.</p>
+<p>Referenced by <a class="el" href="_g_h1_d_8cxx_source.html#l00220">Project()</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="abc4f5ddf9274edb66629eb81ff2ec16d"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">GH1D::GH1D </td>
@@ -241,17 +236,23 @@ Static Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00023">23</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
-
-<p>References <a class="el" href="_g_h1_d_8cxx_source.html#l00040">InitGH1D()</a>.</p>
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00014">14</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="addfc97aeb75f2fb7c5c8dfe643ec2351"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">GH1D::GH1D </td>
@@ -283,17 +284,23 @@ Static Private Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00026">26</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
-
-<p>References <a class="el" href="_g_h1_d_8cxx_source.html#l00040">InitGH1D()</a>.</p>
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00016">16</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a811d5e41cb5fbd7517861ae8fdbcf08d"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">GH1D::GH1D </td>
@@ -325,17 +332,23 @@ Static Private Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00029">29</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
-
-<p>References <a class="el" href="_g_h1_d_8cxx_source.html#l00040">InitGH1D()</a>.</p>
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00018">18</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a0dd760e9f9d9082a97ae91bb91c17658"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">GH1D::GH1D </td>
@@ -373,119 +386,44 @@ Static Private Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00032">32</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
-
-<p>References <a class="el" href="_g_h1_d_8cxx_source.html#l00040">InitGH1D()</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a31af5f1399311e3c7a884631ddf85e50"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GH1D::AddToMap </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_g_h1_d.html">GH1D</a> *&#160;</td>
-          <td class="paramname"><em>hist</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00085">85</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
-
-<p>References <a class="el" href="_g_h1_d_8h_source.html#l00040">fCurrentHistMap</a>, and <a class="el" href="_g_h1_d_8h_source.html#l00039">fUniqueId</a>.</p>
-
-<p>Referenced by <a class="el" href="_g_h1_d_8cxx_source.html#l00040">InitGH1D()</a>.</p>
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00020">20</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac990cbd8e031d9944e0265f6c224e9a5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GH1D::CheckMapStats </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00094">94</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
-
-<p>References <a class="el" href="_g_h1_d_8h_source.html#l00040">fCurrentHistMap</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4fa6b1986675206fb9ea80a6b62b14e9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GH1D::Draw </td>
-          <td>(</td>
-          <td class="paramtype">Option_t *&#160;</td>
-          <td class="paramname"><em>opt</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00044">44</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0dad2e3bff46fb95df764427d536f174"></a>
+<a class="anchor" id="a46a2e7fb1c82ed335bc7eefc0a7c5ef1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void GH1D::ExecuteEvent </td>
+          <td class="memname">GH1D::GH1D </td>
           <td>(</td>
-          <td class="paramtype">Int_t&#160;</td>
-          <td class="paramname"><em>evnet</em>, </td>
+          <td class="paramtype">const TF1 &amp;&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Int_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>nbinsx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Int_t&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramtype">Double_t&#160;</td>
+          <td class="paramname"><em>xlow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Double_t&#160;</td>
+          <td class="paramname"><em>xup</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -495,13 +433,168 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00104">104</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
-
-<p>References <a class="el" href="_globals_8h_source.html#l00017">DYELLOW</a>, and <a class="el" href="_globals_8h_source.html#l00006">RESET_COLOR</a>.</p>
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00024">24</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9ef6b64e5cabeda5466281a92d0a22d3"></a>
+<a class="anchor" id="a4b7bfcff1bae97f0c2dc3f5ad70b40c5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GH1D::GH1D </td>
+          <td>(</td>
+          <td class="paramtype">const TH1 &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00018">18</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac9ef476a6002a277f04808cab2636b74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GH1D::Clear </td>
+          <td>(</td>
+          <td class="paramtype">Option_t *&#160;</td>
+          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00079">79</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00061">parent</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ace2bcc0ef3fe527f7f4074d64fba747c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GH1D::Copy </td>
+          <td>(</td>
+          <td class="paramtype">TObject &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00089">89</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00061">parent</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d67b8ad1ae64af35195ff95b925cb7c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GH1D::Draw </td>
+          <td>(</td>
+          <td class="paramtype">Option_t *&#160;</td>
+          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00096">96</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+<p>Referenced by <a class="el" href="_g_root_commands_8cxx_source.html#l00052">GetProjection()</a>, <a class="el" href="_g_canvas_8cxx_source.html#l00600">GCanvas::Process1DArrowKeyPress()</a>, and <a class="el" href="_g_canvas_8cxx_source.html#l00736">GCanvas::Process1DKeyboardPress()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f7466f5a54d033bb1f672dc56e5fdab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TH1 * GH1D::DrawCopy </td>
+          <td>(</td>
+          <td class="paramtype">Option_t *&#160;</td>
+          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name_postfix</em> = <code>&quot;copy&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00113">113</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a767a1c2a9e9674d4e4310cbc7def4e52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TH1 * GH1D::DrawNormalized </td>
+          <td>(</td>
+          <td class="paramtype">Option_t *&#160;</td>
+          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Double_t&#160;</td>
+          <td class="paramname"><em>norm</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00124">124</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a49c947e5cb60f7d019cec113322a5096"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_g_h1_d.html">GH1D</a> * GH1D::GetNext </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>DrawEmpty</em> = <code>false</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00148">148</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+<p>References <a class="el" href="_g_h2_base_8cxx_source.html#l00238">GH2Base::GetNext()</a>, and <a class="el" href="_g_h1_d_8h_source.html#l00061">parent</a>.</p>
+
+<p>Referenced by <a class="el" href="_g_canvas_8cxx_source.html#l00600">GCanvas::Process1DArrowKeyPress()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb00b40d227509de5c781c4759b042ee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -509,10 +602,286 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void GH1D::InitGH1D </td>
+          <td class="memname">TObject* GH1D::GetParent </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00029">29</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00061">parent</a>.</p>
+
+<p>Referenced by <a class="el" href="_g_canvas_8cxx_source.html#l00736">GCanvas::Process1DKeyboardPress()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae89b9253be9f79960bdf322a186b4492"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_g_h1_d.html">GH1D</a> * GH1D::GetPrevious </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>DrawEmpty</em> = <code>false</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00135">135</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+<p>References <a class="el" href="_g_h2_base_8cxx_source.html#l00215">GH2Base::GetPrevious()</a>, and <a class="el" href="_g_h1_d_8h_source.html#l00061">parent</a>.</p>
+
+<p>Referenced by <a class="el" href="_g_canvas_8cxx_source.html#l00600">GCanvas::Process1DArrowKeyPress()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9b71afc15ab46a1daf1fb6d23cdee70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GH1D::GetProjectionAxis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00032">32</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00062">projection_axis</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00116e63a315367143653c7591c9e92a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GH1D::Print </td>
+          <td>(</td>
+          <td class="paramtype">Option_t *&#160;</td>
+          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00084">84</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00061">parent</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9c5070c9c2a0c1f9c9b2d0b46e27d3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_g_h1_d.html">GH1D</a> * GH1D::Project </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bins</em> = <code>-1</code></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00220">220</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00013">GH1D()</a>.</p>
+
+<p>Referenced by <a class="el" href="_g_root_commands_8cxx_source.html#l00052">GetProjection()</a>, and <a class="el" href="_g_canvas_8cxx_source.html#l00736">GCanvas::Process1DKeyboardPress()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a051523cd074c839f0aa31fdec78f75aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_g_h1_d.html">GH1D</a> * GH1D::Project </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>bin_low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>bin_high</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00161">161</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00061">parent</a>, <a class="el" href="_g_h1_d_8h_source.html#l00062">projection_axis</a>, <a class="el" href="_g_h2_d_8cxx_source.html#l00116">GH2D::ProjectionX()</a>, and <a class="el" href="_g_h2_d_8cxx_source.html#l00125">GH2D::ProjectionY()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19a60ae4432d00bb548e6494cac91b77"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_g_h1_d.html">GH1D</a> * GH1D::Project_Background </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>bin_low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>bin_high</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>bg_bin_low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>bg_bin_high</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_g_h2_base_8h.html#a3d9e66bead7d94999f3a9ad82ffc8eb6">kBackgroundSubtraction</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="_g_h2_base_8h.html#a3d9e66bead7d94999f3a9ad82ffc8eb6a39a12f698664ea26b410434647b9b924">kRegionBackground</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00183">183</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00061">parent</a>, <a class="el" href="_g_h1_d_8h_source.html#l00062">projection_axis</a>, <a class="el" href="_g_h2_base_8cxx_source.html#l00144">GH2Base::ProjectionX_Background()</a>, and <a class="el" href="_g_h2_base_8cxx_source.html#l00204">GH2Base::ProjectionY_Background()</a>.</p>
+
+<p>Referenced by <a class="el" href="_g_root_commands_8cxx_source.html#l00052">GetProjection()</a>, and <a class="el" href="_g_canvas_8cxx_source.html#l00736">GCanvas::Process1DKeyboardPress()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd721fcb6bdd828918b536805ed34c0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GH1D::SetParent </td>
+          <td>(</td>
+          <td class="paramtype">TObject *&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00030">30</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00061">parent</a>.</p>
+
+<p>Referenced by <a class="el" href="_g_h2_base_8cxx_source.html#l00096">GH2Base::GH2ProjectionX()</a>, <a class="el" href="_g_h2_base_8cxx_source.html#l00155">GH2Base::GH2ProjectionY()</a>, and <a class="el" href="_g_h2_base_8cxx_source.html#l00035">GH2Base::Projection_Background()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acc7c745cec1b661f528fb73e0f2190aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GH1D::SetProjectionAxis </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>axis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00033">33</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
+
+<p>References <a class="el" href="_g_h1_d_8h_source.html#l00062">projection_axis</a>.</p>
+
+<p>Referenced by <a class="el" href="_g_h2_base_8cxx_source.html#l00096">GH2Base::GH2ProjectionX()</a>, <a class="el" href="_g_h2_base_8cxx_source.html#l00155">GH2Base::GH2ProjectionY()</a>, and <a class="el" href="_g_h2_base_8cxx_source.html#l00035">GH2Base::Projection_Background()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6bf5097772496fd22039bc2b3a8fa3e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GH1D::WriteDatFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>outFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00037">37</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a682f81bca22f439ffd0bf86a725132ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TRef GH1D::parent</td>
         </tr>
       </table>
   </td>
@@ -522,15 +891,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00040">40</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00061">61</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
 
-<p>References <a class="el" href="_g_h1_d_8cxx_source.html#l00085">AddToMap()</a>.</p>
-
-<p>Referenced by <a class="el" href="_g_h1_d_8cxx_source.html#l00014">GH1D()</a>.</p>
+<p>Referenced by <a class="el" href="_g_h1_d_8cxx_source.html#l00079">Clear()</a>, <a class="el" href="_g_h1_d_8cxx_source.html#l00089">Copy()</a>, <a class="el" href="_g_h1_d_8cxx_source.html#l00148">GetNext()</a>, <a class="el" href="_g_h1_d_8h_source.html#l00029">GetParent()</a>, <a class="el" href="_g_h1_d_8cxx_source.html#l00135">GetPrevious()</a>, <a class="el" href="_g_h1_d_8cxx_source.html#l00084">Print()</a>, <a class="el" href="_g_h1_d_8cxx_source.html#l00161">Project()</a>, <a class="el" href="_g_h1_d_8cxx_source.html#l00183">Project_Background()</a>, and <a class="el" href="_g_h1_d_8h_source.html#l00030">SetParent()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a963caa79f583b4936f9d0d647d174ad9"></a>
+<a class="anchor" id="aec5194ebcb54ac57982f9fa1ce3fe28f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -538,74 +905,19 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void GH1D::RemoveFromMap </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_g_h1_d.html">GH1D</a> *&#160;</td>
-          <td class="paramname"><em>hist</em></td><td>)</td>
-          <td></td>
+          <td class="memname">int GH1D::projection_axis</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_g_h1_d_8cxx_source.html#l00089">89</a> of file <a class="el" href="_g_h1_d_8cxx_source.html">GH1D.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00062">62</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
 
-<p>References <a class="el" href="_g_h1_d_8h_source.html#l00040">fCurrentHistMap</a>.</p>
-
-<p>Referenced by <a class="el" href="_g_h1_d_8cxx_source.html#l00018">~GH1D()</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a6b33866a64d8308509f500bb01e56991"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt; <a class="el" href="class_g_h1_d.html">GH1D</a> *, int &gt; GH1D::fCurrentHistMap</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00040">40</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_g_h1_d_8cxx_source.html#l00085">AddToMap()</a>, <a class="el" href="_g_h1_d_8cxx_source.html#l00094">CheckMapStats()</a>, and <a class="el" href="_g_h1_d_8cxx_source.html#l00089">RemoveFromMap()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1128f2888a15392b13bc41fffc70ea94"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GH1D::fUniqueId = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_g_h1_d_8h_source.html#l00039">39</a> of file <a class="el" href="_g_h1_d_8h_source.html">GH1D.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_g_h1_d_8cxx_source.html#l00085">AddToMap()</a>.</p>
+<p>Referenced by <a class="el" href="_g_h1_d_8h_source.html#l00032">GetProjectionAxis()</a>, <a class="el" href="_g_h1_d_8cxx_source.html#l00161">Project()</a>, <a class="el" href="_g_h1_d_8cxx_source.html#l00183">Project_Background()</a>, and <a class="el" href="_g_h1_d_8h_source.html#l00033">SetProjectionAxis()</a>.</p>
 
 </div>
 </div>
@@ -615,7 +927,7 @@ Static Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (2.4.00 ) Reference Guide Generated on Wed Jun 22 2016 14:04:54.
+GRSISort (2.4.00 ) Reference Guide Generated on Tue Sep 27 2016 17:40:05.
 </small>
 </div>
 </body>

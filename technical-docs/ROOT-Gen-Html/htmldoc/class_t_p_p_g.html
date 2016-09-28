@@ -111,8 +111,10 @@ $(document).ready(function(){initNavTree('class_t_p_p_g.html','');});
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_t_p_p_g-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TPPG Class Reference<div class="ingroups"><a class="el" href="group___sorting.html">Sorting</a></div></div>  </div>
@@ -191,6 +193,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a980fcfd92a9000b4f39670d8c91e791f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c0184fea23b615a513589e964a39dd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_p_p_g.html#a3c0184fea23b615a513589e964a39dd4">SetCycleLength</a> (ULong64_t length)</td></tr>
 <tr class="separator:a3c0184fea23b615a513589e964a39dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e338aeb8aeb398ae52f1730fc12c9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_p_p_g.html#ad4e338aeb8aeb398ae52f1730fc12c9e">Setup</a> ()</td></tr>
+<tr class="separator:ad4e338aeb8aeb398ae52f1730fc12c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a423dd5ccc876e7c38279b514eafd6e78"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_p_p_g.html#a423dd5ccc876e7c38279b514eafd6e78">Write</a> (const char *name=0, Int_t option=0, Int_t bufsize=0)</td></tr>
+<tr class="separator:a423dd5ccc876e7c38279b514eafd6e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a0e0fc00e54fdd06ece1492ebdd768"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_p_p_g.html#ac5a0e0fc00e54fdd06ece1492ebdd768">Write</a> (const char *name=0, Int_t option=0, Int_t bufsize=0) const </td></tr>
+<tr class="separator:ac5a0e0fc00e54fdd06ece1492ebdd768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8dc1a9e48724253cc9a25adddd0b787f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_p_p_g.html">TPPG</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_p_p_g.html#a8dc1a9e48724253cc9a25adddd0b787f">Get</a> ()</td></tr>
+<tr class="separator:a8dc1a9e48724253cc9a25adddd0b787f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -209,6 +222,11 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a89011618a18f60e075423365f551d398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7e28b753ebe7fa832481603d3b08676"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_p_p_g.html#a8211ca656a77a39c565a58d81903f6d9">PPGMap_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_p_p_g.html#af7e28b753ebe7fa832481603d3b08676">fPPGStatusMap</a></td></tr>
 <tr class="separator:af7e28b753ebe7fa832481603d3b08676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ab81ea4b2c8e9ceb44f4b2214993b5739"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_p_p_g.html">TPPG</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_p_p_g.html#ab81ea4b2c8e9ceb44f4b2214993b5739">fPPG</a> = NULL</td></tr>
+<tr class="separator:ab81ea4b2c8e9ceb44f4b2214993b5739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 <p><code>#include &lt;<a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>&gt;</code></p>
@@ -224,7 +242,8 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_t_p_p_g__coll__graph.svg" width="80" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_t_p_p_g__coll__graph.svg" width="596" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a8211ca656a77a39c565a58d81903f6d9"></a>
@@ -284,9 +303,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00047">47</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00054">54</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00259">Clear()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00282">Clear()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00082">Get()</a>.</p>
 
 </div>
 </div>
@@ -304,9 +325,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00052">52</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00060">60</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00072">Copy()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00095">Copy()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>.</p>
 
 </div>
 </div>
@@ -331,9 +352,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00057">57</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00066">66</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00259">Clear()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00282">Clear()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>.</p>
 
 </div>
 </div>
@@ -352,11 +373,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00452">452</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00508">508</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00099">AddData()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00130">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00131">fNumberOfCycleLengths</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00124">MapBegin()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00125">MapEnd()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00122">AddData()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00139">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00140">fNumberOfCycleLengths</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00134">MapBegin()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00135">MapEnd()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00448">operator+=()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00504">operator+=()</a>.</p>
 
 </div>
 </div>
@@ -375,11 +396,11 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Adds a PPG status word at a given time in the current run. Makes a copy of the pointer to store in the map. </p>
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00099">99</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00122">122</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00130">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00131">fNumberOfCycleLengths</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00058">TPPGData::GetTimeStamp()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00139">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00140">fNumberOfCycleLengths</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00058">TPPGData::GetTimeStamp()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00452">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00259">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00072">Copy()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00156">TGRSIRootIO::FillPPG()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00508">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00282">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00095">Copy()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00157">TGRSIRootIO::FillPPG()</a>, and <a class="el" href="_t_data_parser_8cxx_source.html#l00905">TDataParser::GriffinDataToPPGEvent()</a>.</p>
 
 </div>
 </div>
@@ -405,11 +426,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00259">259</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00282">282</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00099">AddData()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00126">fCurrIterator</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00130">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00131">fNumberOfCycleLengths</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00122">AddData()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00136">fCurrIterator</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00139">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00140">fNumberOfCycleLengths</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00072">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00047">TPPG()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00057">~TPPG()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00095">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00054">TPPG()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00066">~TPPG()</a>.</p>
 
 </div>
 </div>
@@ -427,11 +448,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00072">72</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00095">95</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00099">AddData()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00259">Clear()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00126">fCurrIterator</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00130">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00131">fNumberOfCycleLengths</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00122">AddData()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00282">Clear()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00136">fCurrIterator</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00139">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00140">fNumberOfCycleLengths</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00052">TPPG()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00309">Setup()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00060">TPPG()</a>.</p>
 
 </div>
 </div>
@@ -450,11 +471,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Correct the map of PPG events by checking that we always have a PPG event with the same status that occured fCycleLength ago. </p>
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00277">277</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00333">333</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_globals_8h_source.html#l00016">DBLUE</a>, <a class="el" href="_globals_8h_source.html#l00019">DRED</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00130">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00131">fNumberOfCycleLengths</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00107">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00058">TPPGData::GetTimeStamp()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00124">MapBegin()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00125">MapEnd()</a>, <a class="el" href="_globals_8h_source.html#l00006">RESET_COLOR</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00045">TPPGData::SetHighTimeStamp()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00044">TPPGData::SetLowTimeStamp()</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_analysis_tree_builder_8cxx_source.html#l00449">TAnalysisTreeBuilder::SetupFragmentTree()</a>.</p>
+<p>References <a class="el" href="_globals_8h_source.html#l00016">DBLUE</a>, <a class="el" href="_globals_8h_source.html#l00019">DRED</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00139">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00140">fNumberOfCycleLengths</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00130">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00058">TPPGData::GetTimeStamp()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00134">MapBegin()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00135">MapEnd()</a>, <a class="el" href="_globals_8h_source.html#l00006">RESET_COLOR</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00045">TPPGData::SetHighTimeStamp()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00044">TPPGData::SetLowTimeStamp()</a>.</p>
 
 </div>
 </div>
@@ -471,9 +490,38 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00384">384</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00440">440</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00126">fCurrIterator</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00124">MapBegin()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00136">fCurrIterator</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00134">MapBegin()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8dc1a9e48724253cc9a25adddd0b787f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_p_p_g.html">TPPG</a> * TPPG::Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00082">82</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00133">fPPG</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00054">TPPG()</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00114">TGRSIint::ApplyOptions()</a>, <a class="el" href="_t_scaler_8cxx_source.html#l00246">TScaler::Draw()</a>, <a class="el" href="_t_fragment_8cxx_source.html#l00111">TFragment::GetCycleNumber()</a>, <a class="el" href="_t_fragment_8cxx_source.html#l00100">TFragment::GetTimeInCycle()</a>, <a class="el" href="_t_data_parser_8cxx_source.html#l00905">TDataParser::GriffinDataToPPGEvent()</a>, <a class="el" href="_brem_matrices_8cxx_source.html#l00562">main()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00309">Setup()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">TGRSIRootIO::SetUpPPG()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00014">TGRSIDetectorHit::TGRSIDetectorHit()</a>, <a class="el" href="_t_analysis_write_loop_8cxx_source.html#l00093">TAnalysisWriteLoop::Write()</a>, and <a class="el" href="_t_frag_write_loop_8cxx_source.html#l00121">TFragWriteLoop::Write()</a>.</p>
 
 </div>
 </div>
@@ -490,11 +538,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">409</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">465</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00130">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00131">fNumberOfCycleLengths</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00107">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00124">MapBegin()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00125">MapEnd()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00139">fCycleLength</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00140">fNumberOfCycleLengths</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00130">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00134">MapBegin()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00135">MapEnd()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00452">Add()</a>, <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00277">Correct()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_t_scaler_8cxx_source.html#l00246">TScaler::Draw()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00405">GetCycleNumber()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00428">GetNumberOfCycles()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00401">GetTimeInCycle()</a>, <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>, and <a class="el" href="_t_diagnostics_8cxx_source.html#l00140">TDiagnostics::ReadPPG()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00508">Add()</a>, <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00333">Correct()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="_t_scaler_8cxx_source.html#l00246">TScaler::Draw()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00461">GetCycleNumber()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00484">GetNumberOfCycles()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00457">GetTimeInCycle()</a>, <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>, and <a class="el" href="_t_diagnostics_8cxx_source.html#l00140">TDiagnostics::ReadPPG()</a>.</p>
 
 </div>
 </div>
@@ -512,11 +560,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00405">405</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00461">461</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>.</p>
 
-<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_t_fragment_8cxx_source.html#l00222">TFragment::GetCycleNumber()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
+<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="_t_fragment_8cxx_source.html#l00111">TFragment::GetCycleNumber()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
 
 </div>
 </div>
@@ -551,11 +599,11 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Gets the last time that a status was given. If the ppg_pattern kJunk is passed, the current status at the time "time" is looked for. If exact_flag is false, the bits of "pat" are looked for and ignore the rest of the bits in the sotred statuses. If "exact_flag" is true, the entire ppg pattern "pat" must be met. </p>
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00107">107</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00130">130</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00085">kJunk</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00089">MapIsEmpty()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00085">kJunk</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00112">MapIsEmpty()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00277">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00318">TGRSIDetectorHit::GetCycleTimeStamp()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00298">TGRSIDetectorHit::GetPPGStatus()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00443">GetStatusStart()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00152">Print()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00333">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00273">TGRSIDetectorHit::GetCycleTimeStamp()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00260">TGRSIDetectorHit::GetPPGStatus()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00499">GetStatusStart()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00175">Print()</a>.</p>
 
 </div>
 </div>
@@ -572,9 +620,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00428">428</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00484">484</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00058">TPPGData::GetTimeStamp()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00378">Last()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00058">TPPGData::GetTimeStamp()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00434">Last()</a>.</p>
 
 </div>
 </div>
@@ -593,11 +641,11 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the current status of the PPG at the time "time". </p>
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00143">143</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00166">166</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00089">MapIsEmpty()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00112">MapIsEmpty()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00318">TGRSIDetectorHit::GetCycleTimeStamp()</a>, and <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00298">TGRSIDetectorHit::GetPPGStatus()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00273">TGRSIDetectorHit::GetCycleTimeStamp()</a>, and <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00260">TGRSIDetectorHit::GetPPGStatus()</a>.</p>
 
 </div>
 </div>
@@ -616,9 +664,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>return the time in the cycle when pat starts </p>
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00443">443</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00499">499</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00107">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00401">GetTimeInCycle()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00378">Last()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00130">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00457">GetTimeInCycle()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00434">Last()</a>.</p>
 
 </div>
 </div>
@@ -636,11 +684,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00401">401</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00457">457</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>.</p>
 
-<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_t_scaler_8cxx_source.html#l00246">TScaler::Draw()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00443">GetStatusStart()</a>, <a class="el" href="_t_fragment_8cxx_source.html#l00212">TFragment::GetTimeInCycle()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
+<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="_t_scaler_8cxx_source.html#l00246">TScaler::Draw()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00499">GetStatusStart()</a>, <a class="el" href="_t_fragment_8cxx_source.html#l00100">TFragment::GetTimeInCycle()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
 
 </div>
 </div>
@@ -657,11 +705,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00378">378</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00434">434</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00126">fCurrIterator</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00125">MapEnd()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00136">fCurrIterator</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00135">MapEnd()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00428">GetNumberOfCycles()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00443">GetStatusStart()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00484">GetNumberOfCycles()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00499">GetStatusStart()</a>.</p>
 
 </div>
 </div>
@@ -686,11 +734,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00124">124</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00134">134</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00452">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00277">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00384">First()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00369">Previous()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00152">Print()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00508">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00333">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00440">First()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00425">Previous()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00175">Print()</a>.</p>
 
 </div>
 </div>
@@ -715,11 +763,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00125">125</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00135">135</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00452">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00277">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00378">Last()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00360">Next()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00152">Print()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00508">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00333">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00434">Last()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00416">Next()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00175">Print()</a>.</p>
 
 </div>
 </div>
@@ -737,11 +785,11 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Checks to see if the ppg map is empty. We need this because we need to put a default PPG in at time T=0 to prevent bad things from happening. This function says the map is empty when only the default is there, which it essentially is. </p>
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00089">89</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00112">112</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00107">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00143">GetStatus()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00152">Print()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00130">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00166">GetStatus()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00175">Print()</a>.</p>
 
 </div>
 </div>
@@ -759,7 +807,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00432">432</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00488">488</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
 </div>
 </div>
@@ -776,9 +824,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00360">360</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00416">416</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00126">fCurrIterator</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00125">MapEnd()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00136">fCurrIterator</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00135">MapEnd()</a>.</p>
 
 </div>
 </div>
@@ -796,9 +844,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00448">448</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00504">504</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00452">Add()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00508">Add()</a>.</p>
 
 </div>
 </div>
@@ -823,11 +871,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00100">100</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00109">109</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00225">TGRSIRootIO::FinalizePPG()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00230">TGRSIRootIO::FinalizePPG()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00300">Write()</a>.</p>
 
 </div>
 </div>
@@ -844,9 +892,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00369">369</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00425">425</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00126">fCurrIterator</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00124">MapBegin()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00136">fCurrIterator</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00134">MapBegin()</a>.</p>
 
 </div>
 </div>
@@ -872,9 +920,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00152">152</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00175">175</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00129">fPPGStatusMap</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00107">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00083">kBackground</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00080">kBeamOn</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00081">kDecay</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00082">kTapeMove</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00124">MapBegin()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00125">MapEnd()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00089">MapIsEmpty()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00138">fPPGStatusMap</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00130">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00083">kBackground</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00080">kBeamOn</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00081">kDecay</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00082">kTapeMove</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00134">MapBegin()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00135">MapEnd()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00112">MapIsEmpty()</a>.</p>
 
 </div>
 </div>
@@ -900,9 +948,110 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00105">105</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00114">114</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00130">fCycleLength</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00139">fCycleLength</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4e338aeb8aeb398ae52f1730fc12c9e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TPPG::Setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00309">309</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00095">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00082">Get()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00092">TGRSIRunInfo::RunNumber()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00147">TGRSIRunInfo::Sharc()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00093">TGRSIRunInfo::SubRunNumber()</a>, and <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00146">TGRSIRunInfo::Tigress()</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00114">TGRSIint::ApplyOptions()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a423dd5ccc876e7c38279b514eafd6e78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Int_t TPPG::Write </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t&#160;</td>
+          <td class="paramname"><em>option</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t&#160;</td>
+          <td class="paramname"><em>bufsize</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00098">98</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00230">TGRSIRootIO::FinalizePPG()</a>, <a class="el" href="_t_analysis_write_loop_8cxx_source.html#l00093">TAnalysisWriteLoop::Write()</a>, and <a class="el" href="_t_frag_write_loop_8cxx_source.html#l00121">TFragWriteLoop::Write()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5a0e0fc00e54fdd06ece1492ebdd768"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Int_t TPPG::Write </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t&#160;</td>
+          <td class="paramname"><em>option</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t&#160;</td>
+          <td class="paramname"><em>bufsize</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_p_p_g_8cxx_source.html#l00300">300</a> of file <a class="el" href="_t_p_p_g_8cxx_source.html">TPPG.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_p_p_g_8h_source.html#l00109">PPGSize()</a>.</p>
 
 </div>
 </div>
@@ -927,9 +1076,9 @@ Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00126">126</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00136">136</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00259">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00072">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00384">First()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00378">Last()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00360">Next()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00369">Previous()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00282">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00095">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00440">First()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00434">Last()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00416">Next()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00425">Previous()</a>.</p>
 
 </div>
 </div>
@@ -951,9 +1100,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00130">130</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00139">139</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00452">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00099">AddData()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00259">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00072">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00277">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00105">SetCycleLength()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00508">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00122">AddData()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00282">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00095">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00333">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00114">SetCycleLength()</a>.</p>
 
 </div>
 </div>
@@ -975,9 +1124,33 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00131">131</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00140">140</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00452">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00099">AddData()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00259">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00072">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00277">Correct()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00409">GetCycleLength()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00508">Add()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00122">AddData()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00282">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00095">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00333">Correct()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00465">GetCycleLength()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab81ea4b2c8e9ceb44f4b2214993b5739"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_p_p_g.html">TPPG</a> * TPPG::fPPG = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00133">133</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00082">Get()</a>.</p>
 
 </div>
 </div>
@@ -999,9 +1172,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00129">129</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_p_p_g_8h_source.html#l00138">138</a> of file <a class="el" href="_t_p_p_g_8h_source.html">TPPG.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00099">AddData()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00259">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00072">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00277">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00107">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00143">GetStatus()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00124">MapBegin()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00125">MapEnd()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00089">MapIsEmpty()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00100">PPGSize()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00152">Print()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00047">TPPG()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00057">~TPPG()</a>.</p>
+<p>Referenced by <a class="el" href="_t_p_p_g_8cxx_source.html#l00122">AddData()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00282">Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00095">Copy()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00333">Correct()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00130">GetLastStatusTime()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00166">GetStatus()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00134">MapBegin()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00135">MapEnd()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00112">MapIsEmpty()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00109">PPGSize()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00175">Print()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00054">TPPG()</a>, and <a class="el" href="_t_p_p_g_8cxx_source.html#l00066">~TPPG()</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1184,7 @@ Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (2.4.00 ) Reference Guide Generated on Wed Jun 22 2016 14:04:55.
+GRSISort (2.4.00 ) Reference Guide Generated on Tue Sep 27 2016 17:40:07.
 </small>
 </div>
 </body>

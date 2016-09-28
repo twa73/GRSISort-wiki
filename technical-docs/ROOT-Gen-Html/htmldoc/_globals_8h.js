@@ -34,10 +34,5 @@ var _globals_8h =
     [ "SHOW_CURSOR", "_globals_8h.html#a09ec0b302bee7262f9959add53ccd0c4", null ],
     [ "WHITE", "_globals_8h.html#a87b537f5fa5c109d3c05c13d6b18f382", null ],
     [ "YELLOW", "_globals_8h.html#abf681265909adf3d3e8116c93c0ba179", null ],
-    [ "ClearMNEMONIC", "_globals_8h.html#afea72116c6b121069b83152ca5ce8e0d", null ],
-    [ "ParseMNEMONIC", "_globals_8h.html#a7525a8ea6538d573dc50ae5347f7916f", null ],
-    [ "ParseMNEMONIC", "_globals_8h.html#a85f57ef922165e17a0481cb349056457", null ],
-    [ "PrintMNEMONIC", "_globals_8h.html#ae800101b20d098159a6a0fa226677d98", null ],
-    [ "ProgramName", "_globals_8h.html#a7f4cf1f9045d5ec5e1b476b1399faba8", null ],
-    [ "SetRFMNEMONIC", "_globals_8h.html#a79b8736a2ef6b8fcea4ee7f8f910ba87", null ]
+    [ "ProgramName", "_globals_8h.html#a7f4cf1f9045d5ec5e1b476b1399faba8", null ]
 ];

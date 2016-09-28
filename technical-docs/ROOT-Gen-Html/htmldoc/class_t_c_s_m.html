@@ -129,8 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2daa1d22dc04bc26853d074274a9491f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab44c17f26ed2b1ca9a9203aab413981f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_c_s_m.html#ab44c17f26ed2b1ca9a9203aab413981f">~TCSM</a> ()</td></tr>
 <tr class="separator:ab44c17f26ed2b1ca9a9203aab413981f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae0ee068708f259f2c02275822a25b5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_c_s_m.html#aae0ee068708f259f2c02275822a25b5b">AddFragment</a> (<a class="el" href="class_t_fragment.html">TFragment</a> *, <a class="el" href="struct_m_n_e_m_o_n_i_c.html">MNEMONIC</a> *)</td></tr>
-<tr class="separator:aae0ee068708f259f2c02275822a25b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a220107df8338c8b01e6e53d53ff95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_c_s_m.html#ad8a220107df8338c8b01e6e53d53ff95">AddFragment</a> (<a class="el" href="class_t_fragment.html">TFragment</a> *, <a class="el" href="class_t_channel.html">TChannel</a> *)</td></tr>
+<tr class="separator:ad8a220107df8338c8b01e6e53d53ff95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf043038368ae8a1b54ededb2d99953c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_c_s_m.html#acf043038368ae8a1b54ededb2d99953c">BuildHits</a> ()</td></tr>
 <tr class="separator:acf043038368ae8a1b54ededb2d99953c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf00d40d576dd372c78a2dabbd0909ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_c_s_m.html#adf00d40d576dd372c78a2dabbd0909ad">Clear</a> (Option_t *=&quot;&quot;)</td></tr>
@@ -246,7 +246,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aae0ee068708f259f2c02275822a25b5b"></a>
+<a class="anchor" id="ad8a220107df8338c8b01e6e53d53ff95"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -262,7 +262,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_m_n_e_m_o_n_i_c.html">MNEMONIC</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_t_channel.html">TChannel</a> *&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -281,13 +281,11 @@ Static Private Attributes</h2></td></tr>
 <p>! </p>
 <p>This function just stores the fragments and mnemonics in vectors, separated by detector number and type (horizontal/vertical strip or pad). The hits themselves are built in the BuildHits function because the way we build them depends on the number of hits. </p>
 
-<p>Reimplemented from <a class="el" href="class_t_detector.html#abc8470f272284421f3640d54e4f5885d">TDetector</a>.</p>
+<p>Reimplemented from <a class="el" href="class_t_detector.html#ae95c4c7b8f5b98c567e46f2ac0ea8537">TDetector</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_c_s_m_8cxx_source.html#l00023">23</a> of file <a class="el" href="_t_c_s_m_8cxx_source.html">TCSM.cxx</a>.</p>
 
-<p>References <a class="el" href="_globals_8h_source.html#l00071">MNEMONIC::arrayposition</a>, <a class="el" href="_globals_8h_source.html#l00075">MNEMONIC::arraysubposition</a>, <a class="el" href="_globals_8h_source.html#l00076">MNEMONIC::collectedcharge</a>, and <a class="el" href="_t_c_s_m_8h_source.html#l00047">fFragments</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_analysis_tree_builder_8cxx_source.html#l00744">TAnalysisTreeBuilder::ProcessEvent()</a>.</p>
+<p>References <a class="el" href="_globals_8h_source.html#l00071">MNEMONIC::arrayposition</a>, <a class="el" href="_globals_8h_source.html#l00075">MNEMONIC::arraysubposition</a>, <a class="el" href="_globals_8h_source.html#l00076">MNEMONIC::collectedcharge</a>, <a class="el" href="_t_c_s_m_8h_source.html#l00047">fFragments</a>, and <a class="el" href="_t_channel_8h_source.html#l00138">TChannel::GetMnemonic()</a>.</p>
 
 </div>
 </div>
@@ -513,8 +511,6 @@ Static Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="_t_c_s_m_8h_source.html#l00048">fCsmHits</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_analysis_tree_builder_8cxx_source.html#l00562">TAnalysisTreeBuilder::ClearActiveAnalysisTreeBranches()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a83e8dc9d3b793b22bb109e60d0bb2673"></a>
@@ -581,7 +577,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Reimplemented in <a class="el" href="class_t_tigress.html#a7f48e26beb55b7695fa163c0b3a4be72">TTigress</a>, <a class="el" href="class_t_griffin.html#a5303932365cfff0ceb7271828088c90e">TGriffin</a>, <a class="el" href="class_t_descant.html#a628b4451dfedb6d2b0926017b89a4b37">TDescant</a>, <a class="el" href="class_t_s3.html#a4590885f6b9ea376ea65afb86ef3d98d">TS3</a>, <a class="el" href="class_t_paces.html#a473ad024b89ba259826319cd2b701cb7">TPaces</a>, <a class="el" href="class_t_g_r_s_i_detector.html#a98848f23318f577fad3c1414a73cefe4">TGRSIDetector</a>, <a class="el" href="class_t_tip.html#a85ba805ba13f6639841c7e013c47b0b8">TTip</a>, <a class="el" href="class_t_sharc.html#a6dd5103c279bbc3105091d7d6396ae40">TSharc</a>, <a class="el" href="class_t_sceptar.html#ac0d3d54768580ca490cf79542c12f80b">TSceptar</a>, <a class="el" href="class_t_zero_degree.html#a505e4db3753bda23d35cecebe0cfcf85">TZeroDegree</a>, <a class="el" href="class_t_tri_foil.html#a3c2d7683d233a890a3a5c49e3f166d06">TTriFoil</a>, <a class="el" href="class_t_r_f.html#a625519b46fd66ab827161cb0e844f747">TRF</a>, and <a class="el" href="class_t_si_li.html#a565e41659738d99f99844b20eb2c20ca">TSiLi</a>.</p>
+<p>Reimplemented in <a class="el" href="class_t_tigress.html#a7f48e26beb55b7695fa163c0b3a4be72">TTigress</a>, <a class="el" href="class_t_griffin.html#a5303932365cfff0ceb7271828088c90e">TGriffin</a>, <a class="el" href="class_t_descant.html#a628b4451dfedb6d2b0926017b89a4b37">TDescant</a>, <a class="el" href="class_t_s3.html#a4590885f6b9ea376ea65afb86ef3d98d">TS3</a>, <a class="el" href="class_t_paces.html#a473ad024b89ba259826319cd2b701cb7">TPaces</a>, <a class="el" href="class_t_g_r_s_i_detector.html#a98848f23318f577fad3c1414a73cefe4">TGRSIDetector</a>, <a class="el" href="class_t_tip.html#a85ba805ba13f6639841c7e013c47b0b8">TTip</a>, <a class="el" href="class_t_sharc.html#a6dd5103c279bbc3105091d7d6396ae40">TSharc</a>, <a class="el" href="class_t_tri_foil.html#a3c2d7683d233a890a3a5c49e3f166d06">TTriFoil</a>, <a class="el" href="class_t_la_br.html#adc040fc20d8dbf105cde0ca995f01f1c">TLaBr</a>, <a class="el" href="class_t_sceptar.html#ac0d3d54768580ca490cf79542c12f80b">TSceptar</a>, <a class="el" href="class_t_t_a_c.html#ad64ba18387723cc8caa8f50b02a479b1">TTAC</a>, <a class="el" href="class_t_zero_degree.html#a505e4db3753bda23d35cecebe0cfcf85">TZeroDegree</a>, <a class="el" href="class_t_r_f.html#a625519b46fd66ab827161cb0e844f747">TRF</a>, and <a class="el" href="class_t_si_li.html#a565e41659738d99f99844b20eb2c20ca">TSiLi</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_detector_8cxx_source.html#l00027">27</a> of file <a class="el" href="_t_detector_8cxx_source.html">TDetector.cxx</a>.</p>
 
@@ -824,7 +820,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_c_s_m_8cxx_source.html#l00244">244</a> of file <a class="el" href="_t_c_s_m_8cxx_source.html">TCSM.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_detector_hit_8h_source.html#l00110">TGRSIDetectorHit::GetCharge()</a>, <a class="el" href="_t_c_s_m_8cxx_source.html#l00080">GetPosition()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00118">TCSMHit::SetDetectorNumber()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00135">TCSMHit::SetDHorizontalCFD()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00123">TCSMHit::SetDHorizontalCharge()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00148">TCSMHit::SetDHorizontalEnergy()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00129">TCSMHit::SetDHorizontalStrip()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00142">TCSMHit::SetDHorizontalTime()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00146">TCSMHit::SetDPosition()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00136">TCSMHit::SetDVerticalCFD()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00124">TCSMHit::SetDVerticalCharge()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00149">TCSMHit::SetDVerticalEnergy()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00130">TCSMHit::SetDVerticalStrip()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00143">TCSMHit::SetDVerticalTime()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00132">TCSMHit::SetEHorizontalCFD()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00120">TCSMHit::SetEHorizontalCharge()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00151">TCSMHit::SetEHorizontalEnergy()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00126">TCSMHit::SetEHorizontalStrip()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00139">TCSMHit::SetEHorizontalTime()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00145">TCSMHit::SetEPosition()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00133">TCSMHit::SetEVerticalCFD()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00121">TCSMHit::SetEVerticalCharge()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00152">TCSMHit::SetEVerticalEnergy()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00127">TCSMHit::SetEVerticalStrip()</a>, and <a class="el" href="_t_c_s_m_hit_8h_source.html#l00140">TCSMHit::SetEVerticalTime()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00069">TGRSIDetectorHit::GetCharge()</a>, <a class="el" href="_t_c_s_m_8cxx_source.html#l00080">GetPosition()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00118">TCSMHit::SetDetectorNumber()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00135">TCSMHit::SetDHorizontalCFD()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00123">TCSMHit::SetDHorizontalCharge()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00148">TCSMHit::SetDHorizontalEnergy()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00129">TCSMHit::SetDHorizontalStrip()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00142">TCSMHit::SetDHorizontalTime()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00146">TCSMHit::SetDPosition()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00136">TCSMHit::SetDVerticalCFD()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00124">TCSMHit::SetDVerticalCharge()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00149">TCSMHit::SetDVerticalEnergy()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00130">TCSMHit::SetDVerticalStrip()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00143">TCSMHit::SetDVerticalTime()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00132">TCSMHit::SetEHorizontalCFD()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00120">TCSMHit::SetEHorizontalCharge()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00151">TCSMHit::SetEHorizontalEnergy()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00126">TCSMHit::SetEHorizontalStrip()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00139">TCSMHit::SetEHorizontalTime()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00145">TCSMHit::SetEPosition()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00133">TCSMHit::SetEVerticalCFD()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00121">TCSMHit::SetEVerticalCharge()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00152">TCSMHit::SetEVerticalEnergy()</a>, <a class="el" href="_t_c_s_m_hit_8h_source.html#l00127">TCSMHit::SetEVerticalStrip()</a>, and <a class="el" href="_t_c_s_m_hit_8h_source.html#l00140">TCSMHit::SetEVerticalTime()</a>.</p>
 
 </div>
 </div>
@@ -1054,7 +1050,7 @@ Static Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (2.4.00 ) Reference Guide Generated on Wed Jun 22 2016 14:04:54.
+GRSISort (2.4.00 ) Reference Guide Generated on Tue Sep 27 2016 17:40:06.
 </small>
 </div>
 </body>

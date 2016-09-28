@@ -1,6 +1,6 @@
 var class_t_g_r_s_i_loop =
 [
-    [ "~TGRSILoop", "class_t_g_r_s_i_loop.html#acdd73d1cd8b63f5886111df0b015c70f", null ],
+    [ "~TGRSILoop", "class_t_g_r_s_i_loop.html#aa1ec1fdf83fc644c69e5261ffe9b3da3", null ],
     [ "TGRSILoop", "class_t_g_r_s_i_loop.html#ae4d034abfe31d982207b8c685a2b61b9", null ],
     [ "BeginRun", "class_t_g_r_s_i_loop.html#a4cf1a0d888cd01de6e3c338bc14de68f", null ],
     [ "Clear", "class_t_g_r_s_i_loop.html#a6812190c39990a0e5101f1385becb378", null ],
@@ -8,7 +8,7 @@ var class_t_g_r_s_i_loop =
     [ "FillFragmentTree", "class_t_g_r_s_i_loop.html#a44dc3404fa6cbbc34fdfae2b5bd6a984", null ],
     [ "FillScalerTree", "class_t_g_r_s_i_loop.html#a3bf6ad748b8d9ed811acb17e80c0bb76", null ],
     [ "Finalize", "class_t_g_r_s_i_loop.html#a933b10b6d25efbfb8881a9cca33deacc", null ],
-    [ "Get", "class_t_g_r_s_i_loop.html#a9095695ea44eef8f1dfe9dc3a1a2f8f1", null ],
+    [ "Get", "class_t_g_r_s_i_loop.html#aa6ccdce8ea713bbb941a54645d0e8797", null ],
     [ "GetFragsReadFromMidas", "class_t_g_r_s_i_loop.html#ad5fc8fe83b29a9624368e93f290ef92a", null ],
     [ "GetFragsSentToTree", "class_t_g_r_s_i_loop.html#a4961dbc7ed35b930ad42d86b034a24cc", null ],
     [ "GetSuppressError", "class_t_g_r_s_i_loop.html#aed60990bf71a57483fb2f7a7c177a20b", null ],
@@ -18,7 +18,7 @@ var class_t_g_r_s_i_loop =
     [ "Print", "class_t_g_r_s_i_loop.html#a939606da86e31de0133ba17c497f54e7", null ],
     [ "Process8PI", "class_t_g_r_s_i_loop.html#a7c1961a40913f08384b853763a9a9b79", null ],
     [ "ProcessEPICS", "class_t_g_r_s_i_loop.html#a0fcbbc68976ccbba501210ac155a1a4d", null ],
-    [ "ProcessGRIFFIN", "class_t_g_r_s_i_loop.html#ab795978ab32d9c255d5b8eb613065419", null ],
+    [ "ProcessGRIFFIN", "class_t_g_r_s_i_loop.html#a635f1b505c05bdb0c0499c5ac06b0e06", null ],
     [ "ProcessMidasEvent", "class_t_g_r_s_i_loop.html#aaff82b7645e8a57489be15076ac413d0", null ],
     [ "ProcessMidasFile", "class_t_g_r_s_i_loop.html#a8eb8cd8c5c8b765a2be6ec8e9ea182fa", null ],
     [ "ProcessTIGRESS", "class_t_g_r_s_i_loop.html#a358c0f27dafddf620423cf37e7996fb2", null ],
@@ -45,5 +45,5 @@ var class_t_g_r_s_i_loop =
     [ "fRateScalersSentToTree", "class_t_g_r_s_i_loop.html#a1cc3eff2688fa1f8e206295c06583785", null ],
     [ "fSuppressError", "class_t_g_r_s_i_loop.html#a8e44293147b92ee1cd6840b107911329", null ],
     [ "fTestMode", "class_t_g_r_s_i_loop.html#a067d904d8eab9c8f69e7ce38cd0f0baf", null ],
-    [ "fTGRSILoop", "class_t_g_r_s_i_loop.html#a57eeb004056945137e2fd36a879ac3e5", null ]
+    [ "fTGRSILoop", "class_t_g_r_s_i_loop.html#a7283eac355ddf10e0285cafd46d6ddd4", null ]
 ];

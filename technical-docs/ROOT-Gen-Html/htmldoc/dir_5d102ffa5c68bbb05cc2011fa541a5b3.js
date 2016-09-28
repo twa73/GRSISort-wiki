@@ -1,6 +1,5 @@
 var dir_5d102ffa5c68bbb05cc2011fa541a5b3 =
 [
-    [ "TAnalysisTreeBuilder", "dir_1c3758f215ce45c233ebb030017b43b2.html", "dir_1c3758f215ce45c233ebb030017b43b2" ],
     [ "TAngularCorrelation", "dir_cafc47414a090c81cd7f8adb8c8a5b0c.html", "dir_cafc47414a090c81cd7f8adb8c8a5b0c" ],
     [ "TBetaDecay", "dir_1ae993d64e04c4e8939088a386f8b6de.html", "dir_1ae993d64e04c4e8939088a386f8b6de" ],
     [ "TCal", "dir_13e92ebc68fde48ee20b0034e64797c9.html", "dir_13e92ebc68fde48ee20b0034e64797c9" ],
@@ -11,6 +10,7 @@ var dir_5d102ffa5c68bbb05cc2011fa541a5b3 =
     [ "TGRSIDetector", "dir_c9748be54fcfff23452b5a7ce9682729.html", "dir_c9748be54fcfff23452b5a7ce9682729" ],
     [ "TGRSIFit", "dir_e8b559d4913f9bad472cbfcb7ee2a960.html", "dir_e8b559d4913f9bad472cbfcb7ee2a960" ],
     [ "TKinematics", "dir_cfe5f024f96550f46ae32fa6d0909d98.html", "dir_cfe5f024f96550f46ae32fa6d0909d98" ],
+    [ "TLaBr", "dir_f9ae689bb8b4823ed42352fab559c0f3.html", "dir_f9ae689bb8b4823ed42352fab559c0f3" ],
     [ "TNucleus", "dir_82617da3d6edaeefcbed14136fb9d941.html", "dir_82617da3d6edaeefcbed14136fb9d941" ],
     [ "TPaces", "dir_e1b411c9fa76219dff9d69ef7a5731d8.html", "dir_e1b411c9fa76219dff9d69ef7a5731d8" ],
     [ "TPulseAnalyzer", "dir_7a86f08b623ee522186c4e6c19594b57.html", "dir_7a86f08b623ee522186c4e6c19594b57" ],
@@ -21,6 +21,7 @@ var dir_5d102ffa5c68bbb05cc2011fa541a5b3 =
     [ "TSharc", "dir_9e69cfa574e9cb27ee2f64cb2ea4b307.html", "dir_9e69cfa574e9cb27ee2f64cb2ea4b307" ],
     [ "TSiLi", "dir_c923b593c3bb988fe41584a7c5c1fc3c.html", "dir_c923b593c3bb988fe41584a7c5c1fc3c" ],
     [ "TSRIM", "dir_9174d2e49cb91b43f97985d09cb40871.html", "dir_9174d2e49cb91b43f97985d09cb40871" ],
+    [ "TTAC", "dir_cb54354c5a4bf41307955b2a55530124.html", "dir_cb54354c5a4bf41307955b2a55530124" ],
     [ "TTigress", "dir_78626689a73b237e2c18e5812fffe375.html", "dir_78626689a73b237e2c18e5812fffe375" ],
     [ "TTip", "dir_a5b203dfc33be69a2b894ab0007b6c4f.html", "dir_a5b203dfc33be69a2b894ab0007b6c4f" ],
     [ "TTriFoil", "dir_ca978f61ace123f582666c4bb7b8a145.html", "dir_ca978f61ace123f582666c4bb7b8a145" ],

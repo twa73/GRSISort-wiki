@@ -18,6 +18,7 @@ var class_t_p_p_g =
     [ "Copy", "class_t_p_p_g.html#a4cf84cb8be77493f2da3ec5fe4527439", null ],
     [ "Correct", "class_t_p_p_g.html#aff8fc912df1feb897cab76d8ed8c523d", null ],
     [ "First", "class_t_p_p_g.html#a262ecd8276d2b686c6d4aba6da670470", null ],
+    [ "Get", "class_t_p_p_g.html#a8dc1a9e48724253cc9a25adddd0b787f", null ],
     [ "GetCycleLength", "class_t_p_p_g.html#a6354814dc4795a62c70f14c08bc32cac", null ],
     [ "GetCycleNumber", "class_t_p_p_g.html#a12d0790688ad801d5b9350103fe8c88c", null ],
     [ "GetLastStatusTime", "class_t_p_p_g.html#a0bd054c026bba66d856fea5f4923146a", null ],
@@ -36,8 +37,12 @@ var class_t_p_p_g =
     [ "Previous", "class_t_p_p_g.html#ae25b17d87b4f7f58a5d3ed23f0ad5d72", null ],
     [ "Print", "class_t_p_p_g.html#a980fcfd92a9000b4f39670d8c91e791f", null ],
     [ "SetCycleLength", "class_t_p_p_g.html#a3c0184fea23b615a513589e964a39dd4", null ],
+    [ "Setup", "class_t_p_p_g.html#ad4e338aeb8aeb398ae52f1730fc12c9e", null ],
+    [ "Write", "class_t_p_p_g.html#a423dd5ccc876e7c38279b514eafd6e78", null ],
+    [ "Write", "class_t_p_p_g.html#ac5a0e0fc00e54fdd06ece1492ebdd768", null ],
     [ "fCurrIterator", "class_t_p_p_g.html#a414ee4b2f25f0b4bfec23f465beb01c4", null ],
     [ "fCycleLength", "class_t_p_p_g.html#a3cc714471721d672ace1bdb50345582e", null ],
     [ "fNumberOfCycleLengths", "class_t_p_p_g.html#a89011618a18f60e075423365f551d398", null ],
+    [ "fPPG", "class_t_p_p_g.html#ab81ea4b2c8e9ceb44f4b2214993b5739", null ],
     [ "fPPGStatusMap", "class_t_p_p_g.html#af7e28b753ebe7fa832481603d3b08676", null ]
 ];

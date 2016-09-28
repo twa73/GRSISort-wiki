@@ -3,6 +3,8 @@ var _g_root_canvas_8cxx =
     [ "GRootContainer", "class_g_root_container.html", "class_g_root_container" ],
     [ "kArrowKeyPress", "_g_root_canvas_8cxx.html#a89902b2bbfd6fddbafd5a0d38e7f2c15", null ],
     [ "kArrowKeyRelease", "_g_root_canvas_8cxx.html#a51afeeeaf7a7fc7c25433fc5defb31f1", null ],
+    [ "kButton1Ctrl", "_g_root_canvas_8cxx.html#a088e7b44a46939df27e0ccb2287c7fd1", null ],
+    [ "kButton1CtrlMotion", "_g_root_canvas_8cxx.html#a6394f0659de85a589cb3327e84860221", null ],
     [ "ERootCanvasCommands", "_g_root_canvas_8cxx.html#a05b56d948b7fcb369490fafff19e529d", [
       [ "kFileNewCanvas", "_g_root_canvas_8cxx.html#a05b56d948b7fcb369490fafff19e529da534333aacf131eb56bedec6612d29f3b", null ],
       [ "kFileOpen", "_g_root_canvas_8cxx.html#a05b56d948b7fcb369490fafff19e529dafb9a3cf5d41c2c0b97e4d4461c279491", null ],
@@ -78,6 +80,7 @@ var _g_root_canvas_8cxx =
       [ "kToolMarker", "_g_root_canvas_8cxx.html#a05b56d948b7fcb369490fafff19e529daf5fe3cbdc046f167669fcbf5b5420bb0", null ],
       [ "kToolCutG", "_g_root_canvas_8cxx.html#a05b56d948b7fcb369490fafff19e529daf4a834744f6164ba740ed2b97ce6cb69", null ]
     ] ],
+    [ "ClassImp", "_g_root_canvas_8cxx.html#afb2704fb69376a9eb2df8ff80f79afc5", null ],
     [ "gOpenTypes", "_g_root_canvas_8cxx.html#a7547772cfe4479a73baa5eb46674ec67", null ],
     [ "gSaveAsTypes", "_g_root_canvas_8cxx.html#a32427ebdce1b709934a807c15ff4afa4", null ],
     [ "gToolBarData", "_g_root_canvas_8cxx.html#a564acb9dca4bf0c74b3d07d43a2d8e07", null ],

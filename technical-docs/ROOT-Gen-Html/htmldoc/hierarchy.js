@@ -1,9 +1,36 @@
 var hierarchy =
 [
+    [ "ArgParseItem", "class_arg_parse_item.html", [
+      [ "ArgParseConfig< T >", "class_arg_parse_config.html", [
+        [ "ArgParseConfigT< T >", "class_arg_parse_config_t.html", null ]
+      ] ],
+      [ "ArgParseConfig< bool >", "class_arg_parse_config.html", [
+        [ "ArgParseConfigT< bool >", "class_arg_parse_config_t_3_01bool_01_4.html", null ]
+      ] ]
+    ] ],
+    [ "ArgParser", "class_arg_parser.html", null ],
+    [ "combinations", "classcombinations.html", null ],
+    [ "dict", null, [
+      [ "pygui.util.TKeyDict", "classpygui_1_1util_1_1_t_key_dict.html", null ]
+    ] ],
+    [ "DynamicLibrary", "class_dynamic_library.html", null ],
     [ "std::exception", null, [
-      [ "grsi::exit_exception", "structgrsi_1_1exit__exception.html", null ]
+      [ "grsi::exit_exception", "structgrsi_1_1exit__exception.html", null ],
+      [ "std::runtime_error", null, [
+        [ "ParseError", "struct_parse_error.html", null ]
+      ] ]
+    ] ],
+    [ "Frame", null, [
+      [ "pygui.status_widget.ThreadStatusFrame", "classpygui_1_1status__widget_1_1_thread_status_frame.html", null ]
+    ] ],
+    [ "GH2Base", "class_g_h2_base.html", [
+      [ "GH2D", "class_g_h2_d.html", null ],
+      [ "GH2I", "class_g_h2_i.html", null ]
     ] ],
     [ "GRootObjectManager", "class_g_root_object_manager.html", null ],
+    [ "GSnapshot", "class_g_snapshot.html", null ],
+    [ "combinations::iterator", "classcombinations_1_1iterator.html", null ],
+    [ "GH2Base::iterator", "class_g_h2_base_1_1iterator.html", null ],
     [ "TPulseAnalyzer::LinePar", "struct_t_pulse_analyzer_1_1_line_par.html", null ],
     [ "MNEMONIC", "struct_m_n_e_m_o_n_i_c.html", null ],
     [ "NRMat< T >", "class_n_r_mat.html", null ],
@@ -12,9 +39,32 @@ var hierarchy =
     [ "TLMFitter::NRMat3d< T >", "class_t_l_m_fitter_1_1_n_r_mat3d.html", null ],
     [ "NRVec< T >", "class_n_r_vec.html", null ],
     [ "TLMFitter::NRVec< T >", "class_t_l_m_fitter_1_1_n_r_vec.html", null ],
+    [ "object", null, [
+      [ "pygui.hist_tab.HistTab", "classpygui_1_1hist__tab_1_1_hist_tab.html", null ],
+      [ "pygui.mainwindow.MainWindow", "classpygui_1_1mainwindow_1_1_main_window.html", null ],
+      [ "pygui.status_widget.ThreadStatusFrame", "classpygui_1_1status__widget_1_1_thread_status_frame.html", null ],
+      [ "pygui.status_widget.ThreadVars", "classpygui_1_1status__widget_1_1_thread_vars.html", null ],
+      [ "pygui.tcut_tab.TCutTab", "classpygui_1_1tcut__tab_1_1_t_cut_tab.html", null ],
+      [ "pygui.util.PreserveGDir", "classpygui_1_1util_1_1_preserve_g_dir.html", null ],
+      [ "pygui.variable_tab.VariableTab", "classpygui_1_1variable__tab_1_1_variable_tab.html", null ]
+    ] ],
     [ "TPulseAnalyzer::ParPar", "struct_t_pulse_analyzer_1_1_par_par.html", null ],
+    [ "TCalibrator::Peak", "struct_t_calibrator_1_1_peak.html", null ],
     [ "TPulseAnalyzer::ShapePar", "struct_t_pulse_analyzer_1_1_shape_par.html", null ],
     [ "TPulseAnalyzer::SinPar", "struct_t_pulse_analyzer_1_1_sin_par.html", null ],
+    [ "StoppableThread", "class_stoppable_thread.html", [
+      [ "TAnalysisHistLoop", "class_t_analysis_hist_loop.html", null ],
+      [ "TAnalysisWriteLoop", "class_t_analysis_write_loop.html", null ],
+      [ "TDataLoop", "class_t_data_loop.html", null ],
+      [ "TDetBuildingLoop", "class_t_det_building_loop.html", null ],
+      [ "TEventBuildingLoop", "class_t_event_building_loop.html", null ],
+      [ "TFragHistLoop", "class_t_frag_hist_loop.html", null ],
+      [ "TFragmentChainLoop", "class_t_fragment_chain_loop.html", null ],
+      [ "TFragWriteLoop", "class_t_frag_write_loop.html", null ],
+      [ "TTerminalLoop< T >", "class_t_terminal_loop.html", null ],
+      [ "TUnpackingLoop", "class_t_unpacking_loop.html", null ]
+    ] ],
+    [ "SuppressTH1GDirectory", "class_suppress_t_h1_g_directory.html", null ],
     [ "TBrowserImp", null, [
       [ "GRootBrowser", "class_g_root_browser.html", null ]
     ] ],
@@ -32,6 +82,8 @@ var hierarchy =
       [ "GDirectory", "class_g_directory.html", null ]
     ] ],
     [ "TF1", null, [
+      [ "GGaus", "class_g_gaus.html", null ],
+      [ "GPeak", "class_g_peak.html", null ],
       [ "TDecayFit", "class_t_decay_fit.html", null ],
       [ "TGRSIFit", "class_t_g_r_s_i_fit.html", [
         [ "TMultiPeak", "class_t_multi_peak.html", null ],
@@ -41,6 +93,7 @@ var hierarchy =
     [ "TFile", null, [
       [ "GFile", "class_g_file.html", null ]
     ] ],
+    [ "TFragmentMap", "class_t_fragment_map.html", null ],
     [ "TGCompositeFrame", null, [
       [ "GRootContainer", "class_g_root_container.html", null ]
     ] ],
@@ -57,29 +110,43 @@ var hierarchy =
         [ "TTimeCal", "class_t_time_cal.html", null ]
       ] ]
     ] ],
+    [ "TGTransientFrame", null, [
+      [ "GPopup", "class_g_popup.html", null ]
+    ] ],
     [ "TGuiFactory", null, [
-      [ "GROOTGuiFactory", "class_g_r_o_o_t_gui_factory.html", null ]
+      [ "GRootGuiFactory", "class_g_root_gui_factory.html", null ]
     ] ],
     [ "TH1D", null, [
       [ "GH1D", "class_g_h1_d.html", null ]
     ] ],
+    [ "TH2D", null, [
+      [ "GH2D", "class_g_h2_d.html", null ]
+    ] ],
+    [ "TH2I", null, [
+      [ "GH2I", "class_g_h2_i.html", null ]
+    ] ],
+    [ "ThreadsafeQueue< T >", "class_threadsafe_queue.html", null ],
     [ "TMidas_BANK", "struct_t_midas___b_a_n_k.html", null ],
     [ "TMidasEvent::TMidas_BANK", "struct_t_midas_event_1_1_t_midas___b_a_n_k.html", null ],
-    [ "TMidas_BANK32", "struct_t_midas___b_a_n_k32.html", null ],
     [ "TMidasEvent::TMidas_BANK32", "struct_t_midas_event_1_1_t_midas___b_a_n_k32.html", null ],
+    [ "TMidas_BANK32", "struct_t_midas___b_a_n_k32.html", null ],
     [ "TMidas_BANK_HEADER", "struct_t_midas___b_a_n_k___h_e_a_d_e_r.html", null ],
     [ "TMidasEvent::TMidas_BANK_HEADER", "struct_t_midas_event_1_1_t_midas___b_a_n_k___h_e_a_d_e_r.html", null ],
     [ "TMidas_EVENT_HEADER", "struct_t_midas___e_v_e_n_t___h_e_a_d_e_r.html", null ],
     [ "TNamed", null, [
       [ "GBrowserPlugin", "class_g_browser_plugin.html", null ],
       [ "GMemObj", "class_g_mem_obj.html", null ],
+      [ "GNotifier", "class_g_notifier.html", null ],
       [ "GPadObj", "class_g_pad_obj.html", null ],
+      [ "GValue", "class_g_value.html", null ],
       [ "TBetaDecay", "class_t_beta_decay.html", null ],
+      [ "TCalibrator", "class_t_calibrator.html", null ],
       [ "TCalManager", "class_t_cal_manager.html", null ],
       [ "TChannel", "class_t_channel.html", null ],
       [ "TKinematics", "class_t_kinematics.html", null ],
       [ "TNucleus", "class_t_nucleus.html", null ],
       [ "TReaction", "class_t_reaction.html", null ],
+      [ "TRuntimeObjects", "class_t_runtime_objects.html", null ],
       [ "TVirtualDecay", "class_t_virtual_decay.html", [
         [ "TDecay", "class_t_decay.html", null ],
         [ "TDecayChain", "class_t_decay_chain.html", null ],
@@ -90,19 +157,21 @@ var hierarchy =
       [ "Detector", "class_detector.html", null ],
       [ "DetectorPair", "class_detector_pair.html", null ],
       [ "GMarker", "class_g_marker.html", null ],
-      [ "TAnalysisTreeBuilder", "class_t_analysis_tree_builder.html", null ],
       [ "TAngularCorrelation", "class_t_angular_correlation.html", null ],
+      [ "TCompiledHistograms", "class_t_compiled_histograms.html", null ],
       [ "TDeadtimeScalerQueue", "class_t_deadtime_scaler_queue.html", null ],
       [ "TDetector", "class_t_detector.html", [
         [ "TCSM", "class_t_c_s_m.html", null ],
         [ "TGRSIDetector", "class_t_g_r_s_i_detector.html", [
           [ "TDescant", "class_t_descant.html", null ],
           [ "TGriffin", "class_t_griffin.html", null ],
+          [ "TLaBr", "class_t_la_br.html", null ],
           [ "TPaces", "class_t_paces.html", null ],
           [ "TS3", "class_t_s3.html", null ],
           [ "TSceptar", "class_t_sceptar.html", null ],
           [ "TSharc", "class_t_sharc.html", null ],
           [ "TSiLi", "class_t_si_li.html", null ],
+          [ "TTAC", "class_t_t_a_c.html", null ],
           [ "TTigress", "class_t_tigress.html", null ],
           [ "TTip", "class_t_tip.html", null ],
           [ "TZeroDegree", "class_t_zero_degree.html", null ]
@@ -112,23 +181,26 @@ var hierarchy =
       ] ],
       [ "TDiagnostics", "class_t_diagnostics.html", null ],
       [ "TEpicsFrag", "class_t_epics_frag.html", null ],
-      [ "TEventQueue", "class_t_event_queue.html", null ],
-      [ "TFragment", "class_t_fragment.html", null ],
       [ "TFragmentQueue", "class_t_fragment_queue.html", null ],
       [ "TGRSIDetectorHit", "class_t_g_r_s_i_detector_hit.html", [
+        [ "TBgoHit", "class_t_bgo_hit.html", null ],
         [ "TCSMHit", "class_t_c_s_m_hit.html", null ],
         [ "TDescantHit", "class_t_descant_hit.html", null ],
+        [ "TFragment", "class_t_fragment.html", null ],
         [ "TGriffinHit", "class_t_griffin_hit.html", null ],
+        [ "TLaBrHit", "class_t_la_br_hit.html", null ],
         [ "TPacesHit", "class_t_paces_hit.html", null ],
         [ "TS3Hit", "class_t_s3_hit.html", null ],
         [ "TSceptarHit", "class_t_sceptar_hit.html", null ],
         [ "TSharcHit", "class_t_sharc_hit.html", null ],
         [ "TSiLiHit", "class_t_si_li_hit.html", null ],
+        [ "TTACHit", "class_t_t_a_c_hit.html", null ],
         [ "TTigressHit", "class_t_tigress_hit.html", null ],
         [ "TTipHit", "class_t_tip_hit.html", null ],
         [ "TZeroDegreeHit", "class_t_zero_degree_hit.html", null ]
       ] ],
       [ "TGRSILoop", "class_t_g_r_s_i_loop.html", null ],
+      [ "TGRSIOptions2", "class_t_g_r_s_i_options2.html", null ],
       [ "TGRSIRootIO", "class_t_g_r_s_i_root_i_o.html", null ],
       [ "TGRSIRunInfo", "class_t_g_r_s_i_run_info.html", null ],
       [ "TGRSISortInfo", "class_t_g_r_s_i_sort_info.html", [
@@ -143,15 +215,14 @@ var hierarchy =
       [ "TPPGData", "class_t_p_p_g_data.html", null ],
       [ "TRateScalerQueue", "class_t_rate_scaler_queue.html", null ],
       [ "TScaler", "class_t_scaler.html", null ],
-      [ "TScalerData", "class_t_scaler_data.html", null ]
+      [ "TScalerData", "class_t_scaler_data.html", null ],
+      [ "TTransition", "class_t_transition.html", null ]
     ] ],
+    [ "TPreserveGDirectory", "class_t_preserve_g_directory.html", null ],
     [ "TPulseAnalyzer", "class_t_pulse_analyzer.html", null ],
     [ "TRint", null, [
       [ "TGint", "class_t_gint.html", null ],
       [ "TGRSIint", "class_t_g_r_s_iint.html", null ]
-    ] ],
-    [ "TSelector", null, [
-      [ "TFragmentSelector", "class_t_fragment_selector.html", null ]
     ] ],
     [ "TServerSocket", null, [
       [ "TGRSIServer", "class_t_g_r_s_i_server.html", null ]
@@ -163,8 +234,11 @@ var hierarchy =
     [ "TTree", null, [
       [ "GTree", "class_g_tree.html", null ]
     ] ],
-    [ "TWriteQueue", "class_t_write_queue.html", null ],
+    [ "TUnpackedEvent", "class_t_unpacked_event.html", null ],
     [ "TXMLOdb", "class_t_x_m_l_odb.html", null ],
     [ "VirtualOdb", "class_virtual_odb.html", null ],
-    [ "TPulseAnalyzer::WaveFormPar", "struct_t_pulse_analyzer_1_1_wave_form_par.html", null ]
+    [ "TPulseAnalyzer::WaveFormPar", "struct_t_pulse_analyzer_1_1_wave_form_par.html", null ],
+    [ "Text", null, [
+      [ "pygui.AnsiColorText.AnsiColorText", "classpygui_1_1_ansi_color_text_1_1_ansi_color_text.html", null ]
+    ] ]
 ];

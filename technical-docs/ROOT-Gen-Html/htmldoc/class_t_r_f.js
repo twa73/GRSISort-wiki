@@ -3,7 +3,7 @@ var class_t_r_f =
     [ "TRF", "class_t_r_f.html#a5bc4a74dc295e4c50d3bde8bbd0995ae", null ],
     [ "TRF", "class_t_r_f.html#a3dc131a5bbffbaf26176d66cd601d603", null ],
     [ "~TRF", "class_t_r_f.html#a8cc183bb5bbc161385ed86094a4fd943", null ],
-    [ "AddFragment", "class_t_r_f.html#addac668af16c458abfaf658746620518", null ],
+    [ "AddFragment", "class_t_r_f.html#a590d5230bf85203350457a185b778fcc", null ],
     [ "BuildHits", "class_t_r_f.html#a9c3cb5a1d904b050b7b40dd294e0023e", null ],
     [ "Clear", "class_t_r_f.html#a668c247bc2be2d84a8c61b08b27197e7", null ],
     [ "Copy", "class_t_r_f.html#a625519b46fd66ab827161cb0e844f747", null ],

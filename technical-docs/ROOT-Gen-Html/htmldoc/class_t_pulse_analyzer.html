@@ -170,6 +170,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1363aaa0a010c8902511284873f9ff6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dcfa41787f5756b9b037da3995ed0f2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_pulse_analyzer.html#a9dcfa41787f5756b9b037da3995ed0f2">get_sig2noise</a> ()</td></tr>
 <tr class="separator:a9dcfa41787f5756b9b037da3995ed0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a310b098f91b4864912fec29d23bf5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_pulse_analyzer.html#a3a310b098f91b4864912fec29d23bf5b">GetCsIChiSq</a> ()</td></tr>
+<tr class="separator:a3a310b098f91b4864912fec29d23bf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8e78baee023ef704a6090cb06ffa697"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_pulse_analyzer.html#ad8e78baee023ef704a6090cb06ffa697">good_baseline</a> ()</td></tr>
 <tr class="separator:ad8e78baee023ef704a6090cb06ffa697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcdf1d3ec6bec0872806779b18a2805d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_pulse_analyzer.html#afcdf1d3ec6bec0872806779b18a2805d">IsSet</a> ()</td></tr>
@@ -504,7 +506,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00021">21</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">shpar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">spar</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00146">shpar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">spar</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
 </div>
 </div>
@@ -525,7 +527,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">27</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">copy_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00168">EPS</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00150">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00170">SetCsI()</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">T0RANGE</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00160">copy_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00169">EPS</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00153">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">SetCsI()</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">T0RANGE</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00011">TPulseAnalyzer()</a>.</p>
 
@@ -552,11 +554,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">171</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00172">172</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00167">CsISet</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00168">CsISet</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00837">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00811">CsIt0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01370">DrawCsIFit()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00840">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00818">CsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01368">DrawCsIFit()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00810">GetCsIChiSq()</a>.</p>
 
 </div>
 </div>
@@ -573,11 +575,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00837">837</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00840">840</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00101">TPulseAnalyzer::ShapePar::am</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">CsIIsSet()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00170">SetCsI()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">shpar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00101">TPulseAnalyzer::ShapePar::am</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00172">CsIIsSet()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">SetCsI()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00146">shpar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_tip_hit_8cxx_source.html#l00070">TTipHit::SetPID()</a>.</p>
+<p>Referenced by <a class="el" href="_t_tip_hit_8cxx_source.html#l00071">TTipHit::SetPID()</a>.</p>
 
 </div>
 </div>
@@ -594,11 +596,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00811">811</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00818">818</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">CsIIsSet()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00170">SetCsI()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">shpar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00172">CsIIsSet()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">SetCsI()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00146">shpar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_tip_hit_8cxx_source.html#l00070">TTipHit::SetPID()</a>.</p>
+<p>Referenced by <a class="el" href="_t_tip_hit_8cxx_source.html#l00071">TTipHit::SetPID()</a>.</p>
 
 </div>
 </div>
@@ -626,7 +628,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00090">90</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">copy_matrix</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00160">copy_matrix</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
 
@@ -645,9 +647,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01334">1334</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01332">1332</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00049">TPulseAnalyzer::WaveFormPar::afit</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00046">TPulseAnalyzer::WaveFormPar::baselineMax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00045">TPulseAnalyzer::WaveFormPar::baselineMin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00049">TPulseAnalyzer::WaveFormPar::bfit</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01278">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00150">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00049">TPulseAnalyzer::WaveFormPar::afit</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00046">TPulseAnalyzer::WaveFormPar::baselineMax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00045">TPulseAnalyzer::WaveFormPar::baselineMin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00049">TPulseAnalyzer::WaveFormPar::bfit</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01276">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
 </div>
 </div>
@@ -664,9 +666,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01370">1370</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01368">1368</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00101">TPulseAnalyzer::ShapePar::am</a>, <a class="el" href="namespace_t_g_r_s_i_functions.html#a67ce9e340bca494d27cb6f5b100362e3">TGRSIFunctions::CsIFitFunction()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">CsIIsSet()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01278">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">shpar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00101">TPulseAnalyzer::ShapePar::am</a>, <a class="el" href="namespace_t_g_r_s_i_functions.html#a67ce9e340bca494d27cb6f5b100362e3">TGRSIFunctions::CsIFitFunction()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00172">CsIIsSet()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01276">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00146">shpar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
 </div>
 </div>
@@ -683,9 +685,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01286">1286</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01284">1284</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00090">TPulseAnalyzer::SinPar::A</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00092">TPulseAnalyzer::SinPar::C</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01278">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">spar</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00091">TPulseAnalyzer::SinPar::t0</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00090">TPulseAnalyzer::SinPar::A</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00092">TPulseAnalyzer::SinPar::C</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01276">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">spar</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00091">TPulseAnalyzer::SinPar::t0</a>.</p>
 
 </div>
 </div>
@@ -702,9 +704,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01306">1306</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01304">1304</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00055">TPulseAnalyzer::WaveFormPar::b0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00056">TPulseAnalyzer::WaveFormPar::b1</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01278">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00057">TPulseAnalyzer::WaveFormPar::s0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00058">TPulseAnalyzer::WaveFormPar::s1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00059">TPulseAnalyzer::WaveFormPar::s2</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00055">TPulseAnalyzer::WaveFormPar::b0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00056">TPulseAnalyzer::WaveFormPar::b1</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01276">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00057">TPulseAnalyzer::WaveFormPar::s0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00058">TPulseAnalyzer::WaveFormPar::s1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00059">TPulseAnalyzer::WaveFormPar::s2</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
 </div>
 </div>
@@ -721,11 +723,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01278">1278</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01276">1276</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00147">fName</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00148">fName</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01334">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01370">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01286">DrawRFFit()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01306">DrawT0fit()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01332">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01368">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01284">DrawRFFit()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01304">DrawT0fit()</a>.</p>
 
 </div>
 </div>
@@ -767,11 +769,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">277</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">276</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00200">BADCHISQ_MAT</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00077">TPulseAnalyzer::LinePar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00076">TPulseAnalyzer::LinePar::intercept</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00078">TPulseAnalyzer::LinePar::ndf</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00075">TPulseAnalyzer::LinePar::slope</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00201">BADCHISQ_MAT</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00077">TPulseAnalyzer::LinePar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00076">TPulseAnalyzer::LinePar::intercept</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00078">TPulseAnalyzer::LinePar::ndf</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00075">TPulseAnalyzer::LinePar::slope</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00316">get_linear_T0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00418">get_parabolic_T0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00315">get_linear_T0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00417">get_parabolic_T0()</a>.</p>
 
 </div>
 </div>
@@ -788,11 +790,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">185</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">184</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00480">get_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00506">get_baseline_fin()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00316">get_linear_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00418">get_parabolic_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00360">get_smooth_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00703">get_t30()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00662">get_t50()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00527">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00797">good_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00061">TPulseAnalyzer::WaveFormPar::t50</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00479">get_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00505">get_baseline_fin()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00315">get_linear_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00417">get_parabolic_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00359">get_smooth_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00702">get_t30()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00661">get_t50()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00526">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00796">good_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00153">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00061">TPulseAnalyzer::WaveFormPar::t50</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_si_li_hit_8cxx_source.html#l00052">TSiLiHit::SetWavefit()</a>, <a class="el" href="_t_s3_hit_8cxx_source.html#l00051">TS3Hit::SetWavefit()</a>, <a class="el" href="_t_tigress_hit_8cxx_source.html#l00169">TTigressHit::SetWavefit()</a>, and <a class="el" href="_t_tip_hit_8cxx_source.html#l00062">TTipHit::SetWavefit()</a>.</p>
+<p>Referenced by <a class="el" href="_t_si_li_hit_8cxx_source.html#l00049">TSiLiHit::SetWavefit()</a>, <a class="el" href="_t_s3_hit_8cxx_source.html#l00049">TS3Hit::SetWavefit()</a>, <a class="el" href="_t_tigress_hit_8cxx_source.html#l00139">TTigressHit::SetWavefit()</a>, and <a class="el" href="_t_tip_hit_8cxx_source.html#l00063">TTipHit::SetWavefit()</a>.</p>
 
 </div>
 </div>
@@ -834,11 +836,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00234">234</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00233">233</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00200">BADCHISQ_MAT</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00085">TPulseAnalyzer::ParPar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00082">TPulseAnalyzer::ParPar::constant</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00083">TPulseAnalyzer::ParPar::linear</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00086">TPulseAnalyzer::ParPar::ndf</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00084">TPulseAnalyzer::ParPar::quadratic</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00201">BADCHISQ_MAT</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00085">TPulseAnalyzer::ParPar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00082">TPulseAnalyzer::ParPar::constant</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00083">TPulseAnalyzer::ParPar::linear</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00086">TPulseAnalyzer::ParPar::ndf</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00084">TPulseAnalyzer::ParPar::quadratic</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00418">get_parabolic_T0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00417">get_parabolic_T0()</a>.</p>
 
 </div>
 </div>
@@ -856,9 +858,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00169">169</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00168">168</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">spar</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00091">TPulseAnalyzer::SinPar::t0</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">spar</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00091">TPulseAnalyzer::SinPar::t0</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_r_f_8cxx_source.html#l00028">TRF::AddFragment()</a>.</p>
 
@@ -908,11 +910,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00116">116</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00115">115</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00200">BADCHISQ_MAT</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00085">TPulseAnalyzer::ParPar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00082">TPulseAnalyzer::ParPar::constant</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00083">TPulseAnalyzer::ParPar::linear</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00086">TPulseAnalyzer::ParPar::ndf</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00084">TPulseAnalyzer::ParPar::quadratic</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00201">BADCHISQ_MAT</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00085">TPulseAnalyzer::ParPar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00082">TPulseAnalyzer::ParPar::constant</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00083">TPulseAnalyzer::ParPar::linear</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00086">TPulseAnalyzer::ParPar::ndf</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00084">TPulseAnalyzer::ParPar::quadratic</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00360">get_smooth_T0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00359">get_smooth_T0()</a>.</p>
 
 </div>
 </div>
@@ -937,11 +939,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00480">480</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00479">479</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00038">TPulseAnalyzer::WaveFormPar::baselineStDev</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00041">TPulseAnalyzer::WaveFormPar::bflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00038">TPulseAnalyzer::WaveFormPar::baselineStDev</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00041">TPulseAnalyzer::WaveFormPar::bflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>.</p>
 
 </div>
 </div>
@@ -966,11 +968,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00506">506</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00505">505</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00039">TPulseAnalyzer::WaveFormPar::baselinefin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00040">TPulseAnalyzer::WaveFormPar::baselineStDevfin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00039">TPulseAnalyzer::WaveFormPar::baselinefin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00040">TPulseAnalyzer::WaveFormPar::baselineStDevfin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>.</p>
 
 </div>
 </div>
@@ -995,11 +997,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00316">316</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00315">315</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00055">TPulseAnalyzer::WaveFormPar::b0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00056">TPulseAnalyzer::WaveFormPar::b1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00199">BADCHISQ_LIN_T0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00077">TPulseAnalyzer::LinePar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00076">TPulseAnalyzer::LinePar::intercept</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00057">TPulseAnalyzer::WaveFormPar::s0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00058">TPulseAnalyzer::WaveFormPar::s1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00059">TPulseAnalyzer::WaveFormPar::s2</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00075">TPulseAnalyzer::LinePar::slope</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00055">TPulseAnalyzer::WaveFormPar::b0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00056">TPulseAnalyzer::WaveFormPar::b1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00200">BADCHISQ_LIN_T0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00077">TPulseAnalyzer::LinePar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00076">TPulseAnalyzer::LinePar::intercept</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00153">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00057">TPulseAnalyzer::WaveFormPar::s0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00058">TPulseAnalyzer::WaveFormPar::s1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00059">TPulseAnalyzer::WaveFormPar::s2</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00075">TPulseAnalyzer::LinePar::slope</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>.</p>
 
 </div>
 </div>
@@ -1024,11 +1026,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00418">418</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00417">417</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00055">TPulseAnalyzer::WaveFormPar::b0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00056">TPulseAnalyzer::WaveFormPar::b1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00198">BADCHISQ_PAR_T0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00077">TPulseAnalyzer::LinePar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00085">TPulseAnalyzer::ParPar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00082">TPulseAnalyzer::ParPar::constant</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00234">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00076">TPulseAnalyzer::LinePar::intercept</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00083">TPulseAnalyzer::ParPar::linear</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00084">TPulseAnalyzer::ParPar::quadratic</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00057">TPulseAnalyzer::WaveFormPar::s0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00058">TPulseAnalyzer::WaveFormPar::s1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00059">TPulseAnalyzer::WaveFormPar::s2</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00075">TPulseAnalyzer::LinePar::slope</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00055">TPulseAnalyzer::WaveFormPar::b0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00056">TPulseAnalyzer::WaveFormPar::b1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00199">BADCHISQ_PAR_T0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00077">TPulseAnalyzer::LinePar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00085">TPulseAnalyzer::ParPar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00082">TPulseAnalyzer::ParPar::constant</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00233">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00076">TPulseAnalyzer::LinePar::intercept</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00153">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00083">TPulseAnalyzer::ParPar::linear</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00084">TPulseAnalyzer::ParPar::quadratic</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00057">TPulseAnalyzer::WaveFormPar::s0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00058">TPulseAnalyzer::WaveFormPar::s1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00059">TPulseAnalyzer::WaveFormPar::s2</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00075">TPulseAnalyzer::LinePar::slope</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>.</p>
 
 </div>
 </div>
@@ -1045,11 +1047,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00788">788</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00787">787</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00039">TPulseAnalyzer::WaveFormPar::baselinefin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00040">TPulseAnalyzer::WaveFormPar::baselineStDevfin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00039">TPulseAnalyzer::WaveFormPar::baselinefin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00040">TPulseAnalyzer::WaveFormPar::baselineStDevfin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_si_li_hit_8cxx_source.html#l00052">TSiLiHit::SetWavefit()</a>, <a class="el" href="_t_s3_hit_8cxx_source.html#l00051">TS3Hit::SetWavefit()</a>, <a class="el" href="_t_tigress_hit_8cxx_source.html#l00169">TTigressHit::SetWavefit()</a>, and <a class="el" href="_t_tip_hit_8cxx_source.html#l00062">TTipHit::SetWavefit()</a>.</p>
+<p>Referenced by <a class="el" href="_t_si_li_hit_8cxx_source.html#l00049">TSiLiHit::SetWavefit()</a>, <a class="el" href="_t_s3_hit_8cxx_source.html#l00049">TS3Hit::SetWavefit()</a>, <a class="el" href="_t_tigress_hit_8cxx_source.html#l00139">TTigressHit::SetWavefit()</a>, and <a class="el" href="_t_tip_hit_8cxx_source.html#l00063">TTipHit::SetWavefit()</a>.</p>
 
 </div>
 </div>
@@ -1075,11 +1077,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">716</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">715</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00090">TPulseAnalyzer::SinPar::A</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00092">TPulseAnalyzer::SinPar::C</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">spar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00091">TPulseAnalyzer::SinPar::t0</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00090">TPulseAnalyzer::SinPar::A</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00092">TPulseAnalyzer::SinPar::C</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">spar</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00091">TPulseAnalyzer::SinPar::t0</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00169">fit_rf()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00168">fit_rf()</a>.</p>
 
 </div>
 </div>
@@ -1104,11 +1106,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00360">360</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00359">359</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00055">TPulseAnalyzer::WaveFormPar::b0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00056">TPulseAnalyzer::WaveFormPar::b1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00197">BADCHISQ_SMOOTH_T0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00085">TPulseAnalyzer::ParPar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00082">TPulseAnalyzer::ParPar::constant</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00116">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00084">TPulseAnalyzer::ParPar::quadratic</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00057">TPulseAnalyzer::WaveFormPar::s0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00058">TPulseAnalyzer::WaveFormPar::s1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00059">TPulseAnalyzer::WaveFormPar::s2</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00055">TPulseAnalyzer::WaveFormPar::b0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00056">TPulseAnalyzer::WaveFormPar::b1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00198">BADCHISQ_SMOOTH_T0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00085">TPulseAnalyzer::ParPar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00082">TPulseAnalyzer::ParPar::constant</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00115">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00153">LARGECHISQ</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00084">TPulseAnalyzer::ParPar::quadratic</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00057">TPulseAnalyzer::WaveFormPar::s0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00058">TPulseAnalyzer::WaveFormPar::s1</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00059">TPulseAnalyzer::WaveFormPar::s2</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00070">TPulseAnalyzer::WaveFormPar::thigh</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>.</p>
 
 </div>
 </div>
@@ -1133,9 +1135,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00689">689</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00688">688</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00204">MAX_SAMPLES</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00063">TPulseAnalyzer::WaveFormPar::t10</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00065">TPulseAnalyzer::WaveFormPar::t10_flag</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00205">MAX_SAMPLES</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00063">TPulseAnalyzer::WaveFormPar::t10</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00065">TPulseAnalyzer::WaveFormPar::t10_flag</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
 </div>
 </div>
@@ -1160,11 +1162,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00703">703</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00702">702</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00204">MAX_SAMPLES</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00062">TPulseAnalyzer::WaveFormPar::t30</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00066">TPulseAnalyzer::WaveFormPar::t30_flag</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00205">MAX_SAMPLES</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00062">TPulseAnalyzer::WaveFormPar::t30</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00066">TPulseAnalyzer::WaveFormPar::t30_flag</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>.</p>
 
 </div>
 </div>
@@ -1189,11 +1191,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00662">662</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00661">661</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00204">MAX_SAMPLES</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00061">TPulseAnalyzer::WaveFormPar::t50</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00067">TPulseAnalyzer::WaveFormPar::t50_flag</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00205">MAX_SAMPLES</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00061">TPulseAnalyzer::WaveFormPar::t50</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00067">TPulseAnalyzer::WaveFormPar::t50_flag</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>.</p>
 
 </div>
 </div>
@@ -1218,9 +1220,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00675">675</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00674">674</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00204">MAX_SAMPLES</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00060">TPulseAnalyzer::WaveFormPar::t90</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00068">TPulseAnalyzer::WaveFormPar::t90_flag</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00205">MAX_SAMPLES</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00060">TPulseAnalyzer::WaveFormPar::t90</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00068">TPulseAnalyzer::WaveFormPar::t90_flag</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
 </div>
 </div>
@@ -1262,11 +1264,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">551</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">550</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00041">TPulseAnalyzer::WaveFormPar::bflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00050">TPulseAnalyzer::WaveFormPar::mflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00041">TPulseAnalyzer::WaveFormPar::bflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00050">TPulseAnalyzer::WaveFormPar::mflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00689">get_t10()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00703">get_t30()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00662">get_t50()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00675">get_t90()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00688">get_t10()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00702">get_t30()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00661">get_t50()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00674">get_t90()</a>.</p>
 
 </div>
 </div>
@@ -1291,11 +1293,32 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00527">527</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00526">526</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00150">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00050">TPulseAnalyzer::WaveFormPar::mflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00050">TPulseAnalyzer::WaveFormPar::mflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a310b098f91b4864912fec29d23bf5b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TPulseAnalyzer::GetCsIChiSq </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00810">810</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00097">TPulseAnalyzer::ShapePar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00172">CsIIsSet()</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00146">shpar</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_tip_hit_8cxx_source.html#l00071">TTipHit::SetPID()</a>.</p>
 
 </div>
 </div>
@@ -1320,11 +1343,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">1051</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">1049</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00049">TPulseAnalyzer::WaveFormPar::afit</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00046">TPulseAnalyzer::WaveFormPar::baselineMax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00045">TPulseAnalyzer::WaveFormPar::baselineMin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00049">TPulseAnalyzer::WaveFormPar::bfit</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00206">CSI_BASELINE_RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00150">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00480">get_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00527">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00050">TPulseAnalyzer::WaveFormPar::mflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00207">NOISE_LEVEL_CSI</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00051">TPulseAnalyzer::WaveFormPar::teflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00049">TPulseAnalyzer::WaveFormPar::afit</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00046">TPulseAnalyzer::WaveFormPar::baselineMax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00045">TPulseAnalyzer::WaveFormPar::baselineMin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00049">TPulseAnalyzer::WaveFormPar::bfit</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00207">CSI_BASELINE_RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00479">get_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00526">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00050">TPulseAnalyzer::WaveFormPar::mflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00208">NOISE_LEVEL_CSI</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00051">TPulseAnalyzer::WaveFormPar::teflag</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00837">CsIPID()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00811">CsIt0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00840">CsIPID()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00818">CsIt0()</a>.</p>
 
 </div>
 </div>
@@ -1349,11 +1372,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">883</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">884</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00101">TPulseAnalyzer::ShapePar::am</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00212">BADCHISQ_AMPL</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00200">BADCHISQ_MAT</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00211">BADCHISQ_NEG</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00210">BADCHISQ_T0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00097">TPulseAnalyzer::ShapePar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01153">GetCsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01140">GetCsITau()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00098">TPulseAnalyzer::ShapePar::ndf</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00208">NSHAPE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">shpar</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00099">TPulseAnalyzer::ShapePar::type</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00101">TPulseAnalyzer::ShapePar::am</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00201">BADCHISQ_MAT</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00212">BADCHISQ_NEG</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00211">BADCHISQ_T0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00097">TPulseAnalyzer::ShapePar::chisq</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01151">GetCsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01138">GetCsITau()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_vector</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00098">TPulseAnalyzer::ShapePar::ndf</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00209">NSHAPE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00146">shpar</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00099">TPulseAnalyzer::ShapePar::type</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00837">CsIPID()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00811">CsIt0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00840">CsIPID()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00818">CsIt0()</a>.</p>
 
 </div>
 </div>
@@ -1378,11 +1401,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01153">1153</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01151">1151</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00168">EPS</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01140">GetCsITau()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00036">TPulseAnalyzer::WaveFormPar::baseline_range</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00169">EPS</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01138">GetCsITau()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>.</p>
 
 </div>
 </div>
@@ -1408,11 +1431,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01140">1140</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01138">1138</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00208">NSHAPE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">shpar</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00209">NSHAPE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00146">shpar</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00100">TPulseAnalyzer::ShapePar::t</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01153">GetCsIt0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01151">GetCsIt0()</a>.</p>
 
 </div>
 </div>
@@ -1429,11 +1452,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00797">797</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00796">796</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">T0RANGE</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>.</p>
 
 </div>
 </div>
@@ -1460,9 +1483,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00121">121</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_r_f_8cxx_source.html#l00028">TRF::AddFragment()</a>, <a class="el" href="_t_tip_hit_8cxx_source.html#l00070">TTipHit::SetPID()</a>, <a class="el" href="_t_si_li_hit_8cxx_source.html#l00052">TSiLiHit::SetWavefit()</a>, <a class="el" href="_t_s3_hit_8cxx_source.html#l00051">TS3Hit::SetWavefit()</a>, <a class="el" href="_t_tigress_hit_8cxx_source.html#l00169">TTigressHit::SetWavefit()</a>, and <a class="el" href="_t_tip_hit_8cxx_source.html#l00062">TTipHit::SetWavefit()</a>.</p>
+<p>Referenced by <a class="el" href="_t_r_f_8cxx_source.html#l00028">TRF::AddFragment()</a>, <a class="el" href="_t_tip_hit_8cxx_source.html#l00071">TTipHit::SetPID()</a>, <a class="el" href="_t_si_li_hit_8cxx_source.html#l00049">TSiLiHit::SetWavefit()</a>, <a class="el" href="_t_s3_hit_8cxx_source.html#l00049">TS3Hit::SetWavefit()</a>, <a class="el" href="_t_tigress_hit_8cxx_source.html#l00139">TTigressHit::SetWavefit()</a>, and <a class="el" href="_t_tip_hit_8cxx_source.html#l00063">TTipHit::SetWavefit()</a>.</p>
 
 </div>
 </div>
@@ -1479,9 +1502,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01399">1399</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01397">1397</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00038">TPulseAnalyzer::WaveFormPar::baselineStDev</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">wpar</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00037">TPulseAnalyzer::WaveFormPar::baseline</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00038">TPulseAnalyzer::WaveFormPar::baselineStDev</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00043">TPulseAnalyzer::WaveFormPar::max</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00052">TPulseAnalyzer::WaveFormPar::t0</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00047">TPulseAnalyzer::WaveFormPar::temax</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00048">TPulseAnalyzer::WaveFormPar::temin</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00044">TPulseAnalyzer::WaveFormPar::tmax</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">wpar</a>.</p>
 
 </div>
 </div>
@@ -1507,9 +1530,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00170">170</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">171</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00837">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00811">CsIt0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00840">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00818">CsIt0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
 
 </div>
 </div>
@@ -1539,7 +1562,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">43</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00150">FILTER</a>, <a class="el" href="_t_fragment_8h_source.html#l00101">TFragment::HasWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00170">SetCsI()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">T0RANGE</a>, <a class="el" href="_t_fragment_8h_source.html#l00069">TFragment::wavebuffer</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">FILTER</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8h_source.html#l00120">TGRSIDetectorHit::GetWaveform()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8h_source.html#l00092">TGRSIDetectorHit::HasWave()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">SetCsI()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">T0RANGE</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00011">TPulseAnalyzer()</a>.</p>
 
@@ -1571,7 +1594,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00057">57</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00150">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00170">SetCsI()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">T0RANGE</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">wavebuffer</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">FILTER</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">N</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">set</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">SetCsI()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">T0RANGE</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">wavebuffer</a>.</p>
 
 </div>
 </div>
@@ -1598,9 +1621,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">77</a> of file <a class="el" href="_t_pulse_analyzer_8cxx_source.html">TPulseAnalyzer.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">copy_matrix</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00090">determinant()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_solution</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_vector</a>.</p>
+<p>References <a class="el" href="_t_pulse_analyzer_8h_source.html#l00160">copy_matrix</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00090">determinant()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">lineq_dim</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">lineq_matrix</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">lineq_solution</a>, and <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">lineq_vector</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00234">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00116">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00233">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00115">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>.</p>
 
 </div>
 </div>
@@ -1623,7 +1646,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00203">203</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00204">204</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
 </div>
 </div>
@@ -1645,9 +1668,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00212">212</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00213">213</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
 </div>
 </div>
@@ -1669,9 +1690,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00199">199</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00200">200</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00316">get_linear_T0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00315">get_linear_T0()</a>.</p>
 
 </div>
 </div>
@@ -1693,9 +1714,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00200">200</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00201">201</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00234">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00116">fit_smooth_parabola()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00233">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00115">fit_smooth_parabola()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>.</p>
 
 </div>
 </div>
@@ -1717,9 +1738,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00211">211</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00212">212</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>.</p>
 
 </div>
 </div>
@@ -1741,9 +1762,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00198">198</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00199">199</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00418">get_parabolic_T0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00417">get_parabolic_T0()</a>.</p>
 
 </div>
 </div>
@@ -1765,9 +1786,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00197">197</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00198">198</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00360">get_smooth_T0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00359">get_smooth_T0()</a>.</p>
 
 </div>
 </div>
@@ -1789,9 +1810,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00210">210</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00211">211</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>.</p>
 
 </div>
 </div>
@@ -1813,7 +1834,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">159</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00160">160</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00090">determinant()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
 
@@ -1837,9 +1858,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00206">206</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00207">207</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>.</p>
 
 </div>
 </div>
@@ -1861,9 +1882,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00167">167</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00168">168</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8h_source.html#l00171">CsIIsSet()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8h_source.html#l00172">CsIIsSet()</a>.</p>
 
 </div>
 </div>
@@ -1885,9 +1906,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00168">168</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00169">169</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01153">GetCsIt0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01151">GetCsIt0()</a>.</p>
 
 </div>
 </div>
@@ -1909,9 +1930,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00150">150</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">151</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01334">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00527">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01332">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00526">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
 
 </div>
 </div>
@@ -1933,9 +1954,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00147">147</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00148">148</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01278">DrawWave()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01276">DrawWave()</a>.</p>
 
 </div>
 </div>
@@ -1957,9 +1978,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">152</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00153">153</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00316">get_linear_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00418">get_parabolic_T0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00360">get_smooth_T0()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00315">get_linear_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00417">get_parabolic_T0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00359">get_smooth_T0()</a>.</p>
 
 </div>
 </div>
@@ -1981,9 +2002,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00155">155</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">156</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00234">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00116">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01153">GetCsIt0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00233">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00115">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01151">GetCsIt0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
 
 </div>
 </div>
@@ -2005,9 +2026,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00156">156</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">157</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00234">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00116">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00233">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00115">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
 
 </div>
 </div>
@@ -2029,9 +2050,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">158</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00159">159</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00234">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00116">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01153">GetCsIt0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00233">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00115">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01151">GetCsIt0()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
 
 </div>
 </div>
@@ -2053,9 +2074,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00157">157</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00158">158</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00234">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00116">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00233">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00115">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00077">solve_lin_eq()</a>.</p>
 
 </div>
 </div>
@@ -2077,9 +2098,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00204">204</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00205">205</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00689">get_t10()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00703">get_t30()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00662">get_t50()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00675">get_t90()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00688">get_t10()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00702">get_t30()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00661">get_t50()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00674">get_t90()</a>.</p>
 
 </div>
 </div>
@@ -2101,9 +2122,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">141</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00142">142</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00837">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00811">CsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01334">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01370">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01286">DrawRFFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01306">DrawT0fit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01278">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00169">fit_rf()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00506">get_baseline_fin()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00527">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00840">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00818">CsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01332">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01368">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01284">DrawRFFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01304">DrawT0fit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01276">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00168">fit_rf()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00505">get_baseline_fin()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00526">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
 
 </div>
 </div>
@@ -2125,9 +2146,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00207">207</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00208">208</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>.</p>
 
 </div>
 </div>
@@ -2149,9 +2170,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00208">208</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00209">209</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01140">GetCsITau()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01138">GetCsITau()</a>.</p>
 
 </div>
 </div>
@@ -2173,7 +2194,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00202">202</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00203">203</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
 </div>
 </div>
@@ -2195,9 +2216,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00139">139</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">140</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00837">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00811">CsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01334">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01370">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01286">DrawRFFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01306">DrawT0fit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01278">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00169">fit_rf()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00788">get_sig2noise()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00797">good_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00121">IsSet()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00840">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00818">CsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01332">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01368">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01284">DrawRFFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01304">DrawT0fit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01276">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00168">fit_rf()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00787">get_sig2noise()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00796">good_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8h_source.html#l00121">IsSet()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
 
 </div>
 </div>
@@ -2219,9 +2240,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">145</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00146">146</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00837">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00811">CsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01370">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01140">GetCsITau()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00021">~TPulseAnalyzer()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00840">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00818">CsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01368">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00810">GetCsIChiSq()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01138">GetCsITau()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00021">~TPulseAnalyzer()</a>.</p>
 
 </div>
 </div>
@@ -2243,9 +2264,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">144</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00145">145</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01286">DrawRFFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00169">fit_rf()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">get_sin_par()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00021">~TPulseAnalyzer()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01284">DrawRFFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00168">fit_rf()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">get_sin_par()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00021">~TPulseAnalyzer()</a>.</p>
 
 </div>
 </div>
@@ -2267,9 +2288,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00151">151</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00152">152</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00316">get_linear_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00418">get_parabolic_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00360">get_smooth_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00797">good_baseline()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00027">Clear()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00315">get_linear_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00417">get_parabolic_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00359">get_smooth_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00796">good_baseline()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
 
 </div>
 </div>
@@ -2291,9 +2312,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00143">143</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00144">144</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01278">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00277">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00234">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00116">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00480">get_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00506">get_baseline_fin()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00716">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00527">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00797">good_baseline()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01276">DrawWave()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00276">fit_line()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00233">fit_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00115">fit_smooth_parabola()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00479">get_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00505">get_baseline_fin()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00715">get_sin_par()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00526">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00796">good_baseline()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00043">SetData()</a>.</p>
 
 </div>
 </div>
@@ -2315,9 +2336,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00140">140</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pulse_analyzer_8h_source.html#l00141">141</a> of file <a class="el" href="_t_pulse_analyzer_8h_source.html">TPulseAnalyzer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00837">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00811">CsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01334">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01370">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01306">DrawT0fit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00185">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00480">get_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00506">get_baseline_fin()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00316">get_linear_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00418">get_parabolic_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00788">get_sig2noise()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00360">get_smooth_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00689">get_t10()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00703">get_t30()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00662">get_t50()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00675">get_t90()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00551">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00527">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01051">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00883">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01153">GetCsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00797">good_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01399">print_WavePar()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00021">~TPulseAnalyzer()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00840">CsIPID()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00818">CsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01332">DrawCsIExclusion()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01368">DrawCsIFit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01304">DrawT0fit()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00184">fit_newT0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00479">get_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00505">get_baseline_fin()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00315">get_linear_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00417">get_parabolic_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00787">get_sig2noise()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00359">get_smooth_T0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00688">get_t10()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00702">get_t30()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00661">get_t50()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00674">get_t90()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00550">get_tfrac()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00526">get_tmax()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01049">GetCsIExclusionZone()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00884">GetCsIShape()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01151">GetCsIt0()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00796">good_baseline()</a>, <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l01397">print_WavePar()</a>, and <a class="el" href="_t_pulse_analyzer_8cxx_source.html#l00021">~TPulseAnalyzer()</a>.</p>
 
 </div>
 </div>
@@ -2327,7 +2348,7 @@ Static Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (2.4.00 ) Reference Guide Generated on Wed Jun 22 2016 14:04:55.
+GRSISort (2.4.00 ) Reference Guide Generated on Tue Sep 27 2016 17:40:07.
 </small>
 </div>
 </body>

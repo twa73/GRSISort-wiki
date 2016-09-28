@@ -36,6 +36,7 @@ var class_t_pulse_analyzer =
     [ "get_t90", "class_t_pulse_analyzer.html#a472c3ac81228b43c57aa5ff21c1c4ff7", null ],
     [ "get_tfrac", "class_t_pulse_analyzer.html#a277c39650e02698dde7426e7a2a2e4ee", null ],
     [ "get_tmax", "class_t_pulse_analyzer.html#a91af4971bf8a2a3f478c758cadf063ee", null ],
+    [ "GetCsIChiSq", "class_t_pulse_analyzer.html#a3a310b098f91b4864912fec29d23bf5b", null ],
     [ "GetCsIExclusionZone", "class_t_pulse_analyzer.html#a0dfe7a79994fb6ba6fd0ffb8aae9f562", null ],
     [ "GetCsIShape", "class_t_pulse_analyzer.html#ab8b78ced8e0b487f104a890712dabe7f", null ],
     [ "GetCsIt0", "class_t_pulse_analyzer.html#a11e4e2c8c0ee40263060479def387be6", null ],

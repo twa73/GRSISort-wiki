@@ -161,6 +161,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4aefd5e650b7b487d4b0ba6d02c936f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2a9b177227985d18d4170acb0c5a229"><td class="memItemLeft" align="right" valign="top">TTree *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_root_i_o.html#aa2a9b177227985d18d4170acb0c5a229">GetEpicsTree</a> ()</td></tr>
 <tr class="separator:aa2a9b177227985d18d4170acb0c5a229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683bcf3df520d75a91d2a586db155e47"><td class="memItemLeft" align="right" valign="top">std::vector&lt; TFile * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_root_i_o.html#a683bcf3df520d75a91d2a586db155e47">GetFileList</a> ()</td></tr>
+<tr class="separator:a683bcf3df520d75a91d2a586db155e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f4ac6e04be17cc3ca585029927a55d6"><td class="memItemLeft" align="right" valign="top">TTree *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_root_i_o.html#a3f4ac6e04be17cc3ca585029927a55d6">GetFragmentTree</a> ()</td></tr>
 <tr class="separator:a3f4ac6e04be17cc3ca585029927a55d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5274fb6550ab3ff46319fba58955c1f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_p_p_g.html">TPPG</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_root_i_o.html#a5274fb6550ab3ff46319fba58955c1f3">GetPPG</a> ()</td></tr>
@@ -181,8 +183,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af8f2a2e25065463162d61f5af9aa843a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66762d4d014df823348c69b7053081ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_root_i_o.html#a66762d4d014df823348c69b7053081ec">LoadRootFile</a> (TFile *)</td></tr>
 <tr class="separator:a66762d4d014df823348c69b7053081ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f80ca50d8d57ea730e2c1f8c190832d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_root_i_o.html#a1f80ca50d8d57ea730e2c1f8c190832d">MakeUserHistsFromFragmentTree</a> ()</td></tr>
-<tr class="separator:a1f80ca50d8d57ea730e2c1f8c190832d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa001cb6a6dfff9aaa64cb37efabe7435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_root_i_o.html#aa001cb6a6dfff9aaa64cb37efabe7435">SetUpBadFragmentTree</a> ()</td></tr>
 <tr class="separator:aa001cb6a6dfff9aaa64cb37efabe7435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a386c5b684775a84e153433be7c694614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_root_i_o.html#a386c5b684775a84e153433be7c694614">SetUpDiagnostics</a> ()</td></tr>
@@ -272,7 +272,8 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_t_g_r_s_i_root_i_o__coll__graph.svg" width="100%" height="541"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_t_g_r_s_i_root_i_o__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="adb07d77a8da4b86503003424ecda428b"></a>
@@ -341,11 +342,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">293</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">299</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_globals_8h_source.html#l00021">DMAGENTA</a>, <a class="el" href="_globals_8h_source.html#l00019">DRED</a>, <a class="el" href="_globals_8h_source.html#l00017">DYELLOW</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00037">fFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00254">FinalizeDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00235">FinalizeEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00194">FinalizeFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00225">FinalizePPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00244">FinalizeScalerTrees()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00047">fTimesBadFillCalled</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00046">fTimesFillCalled</a>, <a class="el" href="_t_g_r_s_i_run_info_8cxx_source.html#l00144">TGRSIRunInfo::Get()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00144">TGRSIRunInfo::GetNumberOfSystems()</a>, <a class="el" href="_globals_8h_source.html#l00006">RESET_COLOR</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00097">TGRSIRunInfo::SetRunLength()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00095">TGRSIRunInfo::SetRunStart()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00096">TGRSIRunInfo::SetRunStop()</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a612d15db91fa6d8ed963ea99cb4529f5">TGRSIOptions::WriteBadFrags()</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00067">TGRSILoop::EndRun()</a>.</p>
+<p>References <a class="el" href="_globals_8h_source.html#l00021">DMAGENTA</a>, <a class="el" href="_globals_8h_source.html#l00019">DRED</a>, <a class="el" href="_globals_8h_source.html#l00017">DYELLOW</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00037">fFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00259">FinalizeDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00240">FinalizeEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00198">FinalizeFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00230">FinalizePPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00249">FinalizeScalerTrees()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00047">fTimesBadFillCalled</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00046">fTimesFillCalled</a>, <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>, <a class="el" href="_t_g_r_s_i_run_info_8cxx_source.html#l00158">TGRSIRunInfo::Get()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00144">TGRSIRunInfo::GetNumberOfSystems()</a>, <a class="el" href="_globals_8h_source.html#l00006">RESET_COLOR</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00097">TGRSIRunInfo::SetRunLength()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00095">TGRSIRunInfo::SetRunStart()</a>, and <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00096">TGRSIRunInfo::SetRunStop()</a>.</p>
 
 </div>
 </div>
@@ -363,11 +362,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00146">146</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00147">147</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00056">fBadBufferFrag</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00038">fBadFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00047">fTimesBadFillCalled</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a612d15db91fa6d8ed963ea99cb4529f5">TGRSIOptions::WriteBadFrags()</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00122">TGRSILoop::FillFragmentTree()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00056">fBadBufferFrag</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00038">fBadFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00047">fTimesBadFillCalled</a>, and <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>.</p>
 
 </div>
 </div>
@@ -385,11 +382,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00162">162</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00166">166</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00060">fDeadtimeScalerData</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00040">fDeadtimeScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00049">fTimesDeadtimeScalerCalled</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a2d6fbaec3452be64e50cb16b2fc91268">TGRSIOptions::IgnoreScaler()</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00163">TGRSILoop::FillScalerTree()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00060">fDeadtimeScalerData</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00040">fDeadtimeScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00049">fTimesDeadtimeScalerCalled</a>, and <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>.</p>
 
 </div>
 </div>
@@ -407,11 +402,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00182">182</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00186">186</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00051">fEPICSTimesFillCalled</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00039">fEpicsTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00057">fEXBufferFrag</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a4de55489faa14ae6a42024a407897e76">TGRSIOptions::IgnoreEpics()</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_data_parser_8cxx_source.html#l01080">TDataParser::EPIXToScalar()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00051">fEPICSTimesFillCalled</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00039">fEpicsTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00057">fEXBufferFrag</a>, and <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>.</p>
 
 </div>
 </div>
@@ -429,11 +422,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00135">135</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00136">136</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00055">fBufferFrag</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00037">fFragmentTree</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00046">fTimesFillCalled</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00122">TGRSILoop::FillFragmentTree()</a>.</p>
 
 </div>
 </div>
@@ -451,11 +442,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00156">156</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00157">157</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00099">TPPG::AddData()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">fPPG</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00048">fTimesPPGCalled</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_data_parser_8cxx_source.html#l00751">TDataParser::GriffinDataToPPGEvent()</a>.</p>
+<p>References <a class="el" href="_t_p_p_g_8cxx_source.html#l00122">TPPG::AddData()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">fPPG</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00048">fTimesPPGCalled</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">SetUpPPG()</a>.</p>
 
 </div>
 </div>
@@ -473,11 +462,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00172">172</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00176">176</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00061">fRateScalerData</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00041">fRateScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00050">fTimesRateScalerCalled</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a2d6fbaec3452be64e50cb16b2fc91268">TGRSIOptions::IgnoreScaler()</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00163">TGRSILoop::FillScalerTree()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00061">fRateScalerData</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00041">fRateScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00050">fTimesRateScalerCalled</a>, and <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>.</p>
 
 </div>
 </div>
@@ -494,7 +481,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00218">218</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00223">223</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00038">fBadFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00037">fFragmentTree</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>.</p>
 
@@ -513,11 +500,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00254">254</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00259">259</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00043">fDiagnostics</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">fPPG</a>, <a class="el" href="_t_diagnostics_8cxx_source.html#l00140">TDiagnostics::ReadPPG()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00092">TGRSIRunInfo::RunNumber()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00093">TGRSIRunInfo::SubRunNumber()</a>, <a class="el" href="namespace_t_g_r_s_i_options.html#ae732ccb3bfb14d8036d7d676843b104d">TGRSIOptions::WriteDiagnostics()</a>, and <a class="el" href="_t_diagnostics_8cxx_source.html#l00172">TDiagnostics::WriteToFile()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00043">fDiagnostics</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">fPPG</a>, <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>, <a class="el" href="_t_diagnostics_8cxx_source.html#l00140">TDiagnostics::ReadPPG()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00092">TGRSIRunInfo::RunNumber()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00093">TGRSIRunInfo::SubRunNumber()</a>, and <a class="el" href="_t_diagnostics_8cxx_source.html#l00172">TDiagnostics::WriteToFile()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">CloseRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">CloseRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -534,11 +521,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00235">235</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00240">240</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00039">fEpicsTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a4de55489faa14ae6a42024a407897e76">TGRSIOptions::IgnoreEpics()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00039">fEpicsTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, and <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">CloseRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">CloseRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -555,11 +542,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00194">194</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00198">198</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00037">fFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_channel_8cxx_source.html#l00236">TChannel::GetDefaultChannel()</a>, <a class="el" href="_t_channel_8h_source.html#l00059">TChannel::GetNumberOfChannels()</a>, and <a class="el" href="_t_channel_8cxx_source.html#l00984">TChannel::WriteToRoot()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00037">fFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_channel_8cxx_source.html#l00261">TChannel::GetDefaultChannel()</a>, <a class="el" href="_t_channel_8h_source.html#l00059">TChannel::GetNumberOfChannels()</a>, <a class="el" href="_t_channel_8cxx_source.html#l01035">TChannel::WriteToRoot()</a>, and <a class="el" href="_t_g_r_s_i_run_info_8cxx_source.html#l00601">TGRSIRunInfo::WriteToRoot()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">CloseRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">CloseRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -576,11 +563,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00225">225</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00230">230</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">fPPG</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00100">TPPG::PPGSize()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">fPPG</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00109">TPPG::PPGSize()</a>, and <a class="el" href="_t_p_p_g_8h_source.html#l00098">TPPG::Write()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">CloseRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">CloseRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -597,11 +584,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00244">244</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00249">249</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00040">fDeadtimeScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00041">fRateScalerTree</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a2d6fbaec3452be64e50cb16b2fc91268">TGRSIOptions::IgnoreScaler()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00040">fDeadtimeScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00041">fRateScalerTree</a>, and <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">CloseRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">CloseRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -628,7 +615,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00015">15</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00089">TGRSIint::ApplyOptions()</a>, <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00067">TGRSILoop::EndRun()</a>, <a class="el" href="_t_data_parser_8cxx_source.html#l01080">TDataParser::EPIXToScalar()</a>, <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00122">TGRSILoop::FillFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00163">TGRSILoop::FillScalerTree()</a>, <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00580">TGRSILoop::Finalize()</a>, <a class="el" href="_t_data_parser_8cxx_source.html#l00370">TDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_data_parser_8cxx_source.html#l00751">TDataParser::GriffinDataToPPGEvent()</a>, <a class="el" href="_t_data_parser_8cxx_source.html#l00838">TDataParser::GriffinDataToScalerEvent()</a>, and <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00214">TGRSILoop::ProcessMidasFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_data_parser_8cxx_source.html#l00379">TDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_data_parser_8cxx_source.html#l00905">TDataParser::GriffinDataToPPGEvent()</a>, and <a class="el" href="_t_data_parser_8cxx_source.html#l00992">TDataParser::GriffinDataToScalerEvent()</a>.</p>
 
 </div>
 </div>
@@ -653,7 +640,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00079">79</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00080">80</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00038">fBadFragmentTree</a>.</p>
 
@@ -680,7 +667,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00090">90</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00091">91</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00040">fDeadtimeScalerTree</a>.</p>
 
@@ -699,11 +686,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00129">129</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00130">130</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00043">fDiagnostics</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00123">SetUpDiagnostics()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00043">fDiagnostics</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00124">SetUpDiagnostics()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_data_parser_8cxx_source.html#l00370">TDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_data_parser_8cxx_source.html#l00751">TDataParser::GriffinDataToPPGEvent()</a>, and <a class="el" href="_t_data_parser_8cxx_source.html#l00838">TDataParser::GriffinDataToScalerEvent()</a>.</p>
+<p>Referenced by <a class="el" href="_t_data_parser_8cxx_source.html#l00379">TDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_data_parser_8cxx_source.html#l00905">TDataParser::GriffinDataToPPGEvent()</a>, and <a class="el" href="_t_data_parser_8cxx_source.html#l00992">TDataParser::GriffinDataToScalerEvent()</a>.</p>
 
 </div>
 </div>
@@ -728,9 +715,36 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00099">99</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00100">100</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00039">fEpicsTree</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a683bcf3df520d75a91d2a586db155e47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;TFile*&gt; TGRSIRootIO::GetFileList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00070">70</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00053">fInFiles</a>.</p>
 
 </div>
 </div>
@@ -755,7 +769,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00074">74</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00075">75</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00037">fFragmentTree</a>.</p>
 
@@ -782,7 +796,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00084">84</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00085">85</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">fPPG</a>.</p>
 
@@ -809,7 +823,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00091">91</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00092">92</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00041">fRateScalerTree</a>.</p>
 
@@ -836,7 +850,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00071">71</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00072">72</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>.</p>
 
@@ -856,9 +870,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00361">361</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00326">MakeUserHistsFromFragmentTree()</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00365">365</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
 </div>
 </div>
@@ -876,9 +888,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00385">385</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00326">MakeUserHistsFromFragmentTree()</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00389">389</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
 </div>
 </div>
@@ -903,7 +913,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00095">95</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00096">96</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00049">fTimesDeadtimeScalerCalled</a>.</p>
 
@@ -930,11 +940,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00087">87</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00088">88</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00048">fTimesPPGCalled</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_g_r_s_i_loop_8cxx_source.html#l00580">TGRSILoop::Finalize()</a>.</p>
 
 </div>
 </div>
@@ -959,7 +967,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00096">96</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00097">97</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00050">fTimesRateScalerCalled</a>.</p>
 
@@ -983,28 +991,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00053">fInFiles</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00089">TGRSIint::ApplyOptions()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1f80ca50d8d57ea730e2c1f8c190832d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TGRSIRootIO::MakeUserHistsFromFragmentTree </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00326">326</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
-
-<p>References <a class="el" href="namespace_t_g_r_s_i_options.html#a9cbd2ffbeb213b5915df7e29600183ba">TGRSIOptions::GetInputRoot()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00361">GetRunNumber()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00385">GetSubRunNumber()</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#adbe52a9afd6dc1194d5347ae169275d6">TGRSIOptions::ProgressDialog()</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00089">TGRSIint::ApplyOptions()</a>.</p>
+<p>Referenced by <a class="el" href="mainwindow_8py_source.html#l00117">pygui.mainwindow.MainWindow::_setup_GUI()</a>.</p>
 
 </div>
 </div>
@@ -1023,9 +1010,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">53</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00056">fBadBufferFrag</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00038">fBadFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00047">fTimesBadFillCalled</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a612d15db91fa6d8ed963ea99cb4529f5">TGRSIOptions::WriteBadFrags()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00056">fBadBufferFrag</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00038">fBadFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00047">fTimesBadFillCalled</a>, and <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00266">SetUpRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00271">SetUpRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -1042,11 +1029,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00123">123</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00124">124</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00043">fDiagnostics</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00129">GetDiagnostics()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00266">SetUpRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00130">GetDiagnostics()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00271">SetUpRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -1063,11 +1050,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00110">110</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00111">111</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00051">fEPICSTimesFillCalled</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00039">fEpicsTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00057">fEXBufferFrag</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a4de55489faa14ae6a42024a407897e76">TGRSIOptions::IgnoreEpics()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00051">fEPICSTimesFillCalled</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00039">fEpicsTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00057">fEXBufferFrag</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, and <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00266">SetUpRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00271">SetUpRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -1088,7 +1075,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00055">fBufferFrag</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00037">fFragmentTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00046">fTimesFillCalled</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00266">SetUpRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00271">SetUpRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -1107,9 +1094,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">65</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">fPPG</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00048">fTimesPPGCalled</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00092">TGRSIRunInfo::RunNumber()</a>, and <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00093">TGRSIRunInfo::SubRunNumber()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">fPPG</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00048">fTimesPPGCalled</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00082">TPPG::Get()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00092">TGRSIRunInfo::RunNumber()</a>, and <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00093">TGRSIRunInfo::SubRunNumber()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00266">SetUpRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00157">FillPPG()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00271">SetUpRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -1137,9 +1124,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00266">266</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00271">271</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="namespace_t_g_r_s_i_options.html#a4ecfdcd5372b5f57331bfbfcb1ab07fb">TGRSIOptions::AddInputRootFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00123">SetUpDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00110">SetUpEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">SetUpPPG()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00092">SetUpScalerTrees()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00089">TGRSIRunInfo::SetRunNumber()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00090">TGRSIRunInfo::SetSubRunNumber()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00124">SetUpDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00111">SetUpEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">SetUpPPG()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00093">SetUpScalerTrees()</a>.</p>
 
 </div>
 </div>
@@ -1156,11 +1143,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00092">92</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00093">93</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html">TGRSIRootIO.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00060">fDeadtimeScalerData</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00040">fDeadtimeScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00061">fRateScalerData</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00041">fRateScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00049">fTimesDeadtimeScalerCalled</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00050">fTimesRateScalerCalled</a>, and <a class="el" href="namespace_t_g_r_s_i_options.html#a2d6fbaec3452be64e50cb16b2fc91268">TGRSIOptions::IgnoreScaler()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00060">fDeadtimeScalerData</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00040">fDeadtimeScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">fOutFile</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00061">fRateScalerData</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00041">fRateScalerTree</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00049">fTimesDeadtimeScalerCalled</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00050">fTimesRateScalerCalled</a>, and <a class="el" href="_t_g_r_s_i_options2_8cxx_source.html#l00014">TGRSIOptions2::Get()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00266">SetUpRootOutFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00271">SetUpRootOutFile()</a>.</p>
 
 </div>
 </div>
@@ -1185,7 +1172,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00056">56</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00146">FillBadFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00147">FillBadFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>.</p>
 
 </div>
 </div>
@@ -1209,7 +1196,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00038">38</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00146">FillBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00218">FinalizeBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00079">GetBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00147">FillBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00223">FinalizeBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00080">GetBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
 
 </div>
 </div>
@@ -1255,7 +1242,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00055">55</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00135">FillFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00136">FillFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>.</p>
 
 </div>
 </div>
@@ -1279,7 +1266,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00060">60</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00162">FillDeadtimeScalerTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00092">SetUpScalerTrees()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00166">FillDeadtimeScalerTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00093">SetUpScalerTrees()</a>.</p>
 
 </div>
 </div>
@@ -1303,7 +1290,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00040">40</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00162">FillDeadtimeScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00244">FinalizeScalerTrees()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00090">GetDeadtimeScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00092">SetUpScalerTrees()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00166">FillDeadtimeScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00249">FinalizeScalerTrees()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00091">GetDeadtimeScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00093">SetUpScalerTrees()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
 
 </div>
 </div>
@@ -1327,7 +1314,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00043">43</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00254">FinalizeDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00129">GetDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00123">SetUpDiagnostics()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00259">FinalizeDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00130">GetDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00124">SetUpDiagnostics()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
 
 </div>
 </div>
@@ -1351,7 +1338,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00051">51</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00182">FillEpicsTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00110">SetUpEpicsTree()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00186">FillEpicsTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00111">SetUpEpicsTree()</a>.</p>
 
 </div>
 </div>
@@ -1375,7 +1362,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00039">39</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00182">FillEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00235">FinalizeEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00099">GetEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00110">SetUpEpicsTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00186">FillEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00240">FinalizeEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00100">GetEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00111">SetUpEpicsTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
 
 </div>
 </div>
@@ -1399,7 +1386,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00057">57</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00182">FillEpicsTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00110">SetUpEpicsTree()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00186">FillEpicsTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00111">SetUpEpicsTree()</a>.</p>
 
 </div>
 </div>
@@ -1423,7 +1410,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00037">37</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">CloseRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00135">FillFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00218">FinalizeBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00194">FinalizeFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00074">GetFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">CloseRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00136">FillFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00223">FinalizeBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00198">FinalizeFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00075">GetFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
 
 </div>
 </div>
@@ -1447,7 +1434,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00053">53</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00035">LoadRootFile()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00070">GetFileList()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00035">LoadRootFile()</a>.</p>
 
 </div>
 </div>
@@ -1471,7 +1458,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00045">45</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">CloseRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00218">FinalizeBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00254">FinalizeDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00235">FinalizeEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00194">FinalizeFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00225">FinalizePPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00244">FinalizeScalerTrees()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00071">GetRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00123">SetUpDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00110">SetUpEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">SetUpPPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00266">SetUpRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00092">SetUpScalerTrees()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">CloseRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00223">FinalizeBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00259">FinalizeDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00240">FinalizeEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00198">FinalizeFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00230">FinalizePPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00249">FinalizeScalerTrees()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00072">GetRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00124">SetUpDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00111">SetUpEpicsTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">SetUpPPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00271">SetUpRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00093">SetUpScalerTrees()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
 
 </div>
 </div>
@@ -1495,7 +1482,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00042">42</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00156">FillPPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00254">FinalizeDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00225">FinalizePPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00084">GetPPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">SetUpPPG()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00157">FillPPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00259">FinalizeDiagnostics()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00230">FinalizePPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00085">GetPPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">SetUpPPG()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
 
 </div>
 </div>
@@ -1519,7 +1506,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00061">61</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00172">FillRateScalerTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00092">SetUpScalerTrees()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00176">FillRateScalerTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00093">SetUpScalerTrees()</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1530,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00041">41</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00172">FillRateScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00244">FinalizeScalerTrees()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00091">GetRateScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00092">SetUpScalerTrees()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00176">FillRateScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00249">FinalizeScalerTrees()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00092">GetRateScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00093">SetUpScalerTrees()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00021">TGRSIRootIO()</a>.</p>
 
 </div>
 </div>
@@ -1589,7 +1576,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00047">47</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">CloseRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00146">FillBadFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">CloseRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00147">FillBadFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00053">SetUpBadFragmentTree()</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +1600,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00049">49</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00162">FillDeadtimeScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00095">GetTimesDeadtimeScalerCalled()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00092">SetUpScalerTrees()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00166">FillDeadtimeScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00096">GetTimesDeadtimeScalerCalled()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00093">SetUpScalerTrees()</a>.</p>
 
 </div>
 </div>
@@ -1637,7 +1624,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00046">46</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00293">CloseRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00135">FillFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00299">CloseRootOutFile()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00136">FillFragmentTree()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00041">SetUpFragmentTree()</a>.</p>
 
 </div>
 </div>
@@ -1661,7 +1648,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00048">48</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00156">FillPPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00087">GetTimesPPGCalled()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">SetUpPPG()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00157">FillPPG()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00088">GetTimesPPGCalled()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00065">SetUpPPG()</a>.</p>
 
 </div>
 </div>
@@ -1685,7 +1672,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00050">50</a> of file <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html">TGRSIRootIO.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00172">FillRateScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00096">GetTimesRateScalerCalled()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00092">SetUpScalerTrees()</a>.</p>
+<p>Referenced by <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00176">FillRateScalerTree()</a>, <a class="el" href="_t_g_r_s_i_root_i_o_8h_source.html#l00097">GetTimesRateScalerCalled()</a>, and <a class="el" href="_t_g_r_s_i_root_i_o_8cxx_source.html#l00093">SetUpScalerTrees()</a>.</p>
 
 </div>
 </div>
@@ -1695,7 +1682,7 @@ Static Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (2.4.00 ) Reference Guide Generated on Wed Jun 22 2016 14:04:54.
+GRSISort (2.4.00 ) Reference Guide Generated on Tue Sep 27 2016 17:40:06.
 </small>
 </div>
 </body>

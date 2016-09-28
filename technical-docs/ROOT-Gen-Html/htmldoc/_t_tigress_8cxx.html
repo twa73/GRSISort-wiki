@@ -134,6 +134,8 @@ $(document).ready(function(){initNavTree('_t_tigress_8cxx.html','');});
 Functions</h2></td></tr>
 <tr class="memitem:a557abaf67c9e40c603810a8e94811a72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_t_tigress_8cxx.html#a557abaf67c9e40c603810a8e94811a72">DefaultAddback</a> (<a class="el" href="class_t_tigress_hit.html">TTigressHit</a> &amp;one, <a class="el" href="class_t_tigress_hit.html">TTigressHit</a> &amp;two)</td></tr>
 <tr class="separator:a557abaf67c9e40c603810a8e94811a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c5cbf0cd913bdae81219f55141ef3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_t_tigress_8cxx.html#af6c5cbf0cd913bdae81219f55141ef3e">DefaultSuppression</a> (<a class="el" href="class_t_tigress_hit.html">TTigressHit</a> &amp;tig, <a class="el" href="class_t_bgo_hit.html">TBgoHit</a> &amp;bgo)</td></tr>
+<tr class="separator:af6c5cbf0cd913bdae81219f55141ef3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a557abaf67c9e40c603810a8e94811a72"></a>
@@ -160,9 +162,39 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_tigress_8cxx_source.html#l00023">23</a> of file <a class="el" href="_t_tigress_8cxx_source.html">TTigress.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_tigress_8cxx_source.html#l00026">26</a> of file <a class="el" href="_t_tigress_8cxx_source.html">TTigress.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00178">TGRSIRunInfo::AddBackWindow()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00181">TGRSIRunInfo::AddBackWindow()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af6c5cbf0cd913bdae81219f55141ef3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DefaultSuppression </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_tigress_hit.html">TTigressHit</a> &amp;&#160;</td>
+          <td class="paramname"><em>tig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_bgo_hit.html">TBgoHit</a> &amp;&#160;</td>
+          <td class="paramname"><em>bgo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_tigress_8cxx_source.html#l00042">42</a> of file <a class="el" href="_t_tigress_8cxx_source.html">TTigress.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_tigress_8h_source.html#l00130">TTigress::BGOSuppression</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8h_source.html#l00114">TGRSIDetectorHit::GetCfd()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00069">TGRSIDetectorHit::GetCharge()</a>, <a class="el" href="_t_bgo_hit_8cxx_source.html#l00042">TBgoHit::GetCrystal()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00191">TGRSIDetectorHit::GetCrystal()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00157">TGRSIDetectorHit::GetDetector()</a>, and <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00174">TGRSIDetectorHit::GetSegment()</a>.</p>
 
 </div>
 </div>
@@ -172,7 +204,7 @@ Functions</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (2.4.00 ) Reference Guide Generated on Wed Jun 22 2016 14:04:53.
+GRSISort (2.4.00 ) Reference Guide Generated on Tue Sep 27 2016 17:40:05.
 </small>
 </div>
 </body>

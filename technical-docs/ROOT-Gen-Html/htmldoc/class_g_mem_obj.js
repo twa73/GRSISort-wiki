@@ -2,7 +2,7 @@ var class_g_mem_obj =
 [
     [ "GMemObj", "class_g_mem_obj.html#aaaee9761670cd9c785ecbf59be066aa3", null ],
     [ "GMemObj", "class_g_mem_obj.html#a617fecf717d7126208a8d5981e7bcf51", null ],
-    [ "~GMemObj", "class_g_mem_obj.html#a58f40f8ee3800436ef9c0b995ac4ff44", null ],
+    [ "~GMemObj", "class_g_mem_obj.html#a2d32ac0365f9c2254b472c79670fbabc", null ],
     [ "Copy", "class_g_mem_obj.html#a40ed046b44f811d92a6316c96b43bc1f", null ],
     [ "GetFile", "class_g_mem_obj.html#aab9f05b633a3f4a3ca2dab17e029c9ba", null ],
     [ "GetObject", "class_g_mem_obj.html#a6f9851fb49c1c8989e9db2b6918d2417", null ],

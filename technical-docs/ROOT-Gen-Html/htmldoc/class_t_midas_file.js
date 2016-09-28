@@ -1,10 +1,16 @@
 var class_t_midas_file =
 [
+    [ "EOpenType", "class_t_midas_file.html#a91f364a007d08b7a7beb85c8c69b4440", [
+      [ "kRead", "class_t_midas_file.html#a91f364a007d08b7a7beb85c8c69b4440a8bfb60744ec3f7195f457c4fe01645bc", null ],
+      [ "kWrite", "class_t_midas_file.html#a91f364a007d08b7a7beb85c8c69b4440a8ef130488f90a4bd3b5aa9311b24dcac", null ]
+    ] ],
     [ "TMidasFile", "class_t_midas_file.html#aa80ee7e7cc8cc07327f56d494f3864dc", null ],
+    [ "TMidasFile", "class_t_midas_file.html#a3d7c12c3be52213e9ee5ae1822b1abc1", null ],
     [ "~TMidasFile", "class_t_midas_file.html#ad55f876dffb33917715bec5f4984a0a3", null ],
     [ "Close", "class_t_midas_file.html#a693315cd892c50575f44c46080a339b8", null ],
     [ "FillBuffer", "class_t_midas_file.html#a52753cd08bdf4890bf5710569c2674b7", null ],
     [ "GetFilename", "class_t_midas_file.html#a7808a49865a65ba9402eaba03c80c6e6", null ],
+    [ "GetFirstEvent", "class_t_midas_file.html#a418ce8157fe6f13dd336c7713591ca1f", null ],
     [ "GetLastErrno", "class_t_midas_file.html#a7ae2a455dee49f0d746f06bf740938ef", null ],
     [ "GetLastError", "class_t_midas_file.html#a02276e6c85497883a6252c8efd418df0", null ],
     [ "GetRunNumber", "class_t_midas_file.html#a9f63066884693929ffd91155e342dfd0", null ],
@@ -13,14 +19,21 @@ var class_t_midas_file =
     [ "OutClose", "class_t_midas_file.html#a113d38d0d6cf7fc36a3bd216f5de92a8", null ],
     [ "OutOpen", "class_t_midas_file.html#a07c6fdbdbba1c72b2f963dd050daeb07", null ],
     [ "Read", "class_t_midas_file.html#a52351cfd1e56eb5fcb7347a0db78c00a", null ],
+    [ "Read", "class_t_midas_file.html#ae27ecd2a73584809d076098d5d154fce", null ],
+    [ "ReadMoreBytes", "class_t_midas_file.html#ae5e88f7ad3705f1e4c815367f446b8b3", null ],
     [ "SetMaxBufferSize", "class_t_midas_file.html#a393a7d7bae60e8f2a31124ab0c9b23fd", null ],
+    [ "Status", "class_t_midas_file.html#a037865c5507cf37665c9154439cf4da5", null ],
     [ "Write", "class_t_midas_file.html#aca2453fc742316550fdceebe86800d04", null ],
     [ "WriteBuffer", "class_t_midas_file.html#a8ae18740b150788f618ef47d5817bd4b", null ],
+    [ "bytesRead", "class_t_midas_file.html#a573325e4b7f8e51a1d733f0688c9ba22", null ],
+    [ "currentEventNumber", "class_t_midas_file.html#a80f231fce51dc737e600313e5c6e1a43", null ],
     [ "fCurrentBufferSize", "class_t_midas_file.html#a365448e2010162965986fb538c1a4474", null ],
     [ "fDoByteSwap", "class_t_midas_file.html#a921857fdd6ebae70cbe7c6658b7940ed", null ],
     [ "fFile", "class_t_midas_file.html#a6535b8fa8870ce398198aad6d784d808", null ],
     [ "fFilename", "class_t_midas_file.html#a6f3f5b5b75bba4c66326e1bfb15443f7", null ],
+    [ "fFirstEvent", "class_t_midas_file.html#a30551b6e53fdf3920b5942e264db47cd", null ],
     [ "fGzFile", "class_t_midas_file.html#aa8bd7d717ec627c4351c150b4d7ba1d6", null ],
+    [ "filesize", "class_t_midas_file.html#a7ee0f75da9a9fac201bf8cc0d4f59483", null ],
     [ "fLastErrno", "class_t_midas_file.html#ac73fa51e3bd29398c2a2686714740249", null ],
     [ "fLastError", "class_t_midas_file.html#a1ac2a25af496ed337edf663caf858c1c", null ],
     [ "fMaxBufferSize", "class_t_midas_file.html#ac52ef8a91b04ab2cc775c025f239e1fb", null ],
@@ -28,5 +41,6 @@ var class_t_midas_file =
     [ "fOutFilename", "class_t_midas_file.html#a4201fcc9277abf25d433728e8806358e", null ],
     [ "fOutGzFile", "class_t_midas_file.html#a53de5efaebfd99800d4d74585d85f305", null ],
     [ "fPoFile", "class_t_midas_file.html#aef0f994ccd75fdbb13d398f94af80173", null ],
+    [ "fReadBuffer", "class_t_midas_file.html#a8559214e20254fe498a25c0522bcf424", null ],
     [ "fWriteBuffer", "class_t_midas_file.html#a5819329bc0a0e76f7953b943aac86fbb", null ]
 ];
