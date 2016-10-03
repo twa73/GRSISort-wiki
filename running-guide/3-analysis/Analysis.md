@@ -7,5 +7,6 @@ GRSISort contains an analysis package with the following
    - [[TPeak|TPeak]]
 - [[Calibration | Calibration]]
    - [[Gain-Matching|Gain-Matching]]
+   - [[LED Walk Correction | LED-walk]] 
 - [[Kinematics | Kinematics]]
 
