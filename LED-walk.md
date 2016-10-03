@@ -25,11 +25,11 @@ INSERT FIGURE
 The fitted parameters shown in this figure where: A = -6.121160, B = 142.382000 and C = -0.431751. To apply these parameters to **every** GRIFFIN channel, open your calibration file and perform the following:
 
 ```c++
-TTimeCal *tc = new TTimeCal;
-tc->AddParameter(-6.12116);
-tc->AddParameter(142.382);
-tc->AddParameter(-0.431751);
-tc->WriteToAllChannels("GR");
+TTimeCal tc;
+tc.AddParameter(-6.12116);
+tc.AddParameter(142.382);
+tc.AddParameter(-0.431751);
+tc.WriteToAllChannels("GR");
 ```
 Followed by whatever method you want to use to write the calibration such as: 
 ```c++
