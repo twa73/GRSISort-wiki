@@ -3,7 +3,8 @@
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**ANALYSIS**](Analysis) > [**CALIBRATION**](Calibration)
 
 GRSISort calibrations are read from *cal files*. These are the files with the **.cal** extension. Various calibration classes are used to set calibration parameters. These classes are called `TCal`s and currently include:
-- [[TGainMatch | Gain-Matching]] for gainmatching
+- [[TGainMatch | Gain-Matching]] for gain-matching
+- [[TTimeCal | TTimeCal]] for time calibrations such as [ LED Walk | LED-Walk ]
 
 #TCalManager
 A Calibration Manager is used to make doing multiple channel calibrations easier. A `TCalManager` can be filled with one type of calibration class (TCal) at any time. To create a calibration manager use:
@@ -34,5 +35,3 @@ and to write the set of calibrations to `TChannel` call
 ```c++
 myCalManager->WriteToChannel();
 ```
-
-
