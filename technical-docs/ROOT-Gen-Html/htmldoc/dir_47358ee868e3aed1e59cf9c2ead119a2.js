@@ -7,7 +7,7 @@ var dir_47358ee868e3aed1e59cf9c2ead119a2 =
     [ "GH2D.cxx", "_g_h2_d_8cxx.html", "_g_h2_d_8cxx" ],
     [ "GH2I.cxx", "_g_h2_i_8cxx.html", "_g_h2_i_8cxx" ],
     [ "GNotifier.cxx", "_g_notifier_8cxx.html", null ],
-    [ "GPeak.cxx", "_g_peak_8cxx.html", "_g_peak_8cxx" ],
+    [ "GPeak.cxx", "_g_peak_8cxx.html", null ],
     [ "GPopup.cxx", "_g_popup_8cxx.html", "_g_popup_8cxx" ],
     [ "GRootBrowser.cxx", "_g_root_browser_8cxx.html", "_g_root_browser_8cxx" ],
     [ "GRootCanvas.cxx", "_g_root_canvas_8cxx.html", "_g_root_canvas_8cxx" ],

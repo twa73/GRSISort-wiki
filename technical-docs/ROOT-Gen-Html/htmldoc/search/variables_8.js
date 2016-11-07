@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['intercept',['intercept',['../struct_t_pulse_analyzer_1_1_line_par.html#a0c4613f50c8d9537949aa331c99488ca',1,'TPulseAnalyzer::LinePar']]],
-  ['ionenergy',['IonEnergy',['../class_t_s_r_i_m.html#a7ad9ba76a6f11afee0e983789482da95',1,'TSRIM']]]
+  ['hist',['hist',['../_user_fill_obj_8h.html#ac15e5a1de3bd77dc1ff2768e42dc9e8b',1,'UserFillObj.h']]],
+  ['hist_5flookup',['hist_lookup',['../classpygui_1_1hist__tab_1_1_hist_tab.html#aff8283270e97635a6887d103dfa384c4',1,'pygui::hist_tab::HistTab']]],
+  ['hist_5ftab',['hist_tab',['../classpygui_1_1mainwindow_1_1_main_window.html#a5983b33fac0b22432fe79ab1e9cfa6ac',1,'pygui::mainwindow::MainWindow']]],
+  ['histcfd',['histcfd',['../_user_fill_obj_8h.html#a968a6caa7eba4946c328fa7afa504f6d',1,'UserFillObj.h']]]
 ];

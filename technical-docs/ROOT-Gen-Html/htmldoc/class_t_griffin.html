@@ -113,7 +113,6 @@ $(document).ready(function(){initNavTree('class_t_griffin.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
@@ -124,15 +123,19 @@ $(document).ready(function(){initNavTree('class_t_griffin.html','');});
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00020">20</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00022">22</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:ae393925993f34a3dc3dd8bc5320cfb4e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4e">EGainBits</a> { <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea854126a50788608212188043a41d5824">kLowGain</a>, 
+<a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea52cb096d8b8954a29089f66b0c41722e">kHighGain</a>
+ }<tr class="separator:ae393925993f34a3dc3dd8bc5320cfb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
 <tr class="memitem:a92f170ed3a460472018ea9dbd9d1f524"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524">EGriffinBits</a> { <br />
-&#160;&#160;<a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a12298584f83324a69f2d486c634075c8">kIsAddbackSet</a> = 1&lt;&lt;0, 
-<a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a3404e1d6c372160f568085243daf5856">kIsCrossTalkSet</a> = 1&lt;&lt;1, 
-<a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a4956b713890699cbe8dc06f3a2ef6efc">kBit2</a> = 1&lt;&lt;2, 
-<a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a7d7b105b1d68ee19e4b2225198562d16">kBit3</a> = 1&lt;&lt;3, 
+&#160;&#160;<a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a42a55804e0bb50af4852f1234be3d942">kIsLowGainAddbackSet</a> = 1&lt;&lt;0, 
+<a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524afba9834f523c98de18520bdec3ea029e">kIsHighGainAddbackSet</a> = 1&lt;&lt;1, 
+<a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a1012ea701106f9055cfc8f2cb9dc9a92">kIsLowGainCrossTalkSet</a> = 1&lt;&lt;2, 
+<a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a1d7642cd4f2455688e1e82f80640a07b">kIsHighGainCrossTalkSet</a> = 1&lt;&lt;3, 
 <br />
 &#160;&#160;<a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524aedf25296410f3a74c4ae56e6621b8a2f">kBit4</a> = 1&lt;&lt;4, 
 <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524aa32e4499574718276af7f2173efe7714">kBit5</a> = 1&lt;&lt;5, 
@@ -150,57 +153,85 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a541104c5fd38c96b5eaf7013b8de300f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad676b9d402cc039f9100214f7a80f796"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ad676b9d402cc039f9100214f7a80f796">~TGriffin</a> ()</td></tr>
 <tr class="separator:ad676b9d402cc039f9100214f7a80f796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1bb3e923b0bfdacca747df5e59dd7aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#af1bb3e923b0bfdacca747df5e59dd7aa">AddFragment</a> (<a class="el" href="class_t_fragment.html">TFragment</a> *frag, <a class="el" href="class_t_channel.html">TChannel</a> *chan)</td></tr>
-<tr class="separator:af1bb3e923b0bfdacca747df5e59dd7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5368f6bb9dd2c0dc9a1d1e62fce8d0ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_detector.html#a5368f6bb9dd2c0dc9a1d1e62fce8d0ab">AddHit</a> (<a class="el" href="class_t_g_r_s_i_detector_hit.html">TGRSIDetectorHit</a> *hit, Option_t *opt=&quot;&quot;)</td></tr>
-<tr class="separator:a5368f6bb9dd2c0dc9a1d1e62fce8d0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b8fd9a08e300590005c9f0d6a6bd02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a64b8fd9a08e300590005c9f0d6a6bd02">BuildHits</a> ()</td></tr>
-<tr class="separator:a64b8fd9a08e300590005c9f0d6a6bd02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8b921bb34432358c0b069186fe053b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a4b8b921bb34432358c0b069186fe053b">AddFragment</a> (std::shared_ptr&lt; const <a class="el" href="class_t_fragment.html">TFragment</a> &gt; frag, <a class="el" href="class_t_channel.html">TChannel</a> *chan)</td></tr>
+<tr class="separator:a4b8b921bb34432358c0b069186fe053b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e207dbd6c605a032a1d6a4d69447a81"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_detector.html#a8e207dbd6c605a032a1d6a4d69447a81">BuildHits</a> ()</td></tr>
+<tr class="separator:a8e207dbd6c605a032a1d6a4d69447a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4bc41758fe50a39cd9b9810f23beaa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a4a4bc41758fe50a39cd9b9810f23beaa">Clear</a> (Option_t *opt=&quot;all&quot;)</td></tr>
 <tr class="separator:a4a4bc41758fe50a39cd9b9810f23beaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93ab45d671ec1cccba27dfe108d675a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ac93ab45d671ec1cccba27dfe108d675a">ClearTransients</a> ()</td></tr>
+<tr class="separator:ac93ab45d671ec1cccba27dfe108d675a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5303932365cfff0ceb7271828088c90e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a5303932365cfff0ceb7271828088c90e">Copy</a> (TObject &amp;) const </td></tr>
 <tr class="separator:a5303932365cfff0ceb7271828088c90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a986e30c11819d9e7166395ec58ff75a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a986e30c11819d9e7166395ec58ff75a7">FixCrossTalk</a> ()</td></tr>
-<tr class="separator:a986e30c11819d9e7166395ec58ff75a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247ff3c1ceec145a9520f2248270f151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a247ff3c1ceec145a9520f2248270f151">FixHighGainCrossTalk</a> ()</td></tr>
+<tr class="separator:a247ff3c1ceec145a9520f2248270f151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a79aab4b16e260f56d9964380af00ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a5a79aab4b16e260f56d9964380af00ca">FixLowGainCrossTalk</a> ()</td></tr>
+<tr class="separator:a5a79aab4b16e260f56d9964380af00ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9c55515bc8ff03bbb37aee942212c5e"><td class="memItemLeft" align="right" valign="top">std::function&lt; bool(<a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &amp;, <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#aa9c55515bc8ff03bbb37aee942212c5e">GetAddbackCriterion</a> () const </td></tr>
 <tr class="separator:aa9c55515bc8ff03bbb37aee942212c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18edd984522ffa489627a03517a0c678"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a18edd984522ffa489627a03517a0c678">GetAddbackHit</a> (const int &amp;i)</td></tr>
-<tr class="separator:a18edd984522ffa489627a03517a0c678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c5996c15775e77a7ab1550d7b998df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a50c5996c15775e77a7ab1550d7b998df">GetAddbackHighGainHit</a> (const int &amp;i)</td></tr>
+<tr class="separator:a50c5996c15775e77a7ab1550d7b998df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7985febee677781da811158205512ee"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ac7985febee677781da811158205512ee">GetAddbackHighGainMultiplicity</a> ()</td></tr>
+<tr class="separator:ac7985febee677781da811158205512ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0880431f9605dc569ec8f2f11587879"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ab0880431f9605dc569ec8f2f11587879">GetAddbackHit</a> (const int &amp;i)</td></tr>
+<tr class="separator:ab0880431f9605dc569ec8f2f11587879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65413177554abfa515f15445a368a4a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a65413177554abfa515f15445a368a4a3">GetAddbackLowGainHit</a> (const int &amp;i)</td></tr>
+<tr class="separator:a65413177554abfa515f15445a368a4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b695091c435a4d8df80eb5ae67c633"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ac9b695091c435a4d8df80eb5ae67c633">GetAddbackLowGainMultiplicity</a> ()</td></tr>
+<tr class="separator:ac9b695091c435a4d8df80eb5ae67c633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7f8706c5107348a2baef4029d80e5e3"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ad7f8706c5107348a2baef4029d80e5e3">GetAddbackMultiplicity</a> ()</td></tr>
 <tr class="separator:ad7f8706c5107348a2baef4029d80e5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2ad5c730ed2dcfaacb7a0e0710f259a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ac2ad5c730ed2dcfaacb7a0e0710f259a">GetGriffinHit</a> (const int &amp;i)</td></tr>
-<tr class="separator:ac2ad5c730ed2dcfaacb7a0e0710f259a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b5cb85c4485e42d2700e2d27ab4a11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ac3b5cb85c4485e42d2700e2d27ab4a11">GetGriffinHighGainHit</a> (const int &amp;i)</td></tr>
+<tr class="separator:ac3b5cb85c4485e42d2700e2d27ab4a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c4c0588ef5809351f8318f0da01101"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ae1c4c0588ef5809351f8318f0da01101">GetGriffinHit</a> (const Int_t &amp;i)</td></tr>
+<tr class="separator:ae1c4c0588ef5809351f8318f0da01101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b6d230eaf0b38b24c3dfc2237d8fa5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a55b6d230eaf0b38b24c3dfc2237d8fa5">GetGriffinLowGainHit</a> (const int &amp;i)</td></tr>
+<tr class="separator:a55b6d230eaf0b38b24c3dfc2237d8fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274159982585c4e9c3e654fda62286cd"><td class="memItemLeft" align="right" valign="top">Short_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a274159982585c4e9c3e654fda62286cd">GetHighGainMultiplicity</a> () const </td></tr>
+<tr class="separator:a274159982585c4e9c3e654fda62286cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad690f0870b2acf9515027dcd732d8c80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_g_r_s_i_detector_hit.html">TGRSIDetectorHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ad690f0870b2acf9515027dcd732d8c80">GetHit</a> (const Int_t &amp;idx=0)</td></tr>
 <tr class="separator:ad690f0870b2acf9515027dcd732d8c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61d64e979b66f244b8101205c7be52c7"><td class="memItemLeft" align="right" valign="top">virtual Long_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_detector.html#a61d64e979b66f244b8101205c7be52c7">GetMidasTimestamp</a> () const </td></tr>
-<tr class="separator:a61d64e979b66f244b8101205c7be52c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af05f28d6447cdba7be42ed7e2681a2a1"><td class="memItemLeft" align="right" valign="top">Short_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#af05f28d6447cdba7be42ed7e2681a2a1">GetMultiplicity</a> () const </td></tr>
-<tr class="separator:af05f28d6447cdba7be42ed7e2681a2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a06eb5ef1faeaa06d6c0b880a4f33f7"><td class="memItemLeft" align="right" valign="top">UShort_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a2a06eb5ef1faeaa06d6c0b880a4f33f7">GetNAddbackFrags</a> (size_t idx) const </td></tr>
-<tr class="separator:a2a06eb5ef1faeaa06d6c0b880a4f33f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9beedf414665d24ac470460dc09278d3"><td class="memItemLeft" align="right" valign="top">Bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a9beedf414665d24ac470460dc09278d3">IsCrossTalkSet</a> () const </td></tr>
-<tr class="separator:a9beedf414665d24ac470460dc09278d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c2a7927ba1bf15387b668780beeeaf"><td class="memItemLeft" align="right" valign="top">Short_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a45c2a7927ba1bf15387b668780beeeaf">GetLowGainMultiplicity</a> () const </td></tr>
+<tr class="separator:a45c2a7927ba1bf15387b668780beeeaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd34d28253c13caee914043ab17587a3"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#acd34d28253c13caee914043ab17587a3">GetMultiplicity</a> () const </td></tr>
+<tr class="separator:acd34d28253c13caee914043ab17587a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af27f45394893913b94b6a4a238b2d7"><td class="memItemLeft" align="right" valign="top">UShort_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a6af27f45394893913b94b6a4a238b2d7">GetNAddbackFrags</a> (const size_t &amp;idx)</td></tr>
+<tr class="separator:a6af27f45394893913b94b6a4a238b2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90956c8f02f8788834d60402ed0674f8"><td class="memItemLeft" align="right" valign="top">UShort_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a90956c8f02f8788834d60402ed0674f8">GetNHighGainAddbackFrags</a> (const size_t &amp;idx)</td></tr>
+<tr class="separator:a90956c8f02f8788834d60402ed0674f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca75c129f456af48c3cdba976940872"><td class="memItemLeft" align="right" valign="top">UShort_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a5ca75c129f456af48c3cdba976940872">GetNLowGainAddbackFrags</a> (const size_t &amp;idx)</td></tr>
+<tr class="separator:a5ca75c129f456af48c3cdba976940872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9149baeae85f9282db9ddb7fa82455fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a9149baeae85f9282db9ddb7fa82455fb">IsAddbackSet</a> (const Int_t &amp;gain_type) const </td></tr>
+<tr class="separator:a9149baeae85f9282db9ddb7fa82455fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7de47672a8c016d028e8eb53d492eaed"><td class="memItemLeft" align="right" valign="top">Bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a7de47672a8c016d028e8eb53d492eaed">IsCrossTalkSet</a> (const Int_t &amp;gain_type) const </td></tr>
+<tr class="separator:a7de47672a8c016d028e8eb53d492eaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a759ebfc01a1f6f1c5a6f45bfcbacd9e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin.html">TGriffin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a759ebfc01a1f6f1c5a6f45bfcbacd9e8">operator=</a> (const <a class="el" href="class_t_griffin.html">TGriffin</a> &amp;)</td></tr>
 <tr class="separator:a759ebfc01a1f6f1c5a6f45bfcbacd9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ffcfc056297ec578352cab6b0af13bf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a6ffcfc056297ec578352cab6b0af13bf">Print</a> (Option_t *opt=&quot;&quot;) const </td></tr>
 <tr class="separator:a6ffcfc056297ec578352cab6b0af13bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dcb36277bd1a20ad03a17aaaa00a6f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a4dcb36277bd1a20ad03a17aaaa00a6f9">ResetAddback</a> ()</td></tr>
 <tr class="separator:a4dcb36277bd1a20ad03a17aaaa00a6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a320b5c5277569afc4a96a97757a98dc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a320b5c5277569afc4a96a97757a98dc0">ResetFlags</a> ()</td></tr>
-<tr class="separator:a320b5c5277569afc4a96a97757a98dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cbe2067b7af3a57cb3b9171f7cc88e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#aa3cbe2067b7af3a57cb3b9171f7cc88e">ResetFlags</a> () const </td></tr>
+<tr class="separator:aa3cbe2067b7af3a57cb3b9171f7cc88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ba40d6109406c6cb6434f71d907f8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a02ba40d6109406c6cb6434f71d907f8d">ResetHighGainAddback</a> ()</td></tr>
+<tr class="separator:a02ba40d6109406c6cb6434f71d907f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1b936fdec85057773fe33ad0754431"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a4e1b936fdec85057773fe33ad0754431">ResetLowGainAddback</a> ()</td></tr>
+<tr class="separator:a4e1b936fdec85057773fe33ad0754431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a65afac6582f49bf703442d49706b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a02a65afac6582f49bf703442d49706b5">SetAddbackCriterion</a> (std::function&lt; bool(<a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &amp;, <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &amp;)&gt; criterion)</td></tr>
 <tr class="separator:a02a65afac6582f49bf703442d49706b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4a4b8abdfa5820a495abf866e74c4b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_detector.html#ad4a4b8abdfa5820a495abf866e74c4b8">SetMidasTimestamp</a> (Long_t time)</td></tr>
-<tr class="separator:ad4a4b8abdfa5820a495abf866e74c4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a54804de3b3745c17ce0d9c02892742ea"><td class="memItemLeft" align="right" valign="top">static Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a54804de3b3745c17ce0d9c02892742ea">CTCorrectedEnergy</a> (const <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *const energy_to_correct, const <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *const other_energy, Bool_t time_constraint=true)</td></tr>
 <tr class="separator:a54804de3b3745c17ce0d9c02892742ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeded2e04122ea3b17fe01aed62a669c"><td class="memItemLeft" align="right" valign="top">static Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#aeeded2e04122ea3b17fe01aed62a669c">GetDefaultGainType</a> ()</td></tr>
+<tr class="separator:aeeded2e04122ea3b17fe01aed62a669c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f4a3caa6a06e3d944340ebd2cba019c"><td class="memItemLeft" align="right" valign="top">static TVector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a8f4a3caa6a06e3d944340ebd2cba019c">GetPosition</a> (int DetNbr, int CryNbr=5, double distance=110.0)</td></tr>
 <tr class="separator:a8f4a3caa6a06e3d944340ebd2cba019c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adca87a7a2eb215ac7724ea758644526e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#adca87a7a2eb215ac7724ea758644526e">SetCoreWave</a> ()</td></tr>
 <tr class="separator:adca87a7a2eb215ac7724ea758644526e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ffdf192ba4bfe70c6f82b5bc729ee40"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a0ffdf192ba4bfe70c6f82b5bc729ee40">SetDefaultGainType</a> (const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:a0ffdf192ba4bfe70c6f82b5bc729ee40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -211,37 +242,64 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a53de46a68fe9898a29ebaa7a4b3a792d"><td class="memItemLeft" align="right" valign="top">static const Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a53de46a68fe9898a29ebaa7a4b3a792d">gWeakCT</a> [2] = { 0.005663, - 0.00028014}</td></tr>
 <tr class="separator:a53de46a68fe9898a29ebaa7a4b3a792d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aada2bf31cddc0e42561ac479986bfed5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#aada2bf31cddc0e42561ac479986bfed5">PushBackHit</a> (<a class="el" href="class_t_g_r_s_i_detector_hit.html">TGRSIDetectorHit</a> *ghit)</td></tr>
-<tr class="separator:aada2bf31cddc0e42561ac479986bfed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a426077b84d6ef931e919af992ae8b34a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a426077b84d6ef931e919af992ae8b34a">ClearStatus</a> ()</td></tr>
-<tr class="separator:a426077b84d6ef931e919af992ae8b34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ba825582e7f888a11100731eb33e95d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a4ba825582e7f888a11100731eb33e95d">SetBitNumber</a> (enum <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524">EGriffinBits</a> bit, Bool_t set)</td></tr>
-<tr class="separator:a4ba825582e7f888a11100731eb33e95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e3fde7f6f1f7fdc7ec5151183cf091"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a45e3fde7f6f1f7fdc7ec5151183cf091">ClearStatus</a> () const </td></tr>
+<tr class="separator:a45e3fde7f6f1f7fdc7ec5151183cf091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83cb68fda7a0d24379dadfb7c305dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#af83cb68fda7a0d24379dadfb7c305dd9">FixCrossTalk</a> (const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:af83cb68fda7a0d24379dadfb7c305dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5523cad736018c64cc26b044b861608"><td class="memItemLeft" align="right" valign="top">std::vector&lt; UShort_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ad5523cad736018c64cc26b044b861608">GetAddbackFragVector</a> (const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:ad5523cad736018c64cc26b044b861608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef86c9cdad45f82407a54f4ed1094fc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#aef86c9cdad45f82407a54f4ed1094fc5">GetAddbackHit</a> (const int &amp;i, const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:aef86c9cdad45f82407a54f4ed1094fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81e0466fa9fc7bb58c9f24f5e2be851"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ab81e0466fa9fc7bb58c9f24f5e2be851">GetAddbackMultiplicity</a> (const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:ab81e0466fa9fc7bb58c9f24f5e2be851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ae48b3d76ca1aca16da8e08a355c8d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ab4ae48b3d76ca1aca16da8e08a355c8d">GetAddbackVector</a> (const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:ab4ae48b3d76ca1aca16da8e08a355c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd88cc572bb89847fca4343ce55516e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#acd88cc572bb89847fca4343ce55516e3">GetGriffinHit</a> (const Int_t &amp;i, const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:acd88cc572bb89847fca4343ce55516e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af879f1df09942a182da9c7c434a8e7f5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#af879f1df09942a182da9c7c434a8e7f5">GetHitVector</a> (const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:af879f1df09942a182da9c7c434a8e7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771039d75485b648c684f7c267c73324"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a771039d75485b648c684f7c267c73324">GetMultiplicity</a> (const Int_t &amp;gain_type) const </td></tr>
+<tr class="separator:a771039d75485b648c684f7c267c73324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b0b647f06350488b944faf8b738afe"><td class="memItemLeft" align="right" valign="top">UShort_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a50b0b647f06350488b944faf8b738afe">GetNAddbackFrags</a> (const size_t &amp;idx, const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:a50b0b647f06350488b944faf8b738afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30f41ab313c1bd71eba181efe6ca127"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#af30f41ab313c1bd71eba181efe6ca127">ResetAddback</a> (const Int_t &amp;gain_type)</td></tr>
+<tr class="separator:af30f41ab313c1bd71eba181efe6ca127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a289f639eeca1e7c5de8d31bb00b55693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a289f639eeca1e7c5de8d31bb00b55693">SetAddback</a> (const Int_t &amp;gain_type, bool flag=true) const </td></tr>
+<tr class="separator:a289f639eeca1e7c5de8d31bb00b55693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8848863fcf148266797294c344de4eab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a8848863fcf148266797294c344de4eab">SetBitNumber</a> (enum <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524">EGriffinBits</a> bit, Bool_t set) const </td></tr>
+<tr class="separator:a8848863fcf148266797294c344de4eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb325f4f127d8e73c8144b25030e09a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#adb325f4f127d8e73c8144b25030e09a4">SetCrossTalk</a> (const Int_t &amp;gain_type, bool flag=true) const </td></tr>
+<tr class="separator:adb325f4f127d8e73c8144b25030e09a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6e7f933af8d5007f0d3c970fe7639d0"><td class="memItemLeft" align="right" valign="top">Bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ad6e7f933af8d5007f0d3c970fe7639d0">TestBitNumber</a> (enum <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524">EGriffinBits</a> bit) const </td></tr>
 <tr class="separator:ad6e7f933af8d5007f0d3c970fe7639d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab85a28c770395daaa211814f6c172bcf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; UShort_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ab85a28c770395daaa211814f6c172bcf">fAddbackFrags</a></td></tr>
-<tr class="separator:ab85a28c770395daaa211814f6c172bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd5e9546fe37e9eaeb407c85d52af7f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a4dd5e9546fe37e9eaeb407c85d52af7f">fAddbackHits</a></td></tr>
-<tr class="separator:a4dd5e9546fe37e9eaeb407c85d52af7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b693a2bb79922c0cbd4e88cff7d91d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; UShort_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a72b693a2bb79922c0cbd4e88cff7d91d">fAddbackHighGainFrags</a></td></tr>
+<tr class="separator:a72b693a2bb79922c0cbd4e88cff7d91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956d7385e2433ca0ff442fa45e36c43b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a956d7385e2433ca0ff442fa45e36c43b">fAddbackHighGainHits</a></td></tr>
+<tr class="separator:a956d7385e2433ca0ff442fa45e36c43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac352d010f62ff6772aca758ecf9b292d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; UShort_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ac352d010f62ff6772aca758ecf9b292d">fAddbackLowGainFrags</a></td></tr>
+<tr class="separator:ac352d010f62ff6772aca758ecf9b292d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6900822777935d2bc34ab2740fa2f5ab"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a6900822777935d2bc34ab2740fa2f5ab">fAddbackLowGainHits</a></td></tr>
+<tr class="separator:a6900822777935d2bc34ab2740fa2f5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93b74e1ea3ddc2e19ef88e75c1b859e5"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a93b74e1ea3ddc2e19ef88e75c1b859e5">fCycleStart</a></td></tr>
 <tr class="separator:a93b74e1ea3ddc2e19ef88e75c1b859e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5a32f3e2cdb7043c27815f8f11d7da6"><td class="memItemLeft" align="right" valign="top">UChar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ab5a32f3e2cdb7043c27815f8f11d7da6">fGriffinBits</a></td></tr>
-<tr class="separator:ab5a32f3e2cdb7043c27815f8f11d7da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae4f46183e04fd08413396f8a71c0532"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#aae4f46183e04fd08413396f8a71c0532">fGriffinHits</a></td></tr>
-<tr class="separator:aae4f46183e04fd08413396f8a71c0532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78349578bc2408a4049bc295af08ab7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_transient_bits.html">TTransientBits</a>&lt; UChar_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a78349578bc2408a4049bc295af08ab7e">fGriffinBits</a></td></tr>
+<tr class="separator:a78349578bc2408a4049bc295af08ab7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5afa434ab2fc0a6999526f711a7b0d0d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a5afa434ab2fc0a6999526f711a7b0d0d">fGriffinHighGainHits</a></td></tr>
+<tr class="separator:a5afa434ab2fc0a6999526f711a7b0d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af876401420be1a7659152fb749cbdbfb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#af876401420be1a7659152fb749cbdbfb">fGriffinLowGainHits</a></td></tr>
+<tr class="separator:af876401420be1a7659152fb749cbdbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a84bf515e3d6f237ec28ce527d2415d22"><td class="memItemLeft" align="right" valign="top">static std::function&lt; bool(<a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &amp;, <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a84bf515e3d6f237ec28ce527d2415d22">fAddbackCriterion</a> = <a class="el" href="_t_tigress_8cxx.html#a557abaf67c9e40c603810a8e94811a72">DefaultAddback</a></td></tr>
 <tr class="separator:a84bf515e3d6f237ec28ce527d2415d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05e9c03105850cf575e1784e1953b958"><td class="memItemLeft" align="right" valign="top">static Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a05e9c03105850cf575e1784e1953b958">fDefaultGainType</a> = <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea854126a50788608212188043a41d5824">kLowGain</a></td></tr>
+<tr class="separator:a05e9c03105850cf575e1784e1953b958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada7b046cefade862401e2ac356e5038e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ada7b046cefade862401e2ac356e5038e">fSetCoreWave</a> = false</td></tr>
 <tr class="separator:ada7b046cefade862401e2ac356e5038e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7a031eaa89becc486ee5de4beccd51c"><td class="memItemLeft" align="right" valign="top">static TVector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#ab7a031eaa89becc486ee5de4beccd51c">gCloverPosition</a> [17]</td></tr>
@@ -261,9 +319,30 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_t_griffin__coll__graph.svg" width="124" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_t_griffin__coll__graph.svg" width="100%" height="469"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="ae393925993f34a3dc3dd8bc5320cfb4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4e">TGriffin::EGainBits</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae393925993f34a3dc3dd8bc5320cfb4ea854126a50788608212188043a41d5824"></a>kLowGain&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae393925993f34a3dc3dd8bc5320cfb4ea52cb096d8b8954a29089f66b0c41722e"></a>kHighGain&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00034">34</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524"></a>
 <div class="memitem">
 <div class="memproto">
@@ -274,13 +353,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524a12298584f83324a69f2d486c634075c8"></a>kIsAddbackSet&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524a42a55804e0bb50af4852f1234be3d942"></a>kIsLowGainAddbackSet&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524a3404e1d6c372160f568085243daf5856"></a>kIsCrossTalkSet&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524afba9834f523c98de18520bdec3ea029e"></a>kIsHighGainAddbackSet&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524a4956b713890699cbe8dc06f3a2ef6efc"></a>kBit2&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524a1012ea701106f9055cfc8f2cb9dc9a92"></a>kIsLowGainCrossTalkSet&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524a7d7b105b1d68ee19e4b2225198562d16"></a>kBit3&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524a1d7642cd4f2455688e1e82f80640a07b"></a>kIsHighGainCrossTalkSet&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a92f170ed3a460472018ea9dbd9d1f524aedf25296410f3a74c4ae56e6621b8a2f"></a>kBit4&#160;</td><td class="fielddoc">
 </td></tr>
@@ -292,7 +371,7 @@ Static Private Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00022">22</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00024">24</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
 </div>
 </div>
@@ -310,9 +389,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00073">73</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00077">77</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00106">Clear()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00113">Clear()</a>.</p>
 
 </div>
 </div>
@@ -330,9 +409,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00081">81</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00085">85</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00089">Copy()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>.</p>
 
 </div>
 </div>
@@ -357,12 +436,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00102">102</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00109">109</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="af1bb3e923b0bfdacca747df5e59dd7aa"></a>
+<a class="anchor" id="a4b8b921bb34432358c0b069186fe053b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -372,7 +451,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void TGriffin::AddFragment </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_fragment.html">TFragment</a> *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="class_t_fragment.html">TFragment</a> &gt;&#160;</td>
           <td class="paramname"><em>frag</em>, </td>
         </tr>
         <tr>
@@ -396,15 +475,15 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Reimplemented from <a class="el" href="class_t_g_r_s_i_detector.html#ab70e66c8d2b7d89f56bf413e76a69413">TGRSIDetector</a>.</p>
+<p>Reimplemented from <a class="el" href="class_t_g_r_s_i_detector.html#a50116d5bbf6431295661fa3392b44573">TGRSIDetector</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00207">207</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00337">337</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_detector_8cxx_source.html#l00040">TGRSIDetector::AddHit()</a>, <a class="el" href="_t_channel_8h_source.html#l00138">TChannel::GetMnemonic()</a>, <a class="el" href="_globals_8h_source.html#l00077">MNEMONIC::outputsensor</a>, and <a class="el" href="_globals_8h_source.html#l00074">MNEMONIC::subsystem</a>.</p>
+<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00172">GetHitVector()</a>, <a class="el" href="_t_channel_8h_source.html#l00137">TChannel::GetMnemonic()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00039">TMnemonic::kA</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00039">TMnemonic::kB</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00039">TMnemonic::kG</a>, <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00047">TMnemonic::OutputSensor()</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00044">TMnemonic::SubSystem()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5368f6bb9dd2c0dc9a1d1e62fce8d0ab"></a>
+<a class="anchor" id="a8e207dbd6c605a032a1d6a4d69447a81"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -412,47 +491,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void TGRSIDetector::AddHit </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_g_r_s_i_detector_hit.html">TGRSIDetectorHit</a> *&#160;</td>
-          <td class="paramname"><em>hit</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Option_t *&#160;</td>
-          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_g_r_s_i_detector_8cxx_source.html#l00040">40</a> of file <a class="el" href="_t_g_r_s_i_detector_8cxx_source.html">TGRSIDetector.cxx</a>.</p>
-
-<p>References <a class="el" href="class_t_g_r_s_i_detector.html#a91e13a2201b4e4729cec8929edeab628">TGRSIDetector::PushBackHit()</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_paces_8cxx_source.html#l00084">TPaces::AddFragment()</a>, <a class="el" href="_t_t_a_c_8cxx_source.html#l00061">TTAC::AddFragment()</a>, <a class="el" href="_t_zero_degree_8cxx_source.html#l00067">TZeroDegree::AddFragment()</a>, <a class="el" href="_t_descant_8cxx_source.html#l00172">TDescant::AddFragment()</a>, <a class="el" href="_t_sceptar_8cxx_source.html#l00092">TSceptar::AddFragment()</a>, <a class="el" href="_t_la_br_8cxx_source.html#l00075">TLaBr::AddFragment()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00207">AddFragment()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a64b8fd9a08e300590005c9f0d6a6bd02"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TGriffin::BuildHits </td>
+          <td class="memname">virtual void TGRSIDetector::BuildHits </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -460,16 +499,18 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>! </p>
 
-<p>Reimplemented from <a class="el" href="class_t_g_r_s_i_detector.html#a8e207dbd6c605a032a1d6a4d69447a81">TGRSIDetector</a>.</p>
+<p>Reimplemented from <a class="el" href="class_t_detector.html#aea2dd8a625dfd4e43c8fa606d87e721d">TDetector</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00044">44</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Reimplemented in <a class="el" href="class_t_tigress.html#a0fa2f6d44772578d62c85735f7c111f6">TTigress</a>, and <a class="el" href="class_t_sharc.html#a28d841188aea3e5c13c0b866c70208a8">TSharc</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_g_r_s_i_detector_8h_source.html#l00043">43</a> of file <a class="el" href="_t_g_r_s_i_detector_8h_source.html">TGRSIDetector.h</a>.</p>
 
 </div>
 </div>
@@ -499,15 +540,15 @@ Static Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_t_g_r_s_i_detector.html#a6286bc564f2203153ff96d3e2dd82fa9">TGRSIDetector</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00106">106</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00113">113</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_detector_8cxx_source.html#l00059">TGRSIDetector::Clear()</a>, <a class="el" href="_t_griffin_8h_source.html#l00080">ClearStatus()</a>, <a class="el" href="_t_griffin_8h_source.html#l00071">fAddbackFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00070">fAddbackHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00067">fCycleStart</a>, and <a class="el" href="_t_griffin_8h_source.html#l00060">fGriffinHits</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_detector_8cxx_source.html#l00050">TGRSIDetector::Clear()</a>, <a class="el" href="_t_griffin_8h_source.html#l00111">ClearStatus()</a>, <a class="el" href="_t_griffin_8h_source.html#l00098">fAddbackHighGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00096">fAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00097">fAddbackLowGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00095">fAddbackLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00092">fCycleStart</a>, <a class="el" href="_t_griffin_8h_source.html#l00085">fGriffinHighGainHits</a>, and <a class="el" href="_t_griffin_8h_source.html#l00084">fGriffinLowGainHits</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00073">TGriffin()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00077">TGriffin()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a426077b84d6ef931e919af992ae8b34a"></a>
+<a class="anchor" id="a45e3fde7f6f1f7fdc7ec5151183cf091"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -518,7 +559,7 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void TGriffin::ClearStatus </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -530,9 +571,40 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00080">80</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00111">111</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00106">Clear()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00113">Clear()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac93ab45d671ec1cccba27dfe108d675a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGriffin::ClearTransients </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! </p>
+
+<p>Reimplemented from <a class="el" href="class_t_detector.html#a16a557b928fff3e61053b7751717402e">TDetector</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00056">56</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00093">fGriffinBits</a>, <a class="el" href="_t_griffin_8h_source.html#l00085">fGriffinHighGainHits</a>, and <a class="el" href="_t_griffin_8h_source.html#l00084">fGriffinLowGainHits</a>.</p>
 
 </div>
 </div>
@@ -562,11 +634,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_t_g_r_s_i_detector.html#a98848f23318f577fad3c1414a73cefe4">TGRSIDetector</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00089">89</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00093">93</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_detector_8cxx_source.html#l00046">TGRSIDetector::Copy()</a>, <a class="el" href="_t_griffin_8h_source.html#l00071">fAddbackFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00070">fAddbackHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00067">fCycleStart</a>, <a class="el" href="_t_griffin_8h_source.html#l00068">fGriffinBits</a>, <a class="el" href="_t_griffin_8h_source.html#l00060">fGriffinHits</a>, and <a class="el" href="_t_griffin_8h_source.html#l00064">fSetCoreWave</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_detector_8cxx_source.html#l00039">TGRSIDetector::Copy()</a>, <a class="el" href="_t_griffin_8h_source.html#l00098">fAddbackHighGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00096">fAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00097">fAddbackLowGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00095">fAddbackLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00092">fCycleStart</a>, <a class="el" href="_t_griffin_8h_source.html#l00093">fGriffinBits</a>, <a class="el" href="_t_griffin_8h_source.html#l00085">fGriffinHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00084">fGriffinLowGainHits</a>, and <a class="el" href="_t_griffin_8h_source.html#l00089">fSetCoreWave</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00127">operator=()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00081">TGriffin()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00149">operator=()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00085">TGriffin()</a>.</p>
 
 </div>
 </div>
@@ -608,20 +680,50 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00308">308</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00448">448</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00181">TGRSIRunInfo::AddBackWindow()</a>, <a class="el" href="_t_griffin_8h_source.html#l00088">gCrossTalkPar</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00191">TGRSIDetectorHit::GetCrystal()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00157">TGRSIDetectorHit::GetDetector()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00081">TGRSIDetectorHit::GetEnergy()</a>, <a class="el" href="_t_griffin_hit_8cxx_source.html#l00176">TGriffinHit::GetNoCTEnergy()</a>, and <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00054">TGRSIDetectorHit::GetTime()</a>.</p>
+<p>References <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00181">TGRSIRunInfo::AddBackWindow()</a>, <a class="el" href="_t_griffin_8h_source.html#l00121">gCrossTalkPar</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00192">TGRSIDetectorHit::GetCrystal()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00164">TGRSIDetectorHit::GetDetector()</a>, <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00086">TGRSIDetectorHit::GetEnergy()</a>, <a class="el" href="_t_griffin_hit_8cxx_source.html#l00139">TGriffinHit::GetNoCTEnergy()</a>, and <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00048">TGRSIDetectorHit::GetTime()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00332">FixCrossTalk()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00476">FixCrossTalk()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a986e30c11819d9e7166395ec58ff75a7"></a>
+<a class="anchor" id="af83cb68fda7a0d24379dadfb7c305dd9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGriffin::FixCrossTalk </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00476">476</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00448">CTCorrectedEnergy()</a>, <a class="el" href="_t_g_r_s_i_run_info_8cxx_source.html#l00159">TGRSIRunInfo::Get()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00172">GetHitVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00231">SetCrossTalk()</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00471">FixHighGainCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00467">FixLowGainCrossTalk()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00274">GetAddbackMultiplicity()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a247ff3c1ceec145a9520f2248270f151"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TGriffin::FixCrossTalk </td>
+          <td class="memname">void TGriffin::FixHighGainCrossTalk </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -629,11 +731,28 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00332">332</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00471">471</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00308">CTCorrectedEnergy()</a>, <a class="el" href="_t_griffin_8h_source.html#l00060">fGriffinHits</a>, <a class="el" href="_t_g_r_s_i_run_info_8cxx_source.html#l00158">TGRSIRunInfo::Get()</a>, <a class="el" href="_t_g_r_s_i_run_info_8h_source.html#l00178">TGRSIRunInfo::IsCorrectingCrossTalk()</a>, <a class="el" href="_t_griffin_8h_source.html#l00024">kIsCrossTalkSet</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00300">SetBitNumber()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00476">FixCrossTalk()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00156">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00142">GetGriffinHit()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a5a79aab4b16e260f56d9964380af00ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGriffin::FixLowGainCrossTalk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00467">467</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00476">FixCrossTalk()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
 
 </div>
 </div>
@@ -658,18 +777,50 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00050">50</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00063">63</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00058">fAddbackCriterion</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00082">fAddbackCriterion</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a18edd984522ffa489627a03517a0c678"></a>
+<a class="anchor" id="ad5523cad736018c64cc26b044b861608"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; UShort_t &gt; * TGriffin::GetAddbackFragVector </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! </p>
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00192">192</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00098">fAddbackHighGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00097">fAddbackLowGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00274">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00430">GetNAddbackFrags()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00415">ResetAddback()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a50c5996c15775e77a7ab1550d7b998df"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> * TGriffin::GetAddbackHit </td>
+          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> * TGriffin::GetAddbackHighGainHit </td>
           <td>(</td>
           <td class="paramtype">const int &amp;&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -678,17 +829,144 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00197">197</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00323">323</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00070">fAddbackHits</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00156">GetAddbackMultiplicity()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00071">GetAddbackHit()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>.</p>
 
-<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="_lean_correlations_8cxx_source.html#l00140">exAnalysis()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="ac7985febee677781da811158205512ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Int_t TGriffin::GetAddbackHighGainMultiplicity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00270">270</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00068">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0880431f9605dc569ec8f2f11587879"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a>* TGriffin::GetAddbackHit </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00071">71</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00071">GetAddbackHit()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00107">GetDefaultGainType()</a>.</p>
+
+<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="_lean_correlations_8cxx_source.html#l00140">exAnalysis()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00323">GetAddbackHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00071">GetAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00319">GetAddbackLowGainHit()</a>, <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>, and <a class="el" href="_mg22_matrices_8cxx_source.html#l00065">Mg22Matrices()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef86c9cdad45f82407a54f4ed1094fc5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> * TGriffin::GetAddbackHit </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00327">327</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00068">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00182">GetAddbackVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a65413177554abfa515f15445a368a4a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> * TGriffin::GetAddbackLowGainHit </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00319">319</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00071">GetAddbackHit()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9b695091c435a4d8df80eb5ae67c633"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Int_t TGriffin::GetAddbackLowGainMultiplicity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00266">266</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00068">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="ad7f8706c5107348a2baef4029d80e5e3"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Int_t TGriffin::GetAddbackMultiplicity </td>
@@ -697,22 +975,116 @@ Static Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00156">156</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00068">68</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00058">fAddbackCriterion</a>, <a class="el" href="_t_griffin_8h_source.html#l00071">fAddbackFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00070">fAddbackHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00068">fGriffinBits</a>, <a class="el" href="_t_griffin_8h_source.html#l00060">fGriffinHits</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00332">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00328">IsCrossTalkSet()</a>, <a class="el" href="_t_griffin_8h_source.html#l00023">kIsAddbackSet</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00300">SetBitNumber()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00068">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00107">GetDefaultGainType()</a>.</p>
 
-<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="_lean_correlations_8cxx_source.html#l00140">exAnalysis()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00197">GetAddbackHit()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
+<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="_lean_correlations_8cxx_source.html#l00140">exAnalysis()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00270">GetAddbackHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00327">GetAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00266">GetAddbackLowGainMultiplicity()</a>, <a class="el" href="_t_griffin_8h_source.html#l00068">GetAddbackMultiplicity()</a>, <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>, and <a class="el" href="_mg22_matrices_8cxx_source.html#l00065">Mg22Matrices()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac2ad5c730ed2dcfaacb7a0e0710f259a"></a>
+<a class="anchor" id="ab81e0466fa9fc7bb58c9f24f5e2be851"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Int_t TGriffin::GetAddbackMultiplicity </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00274">274</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00082">fAddbackCriterion</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00476">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00192">GetAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00182">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00172">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00202">IsAddbackSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00212">IsCrossTalkSet()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00222">SetAddback()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4ae48b3d76ca1aca16da8e08a355c8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt; * TGriffin::GetAddbackVector </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! </p>
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00182">182</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00096">fAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00095">fAddbackLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00327">GetAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00274">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00415">ResetAddback()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeeded2e04122ea3b17fe01aed62a669c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Int_t TGriffin::GetDefaultGainType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00107">107</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00100">fDefaultGainType</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8h_source.html#l00071">GetAddbackHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00068">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8h_source.html#l00046">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00050">GetMultiplicity()</a>, <a class="el" href="_t_griffin_8h_source.html#l00078">GetNAddbackFrags()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00075">ResetAddback()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3b5cb85c4485e42d2700e2d27ab4a11"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> * TGriffin::GetGriffinHit </td>
+          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> * TGriffin::GetGriffinHighGainHit </td>
           <td>(</td>
           <td class="paramtype">const int &amp;&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -723,11 +1095,128 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00142">142</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00248">248</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00060">fGriffinHits</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00332">FixCrossTalk()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00328">IsCrossTalkSet()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00046">GetGriffinHit()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>.</p>
 
-<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00067">exAnalysis()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00137">GetHit()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="ae1c4c0588ef5809351f8318f0da01101"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a>* TGriffin::GetGriffinHit </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! </p>
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00046">46</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00107">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00046">GetGriffinHit()</a>.</p>
+
+<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00067">exAnalysis()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00248">GetGriffinHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00046">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00244">GetGriffinLowGainHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00240">GetHit()</a>, <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>, and <a class="el" href="_mg22_matrices_8cxx_source.html#l00065">Mg22Matrices()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd88cc572bb89847fca4343ce55516e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a>* TGriffin::GetGriffinHit </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! </p>
+
+</div>
+</div>
+<a class="anchor" id="a55b6d230eaf0b38b24c3dfc2237d8fa5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> * TGriffin::GetGriffinLowGainHit </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>! </p>
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00244">244</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00046">GetGriffinHit()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a274159982585c4e9c3e654fda62286cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Short_t TGriffin::GetHighGainMultiplicity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00049">49</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00085">fGriffinHighGainHits</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00130">Print()</a>.</p>
 
 </div>
 </div>
@@ -745,15 +1234,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00137">137</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00240">240</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00142">GetGriffinHit()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00046">GetGriffinHit()</a>.</p>
 
-<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00067">exAnalysis()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
+<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00067">exAnalysis()</a>, <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>, and <a class="el" href="_mg22_matrices_8cxx_source.html#l00065">Mg22Matrices()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a61d64e979b66f244b8101205c7be52c7"></a>
+<a class="anchor" id="af879f1df09942a182da9c7c434a8e7f5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -761,28 +1250,31 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Long_t TGRSIDetector::GetMidasTimestamp </td>
+          <td class="memname">std::vector&lt; <a class="el" href="class_t_griffin_hit.html">TGriffinHit</a> &gt; * TGriffin::GetHitVector </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_detector_8h_source.html#l00053">53</a> of file <a class="el" href="_t_g_r_s_i_detector_8h_source.html">TGRSIDetector.h</a>.</p>
+<p>! </p>
 
-<p>References <a class="el" href="_t_g_r_s_i_detector_8h_source.html#l00060">TGRSIDetector::fMidasTimestamp</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00172">172</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_sharc_8cxx_source.html#l00086">TSharc::AddFragment()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00203">TTigress::AddFragment()</a>, and <a class="el" href="_make_tigress_histograms_8cxx_source.html#l00078">MakeAnalysisHistograms()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00085">fGriffinHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00084">fGriffinLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00337">AddFragment()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00476">FixCrossTalk()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00274">GetAddbackMultiplicity()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af05f28d6447cdba7be42ed7e2681a2a1"></a>
+<a class="anchor" id="a45c2a7927ba1bf15387b668780beeeaf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -790,7 +1282,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Short_t TGriffin::GetMultiplicity </td>
+          <td class="memname">Short_t TGriffin::GetLowGainMultiplicity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -803,31 +1295,176 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00040">40</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00048">48</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00060">fGriffinHits</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00084">fGriffinLowGainHits</a>.</p>
 
-<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00067">exAnalysis()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00130">Print()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2a06eb5ef1faeaa06d6c0b880a4f33f7"></a>
+<a class="anchor" id="acd34d28253c13caee914043ab17587a3"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Int_t TGriffin::GetMultiplicity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00050">50</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00107">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00050">GetMultiplicity()</a>.</p>
+
+<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00067">exAnalysis()</a>, <a class="el" href="_t_griffin_8h_source.html#l00050">GetMultiplicity()</a>, <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>, and <a class="el" href="_mg22_matrices_8cxx_source.html#l00065">Mg22Matrices()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a771039d75485b648c684f7c267c73324"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Int_t TGriffin::GetMultiplicity </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00162">162</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00085">fGriffinHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00084">fGriffinLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6af27f45394893913b94b6a4a238b2d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">UShort_t TGriffin::GetNAddbackFrags </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>idx</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00078">78</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00107">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00078">GetNAddbackFrags()</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8h_source.html#l00078">GetNAddbackFrags()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00426">GetNHighGainAddbackFrags()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00422">GetNLowGainAddbackFrags()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a50b0b647f06350488b944faf8b738afe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UShort_t TGriffin::GetNAddbackFrags </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00430">430</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00192">GetAddbackFragVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a90956c8f02f8788834d60402ed0674f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UShort_t TGriffin::GetNHighGainAddbackFrags </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00291">291</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00426">426</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00071">fAddbackFrags</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00078">GetNAddbackFrags()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ca75c129f456af48c3cdba976940872"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UShort_t TGriffin::GetNLowGainAddbackFrags </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00422">422</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00078">GetNAddbackFrags()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
 
 </div>
 </div>
@@ -871,32 +1508,55 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00234">234</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00362">362</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00079">gCloverPosition</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00110">gCloverPosition</a>.</p>
 
-<p>Referenced by <a class="el" href="_lean_correlations_8cxx_source.html#l00064">AngleCombinations()</a>, <a class="el" href="_t_angular_correlation_8cxx_source.html#l00855">TAngularCorrelation::GenerateAngleMap()</a>, <a class="el" href="_t_angular_correlation_8cxx_source.html#l00995">TAngularCorrelation::GenerateIndexMap()</a>, <a class="el" href="_effic_test_8cxx_source.html#l00018">Detector::GetPosition()</a>, and <a class="el" href="_t_griffin_hit_8cxx_source.html#l00072">TGriffinHit::GetPosition()</a>.</p>
+<p>Referenced by <a class="el" href="_lean_correlations_8cxx_source.html#l00064">AngleCombinations()</a>, <a class="el" href="_t_angular_correlation_8cxx_source.html#l00858">TAngularCorrelation::GenerateAngleMap()</a>, <a class="el" href="_t_angular_correlation_8cxx_source.html#l00998">TAngularCorrelation::GenerateIndexMap()</a>, <a class="el" href="_effic_test_8cxx_source.html#l00018">Detector::GetPosition()</a>, and <a class="el" href="_t_griffin_hit_8cxx_source.html#l00068">TGriffinHit::GetPosition()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9beedf414665d24ac470460dc09278d3"></a>
+<a class="anchor" id="a9149baeae85f9282db9ddb7fa82455fb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Bool_t TGriffin::IsCrossTalkSet </td>
+          <td class="memname">bool TGriffin::IsAddbackSet </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00328">328</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00202">202</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00068">fGriffinBits</a>, and <a class="el" href="_t_griffin_8h_source.html#l00024">kIsCrossTalkSet</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, <a class="el" href="_t_griffin_8h_source.html#l00026">kIsHighGainAddbackSet</a>, <a class="el" href="_t_griffin_8h_source.html#l00025">kIsLowGainAddbackSet</a>, <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00113">TestBitNumber()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00156">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00142">GetGriffinHit()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00274">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00130">Print()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7de47672a8c016d028e8eb53d492eaed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TGriffin::IsCrossTalkSet </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00212">212</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, <a class="el" href="_t_griffin_8h_source.html#l00028">kIsHighGainCrossTalkSet</a>, <a class="el" href="_t_griffin_8h_source.html#l00027">kIsLowGainCrossTalkSet</a>, <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00113">TestBitNumber()</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00274">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00130">Print()</a>.</p>
 
 </div>
 </div>
@@ -916,9 +1576,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00127">127</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00149">149</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00089">Copy()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>.</p>
 
 </div>
 </div>
@@ -948,13 +1608,13 @@ Static Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_t_g_r_s_i_detector.html#ac2537f99d5d86dc2ba7b33fad789d7ac">TGRSIDetector</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00120">120</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00130">130</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00067">fCycleStart</a>, and <a class="el" href="_t_griffin_8h_source.html#l00060">fGriffinHits</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00096">fAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00095">fAddbackLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00092">fCycleStart</a>, <a class="el" href="_t_griffin_8h_source.html#l00049">GetHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8h_source.html#l00048">GetLowGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00202">IsAddbackSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00212">IsCrossTalkSet()</a>, <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aada2bf31cddc0e42561ac479986bfed5"></a>
+<a class="anchor" id="a4dcb36277bd1a20ad03a17aaaa00a6f9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -962,34 +1622,84 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void TGriffin::PushBackHit </td>
+          <td class="memname">void TGriffin::ResetAddback </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_g_r_s_i_detector_hit.html">TGRSIDetectorHit</a> *&#160;</td>
-          <td class="paramname"><em>ghit</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_t_g_r_s_i_detector.html#a91e13a2201b4e4729cec8929edeab628">TGRSIDetector</a>.</p>
+<p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00132">132</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00075">75</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00060">fGriffinHits</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00107">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00075">ResetAddback()</a>.</p>
+
+<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="_lean_correlations_8cxx_source.html#l00140">exAnalysis()</a>, <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>, <a class="el" href="_mg22_matrices_8cxx_source.html#l00065">Mg22Matrices()</a>, <a class="el" href="_t_griffin_8h_source.html#l00075">ResetAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00411">ResetHighGainAddback()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00407">ResetLowGainAddback()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4dcb36277bd1a20ad03a17aaaa00a6f9"></a>
+<a class="anchor" id="af30f41ab313c1bd71eba181efe6ca127"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGriffin::ResetAddback </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! </p>
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00415">415</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8cxx_source.html#l00192">GetAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00182">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00222">SetAddback()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00231">SetCrossTalk()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3cbe2067b7af3a57cb3b9171f7cc88e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TGriffin::ResetAddback </td>
+          <td class="memname">void TGriffin::ResetFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00402">402</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00093">fGriffinBits</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02ba40d6109406c6cb6434f71d907f8d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGriffin::ResetHighGainAddback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -999,20 +1709,18 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00279">279</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00411">411</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00071">fAddbackFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00070">fAddbackHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00023">kIsAddbackSet</a>, <a class="el" href="_t_griffin_8h_source.html#l00024">kIsCrossTalkSet</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00300">SetBitNumber()</a>.</p>
-
-<p>Referenced by <a class="el" href="_brem_matrices_8cxx_source.html#l00064">BremMatrices()</a>, <a class="el" href="_cycle_matrices_8cxx_source.html#l00065">CycleMatrices()</a>, <a class="el" href="_descant_matrices_8cxx_source.html#l00067">DescantMatrices()</a>, <a class="el" href="_lean_correlations_8cxx_source.html#l00140">exAnalysis()</a>, and <a class="el" href="_lean_matrices_8cxx_source.html#l00064">LeanMatrices()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00075">ResetAddback()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a320b5c5277569afc4a96a97757a98dc0"></a>
+<a class="anchor" id="a4e1b936fdec85057773fe33ad0754431"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TGriffin::ResetFlags </td>
+          <td class="memname">void TGriffin::ResetLowGainAddback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1020,9 +1728,51 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00274">274</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>! </p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00068">fGriffinBits</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00407">407</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00075">ResetAddback()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a289f639eeca1e7c5de8d31bb00b55693"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGriffin::SetAddback </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00222">222</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, <a class="el" href="_t_griffin_8h_source.html#l00026">kIsHighGainAddbackSet</a>, <a class="el" href="_t_griffin_8h_source.html#l00025">kIsLowGainAddbackSet</a>, <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00439">SetBitNumber()</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00274">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00415">ResetAddback()</a>.</p>
 
 </div>
 </div>
@@ -1048,13 +1798,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00049">49</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00062">62</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00058">fAddbackCriterion</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00082">fAddbackCriterion</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4ba825582e7f888a11100731eb33e95d"></a>
+<a class="anchor" id="a8848863fcf148266797294c344de4eab"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1076,7 +1826,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -1086,11 +1836,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00300">300</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00439">439</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00068">fGriffinBits</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00093">fGriffinBits</a>, and <a class="el" href="_t_transient_bits_8h_source.html#l00032">TTransientBits&lt; T &gt;::SetBit()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00332">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00156">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00279">ResetAddback()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00222">SetAddback()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00231">SetCrossTalk()</a>.</p>
 
 </div>
 </div>
@@ -1117,13 +1867,13 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00074">74</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00103">103</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>References <a class="el" href="_t_griffin_8h_source.html#l00064">fSetCoreWave</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00089">fSetCoreWave</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad4a4b8abdfa5820a495abf866e74c4b8"></a>
+<a class="anchor" id="adb325f4f127d8e73c8144b25030e09a4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1131,25 +1881,63 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void TGRSIDetector::SetMidasTimestamp </td>
+          <td class="memname">void TGriffin::SetCrossTalk </td>
           <td>(</td>
-          <td class="paramtype">Long_t&#160;</td>
-          <td class="paramname"><em>time</em></td><td>)</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00231">231</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, <a class="el" href="_t_griffin_8h_source.html#l00028">kIsHighGainCrossTalkSet</a>, <a class="el" href="_t_griffin_8h_source.html#l00027">kIsLowGainCrossTalkSet</a>, <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00439">SetBitNumber()</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00476">FixCrossTalk()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00415">ResetAddback()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ffdf192ba4bfe70c6f82b5bc729ee40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGriffin::SetDefaultGainType </td>
+          <td>(</td>
+          <td class="paramtype">const Int_t &amp;&#160;</td>
+          <td class="paramname"><em>gain_type</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_g_r_s_i_detector_8h_source.html#l00052">52</a> of file <a class="el" href="_t_g_r_s_i_detector_8h_source.html">TGRSIDetector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00154">154</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p>References <a class="el" href="_t_g_r_s_i_detector_8h_source.html#l00060">TGRSIDetector::fMidasTimestamp</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_sharc_8cxx_source.html#l00086">TSharc::AddFragment()</a>, and <a class="el" href="_t_tigress_8cxx_source.html#l00203">TTigress::AddFragment()</a>.</p>
+<p>References <a class="el" href="_t_griffin_8h_source.html#l00100">fDefaultGainType</a>, <a class="el" href="_t_griffin_8h_source.html#l00036">kHighGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00035">kLowGain</a>.</p>
 
 </div>
 </div>
@@ -1175,7 +1963,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00082">82</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00113">113</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>References <a class="el" href="_t_transient_bits_8h_source.html#l00035">TTransientBits&lt; T &gt;::TestBit()</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00202">IsAddbackSet()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00212">IsCrossTalkSet()</a>.</p>
 
 </div>
 </div>
@@ -1198,13 +1990,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00058">58</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00082">82</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8h_source.html#l00050">GetAddbackCriterion()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00156">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00049">SetAddbackCriterion()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8h_source.html#l00063">GetAddbackCriterion()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00274">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00062">SetAddbackCriterion()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab85a28c770395daaa211814f6c172bcf"></a>
+<a class="anchor" id="a72b693a2bb79922c0cbd4e88cff7d91d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1212,25 +2004,25 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;UShort_t&gt; TGriffin::fAddbackFrags</td>
+          <td class="memname">std::vector&lt;UShort_t&gt; TGriffin::fAddbackHighGainFrags</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>! Number of crystals involved in creating in the addback hit </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00071">71</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00098">98</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00106">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00089">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00156">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00291">GetNAddbackFrags()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00279">ResetAddback()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00113">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00192">GetAddbackFragVector()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4dd5e9546fe37e9eaeb407c85d52af7f"></a>
+<a class="anchor" id="a956d7385e2433ca0ff442fa45e36c43b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1238,21 +2030,73 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="class_t_griffin_hit.html">TGriffinHit</a>&gt; TGriffin::fAddbackHits</td>
+          <td class="memname">std::vector&lt;<a class="el" href="class_t_griffin_hit.html">TGriffinHit</a>&gt; TGriffin::fAddbackHighGainHits</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>! Used to create addback hits on the fly </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00070">70</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00096">96</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00106">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00089">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00197">GetAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00156">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00279">ResetAddback()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00113">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00182">GetAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00130">Print()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac352d010f62ff6772aca758ecf9b292d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;UShort_t&gt; TGriffin::fAddbackLowGainFrags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! Number of crystals involved in creating in the addback hit </p>
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00097">97</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00113">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00192">GetAddbackFragVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6900822777935d2bc34ab2740fa2f5ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_t_griffin_hit.html">TGriffinHit</a>&gt; TGriffin::fAddbackLowGainHits</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! Used to create addback hits on the fly </p>
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00095">95</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00113">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00182">GetAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00130">Print()</a>.</p>
 
 </div>
 </div>
@@ -1276,13 +2120,13 @@ Static Private Attributes</h2></td></tr>
 
 <p>! The start of the cycle </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00067">67</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00092">92</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00106">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00089">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00120">Print()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00113">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00130">Print()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab5a32f3e2cdb7043c27815f8f11d7da6"></a>
+<a class="anchor" id="a05e9c03105850cf575e1784e1953b958"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1290,7 +2134,55 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">UChar_t TGriffin::fGriffinBits</td>
+          <td class="memname">Int_t TGriffin::fDefaultGainType = <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea854126a50788608212188043a41d5824">kLowGain</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00100">100</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8h_source.html#l00107">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00154">SetDefaultGainType()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78349578bc2408a4049bc295af08ab7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_transient_bits.html">TTransientBits</a>&lt;UChar_t&gt; TGriffin::fGriffinBits</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00093">93</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_griffin_8h_source.html#l00056">ClearTransients()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00402">ResetFlags()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00439">SetBitNumber()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5afa434ab2fc0a6999526f711a7b0d0d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_t_griffin_hit.html">TGriffinHit</a>&gt; TGriffin::fGriffinHighGainHits</td>
         </tr>
       </table>
   </td>
@@ -1300,13 +2192,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00068">68</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00085">85</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00089">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00156">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00328">IsCrossTalkSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00274">ResetFlags()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00300">SetBitNumber()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00113">Clear()</a>, <a class="el" href="_t_griffin_8h_source.html#l00056">ClearTransients()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>, <a class="el" href="_t_griffin_8h_source.html#l00049">GetHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00172">GetHitVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">GetMultiplicity()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aae4f46183e04fd08413396f8a71c0532"></a>
+<a class="anchor" id="af876401420be1a7659152fb749cbdbfb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1314,7 +2206,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="class_t_griffin_hit.html">TGriffinHit</a>&gt; TGriffin::fGriffinHits</td>
+          <td class="memname">std::vector&lt;<a class="el" href="class_t_griffin_hit.html">TGriffinHit</a>&gt; TGriffin::fGriffinLowGainHits</td>
         </tr>
       </table>
   </td>
@@ -1324,9 +2216,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00060">60</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00084">84</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00106">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00089">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00332">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00156">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00142">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00040">GetMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00120">Print()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00132">PushBackHit()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00113">Clear()</a>, <a class="el" href="_t_griffin_8h_source.html#l00056">ClearTransients()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00172">GetHitVector()</a>, <a class="el" href="_t_griffin_8h_source.html#l00048">GetLowGainMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">GetMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -1350,9 +2242,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>! Flag for Waveforms ON/OFF </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00064">64</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00089">89</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00089">Copy()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00074">SetCoreWave()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00093">Copy()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00103">SetCoreWave()</a>.</p>
 
 </div>
 </div>
@@ -1374,33 +2266,33 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= { </div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(0.0))*TMath::Cos(TMath::DegToRad()*(0.0)), TMath::Sin(TMath::DegToRad()*(0.0))*TMath::Sin(TMath::DegToRad()*(0.0)), TMath::Cos(TMath::DegToRad()*(0.0))),</div>
-<div class="line">  </div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Cos(TMath::DegToRad()*(67.5)), TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Sin(TMath::DegToRad()*(67.5)), TMath::Cos(TMath::DegToRad()*(45.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Cos(TMath::DegToRad()*(157.5)), TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Sin(TMath::DegToRad()*(157.5)), TMath::Cos(TMath::DegToRad()*(45.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Cos(TMath::DegToRad()*(247.5)), TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Sin(TMath::DegToRad()*(247.5)), TMath::Cos(TMath::DegToRad()*(45.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Cos(TMath::DegToRad()*(337.5)), TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Sin(TMath::DegToRad()*(337.5)), TMath::Cos(TMath::DegToRad()*(45.0))),</div>
-<div class="line">  </div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(22.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(22.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(67.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(67.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(112.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(112.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(157.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(157.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(202.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(202.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(247.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(247.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(292.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(292.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(337.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(337.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
-<div class="line">  </div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Cos(TMath::DegToRad()*(67.5)), TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Sin(TMath::DegToRad()*(67.5)), TMath::Cos(TMath::DegToRad()*(135.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Cos(TMath::DegToRad()*(157.5)), TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Sin(TMath::DegToRad()*(157.5)), TMath::Cos(TMath::DegToRad()*(135.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Cos(TMath::DegToRad()*(247.5)), TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Sin(TMath::DegToRad()*(247.5)), TMath::Cos(TMath::DegToRad()*(135.0))),</div>
-<div class="line">  TVector3(TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Cos(TMath::DegToRad()*(337.5)), TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Sin(TMath::DegToRad()*(337.5)), TMath::Cos(TMath::DegToRad()*(135.0)))</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(0.0))*TMath::Cos(TMath::DegToRad()*(0.0)), TMath::Sin(TMath::DegToRad()*(0.0))*TMath::Sin(TMath::DegToRad()*(0.0)), TMath::Cos(TMath::DegToRad()*(0.0))),</div>
+<div class="line">   </div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Cos(TMath::DegToRad()*(67.5)), TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Sin(TMath::DegToRad()*(67.5)), TMath::Cos(TMath::DegToRad()*(45.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Cos(TMath::DegToRad()*(157.5)), TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Sin(TMath::DegToRad()*(157.5)), TMath::Cos(TMath::DegToRad()*(45.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Cos(TMath::DegToRad()*(247.5)), TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Sin(TMath::DegToRad()*(247.5)), TMath::Cos(TMath::DegToRad()*(45.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Cos(TMath::DegToRad()*(337.5)), TMath::Sin(TMath::DegToRad()*(45.0))*TMath::Sin(TMath::DegToRad()*(337.5)), TMath::Cos(TMath::DegToRad()*(45.0))),</div>
+<div class="line">   </div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(22.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(22.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(67.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(67.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(112.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(112.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(157.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(157.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(202.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(202.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(247.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(247.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(292.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(292.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Cos(TMath::DegToRad()*(337.5)), TMath::Sin(TMath::DegToRad()*(90.0))*TMath::Sin(TMath::DegToRad()*(337.5)), TMath::Cos(TMath::DegToRad()*(90.0))),</div>
+<div class="line">   </div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Cos(TMath::DegToRad()*(67.5)), TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Sin(TMath::DegToRad()*(67.5)), TMath::Cos(TMath::DegToRad()*(135.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Cos(TMath::DegToRad()*(157.5)), TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Sin(TMath::DegToRad()*(157.5)), TMath::Cos(TMath::DegToRad()*(135.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Cos(TMath::DegToRad()*(247.5)), TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Sin(TMath::DegToRad()*(247.5)), TMath::Cos(TMath::DegToRad()*(135.0))),</div>
+<div class="line">   TVector3(TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Cos(TMath::DegToRad()*(337.5)), TMath::Sin(TMath::DegToRad()*(135.0))*TMath::Sin(TMath::DegToRad()*(337.5)), TMath::Cos(TMath::DegToRad()*(135.0)))</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>! Position of each HPGe Clover </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00079">79</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00110">110</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00234">GetPosition()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00362">GetPosition()</a>.</p>
 
 </div>
 </div>
@@ -1427,9 +2319,9 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00088">88</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00121">121</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00308">CTCorrectedEnergy()</a>.</p>
+<p>Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00448">CTCorrectedEnergy()</a>.</p>
 
 </div>
 </div>
@@ -1453,7 +2345,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00086">86</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00119">119</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
 </div>
 </div>
@@ -1477,7 +2369,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>! </p>
 
-<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00087">87</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_griffin_8h_source.html#l00120">120</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
 </div>
 </div>
@@ -1487,7 +2379,7 @@ Static Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (2.4.00 ) Reference Guide Generated on Tue Sep 27 2016 17:40:06.
+GRSISort (2.4.00 ) Reference Guide Generated on Mon Nov 7 2016 09:38:57.
 </small>
 </div>
 </body>

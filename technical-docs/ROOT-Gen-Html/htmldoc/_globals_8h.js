@@ -1,7 +1,6 @@
 var _globals_8h =
 [
     [ "exit_exception", "structgrsi_1_1exit__exception.html", "structgrsi_1_1exit__exception" ],
-    [ "MNEMONIC", "struct_m_n_e_m_o_n_i_c.html", "struct_m_n_e_m_o_n_i_c" ],
     [ "ALERTTEXT", "_globals_8h.html#ade3b398d4c616608495b2d29e309badb", null ],
     [ "BG_BLUE", "_globals_8h.html#a9afd14c731aa8c62d9471913c1b23b9f", null ],
     [ "BG_CYAN", "_globals_8h.html#a21ef237e1c4d69656729da4b34c31d8b", null ],

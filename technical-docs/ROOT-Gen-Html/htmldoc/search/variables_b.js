@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['m_5fevent',['m_event',['../class_t_event_queue.html#af0f54d998b429a07c3554e0c5581decd',1,'TEventQueue']]],
-  ['m_5fwrite',['m_write',['../class_t_write_queue.html#a0188cf6b2095cfd85e77026483d06108',1,'TWriteQueue']]],
-  ['massfile',['massfile',['../class_t_nucleus.html#a92cdd8bb524f76643dc4103649f46d78',1,'TNucleus']]],
-  ['mat',['mat',['../_user_fill_obj_8h.html#a34079cedfcd0dcc6476bf9f1076e8cbd',1,'UserFillObj.h']]],
-  ['max',['max',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a76ca8e3e30a75645a0f2a74f57e42dbb',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['max_5fsamples',['MAX_SAMPLES',['../class_t_pulse_analyzer.html#a95e6b4a232af29f1d1f6a7874c08ad0e',1,'TPulseAnalyzer']]],
-  ['mem_5fsize',['MEM_SIZE',['../class_t_analysis_tree_builder.html#a1824b9e0c78d7381dd28b5e8da0a6dae',1,'TAnalysisTreeBuilder']]],
-  ['message',['message',['../structgrsi_1_1exit__exception.html#acca63b1e9a57f9ad0375b4f63bdc38ca',1,'grsi::exit_exception']]],
-  ['mflag',['mflag',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a98a33945bd49205b87d790cfa04ffcad',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['midasid',['MidasId',['../class_t_fragment.html#a9383fa27e2f07777373b73ed577744f3',1,'TFragment']]],
-  ['midastimestamp',['MidasTimeStamp',['../class_t_fragment.html#a4a095c65f09cb2744c778107e76ea89f',1,'TFragment']]],
-  ['mm',['mm',['../class_n_r_mat.html#af6077429fdf806ac4c8eba949fa2c0bf',1,'NRMat::mm()'],['../class_n_r_mat3d.html#a17bea165bdf243a494883e76ce30bea1',1,'NRMat3d::mm()']]]
+  ['largechisq',['LARGECHISQ',['../class_t_pulse_analyzer.html#a3ed6867b36b389549502ac0afbcfd634',1,'TPulseAnalyzer']]],
+  ['lastx',['lastx',['../class_g_canvas.html#aa2a0d9224796032e21ea05023b713124',1,'GCanvas']]],
+  ['lasty',['lasty',['../class_g_canvas.html#a07095f5bc0f05fa3405e2126c287926b',1,'GCanvas']]],
+  ['linear',['linear',['../struct_t_pulse_analyzer_1_1_par_par.html#aff443e99834b912c9e416fbdaccfb54b',1,'TPulseAnalyzer::ParPar']]],
+  ['lineq_5fdim',['lineq_dim',['../class_t_pulse_analyzer.html#a2c8510cbb3de4beaad91e5dde870e512',1,'TPulseAnalyzer']]],
+  ['lineq_5fmatrix',['lineq_matrix',['../class_t_pulse_analyzer.html#aac42418dcbcaf6324d469ab3e2e297f8',1,'TPulseAnalyzer']]],
+  ['lineq_5fsolution',['lineq_solution',['../class_t_pulse_analyzer.html#a09ab50939166bedea44b564684bde317',1,'TPulseAnalyzer']]],
+  ['lineq_5fvector',['lineq_vector',['../class_t_pulse_analyzer.html#a5e9177fcbeaac9758573bc40d462cc5f',1,'TPulseAnalyzer']]],
+  ['linex',['linex',['../class_g_marker.html#adcbf67308927790415932946463fd5c9',1,'GMarker']]],
+  ['liney',['liney',['../class_g_marker.html#a4c7e40024925ed4593df6528a7f6ae39',1,'GMarker']]],
+  ['linfit',['linfit',['../class_t_calibrator.html#ac7b5f4c7ed552981ea2330d1c0505d83',1,'TCalibrator']]],
+  ['localx',['localx',['../class_g_marker.html#a7b1f789b1778e6954cb0098fbb4823fb',1,'GMarker']]],
+  ['localy',['localy',['../class_g_marker.html#af49dd72550eb1e7bd89a6f112cb3da91',1,'GMarker']]],
+  ['log_5ffile',['log_file',['../class_t_g_r_s_i_options.html#aab18c27b032bd46277a189d6d39cd22b',1,'TGRSIOptions']]]
 ];

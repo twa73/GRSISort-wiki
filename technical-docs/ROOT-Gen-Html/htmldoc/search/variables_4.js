@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['e',['E',['../class_t_s_r_i_m.html#a259194a9cfa238d4b1a0b01e9cdfbecd',1,'TSRIM']]],
-  ['elements',['elements',['../_r_o_o_t_8js.html#ae36d53bc27bd8b4829f404b7155a99ea',1,'ROOT.js']]],
-  ['emax',['Emax',['../class_t_s_r_i_m.html#a2813b86c035a941ec68eeb76390ea37c',1,'TSRIM']]],
-  ['emin',['Emin',['../class_t_s_r_i_m.html#a8dcf78e76cf8244b743928fb682160d6',1,'TSRIM']]],
-  ['eps',['EPS',['../class_t_pulse_analyzer.html#afcb8f688874257483a404d540906f4a2',1,'TPulseAnalyzer']]]
+  ['dedx',['dEdX',['../class_t_s_r_i_m.html#af1404417c75b0cbf9f513639d7d70229',1,'TSRIM']]],
+  ['defaultcanvassize',['defaultcanvassize',['../classpygui_1_1mainwindow_1_1_main_window.html#a78672d8fae3cbc4c935406157292b91b',1,'pygui::mainwindow::MainWindow']]],
+  ['desc',['desc',['../class_arg_parse_config.html#a66dd880916ae6ecc00965ae6d8ebaaa0',1,'ArgParseConfig']]],
+  ['detector_5fclasses',['detector_classes',['../classpygui_1_1tcut__tab_1_1_t_cut_tab.html#a132ec29859db4c41aa0c169f3d0cd416',1,'pygui::tcut_tab::TCutTab']]],
+  ['directory',['directory',['../classpygui_1_1util_1_1_preserve_g_dir.html#a706def07c49e54d554c90a5347f8cf6d',1,'pygui::util::PreserveGDir']]],
+  ['dummy',['dummy',['../classpygui_1_1mainwindow_1_1_main_window.html#abce546a4875a1f07b8633e37d5b6cdba',1,'pygui::mainwindow::MainWindow']]],
+  ['dx',['dx',['../class_t_s_r_i_m.html#a5d04b47f67b079db783d561d4f589572',1,'TSRIM']]]
 ];

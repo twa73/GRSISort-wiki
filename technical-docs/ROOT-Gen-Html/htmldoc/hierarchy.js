@@ -32,7 +32,6 @@ var hierarchy =
     [ "combinations::iterator", "classcombinations_1_1iterator.html", null ],
     [ "GH2Base::iterator", "class_g_h2_base_1_1iterator.html", null ],
     [ "TPulseAnalyzer::LinePar", "struct_t_pulse_analyzer_1_1_line_par.html", null ],
-    [ "MNEMONIC", "struct_m_n_e_m_o_n_i_c.html", null ],
     [ "NRMat< T >", "class_n_r_mat.html", null ],
     [ "TLMFitter::NRMat< T >", "class_t_l_m_fitter_1_1_n_r_mat.html", null ],
     [ "NRMat3d< T >", "class_n_r_mat3d.html", null ],
@@ -128,8 +127,8 @@ var hierarchy =
     [ "ThreadsafeQueue< T >", "class_threadsafe_queue.html", null ],
     [ "TMidas_BANK", "struct_t_midas___b_a_n_k.html", null ],
     [ "TMidasEvent::TMidas_BANK", "struct_t_midas_event_1_1_t_midas___b_a_n_k.html", null ],
-    [ "TMidasEvent::TMidas_BANK32", "struct_t_midas_event_1_1_t_midas___b_a_n_k32.html", null ],
     [ "TMidas_BANK32", "struct_t_midas___b_a_n_k32.html", null ],
+    [ "TMidasEvent::TMidas_BANK32", "struct_t_midas_event_1_1_t_midas___b_a_n_k32.html", null ],
     [ "TMidas_BANK_HEADER", "struct_t_midas___b_a_n_k___h_e_a_d_e_r.html", null ],
     [ "TMidasEvent::TMidas_BANK_HEADER", "struct_t_midas_event_1_1_t_midas___b_a_n_k___h_e_a_d_e_r.html", null ],
     [ "TMidas_EVENT_HEADER", "struct_t_midas___e_v_e_n_t___h_e_a_d_e_r.html", null ],
@@ -179,9 +178,7 @@ var hierarchy =
         [ "TRF", "class_t_r_f.html", null ],
         [ "TTriFoil", "class_t_tri_foil.html", null ]
       ] ],
-      [ "TDiagnostics", "class_t_diagnostics.html", null ],
       [ "TEpicsFrag", "class_t_epics_frag.html", null ],
-      [ "TFragmentQueue", "class_t_fragment_queue.html", null ],
       [ "TGRSIDetectorHit", "class_t_g_r_s_i_detector_hit.html", [
         [ "TBgoHit", "class_t_bgo_hit.html", null ],
         [ "TCSMHit", "class_t_c_s_m_hit.html", null ],
@@ -199,9 +196,7 @@ var hierarchy =
         [ "TTipHit", "class_t_tip_hit.html", null ],
         [ "TZeroDegreeHit", "class_t_zero_degree_hit.html", null ]
       ] ],
-      [ "TGRSILoop", "class_t_g_r_s_i_loop.html", null ],
-      [ "TGRSIOptions2", "class_t_g_r_s_i_options2.html", null ],
-      [ "TGRSIRootIO", "class_t_g_r_s_i_root_i_o.html", null ],
+      [ "TGRSIOptions", "class_t_g_r_s_i_options.html", null ],
       [ "TGRSIRunInfo", "class_t_g_r_s_i_run_info.html", null ],
       [ "TGRSISortInfo", "class_t_g_r_s_i_sort_info.html", [
         [ "TUserSortInfo", "class_t_user_sort_info.html", null ]
@@ -211,18 +206,32 @@ var hierarchy =
       [ "TLMFitter", "class_t_l_m_fitter.html", null ],
       [ "TMidasEvent", "class_t_midas_event.html", null ],
       [ "TMidasFile", "class_t_midas_file.html", null ],
+      [ "TMnemonic", "class_t_mnemonic.html", null ],
+      [ "TObjectWrapper< T >", "class_t_object_wrapper.html", null ],
+      [ "TParsingDiagnostics", "class_t_parsing_diagnostics.html", null ],
       [ "TPPG", "class_t_p_p_g.html", null ],
       [ "TPPGData", "class_t_p_p_g_data.html", null ],
       [ "TRateScalerQueue", "class_t_rate_scaler_queue.html", null ],
       [ "TScaler", "class_t_scaler.html", null ],
       [ "TScalerData", "class_t_scaler_data.html", null ],
+      [ "TSortingDiagnostics", "class_t_sorting_diagnostics.html", null ],
       [ "TTransition", "class_t_transition.html", null ]
     ] ],
     [ "TPreserveGDirectory", "class_t_preserve_g_directory.html", null ],
+    [ "TProof", null, [
+      [ "TGRSIProof", "class_t_g_r_s_i_proof.html", null ]
+    ] ],
     [ "TPulseAnalyzer", "class_t_pulse_analyzer.html", null ],
+    [ "TransientBits", "class_transient_bits.html", null ],
     [ "TRint", null, [
       [ "TGint", "class_t_gint.html", null ],
       [ "TGRSIint", "class_t_g_r_s_iint.html", null ]
+    ] ],
+    [ "TSelector", null, [
+      [ "TGRSISelector", "class_t_g_r_s_i_selector.html", [
+        [ "ExampleEventSelector", "class_example_event_selector.html", null ],
+        [ "ExampleFragmentSelector", "class_example_fragment_selector.html", null ]
+      ] ]
     ] ],
     [ "TServerSocket", null, [
       [ "TGRSIServer", "class_t_g_r_s_i_server.html", null ]
@@ -231,6 +240,9 @@ var hierarchy =
       [ "TGRSIInterruptHandler", "class_t_g_r_s_i_interrupt_handler.html", null ]
     ] ],
     [ "TSRIM", "class_t_s_r_i_m.html", null ],
+    [ "TTransientBits< T >", "class_t_transient_bits.html", null ],
+    [ "TTransientBits< UChar_t >", "class_t_transient_bits.html", null ],
+    [ "TTransientBits< UShort_t >", "class_t_transient_bits.html", null ],
     [ "TTree", null, [
       [ "GTree", "class_g_tree.html", null ]
     ] ],

@@ -277,7 +277,7 @@ $(document).ready(function(){initNavTree('_t_gain_match_8cxx_source.html','');})
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="comment">//What we are actually doing is applying the recirpocal gain to the energy of the real peak</span></div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="comment">//to figure out where the centroid of the charge is spectrum is roughly going to be</span></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="comment">//First read in the rough gain coefficients</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      std::vector&lt;Float_t&gt; roughCoeffs = chan-&gt;<a class="code" href="class_t_channel.html#a33f3fe5dde706c79df2738cb3c91dc21">GetENGCoeff</a>();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      std::vector&lt;Float_t&gt; roughCoeffs = chan-&gt;<a class="code" href="class_t_channel.html#a8d181c7585f5740700b49655a3ef38ee">GetENGCoeff</a>();</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      gain = roughCoeffs.at(1);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      offset = roughCoeffs.at(0);</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;   }</div>
@@ -783,7 +783,7 @@ $(document).ready(function(){initNavTree('_t_gain_match_8cxx_source.html','');})
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;      <span class="comment">//What we are actually doing is applying the recirpocal gain to the energy of the real peak</span></div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;      <span class="comment">//to figure out where the centroid of the charge is spectrum is roughly going to be</span></div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;      <span class="comment">//First read in the rough gain coefficients</span></div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;      std::vector&lt;Float_t&gt; roughCoeffs = chan-&gt;<a class="code" href="class_t_channel.html#a33f3fe5dde706c79df2738cb3c91dc21">GetENGCoeff</a>();</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;      std::vector&lt;Float_t&gt; roughCoeffs = chan-&gt;<a class="code" href="class_t_channel.html#a8d181c7585f5740700b49655a3ef38ee">GetENGCoeff</a>();</div>
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;      gain = roughCoeffs.at(1);</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;      offset = roughCoeffs.at(0);</div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;   }</div>
@@ -846,74 +846,79 @@ $(document).ready(function(){initNavTree('_t_gain_match_8cxx_source.html','');})
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;   hist2-&gt;GetXaxis()-&gt;SetRangeUser(peak2-&gt;GetXmin()-20.,peak2-&gt;GetXmax()+20.);</div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;RANGE: &quot;</span> &lt;&lt; peak2-&gt;GetXmin()-20. &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; peak2-&gt;GetXmax()+20. &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;   nFound = s2.Search(hist2,2,<span class="stringliteral">&quot;&quot;</span>,0.3); <span class="comment">//Search the next histogram</span></div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x=0;x&lt;nFound;x++)</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;      std::cout &lt;&lt; s2.GetPositionX()[x] &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;   largestPeak = s2.GetPositionX()[0];</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x=0;x&lt;nFound;x++)</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;      <span class="keywordflow">if</span>(fabs(peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>() - s2.GetPositionX()[x]) &lt; closestDiff) {</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;         closestPeak = s2.GetPositionX()[x];</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;         closestDiff = fabs(peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>() - s2.GetPositionX()[x]);</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;      }</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;   Double_t rangeWidth2 = (peak2-&gt;GetXmax() - peak2-&gt;GetXmin())/2.;</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;   peak2-&gt;SetParameter(<span class="stringliteral">&quot;centroid&quot;</span>,largestPeak);</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;   peak2-&gt;SetRange(peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>()-rangeWidth2,peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>()+rangeWidth2);</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;   </div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;Centroid Guess &quot;</span> &lt;&lt; peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;Range High &quot;</span> &lt;&lt; peak2-&gt;GetXmin() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; peak2-&gt;GetXmax() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;   chargeHist-&gt;GetXaxis()-&gt;UnZoom();</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;   hist2-&gt;GetXaxis()-&gt;UnZoom();</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;   peak1-&gt;<a class="code" href="class_t_peak.html#a1ae3091512f8fffbde6468966ff78a55">Fit</a>(chargeHist,<span class="stringliteral">&quot;MSL+&quot;</span>);</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;   peak2-&gt;<a class="code" href="class_t_peak.html#a1ae3091512f8fffbde6468966ff78a55">Fit</a>(hist2,<span class="stringliteral">&quot;MSL+&quot;</span>);</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;   </div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;   chargeHist-&gt;Draw();</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;   peak1-&gt;Draw(<span class="stringliteral">&quot;same&quot;</span>);</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;   peak2-&gt;Draw(<span class="stringliteral">&quot;same&quot;</span>);</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;   Double_t centroid[2] = {peak1-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>(), peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>()};</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;   <span class="comment">//Put the peaks in order for ease (if the user put them in the wrong order)</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;   <span class="comment">//Apparantly there is a TGraph Sort method. Might look into this later.</span></div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;   <span class="keywordflow">if</span>(energy[0] &gt; energy[1]) {</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;         std::swap(energy[0], energy[1]);</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;         std::swap(centroid[0],centroid[1]);</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;   }</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;   SetPoint(0,centroid[0],energy[0]);</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;   SetPoint(1,centroid[1],energy[1]);</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;   TF1* gainFit = <span class="keyword">new</span> TF1(<span class="stringliteral">&quot;gain&quot;</span>,<span class="stringliteral">&quot;pol1&quot;</span>);</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;   <span class="keywordflow">if</span>(nFound == 0){</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;RANGE: &quot;</span> &lt;&lt; peak2-&gt;GetXmin()-40. &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; peak2-&gt;GetXmax()+40. &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;      nFound = s2.Search(hist2,2,<span class="stringliteral">&quot;&quot;</span>,0.3); <span class="comment">//Search the next histogram</span></div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;   }</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x=0;x&lt;nFound;x++)</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;      std::cout &lt;&lt; s2.GetPositionX()[x] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;   largestPeak = s2.GetPositionX()[0];</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x=0;x&lt;nFound;x++)</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;      <span class="keywordflow">if</span>(fabs(peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>() - s2.GetPositionX()[x]) &lt; closestDiff) {</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;         closestPeak = s2.GetPositionX()[x];</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;         closestDiff = fabs(peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>() - s2.GetPositionX()[x]);</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;      }</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;   Double_t rangeWidth2 = (peak2-&gt;GetXmax() - peak2-&gt;GetXmin())/2.;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;   peak2-&gt;SetParameter(<span class="stringliteral">&quot;centroid&quot;</span>,largestPeak);</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;   peak2-&gt;SetRange(peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>()-rangeWidth2,peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>()+rangeWidth2);</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;   </div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;Centroid Guess &quot;</span> &lt;&lt; peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;Range High &quot;</span> &lt;&lt; peak2-&gt;GetXmin() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; peak2-&gt;GetXmax() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;   chargeHist-&gt;GetXaxis()-&gt;UnZoom();</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;   hist2-&gt;GetXaxis()-&gt;UnZoom();</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;   peak1-&gt;<a class="code" href="class_t_peak.html#a1ae3091512f8fffbde6468966ff78a55">Fit</a>(chargeHist,<span class="stringliteral">&quot;MSL+&quot;</span>);</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;   peak2-&gt;<a class="code" href="class_t_peak.html#a1ae3091512f8fffbde6468966ff78a55">Fit</a>(hist2,<span class="stringliteral">&quot;MSL+&quot;</span>);</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;   </div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;   chargeHist-&gt;Draw();</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;   peak1-&gt;Draw(<span class="stringliteral">&quot;same&quot;</span>);</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;   peak2-&gt;Draw(<span class="stringliteral">&quot;same&quot;</span>);</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;   Double_t centroid[2] = {peak1-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>(), peak2-&gt;<a class="code" href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">GetCentroid</a>()};</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;   <span class="comment">//Put the peaks in order for ease (if the user put them in the wrong order)</span></div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;   <span class="comment">//Apparantly there is a TGraph Sort method. Might look into this later.</span></div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;   <span class="keywordflow">if</span>(energy[0] &gt; energy[1]) {</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;         std::swap(energy[0], energy[1]);</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;         std::swap(centroid[0],centroid[1]);</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;   }</div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;   TFitResultPtr res = Fit(gainFit,<span class="stringliteral">&quot;SC0&quot;</span>);</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;   <a class="code" href="class_t_cal.html#af0d1689f5b3aaf7c453c0972b147213a">SetFitFunction</a>(GetFunction(<span class="stringliteral">&quot;gain&quot;</span>));<span class="comment">//Have to do this because I want to delete gainFit</span></div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;   <a class="code" href="class_t_gain_match.html#ae43cd4a104d8f2ad3fe734c8c5849608">fGainCoeffs</a>[0] = res-&gt;Parameter(0);</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;   <a class="code" href="class_t_gain_match.html#ae43cd4a104d8f2ad3fe734c8c5849608">fGainCoeffs</a>[1] = res-&gt;Parameter(1);</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    </div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;   <span class="keyword">delete</span> gainFit;</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;   <a class="code" href="class_t_gain_match.html#a72062a11179fb53efe919219a76ff9be">fCoarseMatch</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;   <span class="keyword">delete</span> peak1;</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;   <span class="keyword">delete</span> peak2;</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;   <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;}</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;</div>
-<div class="line"><a name="l00789"></a><span class="lineno"><a class="line" href="class_t_gain_match.html#a4bf28ae40bea89efc1ce2524ce96226e">  789</a></span>&#160;Double_t <a class="code" href="class_t_gain_match.html#a4bf28ae40bea89efc1ce2524ce96226e">TGainMatch::HistCompare</a>(Double_t* x, Double_t* par) {</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;   Double_t xx = x[0];</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;   Int_t bin = <a class="code" href="class_t_gain_match.html#a27942facfb401828bc92db0f14187b34">fHist</a>-&gt;GetXaxis()-&gt;FindBin(xx*par[2] + par[1]);</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;   Double_t content = <a class="code" href="class_t_gain_match.html#a27942facfb401828bc92db0f14187b34">fHist</a>-&gt;GetBinContent(bin);</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;   SetPoint(0,centroid[0],energy[0]);</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;   SetPoint(1,centroid[1],energy[1]);</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;   TF1* gainFit = <span class="keyword">new</span> TF1(<span class="stringliteral">&quot;gain&quot;</span>,<span class="stringliteral">&quot;pol1&quot;</span>);</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;   TFitResultPtr res = Fit(gainFit,<span class="stringliteral">&quot;SC0&quot;</span>);</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;   <a class="code" href="class_t_cal.html#af0d1689f5b3aaf7c453c0972b147213a">SetFitFunction</a>(GetFunction(<span class="stringliteral">&quot;gain&quot;</span>));<span class="comment">//Have to do this because I want to delete gainFit</span></div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;   <a class="code" href="class_t_gain_match.html#ae43cd4a104d8f2ad3fe734c8c5849608">fGainCoeffs</a>[0] = res-&gt;Parameter(0);</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;   <a class="code" href="class_t_gain_match.html#ae43cd4a104d8f2ad3fe734c8c5849608">fGainCoeffs</a>[1] = res-&gt;Parameter(1);</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    </div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;   <span class="keyword">delete</span> gainFit;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;   <a class="code" href="class_t_gain_match.html#a72062a11179fb53efe919219a76ff9be">fCoarseMatch</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;   <span class="keyword">delete</span> peak1;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;   <span class="keyword">delete</span> peak2;</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;   <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;}</div>
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;   <span class="keywordflow">return</span> par[0]*content;</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;}</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;</div>
-<div class="ttc" id="class_t_channel_html_a4f21d8dcd6d7bbb6d6902d039da25581"><div class="ttname"><a href="class_t_channel.html#a4f21d8dcd6d7bbb6d6902d039da25581">TChannel::GetChannelByNumber</a></div><div class="ttdeci">static TChannel * GetChannelByNumber(int temp_numebr)</div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8cxx_source.html#l00309">TChannel.cxx:309</a></div></div>
+<div class="line"><a name="l00794"></a><span class="lineno"><a class="line" href="class_t_gain_match.html#a4bf28ae40bea89efc1ce2524ce96226e">  794</a></span>&#160;Double_t <a class="code" href="class_t_gain_match.html#a4bf28ae40bea89efc1ce2524ce96226e">TGainMatch::HistCompare</a>(Double_t* x, Double_t* par) {</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;   Double_t xx = x[0];</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;   Int_t bin = <a class="code" href="class_t_gain_match.html#a27942facfb401828bc92db0f14187b34">fHist</a>-&gt;GetXaxis()-&gt;FindBin(xx*par[2] + par[1]);</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;   Double_t content = <a class="code" href="class_t_gain_match.html#a27942facfb401828bc92db0f14187b34">fHist</a>-&gt;GetBinContent(bin);</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;   <span class="keywordflow">return</span> par[0]*content;</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;}</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;</div>
+<div class="ttc" id="class_t_channel_html_a4f21d8dcd6d7bbb6d6902d039da25581"><div class="ttname"><a href="class_t_channel.html#a4f21d8dcd6d7bbb6d6902d039da25581">TChannel::GetChannelByNumber</a></div><div class="ttdeci">static TChannel * GetChannelByNumber(int temp_numebr)</div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8cxx_source.html#l00292">TChannel.cxx:292</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_ad1f54f5c5eea54fda3c5656622fce379"><div class="ttname"><a href="class_t_gain_match.html#ad1f54f5c5eea54fda3c5656622fce379">TGainMatch::FineMatchAll</a></div><div class="ttdeci">static Bool_t FineMatchAll(TCalManager *cm, TH2 *chargeMat, TH2 *engMat, Int_t testchan, Double_t energy1, Double_t energy2, Int_t low_range=100, Int_t high_range=600)</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00575">TGainMatch.cxx:575</a></div></div>
 <div class="ttc" id="class_t_gain_match_html"><div class="ttname"><a href="class_t_gain_match.html">TGainMatch</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8h_source.html#l00016">TGainMatch.h:16</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_a1011005a00c8a9cd7a6fae29e143735e"><div class="ttname"><a href="class_t_gain_match.html#a1011005a00c8a9cd7a6fae29e143735e">TGainMatch::Clear</a></div><div class="ttdeci">void Clear(Option_t *opt=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00462">TGainMatch.cxx:462</a></div></div>
 <div class="ttc" id="class_t_cal_manager_html_a3daf752fff5c7e84f5b5eaa562a268f2"><div class="ttname"><a href="class_t_cal_manager.html#a3daf752fff5c7e84f5b5eaa562a268f2">TCalManager::AddToManager</a></div><div class="ttdeci">Bool_t AddToManager(TCal *cal, UInt_t channum, Option_t *opt=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_t_cal_manager_8cxx_source.html#l00098">TCalManager.cxx:98</a></div></div>
 <div class="ttc" id="class_t_cal_html_a32a9dedbc1e0c08b9909375fb08ca6e8"><div class="ttname"><a href="class_t_cal.html#a32a9dedbc1e0c08b9909375fb08ca6e8">TCal::GetChannel</a></div><div class="ttdeci">TChannel * GetChannel() const </div><div class="ttdef"><b>Definition:</b> <a href="_t_cal_8cxx_source.html#l00120">TCal.cxx:120</a></div></div>
-<div class="ttc" id="class_t_gain_match_html_a4bf28ae40bea89efc1ce2524ce96226e"><div class="ttname"><a href="class_t_gain_match.html#a4bf28ae40bea89efc1ce2524ce96226e">TGainMatch::HistCompare</a></div><div class="ttdeci">Double_t HistCompare(Double_t *x, Double_t *par)</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00789">TGainMatch.cxx:789</a></div></div>
+<div class="ttc" id="class_t_gain_match_html_a4bf28ae40bea89efc1ce2524ce96226e"><div class="ttname"><a href="class_t_gain_match.html#a4bf28ae40bea89efc1ce2524ce96226e">TGainMatch::HistCompare</a></div><div class="ttdeci">Double_t HistCompare(Double_t *x, Double_t *par)</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00794">TGainMatch.cxx:794</a></div></div>
 <div class="ttc" id="class_t_cal_html_a1f35063fc18552a42bf7f2c36dd404e1"><div class="ttname"><a href="class_t_cal.html#a1f35063fc18552a42bf7f2c36dd404e1">TCal::Clear</a></div><div class="ttdeci">virtual void Clear(Option_t *opt=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_t_cal_8cxx_source.html#l00133">TCal.cxx:133</a></div></div>
 <div class="ttc" id="class_t_cal_html_a452d22dd4db63acd8a1f67afc8f79792"><div class="ttname"><a href="class_t_cal.html#a452d22dd4db63acd8a1f67afc8f79792">TCal::Print</a></div><div class="ttdeci">virtual void Print(Option_t *opt=&quot;&quot;) const </div><div class="ttdef"><b>Definition:</b> <a href="_t_cal_8cxx_source.html#l00140">TCal.cxx:140</a></div></div>
 <div class="ttc" id="class_t_peak_html"><div class="ttname"><a href="class_t_peak.html">TPeak</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_peak_8h_source.html#l00030">TPeak.h:30</a></div></div>
@@ -922,18 +927,17 @@ $(document).ready(function(){initNavTree('_t_gain_match_8cxx_source.html','');})
 <div class="ttc" id="class_t_cal_html_a6836121bb2a6cf1022b2f0c757c64f23"><div class="ttname"><a href="class_t_cal.html#a6836121bb2a6cf1022b2f0c757c64f23">TCal::GetParameter</a></div><div class="ttdeci">virtual Double_t GetParameter(size_t parameter) const </div><div class="ttdef"><b>Definition:</b> <a href="_t_cal_8cxx_source.html#l00099">TCal.cxx:99</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_ae52e58ec0fc6f6d44bdb88309339df96"><div class="ttname"><a href="class_t_gain_match.html#ae52e58ec0fc6f6d44bdb88309339df96">TGainMatch::fCoarseRange</a></div><div class="ttdeci">Double_t fCoarseRange</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8h_source.html#l00072">TGainMatch.h:72</a></div></div>
 <div class="ttc" id="class_t_cal_html_a54c363b8f3e87522afc7435b21da360d"><div class="ttname"><a href="class_t_cal.html#a54c363b8f3e87522afc7435b21da360d">TCal::SetChannel</a></div><div class="ttdeci">Bool_t SetChannel(const TChannel *chan)</div><div class="ttdef"><b>Definition:</b> <a href="_t_cal_8cxx_source.html#l00055">TCal.cxx:55</a></div></div>
-<div class="ttc" id="class_t_channel_html_a3ae8c67092729ce86d4c35458eb9fa51"><div class="ttname"><a href="class_t_channel.html#a3ae8c67092729ce86d4c35458eb9fa51">TChannel::AddENGCoefficient</a></div><div class="ttdeci">void AddENGCoefficient(Float_t temp)</div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8h_source.html#l00165">TChannel.h:165</a></div></div>
+<div class="ttc" id="class_t_channel_html_a3ae8c67092729ce86d4c35458eb9fa51"><div class="ttname"><a href="class_t_channel.html#a3ae8c67092729ce86d4c35458eb9fa51">TChannel::AddENGCoefficient</a></div><div class="ttdeci">void AddENGCoefficient(Float_t temp)</div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8h_source.html#l00167">TChannel.h:167</a></div></div>
 <div class="ttc" id="class_t_cal_html"><div class="ttname"><a href="class_t_cal.html">TCal</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_cal_8h_source.html#l00044">TCal.h:44</a></div></div>
-<div class="ttc" id="class_t_peak_html_a1ae3091512f8fffbde6468966ff78a55"><div class="ttname"><a href="class_t_peak.html#a1ae3091512f8fffbde6468966ff78a55">TPeak::Fit</a></div><div class="ttdeci">Bool_t Fit(TH1 *fithist, Option_t *opt=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_t_peak_8cxx_source.html#l00238">TPeak.cxx:238</a></div></div>
+<div class="ttc" id="class_t_peak_html_a1ae3091512f8fffbde6468966ff78a55"><div class="ttname"><a href="class_t_peak.html#a1ae3091512f8fffbde6468966ff78a55">TPeak::Fit</a></div><div class="ttdeci">Bool_t Fit(TH1 *fithist, Option_t *opt=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_t_peak_8cxx_source.html#l00241">TPeak.cxx:241</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_a4b558d262afecbcf2fd3b5e0f53d1e23"><div class="ttname"><a href="class_t_gain_match.html#a4b558d262afecbcf2fd3b5e0f53d1e23">TGainMatch::WriteToChannel</a></div><div class="ttdeci">void WriteToChannel() const </div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00302">TGainMatch.cxx:302</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_a9ab8b0a9630cbfb736b65f7ee0b64fba"><div class="ttname"><a href="class_t_gain_match.html#a9ab8b0a9630cbfb736b65f7ee0b64fba">TGainMatch::Copy</a></div><div class="ttdeci">void Copy(TObject &amp;obj) const </div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00024">TGainMatch.cxx:24</a></div></div>
 <div class="ttc" id="_user_fill_obj_8h_html_a34079cedfcd0dcc6476bf9f1076e8cbd"><div class="ttname"><a href="_user_fill_obj_8h.html#a34079cedfcd0dcc6476bf9f1076e8cbd">mat</a></div><div class="ttdeci">TH2D * mat</div><div class="ttdef"><b>Definition:</b> <a href="_user_fill_obj_8h_source.html#l00014">UserFillObj.h:14</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_a11ee77eed4961fbfee7475d73116ec98"><div class="ttname"><a href="class_t_gain_match.html#a11ee77eed4961fbfee7475d73116ec98">TGainMatch::FineMatchFast</a></div><div class="ttdeci">Bool_t FineMatchFast(TH1 *hist1, TPeak *peak1, TH1 *hist2, TPeak *peak2, Int_t channelNum=9999)</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00134">TGainMatch.cxx:134</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_afdf328223580d9e5840732de7b6683a8"><div class="ttname"><a href="class_t_gain_match.html#afdf328223580d9e5840732de7b6683a8">TGainMatch::fAligned</a></div><div class="ttdeci">Bool_t fAligned</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8h_source.html#l00068">TGainMatch.h:68</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_ae43cd4a104d8f2ad3fe734c8c5849608"><div class="ttname"><a href="class_t_gain_match.html#ae43cd4a104d8f2ad3fe734c8c5849608">TGainMatch::fGainCoeffs</a></div><div class="ttdeci">Double_t fGainCoeffs[2]</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8h_source.html#l00071">TGainMatch.h:71</a></div></div>
-<div class="ttc" id="class_t_channel_html_a60b91b0b97d0ab2172184e9a6b8a7437"><div class="ttname"><a href="class_t_channel.html#a60b91b0b97d0ab2172184e9a6b8a7437">TChannel::DestroyENGCal</a></div><div class="ttdeci">void DestroyENGCal()</div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8cxx_source.html#l00380">TChannel.cxx:380</a></div></div>
+<div class="ttc" id="class_t_channel_html_a60b91b0b97d0ab2172184e9a6b8a7437"><div class="ttname"><a href="class_t_channel.html#a60b91b0b97d0ab2172184e9a6b8a7437">TChannel::DestroyENGCal</a></div><div class="ttdeci">void DestroyENGCal()</div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8cxx_source.html#l00363">TChannel.cxx:363</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_a00e9e9a3d71a8f1b4b4880830c64d3dd"><div class="ttname"><a href="class_t_gain_match.html#a00e9e9a3d71a8f1b4b4880830c64d3dd">TGainMatch::fAlignCoeffs</a></div><div class="ttdeci">Double_t fAlignCoeffs[2]</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8h_source.html#l00070">TGainMatch.h:70</a></div></div>
-<div class="ttc" id="class_t_channel_html_a33f3fe5dde706c79df2738cb3c91dc21"><div class="ttname"><a href="class_t_channel.html#a33f3fe5dde706c79df2738cb3c91dc21">TChannel::GetENGCoeff</a></div><div class="ttdeci">std::vector&lt; Float_t &gt; GetENGCoeff()</div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8h_source.html#l00159">TChannel.h:159</a></div></div>
 <div class="ttc" id="class_t_peak_html_a5dc33814dd0dc570b92b71f05d4c5abc"><div class="ttname"><a href="class_t_peak.html#a5dc33814dd0dc570b92b71f05d4c5abc">TPeak::GetCentroid</a></div><div class="ttdeci">Double_t GetCentroid() const </div><div class="ttdef"><b>Definition:</b> <a href="_t_peak_8h_source.html#l00050">TPeak.h:50</a></div></div>
 <div class="ttc" id="class_t_cal_html_a9b4b9a652c0407eecbc29926bdb6a730"><div class="ttname"><a href="class_t_cal.html#a9b4b9a652c0407eecbc29926bdb6a730">TCal::GetFitFunction</a></div><div class="ttdeci">virtual TF1 * GetFitFunction() const </div><div class="ttdef"><b>Definition:</b> <a href="_t_cal_8h_source.html#l00058">TCal.h:58</a></div></div>
 <div class="ttc" id="class_t_cal_manager_html"><div class="ttname"><a href="class_t_cal_manager.html">TCalManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_cal_manager_8h_source.html#l00012">TCalManager.h:12</a></div></div>
@@ -947,10 +951,11 @@ $(document).ready(function(){initNavTree('_t_gain_match_8cxx_source.html','');})
 <div class="ttc" id="class_t_gain_match_html_acae333b91e9ed719fd4a7045829b1a36"><div class="ttname"><a href="class_t_gain_match.html#acae333b91e9ed719fd4a7045829b1a36">TGainMatch::Print</a></div><div class="ttdeci">void Print(Option_t *opt=&quot;&quot;) const </div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00315">TGainMatch.cxx:315</a></div></div>
 <div class="ttc" id="_user_fill_obj_8h_html_ac15e5a1de3bd77dc1ff2768e42dc9e8b"><div class="ttname"><a href="_user_fill_obj_8h.html#ac15e5a1de3bd77dc1ff2768e42dc9e8b">hist</a></div><div class="ttdeci">TH1D * hist</div><div class="ttdef"><b>Definition:</b> <a href="_user_fill_obj_8h_source.html#l00005">UserFillObj.h:5</a></div></div>
 <div class="ttc" id="_g_gaus_8cxx_html_a5de6bfd106f2aefa8b821c066ad7a146"><div class="ttname"><a href="_g_gaus_8cxx.html#a5de6bfd106f2aefa8b821c066ad7a146">ClassImp</a></div><div class="ttdeci">ClassImp(GGaus) GGaus</div><div class="ttdef"><b>Definition:</b> <a href="_g_gaus_8cxx_source.html#l00013">GGaus.cxx:13</a></div></div>
-<div class="ttc" id="class_t_channel_html"><div class="ttname"><a href="class_t_channel.html">TChannel</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8h_source.html#l00046">TChannel.h:46</a></div></div>
+<div class="ttc" id="class_t_channel_html"><div class="ttname"><a href="class_t_channel.html">TChannel</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8h_source.html#l00047">TChannel.h:47</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_a27942facfb401828bc92db0f14187b34"><div class="ttname"><a href="class_t_gain_match.html#a27942facfb401828bc92db0f14187b34">TGainMatch::fHist</a></div><div class="ttdeci">TH1 * fHist</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8h_source.html#l00069">TGainMatch.h:69</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_a4ba04186b4e233699d1ab1951dad3c51"><div class="ttname"><a href="class_t_gain_match.html#a4ba04186b4e233699d1ab1951dad3c51">TGainMatch::FineMatchFastAll</a></div><div class="ttdeci">static Bool_t FineMatchFastAll(TCalManager *cm, TH2 *mat, Double_t energy1, Double_t energy2)</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00392">TGainMatch.cxx:392</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_aa0e5908326f254a9ad59f906ef3be368"><div class="ttname"><a href="class_t_gain_match.html#aa0e5908326f254a9ad59f906ef3be368">TGainMatch::AlignAll</a></div><div class="ttdeci">static Bool_t AlignAll(TCalManager *cm, TH1 *hist, TH2 *mat, Int_t low_range=100, Int_t high_range=600)</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00530">TGainMatch.cxx:530</a></div></div>
+<div class="ttc" id="class_t_channel_html_a8d181c7585f5740700b49655a3ef38ee"><div class="ttname"><a href="class_t_channel.html#a8d181c7585f5740700b49655a3ef38ee">TChannel::GetENGCoeff</a></div><div class="ttdeci">std::vector&lt; Float_t &gt; GetENGCoeff() const </div><div class="ttdef"><b>Definition:</b> <a href="_t_channel_8h_source.html#l00161">TChannel.h:161</a></div></div>
 <div class="ttc" id="class_t_gain_match_html_a6e91537199d86c11f3f8cb02054fb0b6"><div class="ttname"><a href="class_t_gain_match.html#a6e91537199d86c11f3f8cb02054fb0b6">TGainMatch::CalculateGain</a></div><div class="ttdeci">void CalculateGain(Double_t cent1, Double_t cent2, Double_t eng1, Double_t eng2)</div><div class="ttdef"><b>Definition:</b> <a href="_t_gain_match_8cxx_source.html#l00030">TGainMatch.cxx:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -958,7 +963,7 @@ $(document).ready(function(){initNavTree('_t_gain_match_8cxx_source.html','');})
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (2.4.00 ) Reference Guide Generated on Tue Sep 27 2016 17:40:03.
+GRSISort (2.4.00 ) Reference Guide Generated on Mon Nov 7 2016 09:38:51.
 </small>
 </div>
 </body>

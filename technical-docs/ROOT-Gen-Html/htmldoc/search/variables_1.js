@@ -1,22 +1,12 @@
 var searchData=
 [
-  ['b0',['b0',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a895b54a03d79a98dae60bc2c6979c25b',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['b1',['b1',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a12ac4473ef3d22b5d6e566e9782725b5',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['bad_5fbaseline_5frange',['BAD_BASELINE_RANGE',['../class_t_pulse_analyzer.html#a4c5b821a2bec369b78bee611d6e92fc2',1,'TPulseAnalyzer']]],
-  ['badchisq_5fampl',['BADCHISQ_AMPL',['../class_t_pulse_analyzer.html#a7f2034d2c3bfaf83d4c802f1f4c0f423',1,'TPulseAnalyzer']]],
-  ['badchisq_5flin_5ft0',['BADCHISQ_LIN_T0',['../class_t_pulse_analyzer.html#a218a34fc92cfc4657b550fa3bc760bcd',1,'TPulseAnalyzer']]],
-  ['badchisq_5fmat',['BADCHISQ_MAT',['../class_t_pulse_analyzer.html#a96cff57b9ce64e81ec20a564e2b71fae',1,'TPulseAnalyzer']]],
-  ['badchisq_5fneg',['BADCHISQ_NEG',['../class_t_pulse_analyzer.html#acc2cf2ed021957db3f846a40cc87dfcf',1,'TPulseAnalyzer']]],
-  ['badchisq_5fpar_5ft0',['BADCHISQ_PAR_T0',['../class_t_pulse_analyzer.html#a1fb0c39dec93b2d1b8baed71328ac331',1,'TPulseAnalyzer']]],
-  ['badchisq_5fsmooth_5ft0',['BADCHISQ_SMOOTH_T0',['../class_t_pulse_analyzer.html#a566cb39e6ca5e596683bf368f10adf49',1,'TPulseAnalyzer']]],
-  ['badchisq_5ft0',['BADCHISQ_T0',['../class_t_pulse_analyzer.html#aced5a344199af32b9267ac60ce6d833c',1,'TPulseAnalyzer']]],
-  ['baseline',['baseline',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a44e84c241a2dd09197eba21b7766851a',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['baseline_5frange',['baseline_range',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#aa6d0221399398372e1ab1052e92fd214',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['baselinefin',['baselinefin',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#ad96bfbd38c4749a7eca0eef02b95d59c',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['baselinemax',['baselineMax',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#ac0a1b28f3ed2fce17ffc45fa0aac8c32',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['baselinemin',['baselineMin',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a22d4a5643f04463d3d41c1f3c1195686',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['baselinestdev',['baselineStDev',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#ab1397e3b88c085ef465e1dc9ebd59c2d',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['baselinestdevfin',['baselineStDevfin',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a02cb22a0bdf9d779921b5df355077895',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['bfit',['bfit',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a1838e85000f5bff0b6db57833d047b67',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['bflag',['bflag',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a1314b00629b31e1b1135e8a03599955f',1,'TPulseAnalyzer::WaveFormPar']]]
+  ['a',['A',['../struct_t_pulse_analyzer_1_1_sin_par.html#aa609023f393ed27086804b7dbe69ac77',1,'TPulseAnalyzer::SinPar']]],
+  ['active_5fdirs',['active_dirs',['../classpygui_1_1hist__tab_1_1_hist_tab.html#ae51e7dccde2b3823fcd3482db3dd9703',1,'pygui::hist_tab::HistTab']]],
+  ['adjustedenergymap',['AdjustedEnergyMap',['../class_t_s_r_i_m.html#a733ae2ad845de59ae9bff8d1bf6c670c',1,'TSRIM']]],
+  ['afit',['afit',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a507c5fc66cc42303e7f298cf1e999264',1,'TPulseAnalyzer::WaveFormPar']]],
+  ['all',['All',['../class_t_deadtime_scaler_queue.html#adb3cf3fea7e1ab6e76688a0d0f2c2448',1,'TDeadtimeScalerQueue::All()'],['../class_t_rate_scaler_queue.html#a7e492f73cb0729a8ee6afca7a2ae4215',1,'TRateScalerQueue::All()']]],
+  ['am',['am',['../struct_t_pulse_analyzer_1_1_shape_par.html#a40c8954660708df6ee30f9df70cec092',1,'TPulseAnalyzer::ShapePar']]],
+  ['amplitude',['amplitude',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a79fbb656abecdb9217e25028b590c0f8',1,'TPulseAnalyzer::WaveFormPar']]],
+  ['analysis_5fhistogram_5flib',['analysis_histogram_lib',['../class_t_g_r_s_i_options.html#a18e9c6044675b107491ee8272ae49fbd',1,'TGRSIOptions']]],
+  ['area',['area',['../struct_t_calibrator_1_1_peak.html#a63d2acc7425ecaf845f357318af0a3bb',1,'TCalibrator::Peak']]]
 ];

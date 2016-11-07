@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['x',['X',['../class_t_s_r_i_m.html#a023231faf01a3fbc0ce2cbcb38d4adc7',1,'TSRIM']]],
-  ['xmax',['Xmax',['../class_t_s_r_i_m.html#a4f5edfdb74e77a862721ca517f4b1887',1,'TSRIM']]],
-  ['xmin',['Xmin',['../class_t_s_r_i_m.html#ac9ef9387cb4ae07e40b66420b9a5ea2f',1,'TSRIM']]]
+  ['window',['window',['../classpygui_1_1mainwindow_1_1_main_window.html#a726dd90cd8281808c8d3253d589bac46',1,'pygui.mainwindow.MainWindow.window()'],['../namespacepygui_1_1grut-view.html#a73b09bfab986de5782f599b8a6ed4e98',1,'pygui.grut-view.window()']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['parpar',['ParPar',['../struct_t_pulse_analyzer_1_1_par_par.html',1,'TPulseAnalyzer']]]
+  ['iterator',['iterator',['../classcombinations_1_1iterator.html',1,'combinations']]],
+  ['iterator',['iterator',['../class_g_h2_base_1_1iterator.html',1,'GH2Base']]]
 ];

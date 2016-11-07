@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deadtime_2ecxx',['Deadtime.cxx',['../_deadtime_8cxx.html',1,'']]]
+  ['bremmatrices_2ecxx',['BremMatrices.cxx',['../_brem_matrices_8cxx.html',1,'']]]
 ];

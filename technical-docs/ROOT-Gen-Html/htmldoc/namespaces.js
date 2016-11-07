@@ -6,6 +6,5 @@ var namespaces =
     [ "GRootFunctions", "namespace_g_root_functions.html", null ],
     [ "grsi", "namespacegrsi.html", null ],
     [ "pygui", "namespacepygui.html", "namespacepygui" ],
-    [ "TGRSIFunctions", "namespace_t_g_r_s_i_functions.html", null ],
-    [ "TGRSIOptions", "namespace_t_g_r_s_i_options.html", null ]
+    [ "TGRSIFunctions", "namespace_t_g_r_s_i_functions.html", null ]
 ];

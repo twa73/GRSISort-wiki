@@ -1,5 +1,22 @@
 var searchData=
 [
-  ['pin_5fbaseline_5frange',['PIN_BASELINE_RANGE',['../class_t_pulse_analyzer.html#a9e7eb9ae5921e9129ac533b7fbb64983',1,'TPulseAnalyzer']]],
-  ['ppg',['PPG',['../class_t_fragment.html#a662c2651dd56b08153bf296a8769f40d',1,'TFragment']]]
+  ['options_5ffile',['options_file',['../class_t_g_r_s_i_options.html#a4ffcec29aa4ffd1f15449f00f51b9a5a',1,'TGRSIOptions']]],
+  ['optstat_5fentries',['optstat_entries',['../classpygui_1_1mainwindow_1_1_main_window.html#a1237f46523f040b07087434ca0d1bcf6',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fintegral',['optstat_integral',['../classpygui_1_1mainwindow_1_1_main_window.html#ad9af3d1bf1a288e61d7c80b4bff2770c',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fkurt',['optstat_kurt',['../classpygui_1_1mainwindow_1_1_main_window.html#a910adacd1f80accda0946ca383530f46',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fkurt_5ferr',['optstat_kurt_err',['../classpygui_1_1mainwindow_1_1_main_window.html#a230837e67ba10979c8c8fecdca566cb6',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fmean',['optstat_mean',['../classpygui_1_1mainwindow_1_1_main_window.html#adad3b357bb4d3410b2159248235e2ea5',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fmean_5ferr',['optstat_mean_err',['../classpygui_1_1mainwindow_1_1_main_window.html#aef1ad44a155450316defa67feb7a9ff9',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fname',['optstat_name',['../classpygui_1_1mainwindow_1_1_main_window.html#ae8baac98b3c93a763efd3a020f9d6a5b',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5foverflow',['optstat_overflow',['../classpygui_1_1mainwindow_1_1_main_window.html#a689e13d36b79baf1fd506cc6eb6ac381',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5frms',['optstat_rms',['../classpygui_1_1mainwindow_1_1_main_window.html#ad812883dde40760f20869c8d71ffea7d',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5frms_5ferr',['optstat_rms_err',['../classpygui_1_1mainwindow_1_1_main_window.html#a72cf0ba04ae7bdd40e0f655e60649ed1',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fskew',['optstat_skew',['../classpygui_1_1mainwindow_1_1_main_window.html#a4fe5930ff2464fc25ba1f62b7e3c5020',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fskew_5ferr',['optstat_skew_err',['../classpygui_1_1mainwindow_1_1_main_window.html#a889d850b092be8298266de506a7cb6a3',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5funderflow',['optstat_underflow',['../classpygui_1_1mainwindow_1_1_main_window.html#a853e4d783ca2d260717a76cce02a5b3f',1,'pygui::mainwindow::MainWindow']]],
+  ['output_5fanalysis_5ffile',['output_analysis_file',['../class_t_g_r_s_i_options.html#a56c150c9f49df94d7439009812c62055',1,'TGRSIOptions']]],
+  ['output_5fanalysis_5fhistogram_5ffile',['output_analysis_histogram_file',['../class_t_g_r_s_i_options.html#aaf54945252217bb74b032a67b233cac1',1,'TGRSIOptions']]],
+  ['output_5ffiltered_5ffile',['output_filtered_file',['../class_t_g_r_s_i_options.html#a06cad221ccf641bb4217d3cfad398b27',1,'TGRSIOptions']]],
+  ['output_5ffragment_5ffile',['output_fragment_file',['../class_t_g_r_s_i_options.html#addbf9289a1b2d290d126e6adf5b7d355',1,'TGRSIOptions']]],
+  ['output_5ffragment_5fhistogram_5ffile',['output_fragment_histogram_file',['../class_t_g_r_s_i_options.html#af137a240aab4c03107c6402c10faa817',1,'TGRSIOptions']]]
 ];

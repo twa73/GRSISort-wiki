@@ -1,29 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../ex_analysis_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;exAnalysis.cxx'],['../_effic_test_8cxx.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;EfficTest.cxx'],['../_brem_matrices_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;BremMatrices.cxx'],['../_cycle_matrices_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;CycleMatrices.cxx'],['../_deadtime_8cxx.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;Deadtime.cxx'],['../_lean_correlations_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;LeanCorrelations.cxx'],['../_lean_matrices_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;LeanMatrices.cxx'],['../grsisort_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;grsisort.cxx']]],
-  ['majorindex',['MajorIndex',['../class_t_g_r_s_i_run_info.html#ae1b6519d6106d639fcac1fa4236fe5ed',1,'TGRSIRunInfo']]],
-  ['makeanalysistree',['MakeAnalysisTree',['../namespace_t_g_r_s_i_options.html#addc91a77fa96282dc0f420c47ae2639b',1,'TGRSIOptions']]],
-  ['makebremsuppressed',['MakeBremSuppressed',['../class_t_griffin_hit.html#af6674402721ffa473fa65f8fdbeff62a',1,'TGriffinHit']]],
-  ['makedee',['MakedEE',['../class_t_c_s_m.html#adc1952fcdcdd21dcc5b083bef040fe6e',1,'TCSM']]],
-  ['makedefcanvas',['MakeDefCanvas',['../class_g_canvas.html#a0ce4a4326cdded95806ab8da9fdb91fc',1,'GCanvas']]],
-  ['makehit',['MakeHit',['../class_t_c_s_m.html#aceaa9ad21ddc279bb0025d75db6d9f5e',1,'TCSM::MakeHit(std::pair&lt; TFragment, MNEMONIC &gt; &amp;, std::pair&lt; TFragment, MNEMONIC &gt; &amp;)'],['../class_t_c_s_m.html#a8c7c02acc4e9ee5b33bc15b37511bdbb',1,'TCSM::MakeHit(std::vector&lt; std::pair&lt; TFragment, MNEMONIC &gt; &gt; &amp;, std::vector&lt; std::pair&lt; TFragment, MNEMONIC &gt; &gt; &amp;)']]],
-  ['makespectra',['MakeSpectra',['../_deadtime_8cxx.html#a6ebca045715ea77da869fcdc8d4dc1b2',1,'Deadtime.cxx']]],
-  ['makeuserhistsfromfragmenttree',['MakeUserHistsFromFragmentTree',['../class_t_g_r_s_i_root_i_o.html#a1f80ca50d8d57ea730e2c1f8c190832d',1,'TGRSIRootIO']]],
-  ['mapbegin',['MapBegin',['../class_t_p_p_g.html#ac3fa7b42725550299277896fb1ef387b',1,'TPPG']]],
-  ['mapend',['MapEnd',['../class_t_p_p_g.html#a74e9f926fedd5f19b02e795b4e47817c',1,'TPPG']]],
-  ['mapisempty',['MapIsEmpty',['../class_t_p_p_g.html#a0cf40c0ffa55ecb05513a9c5e4b01a88',1,'TPPG']]],
-  ['max',['MAX',['../group___fitting.html#ga915f0e70ac7aee47871038316dcc28a4',1,'MAX(const T &amp;a, const T &amp;b):&#160;TLMFitter.h'],['../group___fitting.html#gaf81927aa1249cf37ac3750267885b120',1,'MAX(const double &amp;a, const float &amp;b):&#160;TLMFitter.h'],['../group___fitting.html#ga3e7d146382ee63a63057d0d1da21681c',1,'MAX(const float &amp;a, const double &amp;b):&#160;TLMFitter.h']]],
-  ['merge',['Merge',['../class_t_g_r_s_i_run_info.html#a8be53abda562fdf30557958db80e3781',1,'TGRSIRunInfo::Merge()'],['../class_t_g_r_s_i_sort_list.html#a36d9f1142063e9d0141b10c4b7eba7d4',1,'TGRSISortList::Merge()'],['../class_t_p_p_g.html#af6f3e6d313c84f736828db0e384fa502',1,'TPPG::Merge()']]],
-  ['midastime',['MidasTime',['../class_t_r_f.html#aa20b5b116f277123d6e889128cded118',1,'TRF']]],
-  ['minorindex',['MinorIndex',['../class_t_g_r_s_i_run_info.html#aa47c5b6f086c54c628b39935c741fb2d',1,'TGRSIRunInfo']]],
-  ['modify2dslice',['Modify2DSlice',['../class_t_angular_correlation.html#afbddeb9250fea79ccad2a99ae22fb23d',1,'TAngularCorrelation']]],
-  ['monitorconnectionsthread',['MonitorConnectionsThread',['../class_t_g_r_s_i_server.html#ab4393e03fbe1f2c85363f3bfa661a2e1',1,'TGRSIServer']]],
-  ['mrqcof',['mrqcof',['../class_t_l_m_fitter.html#ac98bbd42fe6a789b50bfd8c961385692',1,'TLMFitter']]],
-  ['mrqmin',['mrqmin',['../class_t_l_m_fitter.html#af3676a7b6ee49466935cdadadd4eec16',1,'TLMFitter']]],
-  ['multigauswithbg',['MultiGausWithBG',['../namespace_t_g_r_s_i_functions.html#a97c26db0b224ef9c2208b05a9e19f21a',1,'TGRSIFunctions']]],
-  ['multihit',['MultiHit',['../class_t_s3.html#a60442bc9fb7162189698bf4c80a38fdb',1,'TS3']]],
-  ['multiphotopeakbg',['MultiPhotoPeakBG',['../class_t_multi_peak.html#a228f772a0d034804b061520574028e4e',1,'TMultiPeak::MultiPhotoPeakBG()'],['../namespace_t_g_r_s_i_functions.html#a08f49cfb45e4941f5c21952caca58348',1,'TGRSIFunctions::MultiPhotoPeakBG()']]],
-  ['multiskewedgauswithbg',['MultiSkewedGausWithBG',['../namespace_t_g_r_s_i_functions.html#a2da57294e2b6f4c01afe10ebfa14c4f6',1,'TGRSIFunctions']]],
-  ['multiskewedgauswithbg2',['MultiSkewedGausWithBG2',['../namespace_t_g_r_s_i_functions.html#a2e6455dca371dca178fcb1900bcc55a0',1,'TGRSIFunctions']]],
-  ['multistepbg',['MultiStepBG',['../class_t_multi_peak.html#afdf4323dc3cd0ce6cb83c07189117429',1,'TMultiPeak']]]
+  ['kinvstheta',['KinVsTheta',['../class_t_reaction.html#a550684b6302fe73713847c02a6ddf9d7',1,'TReaction']]]
 ];
