@@ -97,3 +97,5 @@ to accomplish the same task.
 
 ##Running GRSIProof <a name="running_options" />
 There are options that can be provided on the command line to change the way `grsiproof` runs. Some options are listed below with what they do. A full list can be viewed with `grsiproof --help`.
+  * __--number-of-workers #__,   Sets the number of slaves to be used. Each worker creates each histogram you create, so this is a good option to reduce memory consumption when using many histograms. Defaults to number of cores on computer.
+  * __--selector-only__,    Bypasses proof, and just runs the selector on one thread. Good for debugging, as proof redirects output messages.
