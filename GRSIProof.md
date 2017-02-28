@@ -8,6 +8,7 @@ GRSIProof is used to run a batch analysis script on either fragment trees or ana
 3. [Filling Histograms] (GRSIProof#fill_histos)
 4. [Running GRSIProof] (GRSIProof#running)
 5. [Running Options] (GRSIProof#running_options)
+
 -----------------------------------------
 #How To Use
 -----------------------------------------
