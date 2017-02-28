@@ -4,7 +4,9 @@
 GRSIProof is used to run a batch analysis script on either fragment trees or analysis trees. It uses the PROOF system to distribute the sorting of the tree over multiple threads (slaves) before adding the resulting histograms back together.
 
 1. [Creating your own analysis selector] (GRSIProof#create_script)
-
+2. [Creating Histograms] (GRSIProof#create_histos)
+3. [Filling Histograms] (GRSIProof#fill_histos)
+4. [Running GRSIProof] (GRSIProof#running)
 -----------------------------------------
 #How To Use
 -----------------------------------------
@@ -52,3 +54,25 @@ to:
 SetOutputPrefix("AwesomeSauce");
 ```
 For an analysis tree `analysis07654_002.root`, this would create an output root file called `AwesomeSauce07654_002.root`. You can put whatever you want for the prefix, it does not have to be related to the class name. 
+
+##Creating Histograms <a name="create_histos" />
+The histograms are defined in the `.C` file in the function `CreateHistograms` (in our case `MyAwesomeSelector::CreateHistograms()`). We have setup a map that allows for easy access of histograms across various locations in the selector. This means to create a 1D histogram, one should use `fH1`, a 2D histogram in `fH2` etc. If the histogram type you want does not exist, please place a request on the issue tracker. As an example, the line:
+```c++
+fH1["gE"] = new TH1D("gE","#gamma Singles",12000,0,3000);
+```
+creates a 1D histogram with `double` precision called `"gE"` and puts it in a map position of `"gE"`. You do not need to match the name to the map position, but it is likely easier to keep track of things if you do this. The loops automatically add these histograms to the output root file using the lines:
+```c++
+for (auto it: fH1) {
+   GetOutputList()->Add(it.second);
+}
+```
+These **must not** be changed.
+
+##Filling Histograms <a name="fill_histos" />
+To fill the histograms you just created, you can change the function located in the `.C` file named `FillHistograms` (in our case `MyAwesomeSelector::FillHistograms()`). You use the map to lookup the histogram you want to fill, and then fill it like a normal histogram. For example, to fill the 1D energy spectrum created above, we would loop over all `Awesome` hits, find the energy of the hit, and put it in our `"gE"` histogram.
+```c++
+for(auto i = 0; i < fAwesomeDet->GetMultiplicity(); ++i){
+   fH1["gE"]->Fill(fAwesomeDet->GetAwesomeHit(i)->GetEnergy());
+} 
+
+##Running GRSIProof <a name="running" />
