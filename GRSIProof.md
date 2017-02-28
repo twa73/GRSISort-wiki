@@ -7,12 +7,13 @@ GRSIProof is used to run a batch analysis script on either fragment trees or ana
 2. [Creating Histograms] (GRSIProof#create_histos)
 3. [Filling Histograms] (GRSIProof#fill_histos)
 4. [Running GRSIProof] (GRSIProof#running)
+5. [Running Options] (GRSIProof#running_options)
 -----------------------------------------
 #How To Use
 -----------------------------------------
 Effort has gone into ensuring that the `PROOF` framework is very easy to use for beginners still learning to use `ROOT`. For those interested in the `GRSIProof` code, the main program is located in the `GRSIProof` directory of `GRSISort`. PROOF uses the concept of a **selector** which is a class that knows how to process a single entry within a tree. In the context of `GRSISort`, this means either a single fragment, or a packaged event. First we will go through how and where to manipulate your own selectors for analysis.
 ##Creating your own analysis selector <a name="create_script" />
-There are examples of selectors in the `GRSIProof` directory. The more useful, and more complicated event selector  (`ExampleEventSelector`) will be used as an example here.
+There are examples of selectors in the `GRSIProof` directory. The more useful, and more complicated event selector  (`ExampleEventSelector`) will be used as an example here. Everything is analogous for fragment files.
 
 The first thing that must be done is to change the class name. This must be done in both the `.C` and `.h` files within the `GRSIProof` directory. This must match the name of the scripts themselves! This also includes the namespace in front of every function. For example, 
 ```c++
@@ -76,3 +77,23 @@ for(auto i = 0; i < fAwesomeDet->GetMultiplicity(); ++i){
 } 
 
 ##Running GRSIProof <a name="running" />
+You run `grsiproof` as a separate program from GRSISort. The basic way to do so is:
+```bash
+grsiproof root_file_to_sort.root location_to_selector.C
+```
+for example:
+```bash
+grsiproof analysis06578_000.root $GRSISYS/GRSIProof/MyAwesomeSelector.C
+```
+a list of analysis files can be used and they will all be chained and sorted at the same time. This includes regular expressions. The output file name will be named after the first file in the list. For example:
+```bash
+grsiproof analysis06578_000.root analysis06578_001.root analysis06578_002.root $GRSISYS/GRSIProof/MyAwesomeSelector.C
+```
+would work and create a file called `AwesomeSauce06578_000.root`. One could also use:
+```bash
+grsiproof analysis06578_???.root $GRSISYS/GRSIProof/MyAwesomeSelector.C
+```
+to accomplish the same task.
+
+##Running GRSIProof <a name="running_options" />
+There are options that can be provided on the command line to change the way `grsiproof` runs. Some options are listed below with what they do. A full list can be viewed with `grsiproof --help`.
