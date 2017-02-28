@@ -38,12 +38,11 @@ TAwesomeDetector * fAwesomeDet;
 The code also needs to be told where to find the branch that contains your detector. This is done in the `.h` file in the function `InitializeBranches`. In our example, we would change
 ```c++
 tree->SetBranchAddress("TGriffin",&fGrif);
-tree->SetBranchAddress("TGriffin",&fGrif);
+tree->SetBranchAddress("TSceptar",&fScep);
 ``` 
 to:
 ```c++
 tree->SetBranchAddress("TAwesomeDetector",&fAwesomeDet);
-tree->SetBranchAddress("TGriffin",&fGrif);
 ``` 
 
 ###Change Output file name
