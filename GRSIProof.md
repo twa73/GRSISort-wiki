@@ -75,6 +75,7 @@ To fill the histograms you just created, you can change the function located in 
 for(auto i = 0; i < fAwesomeDet->GetMultiplicity(); ++i){
    fH1["gE"]->Fill(fAwesomeDet->GetAwesomeHit(i)->GetEnergy());
 } 
+```
 
 ##Running GRSIProof <a name="running" />
 You run `grsiproof` as a separate program from GRSISort. The basic way to do so is:
