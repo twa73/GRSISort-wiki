@@ -6,4 +6,4 @@
 
 3. [[Comments for HTML Documentation | Html-How-To ]]
 
-4. <a href="https://gamma.triumf.ca/general/meetings/joint-tigress-and-griffin-collaboration-meeting-2017/presentations">GRSISort Collaboration Meeting Presentation, April 2017, SFU</a>
+4. <a href="https://gamma.triumf.ca/general/meetings/joint-tigress-and-griffin-collaboration-meeting-2017/presentations">GRSISort Collaboration Meeting Presentations, 12th April 2017, SFU</a>
