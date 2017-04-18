@@ -11,6 +11,7 @@ Setting up GRSISort is a seven step process:
 7. [Profit](#step7)
 
 <a name="step1" />
+
 ## Step 1: Install git
 
 To Install git, go to [GitHub](http://github.com) and click on *Download*.
@@ -21,7 +22,10 @@ sudo apt-get install git
 ```````
 
 <a name="step2" />
+
 ## Step 2: Install ROOT
+*Already have ROOT? Proceed to [Download GRSISort](#step3)*
+
 Before installing root make sure you have the [required and optional packages](http://root.cern.ch/drupal/content/build-prerequisites) installed. In particular, make sure you have a copy of GSL. For use of the [MathMore](https://root.cern.ch/mathmore-library), ROOT recommends GSL 1.8 or above, but some features have been observed to work with GSL 1.13. To identify your GSL version, type
 ```
 gsl-config --version
@@ -58,12 +62,17 @@ Finally, in your ./bashrc or ./profile, include the line
 ```bash
 source /path/to/root/bin/thisroot.sh
 ```
-The current supported version of root is v5.34.24, Here are some [Problems](Troubleshooting#rootproblems) that we have found at this stage.
-
-*Already have ROOT? Proceed to [Download GRSISort](#step3)*
+The current supported version of root is v5.34.36, Here are some [Problems](Troubleshooting#rootproblems) that we have found at this stage.
 
 <a name="step3" />
+
 ## Step 3: Download GRSISort
+
+Verify that your root installation has the required features enabled. Check that the output of
+```
+root-config --features
+```
+contains cxx11, mathmore, python, and xml.
 
 The newest version of GRSISort currently resides on GRIFFIN collaboration github repository.
 
@@ -85,7 +94,27 @@ git checkout <version>
 
 *Don't like git? (You should) The newest version can also be downloaded from [[here|https://github.com/pcbend/GRSISort/tarball/master]]*.
 
+If you want to contribute to the code, you need to have your own copy of GRSISort in your github account. To do this go to the GRSISort repository of the GRIFFINCollaboration and click "fork" in the top right. Now run
+```
+git remote set-url origin ssh://git@github.com/<UserName>/GRSISort.git
+git remote add upstream https://github.com/GRIFFINCollaboration/GRSISort.git
+```
+where <UserName> is your own user name on github.com.
+
+To verify this worked, you can run
+```
+git remote -v
+```
+which should give you this output (again with <UserName> replaced by your own user name on github.com):
+```
+origin	ssh://git@github.com/<UserName>/GRSISort.git (fetch)
+origin	ssh://git@github.com/<UserName>/GRSISort.git (push)
+upstream	https://github.com/GRIFFINCollaboration/GRSISort.git (fetch)
+upstream	https://github.com/GRIFFINCollaboration/GRSISort.git (push)
+```
+
 <a name="step4" />
+
 ## Step 4: Setup Environment Variables
 The setup for GRSISort depends on the shell being used. To determine the Shell you are using execute
 `````
@@ -93,29 +122,27 @@ echo $SHELL
 `````
 To setup GRSISort for a .sh shell (bash) execute `source thisgrsi.sh` in your terminal from the GRSISort Directory
 
-To avoid running this script every session, add the following to your **~/.bashrc**
+To avoid running this script every session, add the following to your **~/.bash_profile** or **~/.profile**
 ```
 source /Path/To/GRSISort/thisgrsi.sh
 ```
-To setup GRSISort for a .crsh or .tcsh shell execute `source thisgrsi.csh` in your terminal from the GRSISort Directory
-
-To avoid running this script every session, add the following to your **~/.bashrc**
-```
-source /Path/To/GRSISort/thisgrsi.csh
-```
+If you're using a c-type shell use the scripts with .csh extension instead of the .sh extension in the commands above.
 
 <a name="step5" />
+
 ## Step 5: Compile GRSISort
-To Compile GRSISort type `make`. Please be patient as compilation will take a few moments.
+To compile GRSISort type `make`. Please be patient as compilation will take a few moments. You can speed this up if you want by using `make -j` (uses all available cores) or `make -j N` where N is the number of jobs you want to run in parallel.
 
 - To create the HTML documentation, you can compile with `make docs`. This is NOT REQUIRED.
 
-If you recieve an error, please consult the [Troubleshooting](troubleshooting) page.
+If you receive an error, please consult the [Troubleshooting](troubleshooting) page.
 
 <a name="step6" />
+
 ## Step 6: ???
 Instructions unclear, lost in terminology.
 
-<a name"step7" />
+<a name="step7" />
+
 ## Step 7: Profit
 If you ever figure this out, please share the wealth.
