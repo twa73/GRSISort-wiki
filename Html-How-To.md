@@ -5,6 +5,7 @@ The [TGRSIDetectorHit](https://rawgit.com/wiki/GriffinCollaboration/GRSISort/tec
 
 ### Class Description
 [[/images/ClassDesc.png]]
+
 To create the class description, place it in a block of comments such as:
 ```c++
 /////////////////////////////////////////////////////////////////
@@ -34,6 +35,7 @@ This block of comments should go in the header file, ie the .h file.
 
 ### Class Index
 [[images/ClassIndexDesc.png]]
+
 To add the class to a specific group (in this case Detectors), add the following three lines at the very top (right after the #ifndef and #define statements):
 ```c++
 /** \addtogroup Detectors
@@ -47,6 +49,7 @@ and the closing bracket after the class description (just before the #endif):
 
 ### Method Documentation
 [[images/FuncDesc.png]]
+
 To create method documentation, place the instructions or details in the first comments after the name of the function using ```///```. Everything until the first line without ```///``` is considered as a valid member function description block.
 For example,
 ```c++
@@ -72,6 +75,7 @@ produces the above image.
 
 ### Data Member Documentation
 [[images/MemberDesc.png]]
+
 To document a data member put a C++ comment behind their declaration in the header file using ```///<```:
 ```c++
       UInt_t   fAddress;    ///< address of the the channel in the DAQ.
