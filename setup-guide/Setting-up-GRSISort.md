@@ -21,7 +21,7 @@ sudo apt-get install git
 ```````
 
 <a name="step2" />
-##Step 2: Install ROOT
+## Step 2: Install ROOT
 Before installing root make sure you have the [required and optional packages](http://root.cern.ch/drupal/content/build-prerequisites) installed. In particular, make sure you have a copy of GSL. For use of the [MathMore](https://root.cern.ch/mathmore-library), ROOT recommends GSL 1.8 or above, but some features have been observed to work with GSL 1.13. To identify your GSL version, type
 ```
 gsl-config --version
