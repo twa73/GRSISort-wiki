@@ -33,36 +33,15 @@ gsl-config --version
 in your terminal.
 
 To download and install root:
-First, clone the root git repository where you want root on your computer:
-`````
-git clone https://github.com/root-mirror/root.git
-`````
-Move into the ROOT directory using
-```
-cd root
-```
-Then, choose the version of root you want. To see the list of ROOT versions, type:
-`````
-git tag -l
-`````
-To choose a version:
-`````
-git checkout -b version_name version_name
-`````
-where version name is one of the versions printed in the previous command. Configure ROOT with 
-``` 
-./configure
-make --options
-```
-For a list of options, and more detail, see the [ROOT User manual](https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#installing-root) and the guide for [building ROOT with this method](https://root.cern.ch/build-root-old-method). To enable the compilation and installation of all optional packages (such as the MathMore library), include an `--all` flag after your `./configure` command. Compile ROOT using 
-```
-make
-```
+Go to the [root webpage](https://root.cern.ch/downloading-root), select the version you want (we recommend using the a production version), and follow the instructions to download root.
+
+Follow the [instructions to build root](https://root.cern.ch/building-root).
+
 Finally, in your ./bashrc or ./profile, include the line
 ```bash
 source /path/to/root/bin/thisroot.sh
 ```
-The current supported version of root is v5.34.36, Here are some [Problems](Troubleshooting#rootproblems) that we have found at this stage.
+The current supported version of root is v5.34.36. Here are some [Problems](Troubleshooting#rootproblems) that we have found at this stage.
 
 <a name="step3" />
 
