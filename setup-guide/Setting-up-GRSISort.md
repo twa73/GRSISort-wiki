@@ -32,7 +32,6 @@ gsl-config --version
 ```
 in your terminal.
 
-To download and install root:
 Go to the [root webpage](https://root.cern.ch/downloading-root), select the version you want (we recommend using the a production version), and follow the instructions to download root.
 
 Follow the [instructions to build root](https://root.cern.ch/building-root).
@@ -41,7 +40,7 @@ Finally, in your ./bashrc or ./profile, include the line
 ```bash
 source /path/to/root/bin/thisroot.sh
 ```
-The current supported version of root is v5.34.36. Here are some [Problems](Troubleshooting#rootproblems) that we have found at this stage.
+The current supported version of root is v5.34.36. Here are some [problems](Troubleshooting#rootproblems) that we have found at this stage.
 
 <a name="step3" />
 
