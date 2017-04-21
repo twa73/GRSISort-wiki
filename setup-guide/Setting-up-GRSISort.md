@@ -32,7 +32,7 @@ gsl-config --version
 ```
 in your terminal.
 
-Go to the [root webpage](https://root.cern.ch/downloading-root), select the version you want (we recommend using the a production version), and follow the instructions to download root.
+Go to the [root webpage](https://root.cern.ch/downloading-root), select the version you want (we recommend using a production version), and follow the instructions to download root.
 
 Follow the [instructions to build root](https://root.cern.ch/building-root).
 
