@@ -63,7 +63,9 @@ GRSISort should now download to **./GRSISort**
 
 Enter into the **GRSISort** directory with `cd GRSISort`.
 
-To see a list of GRSISort versions available for download, use `git tag -l`. The current *stable* release will be tagged under `current`. The most up to date version will be tagged under `master`.
+To see a list of GRSISort versions available for download, use `git tag -l`.
+The current *stable* release will be tagged under `current`.
+The most up to date version will be tagged under `master`, see [releases](https://github.com/GRIFFINCollaboration/GRSISort/releases) for details.
 
 To download a the version named \<version\>:
 ```
