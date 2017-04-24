@@ -49,5 +49,4 @@
 - [[Technical Docs|Technical-Documentation]]
 - [[GRSISort Team | Team ]]
 - [ROOT User Guide](http://root.cern.ch/drupal/content/root-users-guide-534)
-- [Root Class Index](http://root.cern.ch/roo
-t/html534/ClassIndex.html)
+- [Root Class Index](http://root.cern.ch/root/html534/ClassIndex.html)

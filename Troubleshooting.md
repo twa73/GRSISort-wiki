@@ -9,26 +9,26 @@
 
 <a name="unfixable" />
 ------------------
-#UnFixable Problems
+# UnFixable Problems
 <a name="unfixable" />
 <a name="unfixableArch" />
-###Architecture
+### Architecture
 - Only 64-bit architectures are currently supported. The analysis side of GRSISort may eventually be expanded to 32-bit machines...but why not have an excuse to upgrade?
 
 ------------------
 <a name="fixableOSX" />
-#GRSI Installation
-###Installing under OSX
+# GRSI Installation
+### Installing under OSX
 Instructions to follow...
 
 <a name="fixablehtml" />
-###HTML
-- If you recieve the error `sh: 1: dot: not found` it is because you do not have a **dot** writing program. This is not really an issue, but to avoid this, install a dot program like **graphviz**. (On Ubuntu `sudo apt-get install graphviz`) 
+### HTML
+- If you receive the error `sh: 1: dot: not found` it is because you do not have a **dot** writing program. This is not really an issue, but to avoid this, install a dot program like **graphviz**. (On Ubuntu `sudo apt-get install graphviz`) 
 
-##ROOT
+## ROOT
 <a name="rootproblems" />
-####freetype
-- You may recieve the error in **asfont.c** that **freetype/freetype.h** does not exist. This can be solved by changing *line 67* in **asfont.c** from
+#### freetype
+- You may receive the error in **asfont.c** that **freetype/freetype.h** does not exist. This can be solved by changing *line 67* in **asfont.c** from
 ````c++
 CODE: SELECT ALL
 #include <freetype/freetype.h>
@@ -37,10 +37,10 @@ to
 ````c++
 CODE: SELECT ALL
 #include <freetype.h>
-```
+````
 
-####Standard C Libraries
-- If you recieve the errors:
+#### Standard C Libraries
+- If you receive the errors:
 ```bash
 Error: cannot open file "gnu/stubs.h" /usr/include/features.h:399:
 Error: cannot open file "bits/wchar.h" /usr/include/stdint.h:27:
