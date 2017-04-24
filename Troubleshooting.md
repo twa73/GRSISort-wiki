@@ -8,25 +8,31 @@
 5. [Error Report Template](errorreport)
 
 <a name="unfixable" />
-------------------
+
 # UnFixable Problems
-<a name="unfixable" />
+
 <a name="unfixableArch" />
+
 ### Architecture
+
 - Only 64-bit architectures are currently supported. The analysis side of GRSISort may eventually be expanded to 32-bit machines...but why not have an excuse to upgrade?
 
-------------------
+---
 <a name="fixableOSX" />
+
 # GRSI Installation
+
 ### Installing under OSX
 Instructions to follow...
 
 <a name="fixablehtml" />
+
 ### HTML
 - If you receive the error `sh: 1: dot: not found` it is because you do not have a **dot** writing program. This is not really an issue, but to avoid this, install a dot program like **graphviz**. (On Ubuntu `sudo apt-get install graphviz`) 
 
 ## ROOT
 <a name="rootproblems" />
+
 #### freetype
 - You may receive the error in **asfont.c** that **freetype/freetype.h** does not exist. This can be solved by changing *line 67* in **asfont.c** from
 ````c++
@@ -76,7 +82,7 @@ On **CentOS 5** you will need to do `yum install libstdc++-devel.i386`
 
 On **CentOS 6** you will need to do `yum install libstdc++-devel.i686`
 
-####XML
+#### XML
 - If you have any problems with XML, etc. Please make sure you followed the ROOT download instructions very carefully including the installation of packages such as `libxml2-dev`.
 
 -------------------
