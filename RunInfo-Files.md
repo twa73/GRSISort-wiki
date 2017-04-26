@@ -1,4 +1,4 @@
-RunInfo files are parse like normal command line arguments minus the leading dash(es). The argument and its value are separated by a colon.
+RunInfo files are parsed like normal command line arguments minus the leading dash(es). The argument and its value are separated by a colon.
 
 # Using RunInfo files #
 
