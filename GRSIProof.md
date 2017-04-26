@@ -102,5 +102,5 @@ There are options that can be provided on the command line to change the way `gr
   * __--max-workers #__,   Sets the number of slaves to be used. Each worker creates each histogram you create, so this is a good option to reduce memory consumption when using many histograms. Defaults to number of cores on computer.
   * __--selector-only__,    Bypasses proof, and just runs the selector on one thread. Good for debugging, as proof redirects output messages.
 
-.info files can also be used. Their content is parsed as if it were normal command line arguments minus the dash(es) with the flag and the value separated by a colon. 
+[.info files](../RunInfo-Files) can also be used. Their content is parsed as if it were normal command line arguments minus the dash(es) with the flag and the value separated by a colon. 
 This can be useful if multiple runs are to be analyzed in a single step, by listing all root-files with analysis trees (or fragment trees) in a .info file.
