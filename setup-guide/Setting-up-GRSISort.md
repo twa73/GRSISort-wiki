@@ -40,7 +40,7 @@ Finally, in your ./bashrc or ./profile, include the line
 ```bash
 source /path/to/root/bin/thisroot.sh
 ```
-The current supported version of root is v5.34.36. Here are some [problems](Troubleshooting#rootproblems) that we have found at this stage.
+The current supported versions of root are the stable 6er versions (e.g. 6.08.06). Root 5 is no longer supported. You might be able to run the code with v5.34.36, but we won't be able to guarantee that nor help with problems. Here are some [problems](Troubleshooting#rootproblems) that we have found at this stage.
 
 <a name="step3" />
 
