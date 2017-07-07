@@ -12,7 +12,7 @@ You can specifically set the channel of the `TGainMatch` using
 myGain->SetChannel(channel_number);
 ```
 
-#Coarse Gains
+# Coarse Gains
 To effectively use `TGainMatch`, we need to make sure the gains for each channel are set roughly to the correct value. If this isn't already the case, you can use the `CoarseMatch` method of TGainMatch. This method works best on sources with two very strong transitions such as 60Co. To gain match a specific channel, use:
 ```c++
    myGain->CoarseMatch(histogram,channel_number,low_energy,high_energy);
@@ -25,7 +25,7 @@ myGain->WriteToChannel();
 ```
 and the TChannels can all be written to a cal file using the normal `TChannel::WriteCalFile("name_of_cal.cal")`
 
-###Using CalManager
+### Using CalManager
 You can add TGainMatch instances to a [[TCalManager | Calibration]]. This can be done using:
 ```c++
 myCalManager->AddToManager(myGain);
@@ -45,7 +45,7 @@ myCalManager->WriteToChannel();
 ```
 This calls the `WriteToChannel()` function for each `TGainMatch` contained in the `TCalManager`.
 
-#Fine Gain Matching
+# Fine Gain Matching
 Fine gain matching is what we normally think of gain matching as. The fine gain matching class will accept two charge histograms, and two peak energies, and attempt to calibrate these spectra accordingly. To fine gain match using one source, use:
 ```c++
    myGain->FineMatch(histogram,low_energy,high_energy);

@@ -6,7 +6,7 @@ User files are used in the TFragmentSelector to create user defined histograms. 
 2. [UserFillObj.h](User-Files#userfill), which gives the rules on how to fill the histograms
 
 <a name="userinit" />
-#UserInitObj.h
+# UserInitObj.h
 The **UserInitObj.h** file is where we *initialize* the histograms to be created during the fragment sort. A sample of initializing histograms is as follows:
 ```c++
 GetOutputList()->Add(new TH1D("Charge_0x0000","Charge_0x0000",8000,0,4000));
@@ -31,7 +31,7 @@ If you want to initialize your own *new* histogram in this class you can try the
 ```
 
 <a name="userfill" />
-#UserFillObj.h
+# UserFillObj.h
 The **UserFillObj.h** file is we define rules to fill the histograms created during the fragment sort. A sample of filling the histograms is as follows:
 ```c++
 TH1D *hist = (TH1D*)(GetOutputList()->FindObject(Form("Charge_0x%04x",fragment->ChannelAddress)));

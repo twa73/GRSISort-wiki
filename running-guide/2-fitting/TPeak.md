@@ -35,11 +35,11 @@ To see the basic properties of the TPeak
 ```
 Or, to see more properties, such as the value and uncertainty in each parameter, use the option `Print("+")`.
 
-##Fitting Technique
+## Fitting Technique
 One should always fit peaks using the proper statistical model. Gamma-rays are detected following a Poisson probability distribution. Therefore, when fitting a standard gamma ray spectrum, one should fit the peak using a *maximum likelihood distribution*. If background is subtracted, one is left with the difference of two Poisson distributed data sets, which is no longer a Poisson distributed data set. Thus, one would prefer to use least-squares fitting in this scenario.
 TPeak accommodates for this using a default maximum-likelihood fitting flag. To see what the current status of the flag is use `TPeak::GetLogLikelihoodFlag();`. To set the status of the flag, use `TPeak::SetLogLikelihoodFlag(true);` to turn maximum likelihood on and `TPeak::SetLogLikelihoodFlag(false);` to turn change it to least-squares fitting. It defaults to on.
 
-##Parameters
+## Parameters
 The first time a TPeak is fit, the parameters are initialized based on the histogram passed to the `TPeak::Fit` function. 
 When a TPeak is created, the parameters are uninitialized. The names of the paramters are as follows:
 

@@ -1,16 +1,16 @@
-##Scope
+## Scope
 The GainMatchGRIFFIN macro is designed to gain-match GRIFFIN detectors relative to each other, not a specified energy calibration. It has been designed as a sequential execution of many [smaller functions](#smaller-functions) that will take the user from initial data set to calibration file and diagnostic images to evaluate the quality of the gain match.
 
 It is important to note that this is a *gain-matching* code, not an energy calibration code. Slopes and offsets are applied to each crystal so that its peaks will line up with the peaks in the crystal with the lowest channel number. A *rough*, linear, energy calibration may also be applied.
 
-##Usage
+## Usage
 A set of [variables](#variables) should be set for each gain-matching. Then `GainMatchGRIFFIN.C` should be (re)compiled. The compilation line is given in the commented first line of the file. Once it has been compiled, the user may gain match a run by running:
 
     ./GainMatchGRIFFIN <fragment filename(s)>
 
 from the command line. The file name of the raw data (i.e. `fragmentXXXX_XXX.root`) is taken as input to the compiled function.
 
-##Variables
+## Variables
 The most commonly used variables are declared in the `main()` function at the bottom of `GainMatchGRIFFIN.C`. They in the section of code marked `//-------------- VARIABLE DECLARATION SECTION --------------//`. The variables that are hard-coded at the time of compilation are:
 - `minchannel`: lowest GRIFFIN channel number for gain-matching.
 - `maxchannel`: highest GRIFFIN channel number for gain-matching.
@@ -33,8 +33,8 @@ The most commonly used variables are declared in the `main()` function at the bo
 - `windowsize`: the +/- value that sets the search window when looking for peaks in the calibrated histograms. If you have requested a rough energy calibration, should be in keV.
 - `do_make_calibration_histograms`, `do_create_gainmatch_graphs`, etc.: these Booleans turn on and off the [smaller functions](#smaller-functions) within the code. It is expected that the user will not want to execute all of the functions at all times. As an example, the histograms that are going to be used for calibration (raw "Charge" spectra) are likely to only be created once. If the inital gain-match is unsatisfactory, the user can set `do_make_calibration_histograms` to false and recompile the macros for faster running.
 
-##Output files
-###With a single fragment file
+## Output files
+### With a single fragment file
 - `calib_<raw filename>`: This ROOT file contains the raw charge histograms for each channel that are created by the [`make_calibration_histograms`](#make_calibration_histograms) function. They are named `hst1`, `hst2`, etc. where the number is the channel number. After executing the [`create_gainmatch_graphs`](#create_gainmatch_graphs) function, it also contains energy vs. charge TGraphs for each of those histograms, with points for each of the peaks specified in the `fittingpeaks` array. If something goes wrong in the peak-finding, these TGraphs can be modified on a point-by-point basis before executing the [`create_GRIFFIN_cal`](#create_griffin_cal) function.
 - `GRIFFINcal.cal`: (or whatever else you set the `calFile` variable to): This is the calibration file that is output from the [`create_GRIFFIN_cal`](#create_griffin_cal) function.
 - `GRIFFIN_fitting_params.png`: This PNG diagnostic canvas shows the slopes, offset, and chi-square values from the linear fit of the graphs in the `calib_<raw filename>` file as a function of channel number.
@@ -49,10 +49,10 @@ The most commonly used variables are declared in the `main()` function at the bo
 - `GRIFFIN_FWHM_diagnostic.png`: This diagnostic canvas shows the histogram `fwhm` plotted as a [candle plot](#candle-plots) and the `fwhm_all` histogram plotted on top, with star points. If the gain-matching has been successful, the star will be within the solid outline box.
 - `GRIFFIN_FWHMratio_diagnostic.png`: This diagnostic canvas shows the histogram fwhmratio plotted as a [candle plot](#candle-plots) and the fwhmratio_all histogram plotted on top, with star points. If the gain-matching has been successful, the star will be within the solid outline box.
 
-###With multiple fragment files
+### With multiple fragment files
 It is occasionally useful to combine the counts from multiple subruns or runs before gain-matching (to use low-intensity peaks, for example.) This code has been set up to accomodate this. If the user lists multiple filenames in the command line call of GainMatchGRIFFIN, the output will differ slightly. All individual ROOT fragment files will have corresponding `calib_<raw filename>` and `newcal_<raw filename>` files. After these are created, however, `hadd` will be called to sum them into new ROOT files, respectively called `calib_hst_summed.root` and `newcal_summed.root`. The individual ROOT files will contain the charge and energy histograms listed above, but the TGraphs and the diagnostic histograms will exist on in the summed files.
 
-##Smaller functions
+## Smaller functions
 ###`make_calibration_histograms`
 This function takes in the `FragmentTree` ROOT file and outputs a ROOT file containing histograms for all channels between `minchannel` and `maxchannel`, excluding those in the `channelstoskip` vector.
 
@@ -68,8 +68,8 @@ This function takes in the original data file and the newly created calibration 
 ###check_calibration
 This function takes in the ROOT file with calibrated histograms that was created in the [`recalibrate_spectra`](#recalibrate_spectra) function (`newcal_<raw filename>`) and measures the FWHM and FWTM of the peaks listed in the `peakstocheck` vector. It also sums all the channels together and measures the FWHM and FWTM of that summed histogram. It then outputs two diagnostic images: one comparing the distribution of FWHM among all the crystals to the FWHM of the summed spectrum (`GRIFFIN_FWHM_diagnostic.png`) and another comparing the distribution of the FWTM/FWHM ratio among all the crystals to the FWTM/FWHM ratio of the summed spetrcum (`GRIFFIN_FWratio_diagnostic.png`), both using [candle plots](#candle-plots).
 
-##Candle plots
+## Candle plots
 Candle plots are made using the "candle" draw option in ROOT. The mean of the distribution is given with an open circle. The median is given by a solid horizontal line. The dashed line spans the full range of the data, from minimum to maximum values. The box shows the range of the middle 50% of the data; the limits are the first and third quartile lines. 25% of the data is outside and below the box, and 25% of the data is outside and above the box.
 
-##Troubleshooting
+## Troubleshooting
 This code was not written to be a be-all, end-all gain-matcher. It will be necessary at times to modify the code for a particular set of data. If you have a "if your data look like this, you can make this change" suggestion, please add it here.

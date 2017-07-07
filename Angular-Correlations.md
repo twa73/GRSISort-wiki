@@ -15,9 +15,9 @@ Or, if  you prefer lists, the workflow could be described as follows:
 3. Normalize out the weights and efficiencies.
 4. Convert a histogram of counts vs. angular index to a graph of counts vs. angle.
 
-##Create 3D array
+## Create 3D array
 
-###Map creation
+### Map creation
 The first step is to create an angular index for each possible opening angle in the array. This can be done with `GenerateAngleMap`.
 
 The second step is to create a map between detector pairs and angular index. Here, a GRIFFIN detector is identified by its array number. This map can be used in the creation of the 3D arrays of angular index vs. gamma energy vs. gamma energy. This can be done with `GenerateIndexMap`.
@@ -32,17 +32,17 @@ where the first argument (16 in the example) is the number of clovers and the se
 ###3D array creation
 This is performed entirely outside the scope of the class, though the maps will be useful in assigning gamma-gamma coincidences to the proper angular index. Please create your 3D array as a `ThnSparse` with axes of gamma energy, gamma energy, and angular index. It should be symmetric in gamma-gamma energy. Time-random background subtraction should be performed here.
 
-##Apply energy gates
+## Apply energy gates
 
-###First gamma-energy gate
+### First gamma-energy gate
 The first gamma energy gate is applied with `Create2DSlice`. This function takes in your 3D array and projects out the events that are coincident with a gamma with an energy between a minimum and maximum. Here is where you should do energy-dependent background subtraction. To do such a subtraction, create two instances of the class with different 2D slices, and subtract one from the other.
 
-###Second gamma-energy gate / Peak fitting
+### Second gamma-energy gate / Peak fitting
 A second gamma-energy gate can be applied with `IntegralSlices`. This function will take in a 2D histogram and project onto the angular index axis the events that have a gamma with an energy between a minimum and maximum.
 
 Alternatively, the coincident peaks can be fit with `FitSlices`. This function will project out the gamma energy spectrum for each angular index, fit a peak it, and then return a histogram of peak area vs. angular index. Because fitting algorithms are notoriously fragile, all the projections and fits are saved to the instance. Diagnostic plots of the peak area, peak centroid, peak FWHM, and fit chi^2 are printed to screen. Optionally, all the peak fits can also be projected to the screen. Individual fits can be corrected with the `UpdatePeak` function, which will also update the diagnostic plots.
 
-##Normalize the histogram
+## Normalize the histogram
 
 The spectrum that we have now is heavily skewed by the number of detector pairs that contribute to each index and (to a lesser degree) the relative efficiencies of each detector. The weights can be divided out with the `DivideByWeights` function. Relative efficiencies are best dealt with in the initial creation of the 3D matrix.
 
