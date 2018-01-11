@@ -23,7 +23,10 @@
 # GRSI Installation
 
 ### Installing under OSX
-Instructions to follow...
+
+For Mac OS X you need to have greadlink and gfind installed. They can be installed using mac ports (https://www.macports.org) via ```port install coreutils findutils```, or using home brew (https://brew.sh) using ```brew install coreutils findutils```.
+
+More instructions to follow...
 
 <a name="fixablehtml" />
 
