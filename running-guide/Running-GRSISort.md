@@ -31,7 +31,7 @@ Only one midas file can be sorted at a time.
   * Histograms are defined in **users/UserInitObj.h**
   * How to fill the histogram is defined in **users/UserFillObj.h** 
   
-If **-a** or **-s** are left off of the command, the fragment tree will be loaded into the grsi environment for the user to enjoy.
+If **-a** or **-H** are left off of the command, the fragment tree will be loaded into the grsi environment for the user to enjoy.
 
 Some currently accepted flags for the fragment tree sort:
   * __-a__,                creates an analysis tree to be used for doing a full analysis of the data
