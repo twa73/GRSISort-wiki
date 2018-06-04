@@ -25,6 +25,7 @@
   - [[Interactive Analysis | Interactive-Analysis]]
   - [[Angular Correlations | Angular-Correlations]]
   - [[Cross-Talk Corrections | Cross-Talk Corrections]]
+  - [[Code Examples | Code-Examples]]
 - [[Utilities|Utilities]]
   - [[Analysis Scripts|Analysis-Scripts]]   
   - [[Extra Macros|Extra-Macros]]
