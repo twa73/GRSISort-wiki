@@ -78,6 +78,21 @@ for(auto i = 0; i < fAwesomeDet->GetMultiplicity(); ++i){
 } 
 ```
 
+## EndOfSort <a name="end_of_sort" />
+The EndOfSort function can be used to manipulated histograms after they have been filled.
+By adding
+```c++
+void EndOfSort();
+```
+to the selectors header file and 
+```c++
+void <SelectorClassName>::EndOfSort() {
+<code to manipulate histograms>
+}
+```
+to the selectors source file one can add code to create a background subtracted spectrum from a coincident and a time-random histogram, set bins to specific values, etc.
+When setting bins to non-zero values, keep in mind that this happens before the histograms from the different slaves are merged, so the final value in the histogram will multiplied by the number of workers.
+
 ## Running GRSIProof <a name="running" />
 You run `grsiproof` as a separate program from GRSISort. The basic way to do so is:
 ```bash
