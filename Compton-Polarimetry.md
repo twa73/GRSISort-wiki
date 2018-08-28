@@ -1,0 +1,1 @@
+Here are the steps to follow for Compton Polarimetry analysis in GRSISort.
