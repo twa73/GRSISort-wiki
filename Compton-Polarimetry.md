@@ -31,7 +31,7 @@ The purpose of this script is to produce the coincidence histograms which are us
 -Any energies to be excluded (this crude method should be improved), ~line 380. `if(grif->GetGriffinHit(two)->GetEnergy() > 505 && grif->GetGriffinHit(two)->GetEnergy() < 517 ) continue;   // 511 keV from single-escape`
 
 ### LeanAnalyzeComptonMatrices
-The purpose fo this script is to perform the Compton Polarimetry analysis on the histograms. The parameters to change for each case:
+The purpose of this script is to perform the Compton Polarimetry analysis on the histograms. The parameters to change for each case:
 
 -The run number being sorted (used for CompPlots filename), ~line 74. `#define RUNNUMBER 2340`
 
