@@ -10,11 +10,11 @@ Here are the steps to follow for Compton Polarimetry analysis in GRSISort.
 
 3): Combine all subrun histrogram files into a single file using hadd.
 
-`hadd CompHists_02340_001-015.root CompHists_02340_001.root CompHists_02340_002.root CompHists_02340_003.root CompHists_02340_004.root CompHists_02340_005.root CompHists_02340_006.root CompHists_02340_007.root CompHists_02340_007.root CompHists_02340_008.root CompHists_02340_009.root CompHists_02340_010.root CompHists_02340_011.root CompHists_02340_012.root`
+`hadd CompHists_02340_001-012.root CompHists_02340_001.root CompHists_02340_002.root CompHists_02340_003.root CompHists_02340_004.root CompHists_02340_005.root CompHists_02340_006.root CompHists_02340_007.root CompHists_02340_007.root CompHists_02340_008.root CompHists_02340_009.root CompHists_02340_010.root CompHists_02340_011.root CompHists_02340_012.root`
 
 4): Make the final Compton Polarimetry Analysis plots using the LeanAnalysisComptonMatrices script.
 
-`LeanAnalyzeComptonMatrices CompHists_02340_001-015.root`
+`LeanAnalyzeComptonMatrices CompHists_02340_001-012.root`
 
 5): The main results will be printed to the terminal and found in the plots AsymmetryBinFoldNonCo, CHISquared_BinFoldNC in the final file `CompPlots_02340.root`.
 
