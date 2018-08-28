@@ -1,5 +1,5 @@
 
-### Process
+## Process
 Here are the steps to follow for Compton Polarimetry analysis in GRSISort.
 
 1): Use GRSISort to produce an analysis tree for each subrun that have calibrated energies.
@@ -18,10 +18,10 @@ Here are the steps to follow for Compton Polarimetry analysis in GRSISort.
 
 5): The main results will be printed to the terminal and found in the plots AsymmetryBinFoldNonCo, CHISquared_BinFoldNC in the final file `CompPlots_02340.root`.
 
-### Scripts
+## Scripts
 The two scripts, LeanComptonMatrices and LeanAnalyzeComptonMatrices, are located in the ~/packages/GRSISort/scripts folder. To compile changes to these scripts execute the `make` command in the ~/packages/GRSISort folder.
 
-## LeanComptonMatrices
+### LeanComptonMatrices
 The purpose of this script is to produce the coincidence histograms which are used for the Compton Polarimetry analysis. The parameters to change for each case:
 
 -output filename and path (yes they are hardcoded), ~line 112 and 127.
@@ -30,7 +30,7 @@ The purpose of this script is to produce the coincidence histograms which are us
 
 -Any energies to be excluded (this crude method should be improved), ~line 380. `if(grif->GetGriffinHit(two)->GetEnergy() > 505 && grif->GetGriffinHit(two)->GetEnergy() < 517 ) continue;   // 511 keV from single-escape`
 
-## LeanAnalyzeComptonMatrices
+### LeanAnalyzeComptonMatrices
 The purpose fo this script is to perform the Compton Polarimetry analysis on the histograms. The parameters to change for each case:
 
 -The run number being sorted (used for CompPlots filename), ~line 74. `#define RUNNUMBER 2340`
