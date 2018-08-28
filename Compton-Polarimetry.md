@@ -30,6 +30,8 @@ The purpose of this script is to produce the coincidence histograms which are us
 
 -Any energies to be excluded (this crude method should be improved), ~line 380. `if(grif->GetGriffinHit(two)->GetEnergy() > 505 && grif->GetGriffinHit(two)->GetEnergy() < 517 ) continue;   // 511 keV from single-escape`
 
+Recompile the script after making any changes to parameters or code.
+
 ### LeanAnalyzeComptonMatrices
 The purpose of this script is to perform the Compton Polarimetry analysis on the histograms. The parameters to change for each case:
 
@@ -38,3 +40,5 @@ The purpose of this script is to perform the Compton Polarimetry analysis on the
 -The quality factor for this setup, `#define AGATA_Q_Folded 0.2399` and `#define E_Q_Measure 1332`, as well as the energy of the gamma ray that is scattering `#define E_Q_Use 2013`. ~lines 89-91.
 
 -The parameters defined in the double PolarizationCalculation() function which are specific to the cascade under study, ~line 682-691. The origin of the F_JiJx and F_JfJx coefficients are the tabulations of RS. Hager and EC Seltzer, Nuclear Data Sheets 4, 397 (1968).
+
+Recompile the script after making any changes to parameters or code.
