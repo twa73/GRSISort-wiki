@@ -49,3 +49,6 @@ Alternatively (and probably preferably), one can use the event-mixing technique 
 
 ## Convert angular indices to angles
 ...or more accurately, to a value of cos(theta). This can be done with the `CreateGraphFromHst` function.
+
+## After the data
+The impact of finite detector size will still impact the shape of your event-mixed distribution. You'll need to account for that. The angular correlation NIM paper will be an excellent resource for you, as well as [these example scripts](https://github.com/SmithJK/AngularCorrAnalysisExamples) and the README within.
