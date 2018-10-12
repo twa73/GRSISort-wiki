@@ -120,6 +120,7 @@ To compile GRSISort type `make`. Please be patient as compilation will take a fe
 If you receive an error, please consult the [Troubleshooting](troubleshooting) page.
 
 <a name="step6" />
+
 ## Step 6: Download data parser and detector library
 *Don't want to parse data? Proceed to [???](#step8)*
 
@@ -140,6 +141,7 @@ Any of those three libraries can be downloaded in the same manner as GRSISort us
 This can be done anywhere, but is probably best done from within the GRSISort directory.
 
 <a name="step7" />
+
 ## Step 7: Compile and use library
 
 In order to compile the library please follow the instructions of the library you chose to download.
