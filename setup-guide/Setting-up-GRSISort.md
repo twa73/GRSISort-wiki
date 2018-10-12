@@ -7,8 +7,10 @@ Setting up GRSISort is a seven step process:
 3. [Download GRSISort](#step3)
 4. [Setup Environment Variables](#step4)
 5. [Compile GRSISort](#step5)
-6. [???](#step6)
-7. [Profit](#step7)
+6. [Download data parser and detector library](#step6)
+7. [Compile library](#step7)
+8. [???](#step8)
+9. [Profit](#step9)
 
 <a name="step1" />
 
@@ -118,11 +120,41 @@ To compile GRSISort type `make`. Please be patient as compilation will take a fe
 If you receive an error, please consult the [Troubleshooting](troubleshooting) page.
 
 <a name="step6" />
+## Step 6: Download data parser and detector library
+*Don't want to parse data? Proceed to [???](#step8)*
 
-## Step 6: ???
-Instructions unclear, lost in terminology.
+In order to parse data and to understand the setup specific detector classes, an additional library is needed.
+This library has to provide the following functions:
+- CreateFile(std::string& filename) which returns a pointer to a new raw data file and DestroyFile which takes a pointer to a raw data file and deletes it (returns void).
+- CreateParser() which creates a new data parser object and DestroParser which takes a pointer to such a data parser object and deletes it.
+- LibraryVersion() which returns a string containing the version number of the library.
+- InitLibrary() which initializes e.g. the mnemonic class used in Channel.
+
+So far three parsing/detector libraries have been written:
+
+- GRSIData for GRIFFIN/TIGRESS experiments (https://github.com/GRIFFINCollaboration/GRSIData)
+- ILLData for FIPPS data from ILL (https://github.com/UoG-Nuclear-Physics-Group/ILLData)
+- iThembaData for data from the tape station at iThemba (https://github.com/UoG-Nuclear-Physics-Group/iThembaData)
+
+Any of those three libraries can be downloaded in the same manner as GRSISort using ```git clone <url>```. 
+This can be done anywhere, but is probably best done from within the GRSISort directory.
 
 <a name="step7" />
+## Step 7: Compile and use library
 
-## Step 7: Profit
+In order to compile the library please follow the instructions of the library you chose to download.
+Multiple libraries can be installed in parallel.
+To use a library you can either provide the location of the libraries .so file on the command line, or edit .grsirc to include a line
+```
+GRSI.ParserLibrary: <path to library, e.g. $(GRSISYS)/GRSIData/lib/libGRSIData.so>
+```
+
+<a name="step8" />
+
+## Step 8: ???
+Instructions unclear, lost in terminology.
+
+<a name="step9" />
+
+## Step 9: Profit
 If you ever figure this out, please share the wealth.
