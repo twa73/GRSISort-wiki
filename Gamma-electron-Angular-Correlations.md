@@ -8,4 +8,6 @@ The Pentagonal Array for Conversion Electron Spectroscopy (PACES) at TRIUMF is a
 
 # GRIFFIN-PACES angles
 
-The installation of PACES necessitates the removal of one GRIFFIN HPGe clover (position 13 in the upstream lampshade) such that the maximum number of coincidence angles between GRIFFIN and PACES detectors is **300** (60 HPGe crystals x 5 Si(Li)). GRSISort contains co-ordinates of all HPGe crystals.
+The installation of PACES necessitates the removal of one GRIFFIN HPGe clover (position 13 in the upstream lampshade) such that the maximum number of coincidence angles between GRIFFIN and PACES detectors is **300** (60 HPGe crystals x 5 Si(Li)). GRSISort contains co-ordinates of all HPGe crystals so that the relative angles can be extracted via `TVector` (see `TGriffin.cxx`). Similarly the PACES co-ordinates (_Theta_,_Phi_) can be defined in `TPaces.cxx`.
+
+
