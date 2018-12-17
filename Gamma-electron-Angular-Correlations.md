@@ -14,7 +14,7 @@ _angle-table-here_
 
 In the analysis of gamma-electron angular correlations, it is essential that both detectors share the same co-ordinate system. GRSISort contains co-ordinates of all HPGe crystals in `TGriffin.cxx` so that the relative angles can be extracted via `TVector`. Similarly the PACES co-ordinates can be defined in `TPaces.cxx`.
 
-_added-to-TPaces(image)_
+![](https://www.dropbox.com/s/iqp1xampsk58muz/TPaces_angles.png?dl=0)
 
 Note that GRSISort will need to recompiled after this modification. The angle between GRIFFIN and PACES detectors can now be found simply:
 
