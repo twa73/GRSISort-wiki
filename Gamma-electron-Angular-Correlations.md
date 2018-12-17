@@ -26,5 +26,16 @@ where `gd` is the GRIFFIN HPGe clover position (1-16), `gc` is the HPGe crystal 
 [[https://github.com/MikeBowry/WikiPics/blob/master/paces_coinc_angles.png|alt=paces_coinc_angles]]
 
 # Constructing an angle map
+
+Examples are provided on how to incorporate the GRIFFIN-PACES angles into a data processing script. Here, _GRSIProof_ is used to process the `AnalysisTree` which includes time-correlated GRIFFIN and PACES events. The angle map can be included in the header file (`.h`) of the EventSelector and recalled in the main program (`.C`). Rather than listing the values of the coincidence angles themselves in the map, we assign each angle an index based on the following formula:
+
+`double index = (64*p)+(((gd-1)*4))+gc`,
+
+where `index` takes the values 0-319. Due to the missing HPGe clover (position 13), index values from 48-51, 112-115, 176-179, 240-243 and 304-307 are not used. Consider the coincidence angles available for a single PACES detector (e.g. #2 at _phi_=94 degrees). The index map (grouped into bins of 3) is as follows:
+
+`double group[n][3]={{90,85,-1},{86,118,91},{119,84,88},{87,94,-1},{117,81,116},{95,65,93},{125,80,66},{82,92,70},{124,64,126},{83,122,67},{98,71,121},{69,127,109},{99,123,97},{68,108,120},{110,77,96},{111,102,105},{101,78,106},{79,103,75},{104,74,-1},{100,72,107}};`
+
+More complex maps can be constructed if including more PACES detectors. In general, the number of angles per bin (referred to as the _weight_) should be managed so that the difference in the weights between each bin is minimised. This reduces the statistical scatter observed in the final angular correlation between bins with very different weights. The grouping of GRIFFIN-PACES angles is more challenging in this respect as the relative geometry of the two detector systems results in an angular coverage strongly peaked around 90 degrees.
+
 # Electron-Gamma matrices
 # Electron-Gamma angular correlation
