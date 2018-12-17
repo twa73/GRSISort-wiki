@@ -8,17 +8,18 @@ The Pentagonal Array for Conversion Electron Spectroscopy (PACES) at TRIUMF is a
 
 # GRIFFIN-PACES angles
 
-The installation of PACES necessitates the removal of one GRIFFIN HPGe clover (position 13 in the upstream lampshade) such that the maximum number of coincidence angles between GRIFFIN and PACES detectors is **300** (60 HPGe crystals x 5 Si(Li)). In the GRIFFIN co-ordinate system, the PACES _Theta_, _Phi_ co-ordinates are as follows:
+The installation of PACES necessitates the removal of one GRIFFIN HPGe clover (position 13 in the upstream lampshade) such that the maximum number of coincidence angles between GRIFFIN and PACES detectors is **300** (60 HPGe crystals x 5 Si(Li)). In the GRIFFIN co-ordinate system, the PACES _Theta_ and _Phi_ co-ordinates are as follows, with a diagram of PACES included for clarity (beam travels out of the page in this view). 
 
 [[https://github.com/MikeBowry/WikiPics/blob/master/thetaphi.PNG|alt=thetaphi]]
+
 
 In the analysis of gamma-electron angular correlations, it is essential that both detectors share the same co-ordinate system. GRSISort contains co-ordinates of all HPGe crystals in `TGriffin.cxx` so that the relative angles can be extracted via `TVector`. Similarly the PACES co-ordinates can be defined in `TPaces.cxx`.
 
 [[https://github.com/MikeBowry/WikiPics/blob/master/TPaces_angles.png|alt=TPaces]]
+[[https://github.com/MikeBowry/WikiPics/blob/master/paces_schematic.png|alt=schematic]]
 
 Note that GRSISort will need to recompiled after this modification. The angle between GRIFFIN and PACES detectors can now be found simply:
 
 `double angle = TGriffin::GetPosition(gd, gc, distance).Angle(TPaces::GetPosition(p))*180./TMath::Pi();`,
 
-where `gd` is the GRIFFIN HPGe clover position (1-16), `gc` is the HPGe crystal number (0-3) and `p` is the PACES detector number (0-4). The distance of the HPGe clovers from the source, `distance` is 110 or 145 mm (the latter used in for full Compton suppression). 
-
+where `gd` is the GRIFFIN HPGe clover position (1-16), `gc` is the HPGe crystal number (0-3) and `p` is the PACES detector number (0-4). The distance of the HPGe clovers from the source, `distance` is 110 or 145 mm (the latter used in for full Compton suppression).
