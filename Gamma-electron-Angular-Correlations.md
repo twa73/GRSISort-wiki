@@ -18,9 +18,7 @@ _added-to-TPaces(image)_
 
 Note that GRSISort will need to recompiled after this modification. The angle between GRIFFIN and PACES detectors can now be found simply:
 
-`some code`
-`more code`
-`even more code`
+`double angle = TGriffin::GetPosition(gd, gc, distance).Angle(TPaces::GetPosition(p))*180./TMath::Pi();`,
 
-
+where `gd` is the GRIFFIN HPGe clover position (1-16), `gc` is the HPGe crystal number (0-3) and `p` is the PACES detector number (0-4). The distance of the HPGe clovers from the source, `distance` is 110 or 145 mm (the latter used in for full Compton suppression). 
 
