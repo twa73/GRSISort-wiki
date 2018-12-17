@@ -21,4 +21,10 @@ Note that GRSISort will need to recompiled after this modification. The angle be
 
 `double angle = TGriffin::GetPosition(gd, gc, distance).Angle(TPaces::GetPosition(p))*180./TMath::Pi();`,
 
-where `gd` is the GRIFFIN HPGe clover position (1-16), `gc` is the HPGe crystal number (0-3) and `p` is the PACES detector number (0-4). The distance of the HPGe clovers from the source, `distance` is 110 or 145 mm (the latter used in for full Compton suppression).
+where `gd` is the GRIFFIN HPGe clover position (1-16), `gc` is the HPGe crystal number (0-3) and `p` is the PACES detector number (0-4). The distance of the HPGe clovers from the source, `distance` is 110 or 145 mm (the latter used in for full Compton suppression). A histogram of calculated angles is included here: the number of angles per bin is 4.
+
+[[https://github.com/MikeBowry/WikiPics/blob/master/paces_coinc_angles.png|alt=paces_coinc_angles]]
+
+# Constructing an angle map
+# Electron-Gamma matrices
+# Electron-Gamma angular correlation
