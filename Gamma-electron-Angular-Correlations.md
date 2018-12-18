@@ -88,8 +88,11 @@ In the main PROOF program (`.C`) we can now refer to `PACESAngleMap` to determin
 
 `
 double index = (64*p)+(((gd-1)*4)+gc);
+
 auto angle_bin = fPACESAngleMap.lower_bound(index-0.5);
+
 int whichindex = int(angle_bin->first);
+
 int whichbin = int(angle_bin->second);
 `
 
