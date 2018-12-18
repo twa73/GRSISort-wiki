@@ -48,37 +48,29 @@ where `nbin`=20, `w`=3 and `-1` is a dummy variable/placeholder. More complex ma
 
 The angle map can be included in the header file (`.h`) of the GRSIProof Selector. For example, 
 
-`
-std::vector<std::pair<double, double>> PACESAngleCombinations()
-{
-double group[nbin][w]={...};
-std::vector<std::pair<double, double>> result;
-      for(int i=0;i<int(nbin);++i){
-         for(int j=0;j<int(w);++j){
-	    if(group[i][j]<0) continue;   
-	    result.push_back(std::make_pair(group[i][j], double(i)));
-         }
-      }   
-   return result;
-}
-`
+`std::vector<std::pair<double, double>> PACESAngleCombinations(){`
+`double group[nbin][w]={...};`
+`std::vector<std::pair<double, double>> result;`
+`      for(int i=0;i<int(nbin);++i){`
+`         for(int j=0;j<int(w);++j){`
+`	    if(group[i][j]<0) continue;`
+`	    result.push_back(std::make_pair(group[i][j], double(i)));`
+`         }`
+`      }`   
+`   return result; }`
 
 In `..public TGRSISelector{` define:
 
-`
-std::vector<std::pair<double, double>> fPACESAngleCombinations;   
-std::map<double, double> fPACESAngleMap;
-`
+`std::vector<std::pair<double, double>> fPACESAngleCombinations;`
+`std::map<double, double> fPACESAngleMap;`
+`int maxanglebin;`
 
 and in the nested loop `EventSelector(TTree * /*tree*/ =0) : TGRSISelector(), fGrif(0), fPaces(0) {`, define:
 
-`   
-int maxanglebin;
-for(int i = 0; i < static_cast<int>(fPACESAngleCombinations.size()); ++i) {
-   if(fPACESAngleCombinations[i].second>0) maxanglebin = fPACESAngleCombinations[i].second;
-   fPACESAngleMap.insert(std::make_pair(fPACESAngleCombinations[i].first, fPACESAngleCombinations[i].second));
-}
-`
+`for(int i = 0; i < static_cast<int>(fPACESAngleCombinations.size()); ++i) {`
+`   if(fPACESAngleCombinations[i].second>0) maxanglebin = fPACESAngleCombinations[i].second;`
+`   fPACESAngleMap.insert(std::make_pair(fPACESAngleCombinations[i].first, fPACESAngleCombinations[i].second));`
+`}`
 
 Tip: remember to define the `PACESAngleCombinations` vector at the beginning of the header file.
 
@@ -86,17 +78,12 @@ Tip: remember to define the `PACESAngleCombinations` vector at the beginning of 
 
 In the main PROOF program (`.C`) we can now refer to `PACESAngleMap` to determine the angle bin to which each detector pair belongs. In `FillHistograms() {`,
 
-`
-double index = (64*p)+(((gd-1)*4)+gc);
+`double index = (64*p)+(((gd-1)*4)+gc);`
+`auto angle_bin = fPACESAngleMap.lower_bound(index-0.5);`
+`int whichindex = int(angle_bin->first);`
+`int whichbin = int(angle_bin->second);`
 
-auto angle_bin = fPACESAngleMap.lower_bound(index-0.5);
-
-int whichindex = int(angle_bin->first);
-
-int whichbin = int(angle_bin->second);
-`
-
-The `PACESAngleMap` **key** (by default the key is the first column of the array) is queried to find the bin number corresponding to the index. In this example, the map using a single PACES detector would return **2** for indexes 84, 88 and 119. `whichindex` and `whichbin` can be used as diagnostics to check the map is functioning properly. Examples are shown here using only PACES detector #2 with no grouping applied. 
+The `PACESAngleMap` **key** (by default the key is the first column of the array) is queried to find the bin number corresponding to the index. In this example, the map using a single PACES detector would return bin **2** for indexes 84, 88 and 119. The variables `whichindex` and `whichbin` can be used as diagnostics to check the map is functioning properly. Examples are shown here using only PACES detector #2 with no grouping applied.
 
 [[https://github.com/MikeBowry/WikiPics/blob/master/index.png|alt=index]]
 [[https://github.com/MikeBowry/WikiPics/blob/master/bin.png|alt=bin]]
