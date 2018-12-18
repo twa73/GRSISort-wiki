@@ -1,6 +1,6 @@
 # Introduction
 
-Internal conversion electrons (ICEs) compete with gamma-decay to remove energy from excited nuclear states. In particular this decay mode is favoured in cases where the atomic number and transition multipolarity are high, and where the transition energy is low (or combinations of all three). The ICE energy is equal to the difference between the transition energy and the atomic binding energy of a given electronic orbital. The _K_ shell (followed by _L1-3_, _M1-5_ etc.) possesses the highest binding energy and is also the shell from which the electron is most likely to be removed. 
+Internal conversion electrons (ICEs) compete with gamma-decay to remove energy from excited nuclear states. In particular this decay mode is favoured in cases where the atomic number and transition multipolarity are high, and where the transition energy is low (or combinations of all three). The ICE energy is equal to the difference between the transition energy and the atomic binding energy of a given electronic orbital.
 
 # PACES
 
@@ -21,7 +21,7 @@ Note that GRSISort will need to recompiled after this modification. The angle be
 
 `double angle = TGriffin::GetPosition(gd, gc, distance).Angle(TPaces::GetPosition(p))*180./TMath::Pi();`,
 
-where `gd` is the GRIFFIN HPGe clover position (1-16), `gc` is the HPGe crystal number (0-3) and `p` is the PACES detector number (0-4). The distance of the HPGe clovers from the source, `distance` is 110 or 145 mm (the latter used in for full Compton suppression). A histogram of calculated angles is included here: the number of angles per bin is 4.
+where `gd` is the GRIFFIN HPGe clover position (1-16), `gc` is the HPGe crystal number (0-3) and `p` is the PACES detector number (0-4). The distance of the HPGe clovers from the source, `distance` is 110 or 145 mm (the latter used for full Compton suppression). A histogram of calculated angles is included here: the number of angles per bin is 4.
 
 [[https://github.com/MikeBowry/WikiPics/blob/master/paces_coinc_angles.png|alt=paces_coinc_angles]]
 
