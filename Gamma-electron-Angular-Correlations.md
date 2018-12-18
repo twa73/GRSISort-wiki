@@ -93,7 +93,7 @@ int whichindex = int(angle_bin->first);
 int whichbin = int(angle_bin->second);
 `
 
-The `PACESAngleMap` **key** (by default the key is the first column of the array) is queried to find the bin number corresponding to the index. In this example, the map using a single PACES detector would return **2** for indexes 84, 88 and 119. `whichindex` and `whichbin` can be used as diagnostics to check the map is functioning properly. Examples are shown here.
+The `PACESAngleMap` **key** (by default the key is the first column of the array) is queried to find the bin number corresponding to the index. In this example, the map using a single PACES detector would return **2** for indexes 84, 88 and 119. `whichindex` and `whichbin` can be used as diagnostics to check the map is functioning properly. Examples are shown here using only PACES detector #2 with no grouping applied. 
 
 [[https://github.com/MikeBowry/WikiPics/blob/master/index.png|alt=index]]
 [[https://github.com/MikeBowry/WikiPics/blob/master/bin.png|alt=bin]]
