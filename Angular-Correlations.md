@@ -56,4 +56,4 @@ The impact of finite detector size will still impact the shape of your event-mix
 ## Example analysis
 
 Slides detailing an example analysis for a subset of angles are provided in the link below. The 1408-122 keV cascade in Sm-152 was used and an analysis performed using a GRSIProof script.
-[[https://github.com/MikeBowry/WikiPics/blob/master/angular_correlation_practical_guide_Feb2019.pptx|alt=slides]]
+[[https://github.com/MikeBowry/WikiPics/blob/master/angular_correlation_practical_guide_Feb2019.PDF|alt=slides]]
