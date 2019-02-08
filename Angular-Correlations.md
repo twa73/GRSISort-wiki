@@ -54,6 +54,5 @@ Alternatively (and probably preferably), one can use the event-mixing technique 
 The impact of finite detector size will still impact the shape of your event-mixed distribution. You'll need to account for that. The angular correlation NIM paper will be an excellent resource for you, as well as [these example scripts](https://github.com/SmithJK/AngularCorrAnalysisExamples) and the README within. You may need simulations, in which case the GitHub repos [here](https://github.com/GRIFFINCollaboration/detectorSimulations_v10) and [here](https://github.com/GRIFFINCollaboration/Geant4GammaGammaAngularCorrelations10.01.p01) will be helpful. If your data have poor enough statistics that you don't necessarily need simulations, you'll at least need some attenuation factors, which can be found for the 16-clover setup [here](https://smithjk.github.io/AngularCorrelationCoefficients/index.html).
 
 ## Example analysis
-
 Slides detailing an example analysis for a subset of angles are provided in the link below. The 1408-122 keV cascade in Sm-152 was used and an analysis performed using a GRSIProof script.
-[[https://github.com/MikeBowry/WikiPics/blob/master/angular_correlation_practical_guide_Feb2019.PDF|alt=slides]]
+(https://github.com/MikeBowry/WikiPics/blob/master/angular_correlation_practical_guide_Feb2019.pdf)
