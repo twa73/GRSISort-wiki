@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Tue Feb 19 12:18:34 2019            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TSharc - source file</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="../ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="../ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<div id="codeAndLineNumbers"><pre class="listing">
+<span class="cpp">#ifndef TSHARC_H</span>
+<span class="cpp">#define TSHARC_H</span>
+
+<span class="comment">/** \addtogroup Detectors
+ *  @{
+ */</span>
+
+<span class="cpp">#include &lt;vector&gt;</span>
+<span class="cpp">#include &lt;cstdio&gt;</span>
+<span class="cpp">#include &lt;map&gt;</span>
+<span class="cpp">#include &lt;set&gt;</span>
+
+<span class="cpp">#include "TMath.h"</span>
+<span class="cpp">#include "TVector3.h"</span>
+
+<span class="cpp">#include "<a href="../Globals.h">Globals.h</a>"</span>
+<span class="cpp">#include "<a href="../TDetector.h">TDetector.h</a>"</span>
+<span class="cpp">#include "<a href="../TSharcHit.h">TSharcHit.h</a>"</span>
+
+<span class="keyword">class</span> <a href="../TSharc.html">TSharc</a> : <span class="keyword">public</span> <a href="../TDetector.html">TDetector</a> {
+<span class="keyword">public</span>:
+   <a href="../TSharc.html">TSharc</a>();
+<a name="XBRrbB"></a>   <a href="../TSharc.html#TSharc:_TSharc" title="void TSharc::~TSharc()">~TSharc</a>() override;
+   <a href="../TSharc.html">TSharc</a>(<span class="keyword">const</span> <a href="../TSharc.html">TSharc</a>&amp; rhs);
+
+<span class="keyword">public</span>:
+<a name="AhEy2B"></a>   <a href="../TSharcHit.html">TSharcHit</a>* <a href="../TSharc.html#TSharc:GetSharcHit" title="TSharcHit* TSharc::GetSharcHit(const int&amp; i) const">GetSharcHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i) <span class="keyword">const</span> { <span class="keyword">return</span> <span class="keyword">static_cast</span>&lt;<a href="../TSharcHit.html">TSharcHit</a>*&gt;(<a href="../TDetector.html#TDetector:GetHit" title="TDetectorHit* TDetector::GetHit(const int&amp;) const">GetHit</a>(i)); }
+   <span class="keyword">static</span> TVector3 <a href="../TSharc.html#TSharc:GetPosition" title="TVector3 TSharc::GetPosition(int detector, int frontstrip, int backstrip, double X = 0., double Y = 0., double Z = 0.)">GetPosition</a>(<span class="keyword">int</span> detector, <span class="keyword">int</span> frontstrip, <span class="keyword">int</span> backstrip, <span class="keyword">double</span> X = 0.00, <span class="keyword">double</span> Y = 0.00,
+                               <span class="keyword">double</span> Z = 0.00); <span class="comment">//!&lt;!</span>
+<a name="RZngcC"></a>   <span class="keyword">static</span> <span class="keyword">double</span>   <a href="../TSharc.html#TSharc:GetXOffset" title="double TSharc::GetXOffset()">GetXOffset</a>() { <span class="keyword">return</span> <a href="../TSharc.html#TSharc:fXoffset" title="double TSharc::fXoffset">fXoffset</a>; }
+<a name="obngcC"></a>   <span class="keyword">static</span> <span class="keyword">double</span>   <a href="../TSharc.html#TSharc:GetYOffset" title="double TSharc::GetYOffset()">GetYOffset</a>() { <span class="keyword">return</span> <a href="../TSharc.html#TSharc:fYoffset" title="double TSharc::fYoffset">fYoffset</a>; }
+<a name="PengcC"></a>   <span class="keyword">static</span> <span class="keyword">double</span>   <a href="../TSharc.html#TSharc:GetZOffset" title="double TSharc::GetZOffset()">GetZOffset</a>() { <span class="keyword">return</span> <a href="../TSharc.html#TSharc:fZoffset" title="double TSharc::fZoffset">fZoffset</a>; }
+<a name="bm6VBC"></a>   <span class="keyword">static</span> TVector3 <a href="../TSharc.html#TSharc:GetOffset" title="TVector3 TSharc::GetOffset()">GetOffset</a>() { <span class="keyword">return</span> TVector3(<a href="../TSharc.html#TSharc:fXoffset" title="double TSharc::fXoffset">fXoffset</a>, <a href="../TSharc.html#TSharc:fYoffset" title="double TSharc::fYoffset">fYoffset</a>, <a href="../TSharc.html#TSharc:fZoffset" title="double TSharc::fZoffset">fZoffset</a>); }
+<a name="eCXp7D"></a>   <span class="keyword">static</span> <span class="keyword">void</span> <a href="../TSharc.html#TSharc:SetXYZOffset" title="void TSharc::SetXYZOffset(const double x, const double y, const double z)">SetXYZOffset</a>(<span class="keyword">const</span> <span class="keyword">double</span> x, <span class="keyword">const</span> <span class="keyword">double</span> y, <span class="keyword">const</span> <span class="keyword">double</span> z)
+   {
+      <a href="../TSharc.html#TSharc:fXoffset" title="double TSharc::fXoffset">fXoffset</a> = x;
+      <a href="../TSharc.html#TSharc:fYoffset" title="double TSharc::fYoffset">fYoffset</a> = y;
+      <a href="../TSharc.html#TSharc:fZoffset" title="double TSharc::fZoffset">fZoffset</a> = z;
+   }
+
+<a name="hpuoXB"></a>   <span class="keyword">int</span>     <a href="../TSharc.html#TSharc:GetSize" title="int TSharc::GetSize() const">GetSize</a>() <span class="keyword">const</span> { <span class="keyword">return</span> fHits.size(); } <span class="comment">//!&lt;!</span>
+
+   <span class="keyword">void</span> <a href="../TSharc.html#TSharc:Copy" title="void TSharc::Copy(TObject&amp;) const">Copy</a>(<a href="../#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>&amp;) <span class="keyword">const</span> override;        <span class="comment">//!&lt;!</span>
+   <span class="keyword">void</span> <a href="../TSharc.html#TSharc:Clear" title="void TSharc::Clear(Option_t* = &quot;&quot;)">Clear</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>) override;       <span class="comment">//!&lt;!</span>
+   <span class="keyword">void</span> <a href="../TSharc.html#TSharc:Print" title="void TSharc::Print(Option_t* = &quot;&quot;) const">Print</a>(<a href="../ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>) <span class="keyword">const</span> override; <span class="comment">//!&lt;!</span>
+
+<a name="g_wqQB"></a>   <a href="../TSharc.html">TSharc</a>&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> <a href="../TSharc.html">TSharc</a>&amp; rhs)
+   {
+      <span class="keyword">if</span>(<span class="keyword">this</span> != &amp;rhs) {
+         rhs.<a href="../TSharc.html#TSharc:Copy" title="void TSharc::Copy(TObject&amp;) const">Copy</a>(*<span class="keyword">this</span>);
+      }
+      <span class="keyword">return</span> *<span class="keyword">this</span>;
+   } <span class="comment">//!&lt;!</span>
+
+<span class="cpp">#ifndef __CINT__</span>
+   <span class="keyword">void</span> <a href="../TSharc.html#TSharc:AddFragment" title="void TSharc::AddFragment(const shared_ptr&lt;const TFragment&gt;&amp;, TChannel*)">AddFragment</a>(<span class="keyword">const</span> std::shared_ptr&lt;<span class="keyword">const</span> <a href="../TFragment.html">TFragment</a>&gt;&amp;, <a href="../TChannel.html">TChannel</a>*) override; <span class="comment">//!&lt;!</span>
+<span class="cpp">#endif</span>
+   <span class="keyword">void</span> <a href="../TSharc.html#TSharc:BuildHits" title="void TSharc::BuildHits()">BuildHits</a>() override;
+
+<span class="keyword">private</span>:
+<a name="cdIcH"></a>   <span class="keyword">int</span>                    <a href="../TSharc.html#TSharc:CombineHits" title="int TSharc::CombineHits(TSharcHit*, TSharcHit*, int, int)">CombineHits</a>(<a href="../TSharcHit.html">TSharcHit</a>*, <a href="../TSharcHit.html">TSharcHit</a>*, <span class="keyword">int</span>, <span class="keyword">int</span>);       <span class="comment">//!&lt;!</span>
+   <span class="keyword">void</span>                   <a href="../TSharc.html#TSharc:RemoveHits" title="void TSharc::RemoveHits(vector&lt;TSharcHit&gt;*, set&lt;int&gt;*)">RemoveHits</a>(std::vector&lt;<a href="../TSharcHit.html">TSharcHit</a>&gt;*, std::set&lt;<span class="keyword">int</span>&gt;*); <span class="comment">//!&lt;!</span>
+
+   <span class="comment">// TODO: I think this class could be sped up with a flag method on these transient vectors.</span>
+	<span class="comment">// Not sure what is supposed to get sped up here, the transient vectors are only used</span>
+	<span class="comment">// to store fragments in them before the hits are build.</span>
+	<span class="comment">// After that these vectors aren't used again.</span>
+   std::vector&lt;<a href="../TFragment.html">TFragment</a>&gt; <a href="../TSharc.html#TSharc:fFrontFragments" title="vector&lt;TFragment&gt; TSharc::fFrontFragments">fFrontFragments</a>; <span class="comment">//!</span>
+   std::vector&lt;<a href="../TFragment.html">TFragment</a>&gt; <a href="../TSharc.html#TSharc:fBackFragments" title="vector&lt;TFragment&gt; TSharc::fBackFragments">fBackFragments</a>;  <span class="comment">//!</span>
+   std::vector&lt;<a href="../TFragment.html">TFragment</a>&gt; <a href="../TSharc.html#TSharc:fPadFragments" title="vector&lt;TFragment&gt; TSharc::fPadFragments">fPadFragments</a>;   <span class="comment">//!</span>
+
+<span class="keyword">public</span>:
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:GetDetectorThickness" title="double TSharc::GetDetectorThickness(TSharcHit&amp; hit, double dist = -1.)">GetDetectorThickness</a>(<a href="../TSharcHit.html">TSharcHit</a>&amp; hit, <span class="keyword">double</span> dist = -1.0); <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:GetDeadLayerThickness" title="double TSharc::GetDeadLayerThickness(TSharcHit&amp; hit)">GetDeadLayerThickness</a>(<a href="../TSharcHit.html">TSharcHit</a>&amp; hit);                    <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:GetPadThickness" title="double TSharc::GetPadThickness(TSharcHit&amp; hit)">GetPadThickness</a>(<a href="../TSharcHit.html">TSharcHit</a>&amp; hit);                          <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:GetPadDeadLayerThickness" title="double TSharc::GetPadDeadLayerThickness(TSharcHit&amp; hit)">GetPadDeadLayerThickness</a>(<a href="../TSharcHit.html">TSharcHit</a>&amp; hit);                 <span class="comment">//!</span>
+
+<span class="keyword">private</span>:
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fXoffset" title="double TSharc::fXoffset">fXoffset</a>; <span class="comment">//!&lt;!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fYoffset" title="double TSharc::fYoffset">fYoffset</a>; <span class="comment">//!&lt;!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fZoffset" title="double TSharc::fZoffset">fZoffset</a>; <span class="comment">//!&lt;!</span>
+
+   <span class="comment">// various sharc dimensions set in mm, taken from IOP SHARC white paper</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fXdim" title="double TSharc::fXdim">fXdim</a>; <span class="comment">//! total X dimension of all boxes</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fYdim" title="double TSharc::fYdim">fYdim</a>; <span class="comment">//! total Y dimension of all boxes</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fZdim" title="double TSharc::fZdim">fZdim</a>; <span class="comment">//! total Z dimension of all boxes</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fRdim" title="double TSharc::fRdim">fRdim</a>; <span class="comment">//! Rmax-Rmin for all QQQs</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fPdim" title="double TSharc::fPdim">fPdim</a>; <span class="comment">//! QQQ quadrant angular range (degrees)</span>
+   <span class="comment">// BOX dimensions</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fXposUB" title="double TSharc::fXposUB">fXposUB</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fYminUB" title="double TSharc::fYminUB">fYminUB</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fZminUB" title="double TSharc::fZminUB">fZminUB</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fXposDB" title="double TSharc::fXposDB">fXposDB</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fYminDB" title="double TSharc::fYminDB">fYminDB</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fZminDB" title="double TSharc::fZminDB">fZminDB</a>; <span class="comment">//!</span>
+   <span class="comment">// QQQ dimensions</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fZposUQ" title="double TSharc::fZposUQ">fZposUQ</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fRmaxUQ" title="double TSharc::fRmaxUQ">fRmaxUQ</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fRminUQ" title="double TSharc::fRminUQ">fRminUQ</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fPminUQ" title="double TSharc::fPminUQ">fPminUQ</a>; <span class="comment">//! degrees</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fZposDQ" title="double TSharc::fZposDQ">fZposDQ</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fRmaxDQ" title="double TSharc::fRmaxDQ">fRmaxDQ</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fRminDQ" title="double TSharc::fRminDQ">fRminDQ</a>; <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fPminDQ" title="double TSharc::fPminDQ">fPminDQ</a>; <span class="comment">//! degrees</span>
+   <span class="comment">// segmentation</span>
+   <span class="comment">// static const <a href="../ListOfTypes.html#int">int</a> frontstripslist[16]   ;</span>
+   <span class="comment">// static const <a href="../ListOfTypes.html#int">int</a> backstripslist[16]    ;</span>
+   <span class="comment">// pitches</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fStripFPitch" title="double TSharc::fStripFPitch">fStripFPitch</a>;  <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fStripBPitch" title="double TSharc::fStripBPitch">fStripBPitch</a>;  <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fRingPitch" title="double TSharc::fRingPitch">fRingPitch</a>;    <span class="comment">//!</span>
+   <span class="keyword">static</span> <span class="keyword">double</span> <a href="../TSharc.html#TSharc:fSegmentPitch" title="double TSharc::fSegmentPitch">fSegmentPitch</a>; <span class="comment">//! angular pitch, degrees</span>
+
+   <span class="comment">/// \cond CLASSIMP</span>
+   ClassDefOverride(<a href="../TSharc.html">TSharc</a>, 7)
+   <span class="comment">/// \endcond</span>
+};
+<span class="comment">/*! @} */</span>
+<span class="cpp">#endif</span>
+</pre>
+<div id="linenums"><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="1" href="#1" class="ln">1</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="2" href="#2" class="ln">2</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="3" href="#3" class="ln">3</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="4" href="#4" class="ln">4</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="5" href="#5" class="ln">5</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="6" href="#6" class="ln">6</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="7" href="#7" class="ln">7</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="8" href="#8" class="ln">8</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="9" href="#9" class="ln">9</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="10" href="#10" class="ln">10</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="11" href="#11" class="ln">11</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="12" href="#12" class="ln">12</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="13" href="#13" class="ln">13</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="14" href="#14" class="ln">14</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="15" href="#15" class="ln">15</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="16" href="#16" class="ln">16</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="17" href="#17" class="ln">17</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="18" href="#18" class="ln">18</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="19" href="#19" class="ln">19</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="20" href="#20" class="ln">20</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="21" href="#21" class="ln">21</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="22" href="#22" class="ln">22</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="23" href="#23" class="ln">23</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="24" href="#24" class="ln">24</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="25" href="#25" class="ln">25</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="26" href="#26" class="ln">26</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="27" href="#27" class="ln">27</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="28" href="#28" class="ln">28</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="29" href="#29" class="ln">29</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="30" href="#30" class="ln">30</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="31" href="#31" class="ln">31</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="32" href="#32" class="ln">32</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="33" href="#33" class="ln">33</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="34" href="#34" class="ln">34</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="35" href="#35" class="ln">35</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="36" href="#36" class="ln">36</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="37" href="#37" class="ln">37</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="38" href="#38" class="ln">38</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="39" href="#39" class="ln">39</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="40" href="#40" class="ln">40</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="41" href="#41" class="ln">41</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="42" href="#42" class="ln">42</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="43" href="#43" class="ln">43</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="44" href="#44" class="ln">44</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="45" href="#45" class="ln">45</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="46" href="#46" class="ln">46</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="47" href="#47" class="ln">47</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="48" href="#48" class="ln">48</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="49" href="#49" class="ln">49</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="50" href="#50" class="ln">50</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="51" href="#51" class="ln">51</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="52" href="#52" class="ln">52</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="53" href="#53" class="ln">53</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="54" href="#54" class="ln">54</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="55" href="#55" class="ln">55</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="56" href="#56" class="ln">56</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="57" href="#57" class="ln">57</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="58" href="#58" class="ln">58</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="59" href="#59" class="ln">59</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="60" href="#60" class="ln">60</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="61" href="#61" class="ln">61</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="62" href="#62" class="ln">62</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="63" href="#63" class="ln">63</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="64" href="#64" class="ln">64</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="65" href="#65" class="ln">65</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="66" href="#66" class="ln">66</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="67" href="#67" class="ln">67</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="68" href="#68" class="ln">68</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="69" href="#69" class="ln">69</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="70" href="#70" class="ln">70</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="71" href="#71" class="ln">71</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="72" href="#72" class="ln">72</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="73" href="#73" class="ln">73</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="74" href="#74" class="ln">74</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="75" href="#75" class="ln">75</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="76" href="#76" class="ln">76</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="77" href="#77" class="ln">77</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="78" href="#78" class="ln">78</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="79" href="#79" class="ln">79</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="80" href="#80" class="ln">80</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="81" href="#81" class="ln">81</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="82" href="#82" class="ln">82</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="83" href="#83" class="ln">83</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="84" href="#84" class="ln">84</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="85" href="#85" class="ln">85</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="86" href="#86" class="ln">86</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="87" href="#87" class="ln">87</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="88" href="#88" class="ln">88</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="89" href="#89" class="ln">89</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="90" href="#90" class="ln">90</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="91" href="#91" class="ln">91</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="92" href="#92" class="ln">92</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="93" href="#93" class="ln">93</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="94" href="#94" class="ln">94</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="95" href="#95" class="ln">95</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="96" href="#96" class="ln">96</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="97" href="#97" class="ln">97</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="98" href="#98" class="ln">98</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="99" href="#99" class="ln">99</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="100" href="#100" class="ln">100</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="101" href="#101" class="ln">101</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="102" href="#102" class="ln">102</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="103" href="#103" class="ln">103</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="104" href="#104" class="ln">104</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="105" href="#105" class="ln">105</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="106" href="#106" class="ln">106</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="107" href="#107" class="ln">107</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="108" href="#108" class="ln">108</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="109" href="#109" class="ln">109</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="110" href="#110" class="ln">110</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="111" href="#111" class="ln">111</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="112" href="#112" class="ln">112</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="113" href="#113" class="ln">113</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="114" href="#114" class="ln">114</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="115" href="#115" class="ln">115</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="116" href="#116" class="ln">116</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="117" href="#117" class="ln">117</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="118" href="#118" class="ln">118</a></div><div class="ln">&nbsp;<span class="lnfile">TSharc.h:</span><a name="119" href="#119" class="ln">119</a></div></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+
+<em>&raquo; Last changed: 2019-02-19 12:18 </em><em>&raquo; Last generated: 2019-02-19 12:18</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

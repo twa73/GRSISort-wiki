@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Tue Feb 19 14:45:48 2019            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TFragWriteLoop</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TFragWriteLoop','','htmldoc/TFragWriteLoop.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TFragWriteLoop.h.html">header file</a>
+<a class="descrheadentry" href="src/TFragWriteLoop.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TFragWriteLoop:description">class description</a> 
+<a class="descrheadentry" href="#TFragWriteLoop:Function_Members">function members</a>
+<a class="descrheadentry" href="#TFragWriteLoop:Data_Members">data members</a>
+<a class="descrheadentry" href="#TFragWriteLoop:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./HTMLDOC_Index.html">HTMLDOC</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TFragWriteLoop</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TFragWriteLoop:description"></a>class TFragWriteLoop: public <a href="./StoppableThread.html">StoppableThread</a></h1>
+<div class="classdescr">
+</div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TFragWriteLoop:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:_TFragWriteLoop">~TFragWriteLoop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AllThreadHeader"><span class="baseclass">StoppableThread::</span>AllThreadHeader</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AllThreadProgress"><span class="baseclass">StoppableThread::</span>AllThreadProgress</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AllThreadStatus"><span class="baseclass">StoppableThread::</span>AllThreadStatus</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AnyThreadRunning"><span class="baseclass">StoppableThread::</span>AnyThreadRunning</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AnyThreadStatus"><span class="baseclass">StoppableThread::</span>AnyThreadStatus</a>()</td></tr>
+<tr class="func"><td class="funcret">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<span class="keyword">const</span> <a href="./TBadFragment.html">TBadFragment</a>&gt; &gt; &gt;&amp;</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:BadInputQueue">BadInputQueue</a>()</td></tr>
+<tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:Class">Class</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:ClearAllQueues"><span class="baseclass">StoppableThread::</span>ClearAllQueues</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:ClearQueue">ClearQueue</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:ColumnWidth@1"><span class="baseclass">StoppableThread::</span>ColumnWidth</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:ColumnWidth"><span class="baseclass">StoppableThread::</span>ColumnWidth</a>(<a href="./ListOfTypes.html#size_t">size_t</a> val)</td></tr>
+<tr class="func"><td class="funcret">virtual string</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:EndStatus">EndStatus</a>()</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TFragWriteLoop.html">TFragWriteLoop</a>*</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:Get">Get</a>(string name = <span class="string">""</span>, string fOutputFilename = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">static vector&lt;<a href="./StoppableThread.html">StoppableThread</a>*&gt;</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:GetAll"><span class="baseclass">StoppableThread::</span>GetAll</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:GetItemsCurrent">GetItemsCurrent</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:GetItemsPopped">GetItemsPopped</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:GetItemsPushed">GetItemsPushed</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:GetNThreads"><span class="baseclass">StoppableThread::</span>GetNThreads</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:GetRate">GetRate</a>()</td></tr>
+<tr class="func"><td class="funcret">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt; &gt; &gt;&amp;</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:InputQueue">InputQueue</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:IsPaused"><span class="baseclass">StoppableThread::</span>IsPaused</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:IsRunning"><span class="baseclass">StoppableThread::</span>IsRunning</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Join"><span class="baseclass">StoppableThread::</span>Join</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:join_status_thread"><span class="baseclass">StoppableThread::</span>join_status_thread</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Name"><span class="baseclass">StoppableThread::</span>Name</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:OnEnd"><span class="baseclass">StoppableThread::</span>OnEnd</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./TFragWriteLoop.html">TFragWriteLoop</a>&amp;</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TFragWriteLoop.html">TFragWriteLoop</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt; &gt; &gt;&amp;</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:OutputQueue">OutputQueue</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Pause"><span class="baseclass">StoppableThread::</span>Pause</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:PauseAll"><span class="baseclass">StoppableThread::</span>PauseAll</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Print"><span class="baseclass">StoppableThread::</span>Print</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Progress"><span class="baseclass">StoppableThread::</span>Progress</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Resume"><span class="baseclass">StoppableThread::</span>Resume</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:ResumeAll"><span class="baseclass">StoppableThread::</span>ResumeAll</a>()</td></tr>
+<tr class="func"><td class="funcret">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<a href="./TEpicsFrag.html">TEpicsFrag</a>&gt; &gt; &gt;&amp;</td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:ScalerInputQueue">ScalerInputQueue</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:SendStop"><span class="baseclass">StoppableThread::</span>SendStop</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:ShowMembers">ShowMembers</a>(TMemberInspector&amp; insp) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:start_status_thread"><span class="baseclass">StoppableThread::</span>start_status_thread</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Status"><span class="baseclass">StoppableThread::</span>Status</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:status_out"><span class="baseclass">StoppableThread::</span>status_out</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:status_out_loop"><span class="baseclass">StoppableThread::</span>status_out_loop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:StatusWidth@1"><span class="baseclass">StoppableThread::</span>StatusWidth</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:StatusWidth"><span class="baseclass">StoppableThread::</span>StatusWidth</a>(<a href="./ListOfTypes.html#size_t">size_t</a> val)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Stop"><span class="baseclass">StoppableThread::</span>Stop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:stop_status_thread"><span class="baseclass">StoppableThread::</span>stop_status_thread</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:StopAll"><span class="baseclass">StoppableThread::</span>StopAll</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:TFragWriteLoop@1">TFragWriteLoop</a>(<span class="keyword">const</span> <a href="./TFragWriteLoop.html">TFragWriteLoop</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:Write">Write</a>()</td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:Iteration">Iteration</a>()</td></tr>
+
+</table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:CheckTObjectHashConsistency">CheckTObjectHashConsistency</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:TFragWriteLoop">TFragWriteLoop</a>(string name, string fOutputFilename)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:WriteBadEvent">WriteBadEvent</a>(<span class="keyword">const</span> shared_ptr&lt;<span class="keyword">const</span> <a href="./TBadFragment.html">TBadFragment</a>&gt;&amp; event)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:WriteEvent">WriteEvent</a>(<span class="keyword">const</span> shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt;&amp; event)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TFragWriteLoop:WriteScaler">WriteScaler</a>(<span class="keyword">const</span> shared_ptr&lt;<a href="./TEpicsFrag.html">TEpicsFrag</a>&gt;&amp; scaler)</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TFragWriteLoop:Data_Members"></a>Data Members</h2>
+<div class="access" id="datapubl"><b>public:</b>
+<table class="data" id="tabdatapubl" cellspacing="0">
+<tr class="datainh"><td class="datatype">static thread</td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fStatusThread"><span class="baseclass">StoppableThread::</span>fStatusThread</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <span class="keyword">bool</span></td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fStatusThreadOn"><span class="baseclass">StoppableThread::</span>fStatusThreadOn</a></td><td></td></tr>
+
+</table></div>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#atomic_long">atomic_long</a></td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fInputSize"><span class="baseclass">StoppableThread::</span>fInputSize</a></td><td class="datadesc">number of items in the input (queue), only updated within Iteration(), so not</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#atomic_size_t">atomic_size_t</a></td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fItemsPopped"><span class="baseclass">StoppableThread::</span>fItemsPopped</a></td><td class="datadesc">number of items popped from input queue</td></tr>
+<tr class="datainh"><td class="datatype">string</td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fName"><span class="baseclass">StoppableThread::</span>fName</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static map&lt;string,<a href="./StoppableThread.html">StoppableThread</a>*&gt;</td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fThreadMap"><span class="baseclass">StoppableThread::</span>fThreadMap</a></td><td></td></tr>
+
+</table></div>
+<div class="access" id="datapriv"><b>private:</b>
+<table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype"><a href="./TBadFragment.html">TBadFragment</a>*</td><td class="dataname"><a name="TFragWriteLoop:fBadEventAddress"></a>fBadEventAddress</td><td></td></tr>
+<tr class="data"><td class="datatype">TTree*</td><td class="dataname"><a name="TFragWriteLoop:fBadEventTree"></a>fBadEventTree</td><td></td></tr>
+<tr class="data"><td class="datatype">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<span class="keyword">const</span> <a href="./TBadFragment.html">TBadFragment</a>&gt; &gt; &gt;</td><td class="dataname"><a name="TFragWriteLoop:fBadInputQueue"></a>fBadInputQueue</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TFragment.html">TFragment</a>*</td><td class="dataname"><a name="TFragWriteLoop:fEventAddress"></a>fEventAddress</td><td></td></tr>
+<tr class="data"><td class="datatype">TTree*</td><td class="dataname"><a name="TFragWriteLoop:fEventTree"></a>fEventTree</td><td></td></tr>
+<tr class="data"><td class="datatype">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt; &gt; &gt;</td><td class="dataname"><a name="TFragWriteLoop:fInputQueue"></a>fInputQueue</td><td></td></tr>
+<tr class="data"><td class="datatype">TFile*</td><td class="dataname"><a name="TFragWriteLoop:fOutputFile"></a>fOutputFile</td><td></td></tr>
+<tr class="data"><td class="datatype">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt; &gt; &gt;</td><td class="dataname"><a name="TFragWriteLoop:fOutputQueue"></a>fOutputQueue</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TEpicsFrag.html">TEpicsFrag</a>*</td><td class="dataname"><a name="TFragWriteLoop:fScalerAddress"></a>fScalerAddress</td><td></td></tr>
+<tr class="data"><td class="datatype">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<a href="./TEpicsFrag.html">TEpicsFrag</a>&gt; &gt; &gt;</td><td class="dataname"><a name="TFragWriteLoop:fScalerInputQueue"></a>fScalerInputQueue</td><td></td></tr>
+<tr class="data"><td class="datatype">TTree*</td><td class="dataname"><a name="TFragWriteLoop:fScalerTree"></a>fScalerTree</td><td></td></tr>
+
+</table></div>
+</div>
+<h2><a id="TFragWriteLoop:Class_Charts"></a>Class Charts</h2>
+<map name="MapTFragWriteLoop_Inh" id="MapTFragWriteLoop_Inh">
+<area shape="rect" id="node3" href="./StoppableThread.html" title="StoppableThread" alt="" coords="4,14,265,65"/>
+</map>
+<map name="MapTFragWriteLoop_InhMem" id="MapTFragWriteLoop_InhMem">
+<area shape="rect" id="graph12" href="./StoppableThread.html" alt="" coords="224,63,312,157"/>
+<area shape="rect" id="graph13" href="./StoppableThread.html" alt="" coords="125,63,213,157"/>
+<area shape="rect" id="graph14" href="./StoppableThread.html" alt="" coords="27,63,115,157"/>
+<area shape="rect" id="graph15" href="./StoppableThread.html" alt="" coords="256,168,280,189"/>
+<area shape="rect" id="graph16" href="./StoppableThread.html" alt="" coords="224,200,312,469"/>
+<area shape="rect" id="graph17" href="./StoppableThread.html" alt="" coords="125,171,213,469"/>
+<area shape="rect" id="graph18" href="./StoppableThread.html" alt="" coords="27,171,115,469"/>
+<area shape="rect" id="graph11" href="./StoppableThread.html" title="StoppableThread" alt="" coords="16,16,323,480"/>
+</map>
+<map name="MapTFragWriteLoop_Lib" id="MapTFragWriteLoop_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="320,47,435,95"/>
+</map>
+<div class="tabs">
+<a id="imgTFragWriteLoop_Inh" class="tabsel" href="inh/TFragWriteLoop_Inh.png" onclick="javascript:return SetImg('Charts','inh/TFragWriteLoop_Inh.png');">Inheritance</a>
+<a id="imgTFragWriteLoop_InhMem" class="tab" href="inhmem/TFragWriteLoop_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TFragWriteLoop_InhMem.png');">Inherited Members</a>
+<a id="imgTFragWriteLoop_Incl" class="tab" href="incl/TFragWriteLoop_Incl.png" onclick="javascript:return SetImg('Charts','incl/TFragWriteLoop_Incl.png');">Includes</a>
+<a id="imgTFragWriteLoop_Lib" class="tab" href="lib/TFragWriteLoop_Lib.png" onclick="javascript:return SetImg('Charts','lib/TFragWriteLoop_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTFragWriteLoop_Inh" src="inh/TFragWriteLoop_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"><a href="./TFragWriteLoop.html">TFragWriteLoop</a>* <a class="funcname" name="TFragWriteLoop:Get" href="src/TFragWriteLoop.cxx.html#BxWWCC">Get</a>(string name = <span class="string">""</span>, string fOutputFilename = <span class="string">""</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragWriteLoop:TFragWriteLoop" href="src/TFragWriteLoop.cxx.html#OEL9qC">TFragWriteLoop</a>(string name, string fOutputFilename)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragWriteLoop:_TFragWriteLoop" href="src/TFragWriteLoop.cxx.html#EkwI2C">~TFragWriteLoop</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragWriteLoop:ClearQueue" href="src/TFragWriteLoop.cxx.html#OcfrhE">ClearQueue</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::string <a class="funcname" name="TFragWriteLoop:EndStatus" href="src/TFragWriteLoop.cxx.html#VClZdC">EndStatus</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TFragWriteLoop:Iteration" href="src/TFragWriteLoop.cxx.html#NAa1g">Iteration</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragWriteLoop:Write" href="src/TFragWriteLoop.cxx.html#pODtDE">Write</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragWriteLoop:WriteEvent" href="src/TFragWriteLoop.cxx.html#r.T82">WriteEvent</a>(<span class="keyword">const</span> shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt;&amp; event)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragWriteLoop:WriteBadEvent" href="src/TFragWriteLoop.cxx.html#bl_cpE">WriteBadEvent</a>(<span class="keyword">const</span> shared_ptr&lt;<span class="keyword">const</span> <a href="./TBadFragment.html">TBadFragment</a>&gt;&amp; event)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TFragWriteLoop:WriteScaler" href="src/TFragWriteLoop.cxx.html#OVbOG">WriteScaler</a>(<span class="keyword">const</span> shared_ptr&lt;<a href="./TEpicsFrag.html">TEpicsFrag</a>&gt;&amp; scaler)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::shared_ptr&lt;ThreadsafeQueue&lt;std::shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt;&gt;&gt;&amp; <a class="funcname" name="TFragWriteLoop:InputQueue" href="src/TFragWriteLoop.h.html#xL9rW">InputQueue</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TFragWriteLoop.html#TFragWriteLoop:fInputQueue" title="shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;const TFragment&gt; &gt; &gt; TFragWriteLoop::fInputQueue">fInputQueue</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname">std::shared_ptr&lt;ThreadsafeQueue&lt;std::shared_ptr&lt;<span class="keyword">const</span> <a href="./TBadFragment.html">TBadFragment</a>&gt;&gt;&gt;&amp; <a class="funcname" name="TFragWriteLoop:BadInputQueue" href="src/TFragWriteLoop.h.html#tQPSlB">BadInputQueue</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TFragWriteLoop.html#TFragWriteLoop:fBadInputQueue" title="shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;const TBadFragment&gt; &gt; &gt; TFragWriteLoop::fBadInputQueue">fBadInputQueue</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname">std::shared_ptr&lt;ThreadsafeQueue&lt;std::shared_ptr&lt;<a href="./TEpicsFrag.html">TEpicsFrag</a>&gt;&gt;&gt;&amp; <a class="funcname" name="TFragWriteLoop:ScalerInputQueue" href="src/TFragWriteLoop.h.html#uo.LcD">ScalerInputQueue</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TFragWriteLoop.html#TFragWriteLoop:fScalerInputQueue" title="shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;TEpicsFrag&gt; &gt; &gt; TFragWriteLoop::fScalerInputQueue">fScalerInputQueue</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname">std::shared_ptr&lt;ThreadsafeQueue&lt;std::shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt;&gt;&gt;&amp; <a class="funcname" name="TFragWriteLoop:OutputQueue" href="src/TFragWriteLoop.h.html#z8.nVE">OutputQueue</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TFragWriteLoop.html#TFragWriteLoop:fOutputQueue" title="shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;const TFragment&gt; &gt; &gt; TFragWriteLoop::fOutputQueue">fOutputQueue</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#size_t">size_t</a> <a class="funcname" name="TFragWriteLoop:GetItemsPushed" href="src/TFragWriteLoop.h.html#uUhHEB">GetItemsPushed</a>()</span><br />
+<div class="funccomm"><pre> there is no output queue for this loop, so we assume that all items handled (= all good fragments written)
+ are also the number of items popped and that we have no current items
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> fItemsPopped; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#size_t">size_t</a> <a class="funcname" name="TFragWriteLoop:GetItemsPopped" href="src/TFragWriteLoop.h.html#OkS2IB">GetItemsPopped</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> fItemsPopped; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#size_t">size_t</a> <a class="funcname" name="TFragWriteLoop:GetItemsCurrent" href="src/TFragWriteLoop.h.html#r3m0WB">GetItemsCurrent</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> 0; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#size_t">size_t</a> <a class="funcname" name="TFragWriteLoop:GetRate" href="src/TFragWriteLoop.h.html#gdGthB">GetRate</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> 0; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TFragWriteLoop:TFragWriteLoop" href="src/TFragWriteLoop.h.html#hrfpyE">TFragWriteLoop</a>(string name, string fOutputFilename)</span><br />
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+
+<em>&raquo; Last changed: Tue Feb 19 14:45:48 2019 </em><em>&raquo; Last generated: 2019-02-19 14:45</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

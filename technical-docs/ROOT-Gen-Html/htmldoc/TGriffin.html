@@ -1,0 +1,638 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Tue Feb 19 12:18:02 2019            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TGriffin</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TGriffin','','htmldoc/TGriffin.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TGriffin.h.html">header file</a>
+<a class="descrheadentry" href="src/TGriffin.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TGriffin:description">class description</a> 
+<a class="descrheadentry" href="#TGriffin:Function_Members">function members</a>
+<a class="descrheadentry" href="#TGriffin:Data_Members">data members</a>
+<a class="descrheadentry" href="#TGriffin:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./HTMLDOC_Index.html">HTMLDOC</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TGriffin</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TGriffin:description"></a>class TGriffin: public <a href="./TSuppressed.html">TSuppressed</a></h1>
+<div class="classdescr">
+<pre>
+
+ <a href="./TGriffin.html">TGriffin</a>
+
+ The <a href="./TGriffin.html">TGriffin</a> class defines the observables and algorithms used
+ when analyzing GRIFFIN data. It includes detector positions,
+ add-back methods, etc.
+
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TGriffin:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TGriffin:_TGriffin">~TGriffin</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./TSuppressed.html#TSuppressed:AddbackCriterion"><span class="baseclass">TSuppressed::</span>AddbackCriterion</a>(<span class="keyword">const</span> <a href="./TDetectorHit.html">TDetectorHit</a>*, <span class="keyword">const</span> <a href="./TDetectorHit.html">TDetectorHit</a>*)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:AddFragment">AddFragment</a>(<span class="keyword">const</span> shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt;&amp;, <a href="./TChannel.html">TChannel</a>*)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:BuildHits">BuildHits</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:CheckedHash"><span class="baseclass">TObject::</span>CheckedHash</a>()</td></tr>
+<tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TGriffin:Class">Class</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"all"</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ClearTransients">ClearTransients</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:Clone"><span class="baseclass">TObject::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Compare"><span class="baseclass">TObject::</span>Compare</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:Copy">Copy</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>&amp;) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:CTCorrectedEnergy">CTCorrectedEnergy</a>(<span class="keyword">const</span> <a href="./TGriffinHit.html">TGriffinHit</a>*<span class="keyword">const</span> hit_to_correct, <span class="keyword">const</span> <a href="./TGriffinHit.html">TGriffinHit</a>*<span class="keyword">const</span> other_hit, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> time_constraint = <span class="keyword">true</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:DistancetoPrimitive"><span class="baseclass">TObject::</span>DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Draw"><span class="baseclass">TObject::</span>Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DrawClass"><span class="baseclass">TObject::</span>DrawClass</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:DrawClone"><span class="baseclass">TObject::</span>DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Dump"><span class="baseclass">TObject::</span>Dump</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(TMethod* method, TObjArray* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ExecuteEvent"><span class="baseclass">TObject::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:FixHighGainCrossTalk">FixHighGainCrossTalk</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:FixLowGainCrossTalk">FixLowGainCrossTalk</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackHighGainHit">GetAddbackHighGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackHighGainMultiplicity">GetAddbackHighGainMultiplicity</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackHit">GetAddbackHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackLowGainHit">GetAddbackLowGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackLowGainMultiplicity">GetAddbackLowGainMultiplicity</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackMultiplicity">GetAddbackMultiplicity</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetColorFromNumber">GetColorFromNumber</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> number)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TGriffin.html">TGriffin</a>::EGainBits</td><td class="funcname"><a class="funcname" href="#TGriffin:GetDefaultGainType">GetDefaultGainType</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetEnergyNonlinearity">GetEnergyNonlinearity</a>(<span class="keyword">int</span> chan, <span class="keyword">double</span> energy)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetGriffinHighGainHit">GetGriffinHighGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetGriffinHit">GetGriffinHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetGriffinLowGainHit">GetGriffinLowGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetHighGainMultiplicity">GetHighGainMultiplicity</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TDetectorHit.html">TDetectorHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetHit">GetHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; idx)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetLowGainMultiplicity">GetLowGainMultiplicity</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetMultiplicity">GetMultiplicity</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetNAddbackFrags">GetNAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetName"><span class="baseclass">TObject::</span>GetName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetNHighGainAddbackFrags">GetNHighGainAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetNHighGainSuppressedAddbackFrags">GetNHighGainSuppressedAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetNLowGainAddbackFrags">GetNLowGainAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetNLowGainSuppressedAddbackFrags">GetNLowGainSuppressedAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetNSuppressedAddbackFrags">GetNSuppressedAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static TVector3</td><td class="funcname"><a class="funcname" href="#TGriffin:GetPosition">GetPosition</a>(<span class="keyword">int</span> DetNbr, <span class="keyword">int</span> CryNbr = 5, <span class="keyword">double</span> dist = 110.)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackHighGainHit">GetSuppressedAddbackHighGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackHighGainMultiplicity">GetSuppressedAddbackHighGainMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackHit">GetSuppressedAddbackHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackLowGainHit">GetSuppressedAddbackLowGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackLowGainMultiplicity">GetSuppressedAddbackLowGainMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackMultiplicity">GetSuppressedAddbackMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedHighGainHit">GetSuppressedHighGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedHighGainMultiplicity">GetSuppressedHighGainMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedHit">GetSuppressedHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedLowGainHit">GetSuppressedLowGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedLowGainMultiplicity">GetSuppressedLowGainMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedMultiplicity">GetSuppressedMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HasInconsistentHash"><span class="baseclass">TObject::</span>HasInconsistentHash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> TClass* cl) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Inspect"><span class="baseclass">TObject::</span>Inspect</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:InvertBit"><span class="baseclass">TObject::</span>InvertBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#TGriffin:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGriffin:IsAddbackSet">IsAddbackSet</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:IsCrossTalkSet">IsCrossTalkSet</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsEqual"><span class="baseclass">TObject::</span>IsEqual</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsFolder"><span class="baseclass">TObject::</span>IsFolder</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsOnHeap"><span class="baseclass">TObject::</span>IsOnHeap</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsSortable"><span class="baseclass">TObject::</span>IsSortable</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGriffin:IsSuppressed">IsSuppressed</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGriffin:IsSuppressedAddbackSet">IsSuppressedAddbackSet</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsZombie"><span class="baseclass">TObject::</span>IsZombie</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:LoadEnergyResidual">LoadEnergyResidual</a>(<span class="keyword">int</span> chan, TSpline* residual)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ls"><span class="baseclass">TObject::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Notify"><span class="baseclass">TObject::</span>Notify</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Obsolete"><span class="baseclass">TObject::</span>Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete@1"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]@1"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffin.html">TGriffin</a>&amp;</td><td class="funcname"><a class="funcname" href="#TGriffin:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetAddback">ResetAddback</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetFlags">ResetFlags</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetHighGainAddback">ResetHighGainAddback</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetHighGainSuppressed">ResetHighGainSuppressed</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetHighGainSuppressedAddback">ResetHighGainSuppressedAddback</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetLowGainAddback">ResetLowGainAddback</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetLowGainSuppressed">ResetLowGainSuppressed</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetLowGainSuppressedAddback">ResetLowGainSuppressedAddback</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetSuppressed">ResetSuppressed</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetSuppressedAddback">ResetSuppressedAddback</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TGriffin:SetCoreWave">SetCoreWave</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:SetDefaultGainType">SetDefaultGainType</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ShowMembers">ShowMembers</a>(TMemberInspector&amp; insp) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./TSuppressed.html#TSuppressed:SuppressionCriterion"><span class="baseclass">TSuppressed::</span>SuppressionCriterion</a>(<span class="keyword">const</span> <a href="./TDetectorHit.html">TDetectorHit</a>*, <span class="keyword">const</span> <a href="./TDetectorHit.html">TDetectorHit</a>*)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SysError"><span class="baseclass">TObject::</span>SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBit"><span class="baseclass">TObject::</span>TestBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBits"><span class="baseclass">TObject::</span>TestBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TGriffin:TGriffin">TGriffin</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TGriffin:TGriffin@1">TGriffin</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:UseCurrentStyle"><span class="baseclass">TObject::</span>UseCurrentStyle</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, <a href="./ListOfTypes.html#va_list">va_list</a> va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
+
+</table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:CheckTObjectHashConsistency">CheckTObjectHashConsistency</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ClearStatus">ClearStatus</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:FixCrossTalk">FixCrossTalk</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;&amp;</td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackFragVector">GetAddbackFragVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackHit@1">GetAddbackHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackMultiplicity@1">GetAddbackMultiplicity</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp;</td><td class="funcname"><a class="funcname" href="#TGriffin:GetAddbackVector">GetAddbackVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetGriffinHit@1">GetGriffinHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; i, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp;</td><td class="funcname"><a class="funcname" href="#TGriffin:GetHitVector">GetHitVector</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp;</td><td class="funcname"><a class="funcname" href="#TGriffin:GetHitVector@1">GetHitVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">const</span> vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp;</td><td class="funcname"><a class="funcname" href="#TGriffin:GetHitVector@2">GetHitVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetMultiplicity@1">GetMultiplicity</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetNAddbackFrags@1">GetNAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#UShort_t">UShort_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetNSuppressedAddbackFrags@1">GetNSuppressedAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;&amp;</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackFragVector">GetSuppressedAddbackFragVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackHit@1">GetSuppressedAddbackHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackMultiplicity@1">GetSuppressedAddbackMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp;</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedAddbackVector">GetSuppressedAddbackVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TGriffinHit.html">TGriffinHit</a>*</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedHit@1">GetSuppressedHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; i, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Short_t">Short_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedMultiplicity@1">GetSuppressedMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp;</td><td class="funcname"><a class="funcname" href="#TGriffin:GetSuppressedVector">GetSuppressedVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetAddback@1">ResetAddback</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetSuppressed@1">ResetSuppressed</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:ResetSuppressedAddback@1">ResetSuppressedAddback</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:SetAddback">SetAddback</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type, <span class="keyword">bool</span> flag = <span class="keyword">true</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:SetBitNumber">SetBitNumber</a>(<a href="./TGriffin.html">TGriffin</a>::EGriffinBits bit, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:SetCrossTalk">SetCrossTalk</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type, <span class="keyword">bool</span> flag = <span class="keyword">true</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:SetSuppressed">SetSuppressed</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type, <span class="keyword">bool</span> flag = <span class="keyword">true</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGriffin:SetSuppressedAddback">SetSuppressedAddback</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type, <span class="keyword">bool</span> flag = <span class="keyword">true</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGriffin:TestBitNumber">TestBitNumber</a>(<a href="./TGriffin.html">TGriffin</a>::EGriffinBits bit) <span class="keyword">const</span></td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TGriffin:Data_Members"></a>Data Members</h2>
+<div class="access" id="datapubl"><b>public:</b>
+<table class="data" id="tabdatapubl" cellspacing="0">
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kBitMask"><span class="baseclass">TObject::</span>kBitMask</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCanDelete"><span class="baseclass">TObject::</span>kCanDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCannotPick"><span class="baseclass">TObject::</span>kCannotPick</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kHasUUID"><span class="baseclass">TObject::</span>kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kInconsistent"><span class="baseclass">TObject::</span>kInconsistent</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kInvalidObject"><span class="baseclass">TObject::</span>kInvalidObject</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kIsOnHeap"><span class="baseclass">TObject::</span>kIsOnHeap</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kIsReferenced"><span class="baseclass">TObject::</span>kIsReferenced</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kMustCleanup"><span class="baseclass">TObject::</span>kMustCleanup</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kNoContextMenu"><span class="baseclass">TObject::</span>kNoContextMenu</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kNotDeleted"><span class="baseclass">TObject::</span>kNotDeleted</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EDeprecatedStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kOverwrite"><span class="baseclass">TObject::</span>kOverwrite</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kSingleKey"><span class="baseclass">TObject::</span>kSingleKey</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kWriteDelete"><span class="baseclass">TObject::</span>kWriteDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kZombie"><span class="baseclass">TObject::</span>kZombie</a></td><td></td></tr>
+
+</table></div>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="datainh"><td class="datatype">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;</td><td class="dataname"><a href="./TDetector.html#TDetector:fHits"><span class="baseclass">TDetector::</span>fHits</a></td><td></td></tr>
+
+</table></div>
+<div class="access" id="datapriv"><b>private:</b>
+<table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;</td><td class="dataname"><a name="TGriffin:fAddbackHighGainFrags"></a>fAddbackHighGainFrags</td><td class="datadesc">! Number of crystals involved in creating in the addback hit</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;</td><td class="dataname"><a name="TGriffin:fAddbackHighGainHits"></a>fAddbackHighGainHits</td><td class="datadesc">! Used to create addback hits on the fly</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;</td><td class="dataname"><a name="TGriffin:fAddbackLowGainFrags"></a>fAddbackLowGainFrags</td><td class="datadesc">! Number of crystals involved in creating in the addback hit</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;</td><td class="dataname"><a name="TGriffin:fAddbackLowGainHits"></a>fAddbackLowGainHits</td><td class="datadesc">! Used to create addback hits on the fly</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">long</span></td><td class="dataname"><a name="TGriffin:fCycleStart"></a>fCycleStart</td><td class="datadesc">!  The start of the cycle</td></tr>
+<tr class="data"><td class="datatype">static <a href="./TGriffin.html">TGriffin</a>::EGainBits</td><td class="dataname"><a name="TGriffin:fDefaultGainType"></a>fDefaultGainType</td><td></td></tr>
+<tr class="data"><td class="datatype">static map&lt;<span class="keyword">int</span>,TSpline*&gt;</td><td class="dataname"><a name="TGriffin:fEnergyResiduals"></a>fEnergyResiduals</td><td class="datadesc">!</td></tr>
+<tr class="data"><td class="datatype">TTransientBits&lt;<a href="./ListOfTypes.html#UChar_t">UChar_t</a>&gt;</td><td class="dataname"><a name="TGriffin:fGriffinBits"></a>fGriffinBits</td><td class="datadesc">Transient member flags</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;</td><td class="dataname"><a name="TGriffin:fGriffinHighGainHits"></a>fGriffinHighGainHits</td><td class="datadesc">The set of crystal hits</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp;</td><td class="dataname"><a name="TGriffin:fGriffinLowGainHits"></a>fGriffinLowGainHits</td><td class="datadesc">! Reference to default hit vector (needs to be transient)</td></tr>
+<tr class="data"><td class="datatype">static <span class="keyword">bool</span></td><td class="dataname"><a name="TGriffin:fSetCoreWave"></a>fSetCoreWave</td><td class="datadesc">!  Flag for Waveforms ON/OFF</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;</td><td class="dataname"><a name="TGriffin:fSuppressedAddbackHighGainFrags"></a>fSuppressedAddbackHighGainFrags</td><td class="datadesc">! Number of crystals involved in creating in the suppressed addback hit</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;</td><td class="dataname"><a name="TGriffin:fSuppressedAddbackHighGainHits"></a>fSuppressedAddbackHighGainHits</td><td class="datadesc">! Used to create suppressed addback hits on the fly</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;</td><td class="dataname"><a name="TGriffin:fSuppressedAddbackLowGainFrags"></a>fSuppressedAddbackLowGainFrags</td><td class="datadesc">! Number of crystals involved in creating in the suppressed addback hit</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;</td><td class="dataname"><a name="TGriffin:fSuppressedAddbackLowGainHits"></a>fSuppressedAddbackLowGainHits</td><td class="datadesc">! Used to create suppressed addback hits on the fly</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;</td><td class="dataname"><a name="TGriffin:fSuppressedHighGainHits"></a>fSuppressedHighGainHits</td><td class="datadesc">!  The set of suppressed crystal hits</td></tr>
+<tr class="data"><td class="datatype">vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;</td><td class="dataname"><a name="TGriffin:fSuppressedLowGainHits"></a>fSuppressedLowGainHits</td><td class="datadesc">!  The set of suppressed crystal hits</td></tr>
+<tr class="data"><td class="datatype">static TVector3</td><td class="dataname"><a name="TGriffin:gCloverPosition"></a>gCloverPosition[17]</td><td class="datadesc">! Position of each HPGe Clover</td></tr>
+
+</table></div>
+</div>
+<h2><a id="TGriffin:Class_Charts"></a>Class Charts</h2>
+<map name="MapTGriffin_Inh" id="MapTGriffin_Inh">
+<area shape="rect" id="node3" href="./TSuppressed.html" title="TSuppressed" alt="" coords="419,7,558,35"/>
+<area shape="rect" id="node4" href="./TDetector.html" title="TDetector" alt="" coords="210,7,349,35"/>
+</map>
+<map name="MapTGriffin_InhMem" id="MapTGriffin_InhMem">
+<area shape="rect" id="graph12" href="./TSuppressed.html" alt="" coords="693,63,947,99"/>
+<area shape="rect" id="graph13" href="./TSuppressed.html" alt="" coords="859,109,947,217"/>
+<area shape="rect" id="graph14" href="./TSuppressed.html" alt="" coords="760,109,848,232"/>
+<area shape="rect" id="graph15" href="./TSuppressed.html" alt="" coords="661,109,749,232"/>
+<area shape="rect" id="graph11" href="./TSuppressed.html" title="TSuppressed" alt="" coords="651,16,957,243"/>
+<area shape="rect" id="graph18" href="./TDetector.html" alt="" coords="376,63,629,99"/>
+<area shape="rect" id="graph19" href="./TDetector.html" alt="" coords="541,109,629,232"/>
+<area shape="rect" id="graph20" href="./TDetector.html" alt="" coords="443,109,531,261"/>
+<area shape="rect" id="graph21" href="./TDetector.html" alt="" coords="344,109,432,261"/>
+<area shape="rect" id="graph17" href="./TDetector.html" title="TDetector" alt="" coords="333,16,640,272"/>
+</map>
+<map name="MapTGriffin_Lib" id="MapTGriffin_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="140,240,255,288"/>
+</map>
+<div class="tabs">
+<a id="imgTGriffin_Inh" class="tabsel" href="inh/TGriffin_Inh.png" onclick="javascript:return SetImg('Charts','inh/TGriffin_Inh.png');">Inheritance</a>
+<a id="imgTGriffin_InhMem" class="tab" href="inhmem/TGriffin_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TGriffin_InhMem.png');">Inherited Members</a>
+<a id="imgTGriffin_Incl" class="tab" href="incl/TGriffin_Incl.png" onclick="javascript:return SetImg('Charts','incl/TGriffin_Incl.png');">Includes</a>
+<a id="imgTGriffin_Lib" class="tab" href="lib/TGriffin_Lib.png" onclick="javascript:return SetImg('Charts','lib/TGriffin_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTGriffin_Inh" src="inh/TGriffin_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGriffin:TGriffin" href="src/TGriffin.cxx.html#ufkFL">TGriffin</a>()</span><br />
+<div class="funccomm"><pre> Default ctor. Ignores TObjectStreamer in ROOT &lt; 6
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGriffin:TGriffin@1" href="src/TGriffin.cxx.html#P8Hl6">TGriffin</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>&amp; )</span><br />
+<div class="funccomm"><pre> <a href="./TGriffin.html#TGriffin:Copy" title="void TGriffin::Copy(TObject&amp;) const">Copy</a> ctor. Ignores TObjectStreamer in ROOT &lt; 6
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:Copy" href="src/TGriffin.cxx.html#xZM.bE">Copy</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>&amp; ) const</span><br />
+<div class="funccomm"><pre> <a href="./TGriffin.html#TGriffin:Copy" title="void TGriffin::Copy(TObject&amp;) const">Copy</a> function.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TGriffin:_TGriffin" href="src/TGriffin.cxx.html#TVpcJB">~TGriffin</a>()</span><br />
+<div class="funccomm"><pre> Default Destructor
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:Clear" href="src/TGriffin.cxx.html#a9BzjB">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"all"</span>)</span><br />
+<div class="funccomm"><pre> Clears the mother, and all of the hits
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:LoadEnergyResidual" href="src/TGriffin.cxx.html#iwkCiC">LoadEnergyResidual</a>(<span class="keyword">int</span> chan, TSpline* residual)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TGriffin:GetEnergyNonlinearity" href="src/TGriffin.cxx.html#Lzb3lD">GetEnergyNonlinearity</a>(<span class="keyword">int</span> chan, <span class="keyword">double</span> energy)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:Print" href="src/TGriffin.cxx.html#IE6bRB">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffin.html">TGriffin</a>&amp; <a class="funcname" name="TGriffin:operator_" href="src/TGriffin.cxx.html#UgDtL">operator=</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>&amp; )</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:SetDefaultGainType" href="src/TGriffin.cxx.html#mBD7iB">SetDefaultGainType</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetMultiplicity@1" href="src/TGriffin.cxx.html#Fr7QhB">GetMultiplicity</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> std::vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp; <a class="funcname" name="TGriffin:GetHitVector@2" href="src/TGriffin.cxx.html#Bux77">GetHitVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp; <a class="funcname" name="TGriffin:GetHitVector@1" href="src/TGriffin.cxx.html#db1nB">GetHitVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp; <a class="funcname" name="TGriffin:GetAddbackVector" href="src/TGriffin.cxx.html#TvqxrD">GetAddbackVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;&amp; <a class="funcname" name="TGriffin:GetAddbackFragVector" href="src/TGriffin.cxx.html#DtvfdC">GetAddbackFragVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGriffin:IsAddbackSet" href="src/TGriffin.cxx.html#vEkB6">IsAddbackSet</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGriffin:IsCrossTalkSet" href="src/TGriffin.cxx.html#b6jIzB">IsCrossTalkSet</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:SetAddback" href="src/TGriffin.cxx.html#i.p8d">SetAddback</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type, <span class="keyword">bool</span> flag = <span class="keyword">true</span>) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:SetCrossTalk" href="src/TGriffin.cxx.html#SKAEHD">SetCrossTalk</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type, <span class="keyword">bool</span> flag = <span class="keyword">true</span>) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TDetectorHit.html">TDetectorHit</a>* <a class="funcname" name="TGriffin:GetHit" href="src/TGriffin.cxx.html#PvcTeB">GetHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; idx)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetGriffinLowGainHit" href="src/TGriffin.cxx.html#qMhUoE">GetGriffinLowGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetGriffinHighGainHit" href="src/TGriffin.cxx.html#I6kuIB">GetGriffinHighGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetGriffinHit@1" href="src/TGriffin.cxx.html#PpD_LB">GetGriffinHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; i, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetAddbackLowGainMultiplicity" href="src/TGriffin.cxx.html#dBBaAE">GetAddbackLowGainMultiplicity</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetAddbackHighGainMultiplicity" href="src/TGriffin.cxx.html#NmTC6B">GetAddbackHighGainMultiplicity</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetAddbackMultiplicity@1" href="src/TGriffin.cxx.html#PqFKV">GetAddbackMultiplicity</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+<div class="funccomm"><pre> Automatically builds the addback hits using the fAddbackCriterion (if the size of the fAddbackHits vector is zero)
+ and return the number of addback hits.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetAddbackLowGainHit" href="src/TGriffin.cxx.html#NOBScE">GetAddbackLowGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetAddbackHighGainHit" href="src/TGriffin.cxx.html#jvOn3">GetAddbackHighGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetAddbackHit@1" href="src/TGriffin.cxx.html#TUHuwD">GetAddbackHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:AddFragment" href="src/TGriffin.cxx.html#jVcUhB">AddFragment</a>(<span class="keyword">const</span> shared_ptr&lt;<span class="keyword">const</span> <a href="./TFragment.html">TFragment</a>&gt;&amp; , <a href="./TChannel.html">TChannel</a>* )</span><br />
+<div class="funccomm"><pre> Builds the GRIFFIN Hits directly from the <a href="./TFragment.html">TFragment</a>. Basically, loops through the hits for an event and sets
+ observables.
+ This is done for both GRIFFIN and it's suppressors.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname">TVector3 <a class="funcname" name="TGriffin:GetPosition" href="src/TGriffin.cxx.html#NxeaFD">GetPosition</a>(<span class="keyword">int</span> DetNbr, <span class="keyword">int</span> CryNbr = 5, <span class="keyword">double</span> dist = 110.)</span><br />
+<div class="funccomm"><pre> Gets the position vector for a crystal specified by CryNbr within Clover DetNbr at a distance of dist mm away.
+ This is calculated to the most likely interaction point within the crystal.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetFlags" href="src/TGriffin.cxx.html#Axe3AB">ResetFlags</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetLowGainAddback" href="src/TGriffin.cxx.html#XWdhPB">ResetLowGainAddback</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetHighGainAddback" href="src/TGriffin.cxx.html#axdt1D">ResetHighGainAddback</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetAddback@1" href="src/TGriffin.cxx.html#SVAIy">ResetAddback</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#UShort_t">UShort_t</a> <a class="funcname" name="TGriffin:GetNLowGainAddbackFrags" href="src/TGriffin.cxx.html#ujFUVE">GetNLowGainAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#UShort_t">UShort_t</a> <a class="funcname" name="TGriffin:GetNHighGainAddbackFrags" href="src/TGriffin.cxx.html#e2drn">GetNHighGainAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#UShort_t">UShort_t</a> <a class="funcname" name="TGriffin:GetNAddbackFrags@1" href="src/TGriffin.cxx.html#qrh6r">GetNAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+<div class="funccomm"><pre> Get the number of addback <span class="string">"fragments"</span> contributing to the total addback hit
+ with index idx.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:SetBitNumber" href="src/TGriffin.cxx.html#zSACWD">SetBitNumber</a>(<a href="./TGriffin.html">TGriffin</a>::EGriffinBits bit, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set) const</span><br />
+<div class="funccomm"><pre> Used to set the flags that are stored in <a href="./TGriffin.html">TGriffin</a>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="TGriffin:CTCorrectedEnergy" href="src/TGriffin.cxx.html#oKGJzC">CTCorrectedEnergy</a>(<span class="keyword">const</span> <a href="./TGriffinHit.html">TGriffinHit</a>*<span class="keyword">const</span> hit_to_correct, <span class="keyword">const</span> <a href="./TGriffinHit.html">TGriffinHit</a>*<span class="keyword">const</span> other_hit, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> time_constraint = <span class="keyword">true</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:FixLowGainCrossTalk" href="src/TGriffin.cxx.html#reAtzC">FixLowGainCrossTalk</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:FixHighGainCrossTalk" href="src/TGriffin.cxx.html#J.Vt1C">FixHighGainCrossTalk</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:FixCrossTalk" href="src/TGriffin.cxx.html#Q5Tm5E">FixCrossTalk</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TGriffin:GetColorFromNumber" href="src/TGriffin.cxx.html#bvToPD">GetColorFromNumber</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> number)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetSuppressedLowGainHit" href="src/TGriffin.cxx.html#RONq7">GetSuppressedLowGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetSuppressedHighGainHit" href="src/TGriffin.cxx.html#RYChR">GetSuppressedHighGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetSuppressedLowGainMultiplicity" href="src/TGriffin.cxx.html#MIyE1B">GetSuppressedLowGainMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetSuppressedHighGainMultiplicity" href="src/TGriffin.cxx.html#ing4XD">GetSuppressedHighGainMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGriffin:IsSuppressed" href="src/TGriffin.cxx.html#I9wU6B">IsSuppressed</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetLowGainSuppressed" href="src/TGriffin.cxx.html#ojB.AE">ResetLowGainSuppressed</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetHighGainSuppressed" href="src/TGriffin.cxx.html#hQSNRE">ResetHighGainSuppressed</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetSuppressedAddbackLowGainMultiplicity" href="src/TGriffin.cxx.html#DusiiD">GetSuppressedAddbackLowGainMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetSuppressedAddbackHighGainMultiplicity" href="src/TGriffin.cxx.html#jX0XyE">GetSuppressedAddbackHighGainMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetSuppressedAddbackLowGainHit" href="src/TGriffin.cxx.html#xAiWHE">GetSuppressedAddbackLowGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetSuppressedAddbackHighGainHit" href="src/TGriffin.cxx.html#l7toKC">GetSuppressedAddbackHighGainHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGriffin:IsSuppressedAddbackSet" href="src/TGriffin.cxx.html#A0tZXE">IsSuppressedAddbackSet</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetLowGainSuppressedAddback" href="src/TGriffin.cxx.html#HcRR_D">ResetLowGainSuppressedAddback</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetHighGainSuppressedAddback" href="src/TGriffin.cxx.html#HYWjoB">ResetHighGainSuppressedAddback</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#UShort_t">UShort_t</a> <a class="funcname" name="TGriffin:GetNLowGainSuppressedAddbackFrags" href="src/TGriffin.cxx.html#Iv9LfC">GetNLowGainSuppressedAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#UShort_t">UShort_t</a> <a class="funcname" name="TGriffin:GetNHighGainSuppressedAddbackFrags" href="src/TGriffin.cxx.html#AyS_KD">GetNHighGainSuppressedAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp; <a class="funcname" name="TGriffin:GetSuppressedVector" href="src/TGriffin.cxx.html#hfTEmB">GetSuppressedVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp; <a class="funcname" name="TGriffin:GetSuppressedAddbackVector" href="src/TGriffin.cxx.html#Fb3d.D">GetSuppressedAddbackVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::vector&lt;<a href="./ListOfTypes.html#UShort_t">UShort_t</a>&gt;&amp; <a class="funcname" name="TGriffin:GetSuppressedAddbackFragVector" href="src/TGriffin.cxx.html#aklPW">GetSuppressedAddbackFragVector</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetSuppressedHit@1" href="src/TGriffin.cxx.html#w7n7yB">GetSuppressedHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; i, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetSuppressedMultiplicity@1" href="src/TGriffin.cxx.html#MmVj3B">GetSuppressedMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+<div class="funccomm"><pre> Automatically builds the suppressed hits using the fSuppressionCriterion and returns the number of suppressed hits
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:SetSuppressed" href="src/TGriffin.cxx.html#hg7AtC">SetSuppressed</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type, <span class="keyword">bool</span> flag = <span class="keyword">true</span>) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetSuppressed@1" href="src/TGriffin.cxx.html#L8eIl">ResetSuppressed</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetSuppressedAddbackHit@1" href="src/TGriffin.cxx.html#qWy69C">GetSuppressedAddbackHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetSuppressedAddbackMultiplicity@1" href="src/TGriffin.cxx.html#uC5EaC">GetSuppressedAddbackMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+<div class="funccomm"><pre> Automatically builds the suppressed addback hits using the fAddbackCriterion (if the size of the fAddbackHits vector is zero)
+ and return the number of suppressed addback hits.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:SetSuppressedAddback" href="src/TGriffin.cxx.html#F8FjrB">SetSuppressedAddback</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type, <span class="keyword">bool</span> flag = <span class="keyword">true</span>) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetSuppressedAddback@1" href="src/TGriffin.cxx.html#xp4dQE">ResetSuppressedAddback</a>(<span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#UShort_t">UShort_t</a> <a class="funcname" name="TGriffin:GetNSuppressedAddbackFrags@1" href="src/TGriffin.cxx.html#drVXjB">GetNSuppressedAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx, <span class="keyword">const</span> <a href="./TGriffin.html">TGriffin</a>::EGainBits&amp; gain_type)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetGriffinHit" href="src/TGriffin.h.html#mqLNVE">GetGriffinHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; i)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetGriffinHit" title="TGriffinHit* TGriffin::GetGriffinHit(const Int_t&amp; i) or overloads">GetGriffinHit</a>(i, <a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetLowGainMultiplicity" href="src/TGriffin.h.html#dkzTyB">GetLowGainMultiplicity</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:fGriffinLowGainHits" title="vector&lt;TDetectorHit*&gt;&amp; TGriffin::fGriffinLowGainHits">fGriffinLowGainHits</a>.size(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetHighGainMultiplicity" href="src/TGriffin.h.html#mrUfj">GetHighGainMultiplicity</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:fGriffinHighGainHits" title="vector&lt;TDetectorHit*&gt; TGriffin::fGriffinHighGainHits">fGriffinHighGainHits</a>.size(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetMultiplicity" href="src/TGriffin.h.html#tGPOqE">GetMultiplicity</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetMultiplicity" title="Short_t TGriffin::GetMultiplicity() const or overloads">GetMultiplicity</a>(<a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:BuildHits" href="src/TGriffin.h.html#oUUj0B">BuildHits</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ClearTransients" href="src/TGriffin.h.html#wJzscE">ClearTransients</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetAddbackMultiplicity" href="src/TGriffin.h.html#Y96IqE">GetAddbackMultiplicity</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetAddbackMultiplicity" title="Short_t TGriffin::GetAddbackMultiplicity() or overloads">GetAddbackMultiplicity</a>(<a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetAddbackHit" href="src/TGriffin.h.html#asnCVE">GetAddbackHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetAddbackHit" title="TGriffinHit* TGriffin::GetAddbackHit(const int&amp; i) or overloads">GetAddbackHit</a>(i, <a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetAddback" href="src/TGriffin.h.html#MlitJD">ResetAddback</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TGriffin.html#TGriffin:ResetAddback" title="void TGriffin::ResetAddback() or overloads">ResetAddback</a>(<a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#UShort_t">UShort_t</a> <a class="funcname" name="TGriffin:GetNAddbackFrags" href="src/TGriffin.h.html#wBr_DB">GetNAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetNAddbackFrags" title="UShort_t TGriffin::GetNAddbackFrags(const size_t&amp; idx) or overloads">GetNAddbackFrags</a>(idx, <a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetSuppressedHit" href="src/TGriffin.h.html#OrrxdE">GetSuppressedHit</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; i)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetSuppressedHit" title="TGriffinHit* TGriffin::GetSuppressedHit(const Int_t&amp; i) or overloads">GetSuppressedHit</a>(i, <a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetSuppressedMultiplicity" href="src/TGriffin.h.html#zVWBH">GetSuppressedMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetSuppressedMultiplicity" title="Short_t TGriffin::GetSuppressedMultiplicity(const TBgo* bgo) or overloads">GetSuppressedMultiplicity</a>(bgo, <a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetSuppressed" href="src/TGriffin.h.html#en88h">ResetSuppressed</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TGriffin.html#TGriffin:ResetSuppressed" title="void TGriffin::ResetSuppressed() or overloads">ResetSuppressed</a>(<a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Short_t">Short_t</a> <a class="funcname" name="TGriffin:GetSuppressedAddbackMultiplicity" href="src/TGriffin.h.html#litK0B">GetSuppressedAddbackMultiplicity</a>(<span class="keyword">const</span> <a href="./TBgo.html">TBgo</a>* bgo)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetSuppressedAddbackMultiplicity" title="Short_t TGriffin::GetSuppressedAddbackMultiplicity(const TBgo* bgo) or overloads">GetSuppressedAddbackMultiplicity</a>(bgo, <a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TGriffinHit.html">TGriffinHit</a>* <a class="funcname" name="TGriffin:GetSuppressedAddbackHit" href="src/TGriffin.h.html#zRZUED">GetSuppressedAddbackHit</a>(<span class="keyword">const</span> <span class="keyword">int</span>&amp; i)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetSuppressedAddbackHit" title="TGriffinHit* TGriffin::GetSuppressedAddbackHit(const int&amp; i) or overloads">GetSuppressedAddbackHit</a>(i, <a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ResetSuppressedAddback" href="src/TGriffin.h.html#FAFrKD">ResetSuppressedAddback</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TGriffin.html#TGriffin:ResetSuppressedAddback" title="void TGriffin::ResetSuppressedAddback() or overloads">ResetSuppressedAddback</a>(<a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#UShort_t">UShort_t</a> <a class="funcname" name="TGriffin:GetNSuppressedAddbackFrags" href="src/TGriffin.h.html#VOrWYD">GetNSuppressedAddbackFrags</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#size_t">size_t</a>&amp; idx)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetNSuppressedAddbackFrags" title="UShort_t TGriffin::GetNSuppressedAddbackFrags(const size_t&amp; idx) or overloads">GetNSuppressedAddbackFrags</a>(idx, <a href="./TGriffin.html#TGriffin:GetDefaultGainType" title="TGriffin::EGainBits TGriffin::GetDefaultGainType()">GetDefaultGainType</a>()); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TGriffin:SetCoreWave" href="src/TGriffin.h.html#Ux3fkB">SetCoreWave</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:fSetCoreWave" title="bool TGriffin::fSetCoreWave">fSetCoreWave</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname">EGainBits <a class="funcname" name="TGriffin:GetDefaultGainType" href="src/TGriffin.h.html#do3uMC">GetDefaultGainType</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:fDefaultGainType" title="TGriffin::EGainBits TGriffin::fDefaultGainType">fDefaultGainType</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TGriffin:ClearStatus" href="src/TGriffin.h.html#cVACeC">ClearStatus</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TGriffin.html#TGriffin:fGriffinBits" title="TTransientBits&lt;UChar_t&gt; TGriffin::fGriffinBits">fGriffinBits</a> = 0; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TGriffin:TestBitNumber" href="src/TGriffin.h.html#GCP4AC">TestBitNumber</a>(<a href="./TGriffin.html">TGriffin</a>::EGriffinBits bit) const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:fGriffinBits" title="TTransientBits&lt;UChar_t&gt; TGriffin::fGriffinBits">fGriffinBits</a>.<a href="./TTransientBits_unsigned_char_.html#TTransientBits_unsigned_char_:TestBit" title="Bool_t TTransientBits&lt;unsigned char&gt;::TestBit(unsigned char f) const">TestBit</a>(bit); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> std::vector&lt;<a href="./TDetectorHit.html">TDetectorHit</a>*&gt;&amp; <a class="funcname" name="TGriffin:GetHitVector" href="src/TGriffin.h.html#zacoV">GetHitVector</a>() const</span><br />
+<div class="funccomm"><pre> This is where the general untouchable functions live.
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TGriffin.html#TGriffin:GetHitVector" title="const vector&lt;TDetectorHit*&gt;&amp; TGriffin::GetHitVector() const or overloads">GetHitVector</a>(<a href="./TGriffin.html#TGriffin:fDefaultGainType" title="TGriffin::EGainBits TGriffin::fDefaultGainType">fDefaultGainType</a>); }</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+
+<em>&raquo; Last changed: Tue Feb 19 12:18:03 2019 </em><em>&raquo; Last generated: 2019-02-19 12:18</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

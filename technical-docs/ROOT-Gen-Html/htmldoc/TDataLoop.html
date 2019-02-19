@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Tue Feb 19 14:45:47 2019            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TDataLoop</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TDataLoop','','htmldoc/TDataLoop.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TDataLoop.h.html">header file</a>
+<a class="descrheadentry" href="src/TDataLoop.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TDataLoop:description">class description</a> 
+<a class="descrheadentry" href="#TDataLoop:Function_Members">function members</a>
+<a class="descrheadentry" href="#TDataLoop:Data_Members">data members</a>
+<a class="descrheadentry" href="#TDataLoop:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./HTMLDOC_Index.html">HTMLDOC</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TDataLoop</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TDataLoop:description"></a>class TDataLoop: public <a href="./StoppableThread.html">StoppableThread</a></h1>
+<div class="classdescr">
+</div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TDataLoop:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TDataLoop:_TDataLoop">~TDataLoop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AllThreadHeader"><span class="baseclass">StoppableThread::</span>AllThreadHeader</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AllThreadProgress"><span class="baseclass">StoppableThread::</span>AllThreadProgress</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AllThreadStatus"><span class="baseclass">StoppableThread::</span>AllThreadStatus</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AnyThreadRunning"><span class="baseclass">StoppableThread::</span>AnyThreadRunning</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:AnyThreadStatus"><span class="baseclass">StoppableThread::</span>AnyThreadStatus</a>()</td></tr>
+<tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TDataLoop:Class">Class</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:ClearAllQueues"><span class="baseclass">StoppableThread::</span>ClearAllQueues</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:ClearQueue">ClearQueue</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:ColumnWidth@1"><span class="baseclass">StoppableThread::</span>ColumnWidth</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:ColumnWidth"><span class="baseclass">StoppableThread::</span>ColumnWidth</a>(<a href="./ListOfTypes.html#size_t">size_t</a> val)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:EndStatus"><span class="baseclass">StoppableThread::</span>EndStatus</a>()</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TDataLoop.html">TDataLoop</a>*</td><td class="funcname"><a class="funcname" href="#TDataLoop:Get">Get</a>(string name = <span class="string">""</span>, <a href="./TRawFile.html">TRawFile</a>* source = nullptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static vector&lt;<a href="./StoppableThread.html">StoppableThread</a>*&gt;</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:GetAll"><span class="baseclass">StoppableThread::</span>GetAll</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="#TDataLoop:GetItemsCurrent">GetItemsCurrent</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="#TDataLoop:GetItemsPopped">GetItemsPopped</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="#TDataLoop:GetItemsPushed">GetItemsPushed</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:GetNThreads"><span class="baseclass">StoppableThread::</span>GetNThreads</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="#TDataLoop:GetRate">GetRate</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:GetSelfStopping">GetSelfStopping</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">const</span> <a href="./TRawFile.html">TRawFile</a>&amp;</td><td class="funcname"><a class="funcname" href="#TDataLoop:GetSource">GetSource</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#TDataLoop:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:IsPaused"><span class="baseclass">StoppableThread::</span>IsPaused</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:IsRunning"><span class="baseclass">StoppableThread::</span>IsRunning</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:Iteration">Iteration</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Join"><span class="baseclass">StoppableThread::</span>Join</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:join_status_thread"><span class="baseclass">StoppableThread::</span>join_status_thread</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Name"><span class="baseclass">StoppableThread::</span>Name</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:OnEnd">OnEnd</a>()</td></tr>
+<tr class="func"><td class="funcret">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<a href="./TRawEvent.html">TRawEvent</a>&gt; &gt; &gt;&amp;</td><td class="funcname"><a class="funcname" href="#TDataLoop:OutputQueue">OutputQueue</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Pause"><span class="baseclass">StoppableThread::</span>Pause</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:PauseAll"><span class="baseclass">StoppableThread::</span>PauseAll</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Print"><span class="baseclass">StoppableThread::</span>Print</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Progress"><span class="baseclass">StoppableThread::</span>Progress</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:ReplaceSource">ReplaceSource</a>(<a href="./TRawFile.html">TRawFile</a>* new_source)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:ResetSource">ResetSource</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Resume"><span class="baseclass">StoppableThread::</span>Resume</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:ResumeAll"><span class="baseclass">StoppableThread::</span>ResumeAll</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:SendStop"><span class="baseclass">StoppableThread::</span>SendStop</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:SetSelfStopping">SetSelfStopping</a>(<span class="keyword">bool</span> self_stopping)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:ShowMembers">ShowMembers</a>(TMemberInspector&amp; insp) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:start_status_thread"><span class="baseclass">StoppableThread::</span>start_status_thread</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual string</td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Status"><span class="baseclass">StoppableThread::</span>Status</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:status_out"><span class="baseclass">StoppableThread::</span>status_out</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:status_out_loop"><span class="baseclass">StoppableThread::</span>status_out_loop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#size_t">size_t</a></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:StatusWidth@1"><span class="baseclass">StoppableThread::</span>StatusWidth</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:StatusWidth"><span class="baseclass">StoppableThread::</span>StatusWidth</a>(<a href="./ListOfTypes.html#size_t">size_t</a> val)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:Stop"><span class="baseclass">StoppableThread::</span>Stop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:stop_status_thread"><span class="baseclass">StoppableThread::</span>stop_status_thread</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./StoppableThread.html#StoppableThread:StopAll"><span class="baseclass">StoppableThread::</span>StopAll</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TDataLoop:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+
+</table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TDataLoop:CheckTObjectHashConsistency">CheckTObjectHashConsistency</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./TDataLoop.html">TDataLoop</a>&amp;</td><td class="funcname"><a class="funcname" href="#TDataLoop:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TDataLoop.html">TDataLoop</a>&amp; other)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TDataLoop:TDataLoop@1">TDataLoop</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TDataLoop:TDataLoop@2">TDataLoop</a>(<span class="keyword">const</span> <a href="./TDataLoop.html">TDataLoop</a>&amp; other)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TDataLoop:TDataLoop">TDataLoop</a>(string name, <a href="./TRawFile.html">TRawFile</a>* source)</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TDataLoop:Data_Members"></a>Data Members</h2>
+<div class="access" id="datapubl"><b>public:</b>
+<table class="data" id="tabdatapubl" cellspacing="0">
+<tr class="datainh"><td class="datatype">static thread</td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fStatusThread"><span class="baseclass">StoppableThread::</span>fStatusThread</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <span class="keyword">bool</span></td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fStatusThreadOn"><span class="baseclass">StoppableThread::</span>fStatusThreadOn</a></td><td></td></tr>
+
+</table></div>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#atomic_long">atomic_long</a></td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fInputSize"><span class="baseclass">StoppableThread::</span>fInputSize</a></td><td class="datadesc">number of items in the input (queue), only updated within Iteration(), so not</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#atomic_size_t">atomic_size_t</a></td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fItemsPopped"><span class="baseclass">StoppableThread::</span>fItemsPopped</a></td><td class="datadesc">number of items popped from input queue</td></tr>
+<tr class="datainh"><td class="datatype">string</td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fName"><span class="baseclass">StoppableThread::</span>fName</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static map&lt;string,<a href="./StoppableThread.html">StoppableThread</a>*&gt;</td><td class="dataname"><a href="./StoppableThread.html#StoppableThread:fThreadMap"><span class="baseclass">StoppableThread::</span>fThreadMap</a></td><td></td></tr>
+
+</table></div>
+<div class="access" id="datapriv"><b>private:</b>
+<table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#size_t">size_t</a></td><td class="dataname"><a name="TDataLoop:fEventsRead"></a>fEventsRead</td><td></td></tr>
+<tr class="data"><td class="datatype">shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;<a href="./TRawEvent.html">TRawEvent</a>&gt; &gt; &gt;</td><td class="dataname"><a name="TDataLoop:fOutputQueue"></a>fOutputQueue</td><td></td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">bool</span></td><td class="dataname"><a name="TDataLoop:fSelfStopping"></a>fSelfStopping</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./TRawFile.html">TRawFile</a>*</td><td class="dataname"><a name="TDataLoop:fSource"></a>fSource</td><td></td></tr>
+<tr class="data"><td class="datatype">mutex</td><td class="dataname"><a name="TDataLoop:fSourceMutex"></a>fSourceMutex</td><td></td></tr>
+
+</table></div>
+</div>
+<h2><a id="TDataLoop:Class_Charts"></a>Class Charts</h2>
+<map name="MapTDataLoop_Inh" id="MapTDataLoop_Inh">
+<area shape="rect" id="node3" href="./StoppableThread.html" title="StoppableThread" alt="" coords="5,16,311,76"/>
+</map>
+<map name="MapTDataLoop_InhMem" id="MapTDataLoop_InhMem">
+<area shape="rect" id="graph12" href="./StoppableThread.html" alt="" coords="224,63,312,157"/>
+<area shape="rect" id="graph13" href="./StoppableThread.html" alt="" coords="125,63,213,157"/>
+<area shape="rect" id="graph14" href="./StoppableThread.html" alt="" coords="27,63,115,157"/>
+<area shape="rect" id="graph15" href="./StoppableThread.html" alt="" coords="256,168,280,189"/>
+<area shape="rect" id="graph16" href="./StoppableThread.html" alt="" coords="224,200,312,469"/>
+<area shape="rect" id="graph17" href="./StoppableThread.html" alt="" coords="125,171,213,469"/>
+<area shape="rect" id="graph18" href="./StoppableThread.html" alt="" coords="27,171,115,469"/>
+<area shape="rect" id="graph11" href="./StoppableThread.html" title="StoppableThread" alt="" coords="16,16,323,480"/>
+</map>
+<map name="MapTDataLoop_Lib" id="MapTDataLoop_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="320,47,435,95"/>
+</map>
+<div class="tabs">
+<a id="imgTDataLoop_Inh" class="tabsel" href="inh/TDataLoop_Inh.png" onclick="javascript:return SetImg('Charts','inh/TDataLoop_Inh.png');">Inheritance</a>
+<a id="imgTDataLoop_InhMem" class="tab" href="inhmem/TDataLoop_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TDataLoop_InhMem.png');">Inherited Members</a>
+<a id="imgTDataLoop_Incl" class="tab" href="incl/TDataLoop_Incl.png" onclick="javascript:return SetImg('Charts','incl/TDataLoop_Incl.png');">Includes</a>
+<a id="imgTDataLoop_Lib" class="tab" href="lib/TDataLoop_Lib.png" onclick="javascript:return SetImg('Charts','lib/TDataLoop_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTDataLoop_Inh" src="inh/TDataLoop_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDataLoop:TDataLoop" href="src/TDataLoop.cxx.html#MCj51D">TDataLoop</a>(string name, <a href="./TRawFile.html">TRawFile</a>* source)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDataLoop:_TDataLoop" href="src/TDataLoop.cxx.html#RIx6NE">~TDataLoop</a>()</span><br />
+<div class="funccomm"><pre> delete source;
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TDataLoop.html">TDataLoop</a>* <a class="funcname" name="TDataLoop:Get" href="src/TDataLoop.cxx.html#pqdy4">Get</a>(string name = <span class="string">""</span>, <a href="./TRawFile.html">TRawFile</a>* source = nullptr)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDataLoop:ClearQueue" href="src/TDataLoop.cxx.html#CsEXZE">ClearQueue</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDataLoop:ReplaceSource" href="src/TDataLoop.cxx.html#g69a1C">ReplaceSource</a>(<a href="./TRawFile.html">TRawFile</a>* new_source)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDataLoop:ResetSource" href="src/TDataLoop.cxx.html#qh7.HE">ResetSource</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDataLoop:OnEnd" href="src/TDataLoop.cxx.html#AZD6cC">OnEnd</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TDataLoop:Iteration" href="src/TDataLoop.cxx.html#aNdlsC">Iteration</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::shared_ptr&lt;ThreadsafeQueue&lt;std::shared_ptr&lt;<a href="./TRawEvent.html">TRawEvent</a>&gt;&gt;&gt;&amp; <a class="funcname" name="TDataLoop:OutputQueue" href="src/TDataLoop.h.html#Ar7J1">OutputQueue</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TDataLoop.html#TDataLoop:fOutputQueue" title="shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;TRawEvent&gt; &gt; &gt; TDataLoop::fOutputQueue">fOutputQueue</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <a href="./TRawFile.html">TRawFile</a>&amp; <a class="funcname" name="TDataLoop:GetSource" href="src/TDataLoop.h.html#a.AO2E">GetSource</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> *<a href="./TDataLoop.html#TDataLoop:fSource" title="TRawFile* TDataLoop::fSource">fSource</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#size_t">size_t</a> <a class="funcname" name="TDataLoop:GetItemsPushed" href="src/TDataLoop.h.html#GD9j5D">GetItemsPushed</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TDataLoop.html#TDataLoop:fOutputQueue" title="shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;TRawEvent&gt; &gt; &gt; TDataLoop::fOutputQueue">fOutputQueue</a>-&gt;ItemsPushed(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#size_t">size_t</a> <a class="funcname" name="TDataLoop:GetItemsPopped" href="src/TDataLoop.h.html#mR9jID">GetItemsPopped</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TDataLoop.html#TDataLoop:fOutputQueue" title="shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;TRawEvent&gt; &gt; &gt; TDataLoop::fOutputQueue">fOutputQueue</a>-&gt;ItemsPopped(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#size_t">size_t</a> <a class="funcname" name="TDataLoop:GetItemsCurrent" href="src/TDataLoop.h.html#G6aFnE">GetItemsCurrent</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TDataLoop.html#TDataLoop:fOutputQueue" title="shared_ptr&lt;ThreadsafeQueue&lt;shared_ptr&lt;TRawEvent&gt; &gt; &gt; TDataLoop::fOutputQueue">fOutputQueue</a>-&gt;Size(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#size_t">size_t</a> <a class="funcname" name="TDataLoop:GetRate" href="src/TDataLoop.h.html#gdGthB">GetRate</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> 0; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TDataLoop:SetSelfStopping" href="src/TDataLoop.h.html#Ln9Vk">SetSelfStopping</a>(<span class="keyword">bool</span> self_stopping)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TDataLoop.html#TDataLoop:fSelfStopping" title="bool TDataLoop::fSelfStopping">fSelfStopping</a> = self_stopping; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TDataLoop:GetSelfStopping" href="src/TDataLoop.h.html#y7KY2B">GetSelfStopping</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TDataLoop.html#TDataLoop:fSelfStopping" title="bool TDataLoop::fSelfStopping">fSelfStopping</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDataLoop:TDataLoop" href="src/TDataLoop.h.html#VFh2KD">TDataLoop</a>(string name, <a href="./TRawFile.html">TRawFile</a>* source)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TDataLoop:TDataLoop@1" href="src/TDataLoop.h.html#s4SMnB">TDataLoop</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TDataLoop.html">TDataLoop</a>&amp; <a class="funcname" name="TDataLoop:operator_" href="src/TDataLoop.h.html#JbPR_C">operator=</a>(<span class="keyword">const</span> <a href="./TDataLoop.html">TDataLoop</a>&amp; other)</span><br />
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+
+<em>&raquo; Last changed: Tue Feb 19 14:45:48 2019 </em><em>&raquo; Last generated: 2019-02-19 14:45</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

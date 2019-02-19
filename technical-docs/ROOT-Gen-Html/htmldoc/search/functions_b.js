@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['kinvstheta',['KinVsTheta',['../class_t_reaction.html#a550684b6302fe73713847c02a6ddf9d7',1,'TReaction']]]
-];

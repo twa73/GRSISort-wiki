@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Tue Feb 19 12:18:27 2019            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>TRunInfo</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class TRunInfo','','TRunInfo.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/TRunInfo.h.html">header file</a>
+<a class="descrheadentry" href="src/TRunInfo.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#TRunInfo:description">class description</a> 
+<a class="descrheadentry" href="#TRunInfo:Function_Members">function members</a>
+<a class="descrheadentry" href="#TRunInfo:Data_Members">data members</a>
+<a class="descrheadentry" href="#TRunInfo:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">GRSISort</a>
+ &#187; <a class="locationlevel" href="./INCLUDE_Index.html">INCLUDE</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">TRunInfo</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="TRunInfo:description"></a>class TRunInfo: public <a href="./TSingleton_TRunInfo_.html">TSingleton&lt;TRunInfo&gt;</a></h1>
+<div class="classdescr">
+</div>
+</div></div>
+
+<div id="functions">
+<h2><a id="TRunInfo:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#TRunInfo:_TRunInfo">~TRunInfo</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:Add">Add</a>(<a href="./TRunInfo.html">TRunInfo</a>* runinfo)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:AddBadCycle">AddBadCycle</a>(<span class="keyword">int</span> bad_cycle)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./TEventBuildingLoop.html">TEventBuildingLoop</a>::EBuildMode</td><td class="funcname"><a class="funcname" href="#TRunInfo:BuildMode">BuildMode</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:CheckedHash"><span class="baseclass">TObject::</span>CheckedHash</a>()</td></tr>
+<tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#TRunInfo:Class">Class</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:Clear">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:ClearDate">ClearDate</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:ClearFullVersion">ClearFullVersion</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:ClearLibraryVersion">ClearLibraryVersion</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:ClearVersion">ClearVersion</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:Clone"><span class="baseclass">TObject::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Compare"><span class="baseclass">TObject::</span>Compare</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Copy"><span class="baseclass">TObject::</span>Copy</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>&amp; object) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:DistancetoPrimitive"><span class="baseclass">TObject::</span>DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Draw"><span class="baseclass">TObject::</span>Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DrawClass"><span class="baseclass">TObject::</span>DrawClass</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:DrawClone"><span class="baseclass">TObject::</span>DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Dump"><span class="baseclass">TObject::</span>Dump</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(TMethod* method, TObjArray* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ExecuteEvent"><span class="baseclass">TObject::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./TRunInfo.html">TRunInfo</a>*</td><td class="funcname"><a class="funcname" href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get"><span class="baseclass">TSingleton&lt;TRunInfo&gt;::</span>Get</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./TRunInfo.html">TRunInfo</a>*</td><td class="funcname"><a class="funcname" href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:GetAll"><span class="baseclass">TSingleton&lt;TRunInfo&gt;::</span>GetAll</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetCalFileData">GetCalFileData</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetCalFileName">GetCalFileName</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetDate">GetDate</a>()</td></tr>
+<tr class="func"><td class="funcret">static <a href="./TDetectorInformation.html">TDetectorInformation</a>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetDetectorInformation">GetDetectorInformation</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetFullVersion">GetFullVersion</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetLibraryVersion">GetLibraryVersion</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetName"><span class="baseclass">TObject::</span>GetName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetRunInfoFileData">GetRunInfoFileData</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetRunInfoFileName">GetRunInfoFileName</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetVersion">GetVersion</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetXMLODBFileData">GetXMLODBFileData</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TRunInfo:GetXMLODBFileName">GetXMLODBFileName</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HasInconsistentHash"><span class="baseclass">TObject::</span>HasInconsistentHash</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:HPGeArrayPosition">HPGeArrayPosition</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> TClass* cl) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Inspect"><span class="baseclass">TObject::</span>Inspect</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:InvertBit"><span class="baseclass">TObject::</span>InvertBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#TRunInfo:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:IsBadCycle">IsBadCycle</a>(<span class="keyword">int</span> cycle) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsEqual"><span class="baseclass">TObject::</span>IsEqual</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsFolder"><span class="baseclass">TObject::</span>IsFolder</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsOnHeap"><span class="baseclass">TObject::</span>IsOnHeap</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsSortable"><span class="baseclass">TObject::</span>IsSortable</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsZombie"><span class="baseclass">TObject::</span>IsZombie</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ls"><span class="baseclass">TObject::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Long64_t">Long64_t</a></td><td class="funcname"><a class="funcname" href="#TRunInfo:Merge">Merge</a>(<a href="./TCollection.html">TCollection</a>* list)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Notify"><span class="baseclass">TObject::</span>Notify</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Obsolete"><span class="baseclass">TObject::</span>Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete@1"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]@1"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><a href="./TRunInfo.html">TRunInfo</a>&amp;</td><td class="funcname"><a class="funcname" href="#TRunInfo:operator_">operator=</a>(<span class="keyword">const</span> <a href="./TRunInfo.html">TRunInfo</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TRunInfo:ParseInputData">ParseInputData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* inputdata = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"q"</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:Print">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:PrintBadCycles">PrintBadCycles</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:PrintDirectory"><span class="baseclass">TSingleton&lt;TRunInfo&gt;::</span>PrintDirectory</a>()</td></tr>
+<tr class="func"><td class="funcret">string</td><td class="funcname"><a class="funcname" href="#TRunInfo:PrintToString">PrintToString</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TRunInfo:ReadInfoFile">ReadInfoFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TRunInfo:ReadInfoFromFile">ReadInfoFromFile</a>(TFile* tempf = nullptr)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:RemoveBadCycle">RemoveBadCycle</a>(<span class="keyword">int</span> cycle)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="#TRunInfo:RunComment">RunComment</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:RunLength">RunLength</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:RunNumber">RunNumber</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:RunStart">RunStart</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">double</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:RunStop">RunStop</a>()</td></tr>
+<tr class="func"><td class="funcret">static string</td><td class="funcname"><a class="funcname" href="#TRunInfo:RunTitle">RunTitle</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Set"><span class="baseclass">TSingleton&lt;TRunInfo&gt;::</span>Set</a>(<a href="./TRunInfo.html">TRunInfo</a>* val)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetAnalysisTreeBranches">SetAnalysisTreeBranches</a>(TTree*)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetCalFileData">SetCalFileData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* data)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetCalFileName">SetCalFileName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetDate">SetDate</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetDetectorInformation">SetDetectorInformation</a>(<a href="./TDetectorInformation.html">TDetectorInformation</a>* inf)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetFullVersion">SetFullVersion</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetHPGeArrayPosition">SetHPGeArrayPosition</a>(<span class="keyword">const</span> <span class="keyword">double</span> arr_pos)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetLibraryVersion">SetLibraryVersion</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunComment">SetRunComment</a>(<span class="keyword">const</span> <span class="keyword">char</span>* run_comment)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunInfo">SetRunInfo</a>(<span class="keyword">int</span> runnum = 0, <span class="keyword">int</span> subrunnum = -1)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunInfoFile">SetRunInfoFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ffile)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunInfoFileName">SetRunInfoFileName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* fname)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunLength@1">SetRunLength</a>()</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunLength">SetRunLength</a>(<span class="keyword">double</span> tmp)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunNumber">SetRunNumber</a>(<span class="keyword">int</span> tmp)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunStart">SetRunStart</a>(<span class="keyword">double</span> tmp)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunStop">SetRunStop</a>(<span class="keyword">double</span> tmp)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetRunTitle">SetRunTitle</a>(<span class="keyword">const</span> <span class="keyword">char</span>* run_title)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetSubRunNumber">SetSubRunNumber</a>(<span class="keyword">int</span> tmp)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetVersion">SetVersion</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetXMLODBFileData">SetXMLODBFileData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* data)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SetXMLODBFileName">SetXMLODBFileName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:ShowMembers">ShowMembers</a>(TMemberInspector&amp; insp) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">int</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:SubRunNumber">SubRunNumber</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SysError"><span class="baseclass">TObject::</span>SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBit"><span class="baseclass">TObject::</span>TestBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBits"><span class="baseclass">TObject::</span>TestBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TRunInfo:TRunInfo">TRunInfo</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#TRunInfo:TRunInfo@1">TRunInfo</a>(<span class="keyword">const</span> <a href="./TRunInfo.html">TRunInfo</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:UseCurrentStyle"><span class="baseclass">TObject::</span>UseCurrentStyle</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:WriteInfoFile">WriteInfoFile</a>(<span class="keyword">const</span> string&amp; filename)</td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">bool</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:WriteToRoot">WriteToRoot</a>(TFile* fileptr = nullptr)</td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, <a href="./ListOfTypes.html#va_list">va_list</a> va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
+
+</table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TRunInfo:CheckTObjectHashConsistency">CheckTObjectHashConsistency</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TRunInfo:trim">trim</a>(string*, <span class="keyword">const</span> string&amp; trimChars = <span class="string">" \f\n\r\t\v"</span>)</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="TRunInfo:Data_Members"></a>Data Members</h2>
+<div class="access" id="datapubl"><b>public:</b>
+<table class="data" id="tabdatapubl" cellspacing="0">
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kBitMask"><span class="baseclass">TObject::</span>kBitMask</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCanDelete"><span class="baseclass">TObject::</span>kCanDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCannotPick"><span class="baseclass">TObject::</span>kCannotPick</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kHasUUID"><span class="baseclass">TObject::</span>kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kInconsistent"><span class="baseclass">TObject::</span>kInconsistent</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kInvalidObject"><span class="baseclass">TObject::</span>kInvalidObject</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kIsOnHeap"><span class="baseclass">TObject::</span>kIsOnHeap</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kIsReferenced"><span class="baseclass">TObject::</span>kIsReferenced</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kMustCleanup"><span class="baseclass">TObject::</span>kMustCleanup</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kNoContextMenu"><span class="baseclass">TObject::</span>kNoContextMenu</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kNotDeleted"><span class="baseclass">TObject::</span>kNotDeleted</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EDeprecatedStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kOverwrite"><span class="baseclass">TObject::</span>kOverwrite</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kSingleKey"><span class="baseclass">TObject::</span>kSingleKey</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kWriteDelete"><span class="baseclass">TObject::</span>kWriteDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kZombie"><span class="baseclass">TObject::</span>kZombie</a></td><td></td></tr>
+
+</table></div>
+<div class="access" id="datapriv"><b>private:</b>
+<table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype">vector&lt;<span class="keyword">int</span>&gt;</td><td class="dataname"><a name="TRunInfo:fBadCycleList"></a>fBadCycleList</td><td class="datadesc">!List of bad cycles to be used for cycle rejection</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">unsigned</span> <span class="keyword">int</span></td><td class="dataname"><a name="TRunInfo:fBadCycleListSize"></a>fBadCycleListSize</td><td></td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TRunInfo:fCalFile"></a>fCalFile</td><td class="datadesc">Cal File to load into Cal of tree</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TRunInfo:fCalFileName"></a>fCalFileName</td><td class="datadesc">Name of calfile that generated cal</td></tr>
+<tr class="data"><td class="datatype">static string</td><td class="dataname"><a name="TRunInfo:fDate"></a>fDate</td><td class="datadesc">The date of the last commit used in this version - GRSI_GIT_COMMIT_TIME from GVersion.h</td></tr>
+<tr class="data"><td class="datatype"><a href="./TDetectorInformation.html">TDetectorInformation</a>*</td><td class="dataname"><a name="TRunInfo:fDetectorInformation"></a>fDetectorInformation</td><td class="datadesc">! pointer to detector specific information (set by each parser library)</td></tr>
+<tr class="data"><td class="datatype">static string</td><td class="dataname"><a name="TRunInfo:fFullVersion"></a>fFullVersion</td><td class="datadesc">The full version of GRSISort that generated the file (includes last commit) - GRSI_GIT_COMMIT from GVersion.h</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TRunInfo:fHPGeArrayPosition"></a>fHPGeArrayPosition</td><td class="datadesc">Position of the HPGe Array (default = 110.0 mm );</td></tr>
+<tr class="data"><td class="datatype">static string</td><td class="dataname"><a name="TRunInfo:fLibraryVersion"></a>fLibraryVersion</td><td class="datadesc">The version of the parser/file library that generated the file</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TRunInfo:fRunComment"></a>fRunComment</td><td class="datadesc">The comment on the run</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TRunInfo:fRunInfoFile"></a>fRunInfoFile</td><td class="datadesc">The contents of the run info file</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TRunInfo:fRunInfoFileName"></a>fRunInfoFileName</td><td class="datadesc">The name of the Run info file</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TRunInfo:fRunLength"></a>fRunLength</td><td class="datadesc">The length of the current run in seconds</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TRunInfo:fRunNumber"></a>fRunNumber</td><td class="datadesc">The current run number</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TRunInfo:fRunStart"></a>fRunStart</td><td class="datadesc">The start  of the current run in seconds</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">double</span></td><td class="dataname"><a name="TRunInfo:fRunStop"></a>fRunStop</td><td class="datadesc">The stop   of the current run in seconds</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TRunInfo:fRunTitle"></a>fRunTitle</td><td class="datadesc">The title of the run</td></tr>
+<tr class="data"><td class="datatype"><span class="keyword">int</span></td><td class="dataname"><a name="TRunInfo:fSubRunNumber"></a>fSubRunNumber</td><td class="datadesc">The current sub run number</td></tr>
+<tr class="data"><td class="datatype">static string</td><td class="dataname"><a name="TRunInfo:fVersion"></a>fVersion</td><td class="datadesc">The version of GRSISort that generated the file - GRSI_RELEASE from GVersion.h</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TRunInfo:fXMLODBFile"></a>fXMLODBFile</td><td class="datadesc">The odb</td></tr>
+<tr class="data"><td class="datatype">string</td><td class="dataname"><a name="TRunInfo:fXMLODBFileName"></a>fXMLODBFileName</td><td class="datadesc">Name of XML Odb file</td></tr>
+
+</table></div>
+</div>
+<h2><a id="TRunInfo:Class_Charts"></a>Class Charts</h2>
+<map name="MapTRunInfo_Inh" id="MapTRunInfo_Inh">
+<area shape="rect" id="node3" href="./TSingleton_TRunInfo_.html" title="TSingleton&lt;TRunInfo&gt;" alt="" coords="263,9,505,44"/>
+</map>
+<map name="MapTRunInfo_InhMem" id="MapTRunInfo_InhMem">
+<area shape="rect" id="graph12" href="./TSingleton_TRunInfo_.html" alt="" coords="344,63,629,99"/>
+<area shape="rect" id="graph13" href="./TSingleton_TRunInfo_.html" alt="" coords="541,109,629,217"/>
+<area shape="rect" id="graph14" href="./TSingleton_TRunInfo_.html" alt="" coords="443,109,531,232"/>
+<area shape="rect" id="graph15" href="./TSingleton_TRunInfo_.html" alt="" coords="344,109,432,232"/>
+<area shape="rect" id="graph11" href="./TSingleton_TRunInfo_.html" title="TSingleton&lt;TRunInfo&gt;" alt="" coords="333,16,640,243"/>
+</map>
+<map name="MapTRunInfo_Lib" id="MapTRunInfo_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="320,47,435,95"/>
+</map>
+<div class="tabs">
+<a id="imgTRunInfo_Inh" class="tabsel" href="inh/TRunInfo_Inh.png" onclick="javascript:return SetImg('Charts','inh/TRunInfo_Inh.png');">Inheritance</a>
+<a id="imgTRunInfo_InhMem" class="tab" href="inhmem/TRunInfo_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/TRunInfo_InhMem.png');">Inherited Members</a>
+<a id="imgTRunInfo_Incl" class="tab" href="incl/TRunInfo_Incl.png" onclick="javascript:return SetImg('Charts','incl/TRunInfo_Incl.png');">Includes</a>
+<a id="imgTRunInfo_Lib" class="tab" href="lib/TRunInfo_Lib.png" onclick="javascript:return SetImg('Charts','lib/TRunInfo_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapTRunInfo_Inh" src="inh/TRunInfo_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TRunInfo:ReadInfoFromFile" href="src/TRunInfo.cxx.html#WAUyMD">ReadInfoFromFile</a>(TFile* tempf = nullptr)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TRunInfo:TRunInfo" href="src/TRunInfo.cxx.html#yan9aE">TRunInfo</a>()</span><br />
+<div class="funccomm"><pre> Default ctor for <a href="./TRunInfo.html">TRunInfo</a>. The default values are:
+
+ <a href="./TRunInfo.html#TRunInfo:fHPGeArrayPosition" title="double TRunInfo::fHPGeArrayPosition">fHPGeArrayPosition</a> = 110.0;
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:Print" href="src/TRunInfo.cxx.html#pZwBgE">Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>) const</span><br />
+<div class="funccomm"><pre> Prints the <a href="./TRunInfo.html">TRunInfo</a>. Options:
+ a: <a href="./TRunInfo.html#TRunInfo:Print" title="void TRunInfo::Print(Option_t* opt = &quot;&quot;) const">Print</a> out more details.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:Clear" href="src/TRunInfo.cxx.html#tL7ZME">Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Clears the <a href="./TRunInfo.html">TRunInfo</a>. Currently, there are no available
+ options.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunInfo" href="src/TRunInfo.cxx.html#K_Ymh">SetRunInfo</a>(<span class="keyword">int</span> runnum = 0, <span class="keyword">int</span> subrunnum = -1)</span><br />
+<div class="funccomm"><pre> Sets the run info. This figures out what systems are available.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetAnalysisTreeBranches" href="src/TRunInfo.cxx.html#dGOPeE">SetAnalysisTreeBranches</a>(TTree* )</span><br />
+<div class="funccomm"><pre> Currently does nothing.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TRunInfo:ReadInfoFile" href="src/TRunInfo.cxx.html#qWd.PB">ReadInfoFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> <a href="./#TObject:Read" title="Int_t TObject::Read(const char* name)">Read</a> in a run info file. These files have the extension .info.
+ An example can be found in the <span class="string">"examples"</span> directory.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="TRunInfo:ParseInputData" href="src/TRunInfo.cxx.html#r6N4WE">ParseInputData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* inputdata = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">"q"</span>)</span><br />
+<div class="funccomm"><pre> A helper function to parse the run info file.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:trim" href="src/TRunInfo.cxx.html#JlnkEB">trim</a>(string* , <span class="keyword">const</span> string&amp; trimChars = <span class="string">" \f\n\r\t\v"</span>)</span><br />
+<div class="funccomm"><pre> Removes the string <span class="string">"trimCars"</span> from  the string 'line'
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Long64_t">Long64_t</a> <a class="funcname" name="TRunInfo:Merge" href="src/TRunInfo.cxx.html#piuflB">Merge</a>(<a href="./TCollection.html">TCollection</a>* list)</span><br />
+<div class="funccomm"><pre> Loop through the <a href="./TCollection.html">TCollection</a> of TRunInfos, and add each entry to the original <a href="./TRunInfo.html">TRunInfo</a> List
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:PrintBadCycles" href="src/TRunInfo.cxx.html#og3mxC">PrintBadCycles</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:AddBadCycle" href="src/TRunInfo.cxx.html#iM21dE">AddBadCycle</a>(<span class="keyword">int</span> bad_cycle)</span><br />
+<div class="funccomm"><pre>   auto bad_cycle_it = std::binary_(<a href="./TRunInfo.html#TRunInfo:fBadCycleList" title="vector&lt;int&gt; TRunInfo::fBadCycleList">fBadCycleList</a>.begin(), <a href="./TRunInfo.html#TRunInfo:fBadCycleList" title="vector&lt;int&gt; TRunInfo::fBadCycleList">fBadCycleList</a>.end(),bad_cycle);
+  if(bad_cycle_it == <a href="./TRunInfo.html#TRunInfo:fBadCycleList" title="vector&lt;int&gt; TRunInfo::fBadCycleList">fBadCycleList</a>.end()){
+        <a href="./TRunInfo.html#TRunInfo:fBadCycleList" title="vector&lt;int&gt; TRunInfo::fBadCycleList">fBadCycleList</a>.push_back(bad_cycle);
+        std::sort(<a href="./TRunInfo.html#TRunInfo:fBadCycleList" title="vector&lt;int&gt; TRunInfo::fBadCycleList">fBadCycleList</a>.begin(), <a href="./TRunInfo.html#TRunInfo:fBadCycleList" title="vector&lt;int&gt; TRunInfo::fBadCycleList">fBadCycleList</a>.end());
+}
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:RemoveBadCycle" href="src/TRunInfo.cxx.html#aIrrBC">RemoveBadCycle</a>(<span class="keyword">int</span> cycle)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TRunInfo:IsBadCycle" href="src/TRunInfo.cxx.html#WlGaFE">IsBadCycle</a>(<span class="keyword">int</span> cycle) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TRunInfo:WriteToRoot" href="src/TRunInfo.cxx.html#uv1I3B">WriteToRoot</a>(TFile* fileptr = nullptr)</span><br />
+<div class="funccomm"><pre> Writes <a href="./#TObject:Info" title="void TObject::Info(const char* method, const char* msgfmt) const">Info</a> File information to the tree
+ Maintain old gDirectory info
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">bool</span> <a class="funcname" name="TRunInfo:WriteInfoFile" href="src/TRunInfo.cxx.html#zSdQO">WriteInfoFile</a>(<span class="keyword">const</span> string&amp; filename)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">std::string <a class="funcname" name="TRunInfo:PrintToString" href="src/TRunInfo.cxx.html#Clr55B">PrintToString</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* opt = <span class="string">""</span>)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TEventBuildingLoop.html">TEventBuildingLoop</a>::EBuildMode <a class="funcname" name="TRunInfo:BuildMode" href="src/TRunInfo.cxx.html#JFSAGD">BuildMode</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TRunInfo:_TRunInfo" href="src/TRunInfo.h.html#b6OsmC">~TRunInfo</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="TRunInfo:TRunInfo" href="src/TRunInfo.h.html#jxy9zC">TRunInfo</a>()</span><br />
+<div class="funccomm"><pre> root forces me have this here instead
+ of a private class member in
+ order to write this class to a tree.
+ pcb.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetVersion" href="src/TRunInfo.h.html#Ls.0JD">GetVersion</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TRunInfo.html#TRunInfo:fVersion" title="string TRunInfo::fVersion">fVersion</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:ClearVersion" href="src/TRunInfo.h.html#E8SJeE">ClearVersion</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TRunInfo.html#TRunInfo:fVersion" title="string TRunInfo::fVersion">fVersion</a>.clear(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetVersion" href="src/TRunInfo.h.html#qVKAv">SetVersion</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetFullVersion" href="src/TRunInfo.h.html#NGoUpE">GetFullVersion</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TRunInfo.html#TRunInfo:fFullVersion" title="string TRunInfo::fFullVersion">fFullVersion</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:ClearFullVersion" href="src/TRunInfo.h.html#ZUynGB">ClearFullVersion</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TRunInfo.html#TRunInfo:fFullVersion" title="string TRunInfo::fFullVersion">fFullVersion</a>.clear(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetFullVersion" href="src/TRunInfo.h.html#nG1rAB">SetFullVersion</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetDate" href="src/TRunInfo.h.html#VdC3S">GetDate</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TRunInfo.html#TRunInfo:fDate" title="string TRunInfo::fDate">fDate</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:ClearDate" href="src/TRunInfo.h.html#Lm99M">ClearDate</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TRunInfo.html#TRunInfo:fDate" title="string TRunInfo::fDate">fDate</a>.clear(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetDate" href="src/TRunInfo.h.html#dIM1JC">SetDate</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetLibraryVersion" href="src/TRunInfo.h.html#DME12E">GetLibraryVersion</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TRunInfo.html#TRunInfo:fLibraryVersion" title="string TRunInfo::fLibraryVersion">fLibraryVersion</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:ClearLibraryVersion" href="src/TRunInfo.h.html#Mpc0zD">ClearLibraryVersion</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TRunInfo.html#TRunInfo:fLibraryVersion" title="string TRunInfo::fLibraryVersion">fLibraryVersion</a>.clear(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetLibraryVersion" href="src/TRunInfo.h.html#Qjp0hB">SetLibraryVersion</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ver)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunNumber" href="src/TRunInfo.h.html#IGFUHB">SetRunNumber</a>(<span class="keyword">int</span> tmp)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunNumber" title="int TRunInfo::fRunNumber">fRunNumber</a> = tmp; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetSubRunNumber" href="src/TRunInfo.h.html#Xn.Z4E">SetSubRunNumber</a>(<span class="keyword">int</span> tmp)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fSubRunNumber" title="int TRunInfo::fSubRunNumber">fSubRunNumber</a> = tmp; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TRunInfo:RunNumber" href="src/TRunInfo.h.html#IdsjW">RunNumber</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunNumber" title="int TRunInfo::fRunNumber">fRunNumber</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">int</span> <a class="funcname" name="TRunInfo:SubRunNumber" href="src/TRunInfo.h.html#FFBF5">SubRunNumber</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fSubRunNumber" title="int TRunInfo::fSubRunNumber">fSubRunNumber</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunTitle" href="src/TRunInfo.h.html#blKKnD">SetRunTitle</a>(<span class="keyword">const</span> <span class="keyword">char</span>* run_title)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">if</span>(run_title != nullptr) <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunTitle" title="string TRunInfo::fRunTitle">fRunTitle</a>.assign(run_title); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunComment" href="src/TRunInfo.h.html#vU5XOC">SetRunComment</a>(<span class="keyword">const</span> <span class="keyword">char</span>* run_comment)</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">if</span>(run_comment != nullptr) <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunComment" title="string TRunInfo::fRunComment">fRunComment</a>.assign(run_comment); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname">std::string <a class="funcname" name="TRunInfo:RunTitle" href="src/TRunInfo.h.html#r__JtE">RunTitle</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunTitle" title="string TRunInfo::fRunTitle">fRunTitle</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname">std::string <a class="funcname" name="TRunInfo:RunComment" href="src/TRunInfo.h.html#YIgrXE">RunComment</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunComment" title="string TRunInfo::fRunComment">fRunComment</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunStart" href="src/TRunInfo.h.html#wX2bxB">SetRunStart</a>(<span class="keyword">double</span> tmp)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunStart" title="double TRunInfo::fRunStart">fRunStart</a> = tmp; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunStop" href="src/TRunInfo.h.html#vCNKmC">SetRunStop</a>(<span class="keyword">double</span> tmp)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunStop" title="double TRunInfo::fRunStop">fRunStop</a> = tmp; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunLength" href="src/TRunInfo.h.html#thKdWB">SetRunLength</a>(<span class="keyword">double</span> tmp)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunLength" title="double TRunInfo::fRunLength">fRunLength</a> = tmp; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunLength@1" href="src/TRunInfo.h.html#EbFteC">SetRunLength</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunLength" title="double TRunInfo::fRunLength">fRunLength</a> = <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunStop" title="double TRunInfo::fRunStop">fRunStop</a> - <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunStart" title="double TRunInfo::fRunStart">fRunStart</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TRunInfo:RunStart" href="src/TRunInfo.h.html#YaeQIC">RunStart</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunStart" title="double TRunInfo::fRunStart">fRunStart</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TRunInfo:RunStop" href="src/TRunInfo.h.html#rnzwfE">RunStop</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunStop" title="double TRunInfo::fRunStop">fRunStop</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TRunInfo:RunLength" href="src/TRunInfo.h.html#BQ48C">RunLength</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunLength" title="double TRunInfo::fRunLength">fRunLength</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetCalFileName" href="src/TRunInfo.h.html#zGWdvD">SetCalFileName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fCalFileName" title="string TRunInfo::fCalFileName">fCalFileName</a>.assign(name); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetCalFileData" href="src/TRunInfo.h.html#uJulWB">SetCalFileData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* data)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fCalFile" title="string TRunInfo::fCalFile">fCalFile</a>.assign(data); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetXMLODBFileName" href="src/TRunInfo.h.html#SC3TWC">SetXMLODBFileName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fXMLODBFileName" title="string TRunInfo::fXMLODBFileName">fXMLODBFileName</a>.assign(name); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetXMLODBFileData" href="src/TRunInfo.h.html#LSy6gD">SetXMLODBFileData</a>(<span class="keyword">const</span> <span class="keyword">char</span>* data)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fXMLODBFile" title="string TRunInfo::fXMLODBFile">fXMLODBFile</a>.assign(data); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetCalFileName" href="src/TRunInfo.h.html#kEMbUC">GetCalFileName</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fCalFileName" title="string TRunInfo::fCalFileName">fCalFileName</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetCalFileData" href="src/TRunInfo.h.html#C7nc2E">GetCalFileData</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fCalFile" title="string TRunInfo::fCalFile">fCalFile</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetXMLODBFileName" href="src/TRunInfo.h.html#kdlRjC">GetXMLODBFileName</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fXMLODBFileName" title="string TRunInfo::fXMLODBFileName">fXMLODBFileName</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetXMLODBFileData" href="src/TRunInfo.h.html#Z_WnPD">GetXMLODBFileData</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fXMLODBFile" title="string TRunInfo::fXMLODBFile">fXMLODBFile</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetRunInfoFileName" href="src/TRunInfo.h.html#WNLhDD">GetRunInfoFileName</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunInfoFileName" title="string TRunInfo::fRunInfoFileName">fRunInfoFileName</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> <span class="keyword">char</span>* <a class="funcname" name="TRunInfo:GetRunInfoFileData" href="src/TRunInfo.h.html#l3EB1C">GetRunInfoFileData</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunInfoFile" title="string TRunInfo::fRunInfoFile">fRunInfoFile</a>.c_str(); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunInfoFileName" href="src/TRunInfo.h.html#e9pfgC">SetRunInfoFileName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* fname)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunInfoFileName" title="string TRunInfo::fRunInfoFileName">fRunInfoFileName</a>.assign(fname); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetRunInfoFile" href="src/TRunInfo.h.html#doviNB">SetRunInfoFile</a>(<span class="keyword">const</span> <span class="keyword">char</span>* ffile)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fRunInfoFile" title="string TRunInfo::fRunInfoFile">fRunInfoFile</a>.assign(ffile); }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetHPGeArrayPosition" href="src/TRunInfo.h.html#ypOSHE">SetHPGeArrayPosition</a>(<span class="keyword">const</span> <span class="keyword">double</span> arr_pos)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fHPGeArrayPosition" title="double TRunInfo::fHPGeArrayPosition">fHPGeArrayPosition</a> = arr_pos; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">double</span> <a class="funcname" name="TRunInfo:HPGeArrayPosition" href="src/TRunInfo.h.html#Ltld6">HPGeArrayPosition</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fHPGeArrayPosition" title="double TRunInfo::fHPGeArrayPosition">fHPGeArrayPosition</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:Add" href="src/TRunInfo.h.html#V1b2pE">Add</a>(<a href="./TRunInfo.html">TRunInfo</a>* runinfo)</span><br />
+<div class="funccomm"><pre> add the run length together
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="TRunInfo:SetDetectorInformation" href="src/TRunInfo.h.html#K1UrlC">SetDetectorInformation</a>(<a href="./TDetectorInformation.html">TDetectorInformation</a>* inf)</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fDetectorInformation" title="TDetectorInformation* TRunInfo::fDetectorInformation">fDetectorInformation</a> = inf; }</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./TDetectorInformation.html">TDetectorInformation</a>* <a class="funcname" name="TRunInfo:GetDetectorInformation" href="src/TRunInfo.h.html#QUEjaE">GetDetectorInformation</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./TSingleton_TRunInfo_.html#TSingleton_TRunInfo_:Get" title="TRunInfo* TSingleton&lt;TRunInfo&gt;::Get()">Get</a>()-><a href="./TRunInfo.html#TRunInfo:fDetectorInformation" title="TDetectorInformation* TRunInfo::fDetectorInformation">fDetectorInformation</a>; }</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+
+<em>&raquo; Last changed: Tue Feb 19 12:18:28 2019 </em><em>&raquo; Last generated: 2019-02-19 12:18</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>
