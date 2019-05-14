@@ -99,6 +99,6 @@ Coincidence-gated electron (or gamma-ray) peak areas must be normalized accordin
 
 The event-mixed weights are generally preferred as these account for variations in the detector-pair efficiency and occur (in part) due to the shadowing effect of PACES upon particular HPGe crystals. The event-mixed weights correspond to the coincidence-gated electron (or gamma-ray) peak areas previously described; however the electron-gamma matrices are constructed from hits in separate physics events - that is hits not identified as time-correlated in the data unpacking phase. For an example of how to include event-mixed matrices in a PROOF script, see the link below for gamma-gamma angular correlations:
 
-
+[Slides available here](https://github.com/MikeBowry/WikiPics/blob/master/angular_correlation_practical_guide_Feb2019.pdf)
 
 # Final gamma-electron angular correlation
