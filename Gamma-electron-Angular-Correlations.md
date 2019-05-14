@@ -84,5 +84,11 @@ The `PACESAngleMap` **key** (by default the key is the first column of the array
 [[https://github.com/MikeBowry/WikiPics/blob/master/index.png|alt=index]]
 [[https://github.com/MikeBowry/WikiPics/blob/master/bin.png|alt=bin]]
 
-# Processing the electron-gamma matrices
+# Electron-gamma coincidence matrices
+
+As a minimum requirement, two versions of the electron-gamma matrix should be produced by PROOF for each angle bin corresponding to `time-correlated' and `time-random' coincidence events, defined by appropriate cuts on the electron-gamma time-difference spectrum. The time-random matrix is scaled by a factor equal to the ratio of the time-correlated and time-random cuts, then subtracted from the time-correlated matrix. 
+
+A projection of the (time-random background-subtracted) time-correlated matrix is produced by gating on the ICE or gamma-peak of interest. A second projection gated on the Compton background near the peak must be subtracted from the first projection. This subtraction and (importantly) the scaling of the Compton background are handled automatically by the **jROOT** and **TBGSubtraction()** environments available via GitHub (J.Smallcombe) and GRSISort respectively. It is recommended to use either of these applications when performing this step. The peak areas extracted from the appropriately-subtracted projections form the basis of the angular correlation measurement.
+
+# Normalization
 # Final gamma-electron angular correlation
