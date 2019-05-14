@@ -86,9 +86,15 @@ The `PACESAngleMap` **key** (by default the key is the first column of the array
 
 # Electron-gamma coincidence matrices
 
-As a minimum requirement, two versions of the electron-gamma matrix should be produced by PROOF for each angle bin corresponding to `time-correlated' and `time-random' coincidence events, defined by appropriate cuts on the electron-gamma time-difference spectrum. The time-random matrix is scaled by a factor equal to the ratio of the time-correlated and time-random cuts, then subtracted from the time-correlated matrix. 
+As a minimum requirement, two versions of the electron-gamma matrix should be produced by PROOF for each angle bin corresponding to _time-correlated_ and _time-random_ coincidence events, defined by appropriate cuts on the electron-gamma time-difference spectrum. The time-random matrix is scaled by a factor equal to the ratio of the time-correlated and time-random cuts, then subtracted from the time-correlated matrix. 
 
-A projection of the (time-random background-subtracted) time-correlated matrix is produced by gating on the ICE or gamma-peak of interest. A second projection gated on the Compton background near the peak must be subtracted from the first projection. This subtraction and (importantly) the scaling of the Compton background are handled automatically by the **jROOT** and **TBGSubtraction()** environments available via GitHub (J.Smallcombe) and GRSISort respectively. It is recommended to use either of these applications when performing this step. The peak areas extracted from the appropriately-subtracted projections form the basis of the angular correlation measurement.
+A projection of the (time-random background-subtracted) time-correlated matrix is produced by gating on the ICE or gamma-peak of interest. A second projection gated on the Compton background near the peak must also be subtracted. This subtraction and (importantly) the scaling of the Compton background are handled automatically by the **jROOT** and **TBGSubtraction()** environments available via GitHub (J.Smallcombe) and GRSISort respectively. It is recommended to use either of these applications when performing this step. The peak areas extracted from the appropriately-subtracted projections form the basis of the angular correlation measurement.
 
 # Normalization
+
+Coincidence-gated electron (or gamma-ray) peak areas must be normalized according to the weight of each angle bin. Similar to gamma-gamma angular correlations this may be achieved via two different methods by using either
+
+*  the combinatorial weight `w` of the bin (i.e. integer representing number of detector pairs) or
+*  the event-mixed weight determined from _uncorrelated_ physics events.
+
 # Final gamma-electron angular correlation
