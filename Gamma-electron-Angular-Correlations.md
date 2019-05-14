@@ -1,10 +1,6 @@
-# Introduction
-
-Internal conversion electrons (ICEs) compete with gamma-decay to remove energy from excited nuclear states. In particular this decay mode is favoured in cases where the atomic number and transition multipolarity are high, and where the transition energy is low (or combinations of all three). The ICE energy is equal to the difference between the transition energy and the atomic binding energy of a given electronic orbital.
-
 # PACES
 
-The Pentagonal Array for Conversion Electron Spectroscopy (PACES) at TRIUMF is an ancillary detection system used for high-resolution conversion electron spectroscopy. PACES is comprised of 5 individual lithium-drifted silicon (Si(Li)) detectors arranged within a Delrin sphere and a cold finger providing thermal contact with liquid nitrogen enclosed in an insulated dewar. It is installed at the GRIFFIN facility facing downstream, forming the upstream portion of the vacuum chamber.
+The Pentagonal Array for Conversion Electron Spectroscopy (PACES) at TRIUMF is an ancillary detection system used for in-vacuum high-resolution conversion electron spectroscopy. PACES is comprised of 5 lithium-drifted silicon (Si(Li)) detectors.
 
 # GRIFFIN-PACES angles
 
