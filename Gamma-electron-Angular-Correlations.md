@@ -92,9 +92,13 @@ A projection of the (time-random background-subtracted) time-correlated matrix i
 
 # Normalization
 
-Coincidence-gated electron (or gamma-ray) peak areas must be normalized according to the weight of each angle bin. Similar to gamma-gamma angular correlations this may be achieved via two different methods by using either
+Coincidence-gated electron (or gamma-ray) peak areas must be normalized according to the weight of each angle bin. Similar to gamma-gamma angular correlations this is achieved by using either
 
-*  the combinatorial weight `w` of the bin (i.e. integer representing number of detector pairs) or
+*  the combinatorial weight of the bin (i.e. integer representing number of detector pairs) or
 *  the event-mixed weight determined from _uncorrelated_ physics events.
+
+The event-mixed weights are generally preferred as these account for variations in the detector-pair efficiency and occur (in part) due to the shadowing effect of PACES upon particular HPGe crystals. The event-mixed weights correspond to the coincidence-gated electron (or gamma-ray) peak areas previously described; however the electron-gamma matrices are constructed from hits in separate physics events - that is hits not identified as time-correlated in the data unpacking phase. For an example of how to include event-mixed matrices in a PROOF script, see the link below for gamma-gamma angular correlations:
+
+
 
 # Final gamma-electron angular correlation
