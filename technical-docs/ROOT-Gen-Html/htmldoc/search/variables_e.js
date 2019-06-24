@@ -1,0 +1,17 @@
+var searchData=
+[
+  ['optstat_5fentries',['optstat_entries',['../classpygui_1_1mainwindow_1_1_main_window.html#a1237f46523f040b07087434ca0d1bcf6',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fintegral',['optstat_integral',['../classpygui_1_1mainwindow_1_1_main_window.html#ad9af3d1bf1a288e61d7c80b4bff2770c',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fkurt',['optstat_kurt',['../classpygui_1_1mainwindow_1_1_main_window.html#a910adacd1f80accda0946ca383530f46',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fkurt_5ferr',['optstat_kurt_err',['../classpygui_1_1mainwindow_1_1_main_window.html#a230837e67ba10979c8c8fecdca566cb6',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fmean',['optstat_mean',['../classpygui_1_1mainwindow_1_1_main_window.html#adad3b357bb4d3410b2159248235e2ea5',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fmean_5ferr',['optstat_mean_err',['../classpygui_1_1mainwindow_1_1_main_window.html#aef1ad44a155450316defa67feb7a9ff9',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fname',['optstat_name',['../classpygui_1_1mainwindow_1_1_main_window.html#ae8baac98b3c93a763efd3a020f9d6a5b',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5foverflow',['optstat_overflow',['../classpygui_1_1mainwindow_1_1_main_window.html#a689e13d36b79baf1fd506cc6eb6ac381',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5frms',['optstat_rms',['../classpygui_1_1mainwindow_1_1_main_window.html#ad812883dde40760f20869c8d71ffea7d',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5frms_5ferr',['optstat_rms_err',['../classpygui_1_1mainwindow_1_1_main_window.html#a72cf0ba04ae7bdd40e0f655e60649ed1',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fskew',['optstat_skew',['../classpygui_1_1mainwindow_1_1_main_window.html#a4fe5930ff2464fc25ba1f62b7e3c5020',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5fskew_5ferr',['optstat_skew_err',['../classpygui_1_1mainwindow_1_1_main_window.html#a889d850b092be8298266de506a7cb6a3',1,'pygui::mainwindow::MainWindow']]],
+  ['optstat_5funderflow',['optstat_underflow',['../classpygui_1_1mainwindow_1_1_main_window.html#a853e4d783ca2d260717a76cce02a5b3f',1,'pygui::mainwindow::MainWindow']]],
+  ['osciflag',['osciflag',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#ac67fcd4d77d5c4674a040f1d7b504c81',1,'TPulseAnalyzer::WaveFormPar']]]
+];
