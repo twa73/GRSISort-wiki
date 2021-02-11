@@ -9,7 +9,7 @@
 
 <a name="unfixable" />
 
-# UnFixable Problems
+# Unfixable Problems
 
 <a name="unfixableArch" />
 
@@ -31,7 +31,7 @@ More instructions to follow...
 <a name="fixablehtml" />
 
 ### HTML
-- If you receive the error `sh: 1: dot: not found` it is because you do not have a **dot** writing program. This is not really an issue, but to avoid this, install a dot program like **graphviz**. (On Ubuntu `sudo apt-get install graphviz`) 
+- If you receive the error `sh: 1: dot: not found` it is because you do not have a **dot** writing program. This is not really an issue, but to avoid this, install a dot program like **graphviz**. (On Ubuntu `sudo apt-get install graphviz`)
 
 ## ROOT
 <a name="rootproblems" />
@@ -59,7 +59,7 @@ You're missing the 32 bit libc dev package:
 
 On **Ubuntu** it's called `libc6-dev-i386` - do `sudo apt-get install libc6-dev-i386`. See below for extra instructions for Ubuntu 12.04.
 
-On **Red Hat** distros, the package name is `glibc-devel.i686` 
+On **Red Hat** distros, the package name is `glibc-devel.i686`
 
 On **CentOS 5.8**, the package name is `glibc-devel.i386`
 

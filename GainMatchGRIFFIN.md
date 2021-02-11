@@ -53,19 +53,19 @@ The most commonly used variables are declared in the `main()` function at the bo
 It is occasionally useful to combine the counts from multiple subruns or runs before gain-matching (to use low-intensity peaks, for example.) This code has been set up to accomodate this. If the user lists multiple filenames in the command line call of GainMatchGRIFFIN, the output will differ slightly. All individual ROOT fragment files will have corresponding `calib_<raw filename>` and `newcal_<raw filename>` files. After these are created, however, `hadd` will be called to sum them into new ROOT files, respectively called `calib_hst_summed.root` and `newcal_summed.root`. The individual ROOT files will contain the charge and energy histograms listed above, but the TGraphs and the diagnostic histograms will exist on in the summed files.
 
 ## Smaller functions
-###`make_calibration_histograms`
+### `make_calibration_histograms`
 This function takes in the `FragmentTree` ROOT file and outputs a ROOT file containing histograms for all channels between `minchannel` and `maxchannel`, excluding those in the `channelstoskip` vector.
 
-###`create_gainmatch_graphs`
+### `create_gainmatch_graphs`
 This function finds peaks in the uncalibrated spectra and correlates them with calibrated values. It takes in the `calib_<raw filename>` ROOT file created in [`make_calibration_histograms`](#make_calibration_histograms) that contains the uncalibrated spectra and adds graphs to that file. Those graphs show the uncalibrated peak value vs. the calibrated peak value for an individual crystal. The calibrated values are NOT set to the values given by the user in the `fittingpeaks` vector, but are instead set to the values of the peaks found in the first spectrum - the histogram associated with channel number `minchannel`. If a rough energy calibration is selected, a linear calibration is applied to convert the calibrated charge values to roughly calibrated energy values.
 
-###`create_GRIFFIN_cal`
+### `create_GRIFFIN_cal`
 This function takes in the graphs created in [`create_gainmatch_graphs`](#create_gainmatch_graphs), linearly fits them, and creates a calibration file that may later be used to calibrate GRIFFIN data. It also outputs two diagnostic images: an overlay of all the graphs used, with points colored to represent the color of the crystal they show (`GRIFFIN_calgraph.png`), and histograms showing the slope, offset, and chi-square of each linear fit (`GRIFFIN_fittingparams.png`).
 
-###recalibrate_spectra
+### recalibrate_spectra
 This function takes in the original data file and the newly created calibration file (`GRIFFINcal.cal`). It outputs a new ROOT file with calibrated histograms (`newcal_<raw filename>`).
 
-###check_calibration
+### check_calibration
 This function takes in the ROOT file with calibrated histograms that was created in the [`recalibrate_spectra`](#recalibrate_spectra) function (`newcal_<raw filename>`) and measures the FWHM and FWTM of the peaks listed in the `peakstocheck` vector. It also sums all the channels together and measures the FWHM and FWTM of that summed histogram. It then outputs two diagnostic images: one comparing the distribution of FWHM among all the crystals to the FWHM of the summed spectrum (`GRIFFIN_FWHM_diagnostic.png`) and another comparing the distribution of the FWTM/FWHM ratio among all the crystals to the FWTM/FWHM ratio of the summed spetrcum (`GRIFFIN_FWratio_diagnostic.png`), both using [candle plots](#candle-plots).
 
 ## Candle plots

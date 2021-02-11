@@ -144,7 +144,7 @@ This can be done anywhere, but is probably best done from within the GRSISort di
 
 ## Step 7: Compile and use library
 
-In order to compile the library please follow the instructions of the library you chose to download.
+In order to compile the library you typically just call ```make``` in the directory of the library. If this does not work please follow the instructions of the library you chose to download.
 Multiple libraries can be installed in parallel.
 To use a library you can either provide the location of the libraries .so file on the command line, or edit .grsirc to include a line
 ```

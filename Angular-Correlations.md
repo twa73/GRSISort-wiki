@@ -28,7 +28,8 @@ All three of these can be done at once with `GenerateMaps`. If you have a typica
 GenerateMaps(16,110)
 ```
 where the first argument (16 in the example) is the number of clovers and the second (110 in the example) is the radial distance of the detectors in mm.
-###3D array creation
+
+### 3D array creation
 This is performed entirely outside the scope of the class, though the maps will be useful in assigning gamma-gamma coincidences to the proper angular index. Please create your 3D array as a `ThnSparse` with axes of gamma energy, gamma energy, and angular index. It should be symmetric in gamma-gamma energy. Time-random background subtraction should be performed here.
 
 ## Apply energy gates
