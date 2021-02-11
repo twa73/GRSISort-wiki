@@ -1787,17 +1787,16 @@ var group___sorting =
       [ "fScaler", "class_t_scaler_data.html#a0d517fc765541dfea323cc93811e46f2", null ]
     ] ],
     [ "TSingleton", "class_t_singleton.html", [
-      [ "TSingleton", "class_t_singleton.html#a24ffc0f2cf4f724323cc829acaf3eae5", null ],
-      [ "~TSingleton", "class_t_singleton.html#a41fa175a41b41e51bddba6e2f81cc2bd", null ],
+      [ "TSingleton", "group___sorting.html#ga24ffc0f2cf4f724323cc829acaf3eae5", null ],
+      [ "~TSingleton", "group___sorting.html#ga41fa175a41b41e51bddba6e2f81cc2bd", null ],
       [ "AddCurrent", "class_t_singleton.html#a2f7267a1f4ee117043f2d1afcbf98167", null ],
       [ "Get", "class_t_singleton.html#ad34b50d44153d55f27468a8e89a7c169", null ],
       [ "GetAll", "class_t_singleton.html#abe224e59765edfecf18f8e04443543cf", null ],
       [ "PrintDirectory", "class_t_singleton.html#a2f3382a25957ab5bad96a9f083d6e176", null ],
       [ "Set", "class_t_singleton.html#ab3f625c1553ed57a8af3eae3bb92781c", null ],
-      [ "fDir", "class_t_singleton.html#af7866ea5852871898635425251d9daee", null ],
-      [ "fSingleton", "class_t_singleton.html#abe0721695e8c7e46a95c6801676662bd", null ]
+      [ "fDir", "group___sorting.html#ga9513ce653b3004bfc4511c2b8c3312b8", null ],
+      [ "fSingleton", "group___sorting.html#ga4a3540330119eb2bba0bf90b85fb55ad", null ]
     ] ],
-    [ "TSingleton< T >", "class_t_singleton_3_01_t_01_4.html", null ],
     [ "TSortingDiagnostics", "class_t_sorting_diagnostics.html", [
       [ "TSortingDiagnostics", "class_t_sorting_diagnostics.html#aefccbfc8eddd1575b98354cf0b587fa6", null ],
       [ "TSortingDiagnostics", "class_t_sorting_diagnostics.html#aaea7d17a2da8035b5d58402e16d3cf44", null ],
@@ -2053,6 +2052,10 @@ var group___sorting =
       [ "kUser", "group___sorting.html#ggab2f7d9a4aad2358e33b9d06138a12f10a3ea6f9f6140b78f0c5a050d926097f56", null ],
       [ "kForce", "group___sorting.html#ggab2f7d9a4aad2358e33b9d06138a12f10a5f1cd95b5107d0b426a753a484765cc9", null ]
     ] ],
+    [ "TSingleton", "group___sorting.html#ga24ffc0f2cf4f724323cc829acaf3eae5", null ],
+    [ "~TSingleton", "group___sorting.html#ga41fa175a41b41e51bddba6e2f81cc2bd", null ],
     [ "operator<<", "group___sorting.html#gabc14051632450b3cd6c49771454e78b5", null ],
+    [ "fDir", "group___sorting.html#ga9513ce653b3004bfc4511c2b8c3312b8", null ],
+    [ "fSingleton", "group___sorting.html#ga4a3540330119eb2bba0bf90b85fb55ad", null ],
     [ "nulFileName", "group___sorting.html#ga09ef713eb9ba7e13963a94f4ef049bde", null ]
 ];

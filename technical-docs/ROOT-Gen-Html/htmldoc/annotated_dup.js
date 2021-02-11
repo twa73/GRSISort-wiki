@@ -205,7 +205,6 @@ var annotated_dup =
     [ "TSingleDecay", "class_t_single_decay.html", "class_t_single_decay" ],
     [ "TSinglePeak", "class_t_single_peak.html", "class_t_single_peak" ],
     [ "TSingleton", "class_t_singleton.html", "class_t_singleton" ],
-    [ "TSingleton< T >", "class_t_singleton_3_01_t_01_4.html", null ],
     [ "TSortingDiagnostics", "class_t_sorting_diagnostics.html", "class_t_sorting_diagnostics" ],
     [ "TSourceList", "class_t_source_list.html", "class_t_source_list" ],
     [ "TSRIM", "class_t_s_r_i_m.html", "class_t_s_r_i_m" ],

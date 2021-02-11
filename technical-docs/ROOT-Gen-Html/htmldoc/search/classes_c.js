@@ -165,7 +165,6 @@ var searchData=
   ['tsingledecay',['TSingleDecay',['../class_t_single_decay.html',1,'']]],
   ['tsinglepeak',['TSinglePeak',['../class_t_single_peak.html',1,'']]],
   ['tsingleton',['TSingleton',['../class_t_singleton.html',1,'']]],
-  ['tsingleton_3c_20t_20_3e',['TSingleton&lt; T &gt;',['../class_t_singleton_3_01_t_01_4.html',1,'']]],
   ['tsingleton_3c_20tparserlibrary_20_3e',['TSingleton&lt; TParserLibrary &gt;',['../class_t_singleton.html',1,'']]],
   ['tsingleton_3c_20tparsingdiagnostics_20_3e',['TSingleton&lt; TParsingDiagnostics &gt;',['../class_t_singleton.html',1,'']]],
   ['tsingleton_3c_20tppg_20_3e',['TSingleton&lt; TPPG &gt;',['../class_t_singleton.html',1,'']]],

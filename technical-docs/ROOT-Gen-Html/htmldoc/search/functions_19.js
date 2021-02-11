@@ -176,7 +176,7 @@ var searchData=
   ['_7etsilihit',['~TSiLiHit',['../class_t_si_li_hit.html#ad20b1692666cd898911f056650ef7ce4',1,'TSiLiHit']]],
   ['_7etsingledecay',['~TSingleDecay',['../class_t_single_decay.html#a22d975f7df20f5f212b7a108522b8e07',1,'TSingleDecay']]],
   ['_7etsinglepeak',['~TSinglePeak',['../class_t_single_peak.html#a2b4d6ac5ae930e21ff1a528aeac82d5e',1,'TSinglePeak']]],
-  ['_7etsingleton',['~TSingleton',['../class_t_singleton.html#a41fa175a41b41e51bddba6e2f81cc2bd',1,'TSingleton']]],
+  ['_7etsingleton',['~TSingleton',['../group___sorting.html#ga41fa175a41b41e51bddba6e2f81cc2bd',1,'TSingleton']]],
   ['_7etsortingdiagnostics',['~TSortingDiagnostics',['../class_t_sorting_diagnostics.html#a1054dc508013cee35c6fb898c7ccc374',1,'TSortingDiagnostics']]],
   ['_7etsourcelist',['~TSourceList',['../class_t_source_list.html#a06bc17bafa3e8a6e5cc2b278b1310eea',1,'TSourceList']]],
   ['_7etsrim',['~TSRIM',['../class_t_s_r_i_m.html#a3885477d847cfe8eeca7c7b9bb075d69',1,'TSRIM']]],

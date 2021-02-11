@@ -381,7 +381,6 @@ var hierarchy =
     [ "TSignalHandler", null, [
       [ "TGRSIInterruptHandler", "class_t_g_r_s_i_interrupt_handler.html", null ]
     ] ],
-    [ "TSingleton< T >", "class_t_singleton_3_01_t_01_4.html", null ],
     [ "TSRIM", "class_t_s_r_i_m.html", null ],
     [ "TTdrEventHeader", "struct_t_tdr_event_header.html", null ],
     [ "TTransientBits< T >", "class_t_transient_bits.html", null ],

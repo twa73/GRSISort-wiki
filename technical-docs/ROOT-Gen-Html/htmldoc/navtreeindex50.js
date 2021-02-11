@@ -1,10 +1,5 @@
 var NAVTREEINDEX50 =
 {
-"classpygui_1_1mainwindow_1_1_main_window.html#a4fe5930ff2464fc25ba1f62b7e3c5020":[8,0,1,2,0,54],
-"classpygui_1_1mainwindow_1_1_main_window.html#a5105f588a12947fdb5b1b66bd385cd53":[8,0,1,2,0,9],
-"classpygui_1_1mainwindow_1_1_main_window.html#a5125c0683732fa5b45881eddecd09cac":[8,0,1,2,0,10],
-"classpygui_1_1mainwindow_1_1_main_window.html#a5333ca6f7c04633d233c005d6fd2ad72":[8,0,1,2,0,23],
-"classpygui_1_1mainwindow_1_1_main_window.html#a571318de38600f76107f04db762823e3":[8,0,1,2,0,2],
 "classpygui_1_1mainwindow_1_1_main_window.html#a5983b33fac0b22432fe79ab1e9cfa6ac":[8,0,1,2,0,42],
 "classpygui_1_1mainwindow_1_1_main_window.html#a62a7b616644d5338d06a1e3b147d93b6":[8,0,1,2,0,14],
 "classpygui_1_1mainwindow_1_1_main_window.html#a66a4043ec22b77e2a1fd4e900c87fad1":[8,0,1,2,0,17],
@@ -226,8 +221,8 @@ var NAVTREEINDEX50 =
 "ex_analysis_8cxx.html#ab8d359c25ac11e723252ff5fdaf4569f":[9,0,1,0,0],
 "ex_analysis_8cxx_source.html":[9,0,1,0],
 "files.html":[9,0],
-"functions.html":[8,3,0,0],
 "functions.html":[8,3,0],
+"functions.html":[8,3,0,0],
 "functions_0x7e.html":[8,3,0,26],
 "functions_a.html":[8,3,0,1],
 "functions_b.html":[8,3,0,2],
@@ -237,8 +232,8 @@ var NAVTREEINDEX50 =
 "functions_enum.html":[8,3,4],
 "functions_eval.html":[8,3,5],
 "functions_f.html":[8,3,0,6],
-"functions_func.html":[8,3,1],
 "functions_func.html":[8,3,1,0],
+"functions_func.html":[8,3,1],
 "functions_func_0x7e.html":[8,3,1,24],
 "functions_func_a.html":[8,3,1,1],
 "functions_func_b.html":[8,3,1,2],
@@ -249,5 +244,10 @@ var NAVTREEINDEX50 =
 "functions_func_g.html":[8,3,1,7],
 "functions_func_h.html":[8,3,1,8],
 "functions_func_i.html":[8,3,1,9],
-"functions_func_j.html":[8,3,1,10]
+"functions_func_j.html":[8,3,1,10],
+"functions_func_k.html":[8,3,1,11],
+"functions_func_l.html":[8,3,1,12],
+"functions_func_m.html":[8,3,1,13],
+"functions_func_n.html":[8,3,1,14],
+"functions_func_o.html":[8,3,1,15]
 };
