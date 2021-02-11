@@ -1,0 +1,27 @@
+var james__gate__subtract_8cpp =
+[
+    [ "hist_gater", "james__gate__subtract_8cpp.html#ab590f3998f951766c54468d27e243d4f", null ],
+    [ "hist_gater", "james__gate__subtract_8cpp.html#a0cd30fc9f1e5e73632613f4ae3da0ff0", null ],
+    [ "hist_gater", "james__gate__subtract_8cpp.html#a8c4c6032966fb0841f2d785685743363", null ],
+    [ "hist_gater", "james__gate__subtract_8cpp.html#a609c24fac2a341506584cf384e8c0c8f", null ],
+    [ "hist_gater", "james__gate__subtract_8cpp.html#ad42ff64e731eea830aba241e9771f772", null ],
+    [ "hist_gater", "james__gate__subtract_8cpp.html#aafc95b01c845099731d723fda482deb2", null ],
+    [ "hist_gater", "james__gate__subtract_8cpp.html#a247e2fb85fc888bf45bfed6c844cba5c", null ],
+    [ "hist_gater_anti", "james__gate__subtract_8cpp.html#a7eecfa6a6f046283dd4d46a98558d35e", null ],
+    [ "hist_gater_anti", "james__gate__subtract_8cpp.html#a6cf63da61fd0a16ebf3fd6ba155f244c", null ],
+    [ "hist_gater_anti", "james__gate__subtract_8cpp.html#a1e2571be215e9e1f4fc014431f824c4c", null ],
+    [ "hist_gater_anti_bin", "james__gate__subtract_8cpp.html#a399f7147ce2a5d52e9f6d95fed6f35bd", null ],
+    [ "hist_gater_anti_bin", "james__gate__subtract_8cpp.html#ad286d4ad490bd5f6e1fa70e41a9ffe79", null ],
+    [ "hist_gater_anti_bin", "james__gate__subtract_8cpp.html#a556fe739fb5b711e15865e530ff73604", null ],
+    [ "hist_gater_bin", "james__gate__subtract_8cpp.html#ae07102a8d7d5c70946d2d05f55b8f1c3", null ],
+    [ "hist_gater_bin", "james__gate__subtract_8cpp.html#a53ace0c20061e4122c10de2e91720e43", null ],
+    [ "hist_gater_bin", "james__gate__subtract_8cpp.html#a2e3f8160d865310a3b4f36b1a1671581", null ],
+    [ "hist_gater_bin", "james__gate__subtract_8cpp.html#a48fe2c240cd4e89e0f47c86e96c5f61c", null ],
+    [ "hist_gater_bin", "james__gate__subtract_8cpp.html#a6574cf808a7472116564b08852e030fa", null ],
+    [ "hist_gater_bin", "james__gate__subtract_8cpp.html#a0b777b58d9c6af9778cc830eaa9fc697", null ],
+    [ "hist_proj", "james__gate__subtract_8cpp.html#a9bdd7f53525a7d9ba3b7621dc95236eb", null ],
+    [ "hist_proj", "james__gate__subtract_8cpp.html#aeaf5a1b0b9d80f86a49016846d8e2f8f", null ],
+    [ "scaled_back_subtract", "james__gate__subtract_8cpp.html#a98a669b7ee773f763c89437a10f95e0c", null ],
+    [ "scaled_back_subtract", "james__gate__subtract_8cpp.html#afe2a1e7e00beb64906cba50742dea092", null ],
+    [ "TH3axisreseter", "james__gate__subtract_8cpp.html#a7f6a380bd6b26871545e686e4c2fe9f6", null ]
+];

@@ -1,0 +1,26 @@
+var _g_root_commands_8cxx =
+[
+    [ "AddFileToGUI", "_g_root_commands_8cxx.html#a34a1021756d0e5ca063535cdd918c3b4", null ],
+    [ "AddOffset", "_g_root_commands_8cxx.html#a50981678fc5ab2b883c87fb0c09374a8", null ],
+    [ "AltPhotoPeakFit", "_g_root_commands_8cxx.html#a6ed1172a52bd081d62d60c904ec30f6d", null ],
+    [ "Commands", "_g_root_commands_8cxx.html#a966ba00178025d0e04598c7a61ad54fe", null ],
+    [ "DoubleGausFit", "_g_root_commands_8cxx.html#a1becf79d279247a18fc222afaa7a5741", null ],
+    [ "GausFit", "_g_root_commands_8cxx.html#a27eccda51cc983a328347098e9d146a0", null ],
+    [ "GetProjection", "_g_root_commands_8cxx.html#ab4f62f748a09699162254933e78c377f", null ],
+    [ "GrabFit", "_g_root_commands_8cxx.html#a6650779b233eec97d1f08a0bf0245307", null ],
+    [ "GrabHist", "_g_root_commands_8cxx.html#a8bdb8d14e076f470ac176dca013e56af", null ],
+    [ "GUIIsRunning", "_g_root_commands_8cxx.html#abcb2ba0300a286a289269fa8031fc4ec", null ],
+    [ "Help", "_g_root_commands_8cxx.html#a54d17a6d0bb758f26b9dda4c6d8e8da8", null ],
+    [ "LabelPeaks", "_g_root_commands_8cxx.html#aae377205258da15b69c954235a219bce", null ],
+    [ "MergeStrings", "_g_root_commands_8cxx.html#a7c3b1993d37be1b93f9dc0620bf4dc8e", null ],
+    [ "operator&", "_g_root_commands_8cxx.html#a40e5eaa28fbf598b49109b23efe54700", null ],
+    [ "PhotoPeakFit", "_g_root_commands_8cxx.html#abbec76db93bd0ff69fe3273dde2bbfb9", null ],
+    [ "Prompt", "_g_root_commands_8cxx.html#a8c34f6a89e2746264a9e6c43dbd1cf86", null ],
+    [ "RemovePeaks", "_g_root_commands_8cxx.html#a00e5b21bb430109f7b39c25fecfb4e23", null ],
+    [ "ShowPeaks", "_g_root_commands_8cxx.html#ac01b4fd6a551e0f46ca1682c01a6308f", null ],
+    [ "StartGUI", "_g_root_commands_8cxx.html#abd9b9bf20e6408d2c5d9e8729d262201", null ],
+    [ "Version", "_g_root_commands_8cxx.html#ad827984c977cbf89bbdac5f856d53efd", null ],
+    [ "gAnalysis", "_g_root_commands_8cxx.html#a5e7379c3f6cdea31637fbc3cf6db2cc4", null ],
+    [ "gFragment", "_g_root_commands_8cxx.html#a9466a3fc20b906b9c5de0f00dee3ff94", null ],
+    [ "gui_is_running", "_g_root_commands_8cxx.html#af590e05c04dcb1afb95061a057325ebe", null ]
+];
