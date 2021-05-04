@@ -47,6 +47,7 @@
 
 **Useful resources**  
 
+- [GRIFFIN theses](https://griffin.triumf.ca/theses.html)
 - [[Troubleshooting | Troubleshooting ]]  
 - [[Error Reporting | errorreport]]
 - [[Running GRSISort|Running-GRSISort]]
