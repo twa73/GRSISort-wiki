@@ -2,26 +2,15 @@ var class_t_unpacked_event =
 [
     [ "TUnpackedEvent", "class_t_unpacked_event.html#a7719a814c1ad7c7670354a3d0c587006", null ],
     [ "~TUnpackedEvent", "class_t_unpacked_event.html#ab6e9b7b3001265ca7d20956028ddfaaf", null ],
-    [ "TUnpackedEvent", "class_t_unpacked_event.html#a7719a814c1ad7c7670354a3d0c587006", null ],
-    [ "~TUnpackedEvent", "class_t_unpacked_event.html#ab6e9b7b3001265ca7d20956028ddfaaf", null ],
-    [ "AddDetector", "class_t_unpacked_event.html#a498ae974fb5e3e3442af64285ea5e650", null ],
     [ "AddDetector", "class_t_unpacked_event.html#a498ae974fb5e3e3442af64285ea5e650", null ],
     [ "AddRawData", "class_t_unpacked_event.html#abf1d3298d6d7d285aad05410a171c6d4", null ],
-    [ "AddRawData", "class_t_unpacked_event.html#abf1d3298d6d7d285aad05410a171c6d4", null ],
-    [ "Build", "class_t_unpacked_event.html#a6a5918c68e0a8e425a8de75d49eb24ca", null ],
     [ "Build", "class_t_unpacked_event.html#a6a5918c68e0a8e425a8de75d49eb24ca", null ],
     [ "BuildHits", "class_t_unpacked_event.html#ad9188d5ce70b53f1f40aa5e4c022bdbb", null ],
-    [ "BuildHits", "class_t_unpacked_event.html#ad9188d5ce70b53f1f40aa5e4c022bdbb", null ],
-    [ "ClearRawData", "class_t_unpacked_event.html#adc22f528e8b4e989671b295658f6bc58", null ],
     [ "ClearRawData", "class_t_unpacked_event.html#adc22f528e8b4e989671b295658f6bc58", null ],
     [ "GetDetector", "class_t_unpacked_event.html#a7c3278b80d951ff1c414febf57fb1003", null ],
-    [ "GetDetector", "class_t_unpacked_event.html#a69383cad4b549ac9b82d1a1ecdc10184", null ],
     [ "GetDetector", "class_t_unpacked_event.html#a42c9be8d62b135c8f45382c7b3b85610", null ],
-    [ "GetDetector", "class_t_unpacked_event.html#addae1350dd432dbe9ad72b0a75d4f723", null ],
-    [ "GetDetectors", "class_t_unpacked_event.html#aaa3cf8f1fc833de1b296130c01410dcd", null ],
     [ "GetDetectors", "class_t_unpacked_event.html#aaa3cf8f1fc833de1b296130c01410dcd", null ],
     [ "Size", "class_t_unpacked_event.html#aa12abad191b215a386606300f11f23cd", null ],
-    [ "Size", "class_t_unpacked_event.html#aa12abad191b215a386606300f11f23cd", null ],
-    [ "fDetectors", "class_t_unpacked_event.html#a61e57b985c68a45289d9b2ddc5e81275", null ],
-    [ "fFragments", "class_t_unpacked_event.html#ac5996e326c8384ded25fe0e4d00557a6", null ]
+    [ "fDetectors", "class_t_unpacked_event.html#a49817fa08d75507a565029f5f8c83a8f", null ],
+    [ "fFragments", "class_t_unpacked_event.html#ad785aba59778188400b8b1a75afce23c", null ]
 ];

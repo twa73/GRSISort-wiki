@@ -12,8 +12,8 @@
 <!-- Node2 -->
 <g id="node1" class="node">
 <title>Node2</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="234,-85.5 234,-104.5 302,-104.5 302,-85.5 234,-85.5"/>
-<text text-anchor="middle" x="268" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TEpicsFrag</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="234,-65.5 234,-84.5 302,-84.5 302,-65.5 234,-65.5"/>
+<text text-anchor="middle" x="268" y="-72.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TEpicsFrag</text>
 </g>
 <!-- Node3 -->
 <g id="node2" class="node">
@@ -24,14 +24,8 @@
 <!-- Node3&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node3&#45;&gt;Node2</title>
-<path fill="none" stroke="#191970" d="M100.1763,-126.9071C129.8143,-119.4677 176.241,-110.6647 216,-101 221.8432,-99.5796 228.0148,-97.9319 233.9854,-96.4"/>
-<polygon fill="#191970" stroke="#191970" points="99.2063,-123.5432 90.4317,-129.4808 100.9939,-130.3111 99.2063,-123.5432"/>
-</g>
-<!-- Node3&#45;&gt;Node2 -->
-<g id="edge2" class="edge">
-<title>Node3&#45;&gt;Node2</title>
-<path fill="none" stroke="#191970" d="M107.358,-139.81C136.9697,-136.0982 179.322,-127.9158 216,-119 230.9732,-115.3603 248.1028,-110.2279 258.4809,-104.6429"/>
-<polygon fill="#191970" stroke="#191970" points="106.6052,-136.3725 97.059,-140.9683 107.3876,-143.3287 106.6052,-136.3725"/>
+<path fill="none" stroke="#191970" d="M107.1034,-131.1136C136.9733,-124.2845 179.7954,-113.4042 216,-100 227.6483,-95.6874 240.2125,-89.6871 250.0724,-84.646"/>
+<polygon fill="#191970" stroke="#191970" points="106.1004,-127.7515 97.1103,-133.3576 107.6342,-134.5815 106.1004,-127.7515"/>
 </g>
 <!-- Node4 -->
 <g id="node3" class="node">
@@ -41,11 +35,11 @@
 <text text-anchor="middle" x="70" y="-87" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> TEpicsFrag &gt;</text>
 </g>
 <!-- Node4&#45;&gt;Node2 -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>Node4&#45;&gt;Node2</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M139.3523,-95C171.3636,-95 207.9308,-95 233.8763,-95"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="139.1384,-91.5001 129.1383,-95 139.1383,-98.5001 139.1384,-91.5001"/>
-<text text-anchor="middle" x="187" y="-98" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fScalerMap</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M139.3523,-87.9947C171.3636,-84.7613 207.9308,-81.0676 233.8763,-78.4468"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="138.7359,-84.5391 129.1383,-89.0264 139.4395,-91.5036 138.7359,-84.5391"/>
+<text text-anchor="middle" x="187" y="-88" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fScalerMap</text>
 </g>
 <!-- Node5 -->
 <g id="node4" class="node">
@@ -54,11 +48,11 @@
 <text text-anchor="middle" x="70" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">std::vector&lt; float &gt;</text>
 </g>
 <!-- Node5&#45;&gt;Node2 -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>Node5&#45;&gt;Node2</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M133.6269,-62.4235C159.3175,-67.3514 189.1762,-73.4796 216,-80 222.6649,-81.6201 229.7571,-83.536 236.4909,-85.4472"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="134.1106,-58.9529 123.6333,-60.5264 132.8051,-65.8301 134.1106,-58.9529"/>
-<text text-anchor="middle" x="187" y="-83" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fData</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M136.7394,-56.065C161.6731,-58.3077 190.1926,-61.2896 216,-65 221.8238,-65.8373 227.9856,-66.8809 233.9526,-67.9754"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="136.9219,-52.5676 126.6542,-55.1802 136.31,-59.5409 136.9219,-52.5676"/>
+<text text-anchor="middle" x="187" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fData</text>
 </g>
 <!-- Node6 -->
 <g id="node5" class="node">
@@ -67,12 +61,12 @@
 <text text-anchor="middle" x="70" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">std::vector&lt; std::string &gt;</text>
 </g>
 <!-- Node6&#45;&gt;Node2 -->
-<g id="edge5" class="edge">
+<g id="edge4" class="edge">
 <title>Node6&#45;&gt;Node2</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M150.3314,-18.2277C172.5701,-22.8084 196.0584,-29.9306 216,-41 235.8002,-51.9909 252.7072,-72.9877 261.5068,-85.3111"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="150.6977,-14.7345 140.2187,-16.2968 149.3848,-21.6103 150.6977,-14.7345"/>
-<text text-anchor="middle" x="187" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fNameList</text>
-<text text-anchor="middle" x="187" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">fName</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M150.1394,-14.1917C172.1737,-17.427 195.6038,-22.8855 216,-32 233.5402,-39.8383 249.9478,-55.281 259.4755,-65.3681"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="150.5046,-10.7095 140.1296,-12.8565 149.579,-17.6481 150.5046,-10.7095"/>
+<text text-anchor="middle" x="187" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fNameList</text>
+<text text-anchor="middle" x="187" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">fName</text>
 </g>
 </g>
 </svg>

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['gz_5fheader',['gz_header',['../zlib_8h.html#a2c394ffb61e707fba3c6b1a36704b305',1,'zlib.h']]],
-  ['gz_5fheaderp',['gz_headerp',['../zlib_8h.html#a40e9dcc294796d99b25e98fb06477fc8',1,'zlib.h']]],
-  ['gzfile',['gzFile',['../zlib_8h.html#acd0143ddd532551631ecc7093fd7adfc',1,'zlib.h']]]
+  ['info_5fmap',['info_map',['../class_t_g_r_s_i_sort_list.html#a30eaf76dfa74cab13630c147b7c0594e',1,'TGRSISortList']]]
 ];

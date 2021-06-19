@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['opaque',['opaque',['../structz__stream__s.html#ab72467f908d2ce65d5b42ee6556ef8bb',1,'z_stream_s']]],
   ['optstat_5fentries',['optstat_entries',['../classpygui_1_1mainwindow_1_1_main_window.html#a1237f46523f040b07087434ca0d1bcf6',1,'pygui::mainwindow::MainWindow']]],
   ['optstat_5fintegral',['optstat_integral',['../classpygui_1_1mainwindow_1_1_main_window.html#ad9af3d1bf1a288e61d7c80b4bff2770c',1,'pygui::mainwindow::MainWindow']]],
   ['optstat_5fkurt',['optstat_kurt',['../classpygui_1_1mainwindow_1_1_main_window.html#a910adacd1f80accda0946ca383530f46',1,'pygui::mainwindow::MainWindow']]],
@@ -14,6 +13,5 @@ var searchData=
   ['optstat_5fskew',['optstat_skew',['../classpygui_1_1mainwindow_1_1_main_window.html#a4fe5930ff2464fc25ba1f62b7e3c5020',1,'pygui::mainwindow::MainWindow']]],
   ['optstat_5fskew_5ferr',['optstat_skew_err',['../classpygui_1_1mainwindow_1_1_main_window.html#a889d850b092be8298266de506a7cb6a3',1,'pygui::mainwindow::MainWindow']]],
   ['optstat_5funderflow',['optstat_underflow',['../classpygui_1_1mainwindow_1_1_main_window.html#a853e4d783ca2d260717a76cce02a5b3f',1,'pygui::mainwindow::MainWindow']]],
-  ['os',['os',['../structgz__header__s.html#a2708d3180d30b0563e3c2c965865cd4f',1,'gz_header_s']]],
   ['osciflag',['osciflag',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#ac67fcd4d77d5c4674a040f1d7b504c81',1,'TPulseAnalyzer::WaveFormPar']]]
 ];

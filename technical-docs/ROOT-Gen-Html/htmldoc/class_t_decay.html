@@ -96,112 +96,60 @@ $(document).ready(function(){initNavTree('class_t_decay.html','');});
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p><a class="el" href="class_t_decay.html">TDecay</a> is a class for fitting halflives during nuclear decay A <a class="el" href="class_t_decay.html">TDecay</a> consists of multiple TDecayChains, where a <a class="el" href="class_t_decay_chain.html">TDecayChain</a> is starts at a specific nucleus which has a population before the decay fit takes place. This could be a nucleus with a daughter. One <a class="el" href="class_t_decay_chain.html">TDecayChain</a> would consist of just the daughter while the the other decay chain would be the parent and daughter. TDecayChains are made up of multiple TSingleDecays which holds the nucleus specific information such as name, id, halflife and intensity. When any of the above classes are fit to a histogram, they use a <a class="el" href="class_t_decay_fit.html">TDecayFit</a>. The <a class="el" href="class_t_decay_fit.html">TDecayFit</a> is a a TF1 with extra information such as the class that was used to create the <a class="el" href="class_t_decay_fit.html">TDecayFit</a>. Furthermore, the function <a class="el" href="class_t_decay.html#a05304e7d136d56b674bf770002e555d2">DrawComponents()</a> can be used to draw the activites of the individual nuclei involved in the <a class="el" href="class_t_decay_fit.html">TDecayFit</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00331">331</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00331">331</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a44d7b888a3f2136b1f087ac0fe1caa3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a44d7b888a3f2136b1f087ac0fe1caa3f">TDecay</a> ()</td></tr>
 <tr class="separator:a44d7b888a3f2136b1f087ac0fe1caa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44d7b888a3f2136b1f087ac0fe1caa3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a44d7b888a3f2136b1f087ac0fe1caa3f">TDecay</a> ()</td></tr>
-<tr class="separator:a44d7b888a3f2136b1f087ac0fe1caa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5ae3a3f1e4ca1125ba3443758fa35f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ac5ae3a3f1e4ca1125ba3443758fa35f7">TDecay</a> (std::vector&lt; <a class="el" href="class_t_decay_chain.html">TDecayChain</a> *&gt; chainlist)</td></tr>
-<tr class="separator:ac5ae3a3f1e4ca1125ba3443758fa35f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5ae3a3f1e4ca1125ba3443758fa35f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ac5ae3a3f1e4ca1125ba3443758fa35f7">TDecay</a> (std::vector&lt; <a class="el" href="class_t_decay_chain.html">TDecayChain</a> *&gt; chainlist)</td></tr>
 <tr class="separator:ac5ae3a3f1e4ca1125ba3443758fa35f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4cd45b9447f973f08ab8af678b5b802"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#aa4cd45b9447f973f08ab8af678b5b802">~TDecay</a> () override</td></tr>
 <tr class="separator:aa4cd45b9447f973f08ab8af678b5b802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4cd45b9447f973f08ab8af678b5b802"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#aa4cd45b9447f973f08ab8af678b5b802">~TDecay</a> () override</td></tr>
-<tr class="separator:aa4cd45b9447f973f08ab8af678b5b802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd96ff57995b363bbae805df4b3b52e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#afd96ff57995b363bbae805df4b3b52e5">AddChain</a> (<a class="el" href="class_t_decay_chain.html">TDecayChain</a> *chain)</td></tr>
-<tr class="separator:afd96ff57995b363bbae805df4b3b52e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd96ff57995b363bbae805df4b3b52e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#afd96ff57995b363bbae805df4b3b52e5">AddChain</a> (<a class="el" href="class_t_decay_chain.html">TDecayChain</a> *chain)</td></tr>
 <tr class="separator:afd96ff57995b363bbae805df4b3b52e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fcca66c065020e8b5c88b189dd2ac68"><td class="memItemLeft" align="right" valign="top">Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a0fcca66c065020e8b5c88b189dd2ac68">DecayFit</a> (Double_t *dim, Double_t *par)</td></tr>
 <tr class="separator:a0fcca66c065020e8b5c88b189dd2ac68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fcca66c065020e8b5c88b189dd2ac68"><td class="memItemLeft" align="right" valign="top">Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a0fcca66c065020e8b5c88b189dd2ac68">DecayFit</a> (Double_t *dim, Double_t *par)</td></tr>
-<tr class="separator:a0fcca66c065020e8b5c88b189dd2ac68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addeb95c87a58e515cdbe2ccf92f707e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#addeb95c87a58e515cdbe2ccf92f707e5">Draw</a> (Option_t *opt=&quot;&quot;) override</td></tr>
-<tr class="separator:addeb95c87a58e515cdbe2ccf92f707e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addeb95c87a58e515cdbe2ccf92f707e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#addeb95c87a58e515cdbe2ccf92f707e5">Draw</a> (Option_t *opt=&quot;&quot;) override</td></tr>
 <tr class="separator:addeb95c87a58e515cdbe2ccf92f707e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5553305dc44dda9e1e3d63886de671e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a5553305dc44dda9e1e3d63886de671e4">DrawBackground</a> (Option_t *opt=&quot;&quot;)</td></tr>
 <tr class="separator:a5553305dc44dda9e1e3d63886de671e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5553305dc44dda9e1e3d63886de671e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a5553305dc44dda9e1e3d63886de671e4">DrawBackground</a> (Option_t *opt=&quot;&quot;)</td></tr>
-<tr class="separator:a5553305dc44dda9e1e3d63886de671e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05304e7d136d56b674bf770002e555d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a05304e7d136d56b674bf770002e555d2">DrawComponents</a> (Option_t *opt=&quot;&quot;, Bool_t color_flag=true) override</td></tr>
-<tr class="separator:a05304e7d136d56b674bf770002e555d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05304e7d136d56b674bf770002e555d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a05304e7d136d56b674bf770002e555d2">DrawComponents</a> (Option_t *opt=&quot;&quot;, Bool_t color_flag=true) override</td></tr>
 <tr class="separator:a05304e7d136d56b674bf770002e555d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3beb1f18bf2d25a8efeca8912061da45"><td class="memItemLeft" align="right" valign="top">TFitResultPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a3beb1f18bf2d25a8efeca8912061da45">Fit</a> (TH1 *fithist, Option_t *opt=&quot;&quot;)</td></tr>
 <tr class="separator:a3beb1f18bf2d25a8efeca8912061da45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3beb1f18bf2d25a8efeca8912061da45"><td class="memItemLeft" align="right" valign="top">TFitResultPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a3beb1f18bf2d25a8efeca8912061da45">Fit</a> (TH1 *fithist, Option_t *opt=&quot;&quot;)</td></tr>
-<tr class="separator:a3beb1f18bf2d25a8efeca8912061da45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1121408abb9330e84d286245ce537d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ab1121408abb9330e84d286245ce537d5">FixBackground</a> (const Double_t &amp;background)</td></tr>
-<tr class="separator:ab1121408abb9330e84d286245ce537d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1121408abb9330e84d286245ce537d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ab1121408abb9330e84d286245ce537d5">FixBackground</a> (const Double_t &amp;background)</td></tr>
 <tr class="separator:ab1121408abb9330e84d286245ce537d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ed500d97390b5b9692fca19dbb5f8cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a3ed500d97390b5b9692fca19dbb5f8cf">FixBackground</a> ()</td></tr>
 <tr class="separator:a3ed500d97390b5b9692fca19dbb5f8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ed500d97390b5b9692fca19dbb5f8cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a3ed500d97390b5b9692fca19dbb5f8cf">FixBackground</a> ()</td></tr>
-<tr class="separator:a3ed500d97390b5b9692fca19dbb5f8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f79a3a36c3ddf9078745e8336d04642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a9f79a3a36c3ddf9078745e8336d04642">FixHalfLife</a> (Int_t Id, Double_t halflife)</td></tr>
-<tr class="separator:a9f79a3a36c3ddf9078745e8336d04642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f79a3a36c3ddf9078745e8336d04642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a9f79a3a36c3ddf9078745e8336d04642">FixHalfLife</a> (Int_t Id, Double_t halflife)</td></tr>
 <tr class="separator:a9f79a3a36c3ddf9078745e8336d04642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aa866a312fead606ce8a2ff760d293b"><td class="memItemLeft" align="right" valign="top">Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a5aa866a312fead606ce8a2ff760d293b">GetBackground</a> () const</td></tr>
 <tr class="separator:a5aa866a312fead606ce8a2ff760d293b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa866a312fead606ce8a2ff760d293b"><td class="memItemLeft" align="right" valign="top">Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a5aa866a312fead606ce8a2ff760d293b">GetBackground</a> () const</td></tr>
-<tr class="separator:a5aa866a312fead606ce8a2ff760d293b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25da75769cbdf299076c4abbf375bab1"><td class="memItemLeft" align="right" valign="top">Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a25da75769cbdf299076c4abbf375bab1">GetBackgroundError</a> () const</td></tr>
 <tr class="separator:a25da75769cbdf299076c4abbf375bab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25da75769cbdf299076c4abbf375bab1"><td class="memItemLeft" align="right" valign="top">Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a25da75769cbdf299076c4abbf375bab1">GetBackgroundError</a> () const</td></tr>
-<tr class="separator:a25da75769cbdf299076c4abbf375bab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2147991306aeee7254695b8755bbf66a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_decay_chain.html">TDecayChain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a2147991306aeee7254695b8755bbf66a">GetChain</a> (UInt_t idx)</td></tr>
-<tr class="separator:a2147991306aeee7254695b8755bbf66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6ebef2d82616514b1bd993d211cc169"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_decay_chain.html">TDecayChain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#af6ebef2d82616514b1bd993d211cc169">GetChain</a> (UInt_t idx)</td></tr>
 <tr class="separator:af6ebef2d82616514b1bd993d211cc169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a512c2206857c80218df11b3e09a6a164"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_decay_fit.html">TDecayFit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a512c2206857c80218df11b3e09a6a164">GetFitFunc</a> ()</td></tr>
 <tr class="separator:a512c2206857c80218df11b3e09a6a164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a512c2206857c80218df11b3e09a6a164"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_decay_fit.html">TDecayFit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a512c2206857c80218df11b3e09a6a164">GetFitFunc</a> ()</td></tr>
-<tr class="separator:a512c2206857c80218df11b3e09a6a164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee4b87d20dd29e3fadfdee4d74f401e4"><td class="memItemLeft" align="right" valign="top">TGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#aee4b87d20dd29e3fadfdee4d74f401e4">GetResiduals</a> ()</td></tr>
-<tr class="separator:aee4b87d20dd29e3fadfdee4d74f401e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4b87d20dd29e3fadfdee4d74f401e4"><td class="memItemLeft" align="right" valign="top">TGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#aee4b87d20dd29e3fadfdee4d74f401e4">GetResiduals</a> ()</td></tr>
 <tr class="separator:aee4b87d20dd29e3fadfdee4d74f401e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e2e3c6be9ab652012fbe1a9bd479dd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a4e2e3c6be9ab652012fbe1a9bd479dd3">Print</a> (Option_t *opt=&quot;&quot;) const override</td></tr>
 <tr class="separator:a4e2e3c6be9ab652012fbe1a9bd479dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e2e3c6be9ab652012fbe1a9bd479dd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a4e2e3c6be9ab652012fbe1a9bd479dd3">Print</a> (Option_t *opt=&quot;&quot;) const override</td></tr>
-<tr class="separator:a4e2e3c6be9ab652012fbe1a9bd479dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0789793f1cb016c0f52b725eac639c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a0789793f1cb016c0f52b725eac639c1e">PrintMap</a> () const</td></tr>
-<tr class="separator:a0789793f1cb016c0f52b725eac639c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0789793f1cb016c0f52b725eac639c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a0789793f1cb016c0f52b725eac639c1e">PrintMap</a> () const</td></tr>
 <tr class="separator:a0789793f1cb016c0f52b725eac639c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed3fa27a3b021a24c434c31d5902f92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#abed3fa27a3b021a24c434c31d5902f92">ReleaseBackground</a> ()</td></tr>
 <tr class="separator:abed3fa27a3b021a24c434c31d5902f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abed3fa27a3b021a24c434c31d5902f92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#abed3fa27a3b021a24c434c31d5902f92">ReleaseBackground</a> ()</td></tr>
-<tr class="separator:abed3fa27a3b021a24c434c31d5902f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad46a6d957f35ce5ae9d740fd647cbba0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ad46a6d957f35ce5ae9d740fd647cbba0">SetBackground</a> (Double_t background)</td></tr>
-<tr class="separator:ad46a6d957f35ce5ae9d740fd647cbba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad46a6d957f35ce5ae9d740fd647cbba0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ad46a6d957f35ce5ae9d740fd647cbba0">SetBackground</a> (Double_t background)</td></tr>
 <tr class="separator:ad46a6d957f35ce5ae9d740fd647cbba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4072e5819ed519a2d4acf19f713fd585"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a4072e5819ed519a2d4acf19f713fd585">SetBackgroundLimits</a> (const Double_t &amp;low, const Double_t &amp;high)</td></tr>
 <tr class="separator:a4072e5819ed519a2d4acf19f713fd585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4072e5819ed519a2d4acf19f713fd585"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a4072e5819ed519a2d4acf19f713fd585">SetBackgroundLimits</a> (const Double_t &amp;low, const Double_t &amp;high)</td></tr>
-<tr class="separator:a4072e5819ed519a2d4acf19f713fd585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07a0303a07b21c9cb14fe6bd76d5419e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a07a0303a07b21c9cb14fe6bd76d5419e">SetDecayRateLimits</a> (Int_t Id, Double_t low, Double_t high)</td></tr>
-<tr class="separator:a07a0303a07b21c9cb14fe6bd76d5419e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07a0303a07b21c9cb14fe6bd76d5419e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a07a0303a07b21c9cb14fe6bd76d5419e">SetDecayRateLimits</a> (Int_t Id, Double_t low, Double_t high)</td></tr>
 <tr class="separator:a07a0303a07b21c9cb14fe6bd76d5419e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85983b720bf44a702c3f2009b717ba20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a85983b720bf44a702c3f2009b717ba20">SetHalfLife</a> (Int_t Id, Double_t halflife)</td></tr>
 <tr class="separator:a85983b720bf44a702c3f2009b717ba20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85983b720bf44a702c3f2009b717ba20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a85983b720bf44a702c3f2009b717ba20">SetHalfLife</a> (Int_t Id, Double_t halflife)</td></tr>
-<tr class="separator:a85983b720bf44a702c3f2009b717ba20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a824a444db82b9c594915c168ee9acee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a824a444db82b9c594915c168ee9acee1">SetHalfLifeLimits</a> (Int_t Id, Double_t low, Double_t high)</td></tr>
 <tr class="separator:a824a444db82b9c594915c168ee9acee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a824a444db82b9c594915c168ee9acee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a824a444db82b9c594915c168ee9acee1">SetHalfLifeLimits</a> (Int_t Id, Double_t low, Double_t high)</td></tr>
-<tr class="separator:a824a444db82b9c594915c168ee9acee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ac21ebf9aeb7a7e9c4dd9c01b1db23b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a5ac21ebf9aeb7a7e9c4dd9c01b1db23b">SetRange</a> (Double_t xlow, Double_t xhigh)</td></tr>
-<tr class="separator:a5ac21ebf9aeb7a7e9c4dd9c01b1db23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ac21ebf9aeb7a7e9c4dd9c01b1db23b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a5ac21ebf9aeb7a7e9c4dd9c01b1db23b">SetRange</a> (Double_t xlow, Double_t xhigh)</td></tr>
 <tr class="separator:a5ac21ebf9aeb7a7e9c4dd9c01b1db23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -209,32 +157,24 @@ Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a99326c7676f475a9baa692eaffef4b5b"><td class="memItemLeft" align="right" valign="top">Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a99326c7676f475a9baa692eaffef4b5b">ComponentFunc</a> (Double_t *dim, Double_t *par)</td></tr>
 <tr class="separator:a99326c7676f475a9baa692eaffef4b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99326c7676f475a9baa692eaffef4b5b"><td class="memItemLeft" align="right" valign="top">Double_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a99326c7676f475a9baa692eaffef4b5b">ComponentFunc</a> (Double_t *dim, Double_t *par)</td></tr>
-<tr class="separator:a99326c7676f475a9baa692eaffef4b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3bb0b90789f0e2f3be96664fbfc7b0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_decay_fit.html">TDecayFit</a> const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ac3bb0b90789f0e2f3be96664fbfc7b0b">GetFitFunction</a> () override</td></tr>
-<tr class="separator:ac3bb0b90789f0e2f3be96664fbfc7b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3bb0b90789f0e2f3be96664fbfc7b0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_decay_fit.html">TDecayFit</a> const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ac3bb0b90789f0e2f3be96664fbfc7b0b">GetFitFunction</a> () override</td></tr>
 <tr class="separator:ac3bb0b90789f0e2f3be96664fbfc7b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a594b42df454a784e7e21986fd1f3c8ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a594b42df454a784e7e21986fd1f3c8ec">RemakeMap</a> ()</td></tr>
 <tr class="separator:a594b42df454a784e7e21986fd1f3c8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a594b42df454a784e7e21986fd1f3c8ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a594b42df454a784e7e21986fd1f3c8ec">RemakeMap</a> ()</td></tr>
-<tr class="separator:a594b42df454a784e7e21986fd1f3c8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4a55a5b1fed915f0a9edd82185ff938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ae4a55a5b1fed915f0a9edd82185ff938">SetParameters</a> ()</td></tr>
-<tr class="separator:ae4a55a5b1fed915f0a9edd82185ff938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4a55a5b1fed915f0a9edd82185ff938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#ae4a55a5b1fed915f0a9edd82185ff938">SetParameters</a> ()</td></tr>
 <tr class="separator:ae4a55a5b1fed915f0a9edd82185ff938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1fca6dd46fa2dd60e24ad2d98aa64987"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_decay_chain.html">TDecayChain</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a1fca6dd46fa2dd60e24ad2d98aa64987">fChainList</a></td></tr>
-<tr class="separator:a1fca6dd46fa2dd60e24ad2d98aa64987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4e03edbed6ff7f3b075df9a51d95b3a"><td class="memItemLeft" align="right" valign="top">std::map&lt; Int_t, std::vector&lt; <a class="el" href="class_t_single_decay.html">TSingleDecay</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#af4e03edbed6ff7f3b075df9a51d95b3a">fDecayMap</a></td></tr>
-<tr class="separator:af4e03edbed6ff7f3b075df9a51d95b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a776541244db15c4cac37025adcc3ae03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_decay_fit.html">TDecayFit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a776541244db15c4cac37025adcc3ae03">fFitFunc</a></td></tr>
-<tr class="separator:a776541244db15c4cac37025adcc3ae03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d7a1bccb9743aed5e543f08c2bc861c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_decay_chain.html">TDecayChain</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a3d7a1bccb9743aed5e543f08c2bc861c">fChainList</a></td></tr>
+<tr class="separator:a3d7a1bccb9743aed5e543f08c2bc861c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3485cc9a06e7db814115b4880b8d6aea"><td class="memItemLeft" align="right" valign="top">std::map&lt; Int_t, std::vector&lt; <a class="el" href="class_t_single_decay.html">TSingleDecay</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a3485cc9a06e7db814115b4880b8d6aea">fDecayMap</a></td></tr>
+<tr class="separator:a3485cc9a06e7db814115b4880b8d6aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3de093129408264e4e29140c9b1c65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_decay_fit.html">TDecayFit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay.html#a2c3de093129408264e4e29140c9b1c65">fFitFunc</a></td></tr>
+<tr class="separator:a2c3de093129408264e4e29140c9b1c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
-<p><code>#include &lt;<a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_t_decay_8h_source.html">TDecay.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for TDecay:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -248,12 +188,12 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_t_decay__coll__graph.svg" width="100%" height="502"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_t_decay__coll__graph.svg" width="100%" height="475"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a44d7b888a3f2136b1f087ac0fe1caa3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44d7b888a3f2136b1f087ac0fe1caa3f">&#9670;&nbsp;</a></span>TDecay() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a44d7b888a3f2136b1f087ac0fe1caa3f">&#9670;&nbsp;</a></span>TDecay() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,12 +215,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00333">333</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00333">333</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
 </div>
 </div>
 <a id="ac5ae3a3f1e4ca1125ba3443758fa35f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5ae3a3f1e4ca1125ba3443758fa35f7">&#9670;&nbsp;</a></span>TDecay() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5ae3a3f1e4ca1125ba3443758fa35f7">&#9670;&nbsp;</a></span>TDecay() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,12 +237,12 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00653">653</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_decay_8cxx_source.html#l00679">DecayFit()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">fChainList</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>, <a class="el" href="_t_decay_8cxx_source.html#l00911">RemakeMap()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00027">TDecayFit::SetDecay()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8cxx_source.html#l00679">DecayFit()</a>, <a class="el" href="_t_decay_8h_source.html#l00375">fChainList</a>, <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>, <a class="el" href="_t_decay_8cxx_source.html#l00911">RemakeMap()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00027">TDecayFit::SetDecay()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>.</p>
 
 </div>
 </div>
 <a id="aa4cd45b9447f973f08ab8af678b5b802"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4cd45b9447f973f08ab8af678b5b802">&#9670;&nbsp;</a></span>~TDecay() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4cd45b9447f973f08ab8af678b5b802">&#9670;&nbsp;</a></span>~TDecay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,79 +268,9 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a44d7b888a3f2136b1f087ac0fe1caa3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44d7b888a3f2136b1f087ac0fe1caa3f">&#9670;&nbsp;</a></span>TDecay() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TDecay::TDecay </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00333">333</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-</div>
-</div>
-<a id="ac5ae3a3f1e4ca1125ba3443758fa35f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5ae3a3f1e4ca1125ba3443758fa35f7">&#9670;&nbsp;</a></span>TDecay() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TDecay::TDecay </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_t_decay_chain.html">TDecayChain</a> *&gt;&#160;</td>
-          <td class="paramname"><em>chainlist</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa4cd45b9447f973f08ab8af678b5b802"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4cd45b9447f973f08ab8af678b5b802">&#9670;&nbsp;</a></span>~TDecay() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TDecay::~TDecay </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="afd96ff57995b363bbae805df4b3b52e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd96ff57995b363bbae805df4b3b52e5">&#9670;&nbsp;</a></span>AddChain() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afd96ff57995b363bbae805df4b3b52e5">&#9670;&nbsp;</a></span>AddChain()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -423,80 +293,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00337">337</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00337">337</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">fChainList</a>.</p>
-
-</div>
-</div>
-<a id="afd96ff57995b363bbae805df4b3b52e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd96ff57995b363bbae805df4b3b52e5">&#9670;&nbsp;</a></span>AddChain() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::AddChain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_decay_chain.html">TDecayChain</a> *&#160;</td>
-          <td class="paramname"><em>chain</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00337">337</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">fChainList</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00375">fChainList</a>.</p>
 
 </div>
 </div>
 <a id="a99326c7676f475a9baa692eaffef4b5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99326c7676f475a9baa692eaffef4b5b">&#9670;&nbsp;</a></span>ComponentFunc() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Double_t TDecay::ComponentFunc </td>
-          <td>(</td>
-          <td class="paramtype">Double_t *&#160;</td>
-          <td class="paramname"><em>dim</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Double_t *&#160;</td>
-          <td class="paramname"><em>par</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a99326c7676f475a9baa692eaffef4b5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99326c7676f475a9baa692eaffef4b5b">&#9670;&nbsp;</a></span>ComponentFunc() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a99326c7676f475a9baa692eaffef4b5b">&#9670;&nbsp;</a></span>ComponentFunc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -533,14 +337,14 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00797">797</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00811">DrawComponents()</a>.</p>
 
 </div>
 </div>
 <a id="a0fcca66c065020e8b5c88b189dd2ac68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fcca66c065020e8b5c88b189dd2ac68">&#9670;&nbsp;</a></span>DecayFit() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fcca66c065020e8b5c88b189dd2ac68">&#9670;&nbsp;</a></span>DecayFit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -568,42 +372,14 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00679">679</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">fChainList</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00375">fChainList</a>, and <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00653">TDecay()</a>.</p>
 
 </div>
 </div>
-<a id="a0fcca66c065020e8b5c88b189dd2ac68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fcca66c065020e8b5c88b189dd2ac68">&#9670;&nbsp;</a></span>DecayFit() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Double_t TDecay::DecayFit </td>
-          <td>(</td>
-          <td class="paramtype">Double_t *&#160;</td>
-          <td class="paramname"><em>dim</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Double_t *&#160;</td>
-          <td class="paramname"><em>par</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="addeb95c87a58e515cdbe2ccf92f707e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addeb95c87a58e515cdbe2ccf92f707e5">&#9670;&nbsp;</a></span>Draw() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#addeb95c87a58e515cdbe2ccf92f707e5">&#9670;&nbsp;</a></span>Draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -628,38 +404,12 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00746">746</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>.</p>
-
-</div>
-</div>
-<a id="addeb95c87a58e515cdbe2ccf92f707e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addeb95c87a58e515cdbe2ccf92f707e5">&#9670;&nbsp;</a></span>Draw() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::Draw </td>
-          <td>(</td>
-          <td class="paramtype">Option_t *&#160;</td>
-          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>.</p>
 
 </div>
 </div>
 <a id="a5553305dc44dda9e1e3d63886de671e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5553305dc44dda9e1e3d63886de671e4">&#9670;&nbsp;</a></span>DrawBackground() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5553305dc44dda9e1e3d63886de671e4">&#9670;&nbsp;</a></span>DrawBackground()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -676,32 +426,14 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00832">832</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00355">GetBackground()</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="_t_decay_8h_source.html#l00355">GetBackground()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00811">DrawComponents()</a>.</p>
 
 </div>
 </div>
-<a id="a5553305dc44dda9e1e3d63886de671e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5553305dc44dda9e1e3d63886de671e4">&#9670;&nbsp;</a></span>DrawBackground() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::DrawBackground </td>
-          <td>(</td>
-          <td class="paramtype">Option_t *&#160;</td>
-          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a05304e7d136d56b674bf770002e555d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05304e7d136d56b674bf770002e555d2">&#9670;&nbsp;</a></span>DrawComponents() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a05304e7d136d56b674bf770002e555d2">&#9670;&nbsp;</a></span>DrawComponents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -739,50 +471,12 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00811">811</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_decay_8cxx_source.html#l00797">ComponentFunc()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00832">DrawBackground()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">fDecayMap</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-</div>
-</div>
-<a id="a05304e7d136d56b674bf770002e555d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05304e7d136d56b674bf770002e555d2">&#9670;&nbsp;</a></span>DrawComponents() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::DrawComponents </td>
-          <td>(</td>
-          <td class="paramtype">Option_t *&#160;</td>
-          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Bool_t&#160;</td>
-          <td class="paramname"><em>color_flag</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_t_virtual_decay.html#a5dffe1f48c859829ebf8a6dc8570b4d2">TVirtualDecay</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8cxx_source.html#l00797">ComponentFunc()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00832">DrawBackground()</a>, <a class="el" href="_t_decay_8h_source.html#l00377">fDecayMap</a>, and <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 </div>
 </div>
 <a id="a3beb1f18bf2d25a8efeca8912061da45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3beb1f18bf2d25a8efeca8912061da45">&#9670;&nbsp;</a></span>Fit() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3beb1f18bf2d25a8efeca8912061da45">&#9670;&nbsp;</a></span>Fit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,40 +503,12 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00701">701</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">fChainList</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>, <a class="el" href="_t_decay_8cxx_source.html#l00045">TDecayFit::Fit()</a>, <a class="el" href="_t_l_m_fitter_8cxx_source.html#l00039">TLMFitter::Fit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00040">TDecayFit::GetDecay()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>.</p>
-
-</div>
-</div>
-<a id="a3beb1f18bf2d25a8efeca8912061da45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3beb1f18bf2d25a8efeca8912061da45">&#9670;&nbsp;</a></span>Fit() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TFitResultPtr TDecay::Fit </td>
-          <td>(</td>
-          <td class="paramtype">TH1 *&#160;</td>
-          <td class="paramname"><em>fithist</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Option_t *&#160;</td>
-          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00375">fChainList</a>, <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>, <a class="el" href="_t_decay_8cxx_source.html#l00045">TDecayFit::Fit()</a>, <a class="el" href="_t_l_m_fitter_8cxx_source.html#l00039">TLMFitter::Fit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00040">TDecayFit::GetDecay()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>.</p>
 
 </div>
 </div>
 <a id="ab1121408abb9330e84d286245ce537d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1121408abb9330e84d286245ce537d5">&#9670;&nbsp;</a></span>FixBackground() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1121408abb9330e84d286245ce537d5">&#9670;&nbsp;</a></span>FixBackground() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -865,44 +531,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00361">361</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00361">361</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-</div>
-</div>
-<a id="ab1121408abb9330e84d286245ce537d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1121408abb9330e84d286245ce537d5">&#9670;&nbsp;</a></span>FixBackground() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::FixBackground </td>
-          <td>(</td>
-          <td class="paramtype">const Double_t &amp;&#160;</td>
-          <td class="paramname"><em>background</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00361">361</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 </div>
 </div>
 <a id="a3ed500d97390b5b9692fca19dbb5f8cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ed500d97390b5b9692fca19dbb5f8cf">&#9670;&nbsp;</a></span>FixBackground() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed500d97390b5b9692fca19dbb5f8cf">&#9670;&nbsp;</a></span>FixBackground() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -924,43 +560,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00362">362</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00362">362</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00355">GetBackground()</a>.</p>
-
-</div>
-</div>
-<a id="a3ed500d97390b5b9692fca19dbb5f8cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ed500d97390b5b9692fca19dbb5f8cf">&#9670;&nbsp;</a></span>FixBackground() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::FixBackground </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00362">362</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00355">GetBackground()</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="_t_decay_8h_source.html#l00355">GetBackground()</a>.</p>
 
 </div>
 </div>
 <a id="a9f79a3a36c3ddf9078745e8336d04642"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f79a3a36c3ddf9078745e8336d04642">&#9670;&nbsp;</a></span>FixHalfLife() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f79a3a36c3ddf9078745e8336d04642">&#9670;&nbsp;</a></span>FixHalfLife()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -993,54 +600,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00344">344</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_t_decay_8cxx_source.html#l00843">SetHalfLife()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00856">SetHalfLifeLimits()</a>.</p>
-
-</div>
-</div>
-<a id="a9f79a3a36c3ddf9078745e8336d04642"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f79a3a36c3ddf9078745e8336d04642">&#9670;&nbsp;</a></span>FixHalfLife() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::FixHalfLife </td>
-          <td>(</td>
-          <td class="paramtype">Int_t&#160;</td>
-          <td class="paramname"><em>Id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Double_t&#160;</td>
-          <td class="paramname"><em>halflife</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00344">344</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00344">344</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_decay_8cxx_source.html#l00843">SetHalfLife()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00856">SetHalfLifeLimits()</a>.</p>
 
 </div>
 </div>
 <a id="a5aa866a312fead606ce8a2ff760d293b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aa866a312fead606ce8a2ff760d293b">&#9670;&nbsp;</a></span>GetBackground() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa866a312fead606ce8a2ff760d293b">&#9670;&nbsp;</a></span>GetBackground()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1062,45 +629,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00355">355</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00355">355</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
-</div>
-</div>
-<a id="a5aa866a312fead606ce8a2ff760d293b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aa866a312fead606ce8a2ff760d293b">&#9670;&nbsp;</a></span>GetBackground() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Double_t TDecay::GetBackground </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00355">355</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00832">DrawBackground()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00362">FixBackground()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00882">Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00832">DrawBackground()</a>, <a class="el" href="_t_decay_8h_source.html#l00362">FixBackground()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00882">Print()</a>.</p>
 
 </div>
 </div>
 <a id="a25da75769cbdf299076c4abbf375bab1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25da75769cbdf299076c4abbf375bab1">&#9670;&nbsp;</a></span>GetBackgroundError() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a25da75769cbdf299076c4abbf375bab1">&#9670;&nbsp;</a></span>GetBackgroundError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1122,45 +660,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00356">356</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00356">356</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-</div>
-</div>
-<a id="a25da75769cbdf299076c4abbf375bab1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25da75769cbdf299076c4abbf375bab1">&#9670;&nbsp;</a></span>GetBackgroundError() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Double_t TDecay::GetBackgroundError </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00356">356</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00882">Print()</a>.</p>
 
 </div>
 </div>
 <a id="af6ebef2d82616514b1bd993d211cc169"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6ebef2d82616514b1bd993d211cc169">&#9670;&nbsp;</a></span>GetChain() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ebef2d82616514b1bd993d211cc169">&#9670;&nbsp;</a></span>GetChain()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1177,30 +686,12 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00668">668</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">fChainList</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>.</p>
-
-</div>
-</div>
-<a id="a2147991306aeee7254695b8755bbf66a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2147991306aeee7254695b8755bbf66a">&#9670;&nbsp;</a></span>GetChain() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_t_decay_chain.html">TDecayChain</a>* TDecay::GetChain </td>
-          <td>(</td>
-          <td class="paramtype">UInt_t&#160;</td>
-          <td class="paramname"><em>idx</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00375">fChainList</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>.</p>
 
 </div>
 </div>
 <a id="a512c2206857c80218df11b3e09a6a164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a512c2206857c80218df11b3e09a6a164">&#9670;&nbsp;</a></span>GetFitFunc() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a512c2206857c80218df11b3e09a6a164">&#9670;&nbsp;</a></span>GetFitFunc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1222,43 +713,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00353">353</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00353">353</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-</div>
-</div>
-<a id="a512c2206857c80218df11b3e09a6a164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a512c2206857c80218df11b3e09a6a164">&#9670;&nbsp;</a></span>GetFitFunc() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_t_decay_fit.html">TDecayFit</a>* TDecay::GetFitFunc </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00353">353</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 </div>
 </div>
 <a id="ac3bb0b90789f0e2f3be96664fbfc7b0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3bb0b90789f0e2f3be96664fbfc7b0b">&#9670;&nbsp;</a></span>GetFitFunction() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3bb0b90789f0e2f3be96664fbfc7b0b">&#9670;&nbsp;</a></span>GetFitFunction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1282,45 +744,14 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_t_virtual_decay.html#a75c5f04e160f9f8c21987da7b524abdb">TVirtualDecay</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00372">372</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00372">372</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-</div>
-</div>
-<a id="ac3bb0b90789f0e2f3be96664fbfc7b0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3bb0b90789f0e2f3be96664fbfc7b0b">&#9670;&nbsp;</a></span>GetFitFunction() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_t_decay_fit.html">TDecayFit</a> const* TDecay::GetFitFunction </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="class_t_virtual_decay.html#a75c5f04e160f9f8c21987da7b524abdb">TVirtualDecay</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00372">372</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 </div>
 </div>
 <a id="aee4b87d20dd29e3fadfdee4d74f401e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee4b87d20dd29e3fadfdee4d74f401e4">&#9670;&nbsp;</a></span>GetResiduals() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4b87d20dd29e3fadfdee4d74f401e4">&#9670;&nbsp;</a></span>GetResiduals()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1342,43 +773,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00366">366</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00366">366</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00080">TDecayFit::GetResiduals()</a>.</p>
-
-</div>
-</div>
-<a id="aee4b87d20dd29e3fadfdee4d74f401e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee4b87d20dd29e3fadfdee4d74f401e4">&#9670;&nbsp;</a></span>GetResiduals() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TGraph* TDecay::GetResiduals </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00366">366</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00080">TDecayFit::GetResiduals()</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>, and <a class="el" href="_t_decay_8h_source.html#l00080">TDecayFit::GetResiduals()</a>.</p>
 
 </div>
 </div>
 <a id="a4e2e3c6be9ab652012fbe1a9bd479dd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e2e3c6be9ab652012fbe1a9bd479dd3">&#9670;&nbsp;</a></span>Print() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e2e3c6be9ab652012fbe1a9bd479dd3">&#9670;&nbsp;</a></span>Print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1405,40 +807,12 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00882">882</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">fDecayMap</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00355">GetBackground()</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00356">GetBackgroundError()</a>.</p>
-
-</div>
-</div>
-<a id="a4e2e3c6be9ab652012fbe1a9bd479dd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e2e3c6be9ab652012fbe1a9bd479dd3">&#9670;&nbsp;</a></span>Print() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::Print </td>
-          <td>(</td>
-          <td class="paramtype">Option_t *&#160;</td>
-          <td class="paramname"><em>opt</em> = <code>&quot;&quot;</code></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="class_t_virtual_decay.html#a302f214579a9e15ab8c3a9b1db85d2fb">TVirtualDecay</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00377">fDecayMap</a>, <a class="el" href="_t_decay_8h_source.html#l00355">GetBackground()</a>, and <a class="el" href="_t_decay_8h_source.html#l00356">GetBackgroundError()</a>.</p>
 
 </div>
 </div>
 <a id="a0789793f1cb016c0f52b725eac639c1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0789793f1cb016c0f52b725eac639c1e">&#9670;&nbsp;</a></span>PrintMap() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0789793f1cb016c0f52b725eac639c1e">&#9670;&nbsp;</a></span>PrintMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1454,29 +828,12 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00892">892</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
-
-</div>
-</div>
-<a id="a0789793f1cb016c0f52b725eac639c1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0789793f1cb016c0f52b725eac639c1e">&#9670;&nbsp;</a></span>PrintMap() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::PrintMap </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
 
 </div>
 </div>
 <a id="abed3fa27a3b021a24c434c31d5902f92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abed3fa27a3b021a24c434c31d5902f92">&#9670;&nbsp;</a></span>ReleaseBackground() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abed3fa27a3b021a24c434c31d5902f92">&#9670;&nbsp;</a></span>ReleaseBackground()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1498,68 +855,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00364">364</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00364">364</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-</div>
-</div>
-<a id="abed3fa27a3b021a24c434c31d5902f92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abed3fa27a3b021a24c434c31d5902f92">&#9670;&nbsp;</a></span>ReleaseBackground() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::ReleaseBackground </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00364">364</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 </div>
 </div>
 <a id="a594b42df454a784e7e21986fd1f3c8ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a594b42df454a784e7e21986fd1f3c8ec">&#9670;&nbsp;</a></span>RemakeMap() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::RemakeMap </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a594b42df454a784e7e21986fd1f3c8ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a594b42df454a784e7e21986fd1f3c8ec">&#9670;&nbsp;</a></span>RemakeMap() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a594b42df454a784e7e21986fd1f3c8ec">&#9670;&nbsp;</a></span>RemakeMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1583,14 +886,14 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00911">911</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">fChainList</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00375">fChainList</a>, and <a class="el" href="_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00653">TDecay()</a>.</p>
 
 </div>
 </div>
 <a id="ad46a6d957f35ce5ae9d740fd647cbba0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad46a6d957f35ce5ae9d740fd647cbba0">&#9670;&nbsp;</a></span>SetBackground() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad46a6d957f35ce5ae9d740fd647cbba0">&#9670;&nbsp;</a></span>SetBackground()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1613,44 +916,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00354">354</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00354">354</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-</div>
-</div>
-<a id="ad46a6d957f35ce5ae9d740fd647cbba0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad46a6d957f35ce5ae9d740fd647cbba0">&#9670;&nbsp;</a></span>SetBackground() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::SetBackground </td>
-          <td>(</td>
-          <td class="paramtype">Double_t&#160;</td>
-          <td class="paramname"><em>background</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00354">354</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 </div>
 </div>
 <a id="a4072e5819ed519a2d4acf19f713fd585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4072e5819ed519a2d4acf19f713fd585">&#9670;&nbsp;</a></span>SetBackgroundLimits() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4072e5819ed519a2d4acf19f713fd585">&#9670;&nbsp;</a></span>SetBackgroundLimits()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1683,88 +956,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="include_2_t_decay_8h_source.html#l00363">363</a> of file <a class="el" href="include_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00363">363</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-</div>
-</div>
-<a id="a4072e5819ed519a2d4acf19f713fd585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4072e5819ed519a2d4acf19f713fd585">&#9670;&nbsp;</a></span>SetBackgroundLimits() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::SetBackgroundLimits </td>
-          <td>(</td>
-          <td class="paramtype">const Double_t &amp;&#160;</td>
-          <td class="paramname"><em>low</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Double_t &amp;&#160;</td>
-          <td class="paramname"><em>high</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00363">363</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
-
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 </div>
 </div>
 <a id="a07a0303a07b21c9cb14fe6bd76d5419e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07a0303a07b21c9cb14fe6bd76d5419e">&#9670;&nbsp;</a></span>SetDecayRateLimits() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::SetDecayRateLimits </td>
-          <td>(</td>
-          <td class="paramtype">Int_t&#160;</td>
-          <td class="paramname"><em>Id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Double_t&#160;</td>
-          <td class="paramname"><em>low</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Double_t&#160;</td>
-          <td class="paramname"><em>high</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a07a0303a07b21c9cb14fe6bd76d5419e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07a0303a07b21c9cb14fe6bd76d5419e">&#9670;&nbsp;</a></span>SetDecayRateLimits() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a0303a07b21c9cb14fe6bd76d5419e">&#9670;&nbsp;</a></span>SetDecayRateLimits()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1797,12 +996,12 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00869">869</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
 
 </div>
 </div>
 <a id="a85983b720bf44a702c3f2009b717ba20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85983b720bf44a702c3f2009b717ba20">&#9670;&nbsp;</a></span>SetHalfLife() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a85983b720bf44a702c3f2009b717ba20">&#9670;&nbsp;</a></span>SetHalfLife()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1829,42 +1028,14 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00843">843</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00344">FixHalfLife()</a>.</p>
-
-</div>
-</div>
-<a id="a85983b720bf44a702c3f2009b717ba20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85983b720bf44a702c3f2009b717ba20">&#9670;&nbsp;</a></span>SetHalfLife() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::SetHalfLife </td>
-          <td>(</td>
-          <td class="paramtype">Int_t&#160;</td>
-          <td class="paramname"><em>Id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Double_t&#160;</td>
-          <td class="paramname"><em>halflife</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="reference">Referenced by <a class="el" href="_t_decay_8h_source.html#l00344">FixHalfLife()</a>.</p>
 
 </div>
 </div>
 <a id="a824a444db82b9c594915c168ee9acee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a824a444db82b9c594915c168ee9acee1">&#9670;&nbsp;</a></span>SetHalfLifeLimits() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a824a444db82b9c594915c168ee9acee1">&#9670;&nbsp;</a></span>SetHalfLifeLimits()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1897,48 +1068,14 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00856">856</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00377">fDecayMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00344">FixHalfLife()</a>.</p>
-
-</div>
-</div>
-<a id="a824a444db82b9c594915c168ee9acee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a824a444db82b9c594915c168ee9acee1">&#9670;&nbsp;</a></span>SetHalfLifeLimits() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::SetHalfLifeLimits </td>
-          <td>(</td>
-          <td class="paramtype">Int_t&#160;</td>
-          <td class="paramname"><em>Id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Double_t&#160;</td>
-          <td class="paramname"><em>low</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Double_t&#160;</td>
-          <td class="paramname"><em>high</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="reference">Referenced by <a class="el" href="_t_decay_8h_source.html#l00344">FixHalfLife()</a>.</p>
 
 </div>
 </div>
 <a id="ae4a55a5b1fed915f0a9edd82185ff938"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4a55a5b1fed915f0a9edd82185ff938">&#9670;&nbsp;</a></span>SetParameters() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a55a5b1fed915f0a9edd82185ff938">&#9670;&nbsp;</a></span>SetParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1962,39 +1099,14 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00752">752</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_decay_8cxx_source.html#l00679">DecayFit()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">fChainList</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">fDecayMap</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>, <a class="el" href="_t_decay_8cxx_source.html#l00040">TDecayFit::GetDecay()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00911">RemakeMap()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00027">TDecayFit::SetDecay()</a>.</p>
+<p class="reference">References <a class="el" href="_t_decay_8cxx_source.html#l00679">DecayFit()</a>, <a class="el" href="_t_decay_8h_source.html#l00375">fChainList</a>, <a class="el" href="_t_decay_8h_source.html#l00377">fDecayMap</a>, <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>, <a class="el" href="_t_decay_8cxx_source.html#l00040">TDecayFit::GetDecay()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00911">RemakeMap()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00027">TDecayFit::SetDecay()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00746">Draw()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00701">Fit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00668">GetChain()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00653">TDecay()</a>.</p>
 
 </div>
 </div>
-<a id="ae4a55a5b1fed915f0a9edd82185ff938"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4a55a5b1fed915f0a9edd82185ff938">&#9670;&nbsp;</a></span>SetParameters() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::SetParameters </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5ac21ebf9aeb7a7e9c4dd9c01b1db23b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ac21ebf9aeb7a7e9c4dd9c01b1db23b">&#9670;&nbsp;</a></span>SetRange() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac21ebf9aeb7a7e9c4dd9c01b1db23b">&#9670;&nbsp;</a></span>SetRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2021,41 +1133,13 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_decay_8cxx_source.html#l00903">903</a> of file <a class="el" href="_t_decay_8cxx_source.html">TDecay.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">fChainList</a>, and <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
-
-</div>
-</div>
-<a id="a5ac21ebf9aeb7a7e9c4dd9c01b1db23b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ac21ebf9aeb7a7e9c4dd9c01b1db23b">&#9670;&nbsp;</a></span>SetRange() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TDecay::SetRange </td>
-          <td>(</td>
-          <td class="paramtype">Double_t&#160;</td>
-          <td class="paramname"><em>xlow</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Double_t&#160;</td>
-          <td class="paramname"><em>xhigh</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00375">fChainList</a>, and <a class="el" href="_t_decay_8h_source.html#l00376">fFitFunc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1fca6dd46fa2dd60e24ad2d98aa64987"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fca6dd46fa2dd60e24ad2d98aa64987">&#9670;&nbsp;</a></span>fChainList</h2>
+<a id="a3d7a1bccb9743aed5e543f08c2bc861c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d7a1bccb9743aed5e543f08c2bc861c">&#9670;&nbsp;</a></span>fChainList</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2064,7 +1148,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="class_t_decay_chain.html">TDecayChain</a> * &gt; TDecay::fChainList</td>
+          <td class="memname">std::vector&lt;<a class="el" href="class_t_decay_chain.html">TDecayChain</a>*&gt; TDecay::fChainList</td>
         </tr>
       </table>
   </td>
@@ -2074,14 +1158,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00375">375</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00375">375</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00337">AddChain()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00679">DecayFit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00701">Fit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00668">GetChain()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00911">RemakeMap()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00903">SetRange()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00653">TDecay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_decay_8h_source.html#l00337">AddChain()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00679">DecayFit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00701">Fit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00668">GetChain()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00911">RemakeMap()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00903">SetRange()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00653">TDecay()</a>.</p>
 
 </div>
 </div>
-<a id="af4e03edbed6ff7f3b075df9a51d95b3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4e03edbed6ff7f3b075df9a51d95b3a">&#9670;&nbsp;</a></span>fDecayMap</h2>
+<a id="a3485cc9a06e7db814115b4880b8d6aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3485cc9a06e7db814115b4880b8d6aea">&#9670;&nbsp;</a></span>fDecayMap</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2090,7 +1174,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt; Int_t, std::vector&lt; <a class="el" href="class_t_single_decay.html">TSingleDecay</a> * &gt; &gt; TDecay::fDecayMap</td>
+          <td class="memname">std::map&lt;Int_t, std::vector&lt;<a class="el" href="class_t_single_decay.html">TSingleDecay</a>*&gt; &gt; TDecay::fDecayMap</td>
         </tr>
       </table>
   </td>
@@ -2100,14 +1184,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00377">377</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00377">377</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00797">ComponentFunc()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00811">DrawComponents()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00882">Print()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00892">PrintMap()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00911">RemakeMap()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00869">SetDecayRateLimits()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00843">SetHalfLife()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00856">SetHalfLifeLimits()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>.</p>
 
 </div>
 </div>
-<a id="a776541244db15c4cac37025adcc3ae03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a776541244db15c4cac37025adcc3ae03">&#9670;&nbsp;</a></span>fFitFunc</h2>
+<a id="a2c3de093129408264e4e29140c9b1c65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c3de093129408264e4e29140c9b1c65">&#9670;&nbsp;</a></span>fFitFunc</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2116,7 +1200,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_t_decay_fit.html">TDecayFit</a> * TDecay::fFitFunc</td>
+          <td class="memname"><a class="el" href="class_t_decay_fit.html">TDecayFit</a>* TDecay::fFitFunc</td>
         </tr>
       </table>
   </td>
@@ -2126,9 +1210,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00376">376</a> of file <a class="el" href="htmldoc_2_t_decay_8h_source.html">TDecay.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_decay_8h_source.html#l00376">376</a> of file <a class="el" href="_t_decay_8h_source.html">TDecay.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00679">DecayFit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00746">Draw()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00832">DrawBackground()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00811">DrawComponents()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00701">Fit()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00361">FixBackground()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00355">GetBackground()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00356">GetBackgroundError()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00353">GetFitFunc()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00372">GetFitFunction()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00366">GetResiduals()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00364">ReleaseBackground()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00354">SetBackground()</a>, <a class="el" href="htmldoc_2_t_decay_8h_source.html#l00363">SetBackgroundLimits()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00903">SetRange()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00653">TDecay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00679">DecayFit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00746">Draw()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00832">DrawBackground()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00811">DrawComponents()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00701">Fit()</a>, <a class="el" href="_t_decay_8h_source.html#l00361">FixBackground()</a>, <a class="el" href="_t_decay_8h_source.html#l00355">GetBackground()</a>, <a class="el" href="_t_decay_8h_source.html#l00356">GetBackgroundError()</a>, <a class="el" href="_t_decay_8h_source.html#l00353">GetFitFunc()</a>, <a class="el" href="_t_decay_8h_source.html#l00372">GetFitFunction()</a>, <a class="el" href="_t_decay_8h_source.html#l00366">GetResiduals()</a>, <a class="el" href="_t_decay_8h_source.html#l00364">ReleaseBackground()</a>, <a class="el" href="_t_decay_8h_source.html#l00354">SetBackground()</a>, <a class="el" href="_t_decay_8h_source.html#l00363">SetBackgroundLimits()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00752">SetParameters()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00903">SetRange()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00653">TDecay()</a>.</p>
 
 </div>
 </div>
@@ -2138,7 +1222,7 @@ Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Fri Jun 18 2021 22:47:58.
+GRSISort (4.0.0.2 ) Reference Guide Generated on Fri Jun 18 2021 23:40:44.
 </small>
 </div>
 </body>

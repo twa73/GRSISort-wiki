@@ -25,6 +25,5 @@ var searchData=
   ['grootcontainer',['GRootContainer',['../class_g_root_container.html',1,'']]],
   ['grootguifactory',['GRootGuiFactory',['../class_g_root_gui_factory.html',1,'']]],
   ['gsnapshot',['GSnapshot',['../class_g_snapshot.html',1,'']]],
-  ['gvalue',['GValue',['../class_g_value.html',1,'']]],
-  ['gz_5fheader_5fs',['gz_header_s',['../structgz__header__s.html',1,'']]]
+  ['gvalue',['GValue',['../class_g_value.html',1,'']]]
 ];

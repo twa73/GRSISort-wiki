@@ -2,14 +2,6 @@ var class_t_tdr_file =
 [
     [ "EOpenType", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2", [
       [ "kRead", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2a8604cf55a79d6bfdcb30f77d1622839b", null ],
-      [ "kWrite", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2ad3ac0ba447a9859ad2db8e498056429f", null ],
-      [ "kRead", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2a8604cf55a79d6bfdcb30f77d1622839b", null ],
-      [ "kWrite", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2ad3ac0ba447a9859ad2db8e498056429f", null ]
-    ] ],
-    [ "EOpenType", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2", [
-      [ "kRead", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2a8604cf55a79d6bfdcb30f77d1622839b", null ],
-      [ "kWrite", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2ad3ac0ba447a9859ad2db8e498056429f", null ],
-      [ "kRead", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2a8604cf55a79d6bfdcb30f77d1622839b", null ],
       [ "kWrite", "class_t_tdr_file.html#a4ef0129feb73111852d5592fdeb4fff2ad3ac0ba447a9859ad2db8e498056429f", null ]
     ] ],
     [ "TTdrFile", "class_t_tdr_file.html#a881add6c1cd983ad68904e7020f34ef8", null ],
@@ -17,12 +9,8 @@ var class_t_tdr_file =
     [ "~TTdrFile", "class_t_tdr_file.html#af6c157a4ec12d1c81de50368115bddff", null ],
     [ "Close", "class_t_tdr_file.html#a2fba26dd0195e4870ff20b4a4db9b247", null ],
     [ "GetBytesRead", "class_t_tdr_file.html#ae88fc11afb08895a1e14bcd5bb0b2d3b", null ],
-    [ "GetBytesRead", "class_t_tdr_file.html#ae88fc11afb08895a1e14bcd5bb0b2d3b", null ],
-    [ "GetFilename", "class_t_tdr_file.html#ae4ee647a0cd89f9ce319529873d72497", null ],
     [ "GetFilename", "class_t_tdr_file.html#ae4ee647a0cd89f9ce319529873d72497", null ],
     [ "GetFileSize", "class_t_tdr_file.html#aa18ebbb673a3678db73e3c4564ecc363", null ],
-    [ "GetFileSize", "class_t_tdr_file.html#aa18ebbb673a3678db73e3c4564ecc363", null ],
-    [ "GetOdbEvent", "class_t_tdr_file.html#a1054aa81b366149eb686d46a6374b5e4", null ],
     [ "GetOdbEvent", "class_t_tdr_file.html#a1054aa81b366149eb686d46a6374b5e4", null ],
     [ "GetRunNumber", "class_t_tdr_file.html#a968404f8c481ae7bb1ce735953c38716", null ],
     [ "GetSubRunNumber", "class_t_tdr_file.html#ad520fe049804b291f87813c9b6ac137f", null ],
@@ -35,5 +23,5 @@ var class_t_tdr_file =
     [ "fFilename", "class_t_tdr_file.html#aa67a2b187d313e70935b834f72b11c31", null ],
     [ "fFileSize", "class_t_tdr_file.html#a07b8745110f5b35e60ccec07070ac557", null ],
     [ "fInputFile", "class_t_tdr_file.html#a70c4dc998a405a9bec4e35f881d3d9ba", null ],
-    [ "fReadBuffer", "class_t_tdr_file.html#ae9405d9e4329297544b4355f5268ef8b", null ]
+    [ "fReadBuffer", "class_t_tdr_file.html#a8ae6c0e5b3f20eff5031bb0a017eed9c", null ]
 ];

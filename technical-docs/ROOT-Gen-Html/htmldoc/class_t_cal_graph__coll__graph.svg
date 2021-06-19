@@ -12,8 +12,8 @@
 <!-- Node3 -->
 <g id="node1" class="node">
 <title>Node3</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="6.5,-.5 6.5,-19.5 73.5,-19.5 73.5,-.5 6.5,-.5"/>
-<text text-anchor="middle" x="40" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TCalGraph</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="78.5,-.5 78.5,-19.5 145.5,-19.5 145.5,-.5 78.5,-.5"/>
+<text text-anchor="middle" x="112" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TCalGraph</text>
 </g>
 <!-- Node4 -->
 <g id="node2" class="node">
@@ -24,14 +24,8 @@
 <!-- Node4&#45;&gt;Node3 -->
 <g id="edge1" class="edge">
 <title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M33.902,-62.6054C32.7078,-48.6237 33.1541,-30.5346 35.2409,-19.6228"/>
-<polygon fill="#191970" stroke="#191970" points="30.4567,-63.2543 35.2115,-72.7223 37.3988,-62.3558 30.4567,-63.2543"/>
-</g>
-<!-- Node4&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
-<title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M46.098,-62.6054C47.2922,-48.6237 46.8459,-30.5346 44.7591,-19.6228"/>
-<polygon fill="#191970" stroke="#191970" points="42.6012,-62.3558 44.7885,-72.7223 49.5433,-63.2543 42.6012,-62.3558"/>
+<path fill="none" stroke="#191970" d="M56.9329,-65.4495C71.1184,-51.1655 90.8559,-31.2909 102.4436,-19.6228"/>
+<polygon fill="#191970" stroke="#191970" points="54.2734,-63.1605 49.7102,-72.7223 59.2403,-68.0931 54.2734,-63.1605"/>
 </g>
 <!-- Node5 -->
 <g id="node3" class="node">
@@ -41,11 +35,11 @@
 <text text-anchor="middle" x="185" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::pair&lt; TCalPoint, TCalPoint &gt; &gt;</text>
 </g>
 <!-- Node5&#45;&gt;Node3 -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>Node5&#45;&gt;Node3</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M145.82,-62.91C117.8254,-48.9127 81.3603,-30.6802 59.365,-19.6825"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="144.4464,-66.1363 154.9559,-67.478 147.5769,-59.8753 144.4464,-66.1363"/>
-<text text-anchor="middle" x="153" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fCompareMap</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M162.7004,-60.3531C149.1028,-46.8487 132.3903,-30.2507 121.9639,-19.8957"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="160.3126,-62.9146 169.8744,-67.478 165.2454,-57.9478 160.3126,-62.9146"/>
+<text text-anchor="middle" x="187" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fCompareMap</text>
 </g>
 </g>
 </svg>
