@@ -3,6 +3,7 @@ var searchData=
   ['gainmatchselector_5fcxx',['GainMatchSelector_cxx',['../_gain_match_selector_8_c.html#ad5a08894fc3ce9dd62450bdb176eb5d9',1,'GainMatchSelector.C']]],
   ['genericselector_5fcxx',['GenericSelector_cxx',['../_generic_selector_8_c.html#a46f1adeda7798424309c5bd4117c485e',1,'GenericSelector.C']]],
   ['green',['GREEN',['../_globals_8h.html#acfbc006ea433ad708fdee3e82996e721',1,'Globals.h']]],
+  ['griffinkvalueselector_5fcxx',['GriffinKValueSelector_cxx',['../_griffin_k_value_selector_8_c.html#a326dad5b7b78e26500ecfb896908cec1',1,'GriffinKValueSelector.C']]],
   ['grsi_5fgit_5fbranch',['GRSI_GIT_BRANCH',['../_g_version_8h.html#ab58481bbca650688663774d4d7f49365',1,'GVersion.h']]],
   ['grsi_5fgit_5fcommit',['GRSI_GIT_COMMIT',['../_g_version_8h.html#a7a4b6f685ec2e14d8b87b9feecc26bed',1,'GVersion.h']]],
   ['grsi_5fgit_5fcommit_5ftime',['GRSI_GIT_COMMIT_TIME',['../_g_version_8h.html#adc3003e0653a8138f954e1e025921bfd',1,'GVersion.h']]],

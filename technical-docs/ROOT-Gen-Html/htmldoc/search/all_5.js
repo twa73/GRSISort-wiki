@@ -32,6 +32,7 @@ var searchData=
   ['emmamadcdatatofragment',['EmmaMadcDataToFragment',['../class_t_g_r_s_i_data_parser.html#adfc81020faeb848d17f99fba8ebc7996',1,'TGRSIDataParser']]],
   ['emmatdcdatatofragment',['EmmaTdcDataToFragment',['../class_t_g_r_s_i_data_parser.html#a83ecb382d2b60184c84ac0f0cbd42c95',1,'TGRSIDataParser']]],
   ['emnemonic',['EMnemonic',['../class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468e',1,'TMnemonic']]],
+  ['empty',['empty',['../class_t_g_r_s_i_map.html#ad6413d9613032f3d761ffd48bf3856fe',1,'TGRSIMap']]],
   ['end',['end',['../classcombinations.html#a97024a51f33b43773f4b7a177f1e1300',1,'combinations::end()'],['../class_g_h2_base.html#ad9b88345d4fc8d02c50795bf7079981e',1,'GH2Base::end()'],['../class_t_g_r_s_i_map.html#a46a512ec88dc52098aa619272e514bcb',1,'TGRSIMap::end()'],['../class_t_g_r_s_i_map.html#ae938e4e4494d3146306f6d60513c6cd7',1,'TGRSIMap::end() const']]],
   ['endofsort',['EndOfSort',['../class_t_g_r_s_i_selector.html#aefe521b4e1ad5569b7e2809fb7f7e411',1,'TGRSISelector']]],
   ['endstatus',['EndStatus',['../class_stoppable_thread.html#a3e7173edc5fcccaa6d1532d561f009db',1,'StoppableThread::EndStatus()'],['../class_t_analysis_write_loop.html#a4e19c3f36c1b7236addbef5182b38562',1,'TAnalysisWriteLoop::EndStatus()'],['../class_t_event_building_loop.html#a115f3c1dc4dfbaf182f2f1a985f6b142',1,'TEventBuildingLoop::EndStatus()'],['../class_t_frag_write_loop.html#a2dc1f3f8598a2f6ea54f416665d793cd',1,'TFragWriteLoop::EndStatus()'],['../class_t_unpacking_loop.html#ada8fb0f95c8b85c145fba9407b62aa1f',1,'TUnpackingLoop::EndStatus()']]],
@@ -45,6 +46,7 @@ var searchData=
   ['eppgpattern',['EPpgPattern',['../group___sorting.html#gab6809cdce78a7710ee2ac3719016868c',1,'TPPG.h']]],
   ['epriority',['EPriority',['../class_g_value.html#a4ba9ffc284339ec1307b73086c071fbe',1,'GValue::EPriority()'],['../group___sorting.html#gab2f7d9a4aad2358e33b9d06138a12f10',1,'EPriority():&#160;TPriorityValue.h']]],
   ['eps',['EPS',['../class_t_pulse_analyzer.html#afcb8f688874257483a404d540906f4a2',1,'TPulseAnalyzer']]],
+  ['erase',['erase',['../class_t_g_r_s_i_map.html#aa5090ca628456920689772e1e5563001',1,'TGRSIMap::erase(typename map_t::iterator pos)'],['../class_t_g_r_s_i_map.html#a675d18be3086cedece09bcd19ee64bec',1,'TGRSIMap::erase(typename map_t::iterator first, typename map_t::iterator last)']]],
   ['erootcanvascommands',['ERootCanvasCommands',['../_g_root_canvas_8cxx.html#a05b56d948b7fcb369490fafff19e529d',1,'GRootCanvas.cxx']]],
   ['es3bits',['ES3Bits',['../class_t_s3.html#af5a27902ce27e2c8c5666b648edca460',1,'TS3']]],
   ['es3globalbits',['ES3GlobalBits',['../class_t_s3.html#a88a7183aa5cedb5eec25bb27c8b3633a',1,'TS3']]],
@@ -83,7 +85,5 @@ var searchData=
   ['executedefaultaction',['ExecuteDefaultAction',['../class_g_root_browser.html#a89aeb762140ecc29e99a5d05f68392bd',1,'GRootBrowser']]],
   ['exit_5fexception',['exit_exception',['../structgrsi_1_1exit__exception.html',1,'grsi::exit_exception'],['../structgrsi_1_1exit__exception.html#a05aae460b04fd3d8e416dce6c092e766',1,'grsi::exit_exception::exit_exception()']]],
   ['externalruninfo',['ExternalRunInfo',['../class_t_g_r_s_i_options.html#aadd226e499b99b5f54f7540565c71dc6',1,'TGRSIOptions']]],
-  ['extractobjects',['ExtractObjects',['../class_g_root_object_manager.html#a54bb242bfea11f78359875269e8f50a8',1,'GRootObjectManager']]],
-  ['extractobjectsfromfile',['ExtractObjectsFromFile',['../class_g_root_object_manager.html#a0891dd95342c001fb3ed869c01f875a6',1,'GRootObjectManager']]],
   ['extractwaves',['ExtractWaves',['../class_t_g_r_s_i_options.html#a69c8ce03bf4bd633145796f169429938',1,'TGRSIOptions']]]
 ];

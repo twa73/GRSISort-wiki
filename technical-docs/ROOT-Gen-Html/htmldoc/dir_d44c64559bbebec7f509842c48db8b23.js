@@ -13,14 +13,11 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "GCanvas", "class_g_canvas.html", "class_g_canvas" ],
       [ "GMarker", "class_g_marker.html", "class_g_marker" ]
     ] ],
-    [ "GChain.h", "_g_chain_8h.html", null ],
     [ "GCube.h", "_g_cube_8h.html", [
       [ "GCube", "class_g_cube.html", "class_g_cube" ],
       [ "GCubeD", "class_g_cube_d.html", "class_g_cube_d" ],
       [ "GCubeF", "class_g_cube_f.html", "class_g_cube_f" ]
     ] ],
-    [ "GDirectory.h", "_g_directory_8h.html", null ],
-    [ "GFile.h", "_g_file_8h.html", null ],
     [ "GGaus.h", "_g_gaus_8h.html", [
       [ "GGaus", "class_g_gaus.html", "class_g_gaus" ]
     ] ],
@@ -56,9 +53,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "GRootGuiFactory.h", "_g_root_gui_factory_8h.html", [
       [ "GRootGuiFactory", "class_g_root_gui_factory.html", "class_g_root_gui_factory" ]
     ] ],
-    [ "GRootObjectManager.h", "_g_root_object_manager_8h.html", null ],
     [ "GSnapshot.h", "_g_snapshot_8h.html", "_g_snapshot_8h" ],
-    [ "GTree.h", "_g_tree_8h.html", null ],
     [ "GValue.h", "_g_value_8h.html", [
       [ "GValue", "class_g_value.html", "class_g_value" ]
     ] ],
@@ -116,7 +111,6 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "TFragWriteLoop.h", "_t_frag_write_loop_8h.html", null ],
     [ "TGainMatch.h", "_t_gain_match_8h.html", null ],
     [ "TGauss.h", "_t_gauss_8h.html", null ],
-    [ "TGint.h", "_t_gint_8h.html", null ],
     [ "TGRSIFit.h", "_t_g_r_s_i_fit_8h.html", null ],
     [ "TGRSIFunctions.h", "_t_g_r_s_i_functions_8h.html", "_t_g_r_s_i_functions_8h" ],
     [ "TGRSIint.h", "_t_g_r_s_iint_8h.html", null ],

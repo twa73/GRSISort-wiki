@@ -10,52 +10,6 @@ var group___g_r_o_o_t =
       [ "fSubTab", "class_g_browser_plugin.html#a694e8fc2544c7f4c20bb65744f12e831", null ],
       [ "fTab", "class_g_browser_plugin.html#a3124a81c61f9b455e1eef6edb56809f0", null ]
     ] ],
-    [ "GChain", "class_g_chain.html", [
-      [ "GChain", "class_g_chain.html#ad788f6bc534a206681eff847135045cb", null ],
-      [ "GChain", "class_g_chain.html#aa736ec49c62d7994ff1e855fc799fb7f", null ],
-      [ "~GChain", "class_g_chain.html#a1ea4c58a6b19006a6e7542453e8d87bc", null ],
-      [ "InitGChain", "class_g_chain.html#a2650fa2df1b624799ecbf77024a707bd", null ]
-    ] ],
-    [ "GDirectory", "class_g_directory.html", [
-      [ "GDirectory", "class_g_directory.html#a198dd6fa7e5cc5eb2dc25d8d7bc4aa4b", null ],
-      [ "GDirectory", "class_g_directory.html#a7c60c6edc482740cc9e8e7fc0312bdd4", null ],
-      [ "~GDirectory", "class_g_directory.html#a793dff8ab8e24e8caecd6b8c07f56b07", null ],
-      [ "Append", "class_g_directory.html#a30acfd43c12fa8b6f1a065590ecfcc99", null ],
-      [ "Build", "class_g_directory.html#a0bd711edd6c7081662f0bc2304ffd49e", null ]
-    ] ],
-    [ "GFile", "class_g_file.html", [
-      [ "GFile", "class_g_file.html#a27b7fcdc5cb598368bb8a650f458be69", null ],
-      [ "GFile", "class_g_file.html#a2d7d808391c55dd788f8957ef0b2574b", null ],
-      [ "~GFile", "class_g_file.html#a60cb431341ecec36a946ed372dac1293", null ],
-      [ "GFileInit", "class_g_file.html#a45aa586b4df4e457878cd75d55bf1c60", null ]
-    ] ],
-    [ "GMemObj", "class_g_mem_obj.html", [
-      [ "GMemObj", "class_g_mem_obj.html#a2a8b81a3b86f4f0718073aa749cc95db", null ],
-      [ "GMemObj", "class_g_mem_obj.html#a617fecf717d7126208a8d5981e7bcf51", null ],
-      [ "~GMemObj", "class_g_mem_obj.html#a28b39aa939b18dccbaa92df03ad6ef93", null ],
-      [ "Copy", "class_g_mem_obj.html#a917852ad093fb9e4bd6c771e18baca26", null ],
-      [ "GetFile", "class_g_mem_obj.html#aab9f05b633a3f4a3ca2dab17e029c9ba", null ],
-      [ "GetObject", "class_g_mem_obj.html#a6f9851fb49c1c8989e9db2b6918d2417", null ],
-      [ "GetObjName", "class_g_mem_obj.html#ab10e0d2729b6000d0f77380633d5aea6", null ],
-      [ "GetObjOption", "class_g_mem_obj.html#aeeed8f9fc3351668e5e7f86d850b4c24", null ],
-      [ "GetParent", "class_g_mem_obj.html#ab97ecc2fc54d569e012eea2ff6977e16", null ],
-      [ "SetFile", "class_g_mem_obj.html#a6ae2b327d5d35a864d2923bbe7e3c9e6", null ],
-      [ "SetParent", "class_g_mem_obj.html#ad370a33bdcab6e98001889027ee04534", null ],
-      [ "fFile", "class_g_mem_obj.html#a3781cb32f6c11678803f5af8410125bd", null ],
-      [ "fObjName", "class_g_mem_obj.html#aef4aee674b14f7a70762ab35bc26222d", null ],
-      [ "fOption", "class_g_mem_obj.html#a33a22f9a13d2467b1941850bbaaba389", null ],
-      [ "fParent", "class_g_mem_obj.html#ad7647f336c673c15f5b12cb879926587", null ],
-      [ "fThis", "class_g_mem_obj.html#a9ddc6961491b30da1061e3c5e8c54165", null ]
-    ] ],
-    [ "GPadObj", "class_g_pad_obj.html", [
-      [ "GPadObj", "class_g_pad_obj.html#a848cca34eaf8d79dbf9c7912f4d5eac3", null ],
-      [ "~GPadObj", "class_g_pad_obj.html#a7199f3fd6f7eab66f68608375fc16171", null ],
-      [ "fCanvas", "class_g_pad_obj.html#a7791840f849d5323b01ff671e3c8728b", null ],
-      [ "fObject", "class_g_pad_obj.html#ad14f07c01aa4547de08b5ddf42b82eb5", null ],
-      [ "fOption", "class_g_pad_obj.html#adfcb050c7b2af86f9674dd243dfe8cb0", null ],
-      [ "fPadNumber", "class_g_pad_obj.html#a85f462a8a009a52fb345c5853c1a219a", null ],
-      [ "fParent", "class_g_pad_obj.html#af4e805b591eed4cf2c87a41e02f0fcbc", null ]
-    ] ],
     [ "GRootBrowser", "class_g_root_browser.html", [
       [ "EInsertPosition", "class_g_root_browser.html#ad4a1457a292dfc2fb4e93bb13b8f7a87", [
         [ "kLeft", "class_g_root_browser.html#ad4a1457a292dfc2fb4e93bb13b8f7a87a2d5fde1d924910a2a01ecd8e70a87c28", null ],
@@ -271,51 +225,5 @@ var group___g_r_o_o_t =
       [ "fVertical2Layout", "class_g_root_canvas.html#a7d9c3198145f12eac3c3d6cec752e4a9", null ],
       [ "fViewMenu", "class_g_root_canvas.html#ae7df8fe72f92fb80011acdcc8a1f6be8", null ],
       [ "fViewWithMenu", "class_g_root_canvas.html#acce90e8b820b98cedcddf134ff0f3bae", null ]
-    ] ],
-    [ "GRootObjectManager", "class_g_root_object_manager.html", [
-      [ "~GRootObjectManager", "class_g_root_object_manager.html#ae8fb71aa7dddce0b30ffe9082548125a", null ],
-      [ "GRootObjectManager", "class_g_root_object_manager.html#a2ab4974b6b950671206f629c1c8c2b6d", null ],
-      [ "AddCanvas", "class_g_root_object_manager.html#a691c6f785e2d73ef01df389e997684df", null ],
-      [ "AddCanvas", "class_g_root_object_manager.html#a93bed951ba0239f482f465d4575a1546", null ],
-      [ "AddObject", "class_g_root_object_manager.html#a63bb53a08f6f680df1047fad5feec18d", null ],
-      [ "ExtractObjects", "class_g_root_object_manager.html#a54bb242bfea11f78359875269e8f50a8", null ],
-      [ "ExtractObjectsFromFile", "class_g_root_object_manager.html#a0891dd95342c001fb3ed869c01f875a6", null ],
-      [ "FindMemObject", "class_g_root_object_manager.html#a9729c8ea2a166310387c329aabfacd58", null ],
-      [ "FindMemObject", "class_g_root_object_manager.html#abde29fcd7766e9019aead47c57a2ea7b", null ],
-      [ "GetLast1D", "class_g_root_object_manager.html#a62cc89704f8855c2d81a82d0d61f5d5c", null ],
-      [ "GetLast2D", "class_g_root_object_manager.html#a91a3d5611e07bf4c87c3291405dc084d", null ],
-      [ "GetLastGraph", "class_g_root_object_manager.html#a05739f9226f7c58dc86447dedb0a0062", null ],
-      [ "GetNext1D", "class_g_root_object_manager.html#adadc7d588364868230baed4b5fe42ce4", null ],
-      [ "GetNext2D", "class_g_root_object_manager.html#ac778c03fdd57e5626aa064943b5b0f9e", null ],
-      [ "GetNextGraph", "class_g_root_object_manager.html#a746be705d5b0b19a904aaf98a25c502c", null ],
-      [ "GetObjectsList", "class_g_root_object_manager.html#ab96dc97e72be945e07eb41ecb52fc45b", null ],
-      [ "Instance", "class_g_root_object_manager.html#a2ac8e358fd5129ca1061c0bfddcb6926", null ],
-      [ "Print", "class_g_root_object_manager.html#a80ed70c00f6b28739c91b36479fad877", null ],
-      [ "RemoveCanvas", "class_g_root_object_manager.html#a44c93fb3111fbd646ef37b8f26c20c2e", null ],
-      [ "RemoveCanvas", "class_g_root_object_manager.html#a74af9063846dc253dc5a746e38f72d6c", null ],
-      [ "RemoveObject", "class_g_root_object_manager.html#a6340846bb7b77aeca1df635dfc01f4b7", null ],
-      [ "RemoveObject", "class_g_root_object_manager.html#a0a7e66bdf6d05932587d25f37fc85efb", null ],
-      [ "SetFile", "class_g_root_object_manager.html#af6a470768d398d1238cc416c295dc14d", null ],
-      [ "SetParent", "class_g_root_object_manager.html#a9e2939123c62f96cb23372fb04c411b2", null ],
-      [ "Update", "class_g_root_object_manager.html#a251f02f5f721ebd86501e34de83a42f7", null ],
-      [ "fCanvasList", "class_g_root_object_manager.html#a716bd5bf3cfd695493a2ba47162c1e9d", null ],
-      [ "fCanvasMap", "class_g_root_object_manager.html#ad5c836e135098f0290079a5edfc7dfbd", null ],
-      [ "fGRootObjectManager", "class_g_root_object_manager.html#a3fb686855ab3c31ffabee68cf5d58990", null ],
-      [ "fObjectsMap", "class_g_root_object_manager.html#af776acd1192f89566eb8229b07718ede", null ]
-    ] ],
-    [ "GTree", "class_g_tree.html", [
-      [ "GTree", "class_g_tree.html#a9392bcc5b2e9fa15430ed0750cb2f3de", null ],
-      [ "GTree", "class_g_tree.html#a6dc130a7172b27927307cc6a39c7859d", null ],
-      [ "~GTree", "class_g_tree.html#aeb069247fbfffd2ec634a4d01b0f65ec", null ],
-      [ "InitGTree", "class_g_tree.html#aecc254fc433992c5c0c689d5bef19e1e", null ]
-    ] ],
-    [ "TGint", "class_t_gint.html", [
-      [ "TGint", "class_t_gint.html#ac843c6ab78c9d39de9a2e37a0e950289", null ],
-      [ "~TGint", "class_t_gint.html#a206e27c20b7b1555f490f009fafa74f8", null ],
-      [ "HandleTermInput", "class_t_gint.html#aaf32a8892ebdc7aada54b630e2a9e09f", null ],
-      [ "instance", "class_t_gint.html#a0907077bc6f810a161e9fad5c52ee5bc", null ],
-      [ "PrintLogo", "class_t_gint.html#a7c768e12edb3493a939b772e90cf6e70", null ],
-      [ "TabCompletionHook", "class_t_gint.html#ae9f02ef6fb983555e658b046d52ba802", null ],
-      [ "fTGint", "class_t_gint.html#ab8e2b31f31200abd9a24bae255dc946a", null ]
     ] ]
 ];

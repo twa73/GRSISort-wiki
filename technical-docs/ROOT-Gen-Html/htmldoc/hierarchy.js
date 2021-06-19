@@ -42,7 +42,6 @@ var hierarchy =
       [ "GH2D", "class_g_h2_d.html", null ],
       [ "GH2I", "class_g_h2_i.html", null ]
     ] ],
-    [ "GRootObjectManager", "class_g_root_object_manager.html", null ],
     [ "GSnapshot", "class_g_snapshot.html", null ],
     [ "combinations::iterator", "classcombinations_1_1iterator.html", null ],
     [ "GH2Base::iterator", "class_g_h2_base_1_1iterator.html", null ],
@@ -97,16 +96,10 @@ var hierarchy =
     [ "TCanvasImp", null, [
       [ "GRootCanvas", "class_g_root_canvas.html", null ]
     ] ],
-    [ "TChain", null, [
-      [ "GChain", "class_g_chain.html", null ]
-    ] ],
     [ "TDataParser", "class_t_data_parser.html", [
       [ "TGRSIDataParser", "class_t_g_r_s_i_data_parser.html", null ],
       [ "TILLDataParser", "class_t_i_l_l_data_parser.html", null ],
       [ "TTdrDataParser", "class_t_tdr_data_parser.html", null ]
-    ] ],
-    [ "TDirectory", null, [
-      [ "GDirectory", "class_g_directory.html", null ]
     ] ],
     [ "TEventTime", "class_t_event_time.html", null ],
     [ "TF1", null, [
@@ -117,9 +110,6 @@ var hierarchy =
         [ "TMultiPeak", "class_t_multi_peak.html", null ],
         [ "TPeak", "class_t_peak.html", null ]
       ] ]
-    ] ],
-    [ "TFile", null, [
-      [ "GFile", "class_g_file.html", null ]
     ] ],
     [ "TFragmentMap", "class_t_fragment_map.html", null ],
     [ "TGCompositeFrame", null, [
@@ -143,7 +133,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "TGRSIMap< key_type, mapped_type, key_compare, allocator_type >", "class_t_g_r_s_i_map.html", null ],
-    [ "TGRSIMap< T >", "class_t_g_r_s_i_map_3_01_t_01_4.html", null ],
     [ "TGTransientFrame", null, [
       [ "GPopup", "class_g_popup.html", null ]
     ] ],
@@ -179,9 +168,7 @@ var hierarchy =
     [ "TMidas_EVENT_HEADER", "struct_t_midas___e_v_e_n_t___h_e_a_d_e_r.html", null ],
     [ "TNamed", null, [
       [ "GBrowserPlugin", "class_g_browser_plugin.html", null ],
-      [ "GMemObj", "class_g_mem_obj.html", null ],
       [ "GNotifier", "class_g_notifier.html", null ],
-      [ "GPadObj", "class_g_pad_obj.html", null ],
       [ "GValue", "class_g_value.html", null ],
       [ "TBetaDecay", "class_t_beta_decay.html", null ],
       [ "TCalibrator", "class_t_calibrator.html", null ],
@@ -359,7 +346,6 @@ var hierarchy =
     ] ],
     [ "TPulseAnalyzer", "class_t_pulse_analyzer.html", null ],
     [ "TRint", null, [
-      [ "TGint", "class_t_gint.html", null ],
       [ "TGRSIint", "class_t_g_r_s_iint.html", null ]
     ] ],
     [ "TSelector", null, [
@@ -372,6 +358,7 @@ var hierarchy =
         [ "ExampleFragmentSelector", "class_example_fragment_selector.html", null ],
         [ "GainMatchSelector", "class_gain_match_selector.html", null ],
         [ "GenericSelector", "class_generic_selector.html", null ],
+        [ "GriffinKValueSelector", "class_griffin_k_value_selector.html", null ],
         [ "TimeWalkSelector", "class_time_walk_selector.html", null ]
       ] ]
     ] ],
@@ -386,9 +373,6 @@ var hierarchy =
     [ "TTransientBits< T >", "class_t_transient_bits.html", null ],
     [ "TTransientBits< UChar_t >", "class_t_transient_bits.html", null ],
     [ "TTransientBits< UShort_t >", "class_t_transient_bits.html", null ],
-    [ "TTree", null, [
-      [ "GTree", "class_g_tree.html", null ]
-    ] ],
     [ "TUnpackedEvent", "class_t_unpacked_event.html", null ],
     [ "VirtualOdb", "class_virtual_odb.html", null ],
     [ "TPulseAnalyzer::WaveFormPar", "struct_t_pulse_analyzer_1_1_wave_form_par.html", null ],

@@ -7,6 +7,7 @@ var dir_9898311765dba9e8b5ad6a9c9b1db5d5 =
     [ "CrossTalk.h", "_cross_talk_8h.html", [
       [ "CrossTalk", "class_cross_talk.html", "class_cross_talk" ]
     ] ],
+    [ "CrossTalk_C.d", "_cross_talk___c_8d.html", null ],
     [ "ExampleEventSelector.C", "_example_event_selector_8_c.html", "_example_event_selector_8_c" ],
     [ "ExampleEventSelector.h", "_example_event_selector_8h.html", [
       [ "ExampleEventSelector", "class_example_event_selector.html", "class_example_event_selector" ]
@@ -16,6 +17,11 @@ var dir_9898311765dba9e8b5ad6a9c9b1db5d5 =
     [ "ExampleFragmentSelector.h", "_example_fragment_selector_8h.html", [
       [ "ExampleFragmentSelector", "class_example_fragment_selector.html", "class_example_fragment_selector" ]
     ] ],
+    [ "GriffinKValueSelector.C", "_griffin_k_value_selector_8_c.html", "_griffin_k_value_selector_8_c" ],
+    [ "GriffinKValueSelector.h", "_griffin_k_value_selector_8h.html", [
+      [ "GriffinKValueSelector", "class_griffin_k_value_selector.html", "class_griffin_k_value_selector" ]
+    ] ],
+    [ "GriffinKValueSelector_C.d", "_griffin_k_value_selector___c_8d.html", null ],
     [ "grsiproof.cxx", "grsiproof_8cxx.html", "grsiproof_8cxx" ],
     [ "TimeWalkSelector.C", "_time_walk_selector_8_c.html", "_time_walk_selector_8_c" ],
     [ "TimeWalkSelector.h", "_time_walk_selector_8h.html", [

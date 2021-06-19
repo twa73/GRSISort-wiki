@@ -14,6 +14,7 @@ var class_g_value =
     [ "AllValues", "class_g_value.html#a7d6b4727283f4effffc085d546dcf13a", null ],
     [ "AppendValue", "class_g_value.html#a8dccbce79b895b2c02b8880d1bbf81c4", null ],
     [ "ClassDefOverride", "class_g_value.html#ad18e7b34adfa103fd319bb27ad06d684", null ],
+    [ "Clear", "class_g_value.html#aaec70a1b15ac07f0a5382c289a6ad49c", null ],
     [ "Copy", "class_g_value.html#a4c05ae97ebebddfa0e71143973dc69d0", null ],
     [ "FindValue", "class_g_value.html#a85baa8bcd471a21de0e1003294209f5e", null ],
     [ "Get", "class_g_value.html#a6ef26a03a51e23cbf8643492bbc635a1", null ],

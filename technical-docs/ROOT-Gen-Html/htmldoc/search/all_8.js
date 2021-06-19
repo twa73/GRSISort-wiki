@@ -29,7 +29,7 @@ var searchData=
   ['handlemousepress',['HandleMousePress',['../class_g_canvas.html#a242d1faf2a50a9e2d11841a2780da865',1,'GCanvas']]],
   ['handlemouseshiftpress',['HandleMouseShiftPress',['../class_g_canvas.html#acc8c9683848152386be4b741cb51c477',1,'GCanvas']]],
   ['handlesignal',['HandleSignal',['../grsiproof_8cxx.html#a995a22a8c9044c9bb20b398f5ad9d675',1,'grsiproof.cxx']]],
-  ['handleterminput',['HandleTermInput',['../class_t_gint.html#aaf32a8892ebdc7aada54b630e2a9e09f',1,'TGint::HandleTermInput()'],['../class_t_g_r_s_iint.html#afe4df4609125bc3aad0e039d1af148f4',1,'TGRSIint::HandleTermInput()']]],
+  ['handleterminput',['HandleTermInput',['../class_t_g_r_s_iint.html#afe4df4609125bc3aad0e039d1af148f4',1,'TGRSIint']]],
   ['haseditor',['HasEditor',['../class_g_root_canvas.html#a733b39ac53eeb88d21d74b18aab63ec1',1,'GRootCanvas']]],
   ['hash',['Hash',['../class_t_parallel_file_merger.html#aafcb496dfc8c1cec085966dae6edb51f',1,'TParallelFileMerger']]],
   ['hasmenubar',['HasMenuBar',['../class_g_root_canvas.html#ac2a5e86825aa4d34d4c220ada1326d54',1,'GRootCanvas']]],

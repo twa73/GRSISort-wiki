@@ -18,7 +18,7 @@ var searchData=
   ['browseobj',['BrowseObj',['../class_g_root_browser.html#aa99d07c7106dfc0bfe11e818eb18b2ca',1,'GRootBrowser']]],
   ['bufferempty',['BufferEmpty',['../class_g_cube.html#ac188fb4627c94b1f537ea682713755a5',1,'GCube::BufferEmpty()'],['../class_g_h_sym.html#aa6f6059f8e03a966108c2dddf3b82d16',1,'GHSym::BufferEmpty()']]],
   ['bufferfill',['BufferFill',['../class_g_cube.html#aef66606557bd23197fbe12199478683c',1,'GCube::BufferFill(Double_t, Double_t) override'],['../class_g_cube.html#ae56d636cec798c239c8ea6832e88325f',1,'GCube::BufferFill(Double_t x, Double_t y, Double_t z, Double_t w)'],['../class_g_h_sym.html#a5a71239a73aa059ffef7063a82ae46b1',1,'GHSym::BufferFill(Double_t, Double_t) override'],['../class_g_h_sym.html#ade18e601e825940379a17a32b6ef0f06',1,'GHSym::BufferFill(Double_t x, Double_t y, Double_t w)']]],
-  ['build',['Build',['../class_g_directory.html#a0bd711edd6c7081662f0bc2304ffd49e',1,'GDirectory::Build()'],['../class_t_unpacked_event.html#a6a5918c68e0a8e425a8de75d49eb24ca',1,'TUnpackedEvent::Build()']]],
+  ['build',['Build',['../class_t_unpacked_event.html#a6a5918c68e0a8e425a8de75d49eb24ca',1,'TUnpackedEvent']]],
   ['builddee',['BuilddEE',['../class_t_c_s_m.html#a424b4ffa8b19c88490a4c3357a501b2d',1,'TCSM']]],
   ['buildeventsbytimestamp',['BuildEventsByTimeStamp',['../class_t_analysis_options.html#a9e706c292df47f3a5f2005fb89a75500',1,'TAnalysisOptions']]],
   ['buildgraph',['BuildGraph',['../class_t_cal_graph.html#ad2c72d3a4f47d9eff327e0b58ebc2e6a',1,'TCalGraph::BuildGraph()'],['../class_t_efficiency_graph.html#aca639867d349a2246c319f58cc0b2466',1,'TEfficiencyGraph::BuildGraph()']]],

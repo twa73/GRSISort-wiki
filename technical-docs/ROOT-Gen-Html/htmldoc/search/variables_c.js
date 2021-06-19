@@ -6,6 +6,7 @@ var searchData=
   ['max',['max',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a76ca8e3e30a75645a0f2a74f57e42dbb',1,'TPulseAnalyzer::WaveFormPar']]],
   ['max_5fqueue_5fsize',['max_queue_size',['../class_threadsafe_queue.html#a43390fe45dd2bdd6ab26960915cd792f',1,'ThreadsafeQueue']]],
   ['max_5fsamples',['MAX_SAMPLES',['../class_t_pulse_analyzer.html#a95e6b4a232af29f1d1f6a7874c08ad0e',1,'TPulseAnalyzer']]],
+  ['maxkvalue',['maxKValue',['../_griffin_k_value_selector_8_c.html#a20d30ae6910ac5d9e99bbdd953bdf000',1,'GriffinKValueSelector.C']]],
   ['maxmult',['maxMult',['../_caen_analysis_selector_8_c.html#acf739a2944d0de7a362bc1fac770b864',1,'maxMult():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#acf739a2944d0de7a362bc1fac770b864',1,'maxMult():&#160;GenericSelector.C']]],
   ['mem_5fsize',['MEM_SIZE',['../offsetfindtree_8_c.html#aed074d1eddc7840e9b6cacae79c73eb2',1,'offsetfindtree.C']]],
   ['message',['message',['../structgrsi_1_1exit__exception.html#acca63b1e9a57f9ad0375b4f63bdc38ca',1,'grsi::exit_exception::message()'],['../namespacepygui_1_1grut-view.html#a09de9c7b4f562d6690a3cc6f05445565',1,'pygui.grut-view.message()']]],

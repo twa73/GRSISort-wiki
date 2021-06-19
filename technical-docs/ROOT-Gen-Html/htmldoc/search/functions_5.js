@@ -10,6 +10,7 @@ var searchData=
   ['emma',['Emma',['../class_t_g_r_s_i_detector_information.html#a4409e1fa60e26e7c4e60927a1ae52255',1,'TGRSIDetectorInformation']]],
   ['emmamadcdatatofragment',['EmmaMadcDataToFragment',['../class_t_g_r_s_i_data_parser.html#adfc81020faeb848d17f99fba8ebc7996',1,'TGRSIDataParser']]],
   ['emmatdcdatatofragment',['EmmaTdcDataToFragment',['../class_t_g_r_s_i_data_parser.html#a83ecb382d2b60184c84ac0f0cbd42c95',1,'TGRSIDataParser']]],
+  ['empty',['empty',['../class_t_g_r_s_i_map.html#ad6413d9613032f3d761ffd48bf3856fe',1,'TGRSIMap']]],
   ['end',['end',['../classcombinations.html#a97024a51f33b43773f4b7a177f1e1300',1,'combinations::end()'],['../class_g_h2_base.html#ad9b88345d4fc8d02c50795bf7079981e',1,'GH2Base::end()'],['../class_t_g_r_s_i_map.html#a46a512ec88dc52098aa619272e514bcb',1,'TGRSIMap::end()'],['../class_t_g_r_s_i_map.html#ae938e4e4494d3146306f6d60513c6cd7',1,'TGRSIMap::end() const']]],
   ['endofsort',['EndOfSort',['../class_t_g_r_s_i_selector.html#aefe521b4e1ad5569b7e2809fb7f7e411',1,'TGRSISelector']]],
   ['endstatus',['EndStatus',['../class_stoppable_thread.html#a3e7173edc5fcccaa6d1532d561f009db',1,'StoppableThread::EndStatus()'],['../class_t_analysis_write_loop.html#a4e19c3f36c1b7236addbef5182b38562',1,'TAnalysisWriteLoop::EndStatus()'],['../class_t_event_building_loop.html#a115f3c1dc4dfbaf182f2f1a985f6b142',1,'TEventBuildingLoop::EndStatus()'],['../class_t_frag_write_loop.html#a2dc1f3f8598a2f6ea54f416665d793cd',1,'TFragWriteLoop::EndStatus()'],['../class_t_unpacking_loop.html#ada8fb0f95c8b85c145fba9407b62aa1f',1,'TUnpackingLoop::EndStatus()']]],
@@ -17,6 +18,7 @@ var searchData=
   ['enumeratemnemonic',['EnumerateMnemonic',['../class_t_mnemonic.html#a8de9135827b43de545541a575f68f17a',1,'TMnemonic']]],
   ['enumeratesystem',['EnumerateSystem',['../class_t_g_r_s_i_mnemonic.html#a6200c920978b3991d9b2b6f667cf0ea5',1,'TGRSIMnemonic::EnumerateSystem()'],['../class_t_i_l_l_mnemonic.html#a18c546698444b23b0559e3082c24e039',1,'TILLMnemonic::EnumerateSystem()'],['../class_t_tdr_mnemonic.html#a86d7fe5f82e9b1456f1a4540f747cd0a',1,'TTdrMnemonic::EnumerateSystem()']]],
   ['epixtoscalar',['EPIXToScalar',['../class_t_g_r_s_i_data_parser.html#a85839299c20338149aef9d10ba40c226',1,'TGRSIDataParser']]],
+  ['erase',['erase',['../class_t_g_r_s_i_map.html#aa5090ca628456920689772e1e5563001',1,'TGRSIMap::erase(typename map_t::iterator pos)'],['../class_t_g_r_s_i_map.html#a675d18be3086cedece09bcd19ee64bec',1,'TGRSIMap::erase(typename map_t::iterator first, typename map_t::iterator last)']]],
   ['eval',['Eval',['../class_t_single_decay.html#a36f78c26d0783559ccb6d1690864a7a2',1,'TSingleDecay::Eval()'],['../class_t_decay_chain.html#a3446629de0567d8e9c384d2a4a6364ac',1,'TDecayChain::Eval()']]],
   ['evalpar',['EvalPar',['../class_t_single_decay.html#aeaf9202570c243718b72141c666cb774',1,'TSingleDecay::EvalPar()'],['../class_t_decay_chain.html#a3250959755407d67425844c50b3ab885',1,'TDecayChain::EvalPar()']]],
   ['eventinfo',['EventInfo',['../class_g_root_browser.html#ae357d2ba07e0793947edfaf1d1f07cb8',1,'GRootBrowser::EventInfo()'],['../class_g_root_canvas.html#a0ed2c27cd4e8a5aa23c67dffe132f1a0',1,'GRootCanvas::EventInfo()']]],
@@ -31,7 +33,5 @@ var searchData=
   ['executedefaultaction',['ExecuteDefaultAction',['../class_g_root_browser.html#a89aeb762140ecc29e99a5d05f68392bd',1,'GRootBrowser']]],
   ['exit_5fexception',['exit_exception',['../structgrsi_1_1exit__exception.html#a05aae460b04fd3d8e416dce6c092e766',1,'grsi::exit_exception']]],
   ['externalruninfo',['ExternalRunInfo',['../class_t_g_r_s_i_options.html#aadd226e499b99b5f54f7540565c71dc6',1,'TGRSIOptions']]],
-  ['extractobjects',['ExtractObjects',['../class_g_root_object_manager.html#a54bb242bfea11f78359875269e8f50a8',1,'GRootObjectManager']]],
-  ['extractobjectsfromfile',['ExtractObjectsFromFile',['../class_g_root_object_manager.html#a0891dd95342c001fb3ed869c01f875a6',1,'GRootObjectManager']]],
   ['extractwaves',['ExtractWaves',['../class_t_g_r_s_i_options.html#a69c8ce03bf4bd633145796f169429938',1,'TGRSIOptions']]]
 ];

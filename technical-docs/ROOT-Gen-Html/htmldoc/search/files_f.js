@@ -121,7 +121,6 @@ var searchData=
   ['tgauss_2eh',['TGauss.h',['../_t_gauss_8h.html',1,'']]],
   ['tgenericdetector_2ecxx',['TGenericDetector.cxx',['../_t_generic_detector_8cxx.html',1,'']]],
   ['tgenericdetector_2eh',['TGenericDetector.h',['../_t_generic_detector_8h.html',1,'']]],
-  ['tgint_2eh',['TGint.h',['../_t_gint_8h.html',1,'']]],
   ['tgriffin_2ecxx',['TGriffin.cxx',['../_t_griffin_8cxx.html',1,'']]],
   ['tgriffin_2eh',['TGriffin.h',['../_t_griffin_8h.html',1,'']]],
   ['tgriffinbgo_2ecxx',['TGriffinBgo.cxx',['../_t_griffin_bgo_8cxx.html',1,'']]],

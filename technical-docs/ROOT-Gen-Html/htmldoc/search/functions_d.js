@@ -30,6 +30,7 @@ var searchData=
   ['match',['Match',['../class_t_calibrator.html#a2d6fa7d668d1c6fbbbd1e4466ac6cbe9',1,'TCalibrator']]],
   ['matches',['matches',['../class_arg_parse_item.html#a266bb069bb3f88cccdda0bbf9b14ed67',1,'ArgParseItem::matches()'],['../class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688',1,'ArgParseConfig::matches()']]],
   ['max',['MAX',['../group___fitting.html#ga915f0e70ac7aee47871038316dcc28a4',1,'MAX(const T &amp;a, const T &amp;b):&#160;TLMFitter.h'],['../group___fitting.html#gaf81927aa1249cf37ac3750267885b120',1,'MAX(const double &amp;a, const float &amp;b):&#160;TLMFitter.h'],['../group___fitting.html#ga3e7d146382ee63a63057d0d1da21681c',1,'MAX(const float &amp;a, const double &amp;b):&#160;TLMFitter.h']]],
+  ['max_5fsize',['max_size',['../class_t_g_r_s_i_map.html#a9123239f787f98e970c3c6aeaafc9d02',1,'TGRSIMap']]],
   ['maxchannelid',['MaxChannelId',['../class_t_parsing_diagnostics_data.html#af819211e11ef83f5382adeaf124e48d6',1,'TParsingDiagnosticsData']]],
   ['maxentrydiff',['MaxEntryDiff',['../class_t_sorting_diagnostics.html#a284db895d9a71f17a5cc83423836ac24',1,'TSortingDiagnostics']]],
   ['maxtimestamp',['MaxTimeStamp',['../class_t_parsing_diagnostics_data.html#a8fdc71e3f5ad22ad078a16ca68173b33',1,'TParsingDiagnosticsData']]],

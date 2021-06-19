@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('class_t_g_r_s_i_map.html','');});
 class TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;</h3>
 
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00028">28</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00026">26</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -119,18 +119,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6a0301664d180eed65bcee5a0bb652c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a430d88d2a9bb66ed62600b6f5c7c667c"><td class="memItemLeft" align="right" valign="top">map_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a430d88d2a9bb66ed62600b6f5c7c667c">begin</a> () const</td></tr>
 <tr class="separator:a430d88d2a9bb66ed62600b6f5c7c667c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a385abd47c1cbd23688909c105e8eaac6"><td class="memItemLeft" align="right" valign="top">map_t::size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a385abd47c1cbd23688909c105e8eaac6">count</a> (const key_type *k) const</td></tr>
-<tr class="separator:a385abd47c1cbd23688909c105e8eaac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1993f4e37281db588b49a435f55db193"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a1993f4e37281db588b49a435f55db193">clear</a> () noexcept</td></tr>
+<tr class="separator:a1993f4e37281db588b49a435f55db193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a637bc6a9724de5407fd3a835e1eba382"><td class="memItemLeft" align="right" valign="top">map_t::size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a637bc6a9724de5407fd3a835e1eba382">count</a> (const key_type *key) const</td></tr>
+<tr class="separator:a637bc6a9724de5407fd3a835e1eba382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6413d9613032f3d761ffd48bf3856fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#ad6413d9613032f3d761ffd48bf3856fe">empty</a> () const noexcept</td></tr>
+<tr class="separator:ad6413d9613032f3d761ffd48bf3856fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46a512ec88dc52098aa619272e514bcb"><td class="memItemLeft" align="right" valign="top">map_t::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a46a512ec88dc52098aa619272e514bcb">end</a> ()</td></tr>
 <tr class="separator:a46a512ec88dc52098aa619272e514bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae938e4e4494d3146306f6d60513c6cd7"><td class="memItemLeft" align="right" valign="top">map_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#ae938e4e4494d3146306f6d60513c6cd7">end</a> () const</td></tr>
 <tr class="separator:ae938e4e4494d3146306f6d60513c6cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5090ca628456920689772e1e5563001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#aa5090ca628456920689772e1e5563001">erase</a> (typename map_t::iterator pos)</td></tr>
+<tr class="separator:aa5090ca628456920689772e1e5563001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675d18be3086cedece09bcd19ee64bec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a675d18be3086cedece09bcd19ee64bec">erase</a> (typename map_t::iterator first, typename map_t::iterator last)</td></tr>
+<tr class="separator:a675d18be3086cedece09bcd19ee64bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae505f51733cad4deb819418345cf0717"><td class="memItemLeft" align="right" valign="top">map_t::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#ae505f51733cad4deb819418345cf0717">find</a> (const key_type &amp;key)</td></tr>
+<tr class="separator:ae505f51733cad4deb819418345cf0717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae01d0ff87d2aef9d11c891d4765d9bc"><td class="memItemLeft" align="right" valign="top">map_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#aae01d0ff87d2aef9d11c891d4765d9bc">find</a> (const key_type &amp;key) const</td></tr>
+<tr class="separator:aae01d0ff87d2aef9d11c891d4765d9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9123239f787f98e970c3c6aeaafc9d02"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a9123239f787f98e970c3c6aeaafc9d02">max_size</a> () const noexcept</td></tr>
+<tr class="separator:a9123239f787f98e970c3c6aeaafc9d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65fe71131877691baa53fa93ee087534"><td class="memItemLeft" align="right" valign="top">mapped_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a65fe71131877691baa53fa93ee087534">operator[]</a> (const key_type &amp;k)</td></tr>
 <tr class="separator:a65fe71131877691baa53fa93ee087534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b36ea3416f716afcf8f29d806c59759"><td class="memItemLeft" align="right" valign="top">const mapped_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a5b36ea3416f716afcf8f29d806c59759">operator[]</a> (const key_type &amp;k) const</td></tr>
 <tr class="separator:a5b36ea3416f716afcf8f29d806c59759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae759c68c3332ed3db513ff6cbe57d5d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#ae759c68c3332ed3db513ff6cbe57d5d9">Print</a> ()</td></tr>
 <tr class="separator:ae759c68c3332ed3db513ff6cbe57d5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ba2d9cae8f5d8871b229e42c69e52e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#a52ba2d9cae8f5d8871b229e42c69e52e">size</a> () const noexcept</td></tr>
+<tr class="separator:a52ba2d9cae8f5d8871b229e42c69e52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e2a7fe33fb3f1595f9bf5a358db703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_i_map.html#af3e2a7fe33fb3f1595f9bf5a358db703">swap</a> (<a class="el" href="class_t_g_r_s_i_map.html#ab1f3454c64ed390e2c452274fc8d9096">map_t</a> &amp;other)</td></tr>
+<tr class="separator:af3e2a7fe33fb3f1595f9bf5a358db703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -161,7 +179,7 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00058">58</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00056">56</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
 </div>
 </div>
@@ -191,7 +209,7 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00031">31</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00029">29</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
 </div>
 </div>
@@ -220,7 +238,7 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00032">32</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00030">30</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
 </div>
 </div>
@@ -251,9 +269,9 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00040">40</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00038">38</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
@@ -283,9 +301,9 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00047">47</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00045">45</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
@@ -314,9 +332,9 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00059">59</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00057">57</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
@@ -345,14 +363,45 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00060">60</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00058">58</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
-<a id="a385abd47c1cbd23688909c105e8eaac6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a385abd47c1cbd23688909c105e8eaac6">&#9670;&nbsp;</a></span>count()</h2>
+<a id="a1993f4e37281db588b49a435f55db193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1993f4e37281db588b49a435f55db193">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename key_type, typename mapped_type, typename key_compare = std::less&lt;key_type&gt;, typename allocator_type = std::allocator&lt;std::pair&lt;const key_type, mapped_type&gt; &gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">67</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+
+</div>
+</div>
+<a id="a637bc6a9724de5407fd3a835e1eba382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a637bc6a9724de5407fd3a835e1eba382">&#9670;&nbsp;</a></span>count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +415,7 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
           <td class="memname">map_t::size_type <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::count </td>
           <td>(</td>
           <td class="paramtype">const key_type *&#160;</td>
-          <td class="paramname"><em>k</em></td><td>)</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -377,9 +426,40 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00064">64</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00077">77</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+
+</div>
+</div>
+<a id="ad6413d9613032f3d761ffd48bf3856fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6413d9613032f3d761ffd48bf3856fe">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename key_type, typename mapped_type, typename key_compare = std::less&lt;key_type&gt;, typename allocator_type = std::allocator&lt;std::pair&lt;const key_type, mapped_type&gt; &gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00063">63</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
@@ -408,9 +488,9 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00061">61</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00059">59</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
@@ -439,9 +519,178 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00062">62</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00060">60</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+
+</div>
+</div>
+<a id="aa5090ca628456920689772e1e5563001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5090ca628456920689772e1e5563001">&#9670;&nbsp;</a></span>erase() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename key_type, typename mapped_type, typename key_compare = std::less&lt;key_type&gt;, typename allocator_type = std::allocator&lt;std::pair&lt;const key_type, mapped_type&gt; &gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">typename map_t::iterator&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00073">73</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+
+</div>
+</div>
+<a id="a675d18be3086cedece09bcd19ee64bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675d18be3086cedece09bcd19ee64bec">&#9670;&nbsp;</a></span>erase() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename key_type, typename mapped_type, typename key_compare = std::less&lt;key_type&gt;, typename allocator_type = std::allocator&lt;std::pair&lt;const key_type, mapped_type&gt; &gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">typename map_t::iterator&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename map_t::iterator&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00074">74</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+
+</div>
+</div>
+<a id="ae505f51733cad4deb819418345cf0717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae505f51733cad4deb819418345cf0717">&#9670;&nbsp;</a></span>find() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename key_type, typename mapped_type, typename key_compare = std::less&lt;key_type&gt;, typename allocator_type = std::allocator&lt;std::pair&lt;const key_type, mapped_type&gt; &gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">map_t::iterator <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">const key_type &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00078">78</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+
+</div>
+</div>
+<a id="aae01d0ff87d2aef9d11c891d4765d9bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae01d0ff87d2aef9d11c891d4765d9bc">&#9670;&nbsp;</a></span>find() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename key_type, typename mapped_type, typename key_compare = std::less&lt;key_type&gt;, typename allocator_type = std::allocator&lt;std::pair&lt;const key_type, mapped_type&gt; &gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">map_t::const_iterator <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">const key_type &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00079">79</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+
+</div>
+</div>
+<a id="a9123239f787f98e970c3c6aeaafc9d02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9123239f787f98e970c3c6aeaafc9d02">&#9670;&nbsp;</a></span>max_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename key_type, typename mapped_type, typename key_compare = std::less&lt;key_type&gt;, typename allocator_type = std::allocator&lt;std::pair&lt;const key_type, mapped_type&gt; &gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::max_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00065">65</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
@@ -471,9 +720,9 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00055">55</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00053">53</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
@@ -503,9 +752,9 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00056">56</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00054">54</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
@@ -534,9 +783,72 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00034">34</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00032">32</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+
+</div>
+</div>
+<a id="a52ba2d9cae8f5d8871b229e42c69e52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ba2d9cae8f5d8871b229e42c69e52e">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename key_type, typename mapped_type, typename key_compare = std::less&lt;key_type&gt;, typename allocator_type = std::allocator&lt;std::pair&lt;const key_type, mapped_type&gt; &gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00064">64</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
+
+</div>
+</div>
+<a id="af3e2a7fe33fb3f1595f9bf5a358db703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e2a7fe33fb3f1595f9bf5a358db703">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename key_type, typename mapped_type, typename key_compare = std::less&lt;key_type&gt;, typename allocator_type = std::allocator&lt;std::pair&lt;const key_type, mapped_type&gt; &gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_t_g_r_s_i_map.html">TGRSIMap</a>&lt; key_type, mapped_type, key_compare, allocator_type &gt;::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_g_r_s_i_map.html#ab1f3454c64ed390e2c452274fc8d9096">map_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00075">75</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::fMap</a>.</p>
 
 </div>
 </div>
@@ -563,9 +875,9 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">67</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00085">85</a> of file <a class="el" href="_t_g_r_s_i_map_8h_source.html">TGRSIMap.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00040">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::at()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00059">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::begin()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00064">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::count()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00061">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::end()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00055">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::operator[]()</a>, and <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00034">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00038">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::at()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00057">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::begin()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00067">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::clear()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00077">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::count()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00063">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::empty()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00059">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::end()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00073">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::erase()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00078">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::find()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00065">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::max_size()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00053">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::operator[]()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00032">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::Print()</a>, <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00064">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::size()</a>, and <a class="el" href="_t_g_r_s_i_map_8h_source.html#l00075">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;::swap()</a>.</p>
 
 </div>
 </div>
@@ -575,7 +887,7 @@ template&lt;typename key_type, typename mapped_type, typename key_compare = std:
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Thu Feb 11 2021 10:21:07.
+GRSISort (4.0.0.2 ) Reference Guide Generated on Fri Jun 18 2021 20:49:50.
 </small>
 </div>
 </body>

@@ -95,9 +95,10 @@ $(document).ready(function(){initNavTree('class_g_root_canvas.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
-<div class="textblock"><p>This class creates a main window with menubar, scrollbars and a drawing area. The widgets used are the new native ROOT GUI widgets. </p>
+<div class="textblock"><p>This class creates a main window with menubar, scrollbars and a drawing area. The widgets used are the new native ROOT GUI widgets.</p>
+<p>A slightly edited version of the the <a class="el" href="class_g_root_canvas.html">GRootCanvas</a> file in the default root source. The reason for the swap was take more control over the keyboard interface to the canvas (particularly the arrow keys). </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00049">49</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00046">46</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -433,10 +434,11 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Create a basic ROOT canvas. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00295">295</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00285">285</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>.</p>
 
 </div>
 </div>
@@ -462,10 +464,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Delete ROOT basic canvas. Order is significant. Delete in reverse order of creation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">596</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">586</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00055">fCanvasContainer</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00069">fCanvasLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00054">fCanvasWindow</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00087">fDockLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00060">fEditClearMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00059">fEditMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00091">fEditor</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00073">fEditorFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00074">fEditorLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00092">fEmbedded</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00057">fFileMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00058">fFileSaveMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00065">fHelpMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00082">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00085">fHorizontal1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00088">fIconPic</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00075">fMainFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00079">fMainFrameLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00068">fMenuBarHelpLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00067">fMenuBarItemLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00066">fMenuBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00063">fOptionMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00070">fStatusBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00071">fStatusBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00077">fToolBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00076">fToolBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00078">fToolBarSep</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00064">fToolsMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00089">fToolTip</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00061">fViewMenu</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00062">fViewWithMenu</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00052">fCanvasContainer</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00066">fCanvasLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00051">fCanvasWindow</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00084">fDockLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00057">fEditClearMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00056">fEditMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00088">fEditor</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00070">fEditorFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00071">fEditorLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00089">fEmbedded</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00054">fFileMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00055">fFileSaveMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00062">fHelpMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00079">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00082">fHorizontal1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00085">fIconPic</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00072">fMainFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00076">fMainFrameLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00065">fMenuBarHelpLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00064">fMenuBarItemLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00063">fMenuBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00060">fOptionMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00067">fStatusBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00068">fStatusBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00074">fToolBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00073">fToolBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00075">fToolBarSep</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00083">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00061">fToolsMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolTip</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00058">fViewMenu</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00059">fViewWithMenu</a>.</p>
 
 </div>
 </div>
@@ -485,10 +488,11 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Slot handling tab switching in the browser, to properly set the canvas and the model to the editor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l02049">2049</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l02038">2038</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00091">fEditor</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00092">fEmbedded</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00088">fEditor</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00089">fEmbedded</a>.</p>
 
 </div>
 </div>
@@ -506,10 +510,11 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Keep the same canvas size while docking/undocking toolbar. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01641">1641</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01630">1630</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00082">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00077">fToolBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00078">fToolBarSep</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00061">fViewMenu</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00095">kViewEditor</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00079">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00074">fToolBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00075">fToolBarSep</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00083">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00058">fViewMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00085">kViewEditor</a>, and <a class="el" href="_globals_8h_source.html#l00134">sh()</a>.</p>
 
 </div>
 </div>
@@ -535,10 +540,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Called via TCanvasImp interface by TCanvas. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00662">662</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00652">652</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00092">fEmbedded</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00089">fEmbedded</a>.</p>
 
 </div>
 </div>
@@ -564,8 +570,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>In case window is closed via WM we get here. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00707">707</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00696">696</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
 </div>
 </div>
@@ -592,12 +599,13 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Create the actual canvas. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">309</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">299</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00094">fAutoFit</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00095">fButton</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00055">fCanvasContainer</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00093">fCanvasID</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00069">fCanvasLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00054">fCanvasWindow</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00087">fDockLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00060">fEditClearMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00059">fEditMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00091">fEditor</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00073">fEditorFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00074">fEditorLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00092">fEmbedded</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00057">fFileMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00058">fFileSaveMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00065">fHelpMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00082">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00085">fHorizontal1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00088">fIconPic</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00075">fMainFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00079">fMainFrameLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00056">fMenuBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00068">fMenuBarHelpLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00067">fMenuBarItemLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00066">fMenuBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00063">fOptionMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00070">fStatusBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00071">fStatusBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00077">fToolBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00076">fToolBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00078">fToolBarSep</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00064">fToolsMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00089">fToolTip</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00080">fVertical1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00083">fVertical1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00081">fVertical2</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00084">fVertical2Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00061">fViewMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00062">fViewWithMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00051">GRootContainer</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00119">kClassesTree</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00091">kEditClearCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00090">kEditClearPad</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00088">kEditCopy</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00087">kEditCut</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00089">kEditPaste</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00093">kEditRedo</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00086">kEditStyle</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00092">kEditUndo</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00083">kFileCloseCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00071">kFileNewCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00072">kFileOpen</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00082">kFilePrint</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00084">kFileQuit</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00073">kFileSaveAs</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00075">kFileSaveAsC</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00077">kFileSaveAsEPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00079">kFileSaveAsGIF</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00080">kFileSaveAsJPG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00078">kFileSaveAsPDF</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00081">kFileSaveAsPNG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00076">kFileSaveAsPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00074">kFileSaveAsRoot</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00120">kFitPanel</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00125">kHelpAbout</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00129">kHelpOnBrowser</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00126">kHelpOnCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00128">kHelpOnGraphicsEd</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00127">kHelpOnMenus</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00130">kHelpOnObjects</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00131">kHelpOnPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00118">kInspectRoot</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00112">kOptionAutoExec</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00106">kOptionAutoResize</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00116">kOptionCanEdit</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00115">kOptionFitParams</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00114">kOptionHistTitle</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00110">kOptionInterrupt</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00108">kOptionMoveOpaque</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00111">kOptionRefresh</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00107">kOptionResizeCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00109">kOptionResizeOpaque</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00113">kOptionStatistics</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00121">kToolsBrowser</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00122">kToolsBuilder</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00123">kToolsRecorder</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00099">kViewColors</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00095">kViewEditor</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00097">kViewEventStatus</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00100">kViewFonts</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00102">kViewIconify</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00101">kViewMarkers</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00104">kViewOpenGL</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00096">kViewToolbar</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00098">kViewToolTips</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00103">kViewX3D</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00091">fAutoFit</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00092">fButton</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00052">fCanvasContainer</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00090">fCanvasID</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00066">fCanvasLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00051">fCanvasWindow</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00084">fDockLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00057">fEditClearMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00056">fEditMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00088">fEditor</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00070">fEditorFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00071">fEditorLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00089">fEmbedded</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00054">fFileMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00055">fFileSaveMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00062">fHelpMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00079">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00082">fHorizontal1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00085">fIconPic</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00072">fMainFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00076">fMainFrameLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00053">fMenuBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00065">fMenuBarHelpLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00064">fMenuBarItemLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00063">fMenuBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00060">fOptionMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00067">fStatusBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00068">fStatusBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00074">fToolBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00073">fToolBarLayout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00075">fToolBarSep</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00083">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00061">fToolsMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolTip</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00077">fVertical1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00080">fVertical1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00078">fVertical2</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00081">fVertical2Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00058">fViewMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00059">fViewWithMenu</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00048">GRootContainer</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00109">kClassesTree</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00081">kEditClearCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00080">kEditClearPad</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00078">kEditCopy</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00077">kEditCut</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00079">kEditPaste</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00083">kEditRedo</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00076">kEditStyle</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00082">kEditUndo</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00073">kFileCloseCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00061">kFileNewCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00062">kFileOpen</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00072">kFilePrint</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00074">kFileQuit</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00063">kFileSaveAs</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00065">kFileSaveAsC</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00067">kFileSaveAsEPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00069">kFileSaveAsGIF</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00070">kFileSaveAsJPG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00068">kFileSaveAsPDF</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00071">kFileSaveAsPNG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00066">kFileSaveAsPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00064">kFileSaveAsRoot</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00110">kFitPanel</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00115">kHelpAbout</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00119">kHelpOnBrowser</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00116">kHelpOnCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00118">kHelpOnGraphicsEd</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00117">kHelpOnMenus</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00120">kHelpOnObjects</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00121">kHelpOnPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00108">kInspectRoot</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00102">kOptionAutoExec</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00096">kOptionAutoResize</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00106">kOptionCanEdit</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00105">kOptionFitParams</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00104">kOptionHistTitle</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00100">kOptionInterrupt</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00098">kOptionMoveOpaque</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00101">kOptionRefresh</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00097">kOptionResizeCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00099">kOptionResizeOpaque</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00103">kOptionStatistics</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00111">kToolsBrowser</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00112">kToolsBuilder</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00113">kToolsRecorder</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00089">kViewColors</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00085">kViewEditor</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00087">kViewEventStatus</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00090">kViewFonts</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00092">kViewIconify</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00091">kViewMarkers</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00094">kViewOpenGL</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00086">kViewToolbar</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00088">kViewToolTips</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00093">kViewX3D</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00295">GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00285">GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -623,12 +631,13 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Create embedded editor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01486">1486</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01475">1475</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00091">fEditor</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00073">fEditorFrame</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00088">fEditor</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00070">fEditorFrame</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>.</p>
 
 </div>
 </div>
@@ -669,10 +678,11 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Display a tooltip with infos about the primitive below the cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01326">1326</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01315">1315</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00095">fButton</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00089">fToolTip</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00015">px</a>, and <a class="el" href="_caen_analysis_selector_8_c_source.html#l00015">py</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00092">fButton</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolTip</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00015">px</a>, and <a class="el" href="_caen_analysis_selector_8_c_source.html#l00015">py</a>.</p>
 
 </div>
 </div>
@@ -690,12 +700,13 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Fit canvas container to current window size. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01241">1241</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01230">1230</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00094">fAutoFit</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00055">fCanvasContainer</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00091">fAutoFit</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00052">fCanvasContainer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00755">ProcessMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00744">ProcessMessage()</a>.</p>
 
 </div>
 </div>
@@ -722,7 +733,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00122">122</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00119">119</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
 </div>
 </div>
@@ -740,10 +751,11 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return height of canvas container. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00723">723</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00712">712</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00055">fCanvasContainer</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00052">fCanvasContainer</a>.</p>
 
 </div>
 </div>
@@ -761,10 +773,11 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return width of canvas container. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00715">715</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00704">704</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00055">fCanvasContainer</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00052">fCanvasContainer</a>.</p>
 
 </div>
 </div>
@@ -791,9 +804,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00153">153</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00150">150</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00056">fMenuBar</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00053">fMenuBar</a>.</p>
 
 </div>
 </div>
@@ -820,9 +833,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00154">154</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00151">151</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00067">fMenuBarItemLayout</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00064">fMenuBarItemLayout</a>.</p>
 
 </div>
 </div>
@@ -849,9 +862,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00155">155</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00152">152</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00070">fStatusBar</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00067">fStatusBar</a>.</p>
 
 </div>
 </div>
@@ -878,9 +891,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00156">156</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00153">153</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolDock</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00083">fToolDock</a>.</p>
 
 </div>
 </div>
@@ -929,10 +942,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Gets the size and position of the window containing the canvas. This size includes the menubar and borders. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00731">731</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00720">720</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00073">fEditorFrame</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00070">fEditorFrame</a>.</p>
 
 </div>
 </div>
@@ -959,12 +973,13 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle mouse button events in the canvas container. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01668">1668</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01657">1657</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00095">fButton</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00089">fToolTip</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00156">kButton1Ctrl</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00092">fButton</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolTip</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00146">kButton1Ctrl</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00250">GRootContainer::HandleButton()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00240">GRootContainer::HandleButton()</a>.</p>
 
 </div>
 </div>
@@ -991,12 +1006,13 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle configure (i.e. resize) event. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01747">1747</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01736">1736</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00094">fAutoFit</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00055">fCanvasContainer</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01208">SetWindowSize()</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00091">fAutoFit</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00052">fCanvasContainer</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01197">SetWindowSize()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00221">GRootContainer::HandleConfigureNotify()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00211">GRootContainer::HandleConfigureNotify()</a>.</p>
 
 </div>
 </div>
@@ -1023,10 +1039,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle enter/leave events. Only leave is activated at the moment. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01932">1932</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01921">1921</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00229">GRootContainer::HandleCrossing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00219">GRootContainer::HandleCrossing()</a>.</p>
 
 </div>
 </div>
@@ -1053,10 +1070,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle mouse button double click events in the canvas container. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01725">1725</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01714">1714</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00220">GRootContainer::HandleDoubleClick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00210">GRootContainer::HandleDoubleClick()</a>.</p>
 
 </div>
 </div>
@@ -1083,10 +1101,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle expose events. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01920">1920</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01909">1909</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00228">GRootContainer::HandleExpose()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00218">GRootContainer::HandleExpose()</a>.</p>
 
 </div>
 </div>
@@ -1113,12 +1132,14 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle keyboard events in the canvas container.</p>
+<p>This is the function I wanted to edit so bad that I went through all the trouble to copy this thing. This will allow us to take complete control of the canvas interface make a more root-ish/radware-isf work enviorment. pcb.</p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01768">1768</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01757">1757</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00095">fButton</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00055">fCanvasContainer</a>, <a class="el" href="_g_canvas_8cxx_source.html#l00348">GCanvas::HandleArrowKeyPress()</a>, <a class="el" href="_g_canvas_8cxx_source.html#l00363">GCanvas::HandleKeyboardPress()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00153">kArrowKeyPress</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00154">kArrowKeyRelease</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00092">fButton</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00052">fCanvasContainer</a>, <a class="el" href="_g_canvas_8cxx_source.html#l00348">GCanvas::HandleArrowKeyPress()</a>, <a class="el" href="_g_canvas_8cxx_source.html#l00363">GCanvas::HandleKeyboardPress()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00143">kArrowKeyPress</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00144">kArrowKeyRelease</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00226">GRootContainer::HandleKey()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00216">GRootContainer::HandleKey()</a>.</p>
 
 </div>
 </div>
@@ -1145,12 +1166,13 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle mouse motion event in the canvas container. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01895">1895</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01884">1884</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00095">fButton</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00092">fButton</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00227">GRootContainer::HandleMotion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00217">GRootContainer::HandleMotion()</a>.</p>
 
 </div>
 </div>
@@ -1177,8 +1199,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle drop events. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01949">1949</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01938">1938</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
 </div>
 </div>
@@ -1205,8 +1228,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle drag enter events. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l02022">2022</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l02011">2011</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
 </div>
 </div>
@@ -1232,8 +1256,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle drag leave events. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l02041">2041</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l02030">2030</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
 </div>
 </div>
@@ -1288,8 +1313,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle dragging position events. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l02007">2007</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01996">1996</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="grut-view_8py_source.html#l00011">pygui.grut-view::action</a>.</p>
 
@@ -1317,10 +1343,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns kTRUE if the editor is shown. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01601">1601</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01590">1590</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00091">fEditor</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00061">fViewMenu</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00095">kViewEditor</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00088">fEditor</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00058">fViewMenu</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00085">kViewEditor</a>.</p>
 
 </div>
 </div>
@@ -1346,10 +1373,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns kTRUE if the menu bar is shown. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01609">1609</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01598">1598</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00056">fMenuBar</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00053">fMenuBar</a>.</p>
 
 </div>
 </div>
@@ -1375,10 +1403,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns kTRUE if the status bar is shown. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01617">1617</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01606">1606</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00070">fStatusBar</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00067">fStatusBar</a>.</p>
 
 </div>
 </div>
@@ -1404,10 +1433,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns kTRUE if the tool bar is shown. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01625">1625</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01614">1614</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00077">fToolBar</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00074">fToolBar</a>.</p>
 
 </div>
 </div>
@@ -1433,8 +1463,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns kTRUE if the tooltips are enabled. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01633">1633</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01622">1622</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
 </div>
 </div>
@@ -1461,9 +1492,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00128">128</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00125">125</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00755">ProcessMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00744">ProcessMessage()</a>.</p>
 
 </div>
 </div>
@@ -1489,10 +1520,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Called by TCanvas ctor to get window indetifier. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01167">1167</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01156">1156</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00093">fCanvasID</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00063">fOptionMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00108">kOptionMoveOpaque</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00109">kOptionResizeOpaque</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00090">fCanvasID</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00060">fOptionMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00098">kOptionMoveOpaque</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00099">kOptionResizeOpaque</a>.</p>
 
 </div>
 </div>
@@ -1536,10 +1568,11 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Print the canvas. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01258">1258</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01247">1247</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00755">ProcessMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00744">ProcessMessage()</a>.</p>
 
 </div>
 </div>
@@ -1582,10 +1615,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Handle menu and other command generated by the user. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00755">755</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00744">744</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00094">fAutoFit</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00055">fCanvasContainer</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01241">FitCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00063">fOptionMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00159">gOpenTypes</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00161">gSaveAsTypes</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00128">Iconify()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00119">kClassesTree</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00091">kEditClearCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00090">kEditClearPad</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00088">kEditCopy</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00087">kEditCut</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00089">kEditPaste</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00093">kEditRedo</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00086">kEditStyle</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00092">kEditUndo</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00083">kFileCloseCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00071">kFileNewCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00072">kFileOpen</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00082">kFilePrint</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00084">kFileQuit</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00073">kFileSaveAs</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00075">kFileSaveAsC</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00077">kFileSaveAsEPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00079">kFileSaveAsGIF</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00080">kFileSaveAsJPG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00078">kFileSaveAsPDF</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00081">kFileSaveAsPNG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00076">kFileSaveAsPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00074">kFileSaveAsRoot</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00120">kFitPanel</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00125">kHelpAbout</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00129">kHelpOnBrowser</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00126">kHelpOnCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00128">kHelpOnGraphicsEd</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00127">kHelpOnMenus</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00130">kHelpOnObjects</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00131">kHelpOnPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00118">kInspectRoot</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00112">kOptionAutoExec</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00106">kOptionAutoResize</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00116">kOptionCanEdit</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00115">kOptionFitParams</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00114">kOptionHistTitle</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00110">kOptionInterrupt</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00108">kOptionMoveOpaque</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00111">kOptionRefresh</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00107">kOptionResizeCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00109">kOptionResizeOpaque</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00113">kOptionStatistics</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00134">kToolArc</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00136">kToolArrow</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00146">kToolCurlyArc</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00145">kToolCurlyLine</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00149">kToolCutG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00137">kToolDiamond</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00138">kToolEllipse</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00144">kToolGraph</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00147">kToolLatex</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00135">kToolLine</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00148">kToolMarker</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00133">kToolModify</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00139">kToolPad</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00140">kToolPave</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00141">kToolPLabel</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00143">kToolPsText</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00142">kToolPText</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00121">kToolsBrowser</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00122">kToolsBuilder</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00123">kToolsRecorder</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00099">kViewColors</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00095">kViewEditor</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00097">kViewEventStatus</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00100">kViewFonts</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00102">kViewIconify</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00101">kViewMarkers</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00104">kViewOpenGL</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00096">kViewToolbar</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00098">kViewToolTips</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00103">kViewX3D</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01258">PrintCanvas()</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00091">fAutoFit</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00052">fCanvasContainer</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01230">FitCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00060">fOptionMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00149">gOpenTypes</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00151">gSaveAsTypes</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00125">Iconify()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00109">kClassesTree</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00081">kEditClearCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00080">kEditClearPad</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00078">kEditCopy</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00077">kEditCut</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00079">kEditPaste</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00083">kEditRedo</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00076">kEditStyle</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00082">kEditUndo</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00073">kFileCloseCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00061">kFileNewCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00062">kFileOpen</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00072">kFilePrint</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00074">kFileQuit</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00063">kFileSaveAs</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00065">kFileSaveAsC</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00067">kFileSaveAsEPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00069">kFileSaveAsGIF</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00070">kFileSaveAsJPG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00068">kFileSaveAsPDF</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00071">kFileSaveAsPNG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00066">kFileSaveAsPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00064">kFileSaveAsRoot</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00110">kFitPanel</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00115">kHelpAbout</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00119">kHelpOnBrowser</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00116">kHelpOnCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00118">kHelpOnGraphicsEd</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00117">kHelpOnMenus</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00120">kHelpOnObjects</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00121">kHelpOnPS</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00108">kInspectRoot</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00102">kOptionAutoExec</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00096">kOptionAutoResize</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00106">kOptionCanEdit</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00105">kOptionFitParams</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00104">kOptionHistTitle</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00100">kOptionInterrupt</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00098">kOptionMoveOpaque</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00101">kOptionRefresh</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00097">kOptionResizeCanvas</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00099">kOptionResizeOpaque</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00103">kOptionStatistics</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00124">kToolArc</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00126">kToolArrow</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00136">kToolCurlyArc</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00135">kToolCurlyLine</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00139">kToolCutG</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00127">kToolDiamond</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00128">kToolEllipse</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00134">kToolGraph</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00137">kToolLatex</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00125">kToolLine</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00138">kToolMarker</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00123">kToolModify</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00129">kToolPad</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00130">kToolPave</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00131">kToolPLabel</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00133">kToolPsText</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00132">kToolPText</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00111">kToolsBrowser</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00112">kToolsBuilder</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00113">kToolsRecorder</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00089">kViewColors</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00085">kViewEditor</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00087">kViewEventStatus</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00090">kViewFonts</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00092">kViewIconify</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00091">kViewMarkers</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00094">kViewOpenGL</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00086">kViewToolbar</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00088">kViewToolTips</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00093">kViewX3D</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01247">PrintCanvas()</a>.</p>
 
 </div>
 </div>
@@ -1611,8 +1645,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Put canvas window on top of the window stack. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01223">1223</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01212">1212</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
 </div>
 </div>
@@ -1638,10 +1673,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Really delete the canvas and this GUI. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00681">681</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00670">670</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00092">fEmbedded</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00089">fToolTip</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00089">fEmbedded</a>, and <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolTip</a>.</p>
 
 </div>
 </div>
@@ -1678,10 +1714,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set size of canvas container. Units in pixels. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01182">1182</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01171">1171</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00094">fAutoFit</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00055">fCanvasContainer</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00063">fOptionMenu</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00106">kOptionAutoResize</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00091">fAutoFit</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00052">fCanvasContainer</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00060">fOptionMenu</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00096">kOptionAutoResize</a>.</p>
 
 </div>
 </div>
@@ -1718,10 +1755,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set text in status bar. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00747">747</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l00736">736</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00070">fStatusBar</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00067">fStatusBar</a>.</p>
 
 </div>
 </div>
@@ -1758,8 +1796,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set canvas position (units in pixels). </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01200">1200</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01189">1189</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
 </div>
 </div>
@@ -1796,10 +1835,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set size of canvas (units in pixels). </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01208">1208</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01197">1197</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01747">HandleContainerConfigure()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01736">HandleContainerConfigure()</a>.</p>
 
 </div>
 </div>
@@ -1826,10 +1866,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Change title on window. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01231">1231</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01220">1220</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolDock</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00083">fToolDock</a>.</p>
 
 </div>
 </div>
@@ -1856,7 +1897,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00138">138</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00135">135</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
 </div>
 </div>
@@ -1883,12 +1924,13 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Show or hide side frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">1400</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">1389</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8cxx_source.html#l01486">CreateEditor()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00091">fEditor</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00073">fEditorFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00092">fEmbedded</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00082">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00075">fMainFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00061">fViewMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00095">kViewEditor</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00096">kViewToolbar</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00181">main()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00015">s</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8cxx_source.html#l01475">CreateEditor()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00088">fEditor</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00070">fEditorFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00089">fEmbedded</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00079">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00072">fMainFrame</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00083">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00058">fViewMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00085">kViewEditor</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00086">kViewToolbar</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00181">main()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00015">s</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00295">GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00285">GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -1915,10 +1957,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Show or hide menubar. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01357">1357</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01346">1346</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00056">fMenuBar</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00053">fMenuBar</a>.</p>
 
 </div>
 </div>
@@ -1945,10 +1988,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Show or hide statusbar. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01369">1369</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01358">1358</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00070">fStatusBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00061">fViewMenu</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00097">kViewEventStatus</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00067">fStatusBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00058">fViewMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00087">kViewEventStatus</a>, and <a class="el" href="_globals_8h_source.html#l00134">sh()</a>.</p>
 
 </div>
 </div>
@@ -1975,12 +2019,13 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Show or hide toolbar. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">1510</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">1499</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00082">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00085">fHorizontal1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00077">fToolBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00078">fToolBarSep</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00086">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00080">fVertical1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00083">fVertical1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00081">fVertical2</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00084">fVertical2Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00061">fViewMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00169">gToolBarData</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00183">gToolBarData1</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00095">kViewEditor</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00096">kViewToolbar</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00079">fHorizontal1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00082">fHorizontal1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00074">fToolBar</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00075">fToolBarSep</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00083">fToolDock</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00077">fVertical1</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00080">fVertical1Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00078">fVertical2</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00081">fVertical2Layout</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00058">fViewMenu</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00159">gToolBarData</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00173">gToolBarData1</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00085">kViewEditor</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00086">kViewToolbar</a>, and <a class="el" href="_globals_8h_source.html#l00134">sh()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00295">GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00285">GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2007,10 +2052,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Enable or disable tooltip info. </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01589">1589</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8cxx_source.html#l01578">1578</a> of file <a class="el" href="_g_root_canvas_8cxx_source.html">GRootCanvas.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00061">fViewMenu</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00098">kViewToolTips</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_canvas_8h_source.html#l00058">fViewMenu</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00088">kViewToolTips</a>.</p>
 
 </div>
 </div>
@@ -2035,9 +2081,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00051">51</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00048">48</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2064,9 +2110,9 @@ Friends</h2></td></tr>
 
 <p>when true canvas container keeps same size as canvas </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00094">94</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00091">91</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01241">FitCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01747">HandleContainerConfigure()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00755">ProcessMessage()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01182">SetCanvasSize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01230">FitCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01736">HandleContainerConfigure()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00744">ProcessMessage()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01171">SetCanvasSize()</a>.</p>
 
 </div>
 </div>
@@ -2092,9 +2138,9 @@ Friends</h2></td></tr>
 
 <p>currently pressed button </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00095">95</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00092">92</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01326">EventInfo()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01668">HandleContainerButton()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01768">HandleContainerKey()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01895">HandleContainerMotion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01315">EventInfo()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01657">HandleContainerButton()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01757">HandleContainerKey()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01884">HandleContainerMotion()</a>.</p>
 
 </div>
 </div>
@@ -2120,9 +2166,9 @@ Friends</h2></td></tr>
 
 <p>container in canvas widget </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00055">55</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00052">52</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01241">FitCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00723">GetCheight()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00715">GetCwidth()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01747">HandleContainerConfigure()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01768">HandleContainerKey()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00755">ProcessMessage()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01182">SetCanvasSize()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01230">FitCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00712">GetCheight()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00704">GetCwidth()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01736">HandleContainerConfigure()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01757">HandleContainerKey()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00744">ProcessMessage()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01171">SetCanvasSize()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2148,9 +2194,9 @@ Friends</h2></td></tr>
 
 <p>index in fWindows array of TGX11 </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00093">93</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00090">90</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01167">InitWindow()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01156">InitWindow()</a>.</p>
 
 </div>
 </div>
@@ -2176,9 +2222,9 @@ Friends</h2></td></tr>
 
 <p>layout for canvas widget </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00069">69</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00066">66</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2204,9 +2250,9 @@ Friends</h2></td></tr>
 
 <p>canvas widget </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00054">54</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00051">51</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00250">GRootContainer::HandleButton()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00240">GRootContainer::HandleButton()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2232,9 +2278,9 @@ Friends</h2></td></tr>
 
 <p>layout hints for dockable frame widget </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00087">87</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00084">84</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2260,9 +2306,9 @@ Friends</h2></td></tr>
 
 <p>clear cascade submenu </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00060">60</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00057">57</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2288,9 +2334,9 @@ Friends</h2></td></tr>
 
 <p>edit menu </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00059">59</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00056">56</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2316,9 +2362,9 @@ Friends</h2></td></tr>
 
 <p>pointer to currently loaded pad editor </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00091">91</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00088">88</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l02049">Activated()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01486">CreateEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01601">HasEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l02038">Activated()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01475">CreateEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01590">HasEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2344,9 +2390,9 @@ Friends</h2></td></tr>
 
 <p>side frame for current pad editor </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00073">73</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00070">70</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01486">CreateEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00731">GetWindowGeometry()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01475">CreateEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00720">GetWindowGeometry()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2372,9 +2418,9 @@ Friends</h2></td></tr>
 
 <p>layout for editor frame </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00074">74</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00071">71</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2400,9 +2446,9 @@ Friends</h2></td></tr>
 
 <p>true if embedded in any other frame (e.g. in the browser) </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00092">92</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00089">89</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l02049">Activated()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00662">Close()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00681">ReallyDelete()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l02038">Activated()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00652">Close()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00670">ReallyDelete()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2428,9 +2474,9 @@ Friends</h2></td></tr>
 
 <p>file menu </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00057">57</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00054">54</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2456,9 +2502,9 @@ Friends</h2></td></tr>
 
 <p>save cascade submenu </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00058">58</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00055">55</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2484,9 +2530,9 @@ Friends</h2></td></tr>
 
 <p>help menu </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00065">65</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00062">62</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2512,9 +2558,9 @@ Friends</h2></td></tr>
 
 <p>toolbar sepatator </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00082">82</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00079">79</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01641">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01630">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2540,9 +2586,9 @@ Friends</h2></td></tr>
 
 <p>layout hints for separator </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00085">85</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00082">82</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2568,9 +2614,9 @@ Friends</h2></td></tr>
 
 <p>icon picture </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00088">88</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00085">85</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2596,9 +2642,9 @@ Friends</h2></td></tr>
 
 <p>main frame containing canvas and side frame </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00075">75</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00072">72</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2624,9 +2670,9 @@ Friends</h2></td></tr>
 
 <p>layout for main frame </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00079">79</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00076">76</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2652,9 +2698,9 @@ Friends</h2></td></tr>
 
 <p>menubar </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00056">56</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00053">53</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00153">GetMenuBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01609">HasMenuBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01357">ShowMenuBar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00150">GetMenuBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01598">HasMenuBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01346">ShowMenuBar()</a>.</p>
 
 </div>
 </div>
@@ -2680,9 +2726,9 @@ Friends</h2></td></tr>
 
 <p>layout hint for help menu in menubar </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00068">68</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00065">65</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2708,9 +2754,9 @@ Friends</h2></td></tr>
 
 <p>layout hints for menu in menubar </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00067">67</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00064">64</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00154">GetMenuBarItemLayout()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00151">GetMenuBarItemLayout()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2736,9 +2782,9 @@ Friends</h2></td></tr>
 
 <p>menubar layout hints </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00066">66</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00063">63</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2764,9 +2810,9 @@ Friends</h2></td></tr>
 
 <p>option menu </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00063">63</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00060">60</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01167">InitWindow()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00755">ProcessMessage()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01182">SetCanvasSize()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01156">InitWindow()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00744">ProcessMessage()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01171">SetCanvasSize()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2792,9 +2838,9 @@ Friends</h2></td></tr>
 
 <p>statusbar widget </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00070">70</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00067">67</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00155">GetStatusBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01617">HasStatusBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00747">SetStatusText()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01369">ShowStatusBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00152">GetStatusBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01606">HasStatusBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00736">SetStatusText()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01358">ShowStatusBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2820,9 +2866,9 @@ Friends</h2></td></tr>
 
 <p>layout hints for statusbar </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00071">71</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00068">68</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2848,9 +2894,9 @@ Friends</h2></td></tr>
 
 <p>icon button toolbar </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00077">77</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00074">74</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01641">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01625">HasToolBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01630">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01614">HasToolBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2876,9 +2922,9 @@ Friends</h2></td></tr>
 
 <p>layout for toolbar widget </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00076">76</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00073">73</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2904,9 +2950,9 @@ Friends</h2></td></tr>
 
 <p>toolbar separator </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00078">78</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00075">75</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01641">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01630">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2932,9 +2978,9 @@ Friends</h2></td></tr>
 
 <p>dockable frame holding the toolbar </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00086">86</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00083">83</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01641">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00156">GetToolDock()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01231">SetWindowTitle()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01630">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8h_source.html#l00153">GetToolDock()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01220">SetWindowTitle()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2960,9 +3006,9 @@ Friends</h2></td></tr>
 
 <p>tools menu </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00064">64</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00061">61</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -2988,9 +3034,9 @@ Friends</h2></td></tr>
 
 <p>tooltip for object info </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00089">89</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00086">86</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01326">EventInfo()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01668">HandleContainerButton()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00681">ReallyDelete()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01315">EventInfo()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01657">HandleContainerButton()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00670">ReallyDelete()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -3016,9 +3062,9 @@ Friends</h2></td></tr>
 
 <p>toolbar vertical separator </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00080">80</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00077">77</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>.</p>
 
 </div>
 </div>
@@ -3044,9 +3090,9 @@ Friends</h2></td></tr>
 
 <p>layout hints for separator </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00083">83</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00080">80</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>.</p>
 
 </div>
 </div>
@@ -3072,9 +3118,9 @@ Friends</h2></td></tr>
 
 <p>toolbar vertical separator </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00081">81</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00078">78</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>.</p>
 
 </div>
 </div>
@@ -3100,9 +3146,9 @@ Friends</h2></td></tr>
 
 <p>layout hints for separator </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00084">84</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00081">81</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>.</p>
 
 </div>
 </div>
@@ -3128,9 +3174,9 @@ Friends</h2></td></tr>
 
 <p>view menu </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00061">61</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00058">58</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01641">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01601">HasEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01400">ShowEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01369">ShowStatusBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01510">ShowToolBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01589">ShowToolTips()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01630">AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01590">HasEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01389">ShowEditor()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01358">ShowStatusBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">ShowToolBar()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01578">ShowToolTips()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -3156,9 +3202,9 @@ Friends</h2></td></tr>
 
 <p>view with... cascade submenu </p>
 
-<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00062">62</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_g_root_canvas_8h_source.html#l00059">59</a> of file <a class="el" href="_g_root_canvas_8h_source.html">GRootCanvas.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00309">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00596">~GRootCanvas()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l00299">CreateCanvas()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l00586">~GRootCanvas()</a>.</p>
 
 </div>
 </div>
@@ -3168,7 +3214,7 @@ Friends</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Thu Feb 11 2021 10:21:03.
+GRSISort (4.0.0.2 ) Reference Guide Generated on Fri Jun 18 2021 20:49:41.
 </small>
 </div>
 </body>
