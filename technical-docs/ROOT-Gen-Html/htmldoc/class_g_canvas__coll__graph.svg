@@ -12,8 +12,8 @@
 <!-- Node2 -->
 <g id="node1" class="node">
 <title>Node2</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="109,-.5 109,-19.5 169,-19.5 169,-.5 109,-.5"/>
-<text text-anchor="middle" x="139" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">GCanvas</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="54,-.5 54,-19.5 114,-19.5 114,-.5 54,-.5"/>
+<text text-anchor="middle" x="84" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">GCanvas</text>
 </g>
 <!-- Node3 -->
 <g id="node2" class="node">
@@ -24,8 +24,14 @@
 <!-- Node3&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node3&#45;&gt;Node2</title>
-<path fill="none" stroke="#191970" d="M50.6514,-72.6472C72.8538,-56.9036 106.7038,-32.9009 125.4015,-19.6426"/>
-<polygon fill="#191970" stroke="#191970" points="48.621,-69.7963 42.4882,-78.4357 52.67,-75.5064 48.621,-69.7963"/>
+<path fill="none" stroke="#191970" d="M36.1241,-69.6308C45.6199,-53.9711 61.456,-32.0796 72.5717,-19.6426"/>
+<polygon fill="#191970" stroke="#191970" points="33.0193,-68.0107 31.1298,-78.4357 39.108,-71.4643 33.0193,-68.0107"/>
+</g>
+<!-- Node3&#45;&gt;Node2 -->
+<g id="edge2" class="edge">
+<title>Node3&#45;&gt;Node2</title>
+<path fill="none" stroke="#191970" d="M47.0713,-70.5105C59.7991,-54.8005 75.2848,-32.3143 81.8298,-19.6426"/>
+<polygon fill="#191970" stroke="#191970" points="44.151,-68.5429 40.3583,-78.4357 49.4924,-73.0673 44.151,-68.5429"/>
 </g>
 <!-- Node4 -->
 <g id="node3" class="node">
@@ -34,11 +40,11 @@
 <text text-anchor="middle" x="139" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">std::vector&lt; TCutG *&gt;</text>
 </g>
 <!-- Node4&#45;&gt;Node2 -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>Node4&#45;&gt;Node2</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M139,-68.2866C139,-52.7395 139,-31.7276 139,-19.6426"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="135.5001,-68.4356 139,-78.4357 142.5001,-68.4357 135.5001,-68.4356"/>
-<text text-anchor="middle" x="153.5" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fCuts</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M126.3587,-70.0723C115.2971,-54.385 99.6517,-32.197 90.7992,-19.6426"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="123.6328,-72.28 132.2559,-78.4357 129.3536,-68.2461 123.6328,-72.28"/>
+<text text-anchor="middle" x="133.5" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fCuts</text>
 </g>
 <!-- Node5 -->
 <g id="node4" class="node">
@@ -47,12 +53,12 @@
 <text text-anchor="middle" x="288" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">std::vector&lt; GMarker *&gt;</text>
 </g>
 <!-- Node5&#45;&gt;Node2 -->
-<g id="edge3" class="edge">
+<g id="edge4" class="edge">
 <title>Node5&#45;&gt;Node2</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M260.6447,-73.6798C230.6369,-57.971 183.307,-33.1943 157.4198,-19.6426"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="259.2469,-76.8986 269.7297,-78.4357 262.4935,-70.6969 259.2469,-76.8986"/>
-<text text-anchor="middle" x="283" y="-52" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fBackgroundMarkers</text>
-<text text-anchor="middle" x="283" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">fMarkers</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M253.4132,-74.7756C212.4146,-59.0997 145.103,-33.3629 108.8996,-19.5204"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="252.3951,-78.1334 262.9856,-78.4357 254.8951,-71.595 252.3951,-78.1334"/>
+<text text-anchor="middle" x="262" y="-52" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fBackgroundMarkers</text>
+<text text-anchor="middle" x="262" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">fMarkers</text>
 </g>
 </g>
 </svg>

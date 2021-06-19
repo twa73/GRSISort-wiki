@@ -47,6 +47,8 @@ var annotated_dup =
     [ "GRootGuiFactory", "class_g_root_gui_factory.html", "class_g_root_gui_factory" ],
     [ "GSnapshot", "class_g_snapshot.html", "class_g_snapshot" ],
     [ "GValue", "class_g_value.html", "class_g_value" ],
+    [ "gz_header_s", "structgz__header__s.html", "structgz__header__s" ],
+    [ "internal_state", "structinternal__state.html", "structinternal__state" ],
     [ "NRMat", "class_n_r_mat.html", "class_n_r_mat" ],
     [ "NRMat3d", "class_n_r_mat3d.html", "class_n_r_mat3d" ],
     [ "NRVec", "class_n_r_vec.html", "class_n_r_vec" ],
@@ -234,7 +236,9 @@ var annotated_dup =
     [ "TUnpackingLoop", "class_t_unpacking_loop.html", "class_t_unpacking_loop" ],
     [ "TUserSortInfo", "class_t_user_sort_info.html", "class_t_user_sort_info" ],
     [ "TVirtualDecay", "class_t_virtual_decay.html", "class_t_virtual_decay" ],
+    [ "TXMLOdb", "class_t_x_m_l_odb.html", null ],
     [ "TZeroDegree", "class_t_zero_degree.html", "class_t_zero_degree" ],
     [ "TZeroDegreeHit", "class_t_zero_degree_hit.html", "class_t_zero_degree_hit" ],
-    [ "VirtualOdb", "class_virtual_odb.html", "class_virtual_odb" ]
+    [ "VirtualOdb", "class_virtual_odb.html", "class_virtual_odb" ],
+    [ "z_stream_s", "structz__stream__s.html", "structz__stream__s" ]
 ];

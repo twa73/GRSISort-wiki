@@ -33,5 +33,11 @@ var htmldoc_2_globals_8h =
     [ "SHOW_CURSOR", "htmldoc_2_globals_8h.html#a09ec0b302bee7262f9959add53ccd0c4", null ],
     [ "WHITE", "htmldoc_2_globals_8h.html#a87b537f5fa5c109d3c05c13d6b18f382", null ],
     [ "YELLOW", "htmldoc_2_globals_8h.html#abf681265909adf3d3e8116c93c0ba179", null ],
-    [ "ProgramName", "htmldoc_2_globals_8h.html#ac847f4564990903418bd3b97877eedd8", null ]
+    [ "Append", "htmldoc_2_globals_8h.html#a7eef4710200f09420381ca5744ca30b1", null ],
+    [ "Append", "htmldoc_2_globals_8h.html#ad1a687d11cda0ee9d37cd2e771bd405e", null ],
+    [ "getexepath", "htmldoc_2_globals_8h.html#a00b72893c17bcb4e05586f5e42f9854d", null ],
+    [ "PrintStacktrace", "htmldoc_2_globals_8h.html#a3f0930614f3ea2f2f153242657b08ba0", null ],
+    [ "ProgramName", "htmldoc_2_globals_8h.html#ac847f4564990903418bd3b97877eedd8", null ],
+    [ "sh", "htmldoc_2_globals_8h.html#a9ed1d6946c2794ab146f9bc05578e1de", null ],
+    [ "Stringify", "htmldoc_2_globals_8h.html#ab3ab6dab442708543d2a71ba522bad21", null ]
 ];

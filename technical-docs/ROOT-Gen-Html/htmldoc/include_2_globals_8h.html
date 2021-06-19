@@ -102,6 +102,9 @@ $(document).ready(function(){initNavTree('include_2_globals_8h.html','');});
 <code>#include &lt;execinfo.h&gt;</code><br />
 <code>#include &lt;cxxabi.h&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for Globals.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -198,10 +201,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ad1a687d11cda0ee9d37cd2e771bd405e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... U&gt; </td></tr>
 <tr class="memitem:ad1a687d11cda0ee9d37cd2e771bd405e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegrsi.html#ad1a687d11cda0ee9d37cd2e771bd405e">grsi::Append</a> (std::stringstream &amp;stream, const T &amp;head, const U &amp;... tail)</td></tr>
 <tr class="separator:ad1a687d11cda0ee9d37cd2e771bd405e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b72893c17bcb4e05586f5e42f9854d"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2_globals_8h.html#a00b72893c17bcb4e05586f5e42f9854d">getexepath</a> ()</td></tr>
+<tr class="separator:a00b72893c17bcb4e05586f5e42f9854d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f0930614f3ea2f2f153242657b08ba0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2_globals_8h.html#a3f0930614f3ea2f2f153242657b08ba0">PrintStacktrace</a> (std::ostream &amp;out=std::cout, unsigned int maxFrames=63)</td></tr>
 <tr class="separator:a3f0930614f3ea2f2f153242657b08ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac847f4564990903418bd3b97877eedd8"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2_globals_8h.html#ac847f4564990903418bd3b97877eedd8">ProgramName</a> ()</td></tr>
 <tr class="separator:ac847f4564990903418bd3b97877eedd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ed1d6946c2794ab146f9bc05578e1de"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2_globals_8h.html#a9ed1d6946c2794ab146f9bc05578e1de">sh</a> (std::string cmd)</td></tr>
+<tr class="separator:a9ed1d6946c2794ab146f9bc05578e1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3ab6dab442708543d2a71ba522bad21"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... U&gt; </td></tr>
 <tr class="memitem:ab3ab6dab442708543d2a71ba522bad21"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegrsi.html#ab3ab6dab442708543d2a71ba522bad21">grsi::Stringify</a> (const T &amp;head, const U &amp;... tail)</td></tr>
 <tr class="separator:ab3ab6dab442708543d2a71ba522bad21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -720,6 +727,33 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a00b72893c17bcb4e05586f5e42f9854d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b72893c17bcb4e05586f5e42f9854d">&#9670;&nbsp;</a></span>getexepath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string getexepath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="include_2_globals_8h_source.html#l00128">128</a> of file <a class="el" href="include_2_globals_8h_source.html">Globals.h</a>.</p>
+
+</div>
+</div>
 <a id="a3f0930614f3ea2f2f153242657b08ba0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f0930614f3ea2f2f153242657b08ba0">&#9670;&nbsp;</a></span>PrintStacktrace()</h2>
 
@@ -754,9 +788,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="include_2_globals_8h_source.html#l00126">126</a> of file <a class="el" href="include_2_globals_8h_source.html">Globals.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="include_2_globals_8h_source.html#l00148">148</a> of file <a class="el" href="include_2_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">References <a class="el" href="test_peak_fitter_8_c_source.html#l00006">p</a>, and <a class="el" href="_gate_test_8_c_source.html#l00001">ret</a>.</p>
+<p class="reference">References <a class="el" href="test_peak_fitter_8_c_source.html#l00006">p</a>.</p>
 
 </div>
 </div>
@@ -777,13 +811,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9ed1d6946c2794ab146f9bc05578e1de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed1d6946c2794ab146f9bc05578e1de">&#9670;&nbsp;</a></span>sh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string sh </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="include_2_globals_8h_source.html#l00134">134</a> of file <a class="el" href="include_2_globals_8h_source.html">Globals.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <html>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Wed Feb 10 2021 18:30:41.
+GRSISort (4.0.0.2 ) Reference Guide Generated on Fri Jun 18 2021 22:47:29.
 </small>
 </div>
 </body>

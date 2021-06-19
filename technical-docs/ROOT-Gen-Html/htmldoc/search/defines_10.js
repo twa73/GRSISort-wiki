@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['r2d',['R2D',['../_t_reaction_8h.html#a39c663074332446065723e9be9350139',1,'TReaction.h']]],
+  ['r2d',['R2D',['../htmldoc_2_t_reaction_8h.html#a39c663074332446065723e9be9350139',1,'R2D():&#160;TReaction.h'],['../include_2_t_reaction_8h.html#a39c663074332446065723e9be9350139',1,'R2D():&#160;TReaction.h']]],
+  ['r_5f_5fhas_5fattribute_5falways_5finline',['R__HAS_ATTRIBUTE_ALWAYS_INLINE',['../_r_configure_8h.html#ae325058fad9ed98ac3ea0bd799995bed',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fattribute_5fnoinline',['R__HAS_ATTRIBUTE_NOINLINE',['../_r_configure_8h.html#a82f49662446a45b0b391451146668658',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fcefweb',['R__HAS_CEFWEB',['../_r_configure_8h.html#a989b3915444c01d16e10db5ffccd7e47',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fdataframe',['R__HAS_DATAFRAME',['../_r_configure_8h.html#a8b9261b5c965f355711c22acd53ead07',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fdefault_5fzlib',['R__HAS_DEFAULT_ZLIB',['../_r_configure_8h.html#ab496a4f43b30e9ba7244de6387e43de2',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fmathmore',['R__HAS_MATHMORE',['../_r_configure_8h.html#ac373706521cc67d3e1e96a33018407a8',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fpthread',['R__HAS_PTHREAD',['../_r_configure_8h.html#ac78a15481af6e7c5ae69b69edba92fe2',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5frmva',['R__HAS_RMVA',['../_r_configure_8h.html#a41e38a98b4fedd3c7aaaf2a4fd003bea',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fsetresuid',['R__HAS_SETRESUID',['../_r_configure_8h.html#af25963d9f6c976fe52915cf33a203ed9',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fstd_5fexperimental_5fstring_5fview',['R__HAS_STD_EXPERIMENTAL_STRING_VIEW',['../_r_configure_8h.html#a2e116dbce56aad3fae0fa97fdaeb58c8',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fstd_5findex_5fsequence',['R__HAS_STD_INDEX_SEQUENCE',['../_r_configure_8h.html#a54ce9cd90749b751e951565b4b313e11',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5ftbb',['R__HAS_TBB',['../_r_configure_8h.html#aabeaca549ded7ed5159d13696c3ee8b0',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5ftmvacpu',['R__HAS_TMVACPU',['../_r_configure_8h.html#a27679324a5e6311b525596f06c607126',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fvdt',['R__HAS_VDT',['../_r_configure_8h.html#ab0d675ee1cc5fae4fb9c9ccf51b81e81',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fveccore',['R__HAS_VECCORE',['../_r_configure_8h.html#a5b005d20caccc4ab9403bacc83ae05fa',1,'RConfigure.h']]],
+  ['r_5f_5fhas_5fxft',['R__HAS_XFT',['../_r_configure_8h.html#a0b8fc46521cb2938fa631893c3919c5c',1,'RConfigure.h']]],
+  ['r_5f_5fuse_5fcxxmodules',['R__USE_CXXMODULES',['../_r_configure_8h.html#a6e88a45741079c767b52f7c767920853',1,'RConfigure.h']]],
+  ['r_5f_5fuse_5fimt',['R__USE_IMT',['../_r_configure_8h.html#a2d3da12bfec219678bd2a225b9acd50d',1,'RConfigure.h']]],
   ['recoverhits',['RECOVERHITS',['../_t_c_s_m_8cxx.html#adafac5cb83a3c7552609d238c2ab7fc4',1,'TCSM.cxx']]],
-  ['red',['RED',['../_globals_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'Globals.h']]],
-  ['reset_5fcolor',['RESET_COLOR',['../_globals_8h.html#ad7c3b975e5552a122f836b02fa138502',1,'Globals.h']]]
+  ['red',['RED',['../htmldoc_2_globals_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'RED():&#160;Globals.h'],['../include_2_globals_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'RED():&#160;Globals.h']]],
+  ['reset_5fcolor',['RESET_COLOR',['../htmldoc_2_globals_8h.html#ad7c3b975e5552a122f836b02fa138502',1,'RESET_COLOR():&#160;Globals.h'],['../include_2_globals_8h.html#ad7c3b975e5552a122f836b02fa138502',1,'RESET_COLOR():&#160;Globals.h']]]
 ];

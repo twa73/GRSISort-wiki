@@ -95,28 +95,48 @@ $(document).ready(function(){initNavTree('class_arg_parse_item.html','');});
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p>Base class used to parse an individual item. Most methods are implemented in the templated ArgParseConfig&lt;T&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="_arg_parser_8h_source.html#l00026">26</a> of file <a class="el" href="_arg_parser_8h_source.html">ArgParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00026">26</a> of file <a class="el" href="htmldoc_2_arg_parser_8h_source.html">ArgParser.h</a>.</p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a20c3641cb48a69d824e837a58bae9ac1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#a20c3641cb48a69d824e837a58bae9ac1">ArgParseItem</a> (bool firstPass)</td></tr>
 <tr class="separator:a20c3641cb48a69d824e837a58bae9ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c3641cb48a69d824e837a58bae9ac1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#a20c3641cb48a69d824e837a58bae9ac1">ArgParseItem</a> (bool firstPass)</td></tr>
+<tr class="separator:a20c3641cb48a69d824e837a58bae9ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ee0b06028c8557bdac6704dc486574"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#af5ee0b06028c8557bdac6704dc486574">~ArgParseItem</a> ()=default</td></tr>
+<tr class="separator:af5ee0b06028c8557bdac6704dc486574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5ee0b06028c8557bdac6704dc486574"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#af5ee0b06028c8557bdac6704dc486574">~ArgParseItem</a> ()=default</td></tr>
 <tr class="separator:af5ee0b06028c8557bdac6704dc486574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c9b521ae442b31ded21a02bd24597d3"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#a4c9b521ae442b31ded21a02bd24597d3">flag_name</a> () const =0</td></tr>
 <tr class="separator:a4c9b521ae442b31ded21a02bd24597d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9b521ae442b31ded21a02bd24597d3"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#a4c9b521ae442b31ded21a02bd24597d3">flag_name</a> () const =0</td></tr>
+<tr class="separator:a4c9b521ae442b31ded21a02bd24597d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcb11c00527dadca928dcf542e0dca6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#adcb11c00527dadca928dcf542e0dca6e">is_present</a> () const</td></tr>
+<tr class="separator:adcb11c00527dadca928dcf542e0dca6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcb11c00527dadca928dcf542e0dca6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#adcb11c00527dadca928dcf542e0dca6e">is_present</a> () const</td></tr>
 <tr class="separator:adcb11c00527dadca928dcf542e0dca6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab722bb2c4d7269fe9fd96a1a677753e0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#ab722bb2c4d7269fe9fd96a1a677753e0">is_required</a> () const =0</td></tr>
 <tr class="separator:ab722bb2c4d7269fe9fd96a1a677753e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab722bb2c4d7269fe9fd96a1a677753e0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#ab722bb2c4d7269fe9fd96a1a677753e0">is_required</a> () const =0</td></tr>
+<tr class="separator:ab722bb2c4d7269fe9fd96a1a677753e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266bb069bb3f88cccdda0bbf9b14ed67"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#a266bb069bb3f88cccdda0bbf9b14ed67">matches</a> (const std::string &amp;flag) const =0</td></tr>
+<tr class="separator:a266bb069bb3f88cccdda0bbf9b14ed67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a266bb069bb3f88cccdda0bbf9b14ed67"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#a266bb069bb3f88cccdda0bbf9b14ed67">matches</a> (const std::string &amp;flag) const =0</td></tr>
 <tr class="separator:a266bb069bb3f88cccdda0bbf9b14ed67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefe228cd28f2e66a01bcc4d376309d1f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#aefe228cd28f2e66a01bcc4d376309d1f">num_arguments</a> () const =0</td></tr>
 <tr class="separator:aefe228cd28f2e66a01bcc4d376309d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe228cd28f2e66a01bcc4d376309d1f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#aefe228cd28f2e66a01bcc4d376309d1f">num_arguments</a> () const =0</td></tr>
+<tr class="separator:aefe228cd28f2e66a01bcc4d376309d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabcc5df2499f07f7d4804a46428d0028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#aabcc5df2499f07f7d4804a46428d0028">parse</a> (const std::string &amp;name, const std::vector&lt; std::string &gt; &amp;arguments, bool firstPass, bool ignore_num_arguments=false)</td></tr>
+<tr class="separator:aabcc5df2499f07f7d4804a46428d0028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabcc5df2499f07f7d4804a46428d0028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#aabcc5df2499f07f7d4804a46428d0028">parse</a> (const std::string &amp;name, const std::vector&lt; std::string &gt; &amp;arguments, bool firstPass, bool ignore_num_arguments=false)</td></tr>
 <tr class="separator:aabcc5df2499f07f7d4804a46428d0028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75920eb65296e1fb82d7ad4e64e09c07"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#a75920eb65296e1fb82d7ad4e64e09c07">parse_item</a> (const std::vector&lt; std::string &gt; &amp;arguments)=0</td></tr>
 <tr class="separator:a75920eb65296e1fb82d7ad4e64e09c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75920eb65296e1fb82d7ad4e64e09c07"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#a75920eb65296e1fb82d7ad4e64e09c07">parse_item</a> (const std::vector&lt; std::string &gt; &amp;arguments)=0</td></tr>
+<tr class="separator:a75920eb65296e1fb82d7ad4e64e09c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d5ab1216fa8957b8f638054b57f339"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#aa3d5ab1216fa8957b8f638054b57f339">printable</a> (int description_column=-1, int *chars_before_desc=nullptr) const =0</td></tr>
+<tr class="separator:aa3d5ab1216fa8957b8f638054b57f339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3d5ab1216fa8957b8f638054b57f339"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arg_parse_item.html#aa3d5ab1216fa8957b8f638054b57f339">printable</a> (int description_column=-1, int *chars_before_desc=nullptr) const =0</td></tr>
 <tr class="separator:aa3d5ab1216fa8957b8f638054b57f339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -128,17 +148,18 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ad5adbe0c239afda1de32aef89c48001a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
-<p><code>#include &lt;<a class="el" href="_arg_parser_8h_source.html">ArgParser.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="htmldoc_2_arg_parser_8h_source.html">ArgParser.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for ArgParseItem:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_arg_parse_item__inherit__graph.svg" width="576" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_arg_parse_item__inherit__graph.svg" width="576" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a20c3641cb48a69d824e837a58bae9ac1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20c3641cb48a69d824e837a58bae9ac1">&#9670;&nbsp;</a></span>ArgParseItem()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c3641cb48a69d824e837a58bae9ac1">&#9670;&nbsp;</a></span>ArgParseItem() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,12 +182,65 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arg_parser_8h_source.html#l00028">28</a> of file <a class="el" href="_arg_parser_8h_source.html">ArgParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00028">28</a> of file <a class="el" href="htmldoc_2_arg_parser_8h_source.html">ArgParser.h</a>.</p>
 
 </div>
 </div>
 <a id="af5ee0b06028c8557bdac6704dc486574"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5ee0b06028c8557bdac6704dc486574">&#9670;&nbsp;</a></span>~ArgParseItem()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ee0b06028c8557bdac6704dc486574">&#9670;&nbsp;</a></span>~ArgParseItem() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ArgParseItem::~ArgParseItem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20c3641cb48a69d824e837a58bae9ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c3641cb48a69d824e837a58bae9ac1">&#9670;&nbsp;</a></span>ArgParseItem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArgParseItem::ArgParseItem </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>firstPass</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="include_2_arg_parser_8h_source.html#l00028">28</a> of file <a class="el" href="include_2_arg_parser_8h_source.html">ArgParser.h</a>.</p>
+
+</div>
+</div>
+<a id="af5ee0b06028c8557bdac6704dc486574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ee0b06028c8557bdac6704dc486574">&#9670;&nbsp;</a></span>~ArgParseItem() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,7 +266,7 @@ Private Attributes</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4c9b521ae442b31ded21a02bd24597d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c9b521ae442b31ded21a02bd24597d3">&#9670;&nbsp;</a></span>flag_name()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9b521ae442b31ded21a02bd24597d3">&#9670;&nbsp;</a></span>flag_name() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,12 +288,39 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, and <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; bool &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; bool &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a4c9b521ae442b31ded21a02bd24597d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9b521ae442b31ded21a02bd24597d3">&#9670;&nbsp;</a></span>flag_name() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string ArgParseItem::flag_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config.html#a49124687bb2de058a55eb73ce89b0960">ArgParseConfig&lt; bool &gt;</a>.</p>
 
 </div>
 </div>
 <a id="adcb11c00527dadca928dcf542e0dca6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcb11c00527dadca928dcf542e0dca6e">&#9670;&nbsp;</a></span>is_present()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb11c00527dadca928dcf542e0dca6e">&#9670;&nbsp;</a></span>is_present() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,14 +342,43 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arg_parser_8h_source.html#l00035">35</a> of file <a class="el" href="_arg_parser_8h_source.html">ArgParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00035">35</a> of file <a class="el" href="htmldoc_2_arg_parser_8h_source.html">ArgParser.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_arg_parser_8h_source.html#l00063">present_</a>.</p>
+<p class="reference">References <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00063">present_</a>.</p>
+
+</div>
+</div>
+<a id="adcb11c00527dadca928dcf542e0dca6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb11c00527dadca928dcf542e0dca6e">&#9670;&nbsp;</a></span>is_present() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ArgParseItem::is_present </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="include_2_arg_parser_8h_source.html#l00035">35</a> of file <a class="el" href="include_2_arg_parser_8h_source.html">ArgParser.h</a>.</p>
+
+<p class="reference">References <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00063">present_</a>.</p>
 
 </div>
 </div>
 <a id="ab722bb2c4d7269fe9fd96a1a677753e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab722bb2c4d7269fe9fd96a1a677753e0">&#9670;&nbsp;</a></span>is_required()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab722bb2c4d7269fe9fd96a1a677753e0">&#9670;&nbsp;</a></span>is_required() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,12 +400,39 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, and <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; bool &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; bool &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ab722bb2c4d7269fe9fd96a1a677753e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab722bb2c4d7269fe9fd96a1a677753e0">&#9670;&nbsp;</a></span>is_required() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ArgParseItem::is_required </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config.html#af8f20babd098ff5e4a11cee0077be34f">ArgParseConfig&lt; bool &gt;</a>.</p>
 
 </div>
 </div>
 <a id="a266bb069bb3f88cccdda0bbf9b14ed67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a266bb069bb3f88cccdda0bbf9b14ed67">&#9670;&nbsp;</a></span>matches()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a266bb069bb3f88cccdda0bbf9b14ed67">&#9670;&nbsp;</a></span>matches() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,12 +455,40 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, and <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; bool &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; bool &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a266bb069bb3f88cccdda0bbf9b14ed67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a266bb069bb3f88cccdda0bbf9b14ed67">&#9670;&nbsp;</a></span>matches() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ArgParseItem::matches </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config.html#a3836b42d53eb7cab53c611e43fb25688">ArgParseConfig&lt; bool &gt;</a>.</p>
 
 </div>
 </div>
 <a id="aefe228cd28f2e66a01bcc4d376309d1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefe228cd28f2e66a01bcc4d376309d1f">&#9670;&nbsp;</a></span>num_arguments()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe228cd28f2e66a01bcc4d376309d1f">&#9670;&nbsp;</a></span>num_arguments() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,14 +510,41 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a03edbd4e226a44922d010f8bc5f70ed2">ArgParseConfigT&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config_t.html#a51c75776507e59321e761bafe7ba5732">ArgParseConfigT&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a03edbd4e226a44922d010f8bc5f70ed2">ArgParseConfigT&lt; bool &gt;</a>, <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a03edbd4e226a44922d010f8bc5f70ed2">ArgParseConfigT&lt; bool &gt;</a>, <a class="el" href="class_arg_parse_config_t.html#a51c75776507e59321e761bafe7ba5732">ArgParseConfigT&lt; T &gt;</a>, and <a class="el" href="class_arg_parse_config_t.html#a51c75776507e59321e761bafe7ba5732">ArgParseConfigT&lt; T &gt;</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_arg_parser_8h_source.html#l00421">ArgParser::handle_long_flag()</a>, <a class="el" href="_arg_parser_8h_source.html#l00445">ArgParser::handle_short_flag()</a>, <a class="el" href="_arg_parser_8h_source.html#l00038">parse()</a>, and <a class="el" href="_arg_parser_8h_source.html#l00137">ArgParseConfig&lt; bool &gt;::printable()</a>.</p>
+</div>
+</div>
+<a id="aefe228cd28f2e66a01bcc4d376309d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe228cd28f2e66a01bcc4d376309d1f">&#9670;&nbsp;</a></span>num_arguments() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ArgParseItem::num_arguments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a03edbd4e226a44922d010f8bc5f70ed2">ArgParseConfigT&lt; bool &gt;</a>, <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a03edbd4e226a44922d010f8bc5f70ed2">ArgParseConfigT&lt; bool &gt;</a>, <a class="el" href="class_arg_parse_config_t.html#a51c75776507e59321e761bafe7ba5732">ArgParseConfigT&lt; T &gt;</a>, and <a class="el" href="class_arg_parse_config_t.html#a51c75776507e59321e761bafe7ba5732">ArgParseConfigT&lt; T &gt;</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00421">ArgParser::handle_long_flag()</a>, <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00445">ArgParser::handle_short_flag()</a>, <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00038">parse()</a>, and <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00137">ArgParseConfig&lt; bool &gt;::printable()</a>.</p>
 
 </div>
 </div>
 <a id="aabcc5df2499f07f7d4804a46428d0028"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabcc5df2499f07f7d4804a46428d0028">&#9670;&nbsp;</a></span>parse()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aabcc5df2499f07f7d4804a46428d0028">&#9670;&nbsp;</a></span>parse() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -377,16 +589,68 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arg_parser_8h_source.html#l00038">38</a> of file <a class="el" href="_arg_parser_8h_source.html">ArgParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00038">38</a> of file <a class="el" href="htmldoc_2_arg_parser_8h_source.html">ArgParser.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_arg_parser_8h_source.html#l00064">fFirstPass</a>, <a class="el" href="class_arg_parse_item.html#aefe228cd28f2e66a01bcc4d376309d1f">num_arguments()</a>, <a class="el" href="class_arg_parse_item.html#a75920eb65296e1fb82d7ad4e64e09c07">parse_item()</a>, and <a class="el" href="_arg_parser_8h_source.html#l00063">present_</a>.</p>
+<p class="reference">References <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00064">fFirstPass</a>, <a class="el" href="class_arg_parse_item.html#aefe228cd28f2e66a01bcc4d376309d1f">num_arguments()</a>, <a class="el" href="class_arg_parse_item.html#a75920eb65296e1fb82d7ad4e64e09c07">parse_item()</a>, and <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00063">present_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_arg_parser_8h_source.html#l00470">ArgParser::handle_default_option()</a>, <a class="el" href="_arg_parser_8h_source.html#l00421">ArgParser::handle_long_flag()</a>, <a class="el" href="_arg_parser_8h_source.html#l00445">ArgParser::handle_short_flag()</a>, and <a class="el" href="_arg_parser_8h_source.html#l00340">ArgParser::parse_file()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00470">ArgParser::handle_default_option()</a>, <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00421">ArgParser::handle_long_flag()</a>, <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00445">ArgParser::handle_short_flag()</a>, and <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00340">ArgParser::parse_file()</a>.</p>
+
+</div>
+</div>
+<a id="aabcc5df2499f07f7d4804a46428d0028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabcc5df2499f07f7d4804a46428d0028">&#9670;&nbsp;</a></span>parse() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArgParseItem::parse </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arguments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>firstPass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ignore_num_arguments</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="include_2_arg_parser_8h_source.html#l00038">38</a> of file <a class="el" href="include_2_arg_parser_8h_source.html">ArgParser.h</a>.</p>
+
+<p class="reference">References <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00064">fFirstPass</a>, <a class="el" href="class_arg_parse_item.html#aefe228cd28f2e66a01bcc4d376309d1f">num_arguments()</a>, <a class="el" href="class_arg_parse_item.html#a75920eb65296e1fb82d7ad4e64e09c07">parse_item()</a>, and <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00063">present_</a>.</p>
 
 </div>
 </div>
 <a id="a75920eb65296e1fb82d7ad4e64e09c07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75920eb65296e1fb82d7ad4e64e09c07">&#9670;&nbsp;</a></span>parse_item()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a75920eb65296e1fb82d7ad4e64e09c07">&#9670;&nbsp;</a></span>parse_item() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -409,14 +673,42 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a32b4a0513f4fb9e902715706d2b13de3">ArgParseConfigT&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config_t.html#a08a27daf78d4b6190da26477154d4be5">ArgParseConfigT&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a32b4a0513f4fb9e902715706d2b13de3">ArgParseConfigT&lt; bool &gt;</a>, <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a32b4a0513f4fb9e902715706d2b13de3">ArgParseConfigT&lt; bool &gt;</a>, <a class="el" href="class_arg_parse_config_t.html#a08a27daf78d4b6190da26477154d4be5">ArgParseConfigT&lt; T &gt;</a>, and <a class="el" href="class_arg_parse_config_t.html#a08a27daf78d4b6190da26477154d4be5">ArgParseConfigT&lt; T &gt;</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_arg_parser_8h_source.html#l00038">parse()</a>.</p>
+</div>
+</div>
+<a id="a75920eb65296e1fb82d7ad4e64e09c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75920eb65296e1fb82d7ad4e64e09c07">&#9670;&nbsp;</a></span>parse_item() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ArgParseItem::parse_item </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arguments</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a32b4a0513f4fb9e902715706d2b13de3">ArgParseConfigT&lt; bool &gt;</a>, <a class="el" href="class_arg_parse_config_t_3_01bool_01_4.html#a32b4a0513f4fb9e902715706d2b13de3">ArgParseConfigT&lt; bool &gt;</a>, <a class="el" href="class_arg_parse_config_t.html#a08a27daf78d4b6190da26477154d4be5">ArgParseConfigT&lt; T &gt;</a>, and <a class="el" href="class_arg_parse_config_t.html#a08a27daf78d4b6190da26477154d4be5">ArgParseConfigT&lt; T &gt;</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00038">parse()</a>.</p>
 
 </div>
 </div>
 <a id="aa3d5ab1216fa8957b8f638054b57f339"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3d5ab1216fa8957b8f638054b57f339">&#9670;&nbsp;</a></span>printable()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d5ab1216fa8957b8f638054b57f339">&#9670;&nbsp;</a></span>printable() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,9 +741,47 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, and <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; bool &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; bool &gt;</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_arg_parser_8h_source.html#l00400">ArgParser::print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00400">ArgParser::print()</a>.</p>
+
+</div>
+</div>
+<a id="aa3d5ab1216fa8957b8f638054b57f339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d5ab1216fa8957b8f638054b57f339">&#9670;&nbsp;</a></span>printable() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string ArgParseItem::printable </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>description_column</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>chars_before_desc</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; T &gt;</a>, <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; bool &gt;</a>, and <a class="el" href="class_arg_parse_config.html#a2f0fbbfa5b780620d10a0eb9c1c250fc">ArgParseConfig&lt; bool &gt;</a>.</p>
 
 </div>
 </div>
@@ -476,9 +806,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arg_parser_8h_source.html#l00064">64</a> of file <a class="el" href="_arg_parser_8h_source.html">ArgParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00064">64</a> of file <a class="el" href="htmldoc_2_arg_parser_8h_source.html">ArgParser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_arg_parser_8h_source.html#l00038">parse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00038">parse()</a>.</p>
 
 </div>
 </div>
@@ -502,9 +832,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arg_parser_8h_source.html#l00063">63</a> of file <a class="el" href="_arg_parser_8h_source.html">ArgParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00063">63</a> of file <a class="el" href="htmldoc_2_arg_parser_8h_source.html">ArgParser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_arg_parser_8h_source.html#l00035">is_present()</a>, and <a class="el" href="_arg_parser_8h_source.html#l00038">parse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00035">is_present()</a>, and <a class="el" href="htmldoc_2_arg_parser_8h_source.html#l00038">parse()</a>.</p>
 
 </div>
 </div>
@@ -514,7 +844,7 @@ Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Fri Jun 18 2021 20:49:38.
+GRSISort (4.0.0.2 ) Reference Guide Generated on Fri Jun 18 2021 22:47:51.
 </small>
 </div>
 </body>

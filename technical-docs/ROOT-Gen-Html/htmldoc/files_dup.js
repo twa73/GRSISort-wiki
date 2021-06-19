@@ -5,6 +5,7 @@ var files_dup =
     [ "GRSIData", "dir_1d7397b112c23d4eb2fe49dc66ace00a.html", "dir_1d7397b112c23d4eb2fe49dc66ace00a" ],
     [ "GRSIProof", "dir_9898311765dba9e8b5ad6a9c9b1db5d5.html", "dir_9898311765dba9e8b5ad6a9c9b1db5d5" ],
     [ "histos", "dir_a7393bbf12681fcab52d048663b07031.html", "dir_a7393bbf12681fcab52d048663b07031" ],
+    [ "htmldoc", "dir_c09264991afbf5c2b8ed17d8998a0353.html", "dir_c09264991afbf5c2b8ed17d8998a0353" ],
     [ "ILLData", "dir_2c04f6980766b72344e79a884aa96ac0.html", "dir_2c04f6980766b72344e79a884aa96ac0" ],
     [ "include", "dir_d44c64559bbebec7f509842c48db8b23.html", "dir_d44c64559bbebec7f509842c48db8b23" ],
     [ "iThembaData", "dir_cd4f627fa8084e1d86c3a8ecbee83134.html", "dir_cd4f627fa8084e1d86c3a8ecbee83134" ],

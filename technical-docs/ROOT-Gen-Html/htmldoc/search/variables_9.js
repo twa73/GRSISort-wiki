@@ -9,7 +9,7 @@ var searchData=
   ['intensity',['intensity',['../struct_t_calibrator_1_1_peak.html#a2375cc56b5e1d794067294a0984241fa',1,'TCalibrator::Peak']]],
   ['intercept',['intercept',['../struct_t_pulse_analyzer_1_1_line_par.html#a0c4613f50c8d9537949aa331c99488ca',1,'TPulseAnalyzer::LinePar']]],
   ['inuse',['InUse',['../struct_t_channel_1_1_wave_form_shape_par.html#a2444cb88cf0f5ef9653eac20d9bd8c4b',1,'TChannel::WaveFormShapePar']]],
-  ['ionenergy',['IonEnergy',['../class_t_s_r_i_m.html#a7ad9ba76a6f11afee0e983789482da95',1,'TSRIM']]],
+  ['ionenergy',['IonEnergy',['../class_t_s_r_i_m.html#ac99c23a9033f483cebde6d01f3838668',1,'TSRIM']]],
   ['is_5ffinished',['is_finished',['../class_threadsafe_queue.html#a3f526cc7490f45db2793d499fc6877f4',1,'ThreadsafeQueue']]],
   ['items_5fcurrent',['items_current',['../classpygui_1_1status__widget_1_1_thread_vars.html#a2640f6ac3d57b7a6050af0288e9afde0',1,'pygui::status_widget::ThreadVars']]],
   ['items_5fin_5fqueue',['items_in_queue',['../class_threadsafe_queue.html#a50150770e7a5864fc2dbf6b609a70e97',1,'ThreadsafeQueue']]],

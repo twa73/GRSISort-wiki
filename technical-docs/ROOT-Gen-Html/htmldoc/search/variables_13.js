@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['t',['t',['../struct_t_pulse_analyzer_1_1_shape_par.html#a15a7f2b042f70322e52b70f52a7fd69d',1,'TPulseAnalyzer::ShapePar']]],
+  ['t',['t',['../struct_t_pulse_analyzer_1_1_shape_par.html#aa94f3a3409c4f4bbe086bf28853ffc43',1,'TPulseAnalyzer::ShapePar']]],
   ['t0',['t0',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a0f381c57d9d096aa0786158f86be6ea4',1,'TPulseAnalyzer::WaveFormPar::t0()'],['../struct_t_pulse_analyzer_1_1_sin_par.html#a44485e4b8f158b7d6a351850146f66d2',1,'TPulseAnalyzer::SinPar::t0()']]],
   ['t0_5flocal',['t0_local',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a5cebc48b6067dbd97a1a5184be502447',1,'TPulseAnalyzer::WaveFormPar']]],
   ['t0range',['T0RANGE',['../class_t_pulse_analyzer.html#ad7608b409dc8a3542c2c0fea9147e89f',1,'TPulseAnalyzer']]],
@@ -21,20 +21,24 @@ var searchData=
   ['teflag',['teflag',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a1cd959881470a59223e5c8515b57a8a5',1,'TPulseAnalyzer::WaveFormPar']]],
   ['temax',['temax',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a637d71085eb9aee1429ebcf41184f6ac',1,'TPulseAnalyzer::WaveFormPar']]],
   ['temin',['temin',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#aa30204675c8ce3a6b5d844dd1d3cf1f1',1,'TPulseAnalyzer::WaveFormPar']]],
+  ['text',['text',['../structgz__header__s.html#af94c3fadfed835a501bc1babc4b894f9',1,'gz_header_s']]],
   ['thigh',['thigh',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a2c66c9ec22b43d7e6ca54e0582617b4e',1,'TPulseAnalyzer::WaveFormPar::thigh()'],['../_caen_analysis_selector_8_c.html#ac3dbe469091a4b05a485b7d19bd3fcc1',1,'thigh():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#ac3dbe469091a4b05a485b7d19bd3fcc1',1,'thigh():&#160;GenericSelector.C']]],
   ['thread_5fcontent',['thread_content',['../classpygui_1_1status__widget_1_1_thread_status_frame.html#a483cde6b620588a23f22bc43321fcf24',1,'pygui::status_widget::ThreadStatusFrame']]],
   ['thresh',['thresh',['../_caen_analysis_selector_8_c.html#a30eac9d8cda6db090f869ccf184f2e33',1,'thresh():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#a30eac9d8cda6db090f869ccf184f2e33',1,'thresh():&#160;GenericSelector.C']]],
   ['tid_5fmax',['TID_MAX',['../_t_midas_event_8cxx.html#a6ec1f3d796c0c0337edfd6c892b6383d',1,'TMidasEvent.cxx']]],
   ['tid_5fsize',['TID_SIZE',['../_t_midas_event_8cxx.html#aab1f5288fb04f5a69c716f633c782f15',1,'TMidasEvent.cxx']]],
+  ['time',['time',['../structgz__header__s.html#a5f00bb6f9689c1abf7a54dad449ce9d3',1,'gz_header_s']]],
   ['timehigh',['timehigh',['../class_t_event_time.html#a105a14ab60d7497759d248171a10b9c9',1,'TEventTime::timehigh()'],['../class_t_event_time.html#a736b3de677951e7951ef4f4e66ab9fef',1,'TEventTime::timehigh()']]],
   ['timelow',['timelow',['../class_t_event_time.html#abb212f08592e5cac13a675157cf80406',1,'TEventTime::timelow()'],['../class_t_event_time.html#a61f6825fdb6e6844081ca82710e71f18',1,'TEventTime::timelow()']]],
   ['timemidas',['timemidas',['../class_t_event_time.html#ad3da5d0ceb6ff766e9bf9b459bee0780',1,'TEventTime']]],
   ['tlow',['tlow',['../_caen_analysis_selector_8_c.html#aecfdca3640092bfa06b7305896e3455e',1,'tlow():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#aecfdca3640092bfa06b7305896e3455e',1,'tlow():&#160;GenericSelector.C']]],
   ['tmax',['tmax',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#abdf4ca731dde02aa8d328701591e8595',1,'TPulseAnalyzer::WaveFormPar']]],
+  ['total_5fin',['total_in',['../structz__stream__s.html#aa8f408b9632737dc21519fa1ed34b08d',1,'z_stream_s']]],
+  ['total_5fout',['total_out',['../structz__stream__s.html#abae26f1f236cf920250b9d37fdf009c1',1,'z_stream_s']]],
   ['total_5fpoints',['total_points',['../class_t_calibrator.html#a211b2a7f04009f80d8c8bdeee581e2b8',1,'TCalibrator']]],
   ['transitionlist',['TransitionList',['../class_t_nucleus.html#ac8306fb991f2beae01ecfe4f088ad2b1',1,'TNucleus']]],
   ['tree',['tree',['../classpygui_1_1tcut__tab_1_1_t_cut_tab.html#a09ee1bb0f5ca099bb22ff0b4510f2310',1,'pygui::tcut_tab::TCutTab']]],
   ['treeview',['treeview',['../classpygui_1_1hist__tab_1_1_hist_tab.html#afabb52231d9e9e92f903b722784f21a8',1,'pygui.hist_tab.HistTab.treeview()'],['../classpygui_1_1variable__tab_1_1_variable_tab.html#abcc6c9ec14c2c3bea97c6d139850c828',1,'pygui.variable_tab.VariableTab.treeview()']]],
-  ['ttree_5ffill_5fmutex',['ttree_fill_mutex',['../_t_tree_fill_mutex_8h.html#ace360bae6ed922d58ba3cddde8476262',1,'ttree_fill_mutex():&#160;TTreeFillMutex.cxx'],['../_t_tree_fill_mutex_8cxx.html#ace360bae6ed922d58ba3cddde8476262',1,'ttree_fill_mutex():&#160;TTreeFillMutex.cxx']]],
+  ['ttree_5ffill_5fmutex',['ttree_fill_mutex',['../htmldoc_2_t_tree_fill_mutex_8h.html#ace360bae6ed922d58ba3cddde8476262',1,'ttree_fill_mutex():&#160;TTreeFillMutex.cxx'],['../include_2_t_tree_fill_mutex_8h.html#ace360bae6ed922d58ba3cddde8476262',1,'ttree_fill_mutex():&#160;TTreeFillMutex.cxx'],['../_t_tree_fill_mutex_8cxx.html#ace360bae6ed922d58ba3cddde8476262',1,'ttree_fill_mutex():&#160;TTreeFillMutex.cxx']]],
   ['type',['type',['../struct_t_pulse_analyzer_1_1_shape_par.html#a298240a19dbb023d8f606655ad90d218',1,'TPulseAnalyzer::ShapePar']]]
 ];

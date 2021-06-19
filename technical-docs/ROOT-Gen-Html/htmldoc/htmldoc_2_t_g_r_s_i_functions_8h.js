@@ -1,6 +1,6 @@
 var htmldoc_2_t_g_r_s_i_functions_8h =
 [
-    [ "Bateman", "htmldoc_2_t_g_r_s_i_functions_8h.html#a497a762b0c9dc655f6f01d595b511a49", null ],
+    [ "Bateman", "htmldoc_2_t_g_r_s_i_functions_8h.html#a594aa61e8ea3e3400918af9b5ae223e4", null ],
     [ "ConvolutedDecay", "htmldoc_2_t_g_r_s_i_functions_8h.html#a773f1f2109fc9ccb7cacbfcad9df3a80", null ],
     [ "ConvolutedDecay2", "htmldoc_2_t_g_r_s_i_functions_8h.html#af7acdbe44a7338d50daf4ac9e8250e3e", null ],
     [ "CsIFitFunction", "htmldoc_2_t_g_r_s_i_functions_8h.html#a67ce9e340bca494d27cb6f5b100362e3", null ],

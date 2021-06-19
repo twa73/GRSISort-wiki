@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['dedx',['dEdX',['../class_t_s_r_i_m.html#af1404417c75b0cbf9f513639d7d70229',1,'TSRIM']]],
+  ['data_5ftype',['data_type',['../structz__stream__s.html#a9d8f63877d7639a8bca60f9fc3704fc4',1,'z_stream_s']]],
+  ['dedx',['dEdX',['../class_t_s_r_i_m.html#a118aed33df0b21735f6edb54da740165',1,'TSRIM']]],
   ['defaultcanvassize',['defaultcanvassize',['../classpygui_1_1mainwindow_1_1_main_window.html#a78672d8fae3cbc4c935406157292b91b',1,'pygui::mainwindow::MainWindow']]],
   ['descmaxe',['descMaxE',['../_caen_analysis_selector_8_c.html#ac95623f65d45f620e3bc1ddec7cf5b74',1,'CaenAnalysisSelector.C']]],
   ['descmine',['descMinE',['../_caen_analysis_selector_8_c.html#a6e277c7bff0e7c6563baf9696a2aa65f',1,'CaenAnalysisSelector.C']]],
@@ -11,7 +12,8 @@ var searchData=
   ['digset',['digset',['../class_t_event_time.html#a85b254f4322946e54383b0ce881b0dba',1,'TEventTime']]],
   ['directory',['directory',['../classpygui_1_1util_1_1_preserve_g_dir.html#a706def07c49e54d554c90a5347f8cf6d',1,'pygui::util::PreserveGDir']]],
   ['dlsym',['dlsym',['../_t_parser_library_8cxx.html#a0cae681841e72a366e899fe0fe7717be',1,'TParserLibrary.cxx']]],
+  ['done',['done',['../structgz__header__s.html#ab8fd11f59b76a7d031e24bede8679d9d',1,'gz_header_s']]],
   ['dp',['dp',['../class_generic_selector.html#ae640df53e3eab3b8062a7b0f8675eec8',1,'GenericSelector']]],
-  ['dummy',['dummy',['../classpygui_1_1mainwindow_1_1_main_window.html#abce546a4875a1f07b8633e37d5b6cdba',1,'pygui::mainwindow::MainWindow']]],
+  ['dummy',['dummy',['../structinternal__state.html#ab000a3e3c901dd063859521988ad7e52',1,'internal_state::dummy()'],['../classpygui_1_1mainwindow_1_1_main_window.html#abce546a4875a1f07b8633e37d5b6cdba',1,'pygui.mainwindow.MainWindow.dummy()']]],
   ['dx',['dx',['../class_t_s_r_i_m.html#a5d04b47f67b079db783d561d4f589572',1,'TSRIM']]]
 ];

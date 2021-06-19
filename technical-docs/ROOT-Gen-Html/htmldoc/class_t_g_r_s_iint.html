@@ -99,30 +99,52 @@ $(document).ready(function(){initNavTree('class_t_g_r_s_iint.html','');});
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p><a class="el" href="class_t_g_r_s_iint.html">TGRSIint</a> is a class that acts as an interpreter for GRSISort. The idea is that <a class="el" href="class_t_g_r_s_iint.html">TGRSIint</a> will read in cal, info, mid and root files and open them appropriately (order) and do the correct thing with them. It also applies the command line options. Finally, <a class="el" href="class_t_g_r_s_iint.html">TGRSIint</a> allows us to take over the interpreter to do some GRSI things. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00039">39</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00039">39</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abd492915c23981827d4f503aa06fdd62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#abd492915c23981827d4f503aa06fdd62">~TGRSIint</a> () override</td></tr>
 <tr class="separator:abd492915c23981827d4f503aa06fdd62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd492915c23981827d4f503aa06fdd62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#abd492915c23981827d4f503aa06fdd62">~TGRSIint</a> () override</td></tr>
+<tr class="separator:abd492915c23981827d4f503aa06fdd62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e9f19df251c60358643788f5cb880c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a88e9f19df251c60358643788f5cb880c">DelayedProcessLine_Action</a> ()</td></tr>
+<tr class="separator:a88e9f19df251c60358643788f5cb880c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88e9f19df251c60358643788f5cb880c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a88e9f19df251c60358643788f5cb880c">DelayedProcessLine_Action</a> ()</td></tr>
 <tr class="separator:a88e9f19df251c60358643788f5cb880c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe4df4609125bc3aad0e039d1af148f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#afe4df4609125bc3aad0e039d1af148f4">HandleTermInput</a> () override</td></tr>
 <tr class="separator:afe4df4609125bc3aad0e039d1af148f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4df4609125bc3aad0e039d1af148f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#afe4df4609125bc3aad0e039d1af148f4">HandleTermInput</a> () override</td></tr>
+<tr class="separator:afe4df4609125bc3aad0e039d1af148f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a958884bcf09b1bbf0bd49f078224dc49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_raw_file.html">TRawFile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a958884bcf09b1bbf0bd49f078224dc49">OpenRawFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="separator:a958884bcf09b1bbf0bd49f078224dc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f85d6d43caf266ae5e729b9c9015a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_raw_file.html">TRawFile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a19f85d6d43caf266ae5e729b9c9015a6">OpenRawFile</a> (const std::string &amp;filename)</td></tr>
 <tr class="separator:a19f85d6d43caf266ae5e729b9c9015a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f68276bfb3375aa195fb4091e232c27"><td class="memItemLeft" align="right" valign="top">TFile *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a0f68276bfb3375aa195fb4091e232c27">OpenRootFile</a> (const std::string &amp;filename, Option_t *opt=&quot;read&quot;)</td></tr>
+<tr class="separator:a0f68276bfb3375aa195fb4091e232c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5be775fb7acfb9a00903957d85a9c7a3"><td class="memItemLeft" align="right" valign="top">TFile *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a5be775fb7acfb9a00903957d85a9c7a3">OpenRootFile</a> (const std::string &amp;filename, Option_t *opt=&quot;read&quot;)</td></tr>
 <tr class="separator:a5be775fb7acfb9a00903957d85a9c7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f65e27966a2849319be45219829b507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a2f65e27966a2849319be45219829b507">PrintHelp</a> (bool)</td></tr>
 <tr class="separator:a2f65e27966a2849319be45219829b507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f65e27966a2849319be45219829b507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a2f65e27966a2849319be45219829b507">PrintHelp</a> (bool)</td></tr>
+<tr class="separator:a2f65e27966a2849319be45219829b507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdcd923012fb30202adfa1f6b14d790a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#acdcd923012fb30202adfa1f6b14d790a">PrintLogo</a> (bool) override</td></tr>
+<tr class="separator:acdcd923012fb30202adfa1f6b14d790a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdcd923012fb30202adfa1f6b14d790a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#acdcd923012fb30202adfa1f6b14d790a">PrintLogo</a> (bool) override</td></tr>
 <tr class="separator:acdcd923012fb30202adfa1f6b14d790a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0538f3d5195b2df8172dedd60d29025"><td class="memItemLeft" align="right" valign="top">Long_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#ad0538f3d5195b2df8172dedd60d29025">ProcessLine</a> (const char *line, Bool_t sync=kFALSE, Int_t *error=nullptr) override</td></tr>
 <tr class="separator:ad0538f3d5195b2df8172dedd60d29025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0538f3d5195b2df8172dedd60d29025"><td class="memItemLeft" align="right" valign="top">Long_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#ad0538f3d5195b2df8172dedd60d29025">ProcessLine</a> (const char *line, Bool_t sync=kFALSE, Int_t *error=nullptr) override</td></tr>
+<tr class="separator:ad0538f3d5195b2df8172dedd60d29025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e982a51b7f1359c9b57db7a22b535d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a96e982a51b7f1359c9b57db7a22b535d">RunMacroFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="separator:a96e982a51b7f1359c9b57db7a22b535d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96e982a51b7f1359c9b57db7a22b535d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a96e982a51b7f1359c9b57db7a22b535d">RunMacroFile</a> (const std::string &amp;filename)</td></tr>
 <tr class="separator:a96e982a51b7f1359c9b57db7a22b535d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2888ecddb98e955d4b77eda5ccc13a20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a2888ecddb98e955d4b77eda5ccc13a20">TabCompletionHook</a> (char *, int *, std::ostream &amp;) override</td></tr>
 <tr class="separator:a2888ecddb98e955d4b77eda5ccc13a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a709024296291fa8aa16566d4ef64222c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a709024296291fa8aa16566d4ef64222c">TabCompletionHook</a> (char *, int *, std::ostream &amp;) override</td></tr>
+<tr class="separator:a709024296291fa8aa16566d4ef64222c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb050b417a88b9d0646517bccd9e8981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#adb050b417a88b9d0646517bccd9e8981">Terminate</a> (Int_t status=0) override</td></tr>
+<tr class="separator:adb050b417a88b9d0646517bccd9e8981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb050b417a88b9d0646517bccd9e8981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#adb050b417a88b9d0646517bccd9e8981">Terminate</a> (Int_t status=0) override</td></tr>
 <tr class="separator:adb050b417a88b9d0646517bccd9e8981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -130,6 +152,10 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a69b933cf776d70eb4ee3bd47170cba3a"><td class="memItemLeft" align="right" valign="top">static TEnv *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a69b933cf776d70eb4ee3bd47170cba3a">GetEnv</a> ()</td></tr>
 <tr class="separator:a69b933cf776d70eb4ee3bd47170cba3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b933cf776d70eb4ee3bd47170cba3a"><td class="memItemLeft" align="right" valign="top">static TEnv *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a69b933cf776d70eb4ee3bd47170cba3a">GetEnv</a> ()</td></tr>
+<tr class="separator:a69b933cf776d70eb4ee3bd47170cba3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e0dcdb9bb8343bcd111c87a1f1fc4f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_g_r_s_iint.html">TGRSIint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#ae0e0dcdb9bb8343bcd111c87a1f1fc4f">instance</a> (int argc=0, char **argv=nullptr, void *options=nullptr, int numOptions=-1, bool noLogo=false, const char *appClassName=&quot;grsisort&quot;)</td></tr>
+<tr class="separator:ae0e0dcdb9bb8343bcd111c87a1f1fc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab38d6e378ca62a7c56babb3f7b3610bd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_g_r_s_iint.html">TGRSIint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#ab38d6e378ca62a7c56babb3f7b3610bd">instance</a> (int argc=0, char **argv=nullptr, void *options=nullptr, int numOptions=-1, bool noLogo=false, const char *appClassName=&quot;grsisort&quot;)</td></tr>
 <tr class="separator:ab38d6e378ca62a7c56babb3f7b3610bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -142,18 +168,34 @@ Static Public Attributes</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a57c9783cb8a8bcab62dca77b231207ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a57c9783cb8a8bcab62dca77b231207ae">TGRSIint</a> (int argc, char **argv, void *options=nullptr, int numOptions=0, bool noLogo=false, const char *appClassName=&quot;grsisort&quot;)</td></tr>
 <tr class="separator:a57c9783cb8a8bcab62dca77b231207ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c9783cb8a8bcab62dca77b231207ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a57c9783cb8a8bcab62dca77b231207ae">TGRSIint</a> (int argc, char **argv, void *options=nullptr, int numOptions=0, bool noLogo=false, const char *appClassName=&quot;grsisort&quot;)</td></tr>
+<tr class="separator:a57c9783cb8a8bcab62dca77b231207ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4bb153acb3cf3a869f74fd4eb4b8412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#af4bb153acb3cf3a869f74fd4eb4b8412">ApplyOptions</a> ()</td></tr>
+<tr class="separator:af4bb153acb3cf3a869f74fd4eb4b8412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4bb153acb3cf3a869f74fd4eb4b8412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#af4bb153acb3cf3a869f74fd4eb4b8412">ApplyOptions</a> ()</td></tr>
 <tr class="separator:af4bb153acb3cf3a869f74fd4eb4b8412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45f3da527a664d379a404d7306806334"><td class="memItemLeft" align="right" valign="top">Long_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a45f3da527a664d379a404d7306806334">DelayedProcessLine</a> (std::string command)</td></tr>
 <tr class="separator:a45f3da527a664d379a404d7306806334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f3da527a664d379a404d7306806334"><td class="memItemLeft" align="right" valign="top">Long_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a45f3da527a664d379a404d7306806334">DelayedProcessLine</a> (std::string command)</td></tr>
+<tr class="separator:a45f3da527a664d379a404d7306806334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed8f84413fefecfefb07946a1731495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a7ed8f84413fefecfefb07946a1731495">DrawLogo</a> ()</td></tr>
+<tr class="separator:a7ed8f84413fefecfefb07946a1731495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed8f84413fefecfefb07946a1731495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a7ed8f84413fefecfefb07946a1731495">DrawLogo</a> ()</td></tr>
 <tr class="separator:a7ed8f84413fefecfefb07946a1731495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92d5bff5936169de72ec159827cd7b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a92d5bff5936169de72ec159827cd7b45">LoadExtraClasses</a> ()</td></tr>
 <tr class="separator:a92d5bff5936169de72ec159827cd7b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d5bff5936169de72ec159827cd7b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a92d5bff5936169de72ec159827cd7b45">LoadExtraClasses</a> ()</td></tr>
+<tr class="separator:a92d5bff5936169de72ec159827cd7b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a886e34bc2797abe9c274edb670e89240"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a886e34bc2797abe9c274edb670e89240">LoadGROOTGraphics</a> ()</td></tr>
+<tr class="separator:a886e34bc2797abe9c274edb670e89240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a886e34bc2797abe9c274edb670e89240"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a886e34bc2797abe9c274edb670e89240">LoadGROOTGraphics</a> ()</td></tr>
 <tr class="separator:a886e34bc2797abe9c274edb670e89240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0400ba3fcee244893302518b4b5f12c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#ac0400ba3fcee244893302518b4b5f12c">LoopUntilDone</a> ()</td></tr>
 <tr class="separator:ac0400ba3fcee244893302518b4b5f12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0400ba3fcee244893302518b4b5f12c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#ac0400ba3fcee244893302518b4b5f12c">LoopUntilDone</a> ()</td></tr>
+<tr class="separator:ac0400ba3fcee244893302518b4b5f12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b5d3d012966d003ef7d272b1937342"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a19b5d3d012966d003ef7d272b1937342">SetupPipeline</a> ()</td></tr>
+<tr class="separator:a19b5d3d012966d003ef7d272b1937342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b5d3d012966d003ef7d272b1937342"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a19b5d3d012966d003ef7d272b1937342">SetupPipeline</a> ()</td></tr>
 <tr class="separator:a19b5d3d012966d003ef7d272b1937342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -163,12 +205,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ab17d5438b6f3cdbc9d23a0393d586fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdb2aa1d1959abc8d4b1cab47c00592c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#abdb2aa1d1959abc8d4b1cab47c00592c">fIsTabComplete</a></td></tr>
 <tr class="separator:abdb2aa1d1959abc8d4b1cab47c00592c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f01e7935f00e30e9d40d51a8dfc7e59"><td class="memItemLeft" align="right" valign="top">TTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a5f01e7935f00e30e9d40d51a8dfc7e59">fKeepAliveTimer</a></td></tr>
-<tr class="separator:a5f01e7935f00e30e9d40d51a8dfc7e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa197ba3f565e39dd9d22824e370147f8"><td class="memItemLeft" align="right" valign="top">TTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#aa197ba3f565e39dd9d22824e370147f8">fKeepAliveTimer</a></td></tr>
+<tr class="separator:aa197ba3f565e39dd9d22824e370147f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9434b834a1e308e0b7a0472582b19ff2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a9434b834a1e308e0b7a0472582b19ff2">fNewFragmentFile</a></td></tr>
 <tr class="separator:a9434b834a1e308e0b7a0472582b19ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a820267402ee8b75cc74a416800213eaa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_raw_file.html">TRawFile</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a820267402ee8b75cc74a416800213eaa">fRawFiles</a></td></tr>
-<tr class="separator:a820267402ee8b75cc74a416800213eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f52b717c53e13a7cc6e9dc1ad1250a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_t_raw_file.html">TRawFile</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a51f52b717c53e13a7cc6e9dc1ad1250a">fRawFiles</a></td></tr>
+<tr class="separator:a51f52b717c53e13a7cc6e9dc1ad1250a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3309ff649039048d21878ed71ccd44b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#a3309ff649039048d21878ed71ccd44b8">fRawFilesOpened</a></td></tr>
 <tr class="separator:a3309ff649039048d21878ed71ccd44b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdf2954989b1d6f8113dd9510aba1b49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_g_r_s_iint.html#abdf2954989b1d6f8113dd9510aba1b49">fRootFilesOpened</a></td></tr>
@@ -182,24 +224,26 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:ac7469fc2affa6ba74698a35adfa0f074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
-<p><code>#include &lt;<a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for TGRSIint:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_t_g_r_s_iint__inherit__graph.svg" width="90" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_t_g_r_s_iint__inherit__graph.svg" width="90" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for TGRSIint:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_t_g_r_s_iint__coll__graph.svg" width="390" height="218"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_t_g_r_s_iint__coll__graph.svg" width="390" height="218"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a57c9783cb8a8bcab62dca77b231207ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57c9783cb8a8bcab62dca77b231207ae">&#9670;&nbsp;</a></span>TGRSIint()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c9783cb8a8bcab62dca77b231207ae">&#9670;&nbsp;</a></span>TGRSIint() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,18 +299,13 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Singleton constructor </p>
-
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00064">64</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
-
-<p class="reference">References <a class="el" href="grut-view_8py_source.html#l00016">pygui.grut-view::argv</a>, <a class="el" href="_t_g_r_s_iint_8h_source.html#l00044">fGRSIEnv</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00279">PrintLogo()</a>, and <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00041">TGRSIOptions::ShouldExit()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00054">instance()</a>.</p>
 
 </div>
 </div>
 <a id="abd492915c23981827d4f503aa06fdd62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd492915c23981827d4f503aa06fdd62">&#9670;&nbsp;</a></span>~TGRSIint()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abd492915c23981827d4f503aa06fdd62">&#9670;&nbsp;</a></span>~TGRSIint() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -293,9 +332,94 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a57c9783cb8a8bcab62dca77b231207ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c9783cb8a8bcab62dca77b231207ae">&#9670;&nbsp;</a></span>TGRSIint() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TGRSIint::TGRSIint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>options</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numOptions</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>noLogo</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>appClassName</em> = <code>&quot;grsisort&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd492915c23981827d4f503aa06fdd62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd492915c23981827d4f503aa06fdd62">&#9670;&nbsp;</a></span>~TGRSIint() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TGRSIint::~TGRSIint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="af4bb153acb3cf3a869f74fd4eb4b8412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4bb153acb3cf3a869f74fd4eb4b8412">&#9670;&nbsp;</a></span>ApplyOptions()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af4bb153acb3cf3a869f74fd4eb4b8412">&#9670;&nbsp;</a></span>ApplyOptions() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,14 +444,39 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">91</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00026">all_files_exist()</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00073">StoppableThread::AllThreadHeader()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00093">TGRSIOptions::Batch()</a>, <a class="el" href="_t_run_info_8h_source.html#l00092">TRunInfo::ClearDate()</a>, <a class="el" href="_t_run_info_8h_source.html#l00081">TRunInfo::ClearFullVersion()</a>, <a class="el" href="_t_run_info_8h_source.html#l00070">TRunInfo::ClearVersion()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00075">TGRSIOptions::CloseAfterSort()</a>, <a class="el" href="_globals_8h_source.html#l00017">DRED</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>, <a class="el" href="_t_singleton_8h_source.html#l00034">TSingleton&lt; TParserLibrary &gt;::Get()</a>, <a class="el" href="_g_version_8h_source.html#l00008">GRSI_GIT_COMMIT</a>, <a class="el" href="_g_version_8h_source.html#l00010">GRSI_GIT_COMMIT_TIME</a>, <a class="el" href="_g_version_8h_source.html#l00004">GRSI_RELEASE</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00042">TGRSIOptions::InputFiles()</a>, <a class="el" href="_t_parser_library_8cxx_source.html#l00019">TParserLibrary::Load()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00706">LoadGROOTGraphics()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00167">LoopUntilDone()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00050">TGRSIOptions::MacroInputFiles()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">OpenRawFile()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00307">OpenRootFile()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00135">TGRSIOptions::ParserLibrary()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00081">TGRSIOptions::ReadingMaterial()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00269">ReadTheNews()</a>, <a class="el" href="_globals_8h_source.html#l00004">RESET_COLOR</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00043">TGRSIOptions::RootInputFiles()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00673">RunMacroFile()</a>, <a class="el" href="_t_run_info_8h_source.html#l00093">TRunInfo::SetDate()</a>, <a class="el" href="_t_run_info_8h_source.html#l00082">TRunInfo::SetFullVersion()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00409">SetupPipeline()</a>, <a class="el" href="_t_run_info_8h_source.html#l00071">TRunInfo::SetVersion()</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00410">StartGUI()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00070">TGRSIOptions::StartGui()</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00201">Terminate()</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00026">all_files_exist()</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00073">StoppableThread::AllThreadHeader()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00093">TGRSIOptions::Batch()</a>, <a class="el" href="htmldoc_2_t_run_info_8h_source.html#l00092">TRunInfo::ClearDate()</a>, <a class="el" href="htmldoc_2_t_run_info_8h_source.html#l00081">TRunInfo::ClearFullVersion()</a>, <a class="el" href="htmldoc_2_t_run_info_8h_source.html#l00070">TRunInfo::ClearVersion()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00075">TGRSIOptions::CloseAfterSort()</a>, <a class="el" href="htmldoc_2_globals_8h_source.html#l00017">DRED</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>, <a class="el" href="htmldoc_2_t_singleton_8h_source.html#l00034">TSingleton&lt; TParserLibrary &gt;::Get()</a>, <a class="el" href="htmldoc_2_g_version_8h_source.html#l00008">GRSI_GIT_COMMIT</a>, <a class="el" href="htmldoc_2_g_version_8h_source.html#l00010">GRSI_GIT_COMMIT_TIME</a>, <a class="el" href="htmldoc_2_g_version_8h_source.html#l00004">GRSI_RELEASE</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00042">TGRSIOptions::InputFiles()</a>, <a class="el" href="_t_parser_library_8cxx_source.html#l00019">TParserLibrary::Load()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00706">LoadGROOTGraphics()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00167">LoopUntilDone()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00050">TGRSIOptions::MacroInputFiles()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">OpenRawFile()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00307">OpenRootFile()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00135">TGRSIOptions::ParserLibrary()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00081">TGRSIOptions::ReadingMaterial()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00269">ReadTheNews()</a>, <a class="el" href="htmldoc_2_globals_8h_source.html#l00004">RESET_COLOR</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00043">TGRSIOptions::RootInputFiles()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00673">RunMacroFile()</a>, <a class="el" href="htmldoc_2_t_run_info_8h_source.html#l00093">TRunInfo::SetDate()</a>, <a class="el" href="htmldoc_2_t_run_info_8h_source.html#l00082">TRunInfo::SetFullVersion()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00409">SetupPipeline()</a>, <a class="el" href="htmldoc_2_t_run_info_8h_source.html#l00071">TRunInfo::SetVersion()</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00410">StartGUI()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00070">TGRSIOptions::StartGui()</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00201">Terminate()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00054">instance()</a>.</p>
 
 </div>
 </div>
+<a id="af4bb153acb3cf3a869f74fd4eb4b8412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4bb153acb3cf3a869f74fd4eb4b8412">&#9670;&nbsp;</a></span>ApplyOptions() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::ApplyOptions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a45f3da527a664d379a404d7306806334"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45f3da527a664d379a404d7306806334">&#9670;&nbsp;</a></span>DelayedProcessLine()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f3da527a664d379a404d7306806334">&#9670;&nbsp;</a></span>DelayedProcessLine() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,8 +507,34 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a45f3da527a664d379a404d7306806334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f3da527a664d379a404d7306806334">&#9670;&nbsp;</a></span>DelayedProcessLine() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Long_t TGRSIint::DelayedProcessLine </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a88e9f19df251c60358643788f5cb880c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88e9f19df251c60358643788f5cb880c">&#9670;&nbsp;</a></span>DelayedProcessLine_Action()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e9f19df251c60358643788f5cb880c">&#9670;&nbsp;</a></span>DelayedProcessLine_Action() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,8 +554,25 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a88e9f19df251c60358643788f5cb880c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e9f19df251c60358643788f5cb880c">&#9670;&nbsp;</a></span>DelayedProcessLine_Action() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::DelayedProcessLine_Action </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7ed8f84413fefecfefb07946a1731495"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ed8f84413fefecfefb07946a1731495">&#9670;&nbsp;</a></span>DrawLogo()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed8f84413fefecfefb07946a1731495">&#9670;&nbsp;</a></span>DrawLogo() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,8 +603,33 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7ed8f84413fefecfefb07946a1731495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed8f84413fefecfefb07946a1731495">&#9670;&nbsp;</a></span>DrawLogo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::DrawLogo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a69b933cf776d70eb4ee3bd47170cba3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69b933cf776d70eb4ee3bd47170cba3a">&#9670;&nbsp;</a></span>GetEnv()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b933cf776d70eb4ee3bd47170cba3a">&#9670;&nbsp;</a></span>GetEnv() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -434,14 +651,43 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00065">65</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="include_2_t_g_r_s_iint_8h_source.html#l00065">65</a> of file <a class="el" href="include_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_iint_8h_source.html#l00044">fGRSIEnv</a>.</p>
+<p class="reference">References <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00044">fGRSIEnv</a>.</p>
+
+</div>
+</div>
+<a id="a69b933cf776d70eb4ee3bd47170cba3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b933cf776d70eb4ee3bd47170cba3a">&#9670;&nbsp;</a></span>GetEnv() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static TEnv* TGRSIint::GetEnv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00065">65</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+
+<p class="reference">References <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00044">fGRSIEnv</a>.</p>
 
 </div>
 </div>
 <a id="afe4df4609125bc3aad0e039d1af148f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe4df4609125bc3aad0e039d1af148f4">&#9670;&nbsp;</a></span>HandleTermInput()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4df4609125bc3aad0e039d1af148f4">&#9670;&nbsp;</a></span>HandleTermInput() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -468,8 +714,93 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="afe4df4609125bc3aad0e039d1af148f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4df4609125bc3aad0e039d1af148f4">&#9670;&nbsp;</a></span>HandleTermInput() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TGRSIint::HandleTermInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0e0dcdb9bb8343bcd111c87a1f1fc4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e0dcdb9bb8343bcd111c87a1f1fc4f">&#9670;&nbsp;</a></span>instance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_t_g_r_s_iint.html">TGRSIint</a>* TGRSIint::instance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>options</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numOptions</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>noLogo</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>appClassName</em> = <code>&quot;grsisort&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab38d6e378ca62a7c56babb3f7b3610bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab38d6e378ca62a7c56babb3f7b3610bd">&#9670;&nbsp;</a></span>instance()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab38d6e378ca62a7c56babb3f7b3610bd">&#9670;&nbsp;</a></span>instance() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -529,14 +860,39 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00054">54</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">ApplyOptions()</a>, <a class="el" href="grut-view_8py_source.html#l00016">pygui.grut-view::argv</a>, <a class="el" href="_t_g_r_s_iint_8h_source.html#l00047">fTGRSIint</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00064">TGRSIint()</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">ApplyOptions()</a>, <a class="el" href="grut-view_8py_source.html#l00016">pygui.grut-view::argv</a>, <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00047">fTGRSIint</a>, and <a class="el" href="class_t_g_r_s_iint.html#a57c9783cb8a8bcab62dca77b231207ae">TGRSIint()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="grsisort_8cxx_source.html#l00062">main()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00727">TGRSIInterruptHandler::Notify()</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00071">TFragHistLoop::OpenFile()</a>, and <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00071">TAnalysisHistLoop::OpenFile()</a>.</p>
 
 </div>
 </div>
 <a id="a92d5bff5936169de72ec159827cd7b45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92d5bff5936169de72ec159827cd7b45">&#9670;&nbsp;</a></span>LoadExtraClasses()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d5bff5936169de72ec159827cd7b45">&#9670;&nbsp;</a></span>LoadExtraClasses() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::LoadExtraClasses </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92d5bff5936169de72ec159827cd7b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d5bff5936169de72ec159827cd7b45">&#9670;&nbsp;</a></span>LoadExtraClasses() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,7 +917,32 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a886e34bc2797abe9c274edb670e89240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a886e34bc2797abe9c274edb670e89240">&#9670;&nbsp;</a></span>LoadGROOTGraphics()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a886e34bc2797abe9c274edb670e89240">&#9670;&nbsp;</a></span>LoadGROOTGraphics() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::LoadGROOTGraphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a886e34bc2797abe9c274edb670e89240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a886e34bc2797abe9c274edb670e89240">&#9670;&nbsp;</a></span>LoadGROOTGraphics() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -591,7 +972,32 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ac0400ba3fcee244893302518b4b5f12c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0400ba3fcee244893302518b4b5f12c">&#9670;&nbsp;</a></span>LoopUntilDone()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0400ba3fcee244893302518b4b5f12c">&#9670;&nbsp;</a></span>LoopUntilDone() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::LoopUntilDone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0400ba3fcee244893302518b4b5f12c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0400ba3fcee244893302518b4b5f12c">&#9670;&nbsp;</a></span>LoopUntilDone() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -616,14 +1022,14 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00167">167</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_stoppable_thread_8cxx_source.html#l00059">StoppableThread::AllThreadProgress()</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00083">StoppableThread::AllThreadStatus()</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00037">StoppableThread::AnyThreadRunning()</a>, <a class="el" href="_t_g_r_s_iint_8h_source.html#l00090">fAllowedToTerminate</a>, and <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>.</p>
+<p class="reference">References <a class="el" href="_stoppable_thread_8cxx_source.html#l00059">StoppableThread::AllThreadProgress()</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00083">StoppableThread::AllThreadStatus()</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00037">StoppableThread::AnyThreadRunning()</a>, <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00090">fAllowedToTerminate</a>, and <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">ApplyOptions()</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00201">Terminate()</a>.</p>
 
 </div>
 </div>
 <a id="a19f85d6d43caf266ae5e729b9c9015a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19f85d6d43caf266ae5e729b9c9015a6">&#9670;&nbsp;</a></span>OpenRawFile()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f85d6d43caf266ae5e729b9c9015a6">&#9670;&nbsp;</a></span>OpenRawFile() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -641,14 +1047,60 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">386</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_globals_8h_source.html#l00005">BLUE</a>, <a class="el" href="_t_parser_library_8h_source.html#l00018">TParserLibrary::CreateRawFile()</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00013">file_exists()</a>, <a class="el" href="_t_g_r_s_iint_8h_source.html#l00095">fRawFiles</a>, <a class="el" href="_t_g_r_s_iint_8h_source.html#l00092">fRawFilesOpened</a>, <a class="el" href="_t_singleton_8h_source.html#l00034">TSingleton&lt; TParserLibrary &gt;::Get()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00244">ProcessLine()</a>, and <a class="el" href="_globals_8h_source.html#l00004">RESET_COLOR</a>.</p>
+<p class="reference">References <a class="el" href="htmldoc_2_globals_8h_source.html#l00005">BLUE</a>, <a class="el" href="htmldoc_2_t_parser_library_8h_source.html#l00018">TParserLibrary::CreateRawFile()</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00013">file_exists()</a>, <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00095">fRawFiles</a>, <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00092">fRawFilesOpened</a>, <a class="el" href="htmldoc_2_t_singleton_8h_source.html#l00034">TSingleton&lt; TParserLibrary &gt;::Get()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00244">ProcessLine()</a>, and <a class="el" href="htmldoc_2_globals_8h_source.html#l00004">RESET_COLOR</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">ApplyOptions()</a>.</p>
 
 </div>
 </div>
+<a id="a958884bcf09b1bbf0bd49f078224dc49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a958884bcf09b1bbf0bd49f078224dc49">&#9670;&nbsp;</a></span>OpenRawFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_raw_file.html">TRawFile</a>* TGRSIint::OpenRawFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f68276bfb3375aa195fb4091e232c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f68276bfb3375aa195fb4091e232c27">&#9670;&nbsp;</a></span>OpenRootFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TFile* TGRSIint::OpenRootFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Option_t *&#160;</td>
+          <td class="paramname"><em>opt</em> = <code>&quot;read&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5be775fb7acfb9a00903957d85a9c7a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5be775fb7acfb9a00903957d85a9c7a3">&#9670;&nbsp;</a></span>OpenRootFile()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be775fb7acfb9a00903957d85a9c7a3">&#9670;&nbsp;</a></span>OpenRootFile() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -676,14 +1128,32 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00307">307</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_g_root_commands_8cxx_source.html#l00431">AddFileToGUI()</a>, <a class="el" href="_globals_8h_source.html#l00005">BLUE</a>, <a class="el" href="_t_g_r_s_iint_8h_source.html#l00091">fRootFilesOpened</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00037">gAnalysis</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00036">gFragment</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00023">TRunInfo::ReadInfoFromFile()</a>, and <a class="el" href="_globals_8h_source.html#l00004">RESET_COLOR</a>.</p>
+<p class="reference">References <a class="el" href="_g_root_commands_8cxx_source.html#l00431">AddFileToGUI()</a>, <a class="el" href="htmldoc_2_globals_8h_source.html#l00005">BLUE</a>, <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00091">fRootFilesOpened</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00037">gAnalysis</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00036">gFragment</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00023">TRunInfo::ReadInfoFromFile()</a>, and <a class="el" href="htmldoc_2_globals_8h_source.html#l00004">RESET_COLOR</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">ApplyOptions()</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00071">TFragHistLoop::OpenFile()</a>, and <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00071">TAnalysisHistLoop::OpenFile()</a>.</p>
 
 </div>
 </div>
 <a id="a2f65e27966a2849319be45219829b507"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f65e27966a2849319be45219829b507">&#9670;&nbsp;</a></span>PrintHelp()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f65e27966a2849319be45219829b507">&#9670;&nbsp;</a></span>PrintHelp() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::PrintHelp </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f65e27966a2849319be45219829b507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f65e27966a2849319be45219829b507">&#9670;&nbsp;</a></span>PrintHelp() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -701,12 +1171,12 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00717">717</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_globals_8h_source.html#l00023">BG_WHITE</a>, <a class="el" href="_globals_8h_source.html#l00017">DRED</a>, and <a class="el" href="_globals_8h_source.html#l00004">RESET_COLOR</a>.</p>
+<p class="reference">References <a class="el" href="htmldoc_2_globals_8h_source.html#l00023">BG_WHITE</a>, <a class="el" href="htmldoc_2_globals_8h_source.html#l00017">DRED</a>, and <a class="el" href="htmldoc_2_globals_8h_source.html#l00004">RESET_COLOR</a>.</p>
 
 </div>
 </div>
 <a id="acdcd923012fb30202adfa1f6b14d790a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdcd923012fb30202adfa1f6b14d790a">&#9670;&nbsp;</a></span>PrintLogo()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcd923012fb30202adfa1f6b14d790a">&#9670;&nbsp;</a></span>PrintLogo() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -732,14 +1202,38 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00279">279</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00699">DrawLogo()</a>, <a class="el" href="_g_version_8h_source.html#l00004">GRSI_RELEASE</a>, and <a class="el" href="_globals_8h.html#ac847f4564990903418bd3b97877eedd8">ProgramName()</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00699">DrawLogo()</a>, <a class="el" href="htmldoc_2_g_version_8h_source.html#l00004">GRSI_RELEASE</a>, and <a class="el" href="htmldoc_2_globals_8h.html#ac847f4564990903418bd3b97877eedd8">ProgramName()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00064">TGRSIint()</a>.</p>
+</div>
+</div>
+<a id="acdcd923012fb30202adfa1f6b14d790a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcd923012fb30202adfa1f6b14d790a">&#9670;&nbsp;</a></span>PrintLogo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::PrintLogo </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <a id="ad0538f3d5195b2df8172dedd60d29025"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0538f3d5195b2df8172dedd60d29025">&#9670;&nbsp;</a></span>ProcessLine()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0538f3d5195b2df8172dedd60d29025">&#9670;&nbsp;</a></span>ProcessLine() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -784,14 +1278,56 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00244">244</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00772">DelayedProcessLine()</a>, <a class="el" href="_t_g_r_s_iint_8h_source.html#l00089">fIsTabComplete</a>, and <a class="el" href="_t_g_r_s_iint_8h_source.html#l00085">main_thread_id</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00772">DelayedProcessLine()</a>, <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00089">fIsTabComplete</a>, and <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00085">main_thread_id</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00789">DelayedProcessLine_Action()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">OpenRawFile()</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00673">RunMacroFile()</a>.</p>
 
 </div>
 </div>
+<a id="ad0538f3d5195b2df8172dedd60d29025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0538f3d5195b2df8172dedd60d29025">&#9670;&nbsp;</a></span>ProcessLine() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Long_t TGRSIint::ProcessLine </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bool_t&#160;</td>
+          <td class="paramname"><em>sync</em> = <code>kFALSE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a96e982a51b7f1359c9b57db7a22b535d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96e982a51b7f1359c9b57db7a22b535d">&#9670;&nbsp;</a></span>RunMacroFile()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e982a51b7f1359c9b57db7a22b535d">&#9670;&nbsp;</a></span>RunMacroFile() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -815,8 +1351,51 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a96e982a51b7f1359c9b57db7a22b535d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e982a51b7f1359c9b57db7a22b535d">&#9670;&nbsp;</a></span>RunMacroFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::RunMacroFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a19b5d3d012966d003ef7d272b1937342"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19b5d3d012966d003ef7d272b1937342">&#9670;&nbsp;</a></span>SetupPipeline()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a19b5d3d012966d003ef7d272b1937342">&#9670;&nbsp;</a></span>SetupPipeline() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::SetupPipeline </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19b5d3d012966d003ef7d272b1937342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19b5d3d012966d003ef7d272b1937342">&#9670;&nbsp;</a></span>SetupPipeline() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -841,14 +1420,56 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00409">409</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_unpacking_loop_8h_source.html#l00039">TUnpackingLoop::AddGoodOutputQueue()</a>, <a class="el" href="_t_fragment_chain_loop_8h_source.html#l00037">TFragmentChainLoop::AddOutputQueue()</a>, <a class="el" href="_t_det_building_loop_8h_source.html#l00039">TDetBuildingLoop::AddOutputQueue()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00060">TGRSIOptions::AnalysisHistogramLib()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00067">TGRSIOptions::AnalysisOptions()</a>, <a class="el" href="_t_frag_write_loop_8h_source.html#l00035">TFragWriteLoop::BadInputQueue()</a>, <a class="el" href="_t_unpacking_loop_8h_source.html#l00043">TUnpackingLoop::BadOutputQueue()</a>, <a class="el" href="_t_detector_information_8h_source.html#l00027">TDetectorInformation::BuildMode()</a>, <a class="el" href="_t_analysis_options_8h_source.html#l00050">TAnalysisOptions::BuildWindow()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00044">TGRSIOptions::CalInputFiles()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00075">TGRSIOptions::CloseAfterSort()</a>, <a class="el" href="_stoppable_thread_8h_source.html#l00077">StoppableThread::ColumnWidth()</a>, <a class="el" href="_globals_8h_source.html#l00017">DRED</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00047">TGRSIOptions::ExternalRunInfo()</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00013">file_exists()</a>, <a class="el" href="_t_g_r_s_iint_8h_source.html#l00093">fNewFragmentFile</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00059">TGRSIOptions::FragmentHistogramLib()</a>, <a class="el" href="_t_g_r_s_iint_8h_source.html#l00095">fRawFiles</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00037">gAnalysis</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00013">TFragHistLoop::Get()</a>, <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00013">TAnalysisHistLoop::Get()</a>, <a class="el" href="_t_analysis_write_loop_8cxx_source.html#l00026">TAnalysisWriteLoop::Get()</a>, <a class="el" href="_t_frag_write_loop_8cxx_source.html#l00022">TFragWriteLoop::Get()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>, <a class="el" href="class_t_event_building_loop.html#a6b8a4219f0717b09da45e662ab6fca18">TEventBuildingLoop::Get()</a>, <a class="el" href="_t_unpacking_loop_8cxx_source.html#l00011">TUnpackingLoop::Get()</a>, <a class="el" href="_t_fragment_chain_loop_8cxx_source.html#l00014">TFragmentChainLoop::Get()</a>, <a class="el" href="_t_singleton_8h_source.html#l00034">TSingleton&lt; TRunInfo &gt;::Get()</a>, <a class="el" href="_t_data_loop_8cxx_source.html#l00026">TDataLoop::Get()</a>, <a class="el" href="class_t_det_building_loop.html#ad1c77ad69b8f7d1d44096338097b17f0">TDetBuildingLoop::Get()</a>, <a class="el" href="_t_run_info_8h_source.html#l00180">TRunInfo::GetDetectorInformation()</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00036">GetRunNumber()</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00060">GetSubRunNumber()</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00036">gFragment</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00042">TGRSIOptions::InputFiles()</a>, <a class="el" href="_t_frag_hist_loop_8h_source.html#l00032">TFragHistLoop::InputQueue()</a>, <a class="el" href="_t_analysis_hist_loop_8h_source.html#l00033">TAnalysisHistLoop::InputQueue()</a>, <a class="el" href="_t_analysis_write_loop_8h_source.html#l00034">TAnalysisWriteLoop::InputQueue()</a>, <a class="el" href="_t_frag_write_loop_8h_source.html#l00034">TFragWriteLoop::InputQueue()</a>, <a class="el" href="_t_event_building_loop_8h_source.html#l00035">TEventBuildingLoop::InputQueue()</a>, <a class="el" href="_t_unpacking_loop_8h_source.html#l00038">TUnpackingLoop::InputQueue()</a>, <a class="el" href="_t_det_building_loop_8h_source.html#l00038">TDetBuildingLoop::InputQueue()</a>, <a class="el" href="class_t_event_building_loop.html#a10dabb2c35e194c8ad7c384b727f0c88a6867faeaa475fda467e48267db2bb8a8">TEventBuildingLoop::kDefault</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00080">TGRSIOptions::MakeAnalysisTree()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00099">TGRSIOptions::MakeHistos()</a>, <a class="el" href="_t_analysis_write_loop_8h_source.html#l00035">TAnalysisWriteLoop::OutOfOrderQueue()</a>, <a class="el" href="_t_event_building_loop_8h_source.html#l00040">TEventBuildingLoop::OutOfOrderQueue()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00053">TGRSIOptions::OutputAnalysisFile()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00057">TGRSIOptions::OutputAnalysisHistogramFile()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00052">TGRSIOptions::OutputFragmentFile()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00056">TGRSIOptions::OutputFragmentHistogramFile()</a>, <a class="el" href="_t_event_building_loop_8h_source.html#l00036">TEventBuildingLoop::OutputQueue()</a>, <a class="el" href="_t_data_loop_8h_source.html#l00038">TDataLoop::OutputQueue()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00033">TAnalysisOptions::Print()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00925">TChannel::ReadCalFile()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00165">TRunInfo::ReadInfoFile()</a>, <a class="el" href="_g_value_8cxx_source.html#l00192">GValue::ReadValFile()</a>, <a class="el" href="_globals_8h_source.html#l00004">RESET_COLOR</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00104">StoppableThread::ResumeAll()</a>, <a class="el" href="_t_frag_write_loop_8h_source.html#l00036">TFragWriteLoop::ScalerInputQueue()</a>, <a class="el" href="_t_unpacking_loop_8h_source.html#l00047">TUnpackingLoop::ScalerOutputQueue()</a>, <a class="el" href="_t_detector_information_8h_source.html#l00026">TDetectorInformation::Set()</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00132">TFragHistLoop::SetOutputFilename()</a>, <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00132">TAnalysisHistLoop::SetOutputFilename()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00126">TRunInfo::SetRunInfo()</a>, <a class="el" href="_t_fragment_chain_loop_8h_source.html#l00053">TFragmentChainLoop::SetSelfStopping()</a>, <a class="el" href="_t_data_loop_8h_source.html#l00056">TDataLoop::SetSelfStopping()</a>, <a class="el" href="_t_event_building_loop_8h_source.html#l00055">TEventBuildingLoop::SetSortDepth()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00114">TGRSIOptions::SortDepth()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00097">TGRSIOptions::SortRaw()</a>, <a class="el" href="_stoppable_thread_8h_source.html#l00078">StoppableThread::StatusWidth()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00045">TGRSIOptions::ValInputFiles()</a>, and <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00088">TGRSIOptions::WriteFragmentTree()</a>.</p>
+<p class="reference">References <a class="el" href="htmldoc_2_t_unpacking_loop_8h_source.html#l00039">TUnpackingLoop::AddGoodOutputQueue()</a>, <a class="el" href="htmldoc_2_t_fragment_chain_loop_8h_source.html#l00037">TFragmentChainLoop::AddOutputQueue()</a>, <a class="el" href="htmldoc_2_t_det_building_loop_8h_source.html#l00039">TDetBuildingLoop::AddOutputQueue()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00060">TGRSIOptions::AnalysisHistogramLib()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00067">TGRSIOptions::AnalysisOptions()</a>, <a class="el" href="htmldoc_2_t_frag_write_loop_8h_source.html#l00035">TFragWriteLoop::BadInputQueue()</a>, <a class="el" href="htmldoc_2_t_unpacking_loop_8h_source.html#l00043">TUnpackingLoop::BadOutputQueue()</a>, <a class="el" href="htmldoc_2_t_detector_information_8h_source.html#l00027">TDetectorInformation::BuildMode()</a>, <a class="el" href="htmldoc_2_t_analysis_options_8h_source.html#l00050">TAnalysisOptions::BuildWindow()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00044">TGRSIOptions::CalInputFiles()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00075">TGRSIOptions::CloseAfterSort()</a>, <a class="el" href="htmldoc_2_stoppable_thread_8h_source.html#l00077">StoppableThread::ColumnWidth()</a>, <a class="el" href="htmldoc_2_globals_8h_source.html#l00017">DRED</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00047">TGRSIOptions::ExternalRunInfo()</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00013">file_exists()</a>, <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00093">fNewFragmentFile</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00059">TGRSIOptions::FragmentHistogramLib()</a>, <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00095">fRawFiles</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00037">gAnalysis</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00013">TFragHistLoop::Get()</a>, <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00013">TAnalysisHistLoop::Get()</a>, <a class="el" href="_t_analysis_write_loop_8cxx_source.html#l00026">TAnalysisWriteLoop::Get()</a>, <a class="el" href="_t_frag_write_loop_8cxx_source.html#l00022">TFragWriteLoop::Get()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>, <a class="el" href="class_t_event_building_loop.html#a6b8a4219f0717b09da45e662ab6fca18">TEventBuildingLoop::Get()</a>, <a class="el" href="_t_unpacking_loop_8cxx_source.html#l00011">TUnpackingLoop::Get()</a>, <a class="el" href="_t_fragment_chain_loop_8cxx_source.html#l00014">TFragmentChainLoop::Get()</a>, <a class="el" href="htmldoc_2_t_singleton_8h_source.html#l00034">TSingleton&lt; TRunInfo &gt;::Get()</a>, <a class="el" href="_t_data_loop_8cxx_source.html#l00026">TDataLoop::Get()</a>, <a class="el" href="class_t_det_building_loop.html#ad1c77ad69b8f7d1d44096338097b17f0">TDetBuildingLoop::Get()</a>, <a class="el" href="htmldoc_2_t_run_info_8h_source.html#l00180">TRunInfo::GetDetectorInformation()</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00036">GetRunNumber()</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00060">GetSubRunNumber()</a>, <a class="el" href="_g_root_commands_8cxx_source.html#l00036">gFragment</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00042">TGRSIOptions::InputFiles()</a>, <a class="el" href="htmldoc_2_t_frag_hist_loop_8h_source.html#l00032">TFragHistLoop::InputQueue()</a>, <a class="el" href="htmldoc_2_t_analysis_hist_loop_8h_source.html#l00033">TAnalysisHistLoop::InputQueue()</a>, <a class="el" href="htmldoc_2_t_analysis_write_loop_8h_source.html#l00034">TAnalysisWriteLoop::InputQueue()</a>, <a class="el" href="htmldoc_2_t_frag_write_loop_8h_source.html#l00034">TFragWriteLoop::InputQueue()</a>, <a class="el" href="htmldoc_2_t_event_building_loop_8h_source.html#l00035">TEventBuildingLoop::InputQueue()</a>, <a class="el" href="htmldoc_2_t_unpacking_loop_8h_source.html#l00038">TUnpackingLoop::InputQueue()</a>, <a class="el" href="htmldoc_2_t_det_building_loop_8h_source.html#l00038">TDetBuildingLoop::InputQueue()</a>, <a class="el" href="class_t_event_building_loop.html#a10dabb2c35e194c8ad7c384b727f0c88a6867faeaa475fda467e48267db2bb8a8">TEventBuildingLoop::kDefault</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00080">TGRSIOptions::MakeAnalysisTree()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00099">TGRSIOptions::MakeHistos()</a>, <a class="el" href="htmldoc_2_t_analysis_write_loop_8h_source.html#l00035">TAnalysisWriteLoop::OutOfOrderQueue()</a>, <a class="el" href="htmldoc_2_t_event_building_loop_8h_source.html#l00040">TEventBuildingLoop::OutOfOrderQueue()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00053">TGRSIOptions::OutputAnalysisFile()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00057">TGRSIOptions::OutputAnalysisHistogramFile()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00052">TGRSIOptions::OutputFragmentFile()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00056">TGRSIOptions::OutputFragmentHistogramFile()</a>, <a class="el" href="htmldoc_2_t_event_building_loop_8h_source.html#l00036">TEventBuildingLoop::OutputQueue()</a>, <a class="el" href="htmldoc_2_t_data_loop_8h_source.html#l00038">TDataLoop::OutputQueue()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00033">TAnalysisOptions::Print()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00925">TChannel::ReadCalFile()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00165">TRunInfo::ReadInfoFile()</a>, <a class="el" href="_g_value_8cxx_source.html#l00192">GValue::ReadValFile()</a>, <a class="el" href="htmldoc_2_globals_8h_source.html#l00004">RESET_COLOR</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00104">StoppableThread::ResumeAll()</a>, <a class="el" href="htmldoc_2_t_frag_write_loop_8h_source.html#l00036">TFragWriteLoop::ScalerInputQueue()</a>, <a class="el" href="htmldoc_2_t_unpacking_loop_8h_source.html#l00047">TUnpackingLoop::ScalerOutputQueue()</a>, <a class="el" href="htmldoc_2_t_detector_information_8h_source.html#l00026">TDetectorInformation::Set()</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00132">TFragHistLoop::SetOutputFilename()</a>, <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00132">TAnalysisHistLoop::SetOutputFilename()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00126">TRunInfo::SetRunInfo()</a>, <a class="el" href="htmldoc_2_t_fragment_chain_loop_8h_source.html#l00053">TFragmentChainLoop::SetSelfStopping()</a>, <a class="el" href="htmldoc_2_t_data_loop_8h_source.html#l00056">TDataLoop::SetSelfStopping()</a>, <a class="el" href="htmldoc_2_t_event_building_loop_8h_source.html#l00055">TEventBuildingLoop::SetSortDepth()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00114">TGRSIOptions::SortDepth()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00097">TGRSIOptions::SortRaw()</a>, <a class="el" href="htmldoc_2_stoppable_thread_8h_source.html#l00078">StoppableThread::StatusWidth()</a>, <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00045">TGRSIOptions::ValInputFiles()</a>, and <a class="el" href="htmldoc_2_t_g_r_s_i_options_8h_source.html#l00088">TGRSIOptions::WriteFragmentTree()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">ApplyOptions()</a>.</p>
 
 </div>
 </div>
+<a id="a709024296291fa8aa16566d4ef64222c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a709024296291fa8aa16566d4ef64222c">&#9670;&nbsp;</a></span>TabCompletionHook() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TGRSIint::TabCompletionHook </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2888ecddb98e955d4b77eda5ccc13a20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2888ecddb98e955d4b77eda5ccc13a20">&#9670;&nbsp;</a></span>TabCompletionHook()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2888ecddb98e955d4b77eda5ccc13a20">&#9670;&nbsp;</a></span>TabCompletionHook() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -890,12 +1511,38 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00235">235</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_iint_8h_source.html#l00089">fIsTabComplete</a>.</p>
+<p class="reference">References <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00089">fIsTabComplete</a>.</p>
 
 </div>
 </div>
 <a id="adb050b417a88b9d0646517bccd9e8981"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb050b417a88b9d0646517bccd9e8981">&#9670;&nbsp;</a></span>Terminate()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb050b417a88b9d0646517bccd9e8981">&#9670;&nbsp;</a></span>Terminate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGRSIint::Terminate </td>
+          <td>(</td>
+          <td class="paramtype">Int_t&#160;</td>
+          <td class="paramname"><em>status</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb050b417a88b9d0646517bccd9e8981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb050b417a88b9d0646517bccd9e8981">&#9670;&nbsp;</a></span>Terminate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -921,7 +1568,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00201">201</a> of file <a class="el" href="_t_g_r_s_iint_8cxx_source.html">TGRSIint.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_iint_8h_source.html#l00090">fAllowedToTerminate</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>, <a class="el" href="_t_singleton_8h_source.html#l00034">TSingleton&lt; TSortingDiagnostics &gt;::Get()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00167">LoopUntilDone()</a>, <a class="el" href="_t_sorting_diagnostics_8cxx_source.html#l00082">TSortingDiagnostics::Print()</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00135">StoppableThread::SendStop()</a>, and <a class="el" href="_stoppable_thread_8cxx_source.html#l00147">StoppableThread::StopAll()</a>.</p>
+<p class="reference">References <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00090">fAllowedToTerminate</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>, <a class="el" href="htmldoc_2_t_singleton_8h_source.html#l00034">TSingleton&lt; TSortingDiagnostics &gt;::Get()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00167">LoopUntilDone()</a>, <a class="el" href="_t_sorting_diagnostics_8cxx_source.html#l00082">TSortingDiagnostics::Print()</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00135">StoppableThread::SendStop()</a>, and <a class="el" href="_stoppable_thread_8cxx_source.html#l00147">StoppableThread::StopAll()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">ApplyOptions()</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00727">TGRSIInterruptHandler::Notify()</a>.</p>
 
@@ -950,7 +1597,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Flag for shutting down GRSISort. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00090">90</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00090">90</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00167">LoopUntilDone()</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00201">Terminate()</a>.</p>
 
@@ -978,9 +1625,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>GRSI environment. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00044">44</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00044">44</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8h_source.html#l00065">GetEnv()</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00064">TGRSIint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00065">GetEnv()</a>.</p>
 
 </div>
 </div>
@@ -1006,14 +1653,14 @@ Static Private Attributes</h2></td></tr>
 
 <p>Flag for tab completion hook. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00089">89</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00089">89</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00244">ProcessLine()</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00235">TabCompletionHook()</a>.</p>
 
 </div>
 </div>
-<a id="a5f01e7935f00e30e9d40d51a8dfc7e59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f01e7935f00e30e9d40d51a8dfc7e59">&#9670;&nbsp;</a></span>fKeepAliveTimer</h2>
+<a id="aa197ba3f565e39dd9d22824e370147f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa197ba3f565e39dd9d22824e370147f8">&#9670;&nbsp;</a></span>fKeepAliveTimer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1022,7 +1669,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TTimer* TGRSIint::fKeepAliveTimer</td>
+          <td class="memname">TTimer * TGRSIint::fKeepAliveTimer</td>
         </tr>
       </table>
   </td>
@@ -1034,7 +1681,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Time of process. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00083">83</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00083">83</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
 </div>
 </div>
@@ -1060,14 +1707,14 @@ Static Private Attributes</h2></td></tr>
 
 <p>New fragment file name. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00093">93</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00093">93</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00409">SetupPipeline()</a>.</p>
 
 </div>
 </div>
-<a id="a820267402ee8b75cc74a416800213eaa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a820267402ee8b75cc74a416800213eaa">&#9670;&nbsp;</a></span>fRawFiles</h2>
+<a id="a51f52b717c53e13a7cc6e9dc1ad1250a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f52b717c53e13a7cc6e9dc1ad1250a">&#9670;&nbsp;</a></span>fRawFiles</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1076,7 +1723,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="class_t_raw_file.html">TRawFile</a>*&gt; TGRSIint::fRawFiles</td>
+          <td class="memname">std::vector&lt; <a class="el" href="class_t_raw_file.html">TRawFile</a> * &gt; TGRSIint::fRawFiles</td>
         </tr>
       </table>
   </td>
@@ -1088,7 +1735,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>List of Raw files opened. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00095">95</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00095">95</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">OpenRawFile()</a>, and <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00409">SetupPipeline()</a>.</p>
 
@@ -1116,7 +1763,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Number of Raw Files opened. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00092">92</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00092">92</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">OpenRawFile()</a>.</p>
 
@@ -1144,7 +1791,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Number of ROOT files opened. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00091">91</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00091">91</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00307">OpenRootFile()</a>.</p>
 
@@ -1172,7 +1819,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Static pointer (singleton) </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00047">47</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00047">47</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00054">instance()</a>.</p>
 
@@ -1200,7 +1847,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Main sorting thread id. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_g_r_s_iint_8h_source.html#l00085">85</a> of file <a class="el" href="_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html#l00085">85</a> of file <a class="el" href="htmldoc_2_t_g_r_s_iint_8h_source.html">TGRSIint.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00244">ProcessLine()</a>.</p>
 
@@ -1212,7 +1859,7 @@ Static Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Fri Jun 18 2021 20:49:49.
+GRSISort (4.0.0.2 ) Reference Guide Generated on Fri Jun 18 2021 22:48:02.
 </small>
 </div>
 </body>
