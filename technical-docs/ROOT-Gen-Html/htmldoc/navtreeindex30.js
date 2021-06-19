@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"class_t_g_r_s_i_fit.html#a47d59e27fc1c60b19e1cc9b57b4ebac2":[6,2,12,23],
 "class_t_g_r_s_i_fit.html#a5d417cabf5b93e3fd56b7ce28732540d":[6,2,12,18],
 "class_t_g_r_s_i_fit.html#a640883fed55b87410bebbbb046344d11":[6,2,12,24],
 "class_t_g_r_s_i_fit.html#a6588239378f6e2877999e61e4ba4f31d":[6,2,12,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "class_t_g_r_s_i_options.html#aa12717124bccaae3b680f5328b66ac1e":[6,7,16,105],
 "class_t_g_r_s_i_options.html#aa2280a00e94ba394a70907719695ef2b":[6,7,16,12],
 "class_t_g_r_s_i_options.html#aa28b0e43ccb8f02875f514920ae85687":[6,7,16,39],
-"class_t_g_r_s_i_options.html#aa2b29f976b54a9bbbe96c5a98b0d990b":[6,7,16,104],
-"class_t_g_r_s_i_options.html#aa32a4a0cbc88e8ace403d2fc1039df10":[6,7,16,131]
+"class_t_g_r_s_i_options.html#aa2b29f976b54a9bbbe96c5a98b0d990b":[6,7,16,104]
 };

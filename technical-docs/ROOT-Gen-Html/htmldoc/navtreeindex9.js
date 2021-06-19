@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"class__t__tip__hit_8js_source.html":[9,0,5,319],
 "class__t__transient__bits_8js.html":[9,0,5,320],
 "class__t__transient__bits_8js_source.html":[9,0,5,320],
 "class__t__transition_8js.html":[9,0,5,321],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "class_cross_talk.html#ab93493c658b7214c7b98b755d85586bd":[8,0,12,2],
 "class_cross_talk.html#ab9ccfa1eb4a34033d76a6edb6150fef4":[8,0,12,7],
 "class_cross_talk.html#abc598ed268f33d122fba95b9e4af89a0":[8,0,12,29],
-"class_cross_talk.html#ac9cc4df79bb746ea6c00fd90e444d579":[8,0,12,4],
-"class_cross_talk.html#ad06938ce0485325129d3d6c131ca6cc3":[8,0,12,9]
+"class_cross_talk.html#ac9cc4df79bb746ea6c00fd90e444d579":[8,0,12,4]
 };

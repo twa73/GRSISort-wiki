@@ -1387,6 +1387,7 @@ var group___sorting =
       [ "fLastErrno", "class_t_midas_file.html#ac73fa51e3bd29398c2a2686714740249", null ],
       [ "fLastError", "class_t_midas_file.html#a1ac2a25af496ed337edf663caf858c1c", null ],
       [ "fMaxBufferSize", "class_t_midas_file.html#ac52ef8a91b04ab2cc775c025f239e1fb", null ],
+      [ "fOdb", "class_t_midas_file.html#a4bfed42f0f3750d5c9fa97939571e8dc", null ],
       [ "fOdbEvent", "class_t_midas_file.html#ae7bea9895f7872938337785e4ab7f3a1", null ],
       [ "fOutFile", "class_t_midas_file.html#aafc9f7c25d70b04807dda175ea8aba94", null ],
       [ "fOutFilename", "class_t_midas_file.html#a4201fcc9277abf25d433728e8806358e", null ],
@@ -2031,7 +2032,21 @@ var group___sorting =
       [ "SetRunInfo", "class_t_user_sort_info.html#a695bbd36eac6b50f01084afbc5dc0c0f", null ],
       [ "SubRunNumber", "class_t_user_sort_info.html#a2aa30631015237d106d0cb61ae61d218", null ]
     ] ],
-    [ "TXMLOdb", "class_t_x_m_l_odb.html", null ],
+    [ "TXMLOdb", "class_t_x_m_l_odb.html", [
+      [ "TXMLOdb", "class_t_x_m_l_odb.html#a1c667b5e715e4ff1dbf5f12148085933", null ],
+      [ "~TXMLOdb", "class_t_x_m_l_odb.html#aa0f476893df81ae536a616b40ef29632", null ],
+      [ "FindNode", "class_t_x_m_l_odb.html#a664162aca894c0eeedc6942a57f47dd6", null ],
+      [ "FindPath", "class_t_x_m_l_odb.html#a650d3711c5b68269118df36889f3f087", null ],
+      [ "GetNodeName", "class_t_x_m_l_odb.html#a1fd787dfe32c1658aa62b2f25597b59b", null ],
+      [ "ReadDoubleArray", "class_t_x_m_l_odb.html#a32d4fb7099aa96c9e46ebd4139f7e50e", null ],
+      [ "ReadInt", "class_t_x_m_l_odb.html#a3c356a63a806ddc192f012dff7c18b6b", null ],
+      [ "ReadIntArray", "class_t_x_m_l_odb.html#a70a4bc9b892741fc8e95e674e50c00fe", null ],
+      [ "ReadStringArray", "class_t_x_m_l_odb.html#a0096c68f8df3ab7c8b37345791c3318a", null ],
+      [ "fDoc", "class_t_x_m_l_odb.html#a04f031abb0e453bb326465c0f9169e35", null ],
+      [ "fOdb", "class_t_x_m_l_odb.html#aa73e199e029e27a7546fe6783ebdd0e8", null ],
+      [ "fParser", "class_t_x_m_l_odb.html#a5f9b3c82aabdf05541fc720dec23a1fd", null ],
+      [ "fTextBuffer", "class_t_x_m_l_odb.html#a3a3aab53527aa883ae888649a4221b22", null ]
+    ] ],
     [ "VirtualOdb", "class_virtual_odb.html", [
       [ "~VirtualOdb", "class_virtual_odb.html#a4ca8ae6569dae86915d9dc887722ffdb", null ],
       [ "odbReadAny", "class_virtual_odb.html#abad77053e87c12ff288e100ec78e87dd", null ],

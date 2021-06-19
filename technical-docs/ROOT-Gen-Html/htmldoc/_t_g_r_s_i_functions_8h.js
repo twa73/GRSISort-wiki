@@ -9,6 +9,7 @@ var _t_g_r_s_i_functions_8h =
     [ "Gaus", "_t_g_r_s_i_functions_8h.html#ae669ed1ac562244960b150d8cc758b90", null ],
     [ "LanGaus", "_t_g_r_s_i_functions_8h.html#afeba76f4ea51cb86865d42d6d886cf92", null ],
     [ "LanGausHighRes", "_t_g_r_s_i_functions_8h.html#a608e2b1aa6bb92909af5c231c585fe1b", null ],
+    [ "LegendrePolynomial", "_t_g_r_s_i_functions_8h.html#a4f4597680dbc373f6dd53513fae999be", null ],
     [ "MultiGausWithBG", "_t_g_r_s_i_functions_8h.html#a386d014051dfe77ea492b71ee345c611", null ],
     [ "MultiPhotoPeakBG", "_t_g_r_s_i_functions_8h.html#a08f49cfb45e4941f5c21952caca58348", null ],
     [ "MultiSkewedGausWithBG", "_t_g_r_s_i_functions_8h.html#a2da57294e2b6f4c01afe10ebfa14c4f6", null ],

@@ -45,6 +45,7 @@ var class_t_midas_file =
     [ "fLastErrno", "class_t_midas_file.html#ac73fa51e3bd29398c2a2686714740249", null ],
     [ "fLastError", "class_t_midas_file.html#a1ac2a25af496ed337edf663caf858c1c", null ],
     [ "fMaxBufferSize", "class_t_midas_file.html#ac52ef8a91b04ab2cc775c025f239e1fb", null ],
+    [ "fOdb", "class_t_midas_file.html#a4bfed42f0f3750d5c9fa97939571e8dc", null ],
     [ "fOdbEvent", "class_t_midas_file.html#ae7bea9895f7872938337785e4ab7f3a1", null ],
     [ "fOutFile", "class_t_midas_file.html#aafc9f7c25d70b04807dda175ea8aba94", null ],
     [ "fOutFilename", "class_t_midas_file.html#a4201fcc9277abf25d433728e8806358e", null ],

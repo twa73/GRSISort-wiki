@@ -234,7 +234,7 @@ var annotated_dup =
     [ "TUnpackingLoop", "class_t_unpacking_loop.html", "class_t_unpacking_loop" ],
     [ "TUserSortInfo", "class_t_user_sort_info.html", "class_t_user_sort_info" ],
     [ "TVirtualDecay", "class_t_virtual_decay.html", "class_t_virtual_decay" ],
-    [ "TXMLOdb", "class_t_x_m_l_odb.html", null ],
+    [ "TXMLOdb", "class_t_x_m_l_odb.html", "class_t_x_m_l_odb" ],
     [ "TZeroDegree", "class_t_zero_degree.html", "class_t_zero_degree" ],
     [ "TZeroDegreeHit", "class_t_zero_degree_hit.html", "class_t_zero_degree_hit" ],
     [ "VirtualOdb", "class_virtual_odb.html", "class_virtual_odb" ]

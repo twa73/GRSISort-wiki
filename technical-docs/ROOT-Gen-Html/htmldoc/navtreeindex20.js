@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"class_t_channel.html#a1de8d7717c5d4226b7329715349fce83":[6,7,2,1],
 "class_t_channel.html#a1dee051fd0e5355523052caacaefc7b6":[6,7,2,101],
 "class_t_channel.html#a1fef5004522dff312db92ec97c0e3886":[6,7,2,134],
 "class_t_channel.html#a2454e40b8be62b4b1d7ce2a7c6d8ebe6":[6,7,2,155],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "class_t_data_loop.html#af2fbb178759f1b05df24f33b3a7a6233":[6,6,3,54],
 "class_t_data_parser.html":[6,7,3],
 "class_t_data_parser.html#a0846b8111da6c1fd948c96a9a61215fa":[6,7,3,4],
-"class_t_data_parser.html#a08607f54fcf6e8ab8e752706f9aaf8d6":[6,7,3,19],
-"class_t_data_parser.html#a0ae68a011e135424063e307c1a42a2b6":[6,7,3,31]
+"class_t_data_parser.html#a08607f54fcf6e8ab8e752706f9aaf8d6":[6,7,3,19]
 };

@@ -206,6 +206,7 @@ var searchData=
   ['_7etunpackingloop',['~TUnpackingLoop',['../class_t_unpacking_loop.html#a8779cff28b82802f3d2154cf9beb323c',1,'TUnpackingLoop']]],
   ['_7etusersortinfo',['~TUserSortInfo',['../class_t_user_sort_info.html#a6b632b1571235b3a8cf1f9dd36d65752',1,'TUserSortInfo']]],
   ['_7etvirtualdecay',['~TVirtualDecay',['../class_t_virtual_decay.html#aab502e4ab44b07503022c333f8e0c0f3',1,'TVirtualDecay']]],
+  ['_7etxmlodb',['~TXMLOdb',['../class_t_x_m_l_odb.html#aa0f476893df81ae536a616b40ef29632',1,'TXMLOdb']]],
   ['_7etzerodegree',['~TZeroDegree',['../class_t_zero_degree.html#a2e006bccbefdf8552879cf8b51f2119d',1,'TZeroDegree']]],
   ['_7etzerodegreehit',['~TZeroDegreeHit',['../class_t_zero_degree_hit.html#ab83bf0a467bd2b1f250443e5731f328a',1,'TZeroDegreeHit']]],
   ['_7evirtualodb',['~VirtualOdb',['../class_virtual_odb.html#a4ca8ae6569dae86915d9dc887722ffdb',1,'VirtualOdb']]]

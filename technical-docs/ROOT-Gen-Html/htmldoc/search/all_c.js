@@ -13,6 +13,7 @@ var searchData=
   ['lastx',['lastx',['../class_g_canvas.html#aa2a0d9224796032e21ea05023b713124',1,'GCanvas']]],
   ['lasty',['lasty',['../class_g_canvas.html#a07095f5bc0f05fa3405e2126c287926b',1,'GCanvas']]],
   ['lbin',['lbin',['../_caen_analysis_selector_8_c.html#ac94e02fc8c9bd97054a8364065e339ad',1,'lbin():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#ac94e02fc8c9bd97054a8364065e339ad',1,'lbin():&#160;GenericSelector.C']]],
+  ['legendrepolynomial',['LegendrePolynomial',['../namespace_t_g_r_s_i_functions.html#a4f4597680dbc373f6dd53513fae999be',1,'TGRSIFunctions']]],
   ['libraryversion',['LibraryVersion',['../class_t_parser_library.html#af199ad4e37c242775ea9e0f9d666fd64',1,'TParserLibrary::LibraryVersion()'],['../_g_r_s_i_data_library_8cxx.html#add5bb6edf6b2559069d968f975da7b54',1,'LibraryVersion():&#160;GRSIDataLibrary.cxx'],['../_i_l_l_data_library_8cxx.html#add5bb6edf6b2559069d968f975da7b54',1,'LibraryVersion():&#160;ILLDataLibrary.cxx'],['../i_themba_data_library_8cxx.html#add5bb6edf6b2559069d968f975da7b54',1,'LibraryVersion():&#160;iThembaDataLibrary.cxx']]],
   ['linear',['linear',['../struct_t_pulse_analyzer_1_1_par_par.html#aff443e99834b912c9e416fbdaccfb54b',1,'TPulseAnalyzer::ParPar']]],
   ['linepar',['LinePar',['../struct_t_pulse_analyzer_1_1_line_par.html',1,'TPulseAnalyzer']]],

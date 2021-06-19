@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"class_t_efficiency_cal.html#ac877a5209eb7478b3cf1c329665c5479":[6,0,6,4],
 "class_t_efficiency_cal.html#acab2fba56354b79f23e06b94d9bc9512":[6,0,6,3],
 "class_t_efficiency_cal.html#ace59ec53c264e10e87231f19e4404961":[6,0,6,22],
 "class_t_efficiency_cal.html#ad0060a22683cfa00c711a6f05fbc9349":[6,0,6,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "class_t_energy_cal.html#ad0060a22683cfa00c711a6f05fbc9349":[6,0,9,24],
 "class_t_energy_cal.html#ad3a29c8369ce14d84dd39e13fa4fccde":[6,0,9,6],
 "class_t_energy_cal.html#adab54964ce680d4442e2da9e7c0c795b":[6,0,9,4],
-"class_t_energy_cal.html#add35624999da6d879af14adb7b70d950":[6,0,9,23],
-"class_t_energy_cal.html#ae1c5b9278db056c4d48bef3c65abe077":[6,0,9,19]
+"class_t_energy_cal.html#add35624999da6d879af14adb7b70d950":[6,0,9,23]
 };

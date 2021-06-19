@@ -7,6 +7,7 @@ var searchData=
   ['last',['Last',['../class_t_p_p_g.html#a5e9f0d9065c9e8e7d4300a070cdb49a2',1,'TPPG']]],
   ['lastrunnumber',['LastRunNumber',['../class_t_run_info.html#a20cccf816529378a4c343f4ef6eb11bf',1,'TRunInfo']]],
   ['lastsubrunnumber',['LastSubRunNumber',['../class_t_run_info.html#a4edee99716a0e561383427e944adf82e',1,'TRunInfo']]],
+  ['legendrepolynomial',['LegendrePolynomial',['../namespace_t_g_r_s_i_functions.html#a4f4597680dbc373f6dd53513fae999be',1,'TGRSIFunctions']]],
   ['libraryversion',['LibraryVersion',['../class_t_parser_library.html#af199ad4e37c242775ea9e0f9d666fd64',1,'TParserLibrary::LibraryVersion()'],['../_g_r_s_i_data_library_8cxx.html#add5bb6edf6b2559069d968f975da7b54',1,'LibraryVersion():&#160;GRSIDataLibrary.cxx'],['../_i_l_l_data_library_8cxx.html#add5bb6edf6b2559069d968f975da7b54',1,'LibraryVersion():&#160;ILLDataLibrary.cxx'],['../i_themba_data_library_8cxx.html#add5bb6edf6b2559069d968f975da7b54',1,'LibraryVersion():&#160;iThembaDataLibrary.cxx']]],
   ['linfit',['LinFit',['../class_t_calibrator.html#aa631ae31fa698ec1e11138948be5e1f8',1,'TCalibrator::LinFit()'],['../namespace_g_root_functions.html#a71abeaf13b736dca3717d619e8b950f9',1,'GRootFunctions::LinFit()']]],
   ['listhistograms',['ListHistograms',['../class_t_scaler.html#a8c585dda1200020d4260aaf7e5ebab63',1,'TScaler']]],

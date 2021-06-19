@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"class_t_griffin_bgo_hit.html#ad046c38d7b93b87b7e169e3418c43a09":[6,1,24,63],
 "class_t_griffin_bgo_hit.html#ad08e816347670259c6624a8be3ab6594":[6,1,24,53],
 "class_t_griffin_bgo_hit.html#ad467a0806e7c77d494274349b2258543":[6,1,24,57],
 "class_t_griffin_bgo_hit.html#ad62673f38054fff81556da5aa2770a3b":[6,1,24,42],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "class_t_i_l_l_data_parser.html#aeba779094ed6935e02856ee47402f9c6":[6,7,21,16],
 "class_t_i_l_l_data_parser.html#af067fb0141e033a412ec12ce79bc6f55":[6,7,21,3],
 "class_t_i_l_l_data_parser.html#af9b87888b6b8c221128ace3bbd836b3d":[6,7,21,20],
-"class_t_i_l_l_data_parser.html#afb71bb8fb666f4cbee46ec4e6c3fef43":[6,7,21,9],
-"class_t_i_l_l_data_parser_exception.html":[6,7,22]
+"class_t_i_l_l_data_parser.html#afb71bb8fb666f4cbee46ec4e6c3fef43":[6,7,21,9]
 };

@@ -1,6 +1,6 @@
 var _g_root_commands_8cxx =
 [
-    [ "AddFileToGUI", "_g_root_commands_8cxx.html#a34a1021756d0e5ca063535cdd918c3b4", null ],
+    [ "AddFileToGUI", "_g_root_commands_8cxx.html#a3463fd5f0ee868b72ebbcabc24e89ff1", null ],
     [ "AddOffset", "_g_root_commands_8cxx.html#a50981678fc5ab2b883c87fb0c09374a8", null ],
     [ "AltPhotoPeakFit", "_g_root_commands_8cxx.html#a6ed1172a52bd081d62d60c904ec30f6d", null ],
     [ "Commands", "_g_root_commands_8cxx.html#a966ba00178025d0e04598c7a61ad54fe", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"class_g_root_canvas.html#a733b39ac53eeb88d21d74b18aab63ec1":[6,3,2,31],
 "class_g_root_canvas.html#a780fccb67322333d039e7bb2af1ade0e":[6,3,2,43],
 "class_g_root_canvas.html#a7888384912f295ef4e349ad440686533":[6,3,2,17],
 "class_g_root_canvas.html#a7ba7e71f9545bf44e2063fb4dcdd623e":[6,3,2,59],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "class_stoppable_thread.html#a14d1029d5d956a5f8cffcabb2e1c5e17":[6,6,0,45],
 "class_stoppable_thread.html#a292c5e3a19062bcc3d2a3b598327c175":[6,6,0,7],
 "class_stoppable_thread.html#a33897b2a9af9241851b3b735b35fed68":[6,6,0,24],
-"class_stoppable_thread.html#a33a026ea19f5c7b103c20334b9fba76c":[6,6,0,0],
-"class_stoppable_thread.html#a345004678ce5aa33ddb539bad031c188":[6,6,0,26]
+"class_stoppable_thread.html#a33a026ea19f5c7b103c20334b9fba76c":[6,6,0,0]
 };

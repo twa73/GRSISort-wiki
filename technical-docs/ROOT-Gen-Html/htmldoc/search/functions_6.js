@@ -27,6 +27,8 @@ var searchData=
   ['findfirstbinabove',['FindFirstBinAbove',['../class_g_cube.html#ae9d4daaa411fc643bbab0f86313d2c0a',1,'GCube::FindFirstBinAbove()'],['../class_g_h_sym.html#ad05181b4bca9185c06e85789c4158292',1,'GHSym::FindFirstBinAbove()']]],
   ['findhists',['FindHists',['../class_g_canvas.html#afb356b1f2351df039478c55fa494b177',1,'GCanvas']]],
   ['findlastbinabove',['FindLastBinAbove',['../class_g_cube.html#a96eb89ab6c387ca9a2d259135cbfb880',1,'GCube::FindLastBinAbove()'],['../class_g_h_sym.html#ad1699895b9af840dd19fa7d634bdb6ca',1,'GHSym::FindLastBinAbove()']]],
+  ['findnode',['FindNode',['../class_t_x_m_l_odb.html#a664162aca894c0eeedc6942a57f47dd6',1,'TXMLOdb']]],
+  ['findpath',['FindPath',['../class_t_x_m_l_odb.html#a650d3711c5b68269118df36889f3f087',1,'TXMLOdb']]],
   ['findvalue',['FindValue',['../class_g_value.html#a85baa8bcd471a21de0e1003294209f5e',1,'GValue']]],
   ['finematch',['FineMatch',['../class_t_gain_match.html#ac3240b25214bd5b1ad28647c16a94ad0',1,'TGainMatch']]],
   ['finematchall',['FineMatchAll',['../class_t_gain_match.html#ab87bf24084500a8e34d24bb8833f7904',1,'TGainMatch']]],
