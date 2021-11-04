@@ -2,7 +2,7 @@
 
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**ANALYSIS**](Analysis) > [**FITTING**](Fitting) > [**TPEAK**](TPeak)
 
-TPeaks are used to fit photopeaks to a Gaussian + skewed gaussian. The background includes a step function. TPeaks inherit from TF1, which means the can be named, and can be written to TTrees and TFiles.
+TPeaks are used to fit photopeaks to a Gaussian + skewed gaussian. The background includes a step function. TPeaks inherit from TF1, which means they can be named, and can be written to TTrees and TFiles.
 
 [[/images/TPeakExample.png]]
 

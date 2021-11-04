@@ -2,8 +2,22 @@
 
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**ANALYSIS**](Analysis) > [**FITTING**](Fitting)
 
-As part of the GRSISort analysis package, there are a number of fitting classes available:
+As part of the GRSISort analysis package, there are a number of classes and methods available for fitting:
 
-1. [TPeak](TPeak) Used to fit photopeaks to a gaussian + skewed gaussian.
-2. [TDecay](TDecay) Used to fit nuclear decay curves.
+## For gamma-ray peaks
+* [GGaus](/technical-docs/ROOT-Gen-Html/htmldoc/class_g_gaus.html) Used to fit peaks with a gaussian and a linear background. This class is used when the 'g' key is used on a GCanvas (see [Canvas Hotkeys](GCanvas)).
+* [GPeak](/technical-docs/ROOT-Gen-Html/htmldoc/class_g_peak.html) Used to fit peaks with a gaussian + skewed gaussian and a background of a step function + constant. This class is used when the 'f' key is used on a GCanvas (see [Canvas Hotkeys](GCanvas)).
+* [TPeak](TPeak) Used to fit peaks with a gaussian + skewed gaussian. This class is used when the 'F' key is used on a GCanvas (see [Canvas Hotkeys](GCanvas)).
+* [TPeakFitter](/technical-docs/ROOT-Gen-Html/htmldoc/class_t_peak_fitter.html) This is a versatile class than can fit any number of peaks of different shapes plus a global background (by default a quadratic polynomial). Each peak has to be added individually and can be one of the classes derived from TSinglePeak:
+  * TGauss - a simple gaussian.
+  * TRWPeak - a radware like peak.
+  * TABPeak - an addback peak with two different gaussians for single hits and double hits.
+  * TAB3Peak - an addback peak with three different gaussias for up to three hits.
+
+Below is a comparions of different fits of a standard photopeak with or without including a skewed gaussian:
+
+[[/images/PeakFitComparison1.png]] [[/images/PeakFitComparison2.png]]
+
+## For decay curves
+* [TDecay](TDecay) Used to fit nuclear decay curves.
 

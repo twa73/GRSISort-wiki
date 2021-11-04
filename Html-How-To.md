@@ -100,4 +100,4 @@ Authorship of a class can be included in the class description at the top of the
 This is worth doing in all files you make to get credit for your hard work!
 
 ### HTML generation
-HTML documentation will be generated and placed on the wiki periodically. If you would like the documentation to be updated please contact @r3dunlop.
+HTML documentation will be generated and placed on the wiki periodically. If you would like the documentation to be updated please contact @VinzenzBildstein.
