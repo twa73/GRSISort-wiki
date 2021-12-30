@@ -5,6 +5,7 @@
 GRSISort calibrations are read from *cal files*. These are the files with the **.cal** extension. Various calibration classes are used to set calibration parameters. These classes are called `TCal`s and currently include:
 - [[TGainMatch | Gain-Matching]] for gain-matching
 - TTimeCal for time calibrations such as [[ LED Walk | LED-Walk ]]
+- [[TSourceCalibration | TSourceCalibration]] for energy calibration
 
 # TCalManager
 A Calibration Manager is used to make doing multiple channel calibrations easier. A `TCalManager` can be filled with one type of calibration class (TCal) at any time. To create a calibration manager use:
