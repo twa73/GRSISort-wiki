@@ -1,7 +1,9 @@
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort)
 
 <a name="sortingmodel" />
+
 # The Sorting Model
+
 The steps involved in using GRSISort are:
 [[/images/GRSIFlow.png]]
 
