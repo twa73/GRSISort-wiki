@@ -28,7 +28,7 @@ peakFunc->FixParameter(<index>, <value>);
 pf.Fit(<histogram>);
 ```
 To get a list of the parameters use the TF1::Print("v") function (```peakFunc->Print("v")``` in the example above).
-To access parameters of the global background function use TPeakFitter::GetBackground() (```pf.GetBackground()->FixParameter(<index>, <value>)``` in the example above). See also [#1262](../../issues/1262).
+To access parameters of the global background function use TPeakFitter::GetBackground() (```pf.GetBackground()->FixParameter(<index>, <value>)``` in the example above). See also [#1262](../issues/1262).
 
 ## For decay curves
 * [TDecay](TDecay) Used to fit nuclear decay curves.
