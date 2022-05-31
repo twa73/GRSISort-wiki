@@ -17,6 +17,7 @@ var class_t_tri_foil =
     [ "HasWave", "class_t_tri_foil.html#a384eb0d0b31398b8062b95e1efade4e3", null ],
     [ "NTBeam", "class_t_tri_foil.html#a306e3c14bf5156317fee344831ae6662", null ],
     [ "Print", "class_t_tri_foil.html#ab07ca56e67c19281d9389608e98564ee", null ],
+    [ "Print", "class_t_tri_foil.html#a5e1eb87cae06ced183fa1bf2446a260d", null ],
     [ "TBeam", "class_t_tri_foil.html#a35104b0fdb4f4f2fa56e6ff077dc45e0", null ],
     [ "fBeam", "class_t_tri_foil.html#a1ca6824d5ff7b0d7650ec3b0f7953d36", null ],
     [ "fHits", "class_t_tri_foil.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ],

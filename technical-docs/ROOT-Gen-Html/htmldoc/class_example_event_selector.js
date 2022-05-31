@@ -23,6 +23,7 @@ var class_example_event_selector =
     [ "fChain", "class_example_event_selector.html#a5d4c3f5aef64c23330e2f80b017d9e42", null ],
     [ "fCube", "class_example_event_selector.html#afea3f5043d0e02c2fa56cbd4c1018b4f", null ],
     [ "fCuts", "class_example_event_selector.html#a9682bae598efaab0cd904ae74204e167", null ],
+    [ "fEntry", "class_example_event_selector.html#a94a4d82d4c87c826d97b69e7fbb522db", null ],
     [ "fGrif", "class_example_event_selector.html#a965d1cac5e3b5c0a8c66857aba955951", null ],
     [ "fGriffinBgo", "class_example_event_selector.html#a3704224140bb474f0bcacde1ed89d076", null ],
     [ "fH1", "class_example_event_selector.html#a1e35e3147d9f14a04e4d0f9f30431074", null ],
@@ -32,5 +33,6 @@ var class_example_event_selector =
     [ "fPpg", "class_example_event_selector.html#abc598ed268f33d122fba95b9e4af89a0", null ],
     [ "fRunInfo", "class_example_event_selector.html#a6179997d65c5c6e3a0d6edec42180405", null ],
     [ "fScep", "class_example_event_selector.html#a12e279b3988df21458f60fe483546c4d", null ],
-    [ "fSym", "class_example_event_selector.html#a0a36b80b21d1c5fd0b2246943c28ebce", null ]
+    [ "fSym", "class_example_event_selector.html#a0a36b80b21d1c5fd0b2246943c28ebce", null ],
+    [ "fTree", "class_example_event_selector.html#a97fe8cf742166fa3aad077a249586181", null ]
 ];

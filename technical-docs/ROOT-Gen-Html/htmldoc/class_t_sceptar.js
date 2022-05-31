@@ -15,6 +15,7 @@ var class_t_sceptar =
     [ "GetSceptarHit", "class_t_sceptar.html#af02effc8b832b79d60fe863b5f206628", null ],
     [ "operator=", "class_t_sceptar.html#a3a68b211d28f50072fb35325b093b843", null ],
     [ "Print", "class_t_sceptar.html#ab99c0c9d94dac445f5f99f932893ea0a", null ],
+    [ "Print", "class_t_sceptar.html#a4cb1d691f7b88ad465da86c948a53087", null ],
     [ "SetWave", "class_t_sceptar.html#a60c95cc1422baed3e942ef7da8c82ac2", null ],
     [ "fHits", "class_t_sceptar.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ],
     [ "fSetWave", "class_t_sceptar.html#ace8e6f4234196a5efe9417c8eb1da339", null ],

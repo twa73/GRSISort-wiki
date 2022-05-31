@@ -15,13 +15,15 @@ var class_t_r_f =
     [ "GetTimeFitns", "class_t_r_f.html#a64b15cc3a9a75e4f61d919a807dfc3b9", null ],
     [ "GetTimestampCfd", "class_t_r_f.html#a5a040b0670943a999b03bf07ea0d7502", null ],
     [ "MidasTime", "class_t_r_f.html#a0a42dbe6b91035e32fed3d121064367f", null ],
+    [ "Period", "class_t_r_f.html#a06bda4718a9540c5e1804c421f80fbb9", null ],
     [ "Phase", "class_t_r_f.html#afeb7bc4c0be843688813b823ea99c3e6", null ],
     [ "Print", "class_t_r_f.html#a3993c779a90434fe4ef78398b9139505", null ],
+    [ "Print", "class_t_r_f.html#a17a4d4521c7b21d398c4345d77f8003d", null ],
     [ "Time", "class_t_r_f.html#ad4cc05fdd8660120bcbf611151f7d5e6", null ],
     [ "TimeStamp", "class_t_r_f.html#aed7407dec1b71e7ae836f79bcb5a52ed", null ],
     [ "fHits", "class_t_r_f.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ],
     [ "fMidasTime", "class_t_r_f.html#abbe972d7cea2845fabe15f3d83ad0822", null ],
-    [ "fPeriod", "class_t_r_f.html#a0e50d9361a4092e4d19b05e91eee0568", null ],
+    [ "fPeriod", "class_t_r_f.html#a8144a6812ad36953c2a72b8be9524e46", null ],
     [ "fTime", "class_t_r_f.html#af6614752c70e708c4c3960916f922cf5", null ],
     [ "fTimeStamp", "class_t_r_f.html#ae8f16d8461dda181196a040e24d5cb57", null ]
 ];

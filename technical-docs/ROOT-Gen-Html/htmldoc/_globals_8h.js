@@ -36,6 +36,8 @@ var _globals_8h =
     [ "Append", "_globals_8h.html#a7eef4710200f09420381ca5744ca30b1", null ],
     [ "Append", "_globals_8h.html#ad1a687d11cda0ee9d37cd2e771bd405e", null ],
     [ "getexepath", "_globals_8h.html#a00b72893c17bcb4e05586f5e42f9854d", null ],
+    [ "hex", "_globals_8h.html#ab37ad6f1cf4c93e161b5caaeae971ef4", null ],
+    [ "PrintGdbStacktrace", "_globals_8h.html#a52b20d1a0ce0cf354138dd47ae9a5f46", null ],
     [ "PrintStacktrace", "_globals_8h.html#a3f0930614f3ea2f2f153242657b08ba0", null ],
     [ "ProgramName", "_globals_8h.html#ac847f4564990903418bd3b97877eedd8", null ],
     [ "sh", "_globals_8h.html#a9ed1d6946c2794ab146f9bc05578e1de", null ],

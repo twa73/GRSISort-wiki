@@ -1,4 +1,7 @@
 # Correcting Data
+
+# This is only relevant for old data taken during the first few years of GRIFFIN
+
 ## Removing dumped GRIF-16 events <a name="bufferclear" />
 The GRIF-16's add extraneous events to the start of every run. To remove these, the **bufferclean** utility can be used. This script looks for the first time a digitizer has a Channel Trigger Id < some threshold and removes all events from this digitizer that come before that. The threshold is currently set to 50. To use **bufferclean** type: 
 ```

@@ -11,8 +11,12 @@ var class_t_tip =
     [ "GetHit", "class_t_tip.html#abb7c88ad69c596f7c183a82a746e2542", null ],
     [ "GetHitVector", "class_t_tip.html#a090d52d270ae5065f5397bdcb7e7f465", null ],
     [ "GetMultiplicity", "class_t_tip.html#a9d5c07abd73ec148fe0adbee0c7c1eec", null ],
+    [ "GetPosition", "class_t_tip.html#af60927d8e6c62e84a7b3c05032a268a9", null ],
+    [ "GetPosition", "class_t_tip.html#aa093b922ffa3880734f2584b13b81a03", null ],
     [ "GetTipHit", "class_t_tip.html#ab0cc7b8c86713799e7a447ca56c5e2a7", null ],
     [ "operator=", "class_t_tip.html#a3d1718e60b94999013710884830ce937", null ],
     [ "Print", "class_t_tip.html#a6cd55247a69135e384a34d1faca015a9", null ],
-    [ "fHits", "class_t_tip.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ]
+    [ "Print", "class_t_tip.html#a71e421455506c52d2225d8aab2d5dddc", null ],
+    [ "fHits", "class_t_tip.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ],
+    [ "fPositionVectors", "class_t_tip.html#ac68b0ab6c996be659f2b1ae53e6ff277", null ]
 ];

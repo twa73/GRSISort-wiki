@@ -11,9 +11,11 @@ var class_t_la_br_bgo =
     [ "GetBgoHit", "class_t_la_br_bgo.html#ab5c2b546372e27531dd51567bd6f5439", null ],
     [ "GetHit", "class_t_la_br_bgo.html#abb7c88ad69c596f7c183a82a746e2542", null ],
     [ "GetHitVector", "class_t_la_br_bgo.html#a090d52d270ae5065f5397bdcb7e7f465", null ],
+    [ "GetLaBrBgoHit", "class_t_la_br_bgo.html#ac7ba06335e3f8dcf6542a84c584f696a", null ],
     [ "GetMultiplicity", "class_t_la_br_bgo.html#a9d5c07abd73ec148fe0adbee0c7c1eec", null ],
     [ "GetPosition", "class_t_la_br_bgo.html#a202127adcc280ddb063ff7429822ce30", null ],
     [ "operator=", "class_t_la_br_bgo.html#a9b614e7d1c9dff5d0cbd2a309a75707c", null ],
     [ "Print", "class_t_la_br_bgo.html#af5918349419ed07c832590d122e73a2e", null ],
+    [ "Print", "class_t_la_br_bgo.html#a58c8bd71049b0aa355bb3d8ded28ddcb", null ],
     [ "fHits", "class_t_la_br_bgo.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ]
 ];

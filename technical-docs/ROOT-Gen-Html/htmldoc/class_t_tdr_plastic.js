@@ -15,6 +15,7 @@ var class_t_tdr_plastic =
     [ "GetTdrPlasticHit", "class_t_tdr_plastic.html#af5368c49fa5e586441189a904c20b504", null ],
     [ "operator=", "class_t_tdr_plastic.html#a569a6818e493849eae58add4c2054982", null ],
     [ "Print", "class_t_tdr_plastic.html#a11b02eeb117e9292fd77f1ac0a46d8a1", null ],
+    [ "Print", "class_t_tdr_plastic.html#a6ea965679cef649e4697bc32fa9e6c49", null ],
     [ "SetWave", "class_t_tdr_plastic.html#a774aae6294b2eb3d0aa73f402f98cfa5", null ],
     [ "fHits", "class_t_tdr_plastic.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ],
     [ "fSetWave", "class_t_tdr_plastic.html#a1f5b3cb5907b8e19491181f3c55133a4", null ],

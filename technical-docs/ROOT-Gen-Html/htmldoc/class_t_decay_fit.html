@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf049721b8d9cc83d9043192cf03a08d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_decay_fit.html#abf049721b8d9cc83d9043192cf03a08d">TDecayFit</a> (const char *name, Double_t(*fcn)(const Double_t *, const Double_t *), Double_t xmin=0, Double_t xmax=1, Int_t npar=0)</td></tr>
 <tr class="separator:abf049721b8d9cc83d9043192cf03a08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83cf364a8afac60ce1852cddf0217125"><td class="memTemplParams" colspan="2">template&lt;class PtrObj , typename MemFn &gt; </td></tr>
-<tr class="memitem:a83cf364a8afac60ce1852cddf0217125"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_t_decay_fit.html#a83cf364a8afac60ce1852cddf0217125">TDecayFit</a> (const char *name, const PtrObj &amp;<a class="el" href="test_peak_fitter_8_c.html#a5657009fd0ca3e03d926accd16066148">p</a>, MemFn memFn, Double_t xmin, Double_t xmax, Int_t npar, const char *className=nullptr, const char *methodName=nullptr)</td></tr>
+<tr class="memitem:a83cf364a8afac60ce1852cddf0217125"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_t_decay_fit.html#a83cf364a8afac60ce1852cddf0217125">TDecayFit</a> (const char *name, const PtrObj &amp;p, MemFn memFn, Double_t xmin, Double_t xmax, Int_t npar, const char *className=nullptr, const char *methodName=nullptr)</td></tr>
 <tr class="separator:a83cf364a8afac60ce1852cddf0217125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af148c1c88a260c2a3c785afc59d14143"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
 <tr class="memitem:af148c1c88a260c2a3c785afc59d14143"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_t_decay_fit.html#af148c1c88a260c2a3c785afc59d14143">TDecayFit</a> (const char *name, Func f, Double_t xmin, Double_t xmax, Int_t npar, const char *className=nullptr)</td></tr>
@@ -744,7 +744,7 @@ template&lt;typename Func &gt; </div>
 
 <p class="reference">References <a class="el" href="_user_fill_obj_8h_source.html#l00003">hist</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00077">UpdateResiduals()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00426">TSingleDecay::Fit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00607">TDecayChain::Fit()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00701">TDecay::Fit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00426">TSingleDecay::Fit()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00606">TDecayChain::Fit()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00700">TDecay::Fit()</a>.</p>
 
 </div>
 </div>
@@ -767,7 +767,7 @@ template&lt;typename Func &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00087">fDecay</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00701">TDecay::Fit()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00752">TDecay::SetParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00700">TDecay::Fit()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00751">TDecay::SetParameters()</a>.</p>
 
 </div>
 </div>
@@ -854,7 +854,7 @@ template&lt;typename Func &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_decay_8h_source.html#l00087">fDecay</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00752">TDecay::SetParameters()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00653">TDecay::TDecay()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00494">TDecayChain::TDecayChain()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00136">TSingleDecay::TSingleDecay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_decay_8cxx_source.html#l00751">TDecay::SetParameters()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00652">TDecay::TDecay()</a>, <a class="el" href="_t_decay_8cxx_source.html#l00493">TDecayChain::TDecayChain()</a>, and <a class="el" href="_t_decay_8cxx_source.html#l00136">TSingleDecay::TSingleDecay()</a>.</p>
 
 </div>
 </div>
@@ -942,7 +942,7 @@ template&lt;typename Func &gt; </div>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Sat Jun 19 2021 00:49:42.
+GRSISort (4.0.0.3 ) Reference Guide Generated on Tue May 31 2022 14:08:52.
 </small>
 </div>
 </body>

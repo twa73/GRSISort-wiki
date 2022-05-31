@@ -109,6 +109,7 @@ var class_t_bad_fragment =
     [ "operator=", "class_t_bad_fragment.html#a823d958da7818f11c82014a8d58b56d0", null ],
     [ "operator>", "class_t_bad_fragment.html#ae57687af87fbfcc2ddaec480876953c7", null ],
     [ "Print", "class_t_bad_fragment.html#abb09185f5124698195ba84f533a4ad8e", null ],
+    [ "Print", "class_t_bad_fragment.html#a71a0670c98b1b14ddf1245d43890f6f6", null ],
     [ "SetAcceptedChannelId", "class_t_bad_fragment.html#a72bbb19bb0ff686a729e6ec74ea69af3", null ],
     [ "SetAddress", "class_t_bad_fragment.html#acdb38ab68d5513dab900d3471e348270", null ],
     [ "SetCcLong", "class_t_bad_fragment.html#ad2f8fdacb4eeda868a2d07709158e74f", null ],

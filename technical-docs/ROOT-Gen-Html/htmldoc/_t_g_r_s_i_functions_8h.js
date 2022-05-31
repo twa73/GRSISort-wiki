@@ -1,6 +1,7 @@
 var _t_g_r_s_i_functions_8h =
 [
     [ "Bateman", "_t_g_r_s_i_functions_8h.html#a594aa61e8ea3e3400918af9b5ae223e4", null ],
+    [ "CheckParameterErrors", "_t_g_r_s_i_functions_8h.html#a373e3958f45ce433d4adbc4ec18dfdfe", null ],
     [ "ConvolutedDecay", "_t_g_r_s_i_functions_8h.html#a773f1f2109fc9ccb7cacbfcad9df3a80", null ],
     [ "ConvolutedDecay2", "_t_g_r_s_i_functions_8h.html#af7acdbe44a7338d50daf4ac9e8250e3e", null ],
     [ "CsIFitFunction", "_t_g_r_s_i_functions_8h.html#a67ce9e340bca494d27cb6f5b100362e3", null ],

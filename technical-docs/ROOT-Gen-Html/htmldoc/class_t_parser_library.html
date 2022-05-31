@@ -120,8 +120,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f7267a1f4ee117043f2d1afcbf98167"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_parser_library.html">TParserLibrary</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#a2f7267a1f4ee117043f2d1afcbf98167">AddCurrent</a> ()</td></tr>
 <tr class="separator:a2f7267a1f4ee117043f2d1afcbf98167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34b50d44153d55f27468a8e89a7c169"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_parser_library.html">TParserLibrary</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#ad34b50d44153d55f27468a8e89a7c169">Get</a> ()</td></tr>
-<tr class="separator:ad34b50d44153d55f27468a8e89a7c169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbdbfceaf80365543daea9518c6e6ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_parser_library.html">TParserLibrary</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#adcbdbfceaf80365543daea9518c6e6ba">Get</a> (bool verbose=false)</td></tr>
+<tr class="separator:adcbdbfceaf80365543daea9518c6e6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe224e59765edfecf18f8e04443543cf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_parser_library.html">TParserLibrary</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#abe224e59765edfecf18f8e04443543cf">GetAll</a> ()</td></tr>
 <tr class="separator:abe224e59765edfecf18f8e04443543cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f3382a25957ab5bad96a9f083d6e176"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#a2f3382a25957ab5bad96a9f083d6e176">PrintDirectory</a> ()</td></tr>
@@ -247,7 +247,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00136">136</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00137">137</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
 </div>
 </div>
@@ -314,7 +314,7 @@ Friends</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_t_parser_library_8h_source.html#l00034">fCreateRawFile</a>, and <a class="el" href="_t_parser_library_8cxx_source.html#l00019">Load()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">TGRSIint::OpenRawFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00385">TGRSIint::OpenRawFile()</a>.</p>
 
 </div>
 </div>
@@ -382,8 +382,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ad34b50d44153d55f27468a8e89a7c169"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad34b50d44153d55f27468a8e89a7c169">&#9670;&nbsp;</a></span>Get()</h2>
+<a id="adcbdbfceaf80365543daea9518c6e6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcbdbfceaf80365543daea9518c6e6ba">&#9670;&nbsp;</a></span>Get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,7 +394,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="class_t_parser_library.html">TParserLibrary</a> * <a class="el" href="class_t_singleton.html">TSingleton</a>&lt; <a class="el" href="class_t_parser_library.html">TParserLibrary</a>  &gt;::Get </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>verbose</em> = <code>false</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -407,7 +408,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00034">34</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">TGRSIint::ApplyOptions()</a>, <a class="el" href="_t_g_r_s_i_proof_8h_source.html#l00054">TGRSIProof::LoadLibsIntoProof()</a>, <a class="el" href="_i_l_l-sort_8cxx_source.html#l00026">main()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">TGRSIint::OpenRawFile()</a>, <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00046">TGRSISelector::SlaveBegin()</a>, and <a class="el" href="_t_unpacking_loop_8cxx_source.html#l00024">TUnpackingLoop::TUnpackingLoop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">TGRSIint::ApplyOptions()</a>, <a class="el" href="_t_g_r_s_i_proof_8h_source.html#l00054">TGRSIProof::LoadLibsIntoProof()</a>, <a class="el" href="_i_l_l-sort_8cxx_source.html#l00026">main()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00385">TGRSIint::OpenRawFile()</a>, <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00047">TGRSISelector::SlaveBegin()</a>, and <a class="el" href="_t_unpacking_loop_8cxx_source.html#l00024">TUnpackingLoop::TUnpackingLoop()</a>.</p>
 
 </div>
 </div>
@@ -434,7 +435,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00061">61</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00062">62</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
 </div>
 </div>
@@ -488,9 +489,9 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_parser_library_8cxx_source.html#l00019">19</a> of file <a class="el" href="_t_parser_library_8cxx_source.html">TParserLibrary.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_parser_library_8cxx_source.html#l00003">dlsym</a>, <a class="el" href="_globals_8h_source.html#l00017">DRED</a>, <a class="el" href="_t_parser_library_8h_source.html#l00037">fCreateDataParser</a>, <a class="el" href="_t_parser_library_8h_source.html#l00034">fCreateRawFile</a>, <a class="el" href="_t_parser_library_8h_source.html#l00038">fDestroyDataParser</a>, <a class="el" href="_t_parser_library_8h_source.html#l00035">fDestroyRawFile</a>, <a class="el" href="_t_parser_library_8h_source.html#l00029">fHandle</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00013">file_exists()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00031">fInitLibrary</a>, <a class="el" href="_t_parser_library_8h_source.html#l00032">fLibraryVersion</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00135">TGRSIOptions::ParserLibrary()</a>, and <a class="el" href="_globals_8h_source.html#l00004">RESET_COLOR</a>.</p>
+<p class="reference">References <a class="el" href="_t_parser_library_8cxx_source.html#l00003">dlsym</a>, <a class="el" href="_globals_8h_source.html#l00017">DRED</a>, <a class="el" href="_t_parser_library_8h_source.html#l00037">fCreateDataParser</a>, <a class="el" href="_t_parser_library_8h_source.html#l00034">fCreateRawFile</a>, <a class="el" href="_t_parser_library_8h_source.html#l00038">fDestroyDataParser</a>, <a class="el" href="_t_parser_library_8h_source.html#l00035">fDestroyRawFile</a>, <a class="el" href="_t_parser_library_8h_source.html#l00029">fHandle</a>, <a class="el" href="_t_g_r_s_i_utilities_8cxx_source.html#l00013">file_exists()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00031">fInitLibrary</a>, <a class="el" href="_t_parser_library_8h_source.html#l00032">fLibraryVersion</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00020">TGRSIOptions::Get()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00137">TGRSIOptions::ParserLibrary()</a>, and <a class="el" href="_globals_8h_source.html#l00004">RESET_COLOR</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">TGRSIint::ApplyOptions()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00021">CreateDataParser()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00018">CreateRawFile()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00022">DestroyDataParser()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00019">DestroyRawFile()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00024">LibraryVersion()</a>, <a class="el" href="_t_g_r_s_i_proof_8h_source.html#l00054">TGRSIProof::LoadLibsIntoProof()</a>, <a class="el" href="_i_l_l-sort_8cxx_source.html#l00026">main()</a>, and <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00046">TGRSISelector::SlaveBegin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">TGRSIint::ApplyOptions()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00021">CreateDataParser()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00018">CreateRawFile()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00022">DestroyDataParser()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00019">DestroyRawFile()</a>, <a class="el" href="_t_parser_library_8h_source.html#l00024">LibraryVersion()</a>, <a class="el" href="_t_g_r_s_i_proof_8h_source.html#l00054">TGRSIProof::LoadLibsIntoProof()</a>, <a class="el" href="_i_l_l-sort_8cxx_source.html#l00026">main()</a>, and <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00047">TGRSISelector::SlaveBegin()</a>.</p>
 
 </div>
 </div>
@@ -517,7 +518,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00165">165</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00166">166</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
 </div>
 </div>
@@ -545,7 +546,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00128">128</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00129">129</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
 </div>
 </div>
@@ -765,7 +766,7 @@ Friends</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Sat Jun 19 2021 00:49:49.
+GRSISort (4.0.0.3 ) Reference Guide Generated on Tue May 31 2022 14:09:02.
 </small>
 </div>
 </body>

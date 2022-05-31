@@ -23,6 +23,7 @@ var class_t_lst_file =
     [ "fBytesRead", "class_t_lst_file.html#a763e3e596b45ef81e1762894adb99dd0", null ],
     [ "fFilename", "class_t_lst_file.html#aa67a2b187d313e70935b834f72b11c31", null ],
     [ "fFileSize", "class_t_lst_file.html#a07b8745110f5b35e60ccec07070ac557", null ],
+    [ "fInputStream", "class_t_lst_file.html#a755fb5d2e0c61dec2dd97038dff97da4", null ],
     [ "fnbBoards", "class_t_lst_file.html#aacc1e8808f16081e819cce1ede8fd26c", null ],
     [ "fnbEvents", "class_t_lst_file.html#ae1a4f58882beb2bc099048ea1c3409d7", null ],
     [ "fReadBuffer", "class_t_lst_file.html#a8ae6c0e5b3f20eff5031bb0a017eed9c", null ],

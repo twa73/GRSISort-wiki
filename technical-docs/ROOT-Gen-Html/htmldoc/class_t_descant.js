@@ -16,6 +16,7 @@ var class_t_descant =
     [ "Hit", "class_t_descant.html#a59e20cadd48790ef7303074d28c65388", null ],
     [ "operator=", "class_t_descant.html#a3e4d91ecf27637b83828a1eaff561b89", null ],
     [ "Print", "class_t_descant.html#a4dd7ebcc54df063cf8bfabac4ac5c047", null ],
+    [ "Print", "class_t_descant.html#a635a236f6542332f246d7ea45c688846", null ],
     [ "SetHit", "class_t_descant.html#a1ca088210acf9588ca0c53ccf5da8e46", null ],
     [ "SetWave", "class_t_descant.html#a26149a8b08b871650633dabfa8e7f78a", null ],
     [ "SetWave", "class_t_descant.html#aa9426bd17313f09efc98c463f63a2f94", null ],

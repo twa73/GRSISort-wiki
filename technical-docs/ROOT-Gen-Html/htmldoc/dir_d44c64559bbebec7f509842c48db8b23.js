@@ -77,6 +77,11 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "TBGSubtraction.h", "_t_b_g_subtraction_8h.html", null ],
     [ "TCal.h", "_t_cal_8h.html", null ],
     [ "TCalGraph.h", "_t_cal_graph_8h.html", null ],
+    [ "TCalibrateDescant.h", "_t_calibrate_descant_8h.html", "_t_calibrate_descant_8h" ],
+    [ "TCalibrationGraph.h", "_t_calibration_graph_8h.html", [
+      [ "TCalibrationGraph", "class_t_calibration_graph.html", "class_t_calibration_graph" ],
+      [ "TCalibrationGraphSet", "class_t_calibration_graph_set.html", "class_t_calibration_graph_set" ]
+    ] ],
     [ "TCalibrator.h", "_t_calibrator_8h.html", [
       [ "Peak", "struct_t_calibrator_1_1_peak.html", "struct_t_calibrator_1_1_peak" ],
       [ "TCalibrator", "class_t_calibrator.html", "class_t_calibrator" ]
@@ -117,9 +122,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "TGRSIMap.h", "_t_g_r_s_i_map_8h.html", null ],
     [ "TGRSIOptions.h", "_t_g_r_s_i_options_8h.html", null ],
     [ "TGRSIProof.h", "_t_g_r_s_i_proof_8h.html", "_t_g_r_s_i_proof_8h" ],
-    [ "TGRSISelector.h", "_t_g_r_s_i_selector_8h.html", [
-      [ "TGRSISelector", "class_t_g_r_s_i_selector.html", "class_t_g_r_s_i_selector" ]
-    ] ],
+    [ "TGRSISelector.h", "_t_g_r_s_i_selector_8h.html", "_t_g_r_s_i_selector_8h" ],
     [ "TGRSIServer.h", "_t_g_r_s_i_server_8h.html", null ],
     [ "TGRSISortInfo.h", "_t_g_r_s_i_sort_info_8h.html", null ],
     [ "TGRSITransition.h", "_t_g_r_s_i_transition_8h.html", null ],
@@ -170,6 +173,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "TSinglePeak.h", "_t_single_peak_8h.html", null ],
     [ "TSingleton.h", "_t_singleton_8h.html", null ],
     [ "TSortingDiagnostics.h", "_t_sorting_diagnostics_8h.html", null ],
+    [ "TSourceCalibration.h", "_t_source_calibration_8h.html", "_t_source_calibration_8h" ],
     [ "TSourceList.h", "_t_source_list_8h.html", null ],
     [ "TSRIM.h", "_t_s_r_i_m_8h.html", null ],
     [ "TSuppressed.h", "_t_suppressed_8h.html", null ],

@@ -23,6 +23,7 @@ var class_cross_talk =
     [ "fChain", "class_cross_talk.html#a5d4c3f5aef64c23330e2f80b017d9e42", null ],
     [ "fCube", "class_cross_talk.html#afea3f5043d0e02c2fa56cbd4c1018b4f", null ],
     [ "fCuts", "class_cross_talk.html#a9682bae598efaab0cd904ae74204e167", null ],
+    [ "fEntry", "class_cross_talk.html#a94a4d82d4c87c826d97b69e7fbb522db", null ],
     [ "fGrif", "class_cross_talk.html#ab7f0dee84446e7d8e7622eff0e4a8efb", null ],
     [ "fGriffinBgo", "class_cross_talk.html#a886e11d9e78392aed664c4e148811744", null ],
     [ "fH1", "class_cross_talk.html#a1e35e3147d9f14a04e4d0f9f30431074", null ],
@@ -32,5 +33,6 @@ var class_cross_talk =
     [ "fPpg", "class_cross_talk.html#abc598ed268f33d122fba95b9e4af89a0", null ],
     [ "fRunInfo", "class_cross_talk.html#a6179997d65c5c6e3a0d6edec42180405", null ],
     [ "fScep", "class_cross_talk.html#adb5b6f7f2004b75a262bcff85ce23bd0", null ],
-    [ "fSym", "class_cross_talk.html#a0a36b80b21d1c5fd0b2246943c28ebce", null ]
+    [ "fSym", "class_cross_talk.html#a0a36b80b21d1c5fd0b2246943c28ebce", null ],
+    [ "fTree", "class_cross_talk.html#a97fe8cf742166fa3aad077a249586181", null ]
 ];

@@ -15,6 +15,7 @@ var class_t_zero_degree =
     [ "GetZeroDegreeHit", "class_t_zero_degree.html#a01c02268ba6e0315da3fd7feb18164f6", null ],
     [ "operator=", "class_t_zero_degree.html#a11913caae70151324c62b97855d1d5c5", null ],
     [ "Print", "class_t_zero_degree.html#a5e9c810b797a49cc7df88b117fc5cca2", null ],
+    [ "Print", "class_t_zero_degree.html#a7130d318a44a127734673fb300fdaefe", null ],
     [ "SetWave", "class_t_zero_degree.html#af8bdc102f03523258e502a60ae45185d", null ],
     [ "fHits", "class_t_zero_degree.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ],
     [ "fSetWave", "class_t_zero_degree.html#a2dd2f2bee2de5b192a996af3cd1a667e", null ]

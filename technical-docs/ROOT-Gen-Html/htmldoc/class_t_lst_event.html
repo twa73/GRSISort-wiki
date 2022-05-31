@@ -114,6 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acb64c57df9c69036f89cb0c14272fa8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67ced18b696d29a9397492536c64d5fa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_lst_event.html#a67ced18b696d29a9397492536c64d5fa">GetDataSize</a> () const override</td></tr>
 <tr class="separator:a67ced18b696d29a9397492536c64d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d0a2e3c2302e510c9c218ab200794f"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_lst_event.html#a98d0a2e3c2302e510c9c218ab200794f">GetLstVersion</a> ()</td></tr>
+<tr class="separator:a98d0a2e3c2302e510c9c218ab200794f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a331f79857cd3a848bad02924e4226a8a"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_raw_event.html#a331f79857cd3a848bad02924e4226a8a">GetTimeStamp</a> () const</td></tr>
 <tr class="separator:a331f79857cd3a848bad02924e4226a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b3947ab84f320153c9c098cb25cc86c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_raw_event.html#a4b3947ab84f320153c9c098cb25cc86c">GoodFrags</a> ()</td></tr>
@@ -126,6 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae35333fdeb85266541465b38383acdaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82253e042ab77b33f9bedad2c18b2911"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_lst_event.html#a82253e042ab77b33f9bedad2c18b2911">SetData</a> (std::vector&lt; char &gt; &amp;buffer)</td></tr>
 <tr class="separator:a82253e042ab77b33f9bedad2c18b2911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d8e0fd1f9f0d918e01ffb38a60d71e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_lst_event.html#a01d8e0fd1f9f0d918e01ffb38a60d71e">SetLstVersion</a> (int32_t version)</td></tr>
+<tr class="separator:a01d8e0fd1f9f0d918e01ffb38a60d71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a488c52b231b1a6f266774ec41e6c329e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_lst_event.html#a488c52b231b1a6f266774ec41e6c329e">SwapBytes</a> (bool) override</td></tr>
 <tr class="separator:a488c52b231b1a6f266774ec41e6c329e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -135,6 +139,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ad2996d6ad10146efe153cb3f60c15219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a842ee9d55ece75f079c259bb8f7f8fa2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_raw_event.html#a842ee9d55ece75f079c259bb8f7f8fa2">fGoodFrags</a> {0}</td></tr>
 <tr class="separator:a842ee9d55ece75f079c259bb8f7f8fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b02b642d10391b3c44882db94a3941a"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_lst_event.html#a3b02b642d10391b3c44882db94a3941a">fLstVersion</a> = 1</td></tr>
+<tr class="separator:a3b02b642d10391b3c44882db94a3941a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 <p><code>#include &lt;<a class="el" href="_t_lst_event_8h_source.html">TLstEvent.h</a>&gt;</code></p>
@@ -258,9 +264,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_lst_event_8cxx_source.html#l00046">46</a> of file <a class="el" href="_t_lst_event_8cxx_source.html">TLstEvent.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00046">fData</a>.</p>
+<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00047">fData</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_lst_event_8cxx_source.html#l00036">operator=()</a>, and <a class="el" href="_t_lst_event_8cxx_source.html#l00031">~TLstEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_lst_event_8cxx_source.html#l00036">operator=()</a>, <a class="el" href="_t_lst_file_8cxx_source.html#l00147">TLstFile::Read()</a>, and <a class="el" href="_t_lst_event_8cxx_source.html#l00031">~TLstEvent()</a>.</p>
 
 </div>
 </div>
@@ -292,7 +298,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_lst_event_8cxx_source.html#l00019">19</a> of file <a class="el" href="_t_lst_event_8cxx_source.html">TLstEvent.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00046">fData</a>.</p>
+<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00047">fData</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_lst_event_8cxx_source.html#l00036">operator=()</a>, and <a class="el" href="_t_lst_event_8cxx_source.html#l00025">TLstEvent()</a>.</p>
 
@@ -327,7 +333,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_lst_event_8cxx_source.html#l00065">65</a> of file <a class="el" href="_t_lst_event_8cxx_source.html">TLstEvent.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00046">fData</a>.</p>
+<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00047">fData</a>.</p>
 
 </div>
 </div>
@@ -360,7 +366,38 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_lst_event_8cxx_source.html#l00060">60</a> of file <a class="el" href="_t_lst_event_8cxx_source.html">TLstEvent.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00046">fData</a>.</p>
+<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00047">fData</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_t_i_l_l_data_parser_8cxx_source.html#l00027">TILLDataParser::Process()</a>.</p>
+
+</div>
+</div>
+<a id="a98d0a2e3c2302e510c9c218ab200794f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d0a2e3c2302e510c9c218ab200794f">&#9670;&nbsp;</a></span>GetLstVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t TLstEvent::GetLstVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_lst_event_8h_source.html#l00042">42</a> of file <a class="el" href="_t_lst_event_8h_source.html">TLstEvent.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00048">fLstVersion</a>.</p>
 
 </div>
 </div>
@@ -515,7 +552,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_lst_event_8cxx_source.html#l00071">71</a> of file <a class="el" href="_t_lst_event_8cxx_source.html">TLstEvent.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00046">fData</a>.</p>
+<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00047">fData</a>, and <a class="el" href="_globals_8h_source.html#l00134">hex()</a>.</p>
 
 </div>
 </div>
@@ -539,7 +576,37 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_lst_event_8cxx_source.html#l00052">52</a> of file <a class="el" href="_t_lst_event_8cxx_source.html">TLstEvent.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00046">fData</a>, and <a class="el" href="_t_lst_event_8cxx_source.html#l00135">SwapBytes()</a>.</p>
+<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00047">fData</a>, and <a class="el" href="_t_lst_event_8cxx_source.html#l00135">SwapBytes()</a>.</p>
+
+</div>
+</div>
+<a id="a01d8e0fd1f9f0d918e01ffb38a60d71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d8e0fd1f9f0d918e01ffb38a60d71e">&#9670;&nbsp;</a></span>SetLstVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TLstEvent::SetLstVersion </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>version</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_lst_event_8h_source.html#l00041">41</a> of file <a class="el" href="_t_lst_event_8h_source.html">TLstEvent.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_lst_event_8h_source.html#l00048">fLstVersion</a>.</p>
 
 </div>
 </div>
@@ -600,7 +667,7 @@ Protected Attributes</h2></td></tr>
 
 <p>event data buffer </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_lst_event_8h_source.html#l00046">46</a> of file <a class="el" href="_t_lst_event_8h_source.html">TLstEvent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_lst_event_8h_source.html#l00047">47</a> of file <a class="el" href="_t_lst_event_8h_source.html">TLstEvent.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_lst_event_8cxx_source.html#l00046">Clear()</a>, <a class="el" href="_t_lst_event_8cxx_source.html#l00019">Copy()</a>, <a class="el" href="_t_lst_event_8cxx_source.html#l00065">GetData()</a>, <a class="el" href="_t_lst_event_8cxx_source.html#l00060">GetDataSize()</a>, <a class="el" href="_t_lst_event_8cxx_source.html#l00071">Print()</a>, and <a class="el" href="_t_lst_event_8cxx_source.html#l00052">SetData()</a>.</p>
 
@@ -633,13 +700,41 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a3b02b642d10391b3c44882db94a3941a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b02b642d10391b3c44882db94a3941a">&#9670;&nbsp;</a></span>fLstVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t TLstEvent::fLstVersion = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lst version. </p>
+
+<p class="definition">Definition at line <a class="el" href="_t_lst_event_8h_source.html#l00048">48</a> of file <a class="el" href="_t_lst_event_8h_source.html">TLstEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_t_lst_event_8h_source.html#l00042">GetLstVersion()</a>, and <a class="el" href="_t_lst_event_8h_source.html#l00041">SetLstVersion()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <html>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Sat Jun 19 2021 00:49:48.
+GRSISort (4.0.0.3 ) Reference Guide Generated on Tue May 31 2022 14:09:01.
 </small>
 </div>
 </body>

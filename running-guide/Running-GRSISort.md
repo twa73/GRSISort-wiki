@@ -7,18 +7,27 @@
 The steps involved in using GRSISort are:
 [[/images/GRSIFlow.png]]
 
-We are running a multistage sorting model with GRSISort. This has one main advantage: It allows us to sort the very large MIDAS files non-locally and then download the heavily compressed fragment tree data.
+We are running a multistage sorting model with GRSISort.
+This has one main advantage: It allows us to sort the very large MIDAS files non-locally and then download the heavily compressed histograms or analysis tree data.
 
 1. [Unpacking the Midas File](#unpackmid)
 2. [Analyzing the Fragment Tree](#sortfrags)
 3. [Histogramming the Final Results](#runhistos)
 
 By default GRSIsort will open up a root session in the GRSI environment.
+
 <a name="unpackmid" />
 # Unpacking the MIDAS File
-The strategy used by GRSISort is to unpack the MIDAS file and convert the information into a ROOT Tree format. This tree contains <a href="https://rawgit.com/wiki/r3dunlop/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/TFragment.html# TFragment:Data_Members" target="_blank">TFragments</a> and is essentially all of the information from the MIDAS File with higher compression and accessibility.
+
+The strategy used by GRSISort is to unpack the MIDAS file and convert the information into two ROOT Trees.
+The first tree in the ```fragment?????_???.root``` file contains <a href="https://rawgit.com/wiki/r3dunlop/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/TFragment.html# TFragment:Data_Members" target="_blank">TFragments</a> and is essentially all of the information from the MIDAS File with higher compression and accessibility.
+The second tree in the ```analysis?????_???.root``` file contains built events with detector information (essentially the same fragments, but in groups and translated into detectors).
   
-**grsisort NAME_OF_MIDAS_FILE.mid**  -> Converts the midas file into a fragment tree
+**grsisort --recommended NAME_OF_MIDAS_FILE.mid**  -> Converts the midas file into a fragment tree, and an analysis tree.
+
+The ```--recommended``` flag includes a number of default GRSISort flags (-a, -q, -l, --write-diagnostics, --word-count-offset=-1, --write-fragment-tree, --write-bad-fragments, --separate-out-of-order, --suppress-error, and --reconstruct-timestamp).
+These and all other available flags can be seen using ```grsisort -h```.
+This shows all the recommended flags in dark green, and the flags used in creating the analysis tree and making histograms in dark cyan.
 
 Some currently accepted flags for the midas sort:
   * __--suppress_error__,  suppresses errors from failed data parsing appearing in stdout
@@ -27,20 +36,7 @@ Some currently accepted flags for the midas sort:
   * __-b__,                run in batch mode (useful when running a ```<macro>.C`` script on the sorted file
 
 Only one midas file can be sorted at a time.
-<a name="sortfrags" />
-# Sorting the Fragment Tree
-**grsisort [-a -H] NAME_OF_FRAGMENT_TREE.root**   -> Starts sorting the fragment tree into (-s) user defined hists and/or (-a) analysis trees.
-  * Histograms are defined in **users/UserInitObj.h**
-  * How to fill the histogram is defined in **users/UserFillObj.h** 
-  
-If **-a** or **-H** are left off of the command, the fragment tree will be loaded into the grsi environment for the user to enjoy.
 
-Some currently accepted flags for the fragment tree sort:
-  * __-a__,                creates an analysis tree to be used for doing a full analysis of the data
-  * __-H__,                sorts the fragment tree into user defined hists 
-  * __-q__,                quits the grsi environment after completeing the fragment sort
-
-For more information about available flags run ```grsisort -h```.
 ## Calibrating the gamma spectra
 When sorting the fragment tree, you can read in a [calibration file](CalFiles) at the same time and it will perform the calibrations while sorting. This can be done with the command:
 ```c++
@@ -60,7 +56,7 @@ Alternatively, you view them in a graphical interface with:
 FragmentTree->StartViewer()
 ```
 
-## Viewing histograms within `grsisort`
+## Viewing histograms within GRSISort
 After sorting the data and creating a fragment tree, you can create histograms by running normal ROOT commands:
 ```c++
 FragmentTree->Draw("<variable> >> <histogramName>(<xbins>,<xmin>,<xmax>)", "<cuts>", "<displayOptions>")
@@ -73,8 +69,10 @@ FragmentTree->Draw("GetEnergy() >> h(16000,0,16000)", "", "")
 
 Another example, of a 2D histogram that displays calibrated energy vs. detector number ignoring channel 12, is:
 ```c++
-FragmentTree->Draw("fChannelNumber:GetEnergy() >> h(16000,0,16000,64,0,64)", "fChannelNumber!=12", "LEGO")
+FragmentTree->Draw("fChannelNumber:GetEnergy() >> h(16000,0,16000,64,0,64)", "fChannelNumber!=12", "colz")
 ```
+
+This is mainly useful for a first look at the data, to produce multiple histograms at once for many root files use [[GRSIProof | GRSIProof]].
 
 #### The Autosort Feature 
 If the __-a__ flag is used on the MIDAS file, GRSISort will sort the MIDAS file and complete a fragment sort by applying the flags and sorting the fragment tree, making an analysis tree file.

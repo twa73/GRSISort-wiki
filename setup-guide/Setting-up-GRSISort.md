@@ -52,7 +52,7 @@ Verify that your root installation has the required features enabled. Check that
 ```
 root-config --features
 ```
-contains cxx11, mathmore, python, and xml.
+contains mathmore, python, and xml (if xml is missing you can still compile GRSISort, but some feature will be missing).
 
 The newest version of GRSISort currently resides on GRIFFIN collaboration github repository.
 
@@ -65,16 +65,19 @@ GRSISort should now download to **./GRSISort**
 
 Enter into the **GRSISort** directory with `cd GRSISort`.
 
+Optional:
+*
 To see a list of GRSISort versions available for download, use `git tag -l`.
 The current *stable* release will be tagged under `current`.
 The most up to date version will be tagged under `master`, see [releases](https://github.com/GRIFFINCollaboration/GRSISort/releases) for details.
 
-To download a the version named \<version\>:
+To download the version named \<version\>:
 ```
 git checkout <version>
 ```
+*
 
-*Don't like git? (You should) The newest version can also be downloaded from [[here|https://github.com/pcbend/GRSISort/tarball/master]]*.
+### Contributing to the code
 
 If you want to contribute to the code, you need to have your own copy of GRSISort in your github account. To do this go to the GRSISort repository of the GRIFFINCollaboration and click "fork" in the top right. Now run
 ```
@@ -95,6 +98,11 @@ upstream	https://github.com/GRIFFINCollaboration/GRSISort.git (fetch)
 upstream	https://github.com/GRIFFINCollaboration/GRSISort.git (push)
 ```
 
+For this (using the ssh authentication) to work you need to set up SSH keys:
+  - Go to your profile->Settings.
+  - Select "SSH and GPG keys" on the left.
+  - Add you SSH key (after following the instructions under "generating SSH keys" if needed).
+
 <a name="step4" />
 
 ## Step 4: Setup Environment Variables
@@ -113,7 +121,10 @@ If you're using a c-type shell use the scripts with .csh extension instead of th
 <a name="step5" />
 
 ## Step 5: Compile GRSISort
-To compile GRSISort type `make`. Please be patient as compilation will take a few moments. You can speed this up if you want by using `make -j` (uses all available cores) or `make -j N` where N is the number of jobs you want to run in parallel.
+
+To compile GRSISort type `make`.
+Please be patient as compilation will take a few moments.
+You can speed this up if you want by using `make -j` (uses all available cores) or `make -j N` where N is the number of jobs you want to run in parallel.
 
 - To create the HTML documentation, you can compile with `make docs`. This is NOT REQUIRED.
 
@@ -127,29 +138,32 @@ If you receive an error, please consult the [Troubleshooting](troubleshooting) p
 In order to parse data and to understand the setup specific detector classes, an additional library is needed.
 This library has to provide the following functions:
 - CreateFile(std::string& filename) which returns a pointer to a new raw data file and DestroyFile which takes a pointer to a raw data file and deletes it (returns void).
-- CreateParser() which creates a new data parser object and DestroParser which takes a pointer to such a data parser object and deletes it.
+- CreateParser() which creates a new data parser object and DestroyParser which takes a pointer to such a data parser object and deletes it.
 - LibraryVersion() which returns a string containing the version number of the library.
 - InitLibrary() which initializes e.g. the mnemonic class used in Channel.
 
-So far three parsing/detector libraries have been written:
+So far four parsing/detector libraries have been written:
 
 - GRSIData for GRIFFIN/TIGRESS experiments (https://github.com/GRIFFINCollaboration/GRSIData)
 - ILLData for FIPPS data from ILL (https://github.com/UoG-Nuclear-Physics-Group/ILLData)
 - iThembaData for data from the tape station at iThemba (https://github.com/UoG-Nuclear-Physics-Group/iThembaData)
+- HILData for data from HIL, Warsaw (https://github.com/UoG-Nuclear-Physics-Group/HILData.git)
 
-Any of those three libraries can be downloaded in the same manner as GRSISort using ```git clone <url>```. 
+Any of those four libraries can be downloaded in the same manner as GRSISort using ```git clone <url>```. 
 This can be done anywhere, but is probably best done from within the GRSISort directory.
 
 <a name="step7" />
 
 ## Step 7: Compile and use library
 
-In order to compile the library you typically just call ```make``` in the directory of the library. If this does not work please follow the instructions of the library you chose to download.
-Multiple libraries can be installed in parallel.
 To use a library you can either provide the location of the libraries .so file on the command line, or edit .grsirc to include a line
 ```
 GRSI.ParserLibrary: <path to library, e.g. $(GRSISYS)/GRSIData/lib/libGRSIData.so>
 ```
+
+In order to compile the library you typically just call ```make <library-name>``` from the GRSISort directory or ```make``` in the directory of the library (plus any options you want to pass to make).
+If this does not work please follow the instructions of the library you chose to download.
+Multiple libraries can be installed in parallel.
 
 <a name="step8" />
 

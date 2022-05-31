@@ -13,5 +13,7 @@ var class_t_detector =
     [ "GetMultiplicity", "class_t_detector.html#a9d5c07abd73ec148fe0adbee0c7c1eec", null ],
     [ "operator=", "class_t_detector.html#a0bfbb5f00331505ecb06dfcec0699191", null ],
     [ "Print", "class_t_detector.html#a16143affb8db86547ab1ee1d37f5704c", null ],
+    [ "Print", "class_t_detector.html#a1d7a4f9d8b48783b9c53ef1177270cc9", null ],
+    [ "operator<<", "class_t_detector.html#ab0b20bafd8a1113a6547217e182671fe", null ],
     [ "fHits", "class_t_detector.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ]
 ];

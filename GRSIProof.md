@@ -29,12 +29,12 @@ These **must be changed** in both the `MyAwesomelyNamedSelector.h` and the `MyAw
 ### Setting up detector classes
 The detector systems you plan on analyzing using this script must also be declared in the `.h` file. For example, in `ExampleEventSelector`, there are lines of code with:
 ```c++
-TGriffin * fGriff;
-TSceptar * fScep;
+TGriffin* fGriff;
+TSceptar* fScep;
 ```
 A pointer to your detectors are setup at this point:
 ```c++
-TAwesomeDetector * fAwesomeDet;
+TAwesomeDetector* fAwesomeDet;
 ```
 The code also needs to be told where to find the branch that contains your detector. This is done in the `.h` file in the function `InitializeBranches`. In our example, we would change
 ```c++
@@ -55,14 +55,19 @@ to:
 ```c++
 SetOutputPrefix("AwesomeSauce");
 ```
-For an analysis tree `analysis07654_002.root`, this would create an output root file called `AwesomeSauce07654_002.root`. You can put whatever you want for the prefix, it does not have to be related to the class name. 
+For an analysis tree `analysis07654_002.root`, this would create an output root file called `AwesomeSauce07654_002.root`. You can put whatever you want for the prefix, it does not have to be related to the class name but it can help later on. 
 
 ## Creating Histograms <a name="create_histos" />
-The histograms are defined in the `.C` file in the function `CreateHistograms` (in our case `MyAwesomeSelector::CreateHistograms()`). We have setup a map that allows for easy access of histograms across various locations in the selector. This means to create a 1D histogram, one should use `fH1`, a 2D histogram in `fH2` etc. If the histogram type you want does not exist, please place a request on the issue tracker. As an example, the line:
+The histograms are defined in the `.C` file in the function `CreateHistograms` (in our case `MyAwesomeSelector::CreateHistograms()`).
+We have setup maps that allow for easy access of histograms across various locations in the selector.
+This means to create a 1D histogram, one should use `fH1`, a 2D histogram in `fH2` etc.
+If the histogram type you want does not exist, please place a request on the issue tracker. As an example, the line:
 ```c++
 fH1["gE"] = new TH1D("gE","#gamma Singles",12000,0,3000);
 ```
-creates a 1D histogram with `double` precision called `"gE"` and puts it in a map position of `"gE"`. You do not need to match the name to the map position, but it is likely easier to keep track of things if you do this. The loops automatically add these histograms to the output root file using the lines:
+creates a 1D histogram with `double` precision called `"gE"` and puts it in a map position of `"gE"`.
+You do not need to match the name to the map position, but it is likely easier to keep track of things if you do this.
+The loops automatically add these histograms to the output root file using the lines:
 ```c++
 for (auto it: fH1) {
    GetOutputList()->Add(it.second);
@@ -71,12 +76,18 @@ for (auto it: fH1) {
 These **must not** be changed.
 
 ## Filling Histograms <a name="fill_histos" />
-To fill the histograms you just created, you can change the function located in the `.C` file named `FillHistograms` (in our case `MyAwesomeSelector::FillHistograms()`). You use the map to lookup the histogram you want to fill, and then fill it like a normal histogram. For example, to fill the 1D energy spectrum created above, we would loop over all `Awesome` hits, find the energy of the hit, and put it in our `"gE"` histogram.
+To fill the histograms you just created, you can change the function located in the `.C` file named `FillHistograms` (in our case `MyAwesomeSelector::FillHistograms()`).
+You use the map to lookup the histogram you want to fill, and then fill it like a normal histogram.
+For example, to fill the 1D energy spectrum created above, we would loop over all `Awesome` hits, find the energy of the hit, and put it in our `"gE"` histogram.
 ```c++
 for(auto i = 0; i < fAwesomeDet->GetMultiplicity(); ++i){
-   fH1["gE"]->Fill(fAwesomeDet->GetAwesomeHit(i)->GetEnergy());
+   fH1.at("gE")->Fill(fAwesomeDet->GetAwesomeHit(i)->GetEnergy());
 } 
 ```
+Note the use of ```.at()``` instead of ```[]``` here.
+This is because the ```.at()``` function creates an exception when you try to access a name that is not in the corresponding map (either because the name is mispelled or because it's the wrong map).
+In this case the selector will print out a corresponding message including all available names in that map in the .log file.
+This helps track down any of these mistakes.
 
 ## EndOfSort <a name="end_of_sort" />
 The EndOfSort function can be used to manipulated histograms after they have been filled.
@@ -102,7 +113,7 @@ for example:
 ```bash
 grsiproof analysis06578_000.root $GRSISYS/GRSIProof/MyAwesomeSelector.C
 ```
-a list of analysis files can be used and they will all be chained and sorted at the same time. This includes regular expressions. The output file name will be named after the first file in the list. For example:
+A list of analysis files can be used and they will all be chained and sorted at the same time. This includes regular expressions. The output file name will be named after the first file in the list. For example:
 ```bash
 grsiproof analysis06578_000.root analysis06578_001.root analysis06578_002.root $GRSISYS/GRSIProof/MyAwesomeSelector.C
 ```
@@ -113,9 +124,12 @@ grsiproof analysis06578_???.root $GRSISYS/GRSIProof/MyAwesomeSelector.C
 to accomplish the same task.
 
 ## Running Options <a name="running_options" />
-There are options that can be provided on the command line to change the way `grsiproof` runs. Some options are listed below with what they do. A full list can be viewed with `grsiproof --help`.
-  * __--max-workers #__,   Sets the number of slaves to be used. Each worker creates each histogram you create, so this is a good option to reduce memory consumption when using many histograms. Defaults to number of cores on computer.
-  * __--selector-only__,    Bypasses proof, and just runs the selector on one thread. Good for debugging, as proof redirects output messages.
+There are options that can be provided on the command line to change the way `grsiproof` runs. Some options are listed below with what they do. A full list can be viewed with `grsiproof -h` or `grsiproof --help`.
+  * __--max-workers #__,           Sets the number of slaves to be used. Each worker creates each histogram you create, so this is a good option to reduce memory consumption when using many histograms. Defaults to number of cores on computer.
+  * __--selector-only__,           Bypasses proof, and just runs the selector on one thread. Good for debugging, as proof redirects output messages.
+  * __--max-events arg__,          Maximum number of events processed by grsiproof.
+  * __--addback-window__,          Set the maximum time difference between two hits to be accepted for addback.
+  * __--suppression-window__,      Set the maximum time difference between a germanium and BGO hit for suppression.
+  * __--suppression-energy__,      Set the minimum BGO energy for suppression.
+  * __--is-correctin-cross-talk__, Flag to enable cross talk corrections (will only work if the corresponding cross talk parameters are in the cal-files).
 
-[.info files](RunInfo-Files) can also be used. Their content is parsed as if it were normal command line arguments minus the dash(es) with the flag and the value separated by a colon. 
-This can be useful if multiple runs are to be analyzed in a single step, by listing all root-files with analysis trees (or fragment trees) in a .info file.

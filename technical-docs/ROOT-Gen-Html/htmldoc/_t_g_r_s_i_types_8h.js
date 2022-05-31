@@ -7,6 +7,7 @@ var _t_g_r_s_i_types_8h =
       [ "GRETINA_MODE3", "_t_g_r_s_i_types_8h.html#aa52857f83d8b7cda6be7f0bec0f45229ab4f41c544418254b6397117542b8bc50", null ],
       [ "MIDAS_FILE", "_t_g_r_s_i_types_8h.html#aa52857f83d8b7cda6be7f0bec0f45229a44bc8feca79f1a56f26038e3e71dbfd3", null ],
       [ "LST_FILE", "_t_g_r_s_i_types_8h.html#aa52857f83d8b7cda6be7f0bec0f45229ad75b58ce08731dd79c2c6780d409d8f8", null ],
+      [ "RLMD_FILE", "_t_g_r_s_i_types_8h.html#aa52857f83d8b7cda6be7f0bec0f45229abb7dd2645a88d869c199225533909373", null ],
       [ "TDR_FILE", "_t_g_r_s_i_types_8h.html#aa52857f83d8b7cda6be7f0bec0f45229a87ff91b3c315d658544d091e375e618c", null ],
       [ "ROOT_DATA", "_t_g_r_s_i_types_8h.html#aa52857f83d8b7cda6be7f0bec0f45229ad5e22f59fa34ccd8c676c3e437e9e8f2", null ],
       [ "ROOT_MACRO", "_t_g_r_s_i_types_8h.html#aa52857f83d8b7cda6be7f0bec0f45229acf9be2fd52b64052747007efa784c55b", null ],

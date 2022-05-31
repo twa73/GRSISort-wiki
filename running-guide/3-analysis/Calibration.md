@@ -2,6 +2,8 @@
 
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**ANALYSIS**](Analysis) > [**CALIBRATION**](Calibration)
 
+**Note** gain matching and calibration are often used interchangeably here.
+
 GRSISort calibrations are read from *cal files*. These are the files with the **.cal** extension. Various calibration classes are used to set calibration parameters. These classes are called `TCal`s and currently include:
 - [[TGainMatch | Gain-Matching]] for gain-matching
 - TTimeCal for time calibrations such as [[ LED Walk | LED-Walk ]]

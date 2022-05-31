@@ -93,8 +93,14 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 <li>AbsoluteEfficiency()
 : <a class="el" href="class_t_efficiency_calibration.html#a8b90ace99664e21db6a336e652252e8d">TEfficiencyCalibration</a>
 </li>
+<li>AcceptChannel()
+: <a class="el" href="class_t_source_calibration.html#a50ffa6badd689b09119cfec4df3643a8">TSourceCalibration</a>
+</li>
 <li>AcceptConnectionThread()
 : <a class="el" href="class_t_g_r_s_i_server.html#ab254d906609527ccd9a85d4f7fb634d0">TGRSIServer</a>
+</li>
+<li>AcceptFinalChannel()
+: <a class="el" href="class_t_source_calibration.html#aaa97b7deffdc20b6593c2ca01cd08ee8">TSourceCalibration</a>
 </li>
 <li>Activated()
 : <a class="el" href="class_g_root_canvas.html#a480dcad3d2eb40bc89fda399979e2ba0">GRootCanvas</a>
@@ -107,11 +113,14 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 </li>
 <li>Add()
 : <a class="el" href="class_g_root_browser.html#a45f64a21a24ae7481bcdb97e11e62763">GRootBrowser</a>
+, <a class="el" href="class_t_calibration_graph_set.html#a1e9f0b75431cf9216279863524c96cb8">TCalibrationGraphSet</a>
+, <a class="el" href="class_t_channel_tab.html#a2a3234be4d7dbfd6302121360ade4da3">TChannelTab</a>
 , <a class="el" href="class_t_deadtime_scaler_queue.html#a4033905eca3cd260122764464428f859">TDeadtimeScalerQueue</a>
 , <a class="el" href="class_t_detector_hit.html#aeaa7459f30606c0b4b5cefc5cbf32ca6">TDetectorHit</a>
 , <a class="el" href="class_t_fipps_hit.html#ad946c02bf2bd137e44f63022afdddcc0">TFippsHit</a>
 , <a class="el" href="class_t_fragment_map.html#a8f18701472f5a567be736d8a8d0a1ed5">TFragmentMap</a>
 , <a class="el" href="class_t_griffin_hit.html#aaf1cd4b9f0244f79446e47b1481dfcee">TGriffinHit</a>
+, <a class="el" href="class_t_ifin_hit.html#af7a862ffe169a426c05f96807cc3737d">TIfinHit</a>
 , <a class="el" href="class_t_p_p_g.html#a9442404326ddc97dad4e09578f649fb2">TPPG</a>
 , <a class="el" href="class_t_rate_scaler_queue.html#a4ccd126ea8155992c7d8c364051a9862">TRateScalerQueue</a>
 , <a class="el" href="class_t_run_info.html#acaf2cc7b6045cdff38fb44d5e0406de9">TRunInfo</a>
@@ -124,6 +133,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 <li>AddbackCriterion()
 : <a class="el" href="class_t_fipps.html#a47946d02d42cb680b043ad10ace6689a">TFipps</a>
 , <a class="el" href="class_t_griffin.html#adeb39fe08db67abb2c9e8f1d75a8de93">TGriffin</a>
+, <a class="el" href="class_t_ifin.html#aba2a476b6a8ebea713f07cba0cfbf509">TIfin</a>
 , <a class="el" href="class_t_suppressed.html#a60817f357b7b432072114248ec5e8a55">TSuppressed</a>
 </li>
 <li>AddbackWindow()
@@ -137,13 +147,16 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 </li>
 <li>AddBinContent()
 : <a class="el" href="class_g_cube_d.html#a6066f98860d4d6f81da749a8bdc77ab4">GCubeD</a>
-, <a class="el" href="class_g_cube_f.html#a33ae5678f31168c8cb26c10b60806558">GCubeF</a>
-, <a class="el" href="class_g_h_sym_d.html#a69bcfd450beeeccbf949489b60d76f0a">GHSymD</a>
+, <a class="el" href="class_g_cube_f.html#ae4101f4912c20f5553eee3dd426a8e2a">GCubeF</a>
+, <a class="el" href="class_g_h_sym_d.html#a46204c4ef35a04da8f23b8f77c1256cc">GHSymD</a>
 , <a class="el" href="class_g_h_sym_f.html#a8b8c0a1887d305ac6a8152ff467e7d5a">GHSymF</a>
 </li>
 <li>AddBranch()
 : <a class="el" href="class_t_analysis_write_loop.html#ab404fdf81d0f4b667d3104b536f689fc">TAnalysisWriteLoop</a>
 , <a class="el" href="class_t_analysis_write_loop_client.html#a6a52c72f2159a2993ba131128697780e">TAnalysisWriteLoopClient</a>
+</li>
+<li>AddCalibrationPoint()
+: <a class="el" href="class_t_calibrate_descant.html#a35ae915b1238424d0fcae8f1b3f2f5d1">TCalibrateDescant</a>
 </li>
 <li>AddCallback()
 : <a class="el" href="class_g_notifier.html#ae9774d9cf3c9c149686612629952d24c">GNotifier</a>
@@ -195,7 +208,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="class_t_channel.html#a3a45006911e76d46e9171763b55975b8">TChannel</a>
 </li>
 <li>AddEfficiencyGraph()
-: <a class="el" href="class_t_efficiency_calibration.html#a0ff34728af59324cca9714d05b383134">TEfficiencyCalibration</a>
+: <a class="el" href="class_t_efficiency_calibration.html#a83c69eaebb8eed75350ca03338ecb4a8">TEfficiencyCalibration</a>
 </li>
 <li>AddEnergyNonlinearityPoint()
 : <a class="el" href="class_t_channel.html#addbfe0172e61545d84b2de3716cbaaa4">TChannel</a>
@@ -215,6 +228,8 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 , <a class="el" href="class_t_c_s_m.html#ad5a01337d8958add96a7345fa1681b16">TCSM</a>
 , <a class="el" href="class_t_descant.html#a3578b33a38b4da5962e38375b945db75">TDescant</a>
 , <a class="el" href="class_t_detector.html#ace91f1e86d601edd8986f191fbc2ae8d">TDetector</a>
+, <a class="el" href="class_t_eagle.html#a934abf901da13679f026bb5578094b0c">TEagle</a>
+, <a class="el" href="class_t_eagle_pulser.html#a89275146a91ec021a47e049b26c2cce2">TEaglePulser</a>
 , <a class="el" href="class_t_emma.html#a13094b96ef7abc1de064376a01ae0615">TEmma</a>
 , <a class="el" href="class_t_fipps.html#afdc2d970eda4f702497f726a6d89c6c6">TFipps</a>
 , <a class="el" href="class_t_fipps_la_br.html#abd42e32dec15a0861685d58773ddcaa0">TFippsLaBr</a>
@@ -222,6 +237,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 , <a class="el" href="class_t_fipps_t_a_c.html#a73a8df559724a2da839b67a8f2a85937">TFippsTAC</a>
 , <a class="el" href="class_t_generic_detector.html#adc10318592d16661c556bb9974a64ce3">TGenericDetector</a>
 , <a class="el" href="class_t_griffin.html#a9f18ae1b20b58a82c291c94813742b3f">TGriffin</a>
+, <a class="el" href="class_t_ifin.html#aeb1b9b5ac2a90ce9c81f899b0ac406a6">TIfin</a>
 , <a class="el" href="class_t_la_br.html#adfaa19f28e807efe02998f7a007dc78b">TLaBr</a>
 , <a class="el" href="class_t_paces.html#a1d79e22a96c925a65bfa02221e980c1c">TPaces</a>
 , <a class="el" href="class_t_r_f.html#afa5eb60382bb98ab2254c026f59db337">TRF</a>
@@ -236,6 +252,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 , <a class="el" href="class_t_tdr_tigress.html#a233ef0ab4d6a6228999709f773f5e7f7">TTdrTigress</a>
 , <a class="el" href="class_t_tigress.html#a916cf436027f27288b5302d340b285d6">TTigress</a>
 , <a class="el" href="class_t_tip.html#a763f4ccc17955c6632585f134655ebeb">TTip</a>
+, <a class="el" href="class_t_trific.html#a735f47c4bc8c9047383890f7f4c793c9">TTrific</a>
 , <a class="el" href="class_t_tri_foil.html#a3ef78a1d8b4fdfddb88de7518f8f9346">TTriFoil</a>
 , <a class="el" href="class_t_zero_degree.html#a5f57da45f84f972ccec7f23cadafd0fb">TZeroDegree</a>
 </li>
@@ -266,7 +283,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 </li>
 <li>AddPoint()
 : <a class="el" href="class_t_cal_graph.html#a6739222df2e5575317745ee577586cee">TCalGraph</a>
-, <a class="el" href="class_t_cal_list.html#aeca38d14045fe88a4346859617a7438f">TCalList</a>
+, <a class="el" href="class_t_cal_list.html#a67729d4710974ace7ea6530963ee66e2">TCalList</a>
 , <a class="el" href="class_t_efficiency_cal.html#ac877a5209eb7478b3cf1c329665c5479">TEfficiencyCal</a>
 , <a class="el" href="class_t_energy_cal.html#a37c909b7d8b4d23dbc8235b771832785">TEnergyCal</a>
 </li>
@@ -280,7 +297,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="class_t_html_creator.html#a6fce588ea823a9625940a3fc33608854">THtmlCreator</a>
 </li>
 <li>AddSegment()
-: <a class="el" href="class_t_tigress_hit.html#aebc4dcaf4f826be4953a90d71d41606f">TTigressHit</a>
+: <a class="el" href="class_t_tigress_hit.html#ae3fce93f1eb7128a00992e0ac8b7df49">TTigressHit</a>
 </li>
 <li>AddSortInfo()
 : <a class="el" href="class_t_g_r_s_i_sort_list.html#aca863b6f8ee9ff1a9e90f2ad62daec99">TGRSISortList</a>
@@ -310,7 +327,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="class_t_cal_manager.html#a25f135e72f2c54732ed94ea07fbb8413">TCalManager</a>
 </li>
 <li>AddTransition()
-: <a class="el" href="class_t_nucleus.html#a1cab34c0c268d938bb23a3e6a839d0c8">TNucleus</a>
+: <a class="el" href="class_t_nucleus.html#ae1199d58bee397cced8f137656414e9a">TNucleus</a>
 , <a class="el" href="class_t_source_list.html#a8e0ab2bf8886d9004fd02f59d5c7268e">TSourceList</a>
 </li>
 <li>AddValue()
@@ -355,6 +372,9 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 </li>
 <li>AlmostEqual()
 : <a class="el" href="class_t_c_s_m.html#aff931f0766a431f8f7dbee795aec6cf1">TCSM</a>
+</li>
+<li>AlphanumericSelector()
+: <a class="el" href="class_alphanumeric_selector.html#a580dba6981830fa3c4adda38e3bb5646">AlphanumericSelector</a>
 </li>
 <li>am
 : <a class="el" href="struct_t_pulse_analyzer_1_1_shape_par.html#a40c8954660708df6ee30f9df70cec092">TPulseAnalyzer::ShapePar</a>
@@ -415,15 +435,21 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 <li>ApplyOptions()
 : <a class="el" href="class_t_g_r_s_iint.html#af4bb153acb3cf3a869f74fd4eb4b8412">TGRSIint</a>
 </li>
+<li>Area()
+: <a class="el" href="class_g_peak.html#a88818cfd29172ab05c3d310c9ccf1e5a">GPeak</a>
+</li>
 <li>area
 : <a class="el" href="struct_t_calibrator_1_1_peak.html#a63d2acc7425ecaf845f357318af0a3bb">TCalibrator::Peak</a>
 </li>
 <li>Area()
 : <a class="el" href="class_t_cal_point.html#aced1cc8c164a51c4317036e8a3590b93">TCalPoint</a>
+, <a class="el" href="class_t_peak.html#a9a61ad97d1bfa07fabc03b5e8b49e4c9">TPeak</a>
 , <a class="el" href="class_t_single_peak.html#afdc64b7a8d5315d282201cd3950c43b9">TSinglePeak</a>
 </li>
 <li>AreaErr()
-: <a class="el" href="class_t_cal_point.html#af6f369526d684e85964606ec8f0b63fa">TCalPoint</a>
+: <a class="el" href="class_g_peak.html#a2e562ec1d22965f0b4f64a24f4f6b0a7">GPeak</a>
+, <a class="el" href="class_t_cal_point.html#af6f369526d684e85964606ec8f0b63fa">TCalPoint</a>
+, <a class="el" href="class_t_peak.html#ad59749509990fa2cbf66f7211634e7e4">TPeak</a>
 , <a class="el" href="class_t_single_peak.html#a51b186071d30bb318455325d85d48649">TSinglePeak</a>
 </li>
 <li>ArgParseConfig()
@@ -455,7 +481,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="class_t_angular_correlation.html#a5135ada4710f657e27ecf2868c56482f">TAngularCorrelation</a>
 </li>
 <li>at()
-: <a class="el" href="class_t_g_r_s_i_map.html#a2ee576d725d3b2c0d46e62fa916f6adf">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;</a>
+: <a class="el" href="class_t_g_r_s_i_map.html#a1f10f26be1b70e8d7440f79081dfc236">TGRSIMap&lt; key_type, mapped_type, key_compare, allocator_type &gt;</a>
 </li>
 <li>AxisComboSelected()
 : <a class="el" href="class_t_b_g_subtraction.html#ad353baa32a1a03becedd02c4d1c7df01">TBGSubtraction</a>
@@ -467,7 +493,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Sat Jun 19 2021 00:50:00.
+GRSISort (4.0.0.3 ) Reference Guide Generated on Tue May 31 2022 14:09:16.
 </small>
 </div>
 </body>

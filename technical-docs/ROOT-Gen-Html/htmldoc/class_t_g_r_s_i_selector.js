@@ -3,6 +3,7 @@ var class_t_g_r_s_i_selector =
     [ "TGRSISelector", "class_t_g_r_s_i_selector.html#af7409d6b4bec0187b729d814287a46e9", null ],
     [ "~TGRSISelector", "class_t_g_r_s_i_selector.html#a2c2d329ecf8c410719154ebc0d4e5890", null ],
     [ "Begin", "class_t_g_r_s_i_selector.html#ab93493c658b7214c7b98b755d85586bd", null ],
+    [ "CheckSizes", "class_t_g_r_s_i_selector.html#a3ee3614749d1369487299802d7e18364", null ],
     [ "ClassDefOverride", "class_t_g_r_s_i_selector.html#aa765a39a9983768ce6475ab6e6c76e3a", null ],
     [ "CreateHistograms", "class_t_g_r_s_i_selector.html#a70a054a0df3c035c323b6c5fd089ca26", null ],
     [ "EndOfSort", "class_t_g_r_s_i_selector.html#aefe521b4e1ad5569b7e2809fb7f7e411", null ],
@@ -24,6 +25,7 @@ var class_t_g_r_s_i_selector =
     [ "fChain", "class_t_g_r_s_i_selector.html#a5d4c3f5aef64c23330e2f80b017d9e42", null ],
     [ "fCube", "class_t_g_r_s_i_selector.html#afea3f5043d0e02c2fa56cbd4c1018b4f", null ],
     [ "fCuts", "class_t_g_r_s_i_selector.html#a9682bae598efaab0cd904ae74204e167", null ],
+    [ "fEntry", "class_t_g_r_s_i_selector.html#a94a4d82d4c87c826d97b69e7fbb522db", null ],
     [ "fFirstRunNumber", "class_t_g_r_s_i_selector.html#a399ba322e2eef95dfcc3f2d21d27fbac", null ],
     [ "fFirstSubRunNumber", "class_t_g_r_s_i_selector.html#a095a925b9e0e9ae440a758300f082c9c", null ],
     [ "fH1", "class_t_g_r_s_i_selector.html#a1e35e3147d9f14a04e4d0f9f30431074", null ],
@@ -33,5 +35,6 @@ var class_t_g_r_s_i_selector =
     [ "fOutputPrefix", "class_t_g_r_s_i_selector.html#a85adb81750e8073e6935b8d1f3a79fd8", null ],
     [ "fPpg", "class_t_g_r_s_i_selector.html#abc598ed268f33d122fba95b9e4af89a0", null ],
     [ "fRunInfo", "class_t_g_r_s_i_selector.html#a6179997d65c5c6e3a0d6edec42180405", null ],
-    [ "fSym", "class_t_g_r_s_i_selector.html#a0a36b80b21d1c5fd0b2246943c28ebce", null ]
+    [ "fSym", "class_t_g_r_s_i_selector.html#a0a36b80b21d1c5fd0b2246943c28ebce", null ],
+    [ "fTree", "class_t_g_r_s_i_selector.html#a97fe8cf742166fa3aad077a249586181", null ]
 ];

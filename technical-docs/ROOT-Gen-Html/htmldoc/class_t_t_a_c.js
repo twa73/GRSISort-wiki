@@ -14,5 +14,6 @@ var class_t_t_a_c =
     [ "GetTACHit", "class_t_t_a_c.html#a1550af944ceb7385ca3036795331f2f9", null ],
     [ "operator=", "class_t_t_a_c.html#a02664369904bba9bd51fdc764cb55047", null ],
     [ "Print", "class_t_t_a_c.html#a802db158299633163da0311ae82854a5", null ],
+    [ "Print", "class_t_t_a_c.html#aac88d3b2e6612260749078758392ed14", null ],
     [ "fHits", "class_t_t_a_c.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ]
 ];

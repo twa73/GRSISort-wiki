@@ -23,6 +23,7 @@ var class_time_walk_selector =
     [ "fChain", "class_time_walk_selector.html#a5d4c3f5aef64c23330e2f80b017d9e42", null ],
     [ "fCube", "class_time_walk_selector.html#afea3f5043d0e02c2fa56cbd4c1018b4f", null ],
     [ "fCuts", "class_time_walk_selector.html#a9682bae598efaab0cd904ae74204e167", null ],
+    [ "fEntry", "class_time_walk_selector.html#a94a4d82d4c87c826d97b69e7fbb522db", null ],
     [ "fGrif", "class_time_walk_selector.html#ab62b59d030c636587ae308eb9261e47c", null ],
     [ "fH1", "class_time_walk_selector.html#a1e35e3147d9f14a04e4d0f9f30431074", null ],
     [ "fH2", "class_time_walk_selector.html#a6f2d56fbe9b582d4e90b02511e0e62ca", null ],
@@ -31,5 +32,6 @@ var class_time_walk_selector =
     [ "fPpg", "class_time_walk_selector.html#abc598ed268f33d122fba95b9e4af89a0", null ],
     [ "fRunInfo", "class_time_walk_selector.html#a6179997d65c5c6e3a0d6edec42180405", null ],
     [ "fScep", "class_time_walk_selector.html#aca568640c7c5c129b3f74530888d1371", null ],
-    [ "fSym", "class_time_walk_selector.html#a0a36b80b21d1c5fd0b2246943c28ebce", null ]
+    [ "fSym", "class_time_walk_selector.html#a0a36b80b21d1c5fd0b2246943c28ebce", null ],
+    [ "fTree", "class_time_walk_selector.html#a97fe8cf742166fa3aad077a249586181", null ]
 ];

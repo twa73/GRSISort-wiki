@@ -9,11 +9,11 @@ var class_t_fipps_pulser =
     [ "ClearStatus", "class_t_fipps_pulser.html#a5896a0e9cbb28e11e5546f58aad67a08", null ],
     [ "ClearTransients", "class_t_fipps_pulser.html#a5157695811c23caccbc71ce62b9cacd0", null ],
     [ "Copy", "class_t_fipps_pulser.html#a5bb705bebefab8cfb039ecb67ec0f9da", null ],
-    [ "GetGenericDetectorHit", "class_t_fipps_pulser.html#afa4ab417bd58e12f1f46b70d613150a4", null ],
     [ "GetHit", "class_t_fipps_pulser.html#abb7c88ad69c596f7c183a82a746e2542", null ],
     [ "GetHitVector", "class_t_fipps_pulser.html#a090d52d270ae5065f5397bdcb7e7f465", null ],
     [ "GetMultiplicity", "class_t_fipps_pulser.html#a9d5c07abd73ec148fe0adbee0c7c1eec", null ],
     [ "operator=", "class_t_fipps_pulser.html#a83c953a64e53e14f51256b030997be76", null ],
     [ "Print", "class_t_fipps_pulser.html#a3b6fadb9670a681d70907223327bcdd2", null ],
+    [ "Print", "class_t_fipps_pulser.html#a3074183facf72fbc1c6b0c1b8be28188", null ],
     [ "fHits", "class_t_fipps_pulser.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ]
 ];

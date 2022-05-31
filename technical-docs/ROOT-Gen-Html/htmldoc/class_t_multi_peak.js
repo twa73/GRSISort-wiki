@@ -26,7 +26,6 @@ var class_t_multi_peak =
     [ "MultiPhotoPeakBG", "class_t_multi_peak.html#a228f772a0d034804b061520574028e4e", null ],
     [ "MultiStepBG", "class_t_multi_peak.html#afdf4323dc3cd0ce6cb83c07189117429", null ],
     [ "Print", "class_t_multi_peak.html#ac1527e91fe4157a84d330151db344b9b", null ],
-    [ "PrintString", "class_t_multi_peak.html#a45d6d62b2fc67c6d6ac92d355b5ddbbc", null ],
     [ "SetDefaultFitType", "class_t_multi_peak.html#aae96ec22d014518d133f0ebaf9295b63", null ],
     [ "SetHist", "class_t_multi_peak.html#a2874ffcf8fb7daf49c2a993f487858b0", null ],
     [ "SetInitialized", "class_t_multi_peak.html#a7021eaf2b5a7f030961a4e35729d8a6f", null ],

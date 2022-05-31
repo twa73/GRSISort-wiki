@@ -15,7 +15,6 @@
 
 - [[Sorting|Running-GRSISort#sortingmodel]]
   - [[Unpacking MIDAS Files|Running-GRSISort#unpackmid]]
-  - [[Sorting Fragment Trees|Running-GRSISort#sortfrags]]
   - [[GRSIProof | GRSIProof]]
 - [[Analysis|Analysis]]
   - [[Data Correcting | Correcting]]

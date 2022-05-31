@@ -7,5 +7,6 @@ var modules =
     [ "GRSIProof", "group___g_r_s_i_proof.html", "group___g_r_s_i_proof" ],
     [ "GUI", "group___g_u_i.html", "group___g_u_i" ],
     [ "Loops", "group___loops.html", "group___loops" ],
+    [ "Selectors", "group___selectors.html", "group___selectors" ],
     [ "Sorting", "group___sorting.html", "group___sorting" ]
 ];

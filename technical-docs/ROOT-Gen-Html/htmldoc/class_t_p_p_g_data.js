@@ -25,5 +25,6 @@ var class_t_p_p_g_data =
     [ "fNetworkPacketId", "class_t_p_p_g_data.html#a857ac6523fdbd4f820f639719ed52618", null ],
     [ "fNewPpg", "class_t_p_p_g_data.html#ac709239f036201e09eb501bea0c63d0c", null ],
     [ "fOldPpg", "class_t_p_p_g_data.html#ac53ff52d276e403550634be5b38f2f65", null ],
-    [ "fTimeStamp", "class_t_p_p_g_data.html#a159895bf544b149ec55f1a2b01b745a5", null ]
+    [ "fTimeStamp", "class_t_p_p_g_data.html#a159895bf544b149ec55f1a2b01b745a5", null ],
+    [ "fTimestampUnits", "class_t_p_p_g_data.html#abd588265a9f3fdd5dd83a9310892b9d8", null ]
 ];

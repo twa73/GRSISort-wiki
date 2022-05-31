@@ -203,7 +203,6 @@ var group___calibration =
       [ "IsAbsolute", "class_t_efficiency_graph.html#a076801f0675d1c30c166edb6be5ae9d2", null ],
       [ "operator=", "class_t_efficiency_graph.html#a7e07df98a5067194a56393df42ac7960", null ],
       [ "Print", "class_t_efficiency_graph.html#ad2db8a3d48d8f63c49d1f2ee29352f14", null ],
-      [ "Scale", "class_t_efficiency_graph.html#a089b578e4263845b99a02f013292ec2c", null ],
       [ "SetAbsolute", "class_t_efficiency_graph.html#afff346e2296024037b818d01e9ef688d", null ],
       [ "fCompareMap", "class_t_efficiency_graph.html#aee7eb13e3edc4a48e1e51f8717e69873", null ],
       [ "fIsAbsolute", "class_t_efficiency_graph.html#a90e223b134aa38c6695e3119b6294cf4", null ]

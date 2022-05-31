@@ -44,6 +44,7 @@ var class_t_s3 =
     [ "PixelsSet", "class_t_s3.html#a83a77a3efc1e99f3642c1153e386c4bb", null ],
     [ "PreferenceSector", "class_t_s3.html#a22eccfe8da0fcbf2199353375adcdf20", null ],
     [ "Print", "class_t_s3.html#aff79ba90c5cf70f47fb993365565e8f0", null ],
+    [ "Print", "class_t_s3.html#a874a92f25d92183502afa74bd2930d26", null ],
     [ "ResetRingsSectors", "class_t_s3.html#a97dd9d61895b50ea6c3c7500c1109410", null ],
     [ "SectorPreference", "class_t_s3.html#a024a37f08807a99355e79c99bdeab1f7", null ],
     [ "SetBitNumber", "class_t_s3.html#ae3be75bfcc3b702de1f9e811091f51a1", null ],

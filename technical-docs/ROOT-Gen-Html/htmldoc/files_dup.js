@@ -4,6 +4,7 @@ var files_dup =
     [ "examples", "dir_d28a4824dc47e487b107a5db32ef43c4.html", "dir_d28a4824dc47e487b107a5db32ef43c4" ],
     [ "GRSIData", "dir_1d7397b112c23d4eb2fe49dc66ace00a.html", "dir_1d7397b112c23d4eb2fe49dc66ace00a" ],
     [ "GRSIProof", "dir_9898311765dba9e8b5ad6a9c9b1db5d5.html", "dir_9898311765dba9e8b5ad6a9c9b1db5d5" ],
+    [ "HILData", "dir_00c05eb3ac5b5ff25e1a6852ee50e9ed.html", "dir_00c05eb3ac5b5ff25e1a6852ee50e9ed" ],
     [ "histos", "dir_a7393bbf12681fcab52d048663b07031.html", "dir_a7393bbf12681fcab52d048663b07031" ],
     [ "html", "dir_565c7029eb0e874e604aeede0056cdf1.html", "dir_565c7029eb0e874e604aeede0056cdf1" ],
     [ "ILLData", "dir_2c04f6980766b72344e79a884aa96ac0.html", "dir_2c04f6980766b72344e79a884aa96ac0" ],
@@ -14,23 +15,5 @@ var files_dup =
     [ "scripts", "dir_53e6fa9553ac22a5646d2a2b2d7b97a1.html", "dir_53e6fa9553ac22a5646d2a2b2d7b97a1" ],
     [ "src", "dir_68267d1309a1af8e8297ef4c3efbcdba.html", "dir_68267d1309a1af8e8297ef4c3efbcdba" ],
     [ "users", "dir_9669779df7bfcf1c7bf651204e08d102.html", "dir_9669779df7bfcf1c7bf651204e08d102" ],
-    [ "CaenAnalysisSelector.C", "_caen_analysis_selector_8_c.html", "_caen_analysis_selector_8_c" ],
-    [ "CaenAnalysisSelector.h", "_caen_analysis_selector_8h.html", [
-      [ "CaenAnalysisSelector", "class_caen_analysis_selector.html", "class_caen_analysis_selector" ]
-    ] ],
-    [ "CaenWaveSelector.C", "_caen_wave_selector_8_c.html", "_caen_wave_selector_8_c" ],
-    [ "CaenWaveSelector.h", "_caen_wave_selector_8h.html", [
-      [ "CaenWaveSelector", "class_caen_wave_selector.html", "class_caen_wave_selector" ]
-    ] ],
-    [ "FitHistogram.C", "_fit_histogram_8_c.html", "_fit_histogram_8_c" ],
-    [ "GainMatchSelector.C", "_gain_match_selector_8_c.html", "_gain_match_selector_8_c" ],
-    [ "GainMatchSelector.h", "_gain_match_selector_8h.html", [
-      [ "GainMatchSelector", "class_gain_match_selector.html", "class_gain_match_selector" ]
-    ] ],
-    [ "GenericSelector.C", "_generic_selector_8_c.html", "_generic_selector_8_c" ],
-    [ "GenericSelector.h", "_generic_selector_8h.html", [
-      [ "GenericSelector", "class_generic_selector.html", "class_generic_selector" ]
-    ] ],
-    [ "grsi_logon.C", "grsi__logon_8_c.html", "grsi__logon_8_c" ],
-    [ "testPeakFitter.C", "test_peak_fitter_8_c.html", "test_peak_fitter_8_c" ]
+    [ "grsi_logon.C", "grsi__logon_8_c.html", "grsi__logon_8_c" ]
 ];

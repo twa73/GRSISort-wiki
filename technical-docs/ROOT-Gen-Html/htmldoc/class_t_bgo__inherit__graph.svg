@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 568;
+var viewWidth = 643;
 var viewHeight = 196;
 var sectionId = 'dynsection-0';
 </script>
@@ -54,12 +54,12 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>TBgo</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-192 564,-192 564,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-192 639,-192 639,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="247.5,-56.5 247.5,-75.5 288.5,-75.5 288.5,-56.5 247.5,-56.5"/>
-<text text-anchor="middle" x="268" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TBgo</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="287.5,-56.5 287.5,-75.5 328.5,-75.5 328.5,-56.5 287.5,-56.5"/>
+<text text-anchor="middle" x="308" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TBgo</text>
 </g>
 <!-- Node3 -->
 <g id="node4" class="node">
@@ -73,8 +73,8 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node3 -->
 <g id="edge3" class="edge">
 <title>Node0&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M237.251,-58.6726C192.9814,-48.1232 111.6204,-28.7351 66.086,-17.8843"/>
-<polygon fill="#191970" stroke="#191970" points="236.6063,-62.1169 247.1453,-61.0304 238.229,-55.3076 236.6063,-62.1169"/>
+<path fill="none" stroke="#191970" d="M277.465,-60.3631C232.8708,-52.0422 147.3592,-35.7507 75,-20 72.2169,-19.3942 69.3346,-18.7479 66.4439,-18.0865"/>
+<polygon fill="#191970" stroke="#191970" points="276.902,-63.8183 287.3735,-62.2063 278.1822,-56.9364 276.902,-63.8183"/>
 </g>
 <!-- Node4 -->
 <g id="node5" class="node">
@@ -88,8 +88,8 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node4 -->
 <g id="edge4" class="edge">
 <title>Node0&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M237.7389,-53.8956C212.0714,-43.6286 175.7443,-29.0977 152.032,-19.6128"/>
-<polygon fill="#191970" stroke="#191970" points="236.7579,-57.2727 247.3425,-57.737 239.3576,-50.7734 236.7579,-57.2727"/>
+<path fill="none" stroke="#191970" d="M277.7506,-56.5891C244.6373,-46.2872 191.8401,-29.8614 158.5919,-19.5175"/>
+<polygon fill="#191970" stroke="#191970" points="276.7634,-59.9474 287.3517,-59.5761 278.8429,-53.2634 276.7634,-59.9474"/>
 </g>
 <!-- Node5 -->
 <g id="node6" class="node">
@@ -103,80 +103,95 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node0&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M254.6584,-48.2112C247.5604,-38.7472 239.1097,-27.4797 233.232,-19.6427"/>
-<polygon fill="#191970" stroke="#191970" points="251.8841,-50.3455 260.6842,-56.2455 257.4841,-46.1455 251.8841,-50.3455"/>
+<path fill="none" stroke="#191970" d="M285.289,-50.49C270.8212,-40.6096 252.532,-28.1194 240.1196,-19.6427"/>
+<polygon fill="#191970" stroke="#191970" points="283.4848,-53.4962 293.7167,-56.2455 287.4325,-47.7156 283.4848,-53.4962"/>
 </g>
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="class_t_la_br_bgo.html" target="_top" xlink:title="TLaBrBgo">
-<polygon fill="#ffffff" stroke="#000000" points="279.5,-.5 279.5,-19.5 342.5,-19.5 342.5,-.5 279.5,-.5"/>
-<text text-anchor="middle" x="311" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TLaBrBgo</text>
+<g id="a_node7"><a xlink:href="class_t_ifin_bgo.html" target="_top" xlink:title="TIfinBgo">
+<polygon fill="#ffffff" stroke="#000000" points="280,-.5 280,-19.5 336,-19.5 336,-.5 280,-.5"/>
+<text text-anchor="middle" x="308" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TIfinBgo</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node0&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M281.6592,-48.2112C288.9263,-38.7472 297.5781,-27.4797 303.5958,-19.6427"/>
-<polygon fill="#191970" stroke="#191970" points="278.8043,-46.1824 275.49,-56.2455 284.3564,-50.4456 278.8043,-46.1824"/>
+<path fill="none" stroke="#191970" d="M308,-46.1575C308,-37.155 308,-26.9199 308,-19.6427"/>
+<polygon fill="#191970" stroke="#191970" points="304.5001,-46.2455 308,-56.2455 311.5001,-46.2456 304.5001,-46.2455"/>
 </g>
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="class_t_tdr_clover_bgo.html" target="_top" xlink:title="TTdrCloverBgo">
-<polygon fill="#ffffff" stroke="#000000" points="360.5,-.5 360.5,-19.5 449.5,-19.5 449.5,-.5 360.5,-.5"/>
-<text text-anchor="middle" x="405" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TTdrCloverBgo</text>
+<g id="a_node8"><a xlink:href="class_t_la_br_bgo.html" target="_top" xlink:title="TLaBrBgo">
+<polygon fill="#ffffff" stroke="#000000" points="354.5,-.5 354.5,-19.5 417.5,-19.5 417.5,-.5 354.5,-.5"/>
+<text text-anchor="middle" x="386" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TLaBrBgo</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node0&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M297.9246,-53.768C323.063,-43.4925 358.4851,-29.0134 381.5912,-19.5686"/>
-<polygon fill="#191970" stroke="#191970" points="296.4425,-50.5927 288.5103,-57.6162 299.0912,-57.0723 296.4425,-50.5927"/>
+<path fill="none" stroke="#191970" d="M329.9936,-50.2097C343.6929,-40.3743 360.8736,-28.0394 372.5691,-19.6427"/>
+<polygon fill="#191970" stroke="#191970" points="327.6686,-47.5703 321.5866,-56.2455 331.7511,-53.2566 327.6686,-47.5703"/>
 </g>
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="class_t_tdr_tigress_bgo.html" target="_top" xlink:title="TTdrTigressBgo">
-<polygon fill="#ffffff" stroke="#000000" points="468,-.5 468,-19.5 560,-19.5 560,-.5 468,-.5"/>
-<text text-anchor="middle" x="514" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TTdrTigressBgo</text>
+<g id="a_node9"><a xlink:href="class_t_tdr_clover_bgo.html" target="_top" xlink:title="TTdrCloverBgo">
+<polygon fill="#ffffff" stroke="#000000" points="435.5,-.5 435.5,-19.5 524.5,-19.5 524.5,-.5 435.5,-.5"/>
+<text text-anchor="middle" x="480" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TTdrCloverBgo</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node0&#45;&gt;Node8</title>
-<path fill="none" stroke="#191970" d="M298.3117,-59.0998C342.0247,-49.1488 422.9177,-30.7342 472.2531,-19.5034"/>
-<polygon fill="#191970" stroke="#191970" points="297.5244,-55.6894 288.5507,-61.3218 299.0782,-62.5148 297.5244,-55.6894"/>
+<path fill="none" stroke="#191970" d="M338.3561,-56.1166C369.996,-45.8152 419.2447,-29.7808 450.5452,-19.5899"/>
+<polygon fill="#191970" stroke="#191970" points="337.1724,-52.8211 328.7472,-59.2451 339.3395,-59.4772 337.1724,-52.8211"/>
+</g>
+<!-- Node9 -->
+<g id="node10" class="node">
+<title>Node9</title>
+<g id="a_node10"><a xlink:href="class_t_tdr_tigress_bgo.html" target="_top" xlink:title="TTdrTigressBgo">
+<polygon fill="#ffffff" stroke="#000000" points="543,-.5 543,-19.5 635,-19.5 635,-.5 543,-.5"/>
+<text text-anchor="middle" x="589" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TTdrTigressBgo</text>
+</a>
+</g>
+</g>
+<!-- Node0&#45;&gt;Node9 -->
+<g id="edge9" class="edge">
+<title>Node0&#45;&gt;Node9</title>
+<path fill="none" stroke="#191970" d="M338.7045,-59.881C387.9852,-50.0599 485.0408,-30.7179 542.7437,-19.2183"/>
+<polygon fill="#191970" stroke="#191970" points="337.7857,-56.4952 328.6626,-61.8822 339.1538,-63.3602 337.7857,-56.4952"/>
 </g>
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
 <g id="a_node2"><a xlink:href="class_t_detector.html" target="_top" xlink:title="TDetector">
-<polygon fill="#ffffff" stroke="#000000" points="235.5,-112.5 235.5,-131.5 300.5,-131.5 300.5,-112.5 235.5,-112.5"/>
-<text text-anchor="middle" x="268" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TDetector</text>
+<polygon fill="#ffffff" stroke="#000000" points="275.5,-112.5 275.5,-131.5 340.5,-131.5 340.5,-112.5 275.5,-112.5"/>
+<text text-anchor="middle" x="308" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TDetector</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node0 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node0</title>
-<path fill="none" stroke="#191970" d="M268,-102.1575C268,-93.155 268,-82.9199 268,-75.6427"/>
-<polygon fill="#191970" stroke="#191970" points="264.5001,-102.2455 268,-112.2455 271.5001,-102.2456 264.5001,-102.2455"/>
+<path fill="none" stroke="#191970" d="M308,-102.1575C308,-93.155 308,-82.9199 308,-75.6427"/>
+<polygon fill="#191970" stroke="#191970" points="304.5001,-102.2455 308,-112.2455 311.5001,-102.2456 304.5001,-102.2455"/>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<polygon fill="#ffffff" stroke="#bfbfbf" points="241,-168.5 241,-187.5 295,-187.5 295,-168.5 241,-168.5"/>
-<text text-anchor="middle" x="268" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TObject</text>
+<polygon fill="#ffffff" stroke="#bfbfbf" points="281,-168.5 281,-187.5 335,-187.5 335,-168.5 281,-168.5"/>
+<text text-anchor="middle" x="308" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TObject</text>
 </g>
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node1</title>
-<path fill="none" stroke="#191970" d="M268,-158.1575C268,-149.155 268,-138.9199 268,-131.6427"/>
-<polygon fill="#191970" stroke="#191970" points="264.5001,-158.2455 268,-168.2455 271.5001,-158.2456 264.5001,-158.2455"/>
+<path fill="none" stroke="#191970" d="M308,-158.1575C308,-149.155 308,-138.9199 308,-131.6427"/>
+<polygon fill="#191970" stroke="#191970" points="304.5001,-158.2455 308,-168.2455 311.5001,-158.2456 304.5001,-158.2455"/>
 </g>
 </g>
 </svg>

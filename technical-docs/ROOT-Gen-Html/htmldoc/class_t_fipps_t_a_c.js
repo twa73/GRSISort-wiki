@@ -14,5 +14,6 @@ var class_t_fipps_t_a_c =
     [ "GetTACHit", "class_t_fipps_t_a_c.html#a431e049372689d8bd0badb5eac0bbc30", null ],
     [ "operator=", "class_t_fipps_t_a_c.html#a84ed92d6cbc8b2900626181791496778", null ],
     [ "Print", "class_t_fipps_t_a_c.html#ac402fe52da40616fb5bbac9e3a9d53ef", null ],
+    [ "Print", "class_t_fipps_t_a_c.html#a7e03475040f0b80a2fa591eb622faceb", null ],
     [ "fHits", "class_t_fipps_t_a_c.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ]
 ];

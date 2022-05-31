@@ -10,6 +10,7 @@ var class_t_unpacked_event =
     [ "GetDetector", "class_t_unpacked_event.html#a7c3278b80d951ff1c414febf57fb1003", null ],
     [ "GetDetector", "class_t_unpacked_event.html#a42c9be8d62b135c8f45382c7b3b85610", null ],
     [ "GetDetectors", "class_t_unpacked_event.html#aaa3cf8f1fc833de1b296130c01410dcd", null ],
+    [ "SetRawData", "class_t_unpacked_event.html#a121453e041f83c2cf78ed16c2cdb7be2", null ],
     [ "Size", "class_t_unpacked_event.html#aa12abad191b215a386606300f11f23cd", null ],
     [ "fDetectors", "class_t_unpacked_event.html#a49817fa08d75507a565029f5f8c83a8f", null ],
     [ "fFragments", "class_t_unpacked_event.html#ad785aba59778188400b8b1a75afce23c", null ]

@@ -4,7 +4,6 @@ var searchData=
   ['s0',['s0',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a9a9509c6a2f10b06813a31b81c597752',1,'TPulseAnalyzer::WaveFormPar']]],
   ['s1',['s1',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a4d20d8b313eafd25cd87ff69104dbf90',1,'TPulseAnalyzer::WaveFormPar']]],
   ['s2',['s2',['../struct_t_pulse_analyzer_1_1_wave_form_par.html#a1acdb212f063b04abc659f4e00c7e0d6',1,'TPulseAnalyzer::WaveFormPar']]],
-  ['sbin',['sbin',['../_caen_analysis_selector_8_c.html#a26b0cb745a10c3cb1d8b3788dec25543',1,'sbin():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#a26b0cb745a10c3cb1d8b3788dec25543',1,'sbin():&#160;GenericSelector.C']]],
   ['segetx',['sEgetX',['../class_t_s_r_i_m.html#a485d9bcf03799849bdc6d2fbcfdde9e7',1,'TSRIM']]],
   ['segmentfragments',['SegmentFragments',['../class_t_tigress.html#aaff2fd9ddb8b587c73fa0c3971fe87b7',1,'TTigress']]],
   ['senergyloss',['sEnergyLoss',['../class_t_s_r_i_m.html#a2cfc588898e323c424d1f1ade01a69f0',1,'TSRIM']]],
@@ -23,7 +22,6 @@ var searchData=
   ['startedproof',['startedProof',['../grsiproof_8cxx.html#a43d82899d0debf7098583ec99891e9d0',1,'grsiproof.cxx']]],
   ['startguithread',['StartGuiThread',['../namespacepygui_1_1grut-view.html#a666e2060a2ba388a7fb63b9ff4c1e992',1,'pygui::grut-view']]],
   ['status_5fbar',['status_bar',['../classpygui_1_1mainwindow_1_1_main_window.html#a6b24bf70d1c4a8b06fc7bc7888658c23',1,'pygui::mainwindow::MainWindow']]],
-  ['sx',['sx',['../_caen_analysis_selector_8_c.html#afdc197570c735e7e9eab5ee065500090',1,'sx():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#afdc197570c735e7e9eab5ee065500090',1,'sx():&#160;GenericSelector.C']]],
-  ['sxgete',['sXgetE',['../class_t_s_r_i_m.html#ac2e619b38316f3deb42fe0925c468440',1,'TSRIM']]],
-  ['sy',['sy',['../_caen_analysis_selector_8_c.html#a969933eb4ae8b2e39e355bf35e44fe42',1,'sy():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#a969933eb4ae8b2e39e355bf35e44fe42',1,'sy():&#160;GenericSelector.C']]]
+  ['subtype',['subType',['../struct_rlmd_file_header.html#a2ad865bda13f69cf730d7ee62973d714',1,'RlmdFileHeader::subType()'],['../struct_rlmd_file_footer.html#a7799ee1f15a5729e06e8d0756d43ddb3',1,'RlmdFileFooter::subType()'],['../struct_rlmd_buffer_header.html#a38ec055ada2923b2332d48bc5997d4d2',1,'RlmdBufferHeader::subType()']]],
+  ['sxgete',['sXgetE',['../class_t_s_r_i_m.html#ac2e619b38316f3deb42fe0925c468440',1,'TSRIM']]]
 ];

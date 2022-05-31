@@ -53,6 +53,7 @@ var class_t_tigress =
     [ "GetVectorsBuilt", "class_t_tigress.html#a2f69e2d14a5edf90afdeab1ecf97d9af", null ],
     [ "operator=", "class_t_tigress.html#ac41fc2ac871304f0f5a5c4edfdf1b414", null ],
     [ "Print", "class_t_tigress.html#af010faa8c2265fb7be235bbf6b765341", null ],
+    [ "Print", "class_t_tigress.html#a4ac30f3ef6590950dc44ed31b954e705", null ],
     [ "ResetAddback", "class_t_tigress.html#a3fd59ab24fd9d8fab63e7baedbfd79b2", null ],
     [ "SetAddbackCriterion", "class_t_tigress.html#a199a29676b863affb87c44117e344a9e", null ],
     [ "SetArrayBackPos", "class_t_tigress.html#a9784810b3103c7a6e283d5bda245e904", null ],

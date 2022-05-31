@@ -15,13 +15,10 @@ The compiled utilities are automatically compiled when `make utils` is run in th
 -----------------------------------------
 List of Utilities
 -----------------------------------------
-Utilities, such as analysis scripts, are kept in the **util** directory. Below are a list of useful utilities and how to use them. The compiled utilities are listed as the binary name (ie without the ".C" extension).
-  * **Root2Rad**
-  * **MakeTimeDiffSpec**
-  * **MakeMatrices**
-  * **html_generator.C**
-  * **odbgains.C**
-  * **bufferclean**
-  * **offsetfind**
-  * **offsetfix**
+Utilities, such as analysis scripts, are kept in the **util** directory.
+Below is an incomplete list of useful utilities and how to use them.
+The compiled utilities are listed as the binary name (ie without the ".cxx" extension).
+  * **Root2Rad** this program converts all histograms (1D and 2D) into radware-type histograms and matrices and put's them in a new folder with the name of the root-file they come from.
+  * **WriteCalToRoot** this programs takes a cal-file and either updates or replaces the calibration of all provided root-files with it.
+  * **html_generator.C** this script generates the old html documentation of the classes and functions in GRSISort (deprecated, use doxygen instead).
         

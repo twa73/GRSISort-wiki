@@ -15,6 +15,7 @@ var class_t_bgo =
     [ "GetPosition", "class_t_bgo.html#a202127adcc280ddb063ff7429822ce30", null ],
     [ "operator=", "class_t_bgo.html#a3912c491450ed1564dead68529bc34b1", null ],
     [ "Print", "class_t_bgo.html#af5918349419ed07c832590d122e73a2e", null ],
+    [ "Print", "class_t_bgo.html#a58c8bd71049b0aa355bb3d8ded28ddcb", null ],
     [ "fHits", "class_t_bgo.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ],
     [ "gScintPosition", "class_t_bgo.html#aa24552a6c25b1817ef6afc1d80f2fa1c", null ]
 ];

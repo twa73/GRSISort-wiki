@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('class_t_singleton.html','');});
 <div class="textblock"><h3>template&lt;class T&gt;<br />
 class TSingleton&lt; T &gt;</h3>
 
-<p>This class is intended as a base class for singletons, especially those that are written to file. The <a class="el" href="class_t_singleton.html#ad34b50d44153d55f27468a8e89a7c169">Get()</a> function is written such that it reads the class from file if needed. This is the case if it hasn't been read yet, or if the gDirectory has been changed. This means in a loop over different input files, <a class="el" href="class_t_singleton.html#ad34b50d44153d55f27468a8e89a7c169">Get()</a> will always return the info of the current file. </p>
+<p>This class is intended as a base class for singletons, especially those that are written to file. The <a class="el" href="class_t_singleton.html#adcbdbfceaf80365543daea9518c6e6ba">Get()</a> function is written such that it reads the class from file if needed. This is the case if it hasn't been read yet, or if the gDirectory has been changed. This means in a loop over different input files, <a class="el" href="class_t_singleton.html#adcbdbfceaf80365543daea9518c6e6ba">Get()</a> will always return the info of the current file. </p>
 
 <p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00031">31</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 </div><table class="memberdecls">
@@ -105,8 +105,8 @@ class TSingleton&lt; T &gt;</h3>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f7267a1f4ee117043f2d1afcbf98167"><td class="memItemLeft" align="right" valign="top">static T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#a2f7267a1f4ee117043f2d1afcbf98167">AddCurrent</a> ()</td></tr>
 <tr class="separator:a2f7267a1f4ee117043f2d1afcbf98167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34b50d44153d55f27468a8e89a7c169"><td class="memItemLeft" align="right" valign="top">static T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#ad34b50d44153d55f27468a8e89a7c169">Get</a> ()</td></tr>
-<tr class="separator:ad34b50d44153d55f27468a8e89a7c169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbdbfceaf80365543daea9518c6e6ba"><td class="memItemLeft" align="right" valign="top">static T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#adcbdbfceaf80365543daea9518c6e6ba">Get</a> (bool verbose=false)</td></tr>
+<tr class="separator:adcbdbfceaf80365543daea9518c6e6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe224e59765edfecf18f8e04443543cf"><td class="memItemLeft" align="right" valign="top">static T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#abe224e59765edfecf18f8e04443543cf">GetAll</a> ()</td></tr>
 <tr class="separator:abe224e59765edfecf18f8e04443543cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f3382a25957ab5bad96a9f083d6e176"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_singleton.html#a2f3382a25957ab5bad96a9f083d6e176">PrintDirectory</a> ()</td></tr>
@@ -170,12 +170,12 @@ template&lt;class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00136">136</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00137">137</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
 </div>
 </div>
-<a id="ad34b50d44153d55f27468a8e89a7c169"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad34b50d44153d55f27468a8e89a7c169">&#9670;&nbsp;</a></span>Get()</h2>
+<a id="adcbdbfceaf80365543daea9518c6e6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcbdbfceaf80365543daea9518c6e6ba">&#9670;&nbsp;</a></span>Get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +188,8 @@ template&lt;class T&gt; </div>
         <tr>
           <td class="memname">static T* <a class="el" href="class_t_singleton.html">TSingleton</a>&lt; T &gt;::Get </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>verbose</em> = <code>false</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -201,7 +202,7 @@ template&lt;class T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00034">34</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_singleton_8h_source.html#l00136">TSingleton&lt; TParsingDiagnostics &gt;::AddCurrent()</a>, and <a class="el" href="_t_singleton_8h_source.html#l00061">TSingleton&lt; TParsingDiagnostics &gt;::GetAll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_singleton_8h_source.html#l00137">TSingleton&lt; TParsingDiagnostics &gt;::AddCurrent()</a>, and <a class="el" href="_t_singleton_8h_source.html#l00062">TSingleton&lt; TParsingDiagnostics &gt;::GetAll()</a>.</p>
 
 </div>
 </div>
@@ -230,7 +231,7 @@ template&lt;class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00061">61</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00062">62</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
 </div>
 </div>
@@ -259,9 +260,9 @@ template&lt;class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00165">165</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00166">166</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_run_info_8cxx_source.html#l00075">TRunInfo::Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_run_info_8cxx_source.html#l00083">TRunInfo::Print()</a>.</p>
 
 </div>
 </div>
@@ -291,7 +292,7 @@ template&lt;class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00128">128</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_singleton_8h_source.html#l00129">129</a> of file <a class="el" href="_t_singleton_8h_source.html">TSingleton.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_singleton_8h_source.html#l00034">TSingleton&lt; TParsingDiagnostics &gt;::Get()</a>.</p>
 
@@ -303,7 +304,7 @@ template&lt;class T&gt; </div>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Sat Jun 19 2021 00:49:52.
+GRSISort (4.0.0.3 ) Reference Guide Generated on Tue May 31 2022 14:09:05.
 </small>
 </div>
 </body>

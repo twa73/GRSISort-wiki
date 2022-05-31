@@ -36,6 +36,7 @@ var class_t_g_r_s_i_data_parser =
       [ "kBadBank", "class_t_g_r_s_i_data_parser.html#a15f211d3ac0d266938df54c9b49b054daefd8495d736af32e01e7d8feb296a7cf", null ],
       [ "kBadModuleType", "class_t_g_r_s_i_data_parser.html#a15f211d3ac0d266938df54c9b49b054daa3bafcb3c4fa702302284b977d7a345b", null ],
       [ "kEndOfData", "class_t_g_r_s_i_data_parser.html#a15f211d3ac0d266938df54c9b49b054da6da206a205043815b0b09e53a0b9a04e", null ],
+      [ "kBadRFScalerWord", "class_t_g_r_s_i_data_parser.html#a15f211d3ac0d266938df54c9b49b054da1a8ed75785d04d1e1b2cd9b073145d3e", null ],
       [ "kUndefined", "class_t_g_r_s_i_data_parser.html#a15f211d3ac0d266938df54c9b49b054da7934d40c7c17315d892e8d5d745b1c66", null ]
     ] ],
     [ "TGRSIDataParser", "class_t_g_r_s_i_data_parser.html#afb9a5ab4038e4430e42f88457970d033", null ],
@@ -58,6 +59,7 @@ var class_t_g_r_s_i_data_parser =
     [ "ProcessGriffin", "class_t_g_r_s_i_data_parser.html#a7da3833a666388d269594b82b2304c4f", null ],
     [ "Push", "class_t_g_r_s_i_data_parser.html#a6ad5f0a0a30591a25b459bbd7c165d01", null ],
     [ "Push", "class_t_g_r_s_i_data_parser.html#adf3b88dd6c7d22ed9b07dd9a5475e230", null ],
+    [ "RFScalerToFragment", "class_t_g_r_s_i_data_parser.html#a9e8e453a81f6d131de05a066f2710d76", null ],
     [ "ScalerOutputQueue", "class_t_g_r_s_i_data_parser.html#a4a946ac4010681a2a8739fe6d50d44fe", null ],
     [ "SCLRToScalar", "class_t_g_r_s_i_data_parser.html#a642dd9db8053363e36f8fe99a45c6e47", null ],
     [ "SetFinished", "class_t_g_r_s_i_data_parser.html#a2b4da169e70a53a475e2f61e5b01f8d9", null ],
@@ -97,6 +99,7 @@ var class_t_g_r_s_i_data_parser =
     [ "fFragmentIdMap", "class_t_g_r_s_i_data_parser.html#a08607f54fcf6e8ab8e752706f9aaf8d6", null ],
     [ "fFragmentMap", "class_t_g_r_s_i_data_parser.html#a92863b954c68cbaf465388ffba9403e0", null ],
     [ "fGoodOutputQueues", "class_t_g_r_s_i_data_parser.html#ac09a169ef95b7bc7b80eeccaac285d5d", null ],
+    [ "fIgnoreMissingChannel", "class_t_g_r_s_i_data_parser.html#aa8ee56d8648097cce4239c16d07c2636", null ],
     [ "fInputSize", "class_t_g_r_s_i_data_parser.html#a5a6385178b5e92b058c3dc8281a023c9", null ],
     [ "fItemsPopped", "class_t_g_r_s_i_data_parser.html#ad91a22364e23092ebd4e0b608ebfe7fd", null ],
     [ "fLastDaqId", "class_t_g_r_s_i_data_parser.html#a77c5414b65cc89795c4641f36c3be2c3", null ],

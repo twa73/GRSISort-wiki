@@ -15,6 +15,7 @@ var class_t_suppressed =
     [ "GetHitVector", "class_t_suppressed.html#a090d52d270ae5065f5397bdcb7e7f465", null ],
     [ "GetMultiplicity", "class_t_suppressed.html#a9d5c07abd73ec148fe0adbee0c7c1eec", null ],
     [ "Print", "class_t_suppressed.html#a16143affb8db86547ab1ee1d37f5704c", null ],
+    [ "Print", "class_t_suppressed.html#a1d7a4f9d8b48783b9c53ef1177270cc9", null ],
     [ "SuppressionCriterion", "class_t_suppressed.html#acf476f552774e10dbd87d1377d4e1a00", null ],
     [ "fHits", "class_t_suppressed.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ]
 ];

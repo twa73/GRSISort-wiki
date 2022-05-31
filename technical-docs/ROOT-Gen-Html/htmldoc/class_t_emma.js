@@ -27,6 +27,7 @@ var class_t_emma =
     [ "GetTriggerMultiplicity", "class_t_emma.html#a25150f67705c6526603c0fcfc3ea7ffa", null ],
     [ "operator=", "class_t_emma.html#a2014ca36cd5be0b6755d41c02e12cf48", null ],
     [ "Print", "class_t_emma.html#a0c44b7eeab662b8e8cd96d620d97dc40", null ],
+    [ "Print", "class_t_emma.html#a389ef0720e76126d2dcc548737e8629f", null ],
     [ "fAnodeTrigger", "class_t_emma.html#ac5ebc70cfdcdb1a96a251495a1088055", null ],
     [ "fEmmaAnodeHits", "class_t_emma.html#a05274b7b1b64626a3a13dd7b7909e027", null ],
     [ "fEmmaICHits", "class_t_emma.html#ad1990a416a8addf3741ef206e898d519", null ],

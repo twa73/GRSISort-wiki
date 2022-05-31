@@ -34,6 +34,7 @@ var class_t_fipps_la_br =
     [ "IsSuppressed", "class_t_fipps_la_br.html#ab0e119bf9d0e5c747ddc39659ebc66d4", null ],
     [ "operator=", "class_t_fipps_la_br.html#ac144c711a997bc48122420d172149e35", null ],
     [ "Print", "class_t_fipps_la_br.html#ad9900d8dd6731ddccae2757a634d87ab", null ],
+    [ "Print", "class_t_fipps_la_br.html#ab7109fa0f03e4e95b4e5916542a775bc", null ],
     [ "ResetSuppressed", "class_t_fipps_la_br.html#af324493e4165c8665dd4599395b386ef", null ],
     [ "SetBitNumber", "class_t_fipps_la_br.html#ab69001a138bfd76eff19d947e668110f", null ],
     [ "SetSuppressed", "class_t_fipps_la_br.html#a0c898b3f63c8499060640ab3cc72aa89", null ],

@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['gainmatchselector',['GainMatchSelector',['../class_gain_match_selector.html',1,'']]],
   ['gbrowserplugin',['GBrowserPlugin',['../class_g_browser_plugin.html',1,'']]],
   ['gcanvas',['GCanvas',['../class_g_canvas.html',1,'']]],
   ['gcube',['GCube',['../class_g_cube.html',1,'']]],
   ['gcubed',['GCubeD',['../class_g_cube_d.html',1,'']]],
   ['gcubef',['GCubeF',['../class_g_cube_f.html',1,'']]],
-  ['genericselector',['GenericSelector',['../class_generic_selector.html',1,'']]],
   ['ggaus',['GGaus',['../class_g_gaus.html',1,'']]],
   ['gh1d',['GH1D',['../class_g_h1_d.html',1,'']]],
   ['gh2base',['GH2Base',['../class_g_h2_base.html',1,'']]],

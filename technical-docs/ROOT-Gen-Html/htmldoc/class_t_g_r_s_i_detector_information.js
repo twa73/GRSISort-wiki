@@ -36,12 +36,14 @@ var class_t_g_r_s_i_detector_information =
     [ "SetSpice", "class_t_g_r_s_i_detector_information.html#ab7968723c536e874ccdd3bbe392047ee", null ],
     [ "SetTigress", "class_t_g_r_s_i_detector_information.html#ab7f547d54b5934c3ae0e49387586b179", null ],
     [ "SetTip", "class_t_g_r_s_i_detector_information.html#acf35a852f5b32c2924210baa604bae8a", null ],
+    [ "SetTrific", "class_t_g_r_s_i_detector_information.html#a692065a29f568211f8298853c21fe56f", null ],
     [ "SetTriFoil", "class_t_g_r_s_i_detector_information.html#a11497439bdc6c604b841879f9ae06dcc", null ],
     [ "SetZeroDegree", "class_t_g_r_s_i_detector_information.html#a75d7fa838e36d5f4a75b3d16bf7c8f1f", null ],
     [ "Sharc", "class_t_g_r_s_i_detector_information.html#a9ddbb28502f245c6f49df94e07b2ffb6", null ],
     [ "Spice", "class_t_g_r_s_i_detector_information.html#a398dce8f69d88a27d13b5150f4e2b60f", null ],
     [ "Tigress", "class_t_g_r_s_i_detector_information.html#aa3b6b7627c3e15775dddac064db2ae0f", null ],
     [ "Tip", "class_t_g_r_s_i_detector_information.html#a6bc79207b904f95b75868fa6d0c924ab", null ],
+    [ "Trific", "class_t_g_r_s_i_detector_information.html#a9721719418e2c66cb2c579f2102b78a7", null ],
     [ "TriFoil", "class_t_g_r_s_i_detector_information.html#a1154f92c728b564d381b85cd66f7a43c", null ],
     [ "ZeroDegree", "class_t_g_r_s_i_detector_information.html#a48e2076758b2b51d955934d978688b99", null ],
     [ "fBambino", "class_t_g_r_s_i_detector_information.html#af4af5b5b2e320ca264907cb967ac0fea", null ],
@@ -62,6 +64,7 @@ var class_t_g_r_s_i_detector_information =
     [ "fSpice", "class_t_g_r_s_i_detector_information.html#a0a8cc9695ddcca70b23dd8dced582ee3", null ],
     [ "fTigress", "class_t_g_r_s_i_detector_information.html#a531bca574aab3253172a9d3fcc0bd95d", null ],
     [ "fTip", "class_t_g_r_s_i_detector_information.html#a3079cb084f923d9ed00163e449ff92dc", null ],
+    [ "fTrific", "class_t_g_r_s_i_detector_information.html#a5b066734c931554b4453461f52ee15d3", null ],
     [ "fTriFoil", "class_t_g_r_s_i_detector_information.html#a49730a4d050ced148d7e7d688d51c609", null ],
     [ "fZeroDegree", "class_t_g_r_s_i_detector_information.html#a98becede2ca04978e705033a5960e29b", null ]
 ];

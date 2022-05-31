@@ -15,6 +15,7 @@ var class_t_tdr_si_li =
     [ "GetTdrSiLiHit", "class_t_tdr_si_li.html#a6ff9eada33bcee8f8c1124814c160cb6", null ],
     [ "operator=", "class_t_tdr_si_li.html#a5cfea8e560b17876fa7733358f6f1fa9", null ],
     [ "Print", "class_t_tdr_si_li.html#a34a98ed0afb76575e9f184d603a44d4d", null ],
+    [ "Print", "class_t_tdr_si_li.html#a9e292f1f22a0564d4b119161eafd96ed", null ],
     [ "SetCoreWave", "class_t_tdr_si_li.html#a19a8ab5aeebbb48a2d6dd94a45006d3b", null ],
     [ "fHits", "class_t_tdr_si_li.html#a13ea06ba385aabcf09c1ea5a70d8145b", null ],
     [ "fSetCoreWave", "class_t_tdr_si_li.html#a83188503822f9571085bd8ed36f0fb4f", null ]

@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['p',['p',['../test_peak_fitter_8_c.html#a5657009fd0ca3e03d926accd16066148',1,'testPeakFitter.C']]],
   ['parent',['parent',['../class_g_h1_d.html#a682f81bca22f439ffd0bf86a725132ee',1,'GH1D']]],
-  ['pbin',['pbin',['../_caen_analysis_selector_8_c.html#a60caa9b2c3145fd9c4e55dde95b55111',1,'pbin():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#a60caa9b2c3145fd9c4e55dde95b55111',1,'pbin():&#160;GenericSelector.C']]],
-  ['pf',['pf',['../test_peak_fitter_8_c.html#a613f2a6730079dbc78b574e254a525dd',1,'testPeakFitter.C']]],
   ['pileup_5freject',['pileup_reject',['../_cross_talk_8_c.html#a00ae608ab7b839d10f7bc021fba822cf',1,'CrossTalk.C']]],
   ['pin_5fbaseline_5frange',['PIN_BASELINE_RANGE',['../class_t_pulse_analyzer.html#a9e7eb9ae5921e9129ac533b7fbb64983',1,'TPulseAnalyzer']]],
   ['plotlocation',['plotlocation',['../classpygui_1_1mainwindow_1_1_main_window.html#a146c1a0bc305f547c8673cbb92f555ee',1,'pygui::mainwindow::MainWindow']]],
@@ -12,9 +9,5 @@ var searchData=
   ['prev_5fstatus',['prev_status',['../class_suppress_t_h1_g_directory.html#a8c553de0ba7099e41bb840bdd6bfa365',1,'SuppressTH1GDirectory']]],
   ['projection_5faxis',['projection_axis',['../class_g_h1_d.html#aec5194ebcb54ac57982f9fa1ce3fe28f',1,'GH1D']]],
   ['ps',['ps',['../_make_griffin_histograms_8cxx.html#a2438a45a0a3a3a4b5fcfa60b2e7097d6',1,'MakeGriffinHistograms.cxx']]],
-  ['pt',['pT',['../class_t_object_wrapper.html#af45121b2845f48eff59617e029d3f6c8',1,'TObjectWrapper']]],
-  ['px',['px',['../_caen_analysis_selector_8_c.html#a9c1e50fd3234caf28c5f65a912b5c16a',1,'px():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#a9c1e50fd3234caf28c5f65a912b5c16a',1,'px():&#160;GenericSelector.C']]],
-  ['pxnl',['pxNL',['../class_generic_selector.html#ac1cadc6489d648d0eef15ec336a4fbc9',1,'GenericSelector']]],
-  ['py',['py',['../_caen_analysis_selector_8_c.html#ad29ba68eddcdfabc5dd4e8e213a0f5cd',1,'py():&#160;CaenAnalysisSelector.C'],['../_generic_selector_8_c.html#ad29ba68eddcdfabc5dd4e8e213a0f5cd',1,'py():&#160;GenericSelector.C']]],
-  ['pynl',['pyNL',['../class_generic_selector.html#a3a1e9dbfa7b8d4e645cbcba0935db84d',1,'GenericSelector']]]
+  ['pt',['pT',['../class_t_object_wrapper.html#af45121b2845f48eff59617e029d3f6c8',1,'TObjectWrapper']]]
 ];

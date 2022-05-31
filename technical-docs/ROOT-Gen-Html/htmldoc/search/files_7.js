@@ -1,15 +1,11 @@
 var searchData=
 [
   ['gainmatchgriffin_2ecxx',['GainMatchGRIFFIN.cxx',['../_gain_match_g_r_i_f_f_i_n_8cxx.html',1,'']]],
-  ['gainmatchselector_2ec',['GainMatchSelector.C',['../_gain_match_selector_8_c.html',1,'']]],
-  ['gainmatchselector_2eh',['GainMatchSelector.h',['../_gain_match_selector_8h.html',1,'']]],
   ['gatebg_2ec',['GateBG.C',['../_gate_b_g_8_c.html',1,'']]],
   ['gcanvas_2ecxx',['GCanvas.cxx',['../_g_canvas_8cxx.html',1,'']]],
   ['gcanvas_2eh',['GCanvas.h',['../_g_canvas_8h.html',1,'']]],
   ['gcube_2ecxx',['GCube.cxx',['../_g_cube_8cxx.html',1,'']]],
   ['gcube_2eh',['GCube.h',['../_g_cube_8h.html',1,'']]],
-  ['genericselector_2ec',['GenericSelector.C',['../_generic_selector_8_c.html',1,'']]],
-  ['genericselector_2eh',['GenericSelector.h',['../_generic_selector_8h.html',1,'']]],
   ['gettreeentries_2ecxx',['GetTreeEntries.cxx',['../_get_tree_entries_8cxx.html',1,'']]],
   ['ggaus_2ecxx',['GGaus.cxx',['../_g_gaus_8cxx.html',1,'']]],
   ['ggaus_2eh',['GGaus.h',['../_g_gaus_8h.html',1,'']]],

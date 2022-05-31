@@ -228,6 +228,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a759ebfc01a1f6f1c5a6f45bfcbacd9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3766ce229efc1ec2b8b78fac646d5bd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a3766ce229efc1ec2b8b78fac646d5bd1">Print</a> (Option_t *opt=&quot;&quot;) const override</td></tr>
 <tr class="separator:a3766ce229efc1ec2b8b78fac646d5bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1806fec26e17dbef9d74b3793495ffed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a1806fec26e17dbef9d74b3793495ffed">Print</a> (std::ostream &amp;out) const override</td></tr>
+<tr class="separator:a1806fec26e17dbef9d74b3793495ffed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dcb36277bd1a20ad03a17aaaa00a6f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a4dcb36277bd1a20ad03a17aaaa00a6f9">ResetAddback</a> ()</td></tr>
 <tr class="separator:a4dcb36277bd1a20ad03a17aaaa00a6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7490ed2eb5dcba5c8ffc09be363576ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_griffin.html#a7490ed2eb5dcba5c8ffc09be363576ac">ResetFlags</a> () const</td></tr>
@@ -627,9 +629,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_t_detector.html#ace91f1e86d601edd8986f191fbc2ae8d">TDetector</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00452">452</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00457">457</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_channel_8h_source.html#l00167">TChannel::GetMnemonic()</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea30f767aa191cd5d261e767fd78393607">TMnemonic::kA</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea3e56c011b37f0bc78fb9eb175c1181c6">TMnemonic::kB</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea091eb6206c7543b67256e7dc4bf2dc48">TMnemonic::kG</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00030">TMnemonic::OutputSensor()</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00026">TMnemonic::SubSystem()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_channel_8cxx_source.html#l01414">TChannel::GetMnemonic()</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea30f767aa191cd5d261e767fd78393607">TMnemonic::kA</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea3e56c011b37f0bc78fb9eb175c1181c6">TMnemonic::kB</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea091eb6206c7543b67256e7dc4bf2dc48">TMnemonic::kG</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00033">TMnemonic::OutputSensor()</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00029">TMnemonic::SubSystem()</a>.</p>
 
 </div>
 </div>
@@ -760,7 +762,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00059">59</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_detector_8cxx_source.html#l00053">TDetector::ClearTransients()</a>, <a class="el" href="_t_griffin_8h_source.html#l00145">fGriffinBits</a>, and <a class="el" href="_t_griffin_8h_source.html#l00137">fGriffinHighGainHits</a>.</p>
+<p class="reference">References <a class="el" href="_t_detector_8cxx_source.html#l00063">TDetector::ClearTransients()</a>, <a class="el" href="_t_griffin_8h_source.html#l00145">fGriffinBits</a>, and <a class="el" href="_t_griffin_8h_source.html#l00137">fGriffinHighGainHits</a>.</p>
 
 </div>
 </div>
@@ -796,7 +798,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="class_t_suppressed.html#a35fc87fb02366cde4a2db665210e7bc3">TSuppressed::Copy()</a>, <a class="el" href="_t_griffin_8h_source.html#l00150">fAddbackHighGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00148">fAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00149">fAddbackLowGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00147">fAddbackLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00144">fCycleStart</a>, <a class="el" href="_t_griffin_8h_source.html#l00145">fGriffinBits</a>, <a class="el" href="_t_griffin_8h_source.html#l00137">fGriffinHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00141">fSetCoreWave</a>, <a class="el" href="_t_griffin_8h_source.html#l00158">fSuppressedAddbackHighGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00156">fSuppressedAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00157">fSuppressedAddbackLowGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00155">fSuppressedAddbackLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00153">fSuppressedHighGainHits</a>, and <a class="el" href="_t_griffin_8h_source.html#l00152">fSuppressedLowGainHits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00267">operator=()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00126">TGriffin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00272">operator=()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00126">TGriffin()</a>.</p>
 
 </div>
 </div>
@@ -848,7 +850,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_suppressed_8h_source.html#l00026">TSuppressed::AddbackCriterion()</a>, <a class="el" href="class_t_detector_hit.html#ada323f08a38cd73186465ecb4f9b72eba7433dc57f9db1fc472789e8796527f19">TDetectorHit::kIsEnergySet</a>, and <a class="el" href="class_t_detector_hit.html#ada323f08a38cd73186465ecb4f9b72eba377ea2e41439f212e05aeb08fc352cb2">TDetectorHit::kIsTimeSet</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_tdr_clover_8cxx_source.html#l00256">TTdrClover::GetAddbackMultiplicity()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00257">TTdrTigress::GetAddbackMultiplicity()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00299">TFipps::GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00402">GetAddbackMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_tdr_clover_8cxx_source.html#l00263">TTdrClover::GetAddbackMultiplicity()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00263">TTdrTigress::GetAddbackMultiplicity()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00310">TFipps::GetAddbackMultiplicity()</a>, <a class="el" href="_t_ifin_8cxx_source.html#l00322">TIfin::GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00407">GetAddbackMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -898,9 +900,9 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_suppressed_8h_source.html#l00065">65</a> of file <a class="el" href="_t_suppressed_8h_source.html">TSuppressed.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_detector_8h_source.html#l00063">TDetector::GetHitVector()</a>, and <a class="el" href="_t_suppressed_8h_source.html#l00027">TSuppressed::SuppressionCriterion()</a>.</p>
+<p class="reference">References <a class="el" href="_t_detector_8h_source.html#l00064">TDetector::GetHitVector()</a>, and <a class="el" href="_t_suppressed_8h_source.html#l00027">TSuppressed::SuppressionCriterion()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_la_br_8cxx_source.html#l00114">TLaBr::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_fipps_la_br_8cxx_source.html#l00102">TFippsLaBr::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_tdr_clover_8cxx_source.html#l00289">TTdrClover::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00290">TTdrTigress::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00274">TFipps::GetSuppressedMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00797">GetSuppressedMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_la_br_8cxx_source.html#l00121">TLaBr::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_fipps_la_br_8cxx_source.html#l00115">TFippsLaBr::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00296">TTdrTigress::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_tdr_clover_8cxx_source.html#l00296">TTdrClover::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00285">TFipps::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_ifin_8cxx_source.html#l00297">TIfin::GetSuppressedMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00801">GetSuppressedMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -956,9 +958,9 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_suppressed_8h_source.html#l00090">90</a> of file <a class="el" href="_t_suppressed_8h_source.html">TSuppressed.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_suppressed_8h_source.html#l00026">TSuppressed::AddbackCriterion()</a>, <a class="el" href="_t_detector_8h_source.html#l00063">TDetector::GetHitVector()</a>, <a class="el" href="class_t_detector_hit.html#ada323f08a38cd73186465ecb4f9b72eba7433dc57f9db1fc472789e8796527f19">TDetectorHit::kIsEnergySet</a>, <a class="el" href="class_t_detector_hit.html#ada323f08a38cd73186465ecb4f9b72eba377ea2e41439f212e05aeb08fc352cb2">TDetectorHit::kIsTimeSet</a>, and <a class="el" href="_t_suppressed_8h_source.html#l00027">TSuppressed::SuppressionCriterion()</a>.</p>
+<p class="reference">References <a class="el" href="_t_suppressed_8h_source.html#l00026">TSuppressed::AddbackCriterion()</a>, <a class="el" href="_t_detector_8h_source.html#l00064">TDetector::GetHitVector()</a>, <a class="el" href="class_t_detector_hit.html#ada323f08a38cd73186465ecb4f9b72eba7433dc57f9db1fc472789e8796527f19">TDetectorHit::kIsEnergySet</a>, <a class="el" href="class_t_detector_hit.html#ada323f08a38cd73186465ecb4f9b72eba377ea2e41439f212e05aeb08fc352cb2">TDetectorHit::kIsTimeSet</a>, and <a class="el" href="_t_suppressed_8h_source.html#l00027">TSuppressed::SuppressionCriterion()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_tdr_clover_8cxx_source.html#l00321">TTdrClover::GetSuppressedAddbackMultiplicity()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00322">TTdrTigress::GetSuppressedAddbackMultiplicity()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00327">TFipps::GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00858">GetSuppressedAddbackMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_tdr_clover_8cxx_source.html#l00328">TTdrClover::GetSuppressedAddbackMultiplicity()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00328">TTdrTigress::GetSuppressedAddbackMultiplicity()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00338">TFipps::GetSuppressedAddbackMultiplicity()</a>, <a class="el" href="_t_ifin_8cxx_source.html#l00350">TIfin::GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00862">GetSuppressedAddbackMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -1002,11 +1004,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00584">584</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00590">590</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_analysis_options_8h_source.html#l00052">TAnalysisOptions::AddbackWindow()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00067">TGRSIOptions::AnalysisOptions()</a>, <a class="el" href="_globals_8h_source.html#l00017">DRED</a>, <a class="el" href="_t_detector_hit_8h_source.html#l00147">TDetectorHit::GetChannel()</a>, <a class="el" href="_t_detector_hit_8cxx_source.html#l00203">TDetectorHit::GetCrystal()</a>, <a class="el" href="_t_channel_8h_source.html#l00197">TChannel::GetCTCoeff()</a>, <a class="el" href="_t_detector_hit_8cxx_source.html#l00185">TDetectorHit::GetDetector()</a>, <a class="el" href="_t_detector_hit_8cxx_source.html#l00084">TDetectorHit::GetEnergy()</a>, <a class="el" href="_t_griffin_hit_8cxx_source.html#l00167">TGriffinHit::GetNoCTEnergy()</a>, and <a class="el" href="_t_g_r_s_i_detector_hit_8cxx_source.html#l00040">TGRSIDetectorHit::GetTime()</a>.</p>
+<p class="reference">References <a class="el" href="_t_analysis_options_8h_source.html#l00052">TAnalysisOptions::AddbackWindow()</a>, <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00068">TGRSIOptions::AnalysisOptions()</a>, <a class="el" href="_globals_8h_source.html#l00017">DRED</a>, <a class="el" href="_t_detector_hit_8h_source.html#l00152">TDetectorHit::GetChannel()</a>, <a class="el" href="_t_detector_hit_8cxx_source.html#l00210">TDetectorHit::GetCrystal()</a>, <a class="el" href="_t_channel_8h_source.html#l00191">TChannel::GetCTCoeff()</a>, <a class="el" href="_t_detector_hit_8cxx_source.html#l00192">TDetectorHit::GetDetector()</a>, <a class="el" href="_t_detector_hit_8cxx_source.html#l00084">TDetectorHit::GetEnergy()</a>, <a class="el" href="_t_griffin_hit_8cxx_source.html#l00172">TGriffinHit::GetNoCTEnergy()</a>, <a class="el" href="_t_detector_hit_8cxx_source.html#l00056">TDetectorHit::GetTime()</a>, and <a class="el" href="_globals_8h_source.html#l00004">RESET_COLOR</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>.</p>
 
 </div>
 </div>
@@ -1034,11 +1036,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00632">632</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00638">638</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00067">TGRSIOptions::AnalysisOptions()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00584">CTCorrectedEnergy()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_analysis_options_8h_source.html#l00048">TAnalysisOptions::IsCorrectingCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00353">SetCrossTalk()</a>, and <a class="el" href="_t_detector_hit_8h_source.html#l00120">TDetectorHit::SetEnergy()</a>.</p>
+<p class="reference">References <a class="el" href="_t_g_r_s_i_options_8h_source.html#l00068">TGRSIOptions::AnalysisOptions()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00590">CTCorrectedEnergy()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00358">SetCrossTalk()</a>, and <a class="el" href="_t_detector_hit_8h_source.html#l00125">TDetectorHit::SetEnergy()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00627">FixHighGainCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00622">FixLowGainCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00402">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00376">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00842">GetSuppressedAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00858">GetSuppressedAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00781">GetSuppressedHit()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00797">GetSuppressedMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00633">FixHighGainCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00628">FixLowGainCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00407">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00381">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00846">GetSuppressedAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00862">GetSuppressedAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00785">GetSuppressedHit()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00801">GetSuppressedMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -1057,9 +1059,9 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00627">627</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00633">633</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
 </div>
 </div>
@@ -1078,9 +1080,9 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00622">622</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00628">628</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
 </div>
 </div>
@@ -1139,11 +1141,11 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00318">318</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00323">323</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00150">fAddbackHighGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00149">fAddbackLowGainFrags</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00402">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00568">GetNAddbackFrags()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00547">ResetAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00407">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00574">GetNAddbackFrags()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00553">ResetAddback()</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1165,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00437">437</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00442">442</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00086">GetAddbackHit()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
@@ -1184,7 +1186,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00397">397</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00402">402</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00083">GetAddbackMultiplicity()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
@@ -1218,7 +1220,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00086">GetAddbackHit()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00132">CaenAnalysisSelector::FillHistograms()</a>, <a class="el" href="_angular_correlation_selector_8_c_source.html#l00162">AngularCorrelationSelector::FillHistograms()</a>, <a class="el" href="_generic_selector_8_c_source.html#l00137">GenericSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00437">GetAddbackHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00086">GetAddbackHit()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00432">GetAddbackLowGainHit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_angular_correlation_selector_8_c_source.html#l00162">AngularCorrelationSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00442">GetAddbackHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00086">GetAddbackHit()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00437">GetAddbackLowGainHit()</a>.</p>
 
 </div>
 </div>
@@ -1256,9 +1258,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00442">442</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00447">447</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00083">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00309">GetAddbackVector()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00083">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00314">GetAddbackVector()</a>.</p>
 
 </div>
 </div>
@@ -1278,7 +1280,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00432">432</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00437">437</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00086">GetAddbackHit()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -1299,7 +1301,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00392">392</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00397">397</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00083">GetAddbackMultiplicity()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -1332,7 +1334,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00083">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00132">CaenAnalysisSelector::FillHistograms()</a>, <a class="el" href="_angular_correlation_selector_8_c_source.html#l00162">AngularCorrelationSelector::FillHistograms()</a>, <a class="el" href="_generic_selector_8_c_source.html#l00137">GenericSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00397">GetAddbackHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00442">GetAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00392">GetAddbackLowGainMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00083">GetAddbackMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_angular_correlation_selector_8_c_source.html#l00162">AngularCorrelationSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00402">GetAddbackHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00447">GetAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00397">GetAddbackLowGainMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00083">GetAddbackMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -1360,9 +1362,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00402">402</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00407">407</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_suppressed_8h_source.html#l00034">TSuppressed::CreateAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00318">GetAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00309">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00327">IsAddbackSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00336">IsCrossTalkSet()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00345">SetAddback()</a>.</p>
+<p class="reference">References <a class="el" href="_t_suppressed_8h_source.html#l00034">TSuppressed::CreateAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00323">GetAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00314">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00332">IsAddbackSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00341">IsCrossTalkSet()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00350">SetAddback()</a>.</p>
 
 </div>
 </div>
@@ -1392,11 +1394,11 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00309">309</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00314">314</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00148">fAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00147">fAddbackLowGainHits</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00442">GetAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00402">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00547">ResetAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00447">GetAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00407">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00553">ResetAddback()</a>.</p>
 
 </div>
 </div>
@@ -1424,7 +1426,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00655">655</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00659">659</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_griffin_c_t_fix_8cxx_source.html#l00030">CrossTalkFix()</a>.</p>
 
@@ -1487,7 +1489,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00522">522</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00528">528</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00168">gCloverPosition</a>.</p>
 
@@ -1511,7 +1513,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00371">371</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00376">376</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00044">GetGriffinHit()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
@@ -1547,7 +1549,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00044">GetGriffinHit()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_beta_gamma_8_c_source.html#l00003">BetaGamma()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00071">exAnalysis()</a>, <a class="el" href="_gain_match_selector_8_c_source.html#l00024">GainMatchSelector::FillHistograms()</a>, <a class="el" href="_time_walk_selector_8_c_source.html#l00071">TimeWalkSelector::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00132">CaenAnalysisSelector::FillHistograms()</a>, <a class="el" href="_angular_correlation_selector_8_c_source.html#l00162">AngularCorrelationSelector::FillHistograms()</a>, <a class="el" href="_generic_selector_8_c_source.html#l00137">GenericSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00371">GetGriffinHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00044">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00366">GetGriffinLowGainHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00361">GetHit()</a>, <a class="el" href="write__cal_8cxx_source.html#l00032">main()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00057">MakeAnalysisHistograms()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_beta_gamma_8_c_source.html#l00003">BetaGamma()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00071">exAnalysis()</a>, <a class="el" href="_alphanumeric_selector_8_c_source.html#l00048">AlphanumericSelector::FillHistograms()</a>, <a class="el" href="_time_walk_selector_8_c_source.html#l00071">TimeWalkSelector::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_angular_correlation_selector_8_c_source.html#l00162">AngularCorrelationSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00376">GetGriffinHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00044">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00371">GetGriffinLowGainHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00366">GetHit()</a>, <a class="el" href="_fragment_analysis_compare_8cxx_source.html#l00015">main()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00049">MakeAnalysisHistograms()</a>.</p>
 
 </div>
 </div>
@@ -1587,9 +1589,9 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00376">376</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00381">381</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00336">IsCrossTalkSet()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00341">IsCrossTalkSet()</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1613,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00366">366</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00371">371</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00044">GetGriffinHit()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -1644,7 +1646,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00137">fGriffinHighGainHits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>.</p>
 
 </div>
 </div>
@@ -1660,7 +1662,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_detector_8cxx_source.html#l00060">60</a> of file <a class="el" href="_t_detector_8cxx_source.html">TDetector.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_detector_8cxx_source.html#l00070">70</a> of file <a class="el" href="_t_detector_8cxx_source.html">TDetector.cxx</a>.</p>
 
 </div>
 </div>
@@ -1680,11 +1682,11 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00361">361</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00366">366</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00044">GetGriffinHit()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ex_analysis_8cxx_source.html#l00071">exAnalysis()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00057">MakeAnalysisHistograms()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ex_analysis_8cxx_source.html#l00071">exAnalysis()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00049">MakeAnalysisHistograms()</a>.</p>
 
 </div>
 </div>
@@ -1712,11 +1714,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_detector_8cxx_source.html#l00060">60</a> of file <a class="el" href="_t_detector_8cxx_source.html">TDetector.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_detector_8cxx_source.html#l00070">70</a> of file <a class="el" href="_t_detector_8cxx_source.html">TDetector.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_detector_8h_source.html#l00066">TDetector::fHits</a>.</p>
+<p class="reference">References <a class="el" href="_t_detector_8h_source.html#l00072">TDetector::fHits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ex_analysis_8cxx_source.html#l00071">exAnalysis()</a>, <a class="el" href="_t_bgo_8h_source.html#l00029">TBgo::GetBgoHit()</a>, <a class="el" href="_t_c_s_m_8h_source.html#l00042">TCSM::GetCSMHit()</a>, <a class="el" href="_t_descant_8h_source.html#l00034">TDescant::GetDescantHit()</a>, <a class="el" href="_t_emma_8h_source.html#l00027">TEmma::GetEmmaHit()</a>, <a class="el" href="_t_fipps_pulser_8h_source.html#l00026">TFippsPulser::GetGenericDetectorHit()</a>, <a class="el" href="_t_generic_detector_8h_source.html#l00026">TGenericDetector::GetGenericDetectorHit()</a>, <a class="el" href="_t_fipps_la_br_8h_source.html#l00046">TFippsLaBr::GetLaBrHit()</a>, <a class="el" href="_t_la_br_8h_source.html#l00046">TLaBr::GetLaBrHit()</a>, <a class="el" href="_t_paces_8h_source.html#l00026">TPaces::GetPacesHit()</a>, <a class="el" href="_t_s3_8h_source.html#l00064">TS3::GetS3Hit()</a>, <a class="el" href="_t_sceptar_8h_source.html#l00034">TSceptar::GetSceptarHit()</a>, <a class="el" href="_t_sharc_8h_source.html#l00027">TSharc::GetSharcHit()</a>, <a class="el" href="_t_si_li_8h_source.html#l00044">TSiLi::GetSiLiHit()</a>, <a class="el" href="_t_t_a_c_8h_source.html#l00034">TTAC::GetTACHit()</a>, <a class="el" href="_t_fipps_t_a_c_8h_source.html#l00034">TFippsTAC::GetTACHit()</a>, <a class="el" href="_t_tdr_clover_8h_source.html#l00044">TTdrClover::GetTdrCloverHit()</a>, <a class="el" href="_t_tdr_plastic_8h_source.html#l00034">TTdrPlastic::GetTdrPlasticHit()</a>, <a class="el" href="_t_tdr_si_li_8h_source.html#l00026">TTdrSiLi::GetTdrSiLiHit()</a>, <a class="el" href="_t_tdr_tigress_8h_source.html#l00044">TTdrTigress::GetTdrTigressHit()</a>, <a class="el" href="_t_tigress_8h_source.html#l00058">TTigress::GetTigressHit()</a>, <a class="el" href="_t_tip_8h_source.html#l00028">TTip::GetTipHit()</a>, <a class="el" href="_t_zero_degree_8h_source.html#l00034">TZeroDegree::GetZeroDegreeHit()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00057">MakeAnalysisHistograms()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ex_analysis_8cxx_source.html#l00071">exAnalysis()</a>, <a class="el" href="_t_bgo_8h_source.html#l00028">TBgo::GetBgoHit()</a>, <a class="el" href="_t_c_s_m_8h_source.html#l00042">TCSM::GetCSMHit()</a>, <a class="el" href="_t_descant_8h_source.html#l00034">TDescant::GetDescantHit()</a>, <a class="el" href="_t_eagle_8h_source.html#l00034">TEagle::GetEagleHit()</a>, <a class="el" href="_t_emma_8h_source.html#l00027">TEmma::GetEmmaHit()</a>, <a class="el" href="_t_generic_detector_8h_source.html#l00026">TGenericDetector::GetGenericDetectorHit()</a>, <a class="el" href="_t_la_br_bgo_8h_source.html#l00018">TLaBrBgo::GetLaBrBgoHit()</a>, <a class="el" href="_t_fipps_la_br_8h_source.html#l00046">TFippsLaBr::GetLaBrHit()</a>, <a class="el" href="_t_la_br_8h_source.html#l00046">TLaBr::GetLaBrHit()</a>, <a class="el" href="_t_paces_8h_source.html#l00026">TPaces::GetPacesHit()</a>, <a class="el" href="_t_s3_8h_source.html#l00064">TS3::GetS3Hit()</a>, <a class="el" href="_t_sceptar_8h_source.html#l00034">TSceptar::GetSceptarHit()</a>, <a class="el" href="_t_sharc_8h_source.html#l00027">TSharc::GetSharcHit()</a>, <a class="el" href="_t_si_li_8h_source.html#l00045">TSiLi::GetSiLiHit()</a>, <a class="el" href="_t_t_a_c_8h_source.html#l00034">TTAC::GetTACHit()</a>, <a class="el" href="_t_fipps_t_a_c_8h_source.html#l00034">TFippsTAC::GetTACHit()</a>, <a class="el" href="_t_tdr_clover_8h_source.html#l00044">TTdrClover::GetTdrCloverHit()</a>, <a class="el" href="_t_tdr_plastic_8h_source.html#l00034">TTdrPlastic::GetTdrPlasticHit()</a>, <a class="el" href="_t_tdr_si_li_8h_source.html#l00026">TTdrSiLi::GetTdrSiLiHit()</a>, <a class="el" href="_t_tdr_tigress_8h_source.html#l00044">TTdrTigress::GetTdrTigressHit()</a>, <a class="el" href="_t_tigress_8h_source.html#l00058">TTigress::GetTigressHit()</a>, <a class="el" href="_t_tip_8h_source.html#l00032">TTip::GetTipHit()</a>, <a class="el" href="_t_trific_8h_source.html#l00050">TTrific::GetTrificHit()</a>, <a class="el" href="_t_zero_degree_8h_source.html#l00034">TZeroDegree::GetZeroDegreeHit()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00049">MakeAnalysisHistograms()</a>.</p>
 
 </div>
 </div>
@@ -1751,7 +1753,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00160">fDefaultGainType</a>, and <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00452">AddFragment()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00402">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00376">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00858">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00797">GetSuppressedMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00457">AddFragment()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00407">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00381">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00862">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00801">GetSuppressedMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -1781,7 +1783,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00300">300</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00305">305</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00137">fGriffinHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00136">fGriffinLowGainHits</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -1813,7 +1815,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00291">291</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00296">296</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00137">fGriffinHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00136">fGriffinLowGainHits</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -1846,7 +1848,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00136">fGriffinLowGainHits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>.</p>
 
 </div>
 </div>
@@ -1879,7 +1881,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00049">GetMultiplicity()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_beta_gamma_8_c_source.html#l00003">BetaGamma()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00071">exAnalysis()</a>, <a class="el" href="_gain_match_selector_8_c_source.html#l00024">GainMatchSelector::FillHistograms()</a>, <a class="el" href="_time_walk_selector_8_c_source.html#l00071">TimeWalkSelector::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00132">CaenAnalysisSelector::FillHistograms()</a>, <a class="el" href="_angular_correlation_selector_8_c_source.html#l00162">AngularCorrelationSelector::FillHistograms()</a>, <a class="el" href="_generic_selector_8_c_source.html#l00137">GenericSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8h_source.html#l00049">GetMultiplicity()</a>, <a class="el" href="_get_tree_entries_8cxx_source.html#l00030">main()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00057">MakeAnalysisHistograms()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_beta_gamma_8_c_source.html#l00003">BetaGamma()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00071">exAnalysis()</a>, <a class="el" href="_alphanumeric_selector_8_c_source.html#l00048">AlphanumericSelector::FillHistograms()</a>, <a class="el" href="_time_walk_selector_8_c_source.html#l00071">TimeWalkSelector::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_angular_correlation_selector_8_c_source.html#l00162">AngularCorrelationSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8h_source.html#l00049">GetMultiplicity()</a>, <a class="el" href="_fragment_analysis_compare_8cxx_source.html#l00015">main()</a>, and <a class="el" href="_make_griffin_histograms_8cxx_source.html#l00049">MakeAnalysisHistograms()</a>.</p>
 
 </div>
 </div>
@@ -1907,7 +1909,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00282">282</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00287">287</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00137">fGriffinHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00136">fGriffinLowGainHits</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -1941,7 +1943,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00093">GetNAddbackFrags()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8h_source.html#l00093">GetNAddbackFrags()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00563">GetNHighGainAddbackFrags()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00558">GetNLowGainAddbackFrags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8h_source.html#l00093">GetNAddbackFrags()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00569">GetNHighGainAddbackFrags()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00564">GetNLowGainAddbackFrags()</a>.</p>
 
 </div>
 </div>
@@ -1979,9 +1981,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00568">568</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00574">574</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00318">GetAddbackFragVector()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00323">GetAddbackFragVector()</a>.</p>
 
 </div>
 </div>
@@ -2001,7 +2003,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00563">563</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00569">569</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00093">GetNAddbackFrags()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
@@ -2023,7 +2025,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00749">749</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00753">753</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00128">GetNSuppressedAddbackFrags()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
@@ -2045,7 +2047,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00558">558</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00564">564</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00093">GetNAddbackFrags()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -2067,7 +2069,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00744">744</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00748">748</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00128">GetNSuppressedAddbackFrags()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -2101,7 +2103,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00128">GetNSuppressedAddbackFrags()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00064">CrossTalk::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00749">GetNHighGainSuppressedAddbackFrags()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00744">GetNLowGainSuppressedAddbackFrags()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00128">GetNSuppressedAddbackFrags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00067">CrossTalk::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00753">GetNHighGainSuppressedAddbackFrags()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00748">GetNLowGainSuppressedAddbackFrags()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00128">GetNSuppressedAddbackFrags()</a>.</p>
 
 </div>
 </div>
@@ -2139,9 +2141,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00907">907</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00911">911</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00772">GetSuppressedAddbackFragVector()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00776">GetSuppressedAddbackFragVector()</a>.</p>
 
 </div>
 </div>
@@ -2187,11 +2189,11 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00490">490</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00496">496</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00168">gCloverPosition</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_angular_correlation_selector_8h_source.html#l00074">AngleCombinations()</a>, <a class="el" href="_t_angular_correlation_8cxx_source.html#l00934">TAngularCorrelation::GenerateAngleMap()</a>, <a class="el" href="_t_angular_correlation_8cxx_source.html#l01084">TAngularCorrelation::GenerateIndexMap()</a>, and <a class="el" href="_t_griffin_hit_8cxx_source.html#l00081">TGriffinHit::GetPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_angular_correlation_selector_8h_source.html#l00074">AngleCombinations()</a>, <a class="el" href="_t_angular_correlation_8cxx_source.html#l00934">TAngularCorrelation::GenerateAngleMap()</a>, <a class="el" href="_t_angular_correlation_8cxx_source.html#l01084">TAngularCorrelation::GenerateIndexMap()</a>, and <a class="el" href="_t_griffin_hit_8cxx_source.html#l00086">TGriffinHit::GetPosition()</a>.</p>
 
 </div>
 </div>
@@ -2221,11 +2223,11 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00772">772</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00776">776</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00158">fSuppressedAddbackHighGainFrags</a>, <a class="el" href="_t_griffin_8h_source.html#l00157">fSuppressedAddbackLowGainFrags</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00907">GetNSuppressedAddbackFrags()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00858">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00896">ResetSuppressedAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00911">GetNSuppressedAddbackFrags()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00862">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00900">ResetSuppressedAddback()</a>.</p>
 
 </div>
 </div>
@@ -2245,7 +2247,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00720">720</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00724">724</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00121">GetSuppressedAddbackHit()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
@@ -2267,7 +2269,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00710">710</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00714">714</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00118">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
@@ -2301,7 +2303,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00121">GetSuppressedAddbackHit()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00064">CrossTalk::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00132">CaenAnalysisSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00720">GetSuppressedAddbackHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00121">GetSuppressedAddbackHit()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00715">GetSuppressedAddbackLowGainHit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00067">CrossTalk::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_example_tree_selector_8_c_source.html#l00053">ExampleTreeSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00724">GetSuppressedAddbackHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00121">GetSuppressedAddbackHit()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00719">GetSuppressedAddbackLowGainHit()</a>.</p>
 
 </div>
 </div>
@@ -2339,9 +2341,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00842">842</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00846">846</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00763">GetSuppressedAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00336">IsCrossTalkSet()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00767">GetSuppressedAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00341">IsCrossTalkSet()</a>.</p>
 
 </div>
 </div>
@@ -2361,7 +2363,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00715">715</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00719">719</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00121">GetSuppressedAddbackHit()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -2383,7 +2385,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00705">705</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00709">709</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00118">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -2417,7 +2419,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00118">GetSuppressedAddbackMultiplicity()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00064">CrossTalk::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00132">CaenAnalysisSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00710">GetSuppressedAddbackHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00705">GetSuppressedAddbackLowGainMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00118">GetSuppressedAddbackMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00067">CrossTalk::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_example_tree_selector_8_c_source.html#l00053">ExampleTreeSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00714">GetSuppressedAddbackHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00709">GetSuppressedAddbackLowGainMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00118">GetSuppressedAddbackMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -2456,9 +2458,9 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 <p>Automatically builds the suppressed addback hits using the fAddbackCriterion (if the size of the fAddbackHits vector is zero) and return the number of suppressed addback hits. </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00858">858</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00862">862</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_suppressed_8h_source.html#l00090">TSuppressed::CreateSuppressedAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00772">GetSuppressedAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00763">GetSuppressedAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00336">IsCrossTalkSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00725">IsSuppressedAddbackSet()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00888">SetSuppressedAddback()</a>.</p>
+<p class="reference">References <a class="el" href="_t_suppressed_8h_source.html#l00090">TSuppressed::CreateSuppressedAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00776">GetSuppressedAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00767">GetSuppressedAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00341">IsCrossTalkSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00729">IsSuppressedAddbackSet()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00892">SetSuppressedAddback()</a>.</p>
 
 </div>
 </div>
@@ -2488,11 +2490,11 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00763">763</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00767">767</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00156">fSuppressedAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00155">fSuppressedAddbackLowGainHits</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00842">GetSuppressedAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00858">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00896">ResetSuppressedAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00846">GetSuppressedAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00862">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00900">ResetSuppressedAddback()</a>.</p>
 
 </div>
 </div>
@@ -2514,7 +2516,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00671">671</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00675">675</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00107">GetSuppressedHit()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
@@ -2536,7 +2538,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00681">681</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00685">685</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00110">GetSuppressedMultiplicity()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>.</p>
 
@@ -2572,7 +2574,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00107">GetSuppressedHit()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00064">CrossTalk::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00132">CaenAnalysisSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00671">GetSuppressedHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00107">GetSuppressedHit()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00666">GetSuppressedLowGainHit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00067">CrossTalk::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00675">GetSuppressedHighGainHit()</a>, <a class="el" href="_t_griffin_8h_source.html#l00107">GetSuppressedHit()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00670">GetSuppressedLowGainHit()</a>.</p>
 
 </div>
 </div>
@@ -2612,9 +2614,9 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00781">781</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00785">785</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00754">GetSuppressedVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00336">IsCrossTalkSet()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00758">GetSuppressedVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00341">IsCrossTalkSet()</a>.</p>
 
 </div>
 </div>
@@ -2636,7 +2638,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00666">666</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00670">670</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00107">GetSuppressedHit()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -2658,7 +2660,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00676">676</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00680">680</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00110">GetSuppressedMultiplicity()</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -2692,7 +2694,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00110">GetSuppressedMultiplicity()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00064">CrossTalk::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_caen_analysis_selector_8_c_source.html#l00132">CaenAnalysisSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00681">GetSuppressedHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00676">GetSuppressedLowGainMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00110">GetSuppressedMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_cross_talk_8_c_source.html#l00067">CrossTalk::FillHistograms()</a>, <a class="el" href="_example_event_selector_8_c_source.html#l00037">ExampleEventSelector::FillHistograms()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00685">GetSuppressedHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00680">GetSuppressedLowGainMultiplicity()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00110">GetSuppressedMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -2731,9 +2733,9 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 <p>Automatically builds the suppressed hits using the fSuppressionCriterion and returns the number of suppressed hits </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00797">797</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00801">801</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_suppressed_8h_source.html#l00065">TSuppressed::CreateSuppressed()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00754">GetSuppressedVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00336">IsCrossTalkSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00686">IsSuppressed()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00824">SetSuppressed()</a>.</p>
+<p class="reference">References <a class="el" href="_t_suppressed_8h_source.html#l00065">TSuppressed::CreateSuppressed()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00758">GetSuppressedVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00341">IsCrossTalkSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00690">IsSuppressed()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00828">SetSuppressed()</a>.</p>
 
 </div>
 </div>
@@ -2763,11 +2765,11 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00754">754</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00758">758</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00153">fSuppressedHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00152">fSuppressedLowGainHits</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00781">GetSuppressedHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00797">GetSuppressedMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00832">ResetSuppressed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00785">GetSuppressedHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00801">GetSuppressedMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00836">ResetSuppressed()</a>.</p>
 
 </div>
 </div>
@@ -2816,11 +2818,11 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00327">327</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00332">332</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a058c013245973431df4426c06ae29422">kIsHighGainAddbackSet</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a4ce0c75e4f9c86dc44695ef807963010">kIsLowGainAddbackSet</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00171">TestBitNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00402">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00407">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>.</p>
 
 </div>
 </div>
@@ -2840,11 +2842,11 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00336">336</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00341">341</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524ab8648629c1f35ad9100c744e613773d9">kIsHighGainCrossTalkSet</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a40395bd0ae313160c663625bbb3eda0d">kIsLowGainCrossTalkSet</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00171">TestBitNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00402">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00376">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00842">GetSuppressedAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00858">GetSuppressedAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00781">GetSuppressedHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00797">GetSuppressedMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00407">GetAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00381">GetGriffinHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00846">GetSuppressedAddbackHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00862">GetSuppressedAddbackMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00785">GetSuppressedHit()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00801">GetSuppressedMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>.</p>
 
 </div>
 </div>
@@ -2864,11 +2866,11 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00686">686</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00690">690</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a4333af84598e30fa683b24fba77fcdfc">kIsHighGainSuppressed</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a2667c6f6f31797f0e0b04c26773921b0">kIsLowGainSuppressed</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00171">TestBitNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00797">GetSuppressedMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00801">GetSuppressedMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -2888,11 +2890,11 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00725">725</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00729">729</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a82e2d0b526ac1264e497627c4db50dd0">kIsHighGainSuppressedAddbackSet</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524afea58d2bb53bc43985afeb568a7ef0be">kIsLowGainSuppressedAddbackSet</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00171">TestBitNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00858">GetSuppressedAddbackMultiplicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00862">GetSuppressedAddbackMultiplicity()</a>.</p>
 
 </div>
 </div>
@@ -2914,14 +2916,14 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00267">267</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00272">272</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>.</p>
 
 </div>
 </div>
 <a id="a3766ce229efc1ec2b8b78fac646d5bd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3766ce229efc1ec2b8b78fac646d5bd1">&#9670;&nbsp;</a></span>Print()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3766ce229efc1ec2b8b78fac646d5bd1">&#9670;&nbsp;</a></span>Print() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2948,7 +2950,41 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00231">231</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00148">fAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00147">fAddbackLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00144">fCycleStart</a>, <a class="el" href="_t_griffin_8h_source.html#l00137">fGriffinHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00136">fGriffinLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00048">GetHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8h_source.html#l00047">GetLowGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00327">IsAddbackSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00336">IsCrossTalkSet()</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>.</p>
+
+</div>
+</div>
+<a id="a1806fec26e17dbef9d74b3793495ffed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1806fec26e17dbef9d74b3793495ffed">&#9670;&nbsp;</a></span>Print() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TGriffin::Print </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! </p>
+
+<p>Reimplemented from <a class="el" href="class_t_detector.html#a1d7a4f9d8b48783b9c53ef1177270cc9">TDetector</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00236">236</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00148">fAddbackHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00147">fAddbackLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00144">fCycleStart</a>, <a class="el" href="_t_griffin_8h_source.html#l00137">fGriffinHighGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00136">fGriffinLowGainHits</a>, <a class="el" href="_t_griffin_8h_source.html#l00048">GetHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8h_source.html#l00047">GetLowGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00332">IsAddbackSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00341">IsCrossTalkSet()</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>.</p>
 
 </div>
 </div>
@@ -2981,7 +3017,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00090">ResetAddback()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8h_source.html#l00090">ResetAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00542">ResetHighGainAddback()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00537">ResetLowGainAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8h_source.html#l00090">ResetAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00548">ResetHighGainAddback()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00543">ResetLowGainAddback()</a>.</p>
 
 </div>
 </div>
@@ -3011,9 +3047,9 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00547">547</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00553">553</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00318">GetAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00309">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00345">SetAddback()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00353">SetCrossTalk()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00323">GetAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00314">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00350">SetAddback()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00358">SetCrossTalk()</a>.</p>
 
 </div>
 </div>
@@ -3032,7 +3068,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00532">532</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00538">538</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00145">fGriffinBits</a>.</p>
 
@@ -3055,7 +3091,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00542">542</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00548">548</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00090">ResetAddback()</a>.</p>
 
@@ -3078,7 +3114,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00700">700</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00704">704</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00114">ResetSuppressed()</a>.</p>
 
@@ -3101,7 +3137,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00739">739</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00743">743</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00125">ResetSuppressedAddback()</a>.</p>
 
@@ -3124,7 +3160,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00537">537</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00543">543</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00090">ResetAddback()</a>.</p>
 
@@ -3147,7 +3183,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00695">695</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00699">699</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00114">ResetSuppressed()</a>.</p>
 
@@ -3170,7 +3206,7 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00734">734</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00738">738</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8h_source.html#l00125">ResetSuppressedAddback()</a>.</p>
 
@@ -3205,7 +3241,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00114">ResetSuppressed()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00700">ResetHighGainSuppressed()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00695">ResetLowGainSuppressed()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00114">ResetSuppressed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00704">ResetHighGainSuppressed()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00699">ResetLowGainSuppressed()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00114">ResetSuppressed()</a>.</p>
 
 </div>
 </div>
@@ -3235,9 +3271,9 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00832">832</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00836">836</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00754">GetSuppressedVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00824">SetSuppressed()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00758">GetSuppressedVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00828">SetSuppressed()</a>.</p>
 
 </div>
 </div>
@@ -3270,7 +3306,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00125">ResetSuppressedAddback()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00739">ResetHighGainSuppressedAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00734">ResetLowGainSuppressedAddback()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00125">ResetSuppressedAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00743">ResetHighGainSuppressedAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00738">ResetLowGainSuppressedAddback()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00125">ResetSuppressedAddback()</a>.</p>
 
 </div>
 </div>
@@ -3300,9 +3336,9 @@ template&lt;class T &gt; </div>
 
 <p>! </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00896">896</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00900">900</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00772">GetSuppressedAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00763">GetSuppressedAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00888">SetSuppressedAddback()</a>.</p>
+<p class="reference">References <a class="el" href="_t_griffin_8cxx_source.html#l00776">GetSuppressedAddbackFragVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00767">GetSuppressedAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00892">SetSuppressedAddback()</a>.</p>
 
 </div>
 </div>
@@ -3340,11 +3376,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00345">345</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00350">350</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a058c013245973431df4426c06ae29422">kIsHighGainAddbackSet</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a4ce0c75e4f9c86dc44695ef807963010">kIsLowGainAddbackSet</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00578">SetBitNumber()</a>.</p>
+<p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a058c013245973431df4426c06ae29422">kIsHighGainAddbackSet</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a4ce0c75e4f9c86dc44695ef807963010">kIsLowGainAddbackSet</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00584">SetBitNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00402">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00547">ResetAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00407">GetAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00553">ResetAddback()</a>.</p>
 
 </div>
 </div>
@@ -3412,11 +3448,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00578">578</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00584">584</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00145">fGriffinBits</a>, and <a class="el" href="_t_transient_bits_8h_source.html#l00031">TTransientBits&lt; T &gt;::SetBit()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00345">SetAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00353">SetCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00824">SetSuppressed()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00888">SetSuppressedAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00350">SetAddback()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00358">SetCrossTalk()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00828">SetSuppressed()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00892">SetSuppressedAddback()</a>.</p>
 
 </div>
 </div>
@@ -3485,11 +3521,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00353">353</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00358">358</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524ab8648629c1f35ad9100c744e613773d9">kIsHighGainCrossTalkSet</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a40395bd0ae313160c663625bbb3eda0d">kIsLowGainCrossTalkSet</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00578">SetBitNumber()</a>.</p>
+<p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524ab8648629c1f35ad9100c744e613773d9">kIsHighGainCrossTalkSet</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a40395bd0ae313160c663625bbb3eda0d">kIsLowGainCrossTalkSet</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00584">SetBitNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00632">FixCrossTalk()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00547">ResetAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00638">FixCrossTalk()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00553">ResetAddback()</a>.</p>
 
 </div>
 </div>
@@ -3517,7 +3553,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00273">273</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00278">278</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00160">fDefaultGainType</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, and <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>.</p>
 
@@ -3557,11 +3593,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00824">824</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00828">828</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a4333af84598e30fa683b24fba77fcdfc">kIsHighGainSuppressed</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a2667c6f6f31797f0e0b04c26773921b0">kIsLowGainSuppressed</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00578">SetBitNumber()</a>.</p>
+<p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a4333af84598e30fa683b24fba77fcdfc">kIsHighGainSuppressed</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a2667c6f6f31797f0e0b04c26773921b0">kIsLowGainSuppressed</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00584">SetBitNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00797">GetSuppressedMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00832">ResetSuppressed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00801">GetSuppressedMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00836">ResetSuppressed()</a>.</p>
 
 </div>
 </div>
@@ -3599,11 +3635,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00888">888</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_griffin_8cxx_source.html#l00892">892</a> of file <a class="el" href="_t_griffin_8cxx_source.html">TGriffin.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a82e2d0b526ac1264e497627c4db50dd0">kIsHighGainSuppressedAddbackSet</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524afea58d2bb53bc43985afeb568a7ef0be">kIsLowGainSuppressedAddbackSet</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00578">SetBitNumber()</a>.</p>
+<p class="reference">References <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea56d61507341e32b964e0bab2834869fd">kHighGain</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524a82e2d0b526ac1264e497627c4db50dd0">kIsHighGainSuppressedAddbackSet</a>, <a class="el" href="class_t_griffin.html#a92f170ed3a460472018ea9dbd9d1f524afea58d2bb53bc43985afeb568a7ef0be">kIsLowGainSuppressedAddbackSet</a>, <a class="el" href="class_t_griffin.html#ae393925993f34a3dc3dd8bc5320cfb4ea3f51c5eeca3992eab774e31a9d5e9f9c">kLowGain</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00584">SetBitNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00858">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00896">ResetSuppressedAddback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00862">GetSuppressedAddbackMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00900">ResetSuppressedAddback()</a>.</p>
 
 </div>
 </div>
@@ -3707,7 +3743,7 @@ template&lt;class T &gt; </div>
 
 <p class="reference">References <a class="el" href="_t_griffin_8h_source.html#l00145">fGriffinBits</a>, and <a class="el" href="_t_transient_bits_8h_source.html#l00034">TTransientBits&lt; T &gt;::TestBit()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00327">IsAddbackSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00336">IsCrossTalkSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00686">IsSuppressed()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00725">IsSuppressedAddbackSet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00332">IsAddbackSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00341">IsCrossTalkSet()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00690">IsSuppressed()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00729">IsSuppressedAddbackSet()</a>.</p>
 
 </div>
 </div>
@@ -3762,7 +3798,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00150">150</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00318">GetAddbackFragVector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00323">GetAddbackFragVector()</a>.</p>
 
 </div>
 </div>
@@ -3790,7 +3826,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00148">148</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00309">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00314">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
 
 </div>
 </div>
@@ -3818,7 +3854,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00149">149</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00318">GetAddbackFragVector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00323">GetAddbackFragVector()</a>.</p>
 
 </div>
 </div>
@@ -3846,7 +3882,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00147">147</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00309">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00314">GetAddbackVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
 
 </div>
 </div>
@@ -3874,7 +3910,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00144">144</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>.</p>
 
 </div>
 </div>
@@ -3900,7 +3936,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00160">160</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00273">SetDefaultGainType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8h_source.html#l00165">GetDefaultGainType()</a>, <a class="el" href="_t_griffin_8h_source.html#l00183">GetHitVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00278">SetDefaultGainType()</a>.</p>
 
 </div>
 </div>
@@ -3926,7 +3962,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00145">145</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8h_source.html#l00169">ClearStatus()</a>, <a class="el" href="_t_griffin_8h_source.html#l00059">ClearTransients()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00532">ResetFlags()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00578">SetBitNumber()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00171">TestBitNumber()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8h_source.html#l00169">ClearStatus()</a>, <a class="el" href="_t_griffin_8h_source.html#l00059">ClearTransients()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00538">ResetFlags()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00584">SetBitNumber()</a>, and <a class="el" href="_t_griffin_8h_source.html#l00171">TestBitNumber()</a>.</p>
 
 </div>
 </div>
@@ -3952,7 +3988,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00137">137</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8h_source.html#l00059">ClearTransients()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8h_source.html#l00048">GetHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00291">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00282">GetMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8h_source.html#l00059">ClearTransients()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8h_source.html#l00048">GetHighGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00296">GetHitVector()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00287">GetMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
 
 </div>
 </div>
@@ -3980,7 +4016,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00136">136</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00291">GetHitVector()</a>, <a class="el" href="_t_griffin_8h_source.html#l00047">GetLowGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00282">GetMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00231">Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00296">GetHitVector()</a>, <a class="el" href="_t_griffin_8h_source.html#l00047">GetLowGainMultiplicity()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00287">GetMultiplicity()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00236">Print()</a>.</p>
 
 </div>
 </div>
@@ -4004,9 +4040,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_detector_8h_source.html#l00066">66</a> of file <a class="el" href="_t_detector_8h_source.html">TDetector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_detector_8h_source.html#l00072">72</a> of file <a class="el" href="_t_detector_8h_source.html">TDetector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_si_li_8cxx_source.html#l00271">TSiLi::AddCluster()</a>, <a class="el" href="_t_generic_detector_8cxx_source.html#l00032">TGenericDetector::AddFragment()</a>, <a class="el" href="_t_fipps_pulser_8cxx_source.html#l00032">TFippsPulser::AddFragment()</a>, <a class="el" href="_t_paces_8cxx_source.html#l00061">TPaces::AddFragment()</a>, <a class="el" href="_t_tdr_si_li_8cxx_source.html#l00067">TTdrSiLi::AddFragment()</a>, <a class="el" href="_t_tip_8cxx_source.html#l00036">TTip::AddFragment()</a>, <a class="el" href="_t_bgo_8cxx_source.html#l00137">TBgo::AddFragment()</a>, <a class="el" href="_t_si_li_8cxx_source.html#l00065">TSiLi::AddFragment()</a>, <a class="el" href="_t_tdr_plastic_8cxx_source.html#l00074">TTdrPlastic::AddFragment()</a>, <a class="el" href="_t_sceptar_8cxx_source.html#l00067">TSceptar::AddFragment()</a>, <a class="el" href="_t_fipps_t_a_c_8cxx_source.html#l00045">TFippsTAC::AddFragment()</a>, <a class="el" href="_t_t_a_c_8cxx_source.html#l00045">TTAC::AddFragment()</a>, <a class="el" href="_t_zero_degree_8cxx_source.html#l00050">TZeroDegree::AddFragment()</a>, <a class="el" href="_t_descant_8cxx_source.html#l00125">TDescant::AddFragment()</a>, <a class="el" href="_t_tdr_clover_8cxx_source.html#l00358">TTdrClover::AddFragment()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00358">TTdrTigress::AddFragment()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00388">TFipps::AddFragment()</a>, <a class="el" href="_t_fipps_la_br_8cxx_source.html#l00131">TFippsLaBr::AddFragment()</a>, <a class="el" href="_t_la_br_8cxx_source.html#l00146">TLaBr::AddFragment()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00232">TTigress::AddFragment()</a>, <a class="el" href="_t_emma_8cxx_source.html#l00203">TEmma::BuildHits()</a>, <a class="el" href="_t_c_s_m_8cxx_source.html#l00061">TCSM::BuildHits()</a>, <a class="el" href="_t_sharc_8cxx_source.html#l00124">TSharc::BuildHits()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00197">TTigress::BuildHits()</a>, <a class="el" href="_t_sharc_8cxx_source.html#l00175">TSharc::Clear()</a>, <a class="el" href="_t_detector_8h_source.html#l00057">TDetector::Clear()</a>, <a class="el" href="_t_emma_8cxx_source.html#l00248">TEmma::Clear()</a>, <a class="el" href="_t_detector_8cxx_source.html#l00053">TDetector::ClearTransients()</a>, <a class="el" href="_t_detector_8cxx_source.html#l00034">TDetector::Copy()</a>, <a class="el" href="_t_si_li_8cxx_source.html#l00158">TSiLi::GetAddbackMultiplicity()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00139">TTigress::GetAddbackMultiplicity()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00242">TFipps::GetFippsHit()</a>, <a class="el" href="_t_detector_8cxx_source.html#l00060">TDetector::GetHit()</a>, <a class="el" href="_t_detector_8h_source.html#l00063">TDetector::GetHitVector()</a>, <a class="el" href="_t_detector_8h_source.html#l00061">TDetector::GetMultiplicity()</a>, <a class="el" href="_t_sharc_8h_source.html#l00041">TSharc::GetSize()</a>, <a class="el" href="_t_fipps_la_br_8cxx_source.html#l00102">TFippsLaBr::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_la_br_8cxx_source.html#l00114">TLaBr::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_tdr_clover_8cxx_source.html#l00289">TTdrClover::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00290">TTdrTigress::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_tip_8cxx_source.html#l00047">TTip::Print()</a>, <a class="el" href="_t_si_li_8cxx_source.html#l00059">TSiLi::Print()</a>, <a class="el" href="_t_tdr_si_li_8cxx_source.html#l00055">TTdrSiLi::Print()</a>, <a class="el" href="_t_fipps_t_a_c_8cxx_source.html#l00039">TFippsTAC::Print()</a>, <a class="el" href="_t_t_a_c_8cxx_source.html#l00039">TTAC::Print()</a>, <a class="el" href="_t_paces_8cxx_source.html#l00049">TPaces::Print()</a>, <a class="el" href="_t_zero_degree_8cxx_source.html#l00044">TZeroDegree::Print()</a>, <a class="el" href="_t_sceptar_8cxx_source.html#l00073">TSceptar::Print()</a>, <a class="el" href="_t_tdr_plastic_8cxx_source.html#l00080">TTdrPlastic::Print()</a>, <a class="el" href="_t_descant_8cxx_source.html#l00119">TDescant::Print()</a>, <a class="el" href="_t_emma_8cxx_source.html#l00062">TEmma::Print()</a>, <a class="el" href="_t_fipps_la_br_8cxx_source.html#l00080">TFippsLaBr::Print()</a>, <a class="el" href="_t_la_br_8cxx_source.html#l00089">TLaBr::Print()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00125">TTigress::Print()</a>, <a class="el" href="_t_si_li_8h_source.html#l00057">TSiLi::UseFitCharge()</a>, and <a class="el" href="_t_detector_8cxx_source.html#l00026">TDetector::~TDetector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_si_li_8cxx_source.html#l00278">TSiLi::AddCluster()</a>, <a class="el" href="_t_generic_detector_8cxx_source.html#l00032">TGenericDetector::AddFragment()</a>, <a class="el" href="_t_eagle_pulser_8cxx_source.html#l00032">TEaglePulser::AddFragment()</a>, <a class="el" href="_t_fipps_pulser_8cxx_source.html#l00032">TFippsPulser::AddFragment()</a>, <a class="el" href="_t_paces_8cxx_source.html#l00068">TPaces::AddFragment()</a>, <a class="el" href="_t_tdr_si_li_8cxx_source.html#l00074">TTdrSiLi::AddFragment()</a>, <a class="el" href="_t_bgo_8cxx_source.html#l00144">TBgo::AddFragment()</a>, <a class="el" href="_t_si_li_8cxx_source.html#l00072">TSiLi::AddFragment()</a>, <a class="el" href="_t_tip_8cxx_source.html#l00168">TTip::AddFragment()</a>, <a class="el" href="_t_sceptar_8cxx_source.html#l00067">TSceptar::AddFragment()</a>, <a class="el" href="_t_tdr_plastic_8cxx_source.html#l00074">TTdrPlastic::AddFragment()</a>, <a class="el" href="_t_eagle_8cxx_source.html#l00139">TEagle::AddFragment()</a>, <a class="el" href="_t_fipps_t_a_c_8cxx_source.html#l00052">TFippsTAC::AddFragment()</a>, <a class="el" href="_t_t_a_c_8cxx_source.html#l00052">TTAC::AddFragment()</a>, <a class="el" href="_t_zero_degree_8cxx_source.html#l00057">TZeroDegree::AddFragment()</a>, <a class="el" href="_t_descant_8cxx_source.html#l00132">TDescant::AddFragment()</a>, <a class="el" href="_t_tdr_clover_8cxx_source.html#l00365">TTdrClover::AddFragment()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00364">TTdrTigress::AddFragment()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00399">TFipps::AddFragment()</a>, <a class="el" href="_t_ifin_8cxx_source.html#l00411">TIfin::AddFragment()</a>, <a class="el" href="_t_trific_8cxx_source.html#l00098">TTrific::AddFragment()</a>, <a class="el" href="_t_fipps_la_br_8cxx_source.html#l00149">TFippsLaBr::AddFragment()</a>, <a class="el" href="_t_la_br_8cxx_source.html#l00153">TLaBr::AddFragment()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00228">TTigress::AddFragment()</a>, <a class="el" href="_t_emma_8cxx_source.html#l00210">TEmma::BuildHits()</a>, <a class="el" href="_t_c_s_m_8cxx_source.html#l00061">TCSM::BuildHits()</a>, <a class="el" href="_t_sharc_8cxx_source.html#l00116">TSharc::BuildHits()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00193">TTigress::BuildHits()</a>, <a class="el" href="_t_sharc_8cxx_source.html#l00165">TSharc::Clear()</a>, <a class="el" href="_t_detector_8h_source.html#l00057">TDetector::Clear()</a>, <a class="el" href="_t_emma_8cxx_source.html#l00255">TEmma::Clear()</a>, <a class="el" href="_t_trific_8cxx_source.html#l00122">TTrific::Clear()</a>, <a class="el" href="_t_detector_8cxx_source.html#l00063">TDetector::ClearTransients()</a>, <a class="el" href="_t_detector_8cxx_source.html#l00034">TDetector::Copy()</a>, <a class="el" href="_t_si_li_8cxx_source.html#l00165">TSiLi::GetAddbackMultiplicity()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00138">TTigress::GetAddbackMultiplicity()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00253">TFipps::GetFippsHit()</a>, <a class="el" href="_t_detector_8cxx_source.html#l00070">TDetector::GetHit()</a>, <a class="el" href="_t_detector_8h_source.html#l00064">TDetector::GetHitVector()</a>, <a class="el" href="_t_ifin_8cxx_source.html#l00265">TIfin::GetIfinHit()</a>, <a class="el" href="_t_detector_8h_source.html#l00062">TDetector::GetMultiplicity()</a>, <a class="el" href="_t_trific_8h_source.html#l00068">TTrific::GetMultiplicity()</a>, <a class="el" href="_t_sharc_8h_source.html#l00041">TSharc::GetSize()</a>, <a class="el" href="_t_fipps_la_br_8cxx_source.html#l00115">TFippsLaBr::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_la_br_8cxx_source.html#l00121">TLaBr::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_tdr_clover_8cxx_source.html#l00296">TTdrClover::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_tdr_tigress_8cxx_source.html#l00296">TTdrTigress::GetSuppressedMultiplicity()</a>, <a class="el" href="_t_si_li_8cxx_source.html#l00064">TSiLi::Print()</a>, <a class="el" href="_t_tdr_si_li_8cxx_source.html#l00061">TTdrSiLi::Print()</a>, <a class="el" href="_t_fipps_t_a_c_8cxx_source.html#l00045">TFippsTAC::Print()</a>, <a class="el" href="_t_t_a_c_8cxx_source.html#l00045">TTAC::Print()</a>, <a class="el" href="_t_paces_8cxx_source.html#l00055">TPaces::Print()</a>, <a class="el" href="_t_tip_8cxx_source.html#l00185">TTip::Print()</a>, <a class="el" href="_t_zero_degree_8cxx_source.html#l00050">TZeroDegree::Print()</a>, <a class="el" href="_t_tdr_plastic_8cxx_source.html#l00086">TTdrPlastic::Print()</a>, <a class="el" href="_t_sceptar_8cxx_source.html#l00079">TSceptar::Print()</a>, <a class="el" href="_t_eagle_8cxx_source.html#l00174">TEagle::Print()</a>, <a class="el" href="_t_detector_8cxx_source.html#l00053">TDetector::Print()</a>, <a class="el" href="_t_descant_8cxx_source.html#l00125">TDescant::Print()</a>, <a class="el" href="_t_emma_8cxx_source.html#l00068">TEmma::Print()</a>, <a class="el" href="_t_fipps_la_br_8cxx_source.html#l00091">TFippsLaBr::Print()</a>, <a class="el" href="_t_la_br_8cxx_source.html#l00095">TLaBr::Print()</a>, <a class="el" href="_t_trific_8cxx_source.html#l00082">TTrific::Print()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00122">TTigress::Print()</a>, <a class="el" href="_t_si_li_8h_source.html#l00058">TSiLi::UseFitCharge()</a>, and <a class="el" href="_t_detector_8cxx_source.html#l00026">TDetector::~TDetector()</a>.</p>
 
 </div>
 </div>
@@ -4062,7 +4098,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00158">158</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00772">GetSuppressedAddbackFragVector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00776">GetSuppressedAddbackFragVector()</a>.</p>
 
 </div>
 </div>
@@ -4090,7 +4126,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00156">156</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00763">GetSuppressedAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00767">GetSuppressedAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
 
 </div>
 </div>
@@ -4118,7 +4154,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00157">157</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00772">GetSuppressedAddbackFragVector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00776">GetSuppressedAddbackFragVector()</a>.</p>
 
 </div>
 </div>
@@ -4146,7 +4182,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00155">155</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00763">GetSuppressedAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00767">GetSuppressedAddbackVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
 
 </div>
 </div>
@@ -4174,7 +4210,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00153">153</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00754">GetSuppressedVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00758">GetSuppressedVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
 
 </div>
 </div>
@@ -4202,7 +4238,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00152">152</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00754">GetSuppressedVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00189">Clear()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00135">Copy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00758">GetSuppressedVector()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00162">~TGriffin()</a>.</p>
 
 </div>
 </div>
@@ -4256,7 +4292,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_t_griffin_8h_source.html#l00168">168</a> of file <a class="el" href="_t_griffin_8h_source.html">TGriffin.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00522">GetDetectorPosition()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00490">GetPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_griffin_8cxx_source.html#l00528">GetDetectorPosition()</a>, and <a class="el" href="_t_griffin_8cxx_source.html#l00496">GetPosition()</a>.</p>
 
 </div>
 </div>
@@ -4266,7 +4302,7 @@ template&lt;class T &gt; </div>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Sat Jun 19 2021 00:49:45.
+GRSISort (4.0.0.3 ) Reference Guide Generated on Tue May 31 2022 14:08:56.
 </small>
 </div>
 </body>

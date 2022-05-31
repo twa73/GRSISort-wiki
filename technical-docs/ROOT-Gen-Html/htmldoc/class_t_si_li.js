@@ -40,6 +40,7 @@ var class_t_si_li =
     [ "MagnetShadow", "class_t_si_li.html#aee64b2dfcfcd9174711ba3e267715098", null ],
     [ "operator=", "class_t_si_li.html#a8366c5090d4a80d9419e2a5bfac31a27", null ],
     [ "Print", "class_t_si_li.html#a1e2e1f17ce21deb29a8c9ee219f40798", null ],
+    [ "Print", "class_t_si_li.html#a707fbf6a1402350eac510118fc1157c6", null ],
     [ "RejectCrosstalk", "class_t_si_li.html#aba924ea958789e72d22e57b66349d458", null ],
     [ "ResetAddback", "class_t_si_li.html#a4f1b1383a205f84ffd5051af501ab3ee", null ],
     [ "UpstreamShapes", "class_t_si_li.html#a2a5153d37cf9b0838b621c8541ce8a58", null ],

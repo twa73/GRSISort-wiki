@@ -15,7 +15,7 @@
 
 ### Architecture
 
-- Only 64-bit architectures are currently supported. The analysis side of GRSISort may eventually be expanded to 32-bit machines...but why not have an excuse to upgrade?
+- Only 64-bit architectures are currently supported. The analysis side of GRSISort may eventually be expanded to 32-bit machines ... but why not have an excuse to upgrade?
 
 ---
 <a name="fixableOSX" />
@@ -26,7 +26,7 @@
 
 For Mac OS X you need to have greadlink and gfind installed. They can be installed using mac ports (https://www.macports.org) via ```port install coreutils findutils```, or using home brew (https://brew.sh) using ```brew install coreutils findutils```.
 
-More instructions to follow...
+More instructions to follow ...
 
 <a name="fixablehtml" />
 
@@ -59,11 +59,11 @@ You're missing the 32 bit libc dev package:
 
 On **Ubuntu** it's called `libc6-dev-i386` - do `sudo apt-get install libc6-dev-i386`. See below for extra instructions for Ubuntu 12.04.
 
-On **Red Hat** distros, the package name is `glibc-devel.i686`
+On **Red Hat** distros, the package name is `glibc-devel`
 
-On **CentOS 5.8**, the package name is `glibc-devel.i386`
+On **CentOS 5.8**, the package name is `glibc-devel`
 
-On **CentOS 6 / 7**, the package name is `glibc-devel.i686`.
+On **CentOS 6 / 7**, the package name is `glibc-devel`.
 
 On **SLES** it's called `glibc-devel-32bit` - do `zypper in glibc-devel-32bit`
 
@@ -81,9 +81,9 @@ If you encounter the problem:
 
 On **Ubuntu** you will need to do  `sudo apt-get install g++-multilib`
 
-On **CentOS 5** you will need to do `yum install libstdc++-devel.i386`
+On **CentOS 5** you will need to do `yum install libstdc++-devel`
 
-On **CentOS 6** you will need to do `yum install libstdc++-devel.i686`
+On **CentOS 6** you will need to do `yum install libstdc++-devel`
 
 #### XML
 - If you have any problems with XML, etc. Please make sure you followed the ROOT download instructions very carefully including the installation of packages such as `libxml2-dev`.

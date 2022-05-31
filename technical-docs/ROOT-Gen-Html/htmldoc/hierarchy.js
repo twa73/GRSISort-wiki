@@ -32,6 +32,7 @@ var hierarchy =
       ] ],
       [ "TGRSIDataParserException", "class_t_g_r_s_i_data_parser_exception.html", null ],
       [ "TGRSIMapException< key_type >", "class_t_g_r_s_i_map_exception.html", null ],
+      [ "THILDataParserException", "class_t_h_i_l_data_parser_exception.html", null ],
       [ "TILLDataParserException", "class_t_i_l_l_data_parser_exception.html", null ],
       [ "TTdrDataParserException", "class_t_tdr_data_parser_exception.html", null ]
     ] ],
@@ -63,6 +64,9 @@ var hierarchy =
     ] ],
     [ "TPulseAnalyzer::ParPar", "struct_t_pulse_analyzer_1_1_par_par.html", null ],
     [ "TCalibrator::Peak", "struct_t_calibrator_1_1_peak.html", null ],
+    [ "RlmdBufferHeader", "struct_rlmd_buffer_header.html", null ],
+    [ "RlmdFileFooter", "struct_rlmd_file_footer.html", null ],
+    [ "RlmdFileHeader", "struct_rlmd_file_header.html", null ],
     [ "TPulseAnalyzer::ShapePar", "struct_t_pulse_analyzer_1_1_shape_par.html", null ],
     [ "TPulseAnalyzer::SinPar", "struct_t_pulse_analyzer_1_1_sin_par.html", null ],
     [ "StoppableThread", "class_stoppable_thread.html", [
@@ -96,8 +100,10 @@ var hierarchy =
     [ "TCanvasImp", null, [
       [ "GRootCanvas", "class_g_root_canvas.html", null ]
     ] ],
+    [ "TChannelTab", "class_t_channel_tab.html", null ],
     [ "TDataParser", "class_t_data_parser.html", [
       [ "TGRSIDataParser", "class_t_g_r_s_i_data_parser.html", null ],
+      [ "THILDataParser", "class_t_h_i_l_data_parser.html", null ],
       [ "TILLDataParser", "class_t_i_l_l_data_parser.html", null ],
       [ "TTdrDataParser", "class_t_tdr_data_parser.html", null ]
     ] ],
@@ -115,10 +121,15 @@ var hierarchy =
     [ "TGCompositeFrame", null, [
       [ "GRootContainer", "class_g_root_container.html", null ]
     ] ],
+    [ "TGHorizontalFrame", null, [
+      [ "TParameterInput", "class_t_parameter_input.html", null ]
+    ] ],
     [ "TGMainFrame", null, [
       [ "GRootBrowser", "class_g_root_browser.html", null ],
       [ "GRootCanvas", "class_g_root_canvas.html", null ],
-      [ "TBGSubtraction", "class_t_b_g_subtraction.html", null ]
+      [ "TBGSubtraction", "class_t_b_g_subtraction.html", null ],
+      [ "TCalibrateDescant", "class_t_calibrate_descant.html", null ],
+      [ "TSourceCalibration", "class_t_source_calibration.html", null ]
     ] ],
     [ "TGraphErrors", null, [
       [ "TCal", "class_t_cal.html", [
@@ -130,7 +141,8 @@ var hierarchy =
       ] ],
       [ "TCalGraph", "class_t_cal_graph.html", [
         [ "TEfficiencyGraph", "class_t_efficiency_graph.html", null ]
-      ] ]
+      ] ],
+      [ "TCalibrationGraph", "class_t_calibration_graph.html", null ]
     ] ],
     [ "TGRSIMap< key_type, mapped_type, key_compare, allocator_type >", "class_t_g_r_s_i_map.html", null ],
     [ "TGTransientFrame", null, [
@@ -159,10 +171,10 @@ var hierarchy =
       [ "GH2I", "class_g_h2_i.html", null ]
     ] ],
     [ "ThreadsafeQueue< T >", "class_threadsafe_queue.html", null ],
-    [ "TMidas_BANK", "struct_t_midas___b_a_n_k.html", null ],
     [ "TMidasEvent::TMidas_BANK", "struct_t_midas_event_1_1_t_midas___b_a_n_k.html", null ],
-    [ "TMidas_BANK32", "struct_t_midas___b_a_n_k32.html", null ],
+    [ "TMidas_BANK", "struct_t_midas___b_a_n_k.html", null ],
     [ "TMidasEvent::TMidas_BANK32", "struct_t_midas_event_1_1_t_midas___b_a_n_k32.html", null ],
+    [ "TMidas_BANK32", "struct_t_midas___b_a_n_k32.html", null ],
     [ "TMidas_BANK_HEADER", "struct_t_midas___b_a_n_k___h_e_a_d_e_r.html", null ],
     [ "TMidasEvent::TMidas_BANK_HEADER", "struct_t_midas_event_1_1_t_midas___b_a_n_k___h_e_a_d_e_r.html", null ],
     [ "TMidas_EVENT_HEADER", "struct_t_midas___e_v_e_n_t___h_e_a_d_e_r.html", null ],
@@ -192,6 +204,7 @@ var hierarchy =
       [ "GMarker", "class_g_marker.html", null ],
       [ "TAnalysisOptions", "class_t_analysis_options.html", null ],
       [ "TAngularCorrelation", "class_t_angular_correlation.html", null ],
+      [ "TCalibrationGraphSet", "class_t_calibration_graph_set.html", null ],
       [ "TCalPoint", "class_t_cal_point.html", null ],
       [ "TCompiledHistograms", "class_t_compiled_histograms.html", null ],
       [ "TDeadtimeScalerQueue", "class_t_deadtime_scaler_queue.html", null ],
@@ -200,12 +213,15 @@ var hierarchy =
           [ "TFippsBgo", "class_t_fipps_bgo.html", null ],
           [ "TFippsLaBrBgo", "class_t_fipps_la_br_bgo.html", null ],
           [ "TGriffinBgo", "class_t_griffin_bgo.html", null ],
+          [ "TIfinBgo", "class_t_ifin_bgo.html", null ],
           [ "TLaBrBgo", "class_t_la_br_bgo.html", null ],
           [ "TTdrCloverBgo", "class_t_tdr_clover_bgo.html", null ],
           [ "TTdrTigressBgo", "class_t_tdr_tigress_bgo.html", null ]
         ] ],
         [ "TCSM", "class_t_c_s_m.html", null ],
         [ "TDescant", "class_t_descant.html", null ],
+        [ "TEagle", "class_t_eagle.html", null ],
+        [ "TEaglePulser", "class_t_eagle_pulser.html", null ],
         [ "TEmma", "class_t_emma.html", null ],
         [ "TFippsPulser", "class_t_fipps_pulser.html", null ],
         [ "TFippsTAC", "class_t_fipps_t_a_c.html", null ],
@@ -220,6 +236,7 @@ var hierarchy =
           [ "TFipps", "class_t_fipps.html", null ],
           [ "TFippsLaBr", "class_t_fipps_la_br.html", null ],
           [ "TGriffin", "class_t_griffin.html", null ],
+          [ "TIfin", "class_t_ifin.html", null ],
           [ "TLaBr", "class_t_la_br.html", null ],
           [ "TTdrClover", "class_t_tdr_clover.html", null ],
           [ "TTdrTigress", "class_t_tdr_tigress.html", null ]
@@ -229,6 +246,7 @@ var hierarchy =
         [ "TTdrSiLi", "class_t_tdr_si_li.html", null ],
         [ "TTigress", "class_t_tigress.html", null ],
         [ "TTip", "class_t_tip.html", null ],
+        [ "TTrific", "class_t_trific.html", null ],
         [ "TTriFoil", "class_t_tri_foil.html", null ],
         [ "TZeroDegree", "class_t_zero_degree.html", null ]
       ] ],
@@ -237,42 +255,42 @@ var hierarchy =
           [ "TFippsBgoHit", "class_t_fipps_bgo_hit.html", null ],
           [ "TFippsLaBrBgoHit", "class_t_fipps_la_br_bgo_hit.html", null ],
           [ "TGriffinBgoHit", "class_t_griffin_bgo_hit.html", null ],
+          [ "TIfinBgoHit", "class_t_ifin_bgo_hit.html", null ],
           [ "TLaBrBgoHit", "class_t_la_br_bgo_hit.html", null ]
         ] ],
+        [ "TCSMHit", "class_t_c_s_m_hit.html", null ],
+        [ "TDescantHit", "class_t_descant_hit.html", null ],
+        [ "TEagleHit", "class_t_eagle_hit.html", null ],
+        [ "TEmmaHit", "class_t_emma_hit.html", null ],
+        [ "TFippsHit", "class_t_fipps_hit.html", null ],
+        [ "TFippsLaBrHit", "class_t_fipps_la_br_hit.html", null ],
+        [ "TFippsTACHit", "class_t_fipps_t_a_c_hit.html", null ],
         [ "TFragment", "class_t_fragment.html", [
-          [ "TBadFragment", "class_t_bad_fragment.html", null ]
+          [ "TBadFragment", "class_t_bad_fragment.html", null ],
+          [ "THILFragment", "class_t_h_i_l_fragment.html", null ]
         ] ],
-        [ "TGRSIDetectorHit", "class_t_g_r_s_i_detector_hit.html", [
-          [ "TCSMHit", "class_t_c_s_m_hit.html", null ],
-          [ "TDescantHit", "class_t_descant_hit.html", null ],
-          [ "TEmmaHit", "class_t_emma_hit.html", null ],
-          [ "TGriffinHit", "class_t_griffin_hit.html", null ],
-          [ "TLaBrHit", "class_t_la_br_hit.html", null ],
-          [ "TPacesHit", "class_t_paces_hit.html", null ],
-          [ "TS3Hit", "class_t_s3_hit.html", null ],
-          [ "TSceptarHit", "class_t_sceptar_hit.html", null ],
-          [ "TSharcHit", "class_t_sharc_hit.html", null ],
-          [ "TSiLiHit", "class_t_si_li_hit.html", null ],
-          [ "TTACHit", "class_t_t_a_c_hit.html", null ],
-          [ "TTigressHit", "class_t_tigress_hit.html", null ],
-          [ "TTipHit", "class_t_tip_hit.html", null ],
-          [ "TZeroDegreeHit", "class_t_zero_degree_hit.html", null ]
-        ] ],
-        [ "TILLDetectorHit", "class_t_i_l_l_detector_hit.html", [
-          [ "TFippsHit", "class_t_fipps_hit.html", [
-            [ "TFippsLaBrHit", "class_t_fipps_la_br_hit.html", null ]
-          ] ],
-          [ "TFippsTACHit", "class_t_fipps_t_a_c_hit.html", null ]
-        ] ],
-        [ "TTdrDetectorHit", "class_t_tdr_detector_hit.html", [
-          [ "TTdrCloverHit", "class_t_tdr_clover_hit.html", null ],
-          [ "TTdrPlasticHit", "class_t_tdr_plastic_hit.html", null ],
-          [ "TTdrSiLiHit", "class_t_tdr_si_li_hit.html", null ],
-          [ "TTdrTigressHit", "class_t_tdr_tigress_hit.html", null ]
-        ] ]
+        [ "TGriffinHit", "class_t_griffin_hit.html", null ],
+        [ "TIfinHit", "class_t_ifin_hit.html", null ],
+        [ "TLaBrHit", "class_t_la_br_hit.html", null ],
+        [ "TPacesHit", "class_t_paces_hit.html", null ],
+        [ "TPinDiodeHit", "class_t_pin_diode_hit.html", null ],
+        [ "TS3Hit", "class_t_s3_hit.html", null ],
+        [ "TSceptarHit", "class_t_sceptar_hit.html", null ],
+        [ "TSharcHit", "class_t_sharc_hit.html", null ],
+        [ "TSiLiHit", "class_t_si_li_hit.html", null ],
+        [ "TTACHit", "class_t_t_a_c_hit.html", null ],
+        [ "TTdrCloverHit", "class_t_tdr_clover_hit.html", null ],
+        [ "TTdrPlasticHit", "class_t_tdr_plastic_hit.html", null ],
+        [ "TTdrSiLiHit", "class_t_tdr_si_li_hit.html", null ],
+        [ "TTdrTigressHit", "class_t_tdr_tigress_hit.html", null ],
+        [ "TTigressHit", "class_t_tigress_hit.html", null ],
+        [ "TTipHit", "class_t_tip_hit.html", null ],
+        [ "TTrificHit", "class_t_trific_hit.html", null ],
+        [ "TZeroDegreeHit", "class_t_zero_degree_hit.html", null ]
       ] ],
       [ "TDetectorInformation", "class_t_detector_information.html", [
         [ "TGRSIDetectorInformation", "class_t_g_r_s_i_detector_information.html", null ],
+        [ "THILDetectorInformation", "class_t_h_i_l_detector_information.html", null ],
         [ "TILLDetectorInformation", "class_t_i_l_l_detector_information.html", null ],
         [ "TTdrDetectorInformation", "class_t_tdr_detector_information.html", null ]
       ] ],
@@ -287,22 +305,26 @@ var hierarchy =
       [ "TLMFitter", "class_t_l_m_fitter.html", null ],
       [ "TMnemonic", "class_t_mnemonic.html", [
         [ "TGRSIMnemonic", "class_t_g_r_s_i_mnemonic.html", null ],
+        [ "THILMnemonic", "class_t_h_i_l_mnemonic.html", null ],
         [ "TILLMnemonic", "class_t_i_l_l_mnemonic.html", null ],
         [ "TTdrMnemonic", "class_t_tdr_mnemonic.html", null ]
       ] ],
       [ "TObjectWrapper< T >", "class_t_object_wrapper.html", null ],
       [ "TParallelFileMerger", "class_t_parallel_file_merger.html", null ],
+      [ "TParsingDiagnosticsData", "class_t_parsing_diagnostics_data.html", null ],
       [ "TPeakFitter", "class_t_peak_fitter.html", null ],
       [ "TPPGData", "class_t_p_p_g_data.html", null ],
       [ "TRateScalerQueue", "class_t_rate_scaler_queue.html", null ],
       [ "TRawEvent", "class_t_raw_event.html", [
         [ "TLstEvent", "class_t_lst_event.html", null ],
         [ "TMidasEvent", "class_t_midas_event.html", null ],
+        [ "TRlmdEvent", "class_t_rlmd_event.html", null ],
         [ "TTdrEvent", "class_t_tdr_event.html", null ]
       ] ],
       [ "TRawFile", "class_t_raw_file.html", [
         [ "TLstFile", "class_t_lst_file.html", null ],
         [ "TMidasFile", "class_t_midas_file.html", null ],
+        [ "TRlmdFile", "class_t_rlmd_file.html", null ],
         [ "TTdrFile", "class_t_tdr_file.html", null ]
       ] ],
       [ "TScaler", "class_t_scaler.html", null ],
@@ -331,7 +353,6 @@ var hierarchy =
       ] ],
       [ "TTransition", "class_t_transition.html", null ]
     ] ],
-    [ "TParsingDiagnosticsData", "class_t_parsing_diagnostics_data.html", null ],
     [ "TPreserveGDirectory", "class_t_preserve_g_directory.html", null ],
     [ "TPriorityValue< T >", "class_t_priority_value.html", null ],
     [ "TPriorityValue< bool >", "class_t_priority_value.html", null ],
@@ -350,14 +371,12 @@ var hierarchy =
     ] ],
     [ "TSelector", null, [
       [ "TGRSISelector", "class_t_g_r_s_i_selector.html", [
+        [ "AlphanumericSelector", "class_alphanumeric_selector.html", null ],
         [ "AngularCorrelationSelector", "class_angular_correlation_selector.html", null ],
-        [ "CaenAnalysisSelector", "class_caen_analysis_selector.html", null ],
-        [ "CaenWaveSelector", "class_caen_wave_selector.html", null ],
         [ "CrossTalk", "class_cross_talk.html", null ],
         [ "ExampleEventSelector", "class_example_event_selector.html", null ],
         [ "ExampleFragmentSelector", "class_example_fragment_selector.html", null ],
-        [ "GainMatchSelector", "class_gain_match_selector.html", null ],
-        [ "GenericSelector", "class_generic_selector.html", null ],
+        [ "ExampleTreeSelector", "class_example_tree_selector.html", null ],
         [ "GriffinKValueSelector", "class_griffin_k_value_selector.html", null ],
         [ "TimeWalkSelector", "class_time_walk_selector.html", null ]
       ] ]
@@ -368,6 +387,7 @@ var hierarchy =
     [ "TSignalHandler", null, [
       [ "TGRSIInterruptHandler", "class_t_g_r_s_i_interrupt_handler.html", null ]
     ] ],
+    [ "TSourceTab", "class_t_source_tab.html", null ],
     [ "TSRIM", "class_t_s_r_i_m.html", null ],
     [ "TTdrEventHeader", "struct_t_tdr_event_header.html", null ],
     [ "TTransientBits< T >", "class_t_transient_bits.html", null ],

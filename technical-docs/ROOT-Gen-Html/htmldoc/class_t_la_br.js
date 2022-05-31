@@ -34,6 +34,7 @@ var class_t_la_br =
     [ "IsSuppressed", "class_t_la_br.html#a8d5be4fcb9e0ca958e542cbad7b77320", null ],
     [ "operator=", "class_t_la_br.html#a08c0579fd70e1834ca32249e7f840387", null ],
     [ "Print", "class_t_la_br.html#a08b7db1da16286c0c89526f9d788daf4", null ],
+    [ "Print", "class_t_la_br.html#a98e355cb07698045af9ab9afe9b77246", null ],
     [ "ResetSuppressed", "class_t_la_br.html#afabd6a6e4804a6fb1709ff2d7d842e6b", null ],
     [ "SetBitNumber", "class_t_la_br.html#a39317adeaed38a37f6d2cbdf6c325b38", null ],
     [ "SetSuppressed", "class_t_la_br.html#aabb908af280ab7d8717dc1d3372a0d12", null ],

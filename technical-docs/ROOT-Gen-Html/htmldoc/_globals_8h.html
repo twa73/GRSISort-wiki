@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
-<title>GRSISort: /helioshome/vbildste/Guelph/GRSISort-master/include/Globals.h File Reference</title>
+<title>GRSISort: /helioshome/vbildste/Guelph/GRSISort-main/include/Globals.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,6 +95,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
@@ -105,6 +106,10 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 <code>#include &lt;array&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;sys/wait.h&gt;</code><br />
+<code>#include &lt;sys/prctl.h&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for Globals.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -202,6 +207,11 @@ Functions</h2></td></tr>
 <tr class="separator:ad1a687d11cda0ee9d37cd2e771bd405e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00b72893c17bcb4e05586f5e42f9854d"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_globals_8h.html#a00b72893c17bcb4e05586f5e42f9854d">getexepath</a> ()</td></tr>
 <tr class="separator:a00b72893c17bcb4e05586f5e42f9854d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37ad6f1cf4c93e161b5caaeae971ef4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab37ad6f1cf4c93e161b5caaeae971ef4"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_globals_8h.html#ab37ad6f1cf4c93e161b5caaeae971ef4">hex</a> (T val, int width=-1)</td></tr>
+<tr class="separator:ab37ad6f1cf4c93e161b5caaeae971ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b20d1a0ce0cf354138dd47ae9a5f46"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_globals_8h.html#a52b20d1a0ce0cf354138dd47ae9a5f46">PrintGdbStacktrace</a> ()</td></tr>
+<tr class="separator:a52b20d1a0ce0cf354138dd47ae9a5f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f0930614f3ea2f2f153242657b08ba0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_globals_8h.html#a3f0930614f3ea2f2f153242657b08ba0">PrintStacktrace</a> (std::ostream &amp;out=std::cout, unsigned int maxFrames=63)</td></tr>
 <tr class="separator:a3f0930614f3ea2f2f153242657b08ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac847f4564990903418bd3b97877eedd8"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_globals_8h.html#ac847f4564990903418bd3b97877eedd8">ProgramName</a> ()</td></tr>
@@ -227,7 +237,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00034">34</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_tigress_8cxx_source.html#l00232">TTigress::AddFragment()</a>, <a class="el" href="_t_kinematics_8cxx_source.html#l00177">TKinematics::Evslab()</a>, <a class="el" href="_t_kinematics_8cxx_source.html#l00230">TKinematics::Evslab_graph()</a>, <a class="el" href="_t_bad_fragment_8cxx_source.html#l00078">TBadFragment::Print()</a>, <a class="el" href="_t_midas_event_8cxx_source.html#l00266">TMidasEvent::Print()</a>, <a class="el" href="_t_run_info_8h_source.html#l00093">TRunInfo::SetDate()</a>, <a class="el" href="_t_run_info_8h_source.html#l00082">TRunInfo::SetFullVersion()</a>, <a class="el" href="_t_run_info_8h_source.html#l00104">TRunInfo::SetLibraryVersion()</a>, and <a class="el" href="_t_run_info_8h_source.html#l00071">TRunInfo::SetVersion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_tigress_8cxx_source.html#l00228">TTigress::AddFragment()</a>, <a class="el" href="_t_kinematics_8cxx_source.html#l00175">TKinematics::Evslab()</a>, <a class="el" href="_t_kinematics_8cxx_source.html#l00219">TKinematics::Evslab_graph()</a>, <a class="el" href="_t_bad_fragment_8cxx_source.html#l00078">TBadFragment::Print()</a>, <a class="el" href="_t_run_info_8h_source.html#l00093">TRunInfo::SetDate()</a>, <a class="el" href="_t_run_info_8h_source.html#l00082">TRunInfo::SetFullVersion()</a>, <a class="el" href="_t_run_info_8h_source.html#l00104">TRunInfo::SetLibraryVersion()</a>, and <a class="el" href="_t_run_info_8h_source.html#l00071">TRunInfo::SetVersion()</a>.</p>
 
 </div>
 </div>
@@ -325,7 +335,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00023">23</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00727">TGRSIInterruptHandler::Notify()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00717">TGRSIint::PrintHelp()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00745">TMidasFile::SetGRIFFOdb()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00995">TMidasFile::SetTIGDAQOdb()</a>, and <a class="el" href="_t_midas_file_8cxx_source.html#l00884">TMidasFile::SetTIGOdb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00726">TGRSIInterruptHandler::Notify()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00716">TGRSIint::PrintHelp()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00753">TMidasFile::SetGRIFFOdb()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l01007">TMidasFile::SetTIGDAQOdb()</a>, and <a class="el" href="_t_midas_file_8cxx_source.html#l00896">TMidasFile::SetTIGOdb()</a>.</p>
 
 </div>
 </div>
@@ -375,7 +385,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00005">5</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_scaler_queue_8cxx_source.html#l00155">TDeadtimeScalerQueue::CheckStatus()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00356">TRateScalerQueue::CheckStatus()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00504">TGRSIDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">TGRSIint::OpenRawFile()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00307">TGRSIint::OpenRootFile()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00033">TAnalysisOptions::Print()</a>, <a class="el" href="_g_canvas_8cxx_source.html#l00612">GCanvas::Process1DKeyboardPress()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00169">TDeadtimeScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00370">TRateScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00090">TFragHistLoop::Write()</a>, and <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00090">TAnalysisHistLoop::Write()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_scaler_queue_8cxx_source.html#l00155">TDeadtimeScalerQueue::CheckStatus()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00356">TRateScalerQueue::CheckStatus()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00492">TGRSIDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00385">TGRSIint::OpenRawFile()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00305">TGRSIint::OpenRootFile()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00033">TAnalysisOptions::Print()</a>, <a class="el" href="_g_canvas_8cxx_source.html#l00606">GCanvas::Process1DKeyboardPress()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00169">TDeadtimeScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00370">TRateScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00090">TFragHistLoop::Write()</a>, and <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00090">TAnalysisHistLoop::Write()</a>.</p>
 
 </div>
 </div>
@@ -425,7 +435,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00011">11</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_singleton_8h_source.html#l00136">TSingleton&lt; TParsingDiagnostics &gt;::AddCurrent()</a>, <a class="el" href="_t_singleton_8h_source.html#l00034">TSingleton&lt; TParsingDiagnostics &gt;::Get()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00138">TChannel::InitChannelInput()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00925">TChannel::ReadCalFile()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00110">TAnalysisOptions::ReadFromFile()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00601">TGRSIOptions::ReadFromFile()</a>, and <a class="el" href="_t_run_info_8cxx_source.html#l00165">TRunInfo::ReadInfoFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_singleton_8h_source.html#l00137">TSingleton&lt; TParsingDiagnostics &gt;::AddCurrent()</a>, <a class="el" href="_t_singleton_8h_source.html#l00034">TSingleton&lt; TParsingDiagnostics &gt;::Get()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00139">TChannel::InitChannelInput()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00916">TChannel::ReadCalFile()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00110">TAnalysisOptions::ReadFromFile()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00610">TGRSIOptions::ReadFromFile()</a>, and <a class="el" href="_t_run_info_8cxx_source.html#l00177">TRunInfo::ReadInfoFile()</a>.</p>
 
 </div>
 </div>
@@ -459,7 +469,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00014">14</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_deadtime_8cxx_source.html#l00281">CheckFile()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00160">CheckHighTimeStamp()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00393">TPPG::Correct()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00295">DoAnalysis()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00231">GetRoughTimeDiff()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00323">GetTimeDiff()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00181">main()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00199">TRunInfo::ParseInputData()</a>, <a class="el" href="_t_g_r_s_i_detector_information_8cxx_source.html#l00035">TGRSIDetectorInformation::Print()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00023">TCalGraph::Print()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00075">TRunInfo::Print()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00195">Printaddress()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00203">QueueEvents()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00707">TMidasFile::SetRunInfo()</a>, and <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00306">TGRSIDataParser::SetTIGTriggerID()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_deadtime_8cxx_source.html#l00281">CheckFile()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00159">CheckHighTimeStamp()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00478">TPPG::Correct()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00295">DoAnalysis()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00230">GetRoughTimeDiff()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00322">GetTimeDiff()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00181">main()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00211">TRunInfo::ParseInputData()</a>, <a class="el" href="_t_g_r_s_i_detector_information_8cxx_source.html#l00035">TGRSIDetectorInformation::Print()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00023">TCalGraph::Print()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00083">TRunInfo::Print()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00195">Printaddress()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00203">QueueEvents()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00715">TMidasFile::SetRunInfo()</a>, and <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00300">TGRSIDataParser::SetTIGTriggerID()</a>.</p>
 
 </div>
 </div>
@@ -477,7 +487,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00020">20</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="grsisort_8cxx_source.html#l00048">atexitHandler()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00185">TGRSIOptions::Load()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00157">main()</a>, and <a class="el" href="_t_analysis_options_8cxx_source.html#l00033">TAnalysisOptions::Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="grsisort_8cxx_source.html#l00048">atexitHandler()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00187">TGRSIOptions::Load()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00182">main()</a>, and <a class="el" href="_t_analysis_options_8cxx_source.html#l00033">TAnalysisOptions::Print()</a>.</p>
 
 </div>
 </div>
@@ -495,7 +505,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00016">16</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_cal_graph_8cxx_source.html#l00070">TCalGraph::AddLists()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00622">TPeak::CheckArea()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00155">TDeadtimeScalerQueue::CheckStatus()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00356">TRateScalerQueue::CheckStatus()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00817">CorrectionFile()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00295">DoAnalysis()</a>, <a class="el" href="_examine_midas_file_8cxx_source.html#l00012">ExamineMidasFile()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00264">GPeak::Fit()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00187">GGaus::Fit()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00185">TGRSIOptions::Load()</a>, <a class="el" href="bufferclean_8cxx_source.html#l00122">main()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00205">MakeSpectra()</a>, <a class="el" href="_t_c_s_m_8cxx_source.html#l00449">TCSM::OldBuilddEE()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00023">TCalGraph::Print()</a>, <a class="el" href="_t_sharc_hit_8cxx_source.html#l00053">TSharcHit::Print()</a>, <a class="el" href="_t_sorting_diagnostics_8cxx_source.html#l00082">TSortingDiagnostics::Print()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00122">QueueEvents()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00169">TDeadtimeScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00370">TRateScalerQueue::StatusUpdate()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_cal_graph_8cxx_source.html#l00070">TCalGraph::AddLists()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00589">TPeak::CheckArea()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00155">TDeadtimeScalerQueue::CheckStatus()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00356">TRateScalerQueue::CheckStatus()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00817">CorrectionFile()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00295">DoAnalysis()</a>, <a class="el" href="_examine_midas_file_8cxx_source.html#l00012">ExamineMidasFile()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00156">GGaus::Fit()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00234">GPeak::Fit()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00187">TGRSIOptions::Load()</a>, <a class="el" href="bufferclean_8cxx_source.html#l00121">main()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00205">MakeSpectra()</a>, <a class="el" href="_t_c_s_m_8cxx_source.html#l00449">TCSM::OldBuilddEE()</a>, <a class="el" href="_t_sharc_hit_8cxx_source.html#l00050">TSharcHit::Print()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00023">TCalGraph::Print()</a>, <a class="el" href="_t_sorting_diagnostics_8cxx_source.html#l00091">TSortingDiagnostics::Print()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00121">QueueEvents()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00169">TDeadtimeScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00370">TRateScalerQueue::StatusUpdate()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
 
 </div>
 </div>
@@ -513,7 +523,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00019">19</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="grsisort_8cxx_source.html#l00048">atexitHandler()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00098">AtExitHandler()</a>, <a class="el" href="bufferclean_8cxx_source.html#l00122">main()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="grsisort_8cxx_source.html#l00048">atexitHandler()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00102">AtExitHandler()</a>, <a class="el" href="bufferclean_8cxx_source.html#l00121">main()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
 
 </div>
 </div>
@@ -531,7 +541,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00017">17</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_cal_graph_8cxx_source.html#l00070">TCalGraph::AddLists()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00036">Analyze()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">TGRSIint::ApplyOptions()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00103">TEpicsFrag::BuildScalerMap()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00622">TPeak::CheckArea()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00281">CheckFile()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00393">TPPG::Correct()</a>, <a class="el" href="_griffin_c_t_fix_8cxx_source.html#l00030">CrossTalkFix()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00584">TGriffin::CTCorrectedEnergy()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00295">DoAnalysis()</a>, <a class="el" href="_examine_midas_file_8cxx_source.html#l00012">ExamineMidasFile()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00264">GPeak::Fit()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00187">GGaus::Fit()</a>, <a class="el" href="_t_s_r_i_m_8cxx_source.html#l00200">TSRIM::GetEnergy()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00077">TEpicsFrag::GetEpicsVariableName()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00135">TEpicsFrag::GetScalerAtTime()</a>, <a class="el" href="offsetfindtree_8_c_source.html#l00196">GetTimeDiff()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00504">TGRSIDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_parser_library_8cxx_source.html#l00019">TParserLibrary::Load()</a>, <a class="el" href="bufferclean_8cxx_source.html#l00122">main()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00727">TGRSIInterruptHandler::Notify()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00199">TRunInfo::ParseInputData()</a>, <a class="el" href="_t_g_r_s_i_detector_information_8cxx_source.html#l00035">TGRSIDetectorInformation::Print()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00023">TCalGraph::Print()</a>, <a class="el" href="_t_sorting_diagnostics_8cxx_source.html#l00082">TSortingDiagnostics::Print()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00075">TRunInfo::Print()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00191">PrintError()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00717">TGRSIint::PrintHelp()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00150">TEpicsFrag::PrintScalerMap()</a>, <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00167">TGRSISelector::Process()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00030">TGRSIDataParser::Process()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00438">TGRSIDataParser::ProcessGriffin()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00122">QueueEvents()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00925">TChannel::ReadCalFile()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00745">TMidasFile::SetGRIFFOdb()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00995">TMidasFile::SetTIGDAQOdb()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00884">TMidasFile::SetTIGOdb()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00306">TGRSIDataParser::SetTIGTriggerID()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00409">TGRSIint::SetupPipeline()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_cal_graph_8cxx_source.html#l00070">TCalGraph::AddLists()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00036">Analyze()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">TGRSIint::ApplyOptions()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00103">TEpicsFrag::BuildScalerMap()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00589">TPeak::CheckArea()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00281">CheckFile()</a>, <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00301">TGRSISelector::CheckSizes()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00478">TPPG::Correct()</a>, <a class="el" href="_griffin_c_t_fix_8cxx_source.html#l00030">CrossTalkFix()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00503">TFipps::CTCorrectedEnergy()</a>, <a class="el" href="_t_ifin_8cxx_source.html#l00514">TIfin::CTCorrectedEnergy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00590">TGriffin::CTCorrectedEnergy()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00295">DoAnalysis()</a>, <a class="el" href="_examine_midas_file_8cxx_source.html#l00012">ExamineMidasFile()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00156">GGaus::Fit()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00234">GPeak::Fit()</a>, <a class="el" href="_t_s_r_i_m_8cxx_source.html#l00200">TSRIM::GetEnergy()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00077">TEpicsFrag::GetEpicsVariableName()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00135">TEpicsFrag::GetScalerAtTime()</a>, <a class="el" href="offsetfindtree_8_c_source.html#l00195">GetTimeDiff()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00492">TGRSIDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_parser_library_8cxx_source.html#l00019">TParserLibrary::Load()</a>, <a class="el" href="bufferclean_8cxx_source.html#l00121">main()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00726">TGRSIInterruptHandler::Notify()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00211">TRunInfo::ParseInputData()</a>, <a class="el" href="_t_g_r_s_i_detector_information_8cxx_source.html#l00035">TGRSIDetectorInformation::Print()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00023">TCalGraph::Print()</a>, <a class="el" href="_t_sorting_diagnostics_8cxx_source.html#l00091">TSortingDiagnostics::Print()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00083">TRunInfo::Print()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00191">PrintError()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00716">TGRSIint::PrintHelp()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00150">TEpicsFrag::PrintScalerMap()</a>, <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00169">TGRSISelector::Process()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00031">TGRSIDataParser::Process()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00426">TGRSIDataParser::ProcessGriffin()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00121">QueueEvents()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00916">TChannel::ReadCalFile()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00753">TMidasFile::SetGRIFFOdb()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l01007">TMidasFile::SetTIGDAQOdb()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00896">TMidasFile::SetTIGOdb()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00300">TGRSIDataParser::SetTIGTriggerID()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00408">TGRSIint::SetupPipeline()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
 
 </div>
 </div>
@@ -565,7 +575,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00015">15</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_run_info_8cxx_source.html#l00409">TRunInfo::Add()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00622">TPeak::CheckArea()</a>, <a class="el" href="offsetfindtree_8_c_source.html#l00024">CheckHighTimeStamp()</a>, <a class="el" href="_t_s_r_i_m_8cxx_source.html#l00200">TSRIM::GetEnergy()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00231">GetRoughTimeDiff()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00323">GetTimeDiff()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00504">TGRSIDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_g_r_s_i_proof_8h_source.html#l00054">TGRSIProof::LoadLibsIntoProof()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00181">main()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00122">QueueEvents()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00651">TMidasFile::SetFileOdb()</a>, <a class="el" href="_t_event_building_loop_8cxx_source.html#l00024">TEventBuildingLoop::TEventBuildingLoop()</a>, and <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00124">TGRSIDataParser::TigressDataToFragment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_run_info_8cxx_source.html#l00421">TRunInfo::Add()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00589">TPeak::CheckArea()</a>, <a class="el" href="offsetfindtree_8_c_source.html#l00023">CheckHighTimeStamp()</a>, <a class="el" href="_t_s_r_i_m_8cxx_source.html#l00200">TSRIM::GetEnergy()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00230">GetRoughTimeDiff()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00322">GetTimeDiff()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00492">TGRSIDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_g_r_s_i_proof_8h_source.html#l00054">TGRSIProof::LoadLibsIntoProof()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00181">main()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00121">QueueEvents()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00658">TMidasFile::SetFileOdb()</a>, <a class="el" href="_t_event_building_loop_8cxx_source.html#l00024">TEventBuildingLoop::TEventBuildingLoop()</a>, and <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00125">TGRSIDataParser::TigressDataToFragment()</a>.</p>
 
 </div>
 </div>
@@ -599,7 +609,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00007">7</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00185">TGRSIOptions::Load()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00433">GPeak::Print()</a>, and <a class="el" href="_g_gaus_8cxx_source.html#l00324">GGaus::Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_peak_8cxx_source.html#l00234">GPeak::Fit()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00267">TPeak::Fit()</a>, <a class="el" href="_t_peak_fitter_8cxx_source.html#l00084">TPeakFitter::Fit()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00187">TGRSIOptions::Load()</a>, <a class="el" href="_t_g_r_s_i_functions_8cxx_source.html#l00004">NamespaceImp()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00246">GGaus::Print()</a>, and <a class="el" href="_g_peak_8cxx_source.html#l00372">GPeak::Print()</a>.</p>
 
 </div>
 </div>
@@ -617,7 +627,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00031">31</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bufferclean_8cxx_source.html#l00122">main()</a>, <a class="el" href="_t_lst_file_8cxx_source.html#l00053">TLstFile::Status()</a>, <a class="el" href="_t_tdr_file_8cxx_source.html#l00051">TTdrFile::Status()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00078">TMidasFile::Status()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bufferclean_8cxx_source.html#l00121">main()</a>, <a class="el" href="_t_lst_file_8cxx_source.html#l00056">TLstFile::Status()</a>, <a class="el" href="_t_tdr_file_8cxx_source.html#l00051">TTdrFile::Status()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00078">TMidasFile::Status()</a>, <a class="el" href="_t_rlmd_file_8cxx_source.html#l00054">TRlmdFile::Status()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
 
 </div>
 </div>
@@ -683,7 +693,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00008">8</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_scaler_queue_8cxx_source.html#l00048">TDeadtimeScalerQueue::Clear()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00249">TRateScalerQueue::Clear()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00264">GPeak::Fit()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00187">GGaus::Fit()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00339">TChannel::GetChannel()</a>, and <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00124">TGRSIDataParser::TigressDataToFragment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_scaler_queue_8cxx_source.html#l00048">TDeadtimeScalerQueue::Clear()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00249">TRateScalerQueue::Clear()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00046">TMnemonic::EnumerateDigitizer()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00156">GGaus::Fit()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00234">GPeak::Fit()</a>, <a class="el" href="_t_peak_fitter_8cxx_source.html#l00084">TPeakFitter::Fit()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00340">TChannel::GetChannel()</a>, <a class="el" href="_t_g_r_s_i_functions_8cxx_source.html#l00004">NamespaceImp()</a>, <a class="el" href="_t_g_r_s_i_detector_information_8cxx_source.html#l00098">TGRSIDetectorInformation::Set()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00658">TMidasFile::SetFileOdb()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00358">TPPG::SetOdbFromData()</a>, and <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00125">TGRSIDataParser::TigressDataToFragment()</a>.</p>
 
 </div>
 </div>
@@ -701,7 +711,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00004">4</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_run_info_8cxx_source.html#l00409">TRunInfo::Add()</a>, <a class="el" href="_t_singleton_8h_source.html#l00136">TSingleton&lt; TParsingDiagnostics &gt;::AddCurrent()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00232">TTigress::AddFragment()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00070">TCalGraph::AddLists()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00036">Analyze()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">TGRSIint::ApplyOptions()</a>, <a class="el" href="grsisort_8cxx_source.html#l00048">atexitHandler()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00098">AtExitHandler()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00103">TEpicsFrag::BuildScalerMap()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00622">TPeak::CheckArea()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00281">CheckFile()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00160">CheckHighTimeStamp()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00155">TDeadtimeScalerQueue::CheckStatus()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00356">TRateScalerQueue::CheckStatus()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00048">TDeadtimeScalerQueue::Clear()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00249">TRateScalerQueue::Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00393">TPPG::Correct()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00817">CorrectionFile()</a>, <a class="el" href="_griffin_c_t_fix_8cxx_source.html#l00030">CrossTalkFix()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00295">DoAnalysis()</a>, <a class="el" href="_t_kinematics_8cxx_source.html#l00177">TKinematics::Evslab()</a>, <a class="el" href="_t_kinematics_8cxx_source.html#l00230">TKinematics::Evslab_graph()</a>, <a class="el" href="_examine_midas_file_8cxx_source.html#l00012">ExamineMidasFile()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00264">GPeak::Fit()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00187">GGaus::Fit()</a>, <a class="el" href="_t_singleton_8h_source.html#l00034">TSingleton&lt; TParsingDiagnostics &gt;::Get()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00339">TChannel::GetChannel()</a>, <a class="el" href="_t_s_r_i_m_8cxx_source.html#l00200">TSRIM::GetEnergy()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00231">GetRoughTimeDiff()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00135">TEpicsFrag::GetScalerAtTime()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00323">GetTimeDiff()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00504">TGRSIDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00138">TChannel::InitChannelInput()</a>, <a class="el" href="_t_parser_library_8cxx_source.html#l00019">TParserLibrary::Load()</a>, <a class="el" href="_t_g_r_s_i_proof_8h_source.html#l00054">TGRSIProof::LoadLibsIntoProof()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00181">main()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00205">MakeSpectra()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00727">TGRSIInterruptHandler::Notify()</a>, <a class="el" href="_t_c_s_m_8cxx_source.html#l00449">TCSM::OldBuilddEE()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00386">TGRSIint::OpenRawFile()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00307">TGRSIint::OpenRootFile()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00199">TRunInfo::ParseInputData()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00433">GPeak::Print()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00324">GGaus::Print()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00033">TAnalysisOptions::Print()</a>, <a class="el" href="_t_g_r_s_i_detector_information_8cxx_source.html#l00035">TGRSIDetectorInformation::Print()</a>, <a class="el" href="_t_bad_fragment_8cxx_source.html#l00078">TBadFragment::Print()</a>, <a class="el" href="_t_midas_event_8cxx_source.html#l00266">TMidasEvent::Print()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00023">TCalGraph::Print()</a>, <a class="el" href="_t_sharc_hit_8cxx_source.html#l00053">TSharcHit::Print()</a>, <a class="el" href="_t_sorting_diagnostics_8cxx_source.html#l00082">TSortingDiagnostics::Print()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00075">TRunInfo::Print()</a>, <a class="el" href="_arg_parser_8h_source.html#l00137">ArgParseConfig&lt; bool &gt;::printable()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00195">Printaddress()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00191">PrintError()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00717">TGRSIint::PrintHelp()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00150">TEpicsFrag::PrintScalerMap()</a>, <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00167">TGRSISelector::Process()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00030">TGRSIDataParser::Process()</a>, <a class="el" href="_g_canvas_8cxx_source.html#l00612">GCanvas::Process1DKeyboardPress()</a>, <a class="el" href="_g_canvas_8cxx_source.html#l01121">GCanvas::Process2DKeyboardPress()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00438">TGRSIDataParser::ProcessGriffin()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00122">QueueEvents()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00925">TChannel::ReadCalFile()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00110">TAnalysisOptions::ReadFromFile()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00601">TGRSIOptions::ReadFromFile()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00165">TRunInfo::ReadInfoFile()</a>, <a class="el" href="_t_run_info_8h_source.html#l00093">TRunInfo::SetDate()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00651">TMidasFile::SetFileOdb()</a>, <a class="el" href="_t_run_info_8h_source.html#l00082">TRunInfo::SetFullVersion()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00745">TMidasFile::SetGRIFFOdb()</a>, <a class="el" href="_t_run_info_8h_source.html#l00104">TRunInfo::SetLibraryVersion()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00707">TMidasFile::SetRunInfo()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00995">TMidasFile::SetTIGDAQOdb()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00884">TMidasFile::SetTIGOdb()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00306">TGRSIDataParser::SetTIGTriggerID()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00409">TGRSIint::SetupPipeline()</a>, <a class="el" href="_t_run_info_8h_source.html#l00071">TRunInfo::SetVersion()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00169">TDeadtimeScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00370">TRateScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_event_building_loop_8cxx_source.html#l00024">TEventBuildingLoop::TEventBuildingLoop()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00124">TGRSIDataParser::TigressDataToFragment()</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00090">TFragHistLoop::Write()</a>, <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00090">TAnalysisHistLoop::Write()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_run_info_8cxx_source.html#l00421">TRunInfo::Add()</a>, <a class="el" href="_t_singleton_8h_source.html#l00137">TSingleton&lt; TParsingDiagnostics &gt;::AddCurrent()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00228">TTigress::AddFragment()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00070">TCalGraph::AddLists()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00036">Analyze()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00091">TGRSIint::ApplyOptions()</a>, <a class="el" href="grsisort_8cxx_source.html#l00048">atexitHandler()</a>, <a class="el" href="grsiproof_8cxx_source.html#l00102">AtExitHandler()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00103">TEpicsFrag::BuildScalerMap()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00589">TPeak::CheckArea()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00281">CheckFile()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00159">CheckHighTimeStamp()</a>, <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00301">TGRSISelector::CheckSizes()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00155">TDeadtimeScalerQueue::CheckStatus()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00356">TRateScalerQueue::CheckStatus()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00048">TDeadtimeScalerQueue::Clear()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00249">TRateScalerQueue::Clear()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00478">TPPG::Correct()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00817">CorrectionFile()</a>, <a class="el" href="_griffin_c_t_fix_8cxx_source.html#l00030">CrossTalkFix()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00503">TFipps::CTCorrectedEnergy()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00590">TGriffin::CTCorrectedEnergy()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00295">DoAnalysis()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00046">TMnemonic::EnumerateDigitizer()</a>, <a class="el" href="_t_kinematics_8cxx_source.html#l00175">TKinematics::Evslab()</a>, <a class="el" href="_t_kinematics_8cxx_source.html#l00219">TKinematics::Evslab_graph()</a>, <a class="el" href="_examine_midas_file_8cxx_source.html#l00012">ExamineMidasFile()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00156">GGaus::Fit()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00234">GPeak::Fit()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00267">TPeak::Fit()</a>, <a class="el" href="_t_peak_fitter_8cxx_source.html#l00084">TPeakFitter::Fit()</a>, <a class="el" href="_t_singleton_8h_source.html#l00034">TSingleton&lt; TParsingDiagnostics &gt;::Get()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00340">TChannel::GetChannel()</a>, <a class="el" href="_t_s_r_i_m_8cxx_source.html#l00200">TSRIM::GetEnergy()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00230">GetRoughTimeDiff()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00135">TEpicsFrag::GetScalerAtTime()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00322">GetTimeDiff()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00492">TGRSIDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00139">TChannel::InitChannelInput()</a>, <a class="el" href="_t_parser_library_8cxx_source.html#l00019">TParserLibrary::Load()</a>, <a class="el" href="_t_g_r_s_i_proof_8h_source.html#l00054">TGRSIProof::LoadLibsIntoProof()</a>, <a class="el" href="ex_analysis_8cxx_source.html#l00181">main()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00205">MakeSpectra()</a>, <a class="el" href="_t_g_r_s_i_functions_8cxx_source.html#l00004">NamespaceImp()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00726">TGRSIInterruptHandler::Notify()</a>, <a class="el" href="_t_c_s_m_8cxx_source.html#l00449">TCSM::OldBuilddEE()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00385">TGRSIint::OpenRawFile()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00305">TGRSIint::OpenRootFile()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00211">TRunInfo::ParseInputData()</a>, <a class="el" href="_g_gaus_8cxx_source.html#l00246">GGaus::Print()</a>, <a class="el" href="_g_peak_8cxx_source.html#l00372">GPeak::Print()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00033">TAnalysisOptions::Print()</a>, <a class="el" href="_t_g_r_s_i_detector_information_8cxx_source.html#l00035">TGRSIDetectorInformation::Print()</a>, <a class="el" href="_t_bad_fragment_8cxx_source.html#l00078">TBadFragment::Print()</a>, <a class="el" href="_t_midas_event_8cxx_source.html#l00265">TMidasEvent::Print()</a>, <a class="el" href="_t_sharc_hit_8cxx_source.html#l00050">TSharcHit::Print()</a>, <a class="el" href="_t_cal_graph_8cxx_source.html#l00023">TCalGraph::Print()</a>, <a class="el" href="_t_sorting_diagnostics_8cxx_source.html#l00091">TSortingDiagnostics::Print()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00083">TRunInfo::Print()</a>, <a class="el" href="_arg_parser_8h_source.html#l00137">ArgParseConfig&lt; bool &gt;::printable()</a>, <a class="el" href="_deadtime_8cxx_source.html#l00195">Printaddress()</a>, <a class="el" href="offsetfix_8cxx_source.html#l00191">PrintError()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00716">TGRSIint::PrintHelp()</a>, <a class="el" href="_t_epics_frag_8cxx_source.html#l00150">TEpicsFrag::PrintScalerMap()</a>, <a class="el" href="_t_g_r_s_i_selector_8cxx_source.html#l00169">TGRSISelector::Process()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00031">TGRSIDataParser::Process()</a>, <a class="el" href="_g_canvas_8cxx_source.html#l00606">GCanvas::Process1DKeyboardPress()</a>, <a class="el" href="_g_canvas_8cxx_source.html#l01105">GCanvas::Process2DKeyboardPress()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00426">TGRSIDataParser::ProcessGriffin()</a>, <a class="el" href="offsetfind_8cxx_source.html#l00121">QueueEvents()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00916">TChannel::ReadCalFile()</a>, <a class="el" href="_t_analysis_options_8cxx_source.html#l00110">TAnalysisOptions::ReadFromFile()</a>, <a class="el" href="_t_g_r_s_i_options_8cxx_source.html#l00610">TGRSIOptions::ReadFromFile()</a>, <a class="el" href="_t_run_info_8cxx_source.html#l00177">TRunInfo::ReadInfoFile()</a>, <a class="el" href="_t_g_r_s_i_detector_information_8cxx_source.html#l00098">TGRSIDetectorInformation::Set()</a>, <a class="el" href="_t_run_info_8h_source.html#l00093">TRunInfo::SetDate()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00658">TMidasFile::SetFileOdb()</a>, <a class="el" href="_t_run_info_8h_source.html#l00082">TRunInfo::SetFullVersion()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00753">TMidasFile::SetGRIFFOdb()</a>, <a class="el" href="_t_run_info_8h_source.html#l00104">TRunInfo::SetLibraryVersion()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00358">TPPG::SetOdbFromData()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00715">TMidasFile::SetRunInfo()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l01007">TMidasFile::SetTIGDAQOdb()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00896">TMidasFile::SetTIGOdb()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00300">TGRSIDataParser::SetTIGTriggerID()</a>, <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00408">TGRSIint::SetupPipeline()</a>, <a class="el" href="_t_run_info_8h_source.html#l00071">TRunInfo::SetVersion()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00169">TDeadtimeScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_scaler_queue_8cxx_source.html#l00370">TRateScalerQueue::StatusUpdate()</a>, <a class="el" href="_t_event_building_loop_8cxx_source.html#l00024">TEventBuildingLoop::TEventBuildingLoop()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00125">TGRSIDataParser::TigressDataToFragment()</a>, <a class="el" href="_t_frag_hist_loop_8cxx_source.html#l00090">TFragHistLoop::Write()</a>, <a class="el" href="_t_analysis_hist_loop_8cxx_source.html#l00090">TAnalysisHistLoop::Write()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
 
 </div>
 </div>
@@ -719,7 +729,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00032">32</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bufferclean_8cxx_source.html#l00122">main()</a>, <a class="el" href="_t_lst_file_8cxx_source.html#l00053">TLstFile::Status()</a>, <a class="el" href="_t_tdr_file_8cxx_source.html#l00051">TTdrFile::Status()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00078">TMidasFile::Status()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bufferclean_8cxx_source.html#l00121">main()</a>, <a class="el" href="_t_lst_file_8cxx_source.html#l00056">TLstFile::Status()</a>, <a class="el" href="_t_tdr_file_8cxx_source.html#l00051">TTdrFile::Status()</a>, <a class="el" href="_t_midas_file_8cxx_source.html#l00078">TMidasFile::Status()</a>, <a class="el" href="_t_rlmd_file_8cxx_source.html#l00054">TRlmdFile::Status()</a>, and <a class="el" href="offsetfix_8cxx_source.html#l00728">WriteEvents()</a>.</p>
 
 </div>
 </div>
@@ -753,6 +763,8 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00006">6</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_g_peak_8cxx_source.html#l00234">GPeak::Fit()</a>, <a class="el" href="_t_peak_8cxx_source.html#l00267">TPeak::Fit()</a>, and <a class="el" href="_t_peak_fitter_8cxx_source.html#l00084">TPeakFitter::Fit()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -779,7 +791,76 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00128">128</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00148">148</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
+
+</div>
+</div>
+<a id="ab37ad6f1cf4c93e161b5caaeae971ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab37ad6f1cf4c93e161b5caaeae971ef4">&#9670;&nbsp;</a></span>hex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string hex </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00134">134</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_t_fragment_map_8cxx_source.html#l00014">TFragmentMap::Add()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l01784">TGRSIDataParser::CaenPhaToFragment()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l01584">TGRSIDataParser::CaenPsdToFragment()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00373">TPPG::CalculateCycleFromData()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00478">TPPG::Correct()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00340">TChannel::GetChannel()</a>, <a class="el" href="_t_si_li_hit_8cxx_source.html#l00091">TSiLiHit::GetSiLiHitChannel()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00492">TGRSIDataParser::GriffinDataToFragment()</a>, <a class="el" href="_t_scaler_8cxx_source.html#l00536">TScaler::ListHistograms()</a>, <a class="el" href="_fragment_analysis_compare_8cxx_source.html#l00015">main()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00333">TPPG::OdbMatchesData()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00973">TChannel::ParseInputData()</a>, <a class="el" href="_t_rlmd_event_8cxx_source.html#l00071">TRlmdEvent::Print()</a>, <a class="el" href="_t_lst_event_8cxx_source.html#l00071">TLstEvent::Print()</a>, <a class="el" href="_t_bad_fragment_8cxx_source.html#l00078">TBadFragment::Print()</a>, <a class="el" href="_t_eagle_hit_8cxx_source.html#l00084">TEagleHit::Print()</a>, <a class="el" href="_t_pin_diode_hit_8cxx_source.html#l00083">TPinDiodeHit::Print()</a>, <a class="el" href="_t_parsing_diagnostics_8cxx_source.html#l00057">TParsingDiagnosticsData::Print()</a>, <a class="el" href="_t_midas_event_8cxx_source.html#l00265">TMidasEvent::Print()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00056">TPPGData::Print()</a>, <a class="el" href="_stoppable_thread_8cxx_source.html#l00254">StoppableThread::Print()</a>, <a class="el" href="_t_sorting_diagnostics_8cxx_source.html#l00091">TSortingDiagnostics::Print()</a>, <a class="el" href="_t_scaler_8cxx_source.html#l00042">TScalerData::Print()</a>, <a class="el" href="_t_fragment_8cxx_source.html#l00152">TFragment::Print()</a>, <a class="el" href="_t_p_p_g_8cxx_source.html#l00212">TPPG::Print()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00659">TChannel::PrintCTCoeffs()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00705">TChannel::PrintToString()</a>, <a class="el" href="_t_tdr_file_8cxx_source.html#l00116">TTdrFile::Read()</a>, <a class="el" href="_t_channel_8cxx_source.html#l01371">TChannel::ReadEnergyNonlinearities()</a>, <a class="el" href="_t_channel_8cxx_source.html#l00421">TChannel::SetAddress()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00070">TPPGData::SetNewPPG()</a>, <a class="el" href="_t_p_p_g_8h_source.html#l00083">TPPGData::SetOldPPG()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00332">TGRSIDataParser::SetTIGTimeStamp()</a>, <a class="el" href="_t_g_r_s_i_data_parser_8cxx_source.html#l00125">TGRSIDataParser::TigressDataToFragment()</a>, <a class="el" href="_t_source_calibration_8cxx_source.html#l01599">TSourceCalibration::UpdateChannel()</a>, and <a class="el" href="_t_parsing_diagnostics_8cxx_source.html#l00211">TParsingDiagnostics::WriteToFile()</a>.</p>
+
+</div>
+</div>
+<a id="a52b20d1a0ce0cf354138dd47ae9a5f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b20d1a0ce0cf354138dd47ae9a5f46">&#9670;&nbsp;</a></span>PrintGdbStacktrace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void PrintGdbStacktrace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00254">254</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
 </div>
 </div>
@@ -817,9 +898,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00148">148</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
-
-<p class="reference">References <a class="el" href="test_peak_fitter_8_c_source.html#l00006">p</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00168">168</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
 </div>
 </div>
@@ -838,7 +917,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00279">TGRSIint::PrintLogo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_g_r_s_iint_8cxx_source.html#l00277">TGRSIint::PrintLogo()</a>.</p>
 
 </div>
 </div>
@@ -866,9 +945,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00134">134</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_globals_8h_source.html#l00154">154</a> of file <a class="el" href="_globals_8h_source.html">Globals.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01630">GRootCanvas::AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01358">GRootCanvas::ShowStatusBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01499">GRootCanvas::ShowToolBar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_g_root_canvas_8cxx_source.html#l01615">GRootCanvas::AdjustSize()</a>, <a class="el" href="_g_root_canvas_8cxx_source.html#l01347">GRootCanvas::ShowStatusBar()</a>, and <a class="el" href="_g_root_canvas_8cxx_source.html#l01484">GRootCanvas::ShowToolBar()</a>.</p>
 
 </div>
 </div>
@@ -878,7 +957,7 @@ Functions</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Sat Jun 19 2021 00:49:20.
+GRSISort (4.0.0.3 ) Reference Guide Generated on Tue May 31 2022 14:08:27.
 </small>
 </div>
 </body>

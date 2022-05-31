@@ -89,6 +89,7 @@ $(document).ready(function(){initNavTree('class_t_tdr_mnemonic.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_t_tdr_mnemonic-members.html">List of all members</a>  </div>
@@ -176,6 +177,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa1cad123d57a9066d44e4f39bc0bd10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5efe35b5662b4e99e2535c68fe68ecb6"><td class="memItemLeft" align="right" valign="top">TClass *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_tdr_mnemonic.html#a5efe35b5662b4e99e2535c68fe68ecb6">GetClassType</a> () const override</td></tr>
 <tr class="separator:a5efe35b5662b4e99e2535c68fe68ecb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b00b7437b3a5745986ce808dc69de5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_tdr_mnemonic.html#a32b00b7437b3a5745986ce808dc69de5">GetTime</a> (Long64_t timestamp, Float_t cfd, double energy, const <a class="el" href="class_t_channel.html">TChannel</a> *channel) const override</td></tr>
+<tr class="separator:a32b00b7437b3a5745986ce808dc69de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25421d545edff08fb92e0ac6c22b4036"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mnemonic.html#a25421d545edff08fb92e0ac6c22b4036">NumericArraySubPosition</a> () const</td></tr>
 <tr class="separator:a25421d545edff08fb92e0ac6c22b4036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6745de534621458a496861cf00d61cab"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468e">EMnemonic</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mnemonic.html#a6745de534621458a496861cf00d61cab">OutputSensor</a> () const</td></tr>
@@ -192,8 +195,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad658a212a8d8712afd153b2baf85ab04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ab444aca20115baa82e20598ae8d4b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mnemonic.html#a7ab444aca20115baa82e20598ae8d4b4">SetClassType</a> (TClass *classType)</td></tr>
 <tr class="separator:a7ab444aca20115baa82e20598ae8d4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e78a382bbfff7fbdb83778abee345e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mnemonic.html#a39e78a382bbfff7fbdb83778abee345e">SetRFMNEMONIC</a> (std::string *name)</td></tr>
-<tr class="separator:a39e78a382bbfff7fbdb83778abee345e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec36126835f2d0999613c4477601952c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mnemonic.html#aec36126835f2d0999613c4477601952c">SetRFMnemonic</a> (std::string *name)</td></tr>
+<tr class="separator:aec36126835f2d0999613c4477601952c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c641fdc86cb6d6f47bce7661cdf8e1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468e">EMnemonic</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mnemonic.html#a77c641fdc86cb6d6f47bce7661cdf8e1">SubSystem</a> () const</td></tr>
 <tr class="separator:a77c641fdc86cb6d6f47bce7661cdf8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affea21f6668f95453c9b6fb2a9b7dbb5"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mnemonic.html#affea21f6668f95453c9b6fb2a9b7dbb5">SubSystemString</a> () const</td></tr>
@@ -234,6 +237,11 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aeb59025e19c445bf15b9e3978df0eddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7add9141868a211378acd9d69fb3e44"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mnemonic.html#aa7add9141868a211378acd9d69fb3e44">fSystemString</a></td></tr>
 <tr class="separator:aa7add9141868a211378acd9d69fb3e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a23d3312659e874de201069c5c1647178"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mnemonic.html#a23d3312659e874de201069c5c1647178">fPrint</a> = true</td></tr>
+<tr class="separator:a23d3312659e874de201069c5c1647178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -311,7 +319,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a92e657dc4b7a3ffc7f4ec1aac156468eafb40ba5ffb9b51df54135ccaeb0fc48c"></a>kClear&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00024">24</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00027">27</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
 </div>
 </div>
@@ -404,7 +412,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00014">14</a> of file <a class="el" href="_t_tdr_mnemonic_8h_source.html">TTdrMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>.</p>
 
 </div>
 </div>
@@ -457,11 +465,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00031">31</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00034">34</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00054">TMnemonic::fArrayPosition</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00059">TMnemonic::fArrayPosition</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_c_s_m_8cxx_source.html#l00023">TCSM::AddFragment()</a>, <a class="el" href="_t_s3_hit_8h_source.html#l00022">TS3Hit::GetArrayPosition()</a>, <a class="el" href="_t_channel_8cxx_source.html#l01319">TChannel::GetDetectorNumber()</a>, and <a class="el" href="_t_tip_hit_8h_source.html#l00066">TTipHit::SetUpNumbering()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_c_s_m_8cxx_source.html#l00023">TCSM::AddFragment()</a>, <a class="el" href="_t_s3_hit_8h_source.html#l00022">TS3Hit::GetArrayPosition()</a>, <a class="el" href="_t_channel_8cxx_source.html#l01310">TChannel::GetDetectorNumber()</a>, and <a class="el" href="_t_tip_hit_8h_source.html#l00066">TTipHit::SetUpNumbering()</a>.</p>
 
 </div>
 </div>
@@ -488,11 +496,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00027">27</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00030">30</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00063">TMnemonic::fArraySubPosition</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00068">TMnemonic::fArraySubPosition</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_sharc_8cxx_source.html#l00095">TSharc::AddFragment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_trific_8cxx_source.html#l00098">TTrific::AddFragment()</a>, and <a class="el" href="_t_sharc_8cxx_source.html#l00095">TSharc::AddFragment()</a>.</p>
 
 </div>
 </div>
@@ -519,9 +527,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00036">36</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00039">39</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00058">TMnemonic::fArraySubPositionString</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00063">TMnemonic::fArraySubPositionString</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_c_s_m_8cxx_source.html#l00023">TCSM::AddFragment()</a>, <a class="el" href="_t_s3_hit_8h_source.html#l00028">TS3Hit::GetDistanceStr()</a>, and <a class="el" href="_t_tip_hit_8h_source.html#l00066">TTipHit::SetUpNumbering()</a>.</p>
 
@@ -551,7 +559,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_t_mnemonic.html#a54b67ed43548aaf6a637a0a0105c2a33">TMnemonic</a>.</p>
+<p>Reimplemented from <a class="el" href="class_t_mnemonic.html#acaf35f5d5f014ee4a11c15869ecdc10d">TMnemonic</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00013">TTdrMnemonic()</a>.</p>
 
@@ -580,11 +588,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00029">29</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00032">32</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00064">TMnemonic::fCollectedCharge</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00069">TMnemonic::fCollectedCharge</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_emma_8cxx_source.html#l00074">TEmma::AddFragment()</a>, <a class="el" href="_t_s3_8cxx_source.html#l00056">TS3::AddFragment()</a>, and <a class="el" href="_t_sharc_8cxx_source.html#l00095">TSharc::AddFragment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_emma_8cxx_source.html#l00081">TEmma::AddFragment()</a>, <a class="el" href="_t_s3_8cxx_source.html#l00056">TS3::AddFragment()</a>, and <a class="el" href="_t_sharc_8cxx_source.html#l00095">TSharc::AddFragment()</a>.</p>
 
 </div>
 </div>
@@ -611,9 +619,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00037">37</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00040">40</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00059">TMnemonic::fCollectedChargeString</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00064">TMnemonic::fCollectedChargeString</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_c_s_m_8cxx_source.html#l00023">TCSM::AddFragment()</a>.</p>
 
@@ -701,11 +709,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8cxx_source.html#l00023">23</a> of file <a class="el" href="_t_mnemonic_8cxx_source.html">TMnemonic.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8cxx_source.html#l00025">25</a> of file <a class="el" href="_t_mnemonic_8cxx_source.html">TMnemonic.cxx</a>.</p>
 
 <p class="reference">References <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea30f767aa191cd5d261e767fd78393607">TMnemonic::kA</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea3e56c011b37f0bc78fb9eb175c1181c6">TMnemonic::kB</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eaf73b7a14626c25aa554e2437ea3fc1df">TMnemonic::kC</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eafb40ba5ffb9b51df54135ccaeb0fc48c">TMnemonic::kClear</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea64fa0b7138d2992f2e7daa5080eb5ed0">TMnemonic::kD</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eaa7db8559fb81d9b4a5b7cb3439f2f401">TMnemonic::kE</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea2e4b5626d52f8ce6e31680b40f2c9778">TMnemonic::kF</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea091eb6206c7543b67256e7dc4bf2dc48">TMnemonic::kG</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea017f8d703dcb536328842793cfff2a1f">TMnemonic::kH</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea0dffd4727830beb64cebb872ad89cc23">TMnemonic::kI</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea1675c2746b6ee7f8746a450bba256822">TMnemonic::kJ</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea891b9b58a353597a14389f567b8d708f">TMnemonic::kK</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea5dd37a35d548b7e1d5b3e7877b22676e">TMnemonic::kL</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea3b6ea81f1643602e8b56d869b6a2a5a7">TMnemonic::kM</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eaad49e22cc8fba64c6120be1d44073929">TMnemonic::kN</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea42d422a6da0db894e598473e419a7546">TMnemonic::kO</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea31f3f313ce63f58c2391afd8e01b8f8d">TMnemonic::kP</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea1121352101e67451e27b8544fdc6575e">TMnemonic::kQ</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eade41bdfe82600cdcf4e4ac08a10c7889">TMnemonic::kR</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eac65dfb11fc5387999d90b7a3e1b70653">TMnemonic::kS</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea30fdef27a0f8fde2a1df2511dfa6371f">TMnemonic::kT</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eae4ae65514f45151cb035644a93d1d179">TMnemonic::kU</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea63b39853c60d1092c257c1ab898bad0a">TMnemonic::kV</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea27963ec968c1e151c78a1d7c8a97b178">TMnemonic::kW</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea0ac0dd65e82e143ab04d378a0133bf9e">TMnemonic::kX</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea39b629a97c6f6ac91423cf042154dd86">TMnemonic::kY</a>, and <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eaca4d7439951bc76061bedb523255ff3d">TMnemonic::kZ</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>.</p>
 
 </div>
 </div>
@@ -734,7 +742,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00021">21</a> of file <a class="el" href="_t_tdr_mnemonic_8cxx_source.html">TTdrMnemonic.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00041">fSystem</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00056">TMnemonic::fSystemString</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eafb40ba5ffb9b51df54135ccaeb0fc48c">kClear</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eac65dfb11fc5387999d90b7a3e1b70653">TMnemonic::kS</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea93b7b115cf383b42fec37d39255155df">kTdrClover</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea3bd09671d032ba06be4e12406ed3606d">kTdrCloverBgo</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eaa3742a000efb2b29718ffbc235bca9ee">kTdrPlastic</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eae72c1812d02ca840bf14b3fe41735ae6">kTdrSiLi</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea2de68a2465aa5bdcb312957a78292024">kTdrTigress</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea91c487108a1101b92144225fc959dd08">kTdrTigressBgo</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00026">TMnemonic::SubSystem()</a>.</p>
+<p class="reference">References <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00044">fSystem</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00061">TMnemonic::fSystemString</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eafb40ba5ffb9b51df54135ccaeb0fc48c">kClear</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eac65dfb11fc5387999d90b7a3e1b70653">TMnemonic::kS</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea93b7b115cf383b42fec37d39255155df">kTdrClover</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea3bd09671d032ba06be4e12406ed3606d">kTdrCloverBgo</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eaa3742a000efb2b29718ffbc235bca9ee">kTdrPlastic</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eae72c1812d02ca840bf14b3fe41735ae6">kTdrSiLi</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea2de68a2465aa5bdcb312957a78292024">kTdrTigress</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea91c487108a1101b92144225fc959dd08">kTdrTigressBgo</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00029">TMnemonic::SubSystem()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00065">Parse()</a>.</p>
 
@@ -767,7 +775,61 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00091">91</a> of file <a class="el" href="_t_tdr_mnemonic_8cxx_source.html">TTdrMnemonic.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00067">TMnemonic::fClassType</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea93b7b115cf383b42fec37d39255155df">kTdrClover</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea3bd09671d032ba06be4e12406ed3606d">kTdrCloverBgo</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eaa3742a000efb2b29718ffbc235bca9ee">kTdrPlastic</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eae72c1812d02ca840bf14b3fe41735ae6">kTdrSiLi</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea2de68a2465aa5bdcb312957a78292024">kTdrTigress</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea91c487108a1101b92144225fc959dd08">kTdrTigressBgo</a>, and <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00030">System()</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00072">TMnemonic::fClassType</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea93b7b115cf383b42fec37d39255155df">kTdrClover</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea3bd09671d032ba06be4e12406ed3606d">kTdrCloverBgo</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eaa3742a000efb2b29718ffbc235bca9ee">kTdrPlastic</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40eae72c1812d02ca840bf14b3fe41735ae6">kTdrSiLi</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea2de68a2465aa5bdcb312957a78292024">kTdrTigress</a>, <a class="el" href="class_t_tdr_mnemonic.html#a4237112bbb02d29085a8ea12aeedd40ea91c487108a1101b92144225fc959dd08">kTdrTigressBgo</a>, and <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00030">System()</a>.</p>
+
+</div>
+</div>
+<a id="a32b00b7437b3a5745986ce808dc69de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b00b7437b3a5745986ce808dc69de5">&#9670;&nbsp;</a></span>GetTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TTdrMnemonic::GetTime </td>
+          <td>(</td>
+          <td class="paramtype">Long64_t&#160;</td>
+          <td class="paramname"><em>timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t&#160;</td>
+          <td class="paramname"><em>cfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>energy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_t_channel.html">TChannel</a> *&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_t_mnemonic.html#afd1025aefa09f7146733794092bf2671">TMnemonic</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00109">109</a> of file <a class="el" href="_t_tdr_mnemonic_8cxx_source.html">TTdrMnemonic.cxx</a>.</p>
+
+<p class="reference">References <a class="el" href="_t_channel_8cxx_source.html#l00546">TChannel::CalibrateCFD()</a>, <a class="el" href="_t_channel_8h_source.html#l00171">TChannel::GetDigitizerType()</a>, <a class="el" href="_t_channel_8h_source.html#l00172">TChannel::GetTimeStampUnit()</a>, <a class="el" href="_t_channel_8h_source.html#l00254">TChannel::GetTZero()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8h.html#a14e00eb70e42609154d868205f43bf4ca0a9c8d84b599330f692bbc962505f56c">kFastPixie</a>, and <a class="el" href="_t_g_r_s_i_mnemonic_8h.html#a14e00eb70e42609154d868205f43bf4ca469f71e43cc42298fa371267e4a1e52d">kPixie</a>.</p>
 
 </div>
 </div>
@@ -794,11 +856,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8cxx_source.html#l00123">123</a> of file <a class="el" href="_t_mnemonic_8cxx_source.html">TMnemonic.cxx</a>.</p>
+<p>Reimplemented in <a class="el" href="class_t_g_r_s_i_mnemonic.html#a8bfc82219651616759e2debbff98d764">TGRSIMnemonic</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00063">TMnemonic::fArraySubPosition</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea3e56c011b37f0bc78fb9eb175c1181c6">TMnemonic::kB</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea091eb6206c7543b67256e7dc4bf2dc48">TMnemonic::kG</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eade41bdfe82600cdcf4e4ac08a10c7889">TMnemonic::kR</a>, and <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea27963ec968c1e151c78a1d7c8a97b178">TMnemonic::kW</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8cxx_source.html#l00127">127</a> of file <a class="el" href="_t_mnemonic_8cxx_source.html">TMnemonic.cxx</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_channel_8cxx_source.html#l01353">TChannel::GetCrystalNumber()</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00068">TMnemonic::fArraySubPosition</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea3e56c011b37f0bc78fb9eb175c1181c6">TMnemonic::kB</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea091eb6206c7543b67256e7dc4bf2dc48">TMnemonic::kG</a>, <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468eade41bdfe82600cdcf4e4ac08a10c7889">TMnemonic::kR</a>, and <a class="el" href="class_t_mnemonic.html#a92e657dc4b7a3ffc7f4ec1aac156468ea27963ec968c1e151c78a1d7c8a97b178">TMnemonic::kW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_t_channel_8cxx_source.html#l01344">TChannel::GetCrystalNumber()</a>.</p>
 
 </div>
 </div>
@@ -825,11 +889,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00030">30</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00033">33</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00065">TMnemonic::fOutputSensor</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00070">TMnemonic::fOutputSensor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_emma_8cxx_source.html#l00074">TEmma::AddFragment()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00452">TGriffin::AddFragment()</a>, and <a class="el" href="_t_tigress_8cxx_source.html#l00232">TTigress::AddFragment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_emma_8cxx_source.html#l00081">TEmma::AddFragment()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00457">TGriffin::AddFragment()</a>, and <a class="el" href="_t_tigress_8cxx_source.html#l00228">TTigress::AddFragment()</a>.</p>
 
 </div>
 </div>
@@ -856,9 +920,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00038">38</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00041">41</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00060">TMnemonic::fOutputSensorString</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00065">TMnemonic::fOutputSensorString</a>.</p>
 
 </div>
 </div>
@@ -890,7 +954,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00065">65</a> of file <a class="el" href="_t_tdr_mnemonic_8cxx_source.html">TTdrMnemonic.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00021">EnumerateSystem()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>.</p>
+<p class="reference">References <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00021">EnumerateSystem()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>.</p>
 
 </div>
 </div>
@@ -918,9 +982,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8cxx_source.html#l00089">89</a> of file <a class="el" href="_t_mnemonic_8cxx_source.html">TMnemonic.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8cxx_source.html#l00093">93</a> of file <a class="el" href="_t_mnemonic_8cxx_source.html">TMnemonic.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>.</p>
 
 </div>
 </div>
@@ -952,7 +1016,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">78</a> of file <a class="el" href="_t_tdr_mnemonic_8cxx_source.html">TTdrMnemonic.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00054">TMnemonic::fArrayPosition</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00058">TMnemonic::fArraySubPositionString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00059">TMnemonic::fCollectedChargeString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00060">TMnemonic::fOutputSensorString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00055">TMnemonic::fSegment</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00057">TMnemonic::fSubSystemString</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00056">TMnemonic::fSystemString</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00059">TMnemonic::fArrayPosition</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00063">TMnemonic::fArraySubPositionString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00064">TMnemonic::fCollectedChargeString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00065">TMnemonic::fOutputSensorString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00060">TMnemonic::fSegment</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00062">TMnemonic::fSubSystemString</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00061">TMnemonic::fSystemString</a>.</p>
 
 </div>
 </div>
@@ -979,11 +1043,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00032">32</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00035">35</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00055">TMnemonic::fSegment</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00060">TMnemonic::fSegment</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_channel_8cxx_source.html#l01329">TChannel::GetSegmentNumber()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_channel_8cxx_source.html#l01320">TChannel::GetSegmentNumber()</a>.</p>
 
 </div>
 </div>
@@ -1011,14 +1075,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00047">47</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00050">50</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_channel_8h_source.html#l00169">TChannel::SetClassType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_channel_8cxx_source.html#l01424">TChannel::SetClassType()</a>.</p>
 
 </div>
 </div>
-<a id="a39e78a382bbfff7fbdb83778abee345e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39e78a382bbfff7fbdb83778abee345e">&#9670;&nbsp;</a></span>SetRFMNEMONIC()</h2>
+<a id="aec36126835f2d0999613c4477601952c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec36126835f2d0999613c4477601952c">&#9670;&nbsp;</a></span>SetRFMnemonic()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1027,7 +1091,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void TMnemonic::SetRFMNEMONIC </td>
+          <td class="memname">void TMnemonic::SetRFMnemonic </td>
           <td>(</td>
           <td class="paramtype">std::string *&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -1041,11 +1105,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">95</a> of file <a class="el" href="_t_mnemonic_8cxx_source.html">TMnemonic.cxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">99</a> of file <a class="el" href="_t_mnemonic_8cxx_source.html">TMnemonic.cxx</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8cxx_source.html#l00023">TMnemonic::EnumerateMnemonic()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00054">TMnemonic::fArrayPosition</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00063">TMnemonic::fArraySubPosition</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00058">TMnemonic::fArraySubPositionString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00064">TMnemonic::fCollectedCharge</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00059">TMnemonic::fCollectedChargeString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00065">TMnemonic::fOutputSensor</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00060">TMnemonic::fOutputSensorString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00055">TMnemonic::fSegment</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00062">TMnemonic::fSubSystem</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00057">TMnemonic::fSubSystemString</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00056">TMnemonic::fSystemString</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8cxx_source.html#l00025">TMnemonic::EnumerateMnemonic()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00059">TMnemonic::fArrayPosition</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00068">TMnemonic::fArraySubPosition</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00063">TMnemonic::fArraySubPositionString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00069">TMnemonic::fCollectedCharge</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00064">TMnemonic::fCollectedChargeString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00070">TMnemonic::fOutputSensor</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00065">TMnemonic::fOutputSensorString</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00060">TMnemonic::fSegment</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00067">TMnemonic::fSubSystem</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00062">TMnemonic::fSubSystemString</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00061">TMnemonic::fSystemString</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, and <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00131">TGRSIMnemonic::Parse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, and <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00134">TGRSIMnemonic::Parse()</a>.</p>
 
 </div>
 </div>
@@ -1072,11 +1136,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00026">26</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00029">29</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00062">TMnemonic::fSubSystem</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00067">TMnemonic::fSubSystem</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_emma_8cxx_source.html#l00074">TEmma::AddFragment()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00388">TFipps::AddFragment()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00452">TGriffin::AddFragment()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00232">TTigress::AddFragment()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00021">TILLMnemonic::EnumerateSystem()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00021">EnumerateSystem()</a>, and <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00035">TGRSIMnemonic::EnumerateSystem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_emma_8cxx_source.html#l00081">TEmma::AddFragment()</a>, <a class="el" href="_t_griffin_8cxx_source.html#l00457">TGriffin::AddFragment()</a>, <a class="el" href="_t_fipps_8cxx_source.html#l00399">TFipps::AddFragment()</a>, <a class="el" href="_t_ifin_8cxx_source.html#l00411">TIfin::AddFragment()</a>, <a class="el" href="_t_tigress_8cxx_source.html#l00228">TTigress::AddFragment()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00021">EnumerateSystem()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00023">TILLMnemonic::EnumerateSystem()</a>, and <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00036">TGRSIMnemonic::EnumerateSystem()</a>.</p>
 
 </div>
 </div>
@@ -1103,9 +1167,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00035">35</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00038">38</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00057">TMnemonic::fSubSystemString</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00062">TMnemonic::fSubSystemString</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_tip_hit_8h_source.html#l00066">TTipHit::SetUpNumbering()</a>.</p>
 
@@ -1136,7 +1200,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00030">30</a> of file <a class="el" href="_t_tdr_mnemonic_8h_source.html">TTdrMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00041">fSystem</a>.</p>
+<p class="reference">References <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00044">fSystem</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00091">GetClassType()</a>.</p>
 
@@ -1165,9 +1229,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00034">34</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00037">37</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00056">TMnemonic::fSystemString</a>.</p>
+<p class="reference">References <a class="el" href="_t_mnemonic_8h_source.html#l00061">TMnemonic::fSystemString</a>.</p>
 
 </div>
 </div>
@@ -1192,9 +1256,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00054">54</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00059">59</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8h_source.html#l00031">TMnemonic::ArrayPosition()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00082">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00110">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00153">TGRSIMnemonic::Print()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8h_source.html#l00034">TMnemonic::ArrayPosition()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, <a class="el" href="_t_h_i_l_mnemonic_8cxx_source.html#l00053">THILMnemonic::Print()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00090">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00114">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00156">TGRSIMnemonic::Print()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>.</p>
 
 </div>
 </div>
@@ -1218,9 +1282,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00063">63</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00068">68</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8h_source.html#l00027">TMnemonic::ArraySubPosition()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00123">TMnemonic::NumericArraySubPosition()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8h_source.html#l00030">TMnemonic::ArraySubPosition()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00127">TMnemonic::NumericArraySubPosition()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00237">TGRSIMnemonic::NumericArraySubPosition()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>.</p>
 
 </div>
 </div>
@@ -1244,9 +1308,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00058">58</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00063">63</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8h_source.html#l00036">TMnemonic::ArraySubPositionString()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00082">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00110">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00153">TGRSIMnemonic::Print()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8h_source.html#l00039">TMnemonic::ArraySubPositionString()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, <a class="el" href="_t_h_i_l_mnemonic_8cxx_source.html#l00053">THILMnemonic::Print()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00090">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00114">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00156">TGRSIMnemonic::Print()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>.</p>
 
 </div>
 </div>
@@ -1272,9 +1336,9 @@ Private Attributes</h2></td></tr>
 
 <p>! TGRSIDetector Type that this mnemonic represents </p>
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00067">67</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00072">72</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00095">TILLMnemonic::GetClassType()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00091">GetClassType()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00143">TMnemonic::GetClassType()</a>, and <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00166">TGRSIMnemonic::GetClassType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_h_i_l_mnemonic_8cxx_source.html#l00066">THILMnemonic::GetClassType()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00091">GetClassType()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00103">TILLMnemonic::GetClassType()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00147">TMnemonic::GetClassType()</a>, and <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00171">TGRSIMnemonic::GetClassType()</a>.</p>
 
 </div>
 </div>
@@ -1298,9 +1362,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00064">64</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00069">69</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00029">TMnemonic::CollectedCharge()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00032">TMnemonic::CollectedCharge()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>.</p>
 
 </div>
 </div>
@@ -1324,9 +1388,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00059">59</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00064">64</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00037">TMnemonic::CollectedChargeString()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00082">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00110">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00153">TGRSIMnemonic::Print()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00040">TMnemonic::CollectedChargeString()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, <a class="el" href="_t_h_i_l_mnemonic_8cxx_source.html#l00053">THILMnemonic::Print()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00090">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00114">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00156">TGRSIMnemonic::Print()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>.</p>
 
 </div>
 </div>
@@ -1350,9 +1414,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00065">65</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00070">70</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00030">TMnemonic::OutputSensor()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00033">TMnemonic::OutputSensor()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>.</p>
 
 </div>
 </div>
@@ -1376,9 +1440,33 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00060">60</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00065">65</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00038">TMnemonic::OutputSensorString()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00082">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00110">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00153">TGRSIMnemonic::Print()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00041">TMnemonic::OutputSensorString()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, <a class="el" href="_t_h_i_l_mnemonic_8cxx_source.html#l00053">THILMnemonic::Print()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00090">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00114">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00156">TGRSIMnemonic::Print()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>.</p>
+
+</div>
+</div>
+<a id="a23d3312659e874de201069c5c1647178"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d3312659e874de201069c5c1647178">&#9670;&nbsp;</a></span>fPrint</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMnemonic::fPrint = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00076">76</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
 </div>
 </div>
@@ -1402,9 +1490,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00055">55</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00060">60</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00131">TGRSIMnemonic::Parse()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00082">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00110">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00153">TGRSIMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00032">TMnemonic::Segment()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00134">TGRSIMnemonic::Parse()</a>, <a class="el" href="_t_h_i_l_mnemonic_8cxx_source.html#l00053">THILMnemonic::Print()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00090">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00114">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00156">TGRSIMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8h_source.html#l00035">TMnemonic::Segment()</a>, and <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>.</p>
 
 </div>
 </div>
@@ -1428,9 +1516,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00062">62</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00067">67</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00026">TMnemonic::SubSystem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00029">TMnemonic::SubSystem()</a>.</p>
 
 </div>
 </div>
@@ -1454,9 +1542,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00057">57</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00062">62</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00082">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00110">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00153">TGRSIMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00035">TMnemonic::SubSystemString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, <a class="el" href="_t_h_i_l_mnemonic_8cxx_source.html#l00053">THILMnemonic::Print()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00090">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00114">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00156">TGRSIMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00038">TMnemonic::SubSystemString()</a>.</p>
 
 </div>
 </div>
@@ -1480,7 +1568,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00041">41</a> of file <a class="el" href="_t_tdr_mnemonic_8h_source.html">TTdrMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00044">44</a> of file <a class="el" href="_t_tdr_mnemonic_8h_source.html">TTdrMnemonic.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00013">ClassImp()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00021">EnumerateSystem()</a>, and <a class="el" href="_t_tdr_mnemonic_8h_source.html#l00030">System()</a>.</p>
 
@@ -1506,9 +1594,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00056">56</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_t_mnemonic_8h_source.html#l00061">61</a> of file <a class="el" href="_t_mnemonic_8h_source.html">TMnemonic.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00006">ClassImp()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00021">TILLMnemonic::EnumerateSystem()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00021">EnumerateSystem()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00035">TGRSIMnemonic::EnumerateSystem()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00057">TMnemonic::Parse()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00082">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00110">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00153">TGRSIMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00095">TMnemonic::SetRFMNEMONIC()</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00034">TMnemonic::SystemString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_t_mnemonic_8cxx_source.html#l00010">TMnemonic::Clear()</a>, <a class="el" href="_t_h_i_l_mnemonic_8cxx_source.html#l00017">THILMnemonic::EnumerateSystem()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00021">EnumerateSystem()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00023">TILLMnemonic::EnumerateSystem()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00036">TGRSIMnemonic::EnumerateSystem()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00059">TMnemonic::Parse()</a>, <a class="el" href="_t_h_i_l_mnemonic_8cxx_source.html#l00053">THILMnemonic::Print()</a>, <a class="el" href="_t_tdr_mnemonic_8cxx_source.html#l00078">Print()</a>, <a class="el" href="_t_i_l_l_mnemonic_8cxx_source.html#l00090">TILLMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00114">TMnemonic::Print()</a>, <a class="el" href="_t_g_r_s_i_mnemonic_8cxx_source.html#l00156">TGRSIMnemonic::Print()</a>, <a class="el" href="_t_mnemonic_8cxx_source.html#l00099">TMnemonic::SetRFMnemonic()</a>, and <a class="el" href="_t_mnemonic_8h_source.html#l00037">TMnemonic::SystemString()</a>.</p>
 
 </div>
 </div>
@@ -1518,7 +1606,7 @@ Private Attributes</h2></td></tr>
 </body>
 <div id="footer" style="background-color:#DDDDDD;">
 <small>
-GRSISort (4.0.0.2 ) Reference Guide Generated on Sat Jun 19 2021 00:49:53.
+GRSISort (4.0.0.3 ) Reference Guide Generated on Tue May 31 2022 14:09:07.
 </small>
 </div>
 </body>

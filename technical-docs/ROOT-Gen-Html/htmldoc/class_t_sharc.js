@@ -25,6 +25,7 @@ var class_t_sharc =
     [ "GetZOffset", "class_t_sharc.html#a3687f61dedefa87067985d39910069e4", null ],
     [ "operator=", "class_t_sharc.html#a96175cbb0cadef17a0de4dacdfc34ff2", null ],
     [ "Print", "class_t_sharc.html#af808fb7bf051df8471d975465f512160", null ],
+    [ "Print", "class_t_sharc.html#ae87a1718d91004e835ac35987c1b1975", null ],
     [ "RemoveHits", "class_t_sharc.html#a0cbe60ac375b5d56ffb4a630c0acb308", null ],
     [ "SetXYZOffset", "class_t_sharc.html#a683996cdf0cebff905c7be3a2a97f536", null ],
     [ "fBackFragments", "class_t_sharc.html#ae97c2c4bfb03ee0a04cd25e8777400f0", null ],
