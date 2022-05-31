@@ -20,7 +20,7 @@ var searchData=
   ['readingmaterial',['ReadingMaterial',['../class_t_g_r_s_i_options.html#ac9405602f4ac46817e5ff97060f20593',1,'TGRSIOptions']]],
   ['readint',['ReadInt',['../class_t_x_m_l_odb.html#a3c356a63a806ddc192f012dff7c18b6b',1,'TXMLOdb']]],
   ['readintarray',['ReadIntArray',['../class_t_x_m_l_odb.html#a70a4bc9b892741fc8e95e674e50c00fe',1,'TXMLOdb']]],
-  ['readme_2emd',['README.md',['../_g_r_s_i_data_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../_h_i_l_data_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../_i_l_l_data_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../i_themba_data_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../_r_e_a_d_m_e_8md.html',1,'(Global Namespace)']]],
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
   ['readmorebytes',['ReadMoreBytes',['../class_t_midas_file.html#ae5e88f7ad3705f1e4c815367f446b8b3',1,'TMidasFile']]],
   ['readpipe',['readpipe',['../_t_midas_file_8cxx.html#abd66d29dd5da5c7324f68debe264f1c0',1,'TMidasFile.cxx']]],
   ['readppg',['ReadPPG',['../class_t_parsing_diagnostics.html#adf907a662331ca3f6dd2fa59edae624f',1,'TParsingDiagnostics']]],
