@@ -11,6 +11,7 @@ GRSISort contains an analysis package with the following
    - [[Gain-Matching|Gain-Matching]]
    - [[LED Walk Correction | LED-walk]] 
 - [[Cross Talk Corrections | Cross Talk Corrections]]
+- [[True-coincidence Summing Corrections | True-coincidence Summing Corrections]]
 - [[Kinematics | Kinematics]]
 - [[Interactive Analysis | Interactive Analysis]]
 - [[Gamma-gamma Angular Correlations | Angular Correlations]]
