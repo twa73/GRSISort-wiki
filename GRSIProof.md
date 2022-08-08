@@ -2,7 +2,7 @@
 
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**GRSIProof**](GRSIProof)
 
-GRSIProof is used to run a batch analysis script on either fragment trees or analysis trees. It uses the PROOF system to distribute the sorting of the tree over multiple threads (slaves) before adding the resulting histograms back together.
+GRSIProof is used to run a batch analysis script on either fragment trees or analysis trees. It uses the PROOF system to distribute the sorting of the tree over multiple threads (workers) before adding the resulting histograms back together.
 
 1. [Creating your own analysis selector](GRSIProof#create_script)
 2. [Creating Histograms](GRSIProof#create_histos)
@@ -102,7 +102,7 @@ void <SelectorClassName>::EndOfSort() {
 }
 ```
 to the selectors source file one can add code to create a background subtracted spectrum from a coincident and a time-random histogram, set bins to specific values, etc.
-When setting bins to non-zero values, keep in mind that this happens before the histograms from the different slaves are merged, so the final value in the histogram will multiplied by the number of workers.
+When setting bins to non-zero values, keep in mind that this happens before the histograms from the different workers are merged, so the final value in the histogram will multiplied by the number of workers.
 
 ## Running GRSIProof <a name="running" />
 You run `grsiproof` as a separate program from GRSISort. The basic way to do so is:
@@ -125,7 +125,7 @@ to accomplish the same task.
 
 ## Running Options <a name="running_options" />
 There are options that can be provided on the command line to change the way `grsiproof` runs. Some options are listed below with what they do. A full list can be viewed with `grsiproof -h` or `grsiproof --help`.
-  * __--max-workers #__,           Sets the number of slaves to be used. Each worker creates each histogram you create, so this is a good option to reduce memory consumption when using many histograms. Defaults to number of cores on computer.
+  * __--max-workers #__,           Sets the number of workers to be used. Each worker creates each histogram you create, so this is a good option to reduce memory consumption when using many histograms. Defaults to number of cores on computer.
   * __--selector-only__,           Bypasses proof, and just runs the selector on one thread. Good for debugging, as proof redirects output messages.
   * __--max-events arg__,          Maximum number of events processed by grsiproof.
   * __--addback-window__,          Set the maximum time difference between two hits to be accepted for addback.

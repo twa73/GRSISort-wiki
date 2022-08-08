@@ -10,7 +10,7 @@ TSourceCalibration is a GUI class similar to TBGSubtraction. The constructor for
 
 After constructing an object of the class a window will be shown to select which source corresponds to which matrix. If the names of the matrices include a recognized source isotope, the source selection will be pre-filled with the corresponding isotope, otherwise the user will have to use the drop-down menu to select the correct one. Any source file that is found in ```$GRSISYS/libraries/TAnalysis/SourceData``` can be used as a source isotope, not just the provided choices.
 
-The matrices should have the charge on the y-axis and the channel address as labels on the x-axis. These kind of matrices can be produced using the AlphanumericalSelector that can be found in ```$GRSISYS/GRSIProof```.
+The matrices should have the charge on the y-axis and the channel address as labels on the x-axis. These kind of matrices can be produced using the AlphanumericalSelector that can be found in ```$GRSISYS/GRSIProof``` or using the AlphanumericalHelper that can be found in ```$GRSISYS/examples```.
 
 Once the user presses the "Accept & Continue" button the code will go through all the spectra, find peaks using the TSpectrum class with the provided sigma and threshold. A progress bar will show the progress through the spectra.
 
