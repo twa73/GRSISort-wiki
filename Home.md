@@ -11,7 +11,9 @@ A lean, mean, sorting machine. Created by P. C. Bender.
 | A step-by-step guide to install GRSISort  | Instructions for running GRSISort | A quick guide to interactive analysis | Detailed technical documentation on GRSISort |
 
 ## Citation
-From version 4.0.0.2 on we have a DOI automatically created for each release, e.g. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6330017.svg)](https://doi.org/10.5281/zenodo.6330017).
+From version 4.0.0.2 on we have a DOI automatically created for each release, e.g. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3520937.svg)](https://doi.org/10.5281/zenodo.3520937) (4.0.0.2) or [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6330017.svg)](https://doi.org/10.5281/zenodo.6330017) (4.0.0.3).
+
+
 
 There is also one DOI for the newest release of the old version 3.1.3.5: 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3520949.svg)](https://doi.org/10.5281/zenodo.3520949)
