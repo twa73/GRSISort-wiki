@@ -22,6 +22,8 @@ After the peaks have been found and fitted the resulting accepted peaks and cali
 
 Here the user can change the sigma and threshold parameters, run the algorithm to find peaks again (using a slower version or the default faster version), calibrate the channel with a polynomial of the desired degree, and either discard or accept the individual channel's calibration, or accept the result for all of the channels for the selected source tab.
 
+As we have a rather large number channels, typically the window will not be wide enough to show all tabs. Navigation via the buttons still works though, and one can check the current channel by right-clicking on the canvas of the calibration which should produce a menu with the top having a title of the form "cal_0x%04f". This allows the user to identify the currently selected channel despite the active tab not being shown in the list at the top.
+
 It should also be possible to add individual peaks to the calibration or remove them from it (this has to be checked).
 
 Once all results have been either discarded or accepted, the results of the different sources are all combined and shown. At this point the user can change the degree of the polynomial used to fit the data and re-calibrate the channel using the new polynomial, accept the individual channel, or all of them (which finishes the calibration).
