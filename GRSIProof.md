@@ -2,6 +2,8 @@
 
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**GRSIProof**](GRSIProof)
 
+**GRSIProof is obsolete, please only use this if you absolutely have to, it's been replaced by [GRSIFrame](GRSIFrame)**
+
 GRSIProof is used to run a batch analysis script on either fragment trees or analysis trees. It uses the PROOF system to distribute the sorting of the tree over multiple threads (workers) before adding the resulting histograms back together.
 
 1. [Creating your own analysis selector](GRSIProof#create_script)
