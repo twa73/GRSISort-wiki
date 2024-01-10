@@ -17,6 +17,7 @@ This has one main advantage: It allows us to sort the very large MIDAS files non
 By default GRSIsort will open up a root session in the GRSI environment.
 
 <a name="unpackmid" />
+
 # Unpacking the MIDAS File
 
 The strategy used by GRSISort is to unpack the MIDAS file and convert the information into two ROOT Trees.
@@ -72,7 +73,7 @@ Another example, of a 2D histogram that displays calibrated energy vs. detector 
 FragmentTree->Draw("fChannelNumber:GetEnergy() >> h(16000,0,16000,64,0,64)", "fChannelNumber!=12", "colz")
 ```
 
-This is mainly useful for a first look at the data, to produce multiple histograms at once for many root files use [[GRSIProof | GRSIProof]] or [[GRSIFrame | GRSIFrame]].
+This is mainly useful for a first look at the data, to produce multiple histograms at once for many root files use [[GRSIFrame | GRSIFrame]] (or [[GRSIProof | GRSIProof]]).
 
 #### The Autosort Feature 
 If the __-a__ flag is used on the MIDAS file, GRSISort will sort the MIDAS file and complete a fragment sort by applying the flags and sorting the fragment tree, making an analysis tree file.
