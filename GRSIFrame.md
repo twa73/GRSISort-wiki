@@ -36,6 +36,8 @@ The helper inherits from the TGRSIHelper class which provides
 - a function to check the sizes of all objects (to ensure the maximum object size of 1 GB in ROOT).
 
 The helper also provides the user code that creates and fills the histograms and/or trees.
+This is done via the CreateHistograms and Exec functions, respectively.
+While Exec will be called in parallel and thus has to be thread-safe, CreateHistograms will be called in a loop over all slots/workers and does not have to be threadsafe.
 
 ## Creating your own helper <a name="create_helper" />
 There are examples of helpers in the `example` directory.
@@ -148,7 +150,7 @@ There are options that can be provided on the command line to change the way `gr
 Some options are listed below with what they do.
 A full list can be viewed with `grsiframe -h` or `grsiframe --help`.
 
-  * __--max-workers  arg__,          Max number of nodes to use when running a grsiframe session, 0 means no multithreading enabled, whereas 1 means multithreading enable with a single thread.
+  * __--max-workers  arg__,          Maximum number of nodes to use when running a grsiframe session, 0 means no multithreading enabled, whereas 1 means multithreading enable with a single thread.
   * __--tree-name  arg__,            Name of tree to be proofed, default is empty, i.e. FragmentTree, AnalysisTree, and Lst2RootTree are checked
 
 The analysis options that are used by grsiframe are:

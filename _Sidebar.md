@@ -25,6 +25,7 @@
   - [[Kinematics | Kinematics]]
   - [[Interactive Analysis | Interactive-Analysis]]
   - [[Gamma-gamma Angular Correlations | Angular-Correlations]]
+  - [[Old Gamma-gamma Angular Correlations | Old-Angular-Correlations]]
   - [[Gamma-electron Angular Correlations | Gamma-electron Angular-Correlations]]
   - [[Compton Polarimetry | Compton Polarimetry]]
   - [[Code Examples | Code-Examples]]
