@@ -28,6 +28,7 @@ The second tree in the ```analysis?????_???.root``` file contains built events w
 
 The ```--recommended``` flag includes a number of default GRSISort flags (-a, -q, -l, --write-diagnostics, --word-count-offset=-1, --write-fragment-tree, --write-bad-fragments, --separate-out-of-order, --suppress-error, and --reconstruct-timestamp).
 These and all other available flags can be seen using ```grsisort -h```.
+See [here](CommandLineOptions) for all command line options and their explanations.
 This shows all the recommended flags in dark green, and the flags used in creating the analysis tree and making histograms in dark cyan.
 
 Some currently accepted flags for the midas sort:
