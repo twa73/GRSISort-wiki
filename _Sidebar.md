@@ -14,6 +14,7 @@
 [**Running GRSISort**](Running-GRSISort)  
 
 - [[Sorting|Running-GRSISort#sortingmodel]]
+  - [[Command-line Options | CommandLineOptions]]
   - [[Unpacking MIDAS Files|Running-GRSISort#unpackmid]]
   - [[GRSIFrame | GRSIFrame]]
   - [[obsolete: GRSIProof | GRSIProof]]
