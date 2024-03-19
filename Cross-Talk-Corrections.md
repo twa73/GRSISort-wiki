@@ -12,5 +12,5 @@ Make sure that the TAnalysisOptions have the flag set to correct cross talk!
 This can be done during sorting by adding the flag ```--is-correcting-cross-talk 1```, or by reading the analysis options from a root-file opened in update mode, setting the flag via the SetCorrectCrossTalk(true) function, and then writing the analysis options back to file.
 When opening a root-file with grsisort you will get a print out of the analysis options and should see a line ```fIsCorrectingCrossTalk: 1``` if the flag has been set.
 
-Check the GRSISort discussion #1236 to see how working crosstalk corrections should work.
+Check the GRSISort discussion [#12361](/GRIFFINCollaboration/GRSISort/issues/1236) to see how working crosstalk corrections should work.
 

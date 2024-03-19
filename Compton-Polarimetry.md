@@ -1,3 +1,4 @@
+# This seems to be incomplete, the LeanComptonMatrices or LeanAnalysisComptonMatrices never were part of GRSISort!
 
 ## Process
 Here are the steps to follow for Compton Polarimetry analysis in GRSISort.

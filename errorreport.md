@@ -11,7 +11,7 @@ ROOT Version = 5.34/30
 
 Computer and Path to File that failed:
 
-GRSISort Branch = master
+GRSISort Branch = main
 
 Last Commit:
 commit 479204ae1385a874abda8f32bc41eef354e0f20e

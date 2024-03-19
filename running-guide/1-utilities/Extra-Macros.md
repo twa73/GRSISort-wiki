@@ -4,7 +4,7 @@
         
   * **html_generator.C** <br> Creates root-like HTML documentation for each of the defined classes in the script. **Deprecated**, use doxygen instead.
   * **odbgains.C** <br> Creates a bash script that we use to set the odb gains and offsets in the online analyzer. Running ODBGains("*nameofcalfile*.cal") outputs a file called odbgains.sh.
-  * [**GainMatchGRIFFIN.C**](GainMatchGRIFFIN) <br> Gain-matches GRIFFIN given a set of peak values. Fairly flexible, and written to work with few (but not no) modifications.
+  * [**GainMatchGRIFFIN.cxx**](GainMatchGRIFFIN) <br> Program that gain-matches GRIFFIN given a set of peak values. Fairly flexible, and written to work with few (but not no) modifications.
 
 For older data from the first few years of GRIFFIN:
   * **bufferclean.C** <br> Cleans the extraneous data that is dumped into the GRIFFIN stream at the start of a run. This gets written to a new Midas File.

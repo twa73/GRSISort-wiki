@@ -69,17 +69,16 @@ Optional:
 *
 To see a list of GRSISort versions available for download, use `git tag -l`.
 The current *stable* release will be tagged under `current`.
-The most up to date version will be tagged under `master`, see [releases](https://github.com/GRIFFINCollaboration/GRSISort/releases) for details.
+The most up to date version will be tagged under `main`, see [releases](https://github.com/GRIFFINCollaboration/GRSISort/releases) for details.
 
 To download the version named \<version\>:
 ```
 git checkout <version>
 ```
-*
 
 ### Contributing to the code
 
-If you want to contribute to the code, you need to have your own copy of GRSISort in your github account. To do this go to the GRSISort repository of the GRIFFINCollaboration and click "fork" in the top right. Now run
+If you want to contribute to the code (which is very much encouraged!), you need to have your own copy of GRSISort in your github account. To do this go to the GRSISort repository of the GRIFFINCollaboration and click "fork" in the top right. Now run
 ```
 git remote set-url origin ssh://git@github.com/<UserName>/GRSISort.git
 git remote add upstream https://github.com/GRIFFINCollaboration/GRSISort.git
@@ -137,7 +136,7 @@ If you receive an error, please consult the [Troubleshooting](troubleshooting) p
 
 In order to parse data and to understand the setup specific detector classes, an additional library is needed.
 This library has to provide the following functions:
-- CreateFile(std::string& filename) which returns a pointer to a new raw data file and DestroyFile which takes a pointer to a raw data file and deletes it (returns void).
+- CreateFile(std::string& filename) which returns a pointer to a new raw data file and DestroyFile which takes a pointer to a raw data file and deletes it (returns nothing, i.e void).
 - CreateParser() which creates a new data parser object and DestroyParser which takes a pointer to such a data parser object and deletes it.
 - LibraryVersion() which returns a string containing the version number of the library.
 - InitLibrary() which initializes e.g. the mnemonic class used in Channel.
@@ -150,7 +149,7 @@ So far four parsing/detector libraries have been written:
 - HILData for data from HIL, Warsaw (https://github.com/UoG-Nuclear-Physics-Group/HILData.git)
 
 Any of those four libraries can be downloaded in the same manner as GRSISort using ```git clone <url>```. 
-This can be done anywhere, but is probably best done from within the GRSISort directory.
+This should be done from within the GRSISort directory.
 
 <a name="step7" />
 
