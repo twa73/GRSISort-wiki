@@ -2,13 +2,11 @@
 
 [**Setup GRSISort**](Setting-up-GRSISort)    
 - [Installation](Setting-up-GRSISort)
-  - [Step 1: Install git](Setting-up-GRSISort#step1)
-  - [Step 2: Install Root](Setting-up-GRSISort#step2)
-  - [Step 3: Download GRSISort](Setting-up-GRSISort#step3)
-  - [Step 4: Setup Environment Variables](Setting-up-GRSISort#step4)
-  - [Step 5: Compile GRSISort](Setting-up-GRSISort#step5)
-  - [Step 6: ???](Setting-up-GRSISort#step6)
-  - [Step 7: Profit](Setting-up-GRSISort#step7)
+  - [Install git](Setting-up-GRSISort#step1)
+  - [Install Root](Setting-up-GRSISort#step2)
+  - [Download GRSISort](Setting-up-GRSISort#step3)
+  - [Compiling GRSISort and data parser/detector libraries](Setting-up-GRSISort#step4)
+  - [Setup Environment Variables](Setting-up-GRSISort#step5)
 - [Using GitHub](GitHub)
 
 [**Running GRSISort**](Running-GRSISort)  

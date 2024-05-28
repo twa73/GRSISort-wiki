@@ -6,7 +6,7 @@ Setting up GRSISort is a seven step process:
 2. [Install Root](#step2)
 3. [Download GRSISort](#step3)
 4. [Compiling GRSISort and data parser/detector libraries](#step4)
-5. [Setup Environment Variables](#step4)
+5. [Setup Environment Variables](#step5)
 
 <a name="step1" />
 
@@ -108,14 +108,25 @@ There are different ways to compile GRSISort with cmake.
 All of them involve two steps: creating and configuring a build directory, and compiling GRSISort in this build directory.
 The differences are whether you use cmake to create the build directory or do it by hand, and whether you use cmake's build interface to the native build tool or use the build tool directly.
 
-From outside the build directory (one level up from the GRSISort directory):
+The configuration step includes the download of all data parser and detector libraries.
+During compilation only the requested data library (or none) will be built if you use a cmake version 3.28 or newer.
+
+So far four parsing/detector libraries have been written:
+
+- GRSIData for GRIFFIN/TIGRESS experiments (https://github.com/GRIFFINCollaboration/GRSIData)
+- ILLData for FIPPS data from ILL (https://github.com/UoG-Nuclear-Physics-Group/ILLData)
+- iThembaData for data from the tape station at iThemba (https://github.com/UoG-Nuclear-Physics-Group/iThembaData)
+- HILData for data from HIL, Warsaw (https://github.com/UoG-Nuclear-Physics-Group/HILData.git)
+
+To configure and compile from outside the build directory (one level up from the GRSISort directory):
 ```
 cmake -S GRSISort -B GRSISort-build
 cmake --build GRSISort-build --target libraryName
 ```
 Where libraryName is one of GRSIData, HILData, ILLData, or iThembaData.
-If you do not need a data parser and detector library, you can leave out the `--target` flag completely.
-Note, on macOS you might need to add a flag to tell cmake where to find ROOT (e.g. `-DCMAKE_PREFIX_PATH=/opt/local/libexec/`).
+If you do not need a data parser and detector library (or you are using a cmake version older than 3.28), you can leave out the `--target` flag completely.
+
+*Note*: on macOS you might need to add a flag to tell cmake where to find ROOT (e.g. `-DCMAKE_PREFIX_PATH=/opt/local/libexec/`).
 
 ### Using the old method with make
 
