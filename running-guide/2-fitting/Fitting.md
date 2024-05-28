@@ -22,7 +22,7 @@ In order to fix parameters of specific peaks, use the fit function of the peak:
 ```
 TPeakFitter pf(<low range>,<high range>);
 TRWPeak peak(<centroid>);
-pf.Add(&peak);
+pf.AddPeak(&peak);
 TF1* peakFunc = peak.GetFitFunction();
 peakFunc->FixParameter(<index>, <value>);
 pf.Fit(<histogram>);
