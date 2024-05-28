@@ -5,12 +5,8 @@ Setting up GRSISort is a seven step process:
 1. [Install git](#step1)
 2. [Install Root](#step2)
 3. [Download GRSISort](#step3)
-4. [Setup Environment Variables](#step4)
-5. [Compile GRSISort](#step5)
-6. [Download data parser and detector library](#step6)
-7. [Compile library](#step7)
-8. [???](#step8)
-9. [Profit](#step9)
+4. [Compiling GRSISort and data parser/detector libraries](#step4)
+5. [Setup Environment Variables](#step4)
 
 <a name="step1" />
 
@@ -20,7 +16,7 @@ To Install git, go to [GitHub](http://github.com) and click on *Download*.
 
 Alternatively, Ubuntu users can use
 ```````
-sudo apt-get install git
+sudo apt install git
 ```````
 
 <a name="step2" />
@@ -34,7 +30,7 @@ gsl-config --version
 ```
 in your terminal.
 
-Go to the [root webpage](https://root.cern.ch/downloading-root), select the version you want (we recommend using a production version), and follow the instructions to download root.
+Go to the [root webpage](https://root.cern.ch/downloading-root), select the version you want (we recommend using a production version, i.e. with an even minor number), and follow the instructions to download root.
 
 Follow the [instructions to build root](https://root.cern.ch/building-root).
 
@@ -42,7 +38,7 @@ Finally, in your ./bashrc or ./profile, include the line
 ```bash
 source /path/to/root/bin/thisroot.sh
 ```
-The current supported versions of root are the stable 6er versions (e.g. 6.08.06). Root 5 is no longer supported. You might be able to run the code with v5.34.36, but we won't be able to guarantee that nor help with problems. Here are some [problems](Troubleshooting#rootproblems) that we have found at this stage.
+The current supported versions of root are the stable 6er versions. Root 5 is no longer supported. You might be able to run the code with v5.34.36, but we won't be able to guarantee that nor help with problems. Here are some [problems](Troubleshooting#rootproblems) that we have found at this stage.
 
 <a name="step3" />
 
@@ -104,35 +100,32 @@ For this (using the ssh authentication) to work you need to set up SSH keys:
 
 <a name="step4" />
 
-## Step 4: Setup Environment Variables
-The setup for GRSISort depends on the shell being used. To determine the Shell you are using execute
-`````
-echo $SHELL
-`````
-To setup GRSISort for a .sh shell (bash) execute `source thisgrsi.sh` in your terminal from the GRSISort Directory
+## Step 4: Compiling GRSISort and data parser/detector libraries
 
-To avoid running this script every session, add the following to your **~/.bash_profile** or **~/.profile**
+### Using cmake (recommended)
+
+There are different ways to compile GRSISort with cmake.
+All of them involve two steps: creating and configuring a build directory, and compiling GRSISort in this build directory.
+The differences are whether you use cmake to create the build directory or do it by hand, and whether you use cmake's build interface to the native build tool or use the build tool directly.
+
+From outside the build directory (one level up from the GRSISort directory):
 ```
-source /Path/To/GRSISort/thisgrsi.sh
+cmake -S GRSISort -B GRSISort-build
+cmake --build GRSISort-build --target libraryName
 ```
-If you're using a c-type shell use the scripts with .csh extension instead of the .sh extension in the commands above.
+Where libraryName is one of GRSIData, HILData, ILLData, or iThembaData.
+If you do not need a data parser and detector library, you can leave out the `--target` flag completely.
+Note, on macOS you might need to add a flag to tell cmake where to find ROOT (e.g. `-DCMAKE_PREFIX_PATH=/opt/local/libexec/`).
 
-<a name="step5" />
+### Using the old method with make
 
-## Step 5: Compile GRSISort
-
-To compile GRSISort type `make`.
+To compile GRSISort type `make` from within the GRSISort directory.
 Please be patient as compilation will take a few moments.
 You can speed this up if you want by using `make -j` (uses all available cores) or `make -j N` where N is the number of jobs you want to run in parallel.
 
 - To create the HTML documentation, you can compile with `make docs`. This is NOT REQUIRED.
 
 If you receive an error, please consult the [Troubleshooting](troubleshooting) page.
-
-<a name="step6" />
-
-## Step 6: Download data parser and detector library
-*Don't want to parse data? Proceed to [???](#step8)*
 
 In order to parse data and to understand the setup specific detector classes, an additional library is needed.
 This library has to provide the following functions:
@@ -151,10 +144,6 @@ So far four parsing/detector libraries have been written:
 Any of those four libraries can be downloaded in the same manner as GRSISort using ```git clone <url>```. 
 This should be done from within the GRSISort directory.
 
-<a name="step7" />
-
-## Step 7: Compile and use library
-
 To use a library you can either provide the location of the libraries .so file on the command line, or edit .grsirc to include a line
 ```
 GRSI.ParserLibrary: <path to library, e.g. $(GRSISYS)/GRSIData/lib/libGRSIData.so>
@@ -164,12 +153,18 @@ In order to compile the library you typically just call ```make <library-name>``
 If this does not work please follow the instructions of the library you chose to download.
 Multiple libraries can be installed in parallel.
 
-<a name="step8" />
+<a name="step5" />
 
-## Step 8: ???
-Instructions unclear, lost in terminology.
+## Step 5: Setup Environment Variables
+The setup for GRSISort depends on the shell being used. To determine the Shell you are using execute
+`````
+echo $SHELL
+`````
+To setup GRSISort for a .sh shell (bash) execute `source thisgrsi.sh` in your terminal from the GRSISort Directory
 
-<a name="step9" />
+To avoid running this script every session, add the following to your **~/.bash_profile** or **~/.profile**
+```
+source /Path/To/GRSISort/thisgrsi.sh
+```
+If you're using a c-type shell use the scripts with .csh extension instead of the .sh extension in the commands above.
 
-## Step 9: Profit
-If you ever figure this out, please share the wealth.
