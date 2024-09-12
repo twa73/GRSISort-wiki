@@ -10,31 +10,51 @@ To create the 2D histograms we use the AngularCorrelationHelper and grsiframe li
 `grsiframe <grsiframe options, i.e. --max-workers 2> $GRSISYS/examples/AngularCorrelationHelper.cxx <analysis file(s)> <parameter file with specfic settings> 2>&1 | tee <log-file name>`
 where the parameter file (see `$GRSISYS/examples/AngularCorrelation.par` for an example) holds all the specific settings that determine what angles to use:
 
-| Parameter name | default | possible values | comments |
-|----------------|---------|-----------------|----------|
-|GriffinDistance | 145.    | 145. or 110.    | distance of the detector front face from the center of the arrya, note the trailing . |
-|Addback         | true    | true or false   | whether to use addback or not when creating the spectra |
-|Folding         | false   | true or false   | whether to fold all angles around 90 degrees, i.e. map 180 degree to 0 degree, 135 degree to 45 degree and so on |
-|Grouping        | false   | true or false   | whether to group specific angles together which are close to each other |
-|ExcludeDetector | empty   | comma separated list of integers (1-16) | list of all detectors that will be excluded in calculating the angles and creating the spectra |
-|ExcludeCrystal  | empty   | comma separated list of integers (1-64) | list of all crystals that will be excluded in calculating the angles and creating the spectra |
-|MaxPromptTime   | 200.    | positive floating point number | maximum absolute time difference between two gammas for them to be considered to be in coincidence with each other |
-|TimeRandom.Low  | 400.    | positive floating point number | minimum of the absolute time difference between two gammas for them to be considered time random |
-|TimeRandom.High | 600.    | positive floating point number | maximum of the absolute time difference between two gammas for them to be considered time random |
-|NumberOfBins    | 3000    | positive integer | number of bins in the x- and y-axis of the matrices |
-|MinimumEnergy   | 0.      | positive floating point number | minimum on the x- and y-axis of the matrices |
-|MaximumEnergy   | 3000.   | positive floating point number | maximum on the x- and y-axis of the matrices |
+| Parameter name     | default | possible values | comments |
+|--------------------|---------|-----------------|----------|
+|GriffinDistance     | 145.    | 145. or 110.    | distance of the detector front face from the center of the arrya, note the trailing . |
+|Addback             | true    | true or false   | whether to use addback or not when creating the spectra |
+|Folding             | false   | true or false   | whether to fold all angles around 90 degrees, i.e. map 180 degree to 0 degree, 135 degree to 45 degree and so on |
+|Grouping            | false   | true or false   | whether to group specific angles together which are close to each other, this also activates `Folding` unless custom grouping is used |
+|CustomGrouping      | empty   | comma separated list of integers | list of groups for angles, needs to be as many entries as there are angles |
+|ExcludeDetector     | empty   | comma separated list of integers (1-16) | list of all detectors that will be excluded in calculating the angles and creating the spectra |
+|ExcludeCrystal      | empty   | comma separated list of integers (1-64) | list of all crystals that will be excluded in calculating the angles and creating the spectra |
+|MaxPromptTime       | 200.    | positive floating point number | maximum absolute time difference between two gammas for them to be considered to be in coincidence with each other |
+|TimeRandom.Low      | 400.    | positive floating point number | minimum of the absolute time difference between two gammas for them to be considered time random |
+|TimeRandom.High     | 600.    | positive floating point number | maximum of the absolute time difference between two gammas for them to be considered time random |
+|NumberOfBins        | 3000    | positive integer | number of bins in the x- and y-axis of the matrices |
+|MinimumEnergy       | 0.      | positive floating point number | minimum on the x- and y-axis of the matrices |
+|MaximumEnergy       | 3000.   | positive floating point number | maximum on the x- and y-axis of the matrices |
+|NumberOfMixedEvents | 10      | positive integer | number of events to be used for event mixing |
 
 This helper will create prompt, time random, and event mixed histograms for each angle. 
 "Prompt" means these are matrices for the energies of two gamma rays that are in coincidence with each other, as determined by the "MaxPromptTime" parameter.
 "Time random" means these matrices are for gamma rays that are not in coincidence with each other but are randomly within a certain time frame of each other, as determined by the "TimeRandom.Low" and "TimeRandom.High" parameters.
 These time random matrices can be used to correct for background from time random gamma rays within the coincidence window.
 "Mixed" means these matrices are generated using two gamma rays from two different events, ensuring that they are completely uncorrelated with each other.
+The number of previous event that are held in memory for this mixing is determined by the "NumberOfMixedEvents" (default is 10).
 
 The names of the histograms are "AngularCorrelationN" for the prompt matrices, "AngularCorrelationBGN" for the time random matrices, and "AngularCorrelationMixedN" for the mixed event matrices, and N is an integer index starting at 0.
 The instances of TGriffinAngles and TUserSettings are also written to the output file, so one can see what settings have been used to create the root-file.
 
-Hardcoded settings are the number of events used for event mixing (10), and the difference in angles under which we consider the angles identical (0.01).
+The difference in angles under which we consider the angles identical defaults to 0.001.
+This value can not be changed by a user setting, but could be changed by adding a line `TGriffinAngles::Rounding(new value)` to the constructor of the helper.
+This setting should only be changed if you are absolutely certain you know need it to be changed and know what you are doing.
+
+If the statistic of the data set is limited, it can help to use folding and/or grouping to increase the statistics per histogram.
+Folding means that we take advantage of the symmetry of the angular distributions around 90 degree and map 180 degree to 0 degree, 135 degree to 45 degree, and so on.
+This will double the statistics in the histograms (apart from the 0 degree histogram since we only have the 180 degree data in there), and reduce the number of histograms from 51 to 26.
+If folding alone does not help, grouping can be enabled which groups angles that are close to each other together.
+This reduces the number of histograms further down to 11 (110 mm distance) or 12 (145 mm distance).
+Using grouping will reduce the information in the data (unlike folding), so the `TGriffinAngles` class enforces folding to be used if grouping is enabled.
+
+It is also possible to use custom grouping by providing a list of the indices of the group each angle belongs to.
+Adding a line
+`
+CustomGrouping: 0, 1, 2, 3, 3, 4, 4, 4, 4, 5, 5, 6, 7, 8, 8, 8, 8, 9, 9, 10, 11, 12, 13, 14, 15, 15
+`
+would create a total of 16 groups with 1 to 4 angles in each group.
+If custom grouping is provided folding does not have to be enabled, i.e. custom grouping allows to create groups for all 51 angles without mapping angles above 90 degree to those below 90 degree.
 
 ## AngularCorrelations program
 
