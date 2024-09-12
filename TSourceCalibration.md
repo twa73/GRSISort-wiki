@@ -52,8 +52,11 @@ void sources()
 	hBa133->SetName("h133Ba");
 	TH2D* hCo56 = static_cast<TH2D*>(co56->Get("ChargeVsChannel"));
 	hCo56->SetName("h56Co");
+        // not sure if this is needed?
 	TChannel::ReadCalFile("run15275.cal");
-	TSourceCalibration* s = new TSourceCalibration(2., 0.05, 3, hEu152, hBa133, hCo56);
+        // start the calibration itself, using a sigma of 2. keV, threshold of 5% of the largest peak in the spectrum
+        // quadratic calibration, and all three matrices we've set up above
+	TSourceCalibration* s = new TSourceCalibration(2., 0.05, 2, 3, hEu152, hBa133, hCo56);
 }
 ```
 

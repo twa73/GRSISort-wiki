@@ -12,7 +12,7 @@ You'll probably want to stay abreast of all of the most recent GRSISort developm
 ```
 git status
 ```
-You will get a long list of untracked files. These are all the libraries and binaries that you compiled when you typed make. Don't worry about these. DO go up to the top and look at the first few lines of the output. If it has output like this:
+Go up to the top and look at the first few lines of the output. If it has output like this:
 ```
 OUTPUT THAT SAYS YOU ARE behind by so many commits...
 ```
@@ -60,30 +60,35 @@ Fast-forward
  create mode 100644 libraries/GROOT/GRootCanvasManager.cxx
 ```
 
+Now you can compile the new version by running `make -j N` or `make clean && make -j N` (where N is the number of cores you want to use for compilation).
+In most cases the former command should work (it just compiles whatever was changed), but sometimes a complete re-compile is required (second command).
+
+If you've also updated the data parser library, you can use e.g `make -j N GRSIData` to only compile the changed files in GRSISort and the GRSIData library, or `make GRSIData-clean && make -j N GRSIData` to re-compile everything.
+
 ## Developer
 
 As a developer, you will use git and GitHub to make sure your local version is up-to-date with the online repository, but you will also be modifying the code and potentially submitting changes to the online repository. To do this, you will need a more detailed understanding of git and GitHub. There are some resources online (see [here](http://rogerdudler.github.io/git-guide/) and [here](https://www.codeschool.com/courses/try-git), for example) that will be useful.
 
 ### Forking the common repository
-The best path forward is to  to create your own account on GitHub and [fork the repository] (https://help.github.com/articles/fork-a-repo/). This creates your own online repository that you can play with while not messing up the common repository. It also allows you to submit changes to the common repository. To do this, register with GitHub and then navigate to the GRSISort webpage. In the upper right-hand corner, click the “Fork” button. You should see your own version of this repository now.
+The best path forward is to  to create your own account on GitHub and [fork the repository](https://help.github.com/articles/fork-a-repo/). This creates your own online repository that you can play with while not messing up the common repository. It also allows you to submit changes to the common repository. To do this, register with GitHub and then navigate to the GRSISort webpage. In the upper right-hand corner, click the “Fork” button. You should see your own version of this repository now.
 
 ### Downloading a copy of your personal repository
 To install a local copy of your personal repository, follow the instructions in the [[Setting Up GRSISort|Setting-up-GRSISort]] page except instead of cloning `https://github.com/GRIFFINCollaboration/GRSISort.git`, clone `https://github.com/YOUR-USER-NAME/GRSISort.git`.
 
 ### Updating your code from the common repository
-To this, you must first tell git where the upstream (common) repository is. This is succinctly and clearly explained in GitHub's [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/) help page.
+To do this, you must first tell git where the upstream (common) repository is. This is succinctly and clearly explained in GitHub's [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/) help page.
 
 The next step is to download the changes from the common repository. This is called [syncing a fork](https://help.github.com/articles/syncing-a-fork/). *(Advanced: check out the local branch you want to update first.)* To do this, use the following command:
 ```
-git pull upstream master
+git pull upstream main
 ```
 This downloads (fetches) a copy of the changes (commits) from the common (upstream) repository. It also merges those commits into your own local copy of the code. If there are commits that conflict with changes you have made to your local repository, you will be asked to [resolve those conflicts](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/).
 
 The last step is to update your online repository. In executing the pull, you updated your local copy, but your personal repository still doesn't have these changes committed. To commit these updates to your local copy, use:
 ```
-git push origin master
+git push origin main
 ```
-This pushes the changes from your local master branch to the online repository identified as origin. To see a list of the repositories you are connected to, use `git remote -v`.
+This pushes the changes from your local main branch to the online repository identified as origin. To see a list of the repositories you are connected to, use `git remote -v`.
 
 ### Making changes to your personal online repository
 Add any files that you have created or modified to your staging area with:
@@ -108,5 +113,9 @@ Error: The requested URL returned error: 403 while accessing
 # fatal: HTTP request failed
 ```
 or a similar message, check out [this](https://help.github.com/articles/https-cloning-errors/) help page and links within.
+
+If you want to review the changes you've made before creating a commit, run `git diff` or `git difftool` before adding any files to the commit.
+This will show the difference either directly in the terminal (former command), or using a specific tool like vimdiff (latter command).
+
 ### Suggesting a change to the common repository
 To suggest a change to the common repository, first make sure your local copy has the most recent changes from the common repository. Then, update your personal online repository with the suggested changes. Finally, [create a pull request](https://help.github.com/articles/creating-a-pull-request/). An administrator will look over the code and merge it into the common online repository or discuss possible modifications to you proposed changes.

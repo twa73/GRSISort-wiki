@@ -4,7 +4,6 @@
 
 GRSISort contains an analysis package with the following
 
-- [[Data Correcting | Correcting]]
 - [[Fitting | Fitting]]
    - [[TPeak|TPeak]]
 - [[Calibration | Calibration]]
@@ -18,4 +17,5 @@ GRSISort contains an analysis package with the following
 - [[Gamma-gamma Angular Correlations | Angular Correlations]]
 - [[Compton Polarimetry | Compton Polarimetry]]
 - [[Code Examples | Code Examples]]
+- [[Data Correcting for old data | Correcting]]
 
