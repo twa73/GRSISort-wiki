@@ -126,6 +126,11 @@ cmake --build GRSISort-build --target libraryName
 Where libraryName is one of GRSIData, HILData, ILLData, or iThembaData.
 If you do not need a data parser and detector library (or you are using a cmake version older than 3.28), you can leave out the `--target` flag completely.
 
+If you compiled a library you can either provide the location of the libraries .so file (typically `$(GRSISYS)/lib/lib<libraryName>.so`) on the command line, or edit .grsirc to include a line
+```
+GRSI.ParserLibrary: <path to library, e.g. $(GRSISYS)/lib/libGRSIData.so>
+```
+
 *Note*: on macOS you might need to add a flag to tell cmake where to find ROOT (e.g. `-DCMAKE_PREFIX_PATH=/opt/local/libexec/`).
 
 ### Using the old method with make
