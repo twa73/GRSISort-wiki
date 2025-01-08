@@ -176,7 +176,7 @@ The setup for GRSISort depends on the shell being used. To determine the Shell y
 `````
 echo $SHELL
 `````
-To setup GRSISort for a .sh shell (bash) execute `source thisgrsi.sh` in your terminal from the GRSISort Directory
+To setup GRSISort for a .sh shell (bash) execute `source thisgrsi.sh` in your terminal from the GRSISort Directory (*the build directory if using cmake*).
 
 To avoid running this script every session, add the following to your **~/.bash_profile** or **~/.profile**
 ```
