@@ -111,6 +111,8 @@ std::vector<double>* par;
 _file0->GetObject("ParametersSpin0", par);
 `
 
+Running the program as `AngularCorrelations -h` shows all possible command line options.
+
 ## Further information about angular correlations
 
 The [angular correlation NIM paper](https://arxiv.org/pdf/1807.07570.pdf) is an excellent resource, as well as [these example scripts](https://github.com/SmithJK/AngularCorrAnalysisExamples) and the README within.
