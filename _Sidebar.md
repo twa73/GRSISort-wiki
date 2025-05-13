@@ -8,6 +8,7 @@
   - [Compiling GRSISort and data parser/detector libraries](Setting-up-GRSISort#step4)
   - [Setup Environment Variables](Setting-up-GRSISort#step5)
 - [Using GitHub](GitHub)
+- [Contributing with cmake](CMake-Contribute)
 
 [**Running GRSISort**](Running-GRSISort)  
 
