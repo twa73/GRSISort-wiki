@@ -14,6 +14,7 @@ where the parameter file (see `$GRSISYS/examples/AngularCorrelation.par` for an 
 |--------------------|---------|-----------------|----------|
 |GriffinDistance     | 145.    | 145. or 110.    | distance of the detector front face from the center of the arrya, note the trailing . |
 |Addback             | true    | true or false   | whether to use addback or not when creating the spectra |
+|SingleCrystal       | false   | true or false   | when using addback whether or not restrict it to events with a single crystal per detector firing |
 |Folding             | false   | true or false   | whether to fold all angles around 90 degrees, i.e. map 180 degree to 0 degree, 135 degree to 45 degree and so on |
 |Grouping            | false   | true or false   | whether to group specific angles together which are close to each other, this also activates `Folding` unless custom grouping is used |
 |CustomGrouping      | empty   | comma separated list of integers | list of groups for angles, needs to be as many entries as there are angles |
@@ -22,6 +23,8 @@ where the parameter file (see `$GRSISYS/examples/AngularCorrelation.par` for an 
 |MaxPromptTime       | 200.    | positive floating point number | maximum absolute time difference between two gammas for them to be considered to be in coincidence with each other |
 |TimeRandom.Low      | 400.    | positive floating point number | minimum of the absolute time difference between two gammas for them to be considered time random |
 |TimeRandom.High     | 600.    | positive floating point number | maximum of the absolute time difference between two gammas for them to be considered time random |
+|CycleTime.Low       | -1.     | positive floating point number | minimum time in cycle in s for event to be used, -1. means no limit |
+|CycleTime.High      | -1.     | positive floating point number | maximum time in cycle in s for event to be used, -1. means no limit |
 |NumberOfBins        | 3000    | positive integer | number of bins in the x- and y-axis of the matrices |
 |MinimumEnergy       | 0.      | positive floating point number | minimum on the x- and y-axis of the matrices |
 |MaximumEnergy       | 3000.   | positive floating point number | maximum on the x- and y-axis of the matrices |
@@ -32,7 +35,7 @@ This helper will create prompt, time random, and event mixed histograms for each
 "Time random" means these matrices are for gamma rays that are not in coincidence with each other but are randomly within a certain time frame of each other, as determined by the "TimeRandom.Low" and "TimeRandom.High" parameters.
 These time random matrices can be used to correct for background from time random gamma rays within the coincidence window.
 "Mixed" means these matrices are generated using two gamma rays from two different events, ensuring that they are completely uncorrelated with each other.
-The number of previous event that are held in memory for this mixing is determined by the "NumberOfMixedEvents" (default is 10).
+The number of previous events that are held in memory for this mixing is determined by the "NumberOfMixedEvents" (default is 10).
 
 The names of the histograms are "AngularCorrelationN" for the prompt matrices, "AngularCorrelationBGN" for the time random matrices, and "AngularCorrelationMixedN" for the mixed event matrices, and N is an integer index starting at 0.
 The instances of TGriffinAngles and TUserSettings are also written to the output file, so one can see what settings have been used to create the root-file.
@@ -110,6 +113,8 @@ These parameters can be retrieved from the output file by first declaring a poin
 std::vector<double>* par;
 _file0->GetObject("ParametersSpin0", par);
 `
+
+Running the program as `AngularCorrelations -h` shows all possible command line options.
 
 ## Further information about angular correlations
 
