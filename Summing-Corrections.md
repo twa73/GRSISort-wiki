@@ -1,0 +1,73 @@
+# Summing corrections
+
+When determining photo peak efficiencies, i.e. the probability to detect the full energy of a single gamma ray, we need to make corrections for the fact that none of the radioactive sources we use for the efficiency calibration emit single gamma rays.
+
+In a case like the one shown below, we have to consider "summing out" for gamma rays A and B to account for instances where gamma ray A was detected with full energy in a detector, but the same detector also got hit by gamma ray B and detected at least part of its energy, and vice versa.
+In those cases the two energies add together moving the total energy of that event out of the peak for gamma ray A or B, despite detecting the full energy of those gamma rays.
+
+We also have to consider "summing in" for gamma ray C, where events where both gamma ray A and B are detected with their full energies in a single detector and thus summed together to the same energy as gamma ray C.
+
+[[/images/SummingCorrectionsLevelScheme.png]]
+
+In principle both "summing in" and "summing out" corrections can be calculated if the level scheme is well known (which it should be for all standard efficiency calibration sources).
+For "summing out" this would involve calculating the probability of an other gamma ray being in coincidence with the gamma ray of interest, and the probability of such a coincident gamma ray then being detected in the same crystal.
+This involves integrating the angular distribution of the two gamma rays in question over the solid angle covered by the detector, accounting for the fact that the solid angle a single GRIFFIN (or TIGRESS) crystal covers is not constant over the whole depth of the detector.
+
+Due to the symmetries of GRIFFIN and TIGRESS, we can take advantage of the fact that (at least in the standard setup) each crystal has another crystal at 180 degrees opposite.
+Since all angular correlations are symmetric around 90 degrees, the probability for a coincident gamma ray to hit the same crystal is the same as the probability to hit a crystal of the exact same size 180 degrees opposite.
+This allows us to experimentally determine the likelihood of detecting another gamma ray in coincidence with the gamma ray of interest in a detector 180 degrees opposite.
+The efficiency helper creates special histograms to determine the summing in and summing out for all five different ways to use the data:
+- unsuppressed crystals,
+- suppressed crystals,
+- unsuppressed addback,
+- suppressed addback, and
+- suppressed single crystals with a condition that no other crystal in the same detector was hit.
+More detailed descriptions can be found below.
+
+## Summing out
+
+For summing out we have to consider all the ways we can miss a gamma ray despite having detected its full energy.
+The way this is done is different for the five different ways to look at gamma ray data.
+
+One thing that is common to all is that we have a condition that the two gamma rays are in coincidence, but we do not do any time random correction.
+SOMETHING ABOUT WHY WE DO NOT NEED TIME RANDOM SUBTRACTION
+
+Always applying pile up rejection, minimum energy condition, and CFD condition if these are provided.
+
+### Unsuppressed crystals or addback
+
+For unsuppressed crystals, we simply create a matrix of crystals whose angles to each other are larger than 179 degrees.
+
+For unsuppressed addback, we also need to consider hits in any other crystal of the detector opposite the detector the first hit belongs to, and so we need to accept any two hits with an opening angle larger than 157 degrees instead of 179 degrees.
+
+### Suppressed crystals or addback
+
+For suppressed data, we also need to include hits in the opposite crystal/detector that would have been suppressed.
+Because these represent the probability of a second gamma ray hitting the same crystal/detector that already detected the first gamma ray with it's full energy and the scond gamma ray being scattered into a BGO.
+This would cause that fully detected first gamma ray to be missed as well, so for these two types of data we create "mixed" matrices, with suppressed single or addback hits on one axis and unsuppressed hits in the opposite crystal/detector on the other axis.
+As for the unsuppressed matrices, the angle condition is either larger than 179 or 157 degrees, for crystals and addback respectively.
+
+### Suppressed single crystals without other crystals in the same detector
+
+In this case a hit in any of the other crystals of the same detector would cause us to loose this event, so we need to look at the whole detector opposite the current one.
+In the helper the condition of a single (Compton suppressed) crystal in a detector firing is implemented by looking at addback events where the number of "fragments" (i.e. crystals) is one (using TGriffin::GetNSuppressedAddbackFrags(index)).
+So the matrix constructed in this case plots suppressed addback hits with a single crystal on one axis, and unsuppressed addback hits (without a condition on the number of crystals involved) that are at an angle of more than 157 degrees on the other axis.
+
+### Using the created spectra
+
+All matrices (griffinGriffinE, griffinGriffinEMixed, griffinGriffinEAddback, griffinGriffinEMixedAddback, or griffinGriffinEMixedSingleCrystal) have the gamma ray of interest on the x-axis, and the other gamma ray on the y-axis.
+To check how often we miss the gamma ray of interest, you can use TBGSubtraction on the maxtrix (with the right axis selected!), cut on the gamma ray of interest (with subtraction of Compton background), and then check the integral of the projection (either by right-clicking the statistics panel and using SetOptStat, or by using the logon-script).
+
+Alternatively one can use the TEfficiencyCalibrator class (still under construction).
+
+## Summing in
+
+For summing in we want to consider all possible combinations of two gamma rays whose energies add up to the energy in question. 
+So for this we create matrices with the energy of one crystal or detector versus the sum of it with the crystal or detector opposite of it.
+This means for all five ways of looking at gamma ray data we do a double loop with exactly the same conditions on both hits, and if they are in coincidence with each other and at an angle of more than 179 or 157 degrees (for crystal or addback, respectively), we plot the sum of their energies on the x-axis and the energy of the first hit on the y-axis.
+
+### Using the created spectra
+
+All matrices (griffinGriffinESum, griffinGriffinESuppSum, griffinGriffinEAddbackSum, griffinGriffinESuppAddbackSum, or griffinGriffinESingleCrystalSum) have the sum on the x-axis (corresponding to the gamma ray of interest), and the energy of the opposite crystal/detector on the y-axis.
+To check how often we have gamma rays adding up to the same energy as the gamma ray of interest, we can use TBGSubtraction on the maxtrix (with the x-axis selected!), cut on the gamma ray of interest (with subtraction of Compt  on background), and then add the integrals of all peaks together (taking care that these are real peaks and not Compton subtraction artifacts!).
+
