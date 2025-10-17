@@ -2,12 +2,12 @@
 
 When determining photo peak efficiencies, i.e. the probability to detect the full energy of a single gamma ray, we need to make corrections for the fact that none of the radioactive sources we use for the efficiency calibration emit single gamma rays.
 
-In a case like the one shown below, we have to consider "summing out" for gamma rays A and B to account for instances where gamma ray A was detected with full energy in a detector, but the same detector also got hit by gamma ray B and detected at least part of its energy, and vice versa.
-In those cases the two energies add together moving the total energy of that event out of the peak for gamma ray A or B, despite detecting the full energy of those gamma rays.
+In a case like the one shown below, we have to consider "summing out" for gamma rays B and C to account for instances where gamma ray B was detected with full energy in a detector, but the same detector also got hit by gamma ray C and detected at least part of its energy, and vice versa.
+In those cases the two energies add together moving the total energy of that event out of the peak for gamma ray B or C, despite detecting the full energy of those gamma rays.
 
-We also have to consider "summing in" for gamma ray C, where events where both gamma ray A and B are detected with their full energies in a single detector and thus summed together to the same energy as gamma ray C.
+We also have to consider "summing in" for gamma ray A, where events where both gamma ray B and C are detected with their full energies in a single detector and thus summed together to the same energy as gamma ray C.
 
-[[/images/SummingCorrectionsLevelScheme.png]]
+<img align="right" src="images/SummingCorrectionsLevelScheme.png">
 
 In principle both "summing in" and "summing out" corrections can be calculated if the level scheme is well known (which it should be for all standard efficiency calibration sources).
 For "summing out" this would involve calculating the probability of an other gamma ray being in coincidence with the gamma ray of interest, and the probability of such a coincident gamma ray then being detected in the same crystal.
@@ -30,9 +30,9 @@ For summing out we have to consider all the ways we can miss a gamma ray despite
 The way this is done is different for the five different ways to look at gamma ray data.
 
 One thing that is common to all is that we have a condition that the two gamma rays are in coincidence, but we do not do any time random correction.
-SOMETHING ABOUT WHY WE DO NOT NEED TIME RANDOM SUBTRACTION
+This is because we are looking at single cyrstal/detector responses to determine our efficiency (we use a 1D histogram to fit all peaks and compare their areas to the expected areas).
 
-Always applying pile up rejection, minimum energy condition, and CFD condition if these are provided.
+We are always applying pile up rejection, minimum energy condition, and CFD condition if these are provided.
 
 ### Unsuppressed crystals or addback
 
@@ -62,7 +62,7 @@ Alternatively one can use the TEfficiencyCalibrator class (still under construct
 
 ## Summing in
 
-For summing in we want to consider all possible combinations of two gamma rays whose energies add up to the energy in question. 
+For summing in we want to consider all possible combinations of two gamma rays whose energies add up to the energy in question.
 So for this we create matrices with the energy of one crystal or detector versus the sum of it with the crystal or detector opposite of it.
 This means for all five ways of looking at gamma ray data we do a double loop with exactly the same conditions on both hits, and if they are in coincidence with each other and at an angle of more than 179 or 157 degrees (for crystal or addback, respectively), we plot the sum of their energies on the x-axis and the energy of the first hit on the y-axis.
 
