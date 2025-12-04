@@ -74,8 +74,8 @@ So the matrix constructed in this case plots suppressed addback hits with a sing
 
 ### Using the created spectra
 
-All matrices (```griffinGriffinE```, ```griffinGriffinEMixed```, ```griffinGriffinEAddback```, ```griffinGriffinEMixedAddback```, or ```griffinGriffinEMixedSingleCrystal```) have the $\gamma$ ray of interest on the x-axis, and the other $\gamma$ ray on the y-axis.
-To check how often we miss the $\gamma$ ray of interest, you can use ```TBGSubtraction``` on the matrix (with the right axis selected!), cut on the $\gamma$ ray of interest (with subtraction of Compton background), and then check the integral of the projection (either by right-clicking the statistics panel and using ```SetOptStat```, or by using the logon-script).
+The helper produces both 2D matrices (```griffinGriffinE```, ```griffinGriffinEMixed```, ```griffinGriffinEAddback```, ```griffinGriffinEMixedAddback```, or ```griffinGriffinEMixedSingleCrystal```) with the $\gamma$ ray of interest on the x-axis, and the other $\gamma$ ray on the y-axis, as well as 1D histograms (```griffinGriffinEProj```, ```griffinGriffinEMixedProj```, ```griffinGriffinEAddbackProj```, ```griffinGriffinEMixedAddbackProj```, or ```griffinGriffinEMixedSingleCrystalProj```) which are essentially the projection of the former matrices onto the x-axis, but with the same binning as used for the 1D energy histograms.
+To check how often we miss the $\gamma$ ray of interest, you simply fit the peak of interest in the 1D histogram.
 
 Alternatively one can use the ```TEfficiencyCalibrator``` class (still under construction).
 
