@@ -3,7 +3,7 @@
 [**HOME**](Home) > [**RUNNING GRSISORT**](Running-GRSISort) > [**GRSIFrame**](GRSIFrame)
 
 GRSIFrame is used to run an analysis script on fragment trees, analysis trees, or other trees.
-It uses the RDataFrane system to distribute the sorting of the tree over multiple threads (slots) before adding the results back together.
+It uses the RDataFrame system to distribute the sorting of the tree over multiple threads (slots) before adding the results back together.
 
 1. [Creating your own helper](GRSIFrame#create_helper)
 2. [Creating Histograms](GRSIFrame#create_histos)
