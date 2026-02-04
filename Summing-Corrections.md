@@ -1,4 +1,4 @@
-# Overview
+# Principle of summing corrections
 
 When determining photo peak efficiencies, i.e. the probability to detect the full energy of a single $\gamma$ ray, we need to make corrections to account for the fact that none of the radioactive sources we use for the efficiency calibration emit single $\gamma$ rays.
 There are two effect that we have to account for, "summing in" and "summing out"
@@ -21,12 +21,24 @@ This allows us to experimentally determine the likelihood of detecting another $
 
 It should be noted that apart from the afore mentioned symmetries of GRIFFIN and TIGRESS, the fact that all crystals are of comparable size is important for this method to work.
 
-The efficiency helper creates special histograms to determine the summing in and summing out for all five different ways to use the data:
+## Summing corrections helper
+
+The summing corrections helper creates special histograms to determine the summing in and summing out for all five different ways to use the data:
 - unsuppressed crystals,
 - suppressed crystals,
 - unsuppressed addback,
 - suppressed addback, and
 - suppressed single crystals with a condition that no other crystal in the same detector was hit.
+
+A file with user values can be used to
+- disable pile-up rejection or provide a k-value (default: enabled, k-value 379),
+- set a maximum CFD value above which hits get rejected (default: 20 ns),
+- set a minimum energy for GRIFFIN hits to be accepted (default: 0 keV),
+- change the timing condition (default: -250 - 250 ns), and
+- set the energy range of the histograms and their binning (1D- and 2D-binning separately, default: 10000 1D-bins and 2000 2D-bins from 0 to 2000 keV).
+
+If the user file contains prompt and time-random timing conditions as well as energy gating conditions, the matrices produced will be gated on a specific $\gamma$ ray with time-random subtraction, and Compton subtraction (if energy background ranges are provided).
+These can be used for summing corrections for branching ratios (see [Summing corrections for branching ratios](#summing-corrections-for-branching-ratios)).
 
 More detailed descriptions can be found below.
 
@@ -39,7 +51,7 @@ This means for all five ways of looking at $\gamma$ ray data we do a double loop
 ### Using the created spectra
 
 All matrices (```griffinGriffinESum```, ```griffinGriffinESuppSum```, ```griffinGriffinEAddbackSum```, ```griffinGriffinESuppAddbackSum```, or ```griffinGriffinESingleCrystalSum```) have the sum on the x-axis (corresponding to the $\gamma$ ray of interest), and the energy of the opposite crystal/detector on the y-axis.
-To check how often we have $\gamma$ rays adding up to the same energy as the $\gamma$ ray of interest, we can use TBGSubtraction on the matrix (with the x-axis selected!), cut on the $\gamma$ ray of interest (with subtraction of Compton background), and then add the integrals of all peaks together (taking care that these are real peaks and not Compton subtraction artifacts!).
+To check how often we have $\gamma$ rays adding up to the same energy as the $\gamma$ ray of interest, we can use TBGSubtraction on the matrix (with the y-axis selected!), cut on the $\gamma$ ray of interest (with subtraction of Compton background), and then add the integrals of all peaks together (taking care that these are real peaks and not Compton subtraction artifacts!).
 
 Alternatively one can use the ```TEfficiencyCalibrator``` class (still under construction).
 
@@ -75,7 +87,14 @@ So the matrix constructed in this case plots suppressed addback hits with a sing
 ### Using the created spectra
 
 All matrices (```griffinGriffinE```, ```griffinGriffinEMixed```, ```griffinGriffinEAddback```, ```griffinGriffinEMixedAddback```, or ```griffinGriffinEMixedSingleCrystal```) have the $\gamma$ ray of interest on the x-axis, and the other $\gamma$ ray on the y-axis.
-To check how often we miss the $\gamma$ ray of interest, you can use ```TBGSubtraction``` on the matrix (with the right axis selected!), cut on the $\gamma$ ray of interest (with subtraction of Compton background), and then check the integral of the projection (either by right-clicking the statistics panel and using ```SetOptStat```, or by using the logon-script).
+To check how often we miss the $\gamma$ ray of interest, you can use ```TBGSubtraction``` on the matrix (with the the y-axis selected!), cut on the $\gamma$ ray of interest (with subtraction of Compton background), and then check the integral of the projection (either by right-clicking the statistics panel and using ```SetOptStat```, or by using the logon-script).
 
 Alternatively one can use the ```TEfficiencyCalibrator``` class (still under construction).
+
+## Summing corrections for branching ratios
+
+When determining branching ratios we normally gate on another $\gamma$ ray to clean up the spectrum and be able to clearly see (and fit) smaller peaks.
+This means we want to determine the probability for a second $\gamma$ ray to hit the same crystal/detector while gating on a third $\gamma$ ray.
+The gating conditions (timing, energy, and background subtractions) used are the same for both $\gamma$ rays and are the same that were used to determine the branching ratios in the first place.
+
 
