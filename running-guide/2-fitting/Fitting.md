@@ -5,10 +5,10 @@
 As part of the GRSISort analysis package, there are a number of classes and methods available for fitting:
 
 ## For gamma-ray peaks
-* [GGaus](https://rawgit.com/wiki/GriffinCollaboration/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/class_g_gaus.html) Used to fit peaks with a gaussian and a linear background. This class is used when the 'g' key is used on a GCanvas (see [Canvas Hotkeys](Interactive-Analysis)).
-* [GPeak](https://rawgit.com/wiki/GriffinCollaboration/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/class_g_peak.html) Used to fit peaks with a gaussian + skewed gaussian and a background of a step function + constant. This class is used when the 'f' key is used on a GCanvas (see [Canvas Hotkeys](Interactive-Analysis)).
-* [TPeak](TPeak) Used to fit peaks with a gaussian + skewed gaussian. This class is used when the 'F' key is used on a GCanvas (see [Canvas Hotkeys](Interactive-Analysis)).
-* [TPeakFitter](https://rawgit.com/wiki/GriffinCollaboration/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/class_t_peak_fitter.html) This is a versatile class than can fit any number of peaks of different shapes plus a global background (by default a quadratic polynomial). Each peak has to be added individually and can be one of the classes derived from TSinglePeak:
+* GGaus: Used to fit peaks with a gaussian and a linear background. This class is used when the 'g' key is used on a GCanvas (see [Canvas Hotkeys](Interactive-Analysis)).
+* GPeak: Used to fit peaks with a gaussian + skewed gaussian and a background of a step function + constant. This class is used when the 'f' key is used on a GCanvas (see [Canvas Hotkeys](Interactive-Analysis)).
+* TPeak: Used to fit peaks with a gaussian + skewed gaussian. This class is used when the 'F' key is used on a GCanvas (see [Canvas Hotkeys](Interactive-Analysis)).
+* TPeakFitter: This is a versatile class than can fit any number of peaks of different shapes plus a global background (by default a quadratic polynomial). Each peak has to be added individually and can be one of the classes derived from TSinglePeak:
   * TGauss - a simple gaussian.
   * TRWPeak - a radware like peak.
   * TABPeak - an addback peak with two different gaussians for single hits and double hits.

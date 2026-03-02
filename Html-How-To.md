@@ -1,7 +1,7 @@
 [**HOME**](Home) > [**TECHNICAL DOCUMENTATION**](Technical-Documentation) > [**COMMENTS FOR HTML DOCS**](Html-How-To)
 
 # Commenting Code For HTML
-The [TGRSIDetectorHit](https://rawgit.com/wiki/GriffinCollaboration/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/class_t_g_r_s_i_detector_hit.html ) class is a good example of how to comment a class for automatic HTML generation using doxygen. Please see the [doxygen](http://www.doxygen.org/index.html) page for more information about doxygen, and [doxygen & ROOT](https://dberzano.github.io/alice/doxygen/) for tips on using doxygen with ROOT.
+The [TDetectorHit](http://griffincollaboration.github.io/GRSISort/class_t_detector_hit.html) class is a good example of how to comment a class for automatic HTML generation using doxygen. Please see the [doxygen](http://www.doxygen.org/index.html) page for more information about doxygen, and [Formatting Comments for Doxygen](https://root.cern/for_developers/docs/) for using doxygen with ROOT.
 
 ### Class Description
 [[/images/ClassDesc.png]]

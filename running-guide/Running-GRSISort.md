@@ -21,7 +21,7 @@ By default GRSIsort will open up a root session in the GRSI environment.
 # Unpacking the MIDAS File
 
 The strategy used by GRSISort is to unpack the MIDAS file and convert the information into two ROOT Trees.
-The first tree in the ```fragment?????_???.root``` file contains <a href="https://rawgit.com/wiki/r3dunlop/GRSISort/technical-docs/ROOT-Gen-Html/htmldoc/TFragment.html# TFragment:Data_Members" target="_blank">TFragments</a> and is essentially all of the information from the MIDAS File with higher compression and accessibility.
+The first tree in the ```fragment?????_???.root``` file contains TFragments and is essentially all of the information from the MIDAS File with higher compression and accessibility.
 The second tree in the ```analysis?????_???.root``` file contains built events with detector information (essentially the same fragments, but in groups and translated into detectors).
   
 **grsisort --recommended NAME_OF_MIDAS_FILE.mid**  -> Converts the midas file into a fragment tree, and an analysis tree.
