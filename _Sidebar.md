@@ -42,7 +42,7 @@
 
 [**Technical Documentation**](Technical-Documentation)
 - <a href="https://griffincollaboration.github.io/GRSISort/index.html" target="_blank">GRSISort Classes</a>
-- [[technical-docs/GRIFFIN_Event_Format.pdf]]
+- [[GRIFFIN event format | technical-docs/GRIFFIN_Event_Format.pdf]]
 - <a href="https://rawgit.com/wiki/GriffinCollaboration/GRSISort/technical-docs/GRIFFIN_Event_Format.pdf">GRIFFIN Event Format</a>
 - [[Comments for HTML Docs | Html-How-To ]]
 - [[Coding standards | Coding-standards ]]
