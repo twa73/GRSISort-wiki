@@ -30,6 +30,10 @@ Finally you can add libraries that this library needs to be linked against via t
 To link against ROOT libraries use `${ROOT_LIBRARIES}`.
 In rare cases your library might depend on another target i.e. the version header file, this can be included via the `add_dependencies` command which takes the name of the library and the name of the target it depends on (in the case of the version header file this would be `GVersion`).
 
+You will also need to add the new library to the dependency of any library that the new one is involved in, e.g. a new detector library in GRSIData needs to be added to the dependency list of `TGRSIFormat` (in the `target_link_libraries(` list).
+In addition you should also add the library to the variable with the list of all libraries to link executables against (look for `set(GRSI_LIBRARIES`, and edit both lines that contain this).
+
+
 ## Contributing to a parser library like GRSIData
 
 For the parser libraries things are a bit more complicated, as these are normally clones fresh from the upstream repositories into the `_deps/NAME-src/` directory (with `NAME` being the name of the parser libraries in all lower case, e.g. grsidata).
@@ -46,3 +50,5 @@ Then you can edit your local copy of your fork, push the changes to github, re-c
 ### Adding classes and/or files
 
 If you are adding classes and/or files to the parser library, the same approaches described for editing code in the parser library can be used if you also edit the `CMakeLists.txt` file as described in the section for adding classes to GRSISort.
+
+In this case you will need to add the new library to the line with `set(GRSIDATA_LIBRARIES`.
