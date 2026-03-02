@@ -2,7 +2,7 @@
 
 1. <a href="https://griffincollaboration.github.io/GRSISort/index.html" target="_blank">GRSISort Classes</a>
 
-2. <a href="https://rawgit.com/wiki/GriffinCollaboration/GRSISort/technical-docs/GRIFFIN_Event_Format.pdf">GRIFFIN Event Format</a>
+2. [[GRIFFIN event format | GRIFFIN_Event_Format.pdf]]
 
 3. [[Comments for HTML Documentation | Html-How-To ]]
 
