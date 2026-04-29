@@ -97,4 +97,11 @@ When determining branching ratios we normally gate on another $\gamma$ ray to cl
 This means we want to determine the probability for a second $\gamma$ ray to hit the same crystal/detector while gating on a third $\gamma$ ray.
 The gating conditions (timing, energy, and background subtractions) used are the same for both $\gamma$ rays and are the same that were used to determine the branching ratios in the first place.
 
+## Additional information
+
+Ryan Dunlop's (Uni. of Guelph) PhD thesis:
+https://atrium.lib.uoguelph.ca/xmlui/handle/10214/16278
+
+A guide written by Mike Bowry (Former GRIFFIN post-doc at TRIUMF and now faculty at Uni. of West Scotland), note that you need to use the Triumf VPN to access this:
+https://gamma.triumf.ca/large-projects/GRIFFIN/documentation/GRIFFIN_Summing_Corrections_Guide_v0.0.pdf/view
 
