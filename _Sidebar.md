@@ -12,6 +12,7 @@
 
 [**Running GRSISort**](Running-GRSISort)  
 
+- [[Introduction to Sorting Data with GRSISort|IntroductionToSortingData]]
 - [[Sorting|Running-GRSISort#sortingmodel]]
   - [[Command-line Options | CommandLineOptions]]
   - [[Unpacking MIDAS Files|Running-GRSISort#unpackmid]]
@@ -22,6 +23,7 @@
   - [[Fitting | Fitting ]]
   - [[Calibration | Calibration]]
   - [[Cross-Talk Corrections | Cross-Talk Corrections]]
+  - [[Summing Corrections | Summing-Corrections]]
   - [[Kinematics | Kinematics]]
   - [[Interactive Analysis | Interactive-Analysis]]
   - [[Gamma-gamma Angular Correlations | Angular-Correlations]]
