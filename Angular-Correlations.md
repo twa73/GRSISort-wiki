@@ -73,14 +73,14 @@ Parameters for this part of the program are:
 |Projection.High | positive floating point number | the high edge of the range of values on the y-axis that will be projected onto the x-axis, can be overwritten by the `projection-high` flag |
 |TimeRandomNormalization | positive floating point number | the ratio between the time window of the prompt gamma-gamma spectra, and the time window of the time random gamma-gamma spectra, can be overwritten by `time-random-normalization` flag |
 |Peak.Position   | positive floating point number | the position of the peak to be fitted in the projections, can be overwritten by the `peak-pos` flag |
-|Peak.Position.Low| positive floating point number | the low edge of the range of the peak fit in the projections, can be overwritten by the `peak-low` flag |
-|Peak.Position.High| positive floating point number | the high edge of the range of the peak fit in the projections, can be overwritten by the `peak-high` flag |
-|Background.N.Low | positive floating point number | the low edge of the Nth background projection to be subtracted from the projection of the first gamma peak, n is give by N which is an integer starting at 0 |
-|Background.N.High| positive floating point number | the high edge of the Nth background projection to be subtracted from the projection of the first gamma peak, n is give by N which is an integer starting at 0 |
-|BackgroundPeak.Position.N | positive floating point number | positions of background peaks that are included in the fit of the projection but whose areas are ignored, N is the index starting at 0 |
+|Peak.Low| positive floating point number | the low edge of the range of the peak fit in the projections, can be overwritten by the `peak-low` flag |
+|Peak.High| positive floating point number | the high edge of the range of the peak fit in the projections, can be overwritten by the `peak-high` flag |
+|Background.N.Low | positive floating point number | the low edge of the Nth background projection to be subtracted from the projection of the first gamma peak, n is give by N which is an integer starting at 1 |
+|Background.N.High| positive floating point number | the high edge of the Nth background projection to be subtracted from the projection of the first gamma peak, n is give by N which is an integer starting at 1 |
+|BackgroundPeak.Position.N | positive floating point number | positions of background peaks that are included in the fit of the projection but whose areas are ignored, N is the index starting at 1 |
 |Peak.Parameter.N | floating point number | initial value for Nth parameter of the peak, this value is only used if the limits are also set |
 |Peak.Parameter.N.Low | floating point number | lower limit for Nth parameter of the peak, if this is the same as the upper limit, the parameter is fixed to this value |
-|Peak.Parameter.N.Hihg| floating point number | upper limit for Nth parameter of the peak, if this is the same as the lower limit, the parameter is fixed to this value |
+|Peak.Parameter.N.High| floating point number | upper limit for Nth parameter of the peak, if this is the same as the lower limit, the parameter is fixed to this value |
 |BackgroundPeak.Parameter.N | floating point number | initial value for Nth parameter of the background peak(s), this value is only used if the limits are also set |
 |BackgroundPeak.Parameter.N.Low | floating point number | lower limit for Nth parameter of the background peak(s), if this is the same as the upper limit, the parameter is fixed to this value |
 |BackgroundPeak.Parameter.N.High| floating point number | upper limit for Nth parameter of the background peak(s), if this is the same as the lower limit, the parameter is fixed to this value |
