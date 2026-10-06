@@ -78,6 +78,8 @@ Parameters for this part of the program are:
 |Background.N.Low | positive floating point number | the low edge of the Nth background projection to be subtracted from the projection of the first gamma peak, n is give by N which is an integer starting at 1 |
 |Background.N.High| positive floating point number | the high edge of the Nth background projection to be subtracted from the projection of the first gamma peak, n is give by N which is an integer starting at 1 |
 |Background.Peak.N.Position | positive floating point number | positions of background peaks that are included in the fit of the projection but whose areas are ignored, N is the index starting at 1 |
+|Background.Peak.N.Low | positive floating point number | the lower limit for the peak position parameter for background peak N, N is the index starting at 1 |
+|Background.Peak.N.High | positive floating point number | the upper limit for the peak position parameter for background peak N, N is the index starting at 1 |
 |Peak.Parameter.N | floating point number | initial value for Nth parameter of the peak, this value is only used if the limits are also set |
 |Peak.Parameter.N.Low | floating point number | lower limit for Nth parameter of the peak, if this is the same as the upper limit, the parameter is fixed to this value |
 |Peak.Parameter.N.High| floating point number | upper limit for Nth parameter of the peak, if this is the same as the lower limit, the parameter is fixed to this value |
